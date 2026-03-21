@@ -1,0 +1,132 @@
+{
+  "machine": {
+    "id": "kabaneri",
+    "name": "甲鉄城のカバネリ",
+    "manufacturer": "Sammy",
+    "type": "AT",
+    "releaseDate": "2022-07-04",
+    "isActive": true,
+    "notes": "テスト用の機種データ"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        { "settingNo": 1, "denominatorValue": 290.0, "weight": 0.7, "minSampleSize": 5 },
+        { "settingNo": 2, "denominatorValue": 284.0, "weight": 0.7, "minSampleSize": 5 },
+        { "settingNo": 3, "denominatorValue": 275.0, "weight": 0.7, "minSampleSize": 5 },
+        { "settingNo": 4, "denominatorValue": 262.0, "weight": 0.7, "minSampleSize": 5 },
+        { "settingNo": 5, "denominatorValue": 249.0, "weight": 0.7, "minSampleSize": 5 },
+        { "settingNo": 6, "denominatorValue": 236.0, "weight": 0.7, "minSampleSize": 5 }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        { "settingNo": 1, "denominatorValue": 430.0, "weight": 1.2, "minSampleSize": 4 },
+        { "settingNo": 2, "denominatorValue": 400.0, "weight": 1.2, "minSampleSize": 4 },
+        { "settingNo": 3, "denominatorValue": 372.0, "weight": 1.2, "minSampleSize": 4 },
+        { "settingNo": 4, "denominatorValue": 340.0, "weight": 1.2, "minSampleSize": 4 },
+        { "settingNo": 5, "denominatorValue": 308.0, "weight": 1.2, "minSampleSize": 4 },
+        { "settingNo": 6, "denominatorValue": 278.0, "weight": 1.2, "minSampleSize": 4 }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        { "settingNo": 1, "denominatorValue": 225.0, "weight": 0.8, "minSampleSize": 3 },
+        { "settingNo": 2, "denominatorValue": 220.0, "weight": 0.8, "minSampleSize": 3 },
+        { "settingNo": 3, "denominatorValue": 212.0, "weight": 0.8, "minSampleSize": 3 },
+        { "settingNo": 4, "denominatorValue": 202.0, "weight": 0.8, "minSampleSize": 3 },
+        { "settingNo": 5, "denominatorValue": 194.0, "weight": 0.8, "minSampleSize": 3 },
+        { "settingNo": 6, "denominatorValue": 186.0, "weight": 0.8, "minSampleSize": 3 }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        { "settingNo": 1, "denominatorValue": 510.0, "weight": 0.9, "minSampleSize": 2 },
+        { "settingNo": 2, "denominatorValue": 485.0, "weight": 0.9, "minSampleSize": 2 },
+        { "settingNo": 3, "denominatorValue": 460.0, "weight": 0.9, "minSampleSize": 2 },
+        { "settingNo": 4, "denominatorValue": 430.0, "weight": 0.9, "minSampleSize": 2 },
+        { "settingNo": 5, "denominatorValue": 398.0, "weight": 0.9, "minSampleSize": 2 },
+        { "settingNo": 6, "denominatorValue": 365.0, "weight": 0.9, "minSampleSize": 2 }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 650,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "テスト用",
+      "isEnabled": true
+    }
+  ]
+}

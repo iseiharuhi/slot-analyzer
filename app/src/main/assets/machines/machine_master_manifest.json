@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "masterVersion": "2026.03.21.100",
+  "machines": [
+    {
+      "machineId": "sample_machine_a",
+      "fileName": "sample_machine_a.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "hokuto",
+      "fileName": "hokuto.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "monster_hunter",
+      "fileName": "monster_hunter.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "kabaneri",
+      "fileName": "kabaneri.json",
+      "checksum": ""
+    }
+  ]
+}
