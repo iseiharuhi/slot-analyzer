@@ -3,10 +3,10 @@ package com.example.slotanalyzer.data.repository
 import com.example.slotanalyzer.data.database.dao.PlaySessionDao
 import com.example.slotanalyzer.data.database.entity.PlaySessionEntity
 import com.example.slotanalyzer.data.mapper.SessionEntityMapper
-import com.example.slotanalyzer.feature.session.domain.model.PlaySession
-import com.example.slotanalyzer.feature.session.domain.model.UpdateCounterCommand
 import com.example.slotanalyzer.domain.repository.MachineRepository
 import com.example.slotanalyzer.domain.repository.PlaySessionRepository
+import com.example.slotanalyzer.feature.session.domain.model.PlaySession
+import com.example.slotanalyzer.feature.session.domain.model.UpdateCounterCommand
 import java.util.UUID
 import javax.inject.Inject
 
@@ -38,13 +38,16 @@ class PlaySessionRepositoryImpl @Inject constructor(
         )
 
         dao.upsertCounters(
-            listOf(
-                mapper.toCounterEntity(sessionId, "total_games", 0, now),
-                mapper.toCounterEntity(sessionId, "big_count", 0, now),
-                mapper.toCounterEntity(sessionId, "reg_count", 0, now),
-                mapper.toCounterEntity(sessionId, "cz_count", 0, now),
-                mapper.toCounterEntity(sessionId, "at_count", 0, now)
-            )
+            machine.counters
+                .filter { it.isEnabled }
+                .map { counterDefinition ->
+                    mapper.toCounterEntity(
+                        sessionId = sessionId,
+                        key = counterDefinition.key,
+                        value = 0,
+                        now = now
+                    )
+                }
         )
     }
 
@@ -66,5 +69,24 @@ class PlaySessionRepositoryImpl @Inject constructor(
             )
         )
         dao.updateSessionUpdatedAt(command.sessionId, command.updatedAt)
+    }
+
+    override suspend fun resetCurrentSessionCounters() {
+        val session = dao.getAnySession() ?: return
+        val now = System.currentTimeMillis()
+        val currentSession = mapper.toDomain(session)
+
+        dao.upsertCounters(
+            currentSession.counters.map { counter ->
+                mapper.toCounterEntity(
+                    sessionId = currentSession.id,
+                    key = counter.counterKey,
+                    value = 0,
+                    now = now
+                )
+            }
+        )
+
+        dao.updateSessionUpdatedAt(currentSession.id, now)
     }
 }

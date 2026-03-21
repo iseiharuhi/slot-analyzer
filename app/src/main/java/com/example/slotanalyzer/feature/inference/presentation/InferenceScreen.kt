@@ -97,13 +97,12 @@ fun InferenceScreen(
                     fontWeight = FontWeight.SemiBold
                 )
 
-                Spacer(modifier = Modifier.height(12.dp))
-
-                InfoRow(label = "総ゲーム数", value = "${state.totalGames}")
-                InfoRow(label = "BIG確率", value = state.bigRateText)
-                InfoRow(label = "REG確率", value = state.regRateText)
-                InfoRow(label = "CZ回数", value = "${state.czCount}")
-                InfoRow(label = "AT回数", value = "${state.atCount}")
+                state.inputItems.forEach { item ->
+                    InfoRow(
+                        label = item.label,
+                        value = item.valueText
+                    )
+                }
             }
         }
 

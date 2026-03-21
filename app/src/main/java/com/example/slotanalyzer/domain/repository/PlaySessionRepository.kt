@@ -7,4 +7,6 @@ interface PlaySessionRepository {
     suspend fun startSession(machineId: String)
     suspend fun getCurrentSession(): PlaySession
     suspend fun updateCounter(command: UpdateCounterCommand)
+
+    suspend fun resetCurrentSessionCounters()
 }

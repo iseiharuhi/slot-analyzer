@@ -6,11 +6,8 @@ import com.example.slotanalyzer.feature.machine.domain.usecase.ObserveMachinesUs
 import com.example.slotanalyzer.feature.session.domain.usecase.StartPlaySessionUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
@@ -32,9 +29,6 @@ class MachineSelectViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(MachineSelectUiState())
     val uiState: StateFlow<MachineSelectUiState> = _uiState.asStateFlow()
 
-    private val _navigateToSession = MutableSharedFlow<String>()
-    val navigateToSession: SharedFlow<String> = _navigateToSession.asSharedFlow()
-
     init {
         viewModelScope.launch {
             observeMachinesUseCase().collect { machines ->
@@ -50,12 +44,24 @@ class MachineSelectViewModel @Inject constructor(
         }
     }
 
+    /**
+     * 機種を選択しただけでは何もしない。
+     * 方式Bでは、続きから再開か新規実戦開始かをユーザーに選ばせる。
+     */
     fun onMachineSelected(machine: MachineItemUiModel) {
+        // no-op
+    }
+
+    /**
+     * 新規実戦開始ボタン用。
+     * 明示的に新しいセッションを開始したい時だけ呼ぶ。
+     */
+    fun startNewSession(machine: MachineItemUiModel, onSuccess: () -> Unit = {}) {
         viewModelScope.launch {
             runCatching {
-                startPlaySessionUseCase(machine.id)
+                startPlaySessionUseCase.startNewSession(machine.id)
             }.onSuccess {
-                _navigateToSession.emit(machine.id)
+                onSuccess()
             }.onFailure {
                 it.printStackTrace()
             }

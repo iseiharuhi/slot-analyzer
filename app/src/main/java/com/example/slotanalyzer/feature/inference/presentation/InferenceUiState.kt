@@ -2,13 +2,14 @@ package com.example.slotanalyzer.feature.inference.presentation
 
 import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 
+data class InferenceInputItemUiModel(
+    val label: String,
+    val valueText: String
+)
+
 data class InferenceUiState(
     val machineName: String = "",
-    val totalGames: Int = 0,
-    val bigRateText: String = "--",
-    val regRateText: String = "--",
-    val czCount: Int = 0,
-    val atCount: Int = 0,
+    val inputItems: List<InferenceInputItemUiModel> = emptyList(),
     val summary: String = "",
     val confidenceText: String = "",
     val topSettingText: String = "",

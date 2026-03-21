@@ -2,20 +2,22 @@ package com.example.slotanalyzer.feature.inference.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.slotanalyzer.core.ui.model.ScoreBarItem
+import com.example.slotanalyzer.core.util.RateFormatter
+import com.example.slotanalyzer.feature.history.domain.usecase.SavePlayHistoryUseCase
 import com.example.slotanalyzer.feature.inference.domain.model.InferenceResult
 import com.example.slotanalyzer.feature.inference.domain.model.SettingScore
-import com.example.slotanalyzer.feature.session.domain.model.PlaySession
 import com.example.slotanalyzer.feature.inference.domain.usecase.CalculateInferenceUseCase
-import com.example.slotanalyzer.feature.session.domain.usecase.GetCurrentSessionUseCase
+import com.example.slotanalyzer.feature.machine.domain.model.Machine
 import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
-import com.example.slotanalyzer.feature.history.domain.usecase.SavePlayHistoryUseCase
+import com.example.slotanalyzer.feature.session.domain.model.PlaySession
+import com.example.slotanalyzer.feature.session.domain.usecase.GetCurrentSessionUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 
 @HiltViewModel
 class InferenceViewModel @Inject constructor(
@@ -42,12 +44,6 @@ class InferenceViewModel @Inject constructor(
 
             currentSession = session
 
-            val totalGames = getCounter(session, "total_games")
-            val bigCount = getCounter(session, "big_count")
-            val regCount = getCounter(session, "reg_count")
-            val czCount = getCounter(session, "cz_count")
-            val atCount = getCounter(session, "at_count")
-
             val result = calculateInferenceUseCase(
                 machine = machine,
                 session = session
@@ -60,11 +56,10 @@ class InferenceViewModel @Inject constructor(
 
             _uiState.value = InferenceUiState(
                 machineName = machine?.name ?: session.machineNameSnapshot,
-                totalGames = totalGames,
-                bigRateText = calculateRate(totalGames, bigCount),
-                regRateText = calculateRate(totalGames, regCount),
-                czCount = czCount,
-                atCount = atCount,
+                inputItems = buildInputItems(
+                    machine = machine,
+                    session = session
+                ),
                 summary = result.summary,
                 confidenceText = toConfidenceText(result.confidenceLabel.name),
                 topSettingText = topSetting?.let {
@@ -103,6 +98,38 @@ class InferenceViewModel @Inject constructor(
                     saveMessage = "履歴保存に失敗しました"
                 )
             }
+        }
+    }
+
+    private fun buildInputItems(
+        machine: Machine?,
+        session: PlaySession
+    ): List<InferenceInputItemUiModel> {
+        val totalGames = getCounter(session, TOTAL_GAMES_KEY)
+
+        val counterDefinitions = machine?.counters
+            ?.sortedBy { it.sortOrder }
+            ?.filter { it.isEnabled }
+            ?: emptyList()
+
+        return counterDefinitions.map { definition ->
+            val count = getCounter(session, definition.key)
+
+            val valueText = if (definition.key == TOTAL_GAMES_KEY) {
+                "$count ${definition.unit}"
+            } else {
+                val rateText = RateFormatter.calculateRateText(totalGames, count)
+                if (rateText == "--") {
+                    "$count ${definition.unit}"
+                } else {
+                    "$count ${definition.unit} / 確率 $rateText"
+                }
+            }
+
+            InferenceInputItemUiModel(
+                label = definition.displayName,
+                valueText = valueText
+            )
         }
     }
 
@@ -154,12 +181,6 @@ class InferenceViewModel @Inject constructor(
         return session.counters.firstOrNull { it.counterKey == key }?.intValue ?: 0
     }
 
-    private fun calculateRate(totalGames: Int, count: Int): String {
-        if (totalGames <= 0 || count <= 0) return "--"
-        val rate = totalGames.toDouble() / count.toDouble()
-        return "1/${"%.1f".format(rate)}"
-    }
-
     private fun toConfidenceText(raw: String): String {
         return when (raw) {
             "HIGH" -> "高"
@@ -168,5 +189,9 @@ class InferenceViewModel @Inject constructor(
             "INSUFFICIENT" -> "サンプル不足"
             else -> raw
         }
+    }
+
+    companion object {
+        private const val TOTAL_GAMES_KEY = "total_games"
     }
 }

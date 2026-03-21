@@ -13,142 +13,196 @@ class CalculateInferenceUseCase @Inject constructor() {
 
     operator fun invoke(
         machine: Machine?,
-        session: PlaySession?
+        session: PlaySession
     ): InferenceResult {
-        if (machine == null || session == null) {
-            return emptyResult("機種情報またはセッションが取得できません")
+        if (machine == null) {
+            return emptyResult("機種情報がありません")
         }
 
-        val totalGames = getCounter(session, "total_games")
+        val totalGames = getCounter(session, TOTAL_GAMES_KEY)
         if (totalGames <= 0) {
-            return emptyResult("総ゲーム数が未入力のため推測できません")
+            return emptyResult("総回転数が不足しています")
         }
 
-        val groupedReferences = machine.settingReferenceValues
-            .filter { it.denominatorValue != null }
-            .groupBy { it.counterKey }
-
+        val groupedReferences = getValidReferences(machine)
         if (groupedReferences.isEmpty()) {
-            return emptyResult("設定判別データが未登録です")
+            return emptyResult("設定差データがありません")
         }
 
-        val rawScores = (1..6).associateWith { 0.001 }.toMutableMap()
-        var contributingItems = 0
-        val itemSummaries = mutableListOf<String>()
+        val scores = (1..6).map { setting ->
+            val raw = calculateScore(
+                setting = setting,
+                refs = groupedReferences,
+                session = session,
+                totalGames = totalGames
+            )
 
-        groupedReferences.forEach { (counterKey, refs) ->
-            val count = getCounter(session, counterKey)
-            val displayName = machine.counters.firstOrNull { it.key == counterKey }?.displayName ?: counterKey
-            val observedRateText = calculateRateText(totalGames, count)
-            val minSample = refs.mapNotNull { it.minSampleSize }.maxOrNull() ?: 0
-
-            if (count <= 0 || count < minSample) {
-                itemSummaries += if (count <= 0) {
-                    "${displayName}: サンプル0のため判定保留"
-                } else {
-                    "${displayName}: サンプル不足のため判定保留"
-                }
-                return@forEach
-            }
-
-            val observedProbability = count.toDouble() / totalGames.toDouble()
-
-            val perSettingScores = refs.associate { ref ->
-                val expectedProbability = toExpectedProbability(ref)
-                val score = calculateClosenessScore(
-                    observedProbability = observedProbability,
-                    expectedProbability = expectedProbability,
-                    weight = ref.weight
-                )
-                ref.settingNo to score
-            }
-
-            perSettingScores.forEach { (settingNo, score) ->
-                rawScores[settingNo] = (rawScores[settingNo] ?: 0.001) + score
-            }
-
-            val bestSetting = perSettingScores.maxByOrNull { it.value }?.key ?: 1
-            itemSummaries += "${displayName}: ${observedRateText} → 設定${bestSetting}寄り"
-            contributingItems++
-        }
-
-        val totalScore = rawScores.values.sum().coerceAtLeast(0.000001)
-        val settingScores = (1..6).map { setting ->
-            val raw = rawScores[setting] ?: 0.001
             SettingScore(
                 setting = setting,
                 rawValue = raw,
-                normalizedValue = raw / totalScore
+                normalizedValue = 0.0
             )
         }
 
-        val best = settingScores.maxByOrNull { it.normalizedValue } ?: settingScores.first()
+        val normalized = normalize(scores)
+        val confidence = calculateConfidence(totalGames, normalized)
+        val summary = buildSummary(normalized, confidence)
 
-        val overallConfidence = when {
-            contributingItems == 0 -> ConfidenceLabel.INSUFFICIENT
-            totalGames >= 4000 && best.normalizedValue >= 0.30 -> ConfidenceLabel.HIGH
-            totalGames >= 2000 && best.normalizedValue >= 0.24 -> ConfidenceLabel.MEDIUM
-            else -> ConfidenceLabel.LOW
+        return InferenceResult(
+            settingScores = normalized,
+            summary = summary,
+            confidenceLabel = confidence
+        )
+    }
+
+    private fun getValidReferences(
+        machine: Machine
+    ): Map<String, List<SettingReferenceValue>> {
+        val visibleKeys = machine.counters
+            .filter { it.isEnabled && it.isDefaultVisible }
+            .map { it.key }
+            .toSet()
+
+        return machine.settingReferenceValues
+            .filter { it.denominatorValue != null }
+            .filter { it.counterKey in visibleKeys }
+            .groupBy { it.counterKey }
+            .filterValues { refs ->
+                refs.mapNotNull { it.denominatorValue }.distinct().size > 1
+            }
+    }
+
+    private fun calculateScore(
+        setting: Int,
+        refs: Map<String, List<SettingReferenceValue>>,
+        session: PlaySession,
+        totalGames: Int
+    ): Double {
+        var sum = 0.0
+        var count = 0
+
+        refs.forEach { (key, list) ->
+            val ref = list.firstOrNull { it.settingNo == setting } ?: return@forEach
+            val denom = ref.denominatorValue ?: return@forEach
+            if (denom <= 0.0) return@forEach
+
+            val observed = getCounter(session, key)
+            val expected = totalGames.toDouble() / denom
+
+            val score = calcItemScore(
+                observed = observed.toDouble(),
+                expected = expected
+            )
+
+            sum += score
+            count++
         }
 
-        val summary = buildString {
-            append("${machine.name} / ")
-            append("総ゲーム数${totalGames}G時点で ")
-            append("最有力は設定${best.setting} ")
-            append("(${(best.normalizedValue * 100.0).toInt()}%)")
-            if (itemSummaries.isNotEmpty()) {
-                append("\n")
-                append(itemSummaries.joinToString(separator = "\n"))
+        if (count == 0) return MIN_SCORE
+        return sum / count
+    }
+
+    private fun calcItemScore(
+        observed: Double,
+        expected: Double
+    ): Double {
+        if (expected <= 0.0) return MIN_SCORE
+
+        val diff = abs(observed - expected)
+        val ratio = diff / expected
+
+        return (1.0 - ratio).coerceIn(MIN_SCORE, 1.0)
+    }
+
+    private fun normalize(
+        scores: List<SettingScore>
+    ): List<SettingScore> {
+        val adjusted = scores.map {
+            it.copy(rawValue = it.rawValue.coerceAtLeast(MIN_SCORE))
+        }
+
+        val total = adjusted.sumOf { it.rawValue }
+
+        if (total <= 0.0) {
+            val even = 1.0 / adjusted.size.toDouble()
+            return adjusted.map {
+                it.copy(normalizedValue = even)
             }
         }
 
-        return InferenceResult(
-            summary = summary,
-            confidenceLabel = overallConfidence,
-            settingScores = settingScores
-        )
+        return adjusted.map {
+            it.copy(normalizedValue = it.rawValue / total)
+        }
     }
 
-    private fun getCounter(session: PlaySession, key: String): Int {
-        return session.counters.firstOrNull { it.counterKey == key }?.intValue ?: 0
+    private fun calculateConfidence(
+        totalGames: Int,
+        scores: List<SettingScore>
+    ): ConfidenceLabel {
+        if (totalGames < 1000) return ConfidenceLabel.INSUFFICIENT
+
+        val topTwo = scores
+            .sortedByDescending { it.normalizedValue }
+            .take(2)
+
+        if (topTwo.size < 2) return ConfidenceLabel.LOW
+
+        val gap = topTwo[0].normalizedValue - topTwo[1].normalizedValue
+
+        return when {
+            totalGames >= 5000 && gap >= 0.20 -> ConfidenceLabel.HIGH
+            totalGames >= 3000 && gap >= 0.10 -> ConfidenceLabel.MEDIUM
+            else -> ConfidenceLabel.LOW
+        }
     }
 
-    private fun toExpectedProbability(ref: SettingReferenceValue): Double {
-        val denominator = ref.denominatorValue ?: return 0.0
-        if (denominator <= 0.0) return 0.0
-        return 1.0 / denominator
-    }
+    private fun buildSummary(
+        scores: List<SettingScore>,
+        confidence: ConfidenceLabel
+    ): String {
+        val sorted = scores.sortedByDescending { it.normalizedValue }
+        val top = sorted.firstOrNull() ?: return "不明"
 
-    private fun calculateClosenessScore(
-        observedProbability: Double,
-        expectedProbability: Double,
-        weight: Double
-    ): Double {
-        if (observedProbability <= 0.0 || expectedProbability <= 0.0) return 0.001
+        val percent = (top.normalizedValue * 100).toInt()
 
-        val diffRatio = abs(observedProbability - expectedProbability) / expectedProbability
-        val closeness = 1.0 / (1.0 + diffRatio * 3.0)
-        return (closeness * weight.coerceAtLeast(0.1)).coerceAtLeast(0.001)
-    }
+        val confidenceText = when (confidence) {
+            ConfidenceLabel.HIGH -> "信頼度は高めです"
+            ConfidenceLabel.MEDIUM -> "信頼度は中程度です"
+            ConfidenceLabel.LOW -> "信頼度は低めです"
+            ConfidenceLabel.INSUFFICIENT -> "サンプル不足です"
+            else -> "暫定結果です"
+        }
 
-    private fun calculateRateText(totalGames: Int, count: Int): String {
-        if (totalGames <= 0 || count <= 0) return "--"
-        return "1/${"%.1f".format(totalGames.toDouble() / count.toDouble())}"
+        return "設定${top.setting}が最有力（${percent}%）。$confidenceText。"
     }
 
     private fun emptyResult(message: String): InferenceResult {
-        val scores = (1..6).map {
-            SettingScore(
-                setting = it,
-                rawValue = 1.0,
-                normalizedValue = 1.0 / 6.0
-            )
-        }
+        val even = 1.0 / 6.0
 
         return InferenceResult(
+            settingScores = (1..6).map { setting ->
+                SettingScore(
+                    setting = setting,
+                    rawValue = MIN_SCORE,
+                    normalizedValue = even
+                )
+            },
             summary = message,
-            confidenceLabel = ConfidenceLabel.INSUFFICIENT,
-            settingScores = scores
+            confidenceLabel = ConfidenceLabel.INSUFFICIENT
         )
+    }
+
+    private fun getCounter(
+        session: PlaySession,
+        key: String
+    ): Int {
+        return session.counters
+            .firstOrNull { it.counterKey == key }
+            ?.intValue ?: 0
+    }
+
+    companion object {
+        private const val TOTAL_GAMES_KEY = "total_games"
+        private const val MIN_SCORE = 0.0001
     }
 }
