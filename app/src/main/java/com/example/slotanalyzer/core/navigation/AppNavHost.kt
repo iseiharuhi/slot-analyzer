@@ -38,8 +38,12 @@ fun AppNavHost() {
             )
         ) { backStackEntry ->
             SessionInputScreen(
-                navController = navController,
-                machineId = backStackEntry.arguments?.getString("machineId").orEmpty()
+                onMoveToInference = {
+                    navController.navigate(AppRoutes.INFERENCE)
+                },
+                onBack = {
+                    navController.popBackStack()
+                }
             )
         }
 

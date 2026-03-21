@@ -2,9 +2,9 @@ package com.example.slotanalyzer.feature.session.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
 import com.example.slotanalyzer.feature.session.domain.model.UpdateCounterCommand
 import com.example.slotanalyzer.feature.session.domain.usecase.GetCurrentSessionUseCase
-import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
 import com.example.slotanalyzer.feature.session.domain.usecase.UpdateCounterUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -67,6 +67,12 @@ class SessionViewModel @Inject constructor(
     fun decreaseCzCount() = updateCz((_uiState.value.czCount - 1).coerceAtLeast(0))
     fun increaseAtCount() = updateAt(_uiState.value.atCount + 1)
     fun decreaseAtCount() = updateAt((_uiState.value.atCount - 1).coerceAtLeast(0))
+
+    fun setTotalGames(value: Int) = updateTotalGames(value.coerceAtLeast(0))
+    fun setBigCount(value: Int) = updateBig(value.coerceAtLeast(0))
+    fun setRegCount(value: Int) = updateReg(value.coerceAtLeast(0))
+    fun setCzCount(value: Int) = updateCz(value.coerceAtLeast(0))
+    fun setAtCount(value: Int) = updateAt(value.coerceAtLeast(0))
 
     private fun updateTotalGames(value: Int) {
         _uiState.update { it.copy(totalGames = value) }
