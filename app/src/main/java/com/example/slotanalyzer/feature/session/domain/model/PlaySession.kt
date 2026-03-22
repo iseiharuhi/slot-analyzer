@@ -13,6 +13,7 @@ data class PlaySession(
     val memo: String?,
     val isFinished: Boolean,
     val isCurrent: Boolean,
+    val isArchivedInHistory: Boolean,
     val lastInferenceSummary: String?,
     val lastConfidenceLabel: ConfidenceLabel?,
     val counters: List<SessionCounterValue>,

@@ -8,6 +8,7 @@ import androidx.room.Transaction
 import com.example.slotanalyzer.data.database.entity.PlaySessionEntity
 import com.example.slotanalyzer.data.database.entity.SessionCounterValueEntity
 import com.example.slotanalyzer.data.database.relation.SessionWithCounters
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface PlaySessionDao {
@@ -29,6 +30,10 @@ interface PlaySessionDao {
     suspend fun getSessionById(sessionId: String): SessionWithCounters?
 
     @Transaction
+    @Query("SELECT * FROM play_sessions WHERE is_archived_in_history = 1 ORDER BY COALESCE(ended_at, updated_at) DESC")
+    fun observeFinishedSessions(): Flow<List<SessionWithCounters>>
+
+    @Transaction
     @Query("SELECT * FROM play_sessions WHERE machine_id = :machineId ORDER BY updated_at DESC LIMIT 1")
     suspend fun getLatestSessionByMachineId(machineId: String): SessionWithCounters?
 
@@ -41,6 +46,12 @@ interface PlaySessionDao {
     @Query("UPDATE play_sessions SET updated_at = :updatedAt WHERE id = :sessionId")
     suspend fun updateSessionUpdatedAt(sessionId: String, updatedAt: Long)
 
-    @Query("UPDATE play_sessions SET is_finished = 1, is_current = 0, ended_at = :endedAt, updated_at = :updatedAt WHERE id = :sessionId")
+    @Query("UPDATE play_sessions SET last_inference_summary = :summary, last_confidence_label = :confidenceLabel, updated_at = :updatedAt WHERE id = :sessionId")
+    suspend fun updateInferenceSnapshot(sessionId: String, summary: String, confidenceLabel: String?, updatedAt: Long)
+
+    @Query("UPDATE play_sessions SET is_finished = 1, is_current = 0, is_archived_in_history = 1, ended_at = :endedAt, updated_at = :updatedAt WHERE id = :sessionId")
     suspend fun finishSession(sessionId: String, endedAt: Long, updatedAt: Long)
+
+    @Query("UPDATE play_sessions SET is_finished = 0, is_current = 1, ended_at = NULL, updated_at = :updatedAt WHERE id = :sessionId")
+    suspend fun reopenSession(sessionId: String, updatedAt: Long)
 }

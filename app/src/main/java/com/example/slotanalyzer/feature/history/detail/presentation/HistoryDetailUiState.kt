@@ -15,5 +15,6 @@ data class HistoryDetailUiState(
     val topSettingText: String = "",
     val settingBars: List<ScoreBarItem> = emptyList(),
     val bandBars: List<ScoreBarItem> = emptyList(),
-    val isLoading: Boolean = true
+    val isLoading: Boolean = true,
+    val errorMessage: String? = null
 )

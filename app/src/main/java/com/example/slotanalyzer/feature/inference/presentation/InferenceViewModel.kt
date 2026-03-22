@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 import com.example.slotanalyzer.core.util.RateFormatter
-import com.example.slotanalyzer.feature.history.domain.usecase.SavePlayHistoryUseCase
 import com.example.slotanalyzer.feature.inference.domain.model.InferenceResult
 import com.example.slotanalyzer.feature.inference.domain.model.SettingScore
 import com.example.slotanalyzer.feature.inference.domain.usecase.CalculateInferenceUseCase
@@ -14,6 +13,7 @@ import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
 import com.example.slotanalyzer.feature.session.domain.model.PlaySession
 import com.example.slotanalyzer.feature.session.domain.usecase.FinishPlaySessionUseCase
 import com.example.slotanalyzer.feature.session.domain.usecase.GetSessionUseCase
+import com.example.slotanalyzer.feature.session.domain.usecase.UpdateSessionInferenceSnapshotUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,7 +27,7 @@ class InferenceViewModel @Inject constructor(
     private val getSessionUseCase: GetSessionUseCase,
     private val getMachineUseCase: GetMachineUseCase,
     private val calculateInferenceUseCase: CalculateInferenceUseCase,
-    private val savePlayHistoryUseCase: SavePlayHistoryUseCase,
+    private val updateSessionInferenceSnapshotUseCase: UpdateSessionInferenceSnapshotUseCase,
     private val finishPlaySessionUseCase: FinishPlaySessionUseCase
 ) : ViewModel() {
 
@@ -75,35 +75,12 @@ class InferenceViewModel @Inject constructor(
                 isFinished = session.isFinished,
                 finishedStatusText = buildFinishedStatusText(session)
             )
-        }
-    }
-
-    fun saveHistory() {
-        val session = currentSession ?: return
-        val result = currentInferenceResult ?: return
-
-        if (_uiState.value.isSaving) return
-
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(
-                isSaving = true,
-                saveMessage = null,
-                finishMessage = null
-            )
 
             runCatching {
-                savePlayHistoryUseCase(session, result)
-            }.onSuccess {
-                _uiState.value = _uiState.value.copy(
-                    isSaving = false,
-                    saveCompleted = true,
-                    saveMessage = "履歴に保存しました"
-                )
-            }.onFailure {
-                _uiState.value = _uiState.value.copy(
-                    isSaving = false,
-                    saveCompleted = false,
-                    saveMessage = "履歴保存に失敗しました"
+                updateSessionInferenceSnapshotUseCase(
+                    sessionId = session.id,
+                    summary = result.summary,
+                    confidenceLabel = result.confidenceLabel
                 )
             }
         }
@@ -117,7 +94,6 @@ class InferenceViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(
                 isFinishing = true,
                 finishMessage = null,
-                saveMessage = null
             )
 
             runCatching {

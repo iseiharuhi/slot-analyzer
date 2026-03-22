@@ -9,7 +9,8 @@ import androidx.room.PrimaryKey
     tableName = "play_sessions",
     indices = [
         Index(value = ["updated_at"]),
-        Index(value = ["is_current"])
+        Index(value = ["is_current"]),
+        Index(value = ["is_archived_in_history"])
     ]
 )
 data class PlaySessionEntity(
@@ -23,6 +24,7 @@ data class PlaySessionEntity(
     @ColumnInfo(name = "memo") val memo: String? = null,
     @ColumnInfo(name = "is_finished") val isFinished: Boolean = false,
     @ColumnInfo(name = "is_current") val isCurrent: Boolean = true,
+    @ColumnInfo(name = "is_archived_in_history") val isArchivedInHistory: Boolean = false,
     @ColumnInfo(name = "last_inference_summary") val lastInferenceSummary: String? = null,
     @ColumnInfo(name = "last_confidence_label") val lastConfidenceLabel: String? = null
 )

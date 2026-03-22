@@ -25,9 +25,6 @@ data class InferenceUiState(
     val bandBars: List<ScoreBarItem> = emptyList(),
     val isFinished: Boolean = false,
     val finishedStatusText: String = "",
-    val isSaving: Boolean = false,
-    val saveCompleted: Boolean = false,
-    val saveMessage: String? = null,
     val isFinishing: Boolean = false,
     val finishCompleted: Boolean = false,
     val finishMessage: String? = null

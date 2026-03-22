@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -18,18 +19,20 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavController
+import com.example.slotanalyzer.core.navigation.AppRoutes
 import com.example.slotanalyzer.core.ui.component.BarSection
 import com.example.slotanalyzer.core.ui.component.ConfidenceChip
 import com.example.slotanalyzer.core.ui.component.TopSettingCard
 import com.example.slotanalyzer.core.ui.component.extractTopSettingLabel
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.navigation.NavController
 
 @Composable
 fun HistoryDetailScreen(
@@ -39,12 +42,37 @@ fun HistoryDetailScreen(
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     val topSettingLabel = extractTopSettingLabel(state.topSettingText)
 
+    LaunchedEffect(Unit) {
+        viewModel.event.collect { event ->
+            when (event) {
+                is HistoryDetailEvent.NavigateToSessionInput -> {
+                    navController.navigate(AppRoutes.sessionInput(event.sessionId)) {
+                        popUpTo(AppRoutes.HISTORY_LIST)
+                    }
+                }
+            }
+        }
+    }
+
     if (state.isLoading) {
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
             CircularProgressIndicator()
+        }
+        return
+    }
+
+    val errorMessage = state.errorMessage
+    if (errorMessage != null) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text = errorMessage)
         }
         return
     }
@@ -150,6 +178,15 @@ fun HistoryDetailScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
+        Button(
+            onClick = viewModel::onResumeSessionClick,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("このセッションを再開")
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
+
         OutlinedButton(
             onClick = { navController.popBackStack() },
             modifier = Modifier.fillMaxWidth()
@@ -184,4 +221,3 @@ private fun InfoRow(
 
     Spacer(modifier = Modifier.height(8.dp))
 }
-

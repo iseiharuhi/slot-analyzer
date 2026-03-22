@@ -4,22 +4,30 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
+import com.example.slotanalyzer.core.navigation.AppRoutes
 
 @Composable
 fun HistoryListScreen(
@@ -50,7 +58,7 @@ fun HistoryListScreen(
                     style = MaterialTheme.typography.headlineSmall
                 )
                 Text(
-                    text = "まだ履歴がありません",
+                    text = "履歴がまだありません",
                     modifier = Modifier.padding(top = 16.dp)
                 )
             }
@@ -74,7 +82,7 @@ fun HistoryListScreen(
                     HistoryListCard(
                         item = history,
                         onClick = {
-                            navController.navigate("history_detail/${history.id}")
+                            navController.navigate(AppRoutes.historyDetail(history.sessionId))
                         }
                     )
                 }
@@ -97,13 +105,25 @@ private fun HistoryListCard(
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            Text(
-                text = item.machineName,
-                style = MaterialTheme.typography.titleMedium
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = item.machineName,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.weight(1f)
+                )
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                StatusBadge(label = item.statusLabel)
+            }
 
             Text(
-                text = "遊技日: ${item.playedDate}",
+                text = "${item.dateLabel}: ${item.playedDate}",
                 modifier = Modifier.padding(top = 8.dp),
                 style = MaterialTheme.typography.bodyMedium
             )
@@ -123,8 +143,37 @@ private fun HistoryListCard(
             Text(
                 text = "信頼度: ${item.confidenceLabel}",
                 modifier = Modifier.padding(top = 4.dp),
-                style = MaterialTheme.typography.bodySmall
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
+    }
+}
+
+@Composable
+private fun StatusBadge(label: String) {
+    val containerColor = when (label) {
+        "実戦中" -> MaterialTheme.colorScheme.primaryContainer
+        "終了" -> MaterialTheme.colorScheme.secondaryContainer
+        else -> MaterialTheme.colorScheme.surfaceVariant
+    }
+
+    val contentColor = when (label) {
+        "実戦中" -> MaterialTheme.colorScheme.onPrimaryContainer
+        "終了" -> MaterialTheme.colorScheme.onSecondaryContainer
+        else -> MaterialTheme.colorScheme.onSurfaceVariant
+    }
+
+    Surface(
+        color = containerColor,
+        contentColor = contentColor,
+        shape = RoundedCornerShape(999.dp)
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelMedium,
+            fontWeight = FontWeight.SemiBold,
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
+        )
     }
 }

@@ -143,10 +143,6 @@ fun InferenceScreen(
         Spacer(modifier = Modifier.height(16.dp))
         BarSection(title = "設定帯評価", items = state.bandBars, highlightedLabel = null)
 
-        state.saveMessage?.let { message ->
-            Spacer(modifier = Modifier.height(16.dp))
-            MessageCard(message)
-        }
 
         state.finishMessage?.let { message ->
             Spacer(modifier = Modifier.height(16.dp))
@@ -171,14 +167,6 @@ fun InferenceScreen(
                         else -> "実戦終了"
                     }
                 )
-            }
-
-            Button(
-                onClick = { viewModel.saveHistory() },
-                enabled = !state.isSaving,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(if (state.isSaving) "保存中..." else "履歴に保存")
             }
 
             OutlinedButton(

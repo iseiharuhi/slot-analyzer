@@ -20,6 +20,7 @@ class SessionEntityMapper @Inject constructor() {
             memo = source.session.memo,
             isFinished = source.session.isFinished,
             isCurrent = source.session.isCurrent,
+            isArchivedInHistory = source.session.isArchivedInHistory,
             lastInferenceSummary = source.session.lastInferenceSummary,
             lastConfidenceLabel = source.session.lastConfidenceLabel?.toConfidenceLabel(),
             counters = source.counterValues.map {

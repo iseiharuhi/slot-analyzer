@@ -67,7 +67,7 @@ fun AppNavHost() {
         composable(
             route = AppRoutes.HISTORY_DETAIL,
             arguments = listOf(
-                navArgument("historyId") {
+                navArgument("sessionId") {
                     type = NavType.StringType
                 }
             )
