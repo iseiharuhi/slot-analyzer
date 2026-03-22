@@ -11,4 +11,5 @@ interface PlaySessionRepository {
     suspend fun setCurrentSession(sessionId: String)
     suspend fun updateCounter(command: UpdateCounterCommand)
     suspend fun resetSessionCounters(sessionId: String)
+    suspend fun finishSession(sessionId: String)
 }

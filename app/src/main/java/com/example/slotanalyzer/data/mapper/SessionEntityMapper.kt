@@ -16,6 +16,7 @@ class SessionEntityMapper @Inject constructor() {
             title = source.session.title,
             startedAt = source.session.startedAt,
             updatedAt = source.session.updatedAt,
+            endedAt = source.session.endedAt,
             memo = source.session.memo,
             isFinished = source.session.isFinished,
             isCurrent = source.session.isCurrent,

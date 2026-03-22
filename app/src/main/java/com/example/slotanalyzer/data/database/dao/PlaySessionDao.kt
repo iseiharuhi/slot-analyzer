@@ -40,4 +40,7 @@ interface PlaySessionDao {
 
     @Query("UPDATE play_sessions SET updated_at = :updatedAt WHERE id = :sessionId")
     suspend fun updateSessionUpdatedAt(sessionId: String, updatedAt: Long)
+
+    @Query("UPDATE play_sessions SET is_finished = 1, is_current = 0, ended_at = :endedAt, updated_at = :updatedAt WHERE id = :sessionId")
+    suspend fun finishSession(sessionId: String, endedAt: Long, updatedAt: Long)
 }

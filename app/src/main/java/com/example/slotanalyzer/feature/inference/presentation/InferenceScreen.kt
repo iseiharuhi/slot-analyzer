@@ -2,7 +2,6 @@ package com.example.slotanalyzer.feature.inference.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -74,6 +73,13 @@ fun InferenceScreen(
 
                 ConfidenceChip(state.confidenceText)
 
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    text = state.finishedStatusText,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+
                 if (state.topSettingText.isNotBlank()) {
                     Spacer(modifier = Modifier.height(12.dp))
                     TopSettingCard(state.topSettingText)
@@ -106,6 +112,31 @@ fun InferenceScreen(
             }
         }
 
+        if (state.reasonItems.isNotEmpty()) {
+            Spacer(modifier = Modifier.height(16.dp))
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceContainer
+                )
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Text(
+                        text = "推測理由",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold
+                    )
+
+                    state.reasonItems.forEach { item ->
+                        ReasonCard(item)
+                    }
+                }
+            }
+        }
+
         Spacer(modifier = Modifier.height(16.dp))
         BarSection(title = "設定別推測スコア", items = state.settingBars, highlightedLabel = topSettingLabel)
 
@@ -114,40 +145,47 @@ fun InferenceScreen(
 
         state.saveMessage?.let { message ->
             Spacer(modifier = Modifier.height(16.dp))
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.secondaryContainer
-                )
-            ) {
-                Text(
-                    text = message,
-                    modifier = Modifier.padding(16.dp),
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Medium
-                )
-            }
+            MessageCard(message)
+        }
+
+        state.finishMessage?.let { message ->
+            Spacer(modifier = Modifier.height(16.dp))
+            MessageCard(message)
         }
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        Row(
+        Column(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            OutlinedButton(
-                onClick = { navController.popBackStack() },
-                modifier = Modifier.weight(1f)
+            Button(
+                onClick = { viewModel.finishSession() },
+                enabled = !state.isFinished && !state.isFinishing,
+                modifier = Modifier.fillMaxWidth()
             ) {
-                Text("戻る")
+                Text(
+                    when {
+                        state.isFinishing -> "終了処理中..."
+                        state.isFinished -> "実戦終了済み"
+                        else -> "実戦終了"
+                    }
+                )
             }
 
             Button(
                 onClick = { viewModel.saveHistory() },
                 enabled = !state.isSaving,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.fillMaxWidth()
             ) {
                 Text(if (state.isSaving) "保存中..." else "履歴に保存")
+            }
+
+            OutlinedButton(
+                onClick = { navController.popBackStack() },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("戻る")
             }
         }
 
@@ -156,8 +194,55 @@ fun InferenceScreen(
 }
 
 @Composable
+private fun ReasonCard(item: InferenceReasonUiModel) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
+        )
+    ) {
+        Column(
+            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
+            Text(
+                text = item.label,
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.SemiBold
+            )
+            Text(
+                text = item.valueText,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Text(
+                text = item.evaluationText,
+                style = MaterialTheme.typography.bodyMedium
+            )
+        }
+    }
+}
+
+@Composable
+private fun MessageCard(message: String) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.secondaryContainer
+        )
+    ) {
+        Text(
+            text = message,
+            modifier = Modifier.padding(16.dp),
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.Medium
+        )
+    }
+}
+
+@Composable
 private fun InfoRow(label: String, value: String) {
-    Row(
+    androidx.compose.foundation.layout.Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {

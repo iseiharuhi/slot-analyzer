@@ -19,6 +19,7 @@ data class PlaySessionEntity(
     @ColumnInfo(name = "title") val title: String? = null,
     @ColumnInfo(name = "started_at") val startedAt: Long,
     @ColumnInfo(name = "updated_at") val updatedAt: Long,
+    @ColumnInfo(name = "ended_at") val endedAt: Long? = null,
     @ColumnInfo(name = "memo") val memo: String? = null,
     @ColumnInfo(name = "is_finished") val isFinished: Boolean = false,
     @ColumnInfo(name = "is_current") val isCurrent: Boolean = true,

@@ -9,6 +9,7 @@ data class PlaySession(
     val title: String?,
     val startedAt: Long,
     val updatedAt: Long,
+    val endedAt: Long?,
     val memo: String?,
     val isFinished: Boolean,
     val isCurrent: Boolean,

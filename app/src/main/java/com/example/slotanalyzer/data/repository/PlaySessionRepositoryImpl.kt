@@ -32,7 +32,9 @@ class PlaySessionRepositoryImpl @Inject constructor(
                 machineNameSnapshot = machine.name,
                 startedAt = now,
                 updatedAt = now,
-                isCurrent = true
+                endedAt = null,
+                isCurrent = true,
+                isFinished = false
             )
         )
 
@@ -70,7 +72,7 @@ class PlaySessionRepositoryImpl @Inject constructor(
     override suspend fun getOrCreateSessionForMachine(machineId: String): String {
         val now = System.currentTimeMillis()
         val existing = dao.getLatestSessionByMachineId(machineId)
-        return if (existing != null) {
+        return if (existing != null && !existing.session.isFinished) {
             val sessionId = existing.session.id
             dao.clearCurrentFlags()
             dao.markCurrentSession(sessionId, now)
@@ -114,5 +116,14 @@ class PlaySessionRepositoryImpl @Inject constructor(
         )
 
         dao.updateSessionUpdatedAt(currentSession.id, now)
+    }
+
+    override suspend fun finishSession(sessionId: String) {
+        val now = System.currentTimeMillis()
+        dao.finishSession(
+            sessionId = sessionId,
+            endedAt = now,
+            updatedAt = now
+        )
     }
 }

@@ -29,7 +29,7 @@ import com.example.slotanalyzer.data.database.entity.SessionCounterValueEntity
         AppSettingEntity::class,
         MasterMetadataEntity::class
     ],
-    version = 3,
+    version = 4,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
