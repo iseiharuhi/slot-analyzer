@@ -16,7 +16,7 @@ class PlaySessionRepositoryImpl @Inject constructor(
     private val machineRepository: MachineRepository
 ) : PlaySessionRepository {
 
-    override suspend fun startSession(machineId: String) {
+    override suspend fun startSession(machineId: String): String {
         val now = System.currentTimeMillis()
         val sessionId = UUID.randomUUID().toString()
 
@@ -24,16 +24,15 @@ class PlaySessionRepositoryImpl @Inject constructor(
             "Machine not found for machineId=$machineId"
         }
 
-        dao.deleteAllCounterValues()
-        dao.deleteAllSessions()
-
+        dao.clearCurrentFlags()
         dao.insertSession(
             PlaySessionEntity(
                 id = sessionId,
                 machineId = machine.id,
                 machineNameSnapshot = machine.name,
                 startedAt = now,
-                updatedAt = now
+                updatedAt = now,
+                isCurrent = true
             )
         )
 
@@ -49,14 +48,42 @@ class PlaySessionRepositoryImpl @Inject constructor(
                     )
                 }
         )
+
+        return sessionId
     }
 
     override suspend fun getCurrentSession(): PlaySession {
-        val existing = dao.getAnySession()
+        val existing = dao.getCurrentSession()
         if (existing != null) return mapper.toDomain(existing)
 
-        startSession("sample_machine_a")
-        return mapper.toDomain(requireNotNull(dao.getAnySession()))
+        val fallbackSessionId = startSession("sample_machine_a")
+        return getSession(fallbackSessionId)
+    }
+
+    override suspend fun getSession(sessionId: String): PlaySession {
+        val session = requireNotNull(dao.getSessionById(sessionId)) {
+            "Session not found for sessionId=$sessionId"
+        }
+        return mapper.toDomain(session)
+    }
+
+    override suspend fun getOrCreateSessionForMachine(machineId: String): String {
+        val now = System.currentTimeMillis()
+        val existing = dao.getLatestSessionByMachineId(machineId)
+        return if (existing != null) {
+            val sessionId = existing.session.id
+            dao.clearCurrentFlags()
+            dao.markCurrentSession(sessionId, now)
+            sessionId
+        } else {
+            startSession(machineId)
+        }
+    }
+
+    override suspend fun setCurrentSession(sessionId: String) {
+        val now = System.currentTimeMillis()
+        dao.clearCurrentFlags()
+        dao.markCurrentSession(sessionId, now)
     }
 
     override suspend fun updateCounter(command: UpdateCounterCommand) {
@@ -71,10 +98,9 @@ class PlaySessionRepositoryImpl @Inject constructor(
         dao.updateSessionUpdatedAt(command.sessionId, command.updatedAt)
     }
 
-    override suspend fun resetCurrentSessionCounters() {
-        val session = dao.getAnySession() ?: return
+    override suspend fun resetSessionCounters(sessionId: String) {
         val now = System.currentTimeMillis()
-        val currentSession = mapper.toDomain(session)
+        val currentSession = getSession(sessionId)
 
         dao.upsertCounters(
             currentSession.counters.map { counter ->

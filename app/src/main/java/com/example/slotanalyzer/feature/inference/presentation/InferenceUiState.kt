@@ -8,6 +8,7 @@ data class InferenceInputItemUiModel(
 )
 
 data class InferenceUiState(
+    val sessionId: String = "",
     val machineName: String = "",
     val inputItems: List<InferenceInputItemUiModel> = emptyList(),
     val summary: String = "",

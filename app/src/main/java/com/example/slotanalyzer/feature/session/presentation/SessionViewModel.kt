@@ -7,7 +7,7 @@ import com.example.slotanalyzer.feature.machine.domain.model.MachineCounterDefin
 import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
 import com.example.slotanalyzer.feature.session.domain.model.PlaySession
 import com.example.slotanalyzer.feature.session.domain.model.UpdateCounterCommand
-import com.example.slotanalyzer.feature.session.domain.usecase.GetCurrentSessionUseCase
+import com.example.slotanalyzer.feature.session.domain.usecase.GetSessionUseCase
 import com.example.slotanalyzer.feature.session.domain.usecase.ResetCurrentSessionCountersUseCase
 import com.example.slotanalyzer.feature.session.domain.usecase.UpdateCounterUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -37,7 +37,7 @@ data class SessionUiState(
 
 @HiltViewModel
 class SessionViewModel @Inject constructor(
-    private val getCurrentSessionUseCase: GetCurrentSessionUseCase,
+    private val getSessionUseCase: GetSessionUseCase,
     private val getMachineUseCase: GetMachineUseCase,
     private val updateCounterUseCase: UpdateCounterUseCase,
     private val resetCurrentSessionCountersUseCase: ResetCurrentSessionCountersUseCase
@@ -46,13 +46,11 @@ class SessionViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(SessionUiState())
     val uiState: StateFlow<SessionUiState> = _uiState.asStateFlow()
 
-    init {
-        loadCurrentSession()
-    }
+    fun loadSession(sessionId: String) {
+        if (sessionId.isBlank() || _uiState.value.sessionId == sessionId) return
 
-    private fun loadCurrentSession() {
         viewModelScope.launch {
-            val session = getCurrentSessionUseCase()
+            val session = getSessionUseCase(sessionId)
             val machine = getMachineUseCase(session.machineId)
 
             _uiState.value = SessionUiState(
@@ -84,24 +82,31 @@ class SessionViewModel @Inject constructor(
 
     fun resetAllCounters() {
         viewModelScope.launch {
-            resetCurrentSessionCountersUseCase()
-            loadCurrentSession()
+            val sessionId = _uiState.value.sessionId
+            if (sessionId.isBlank()) return@launch
+            resetCurrentSessionCountersUseCase(sessionId)
+            loadSessionForce(sessionId)
         }
+    }
+
+    private suspend fun loadSessionForce(sessionId: String) {
+        val session = getSessionUseCase(sessionId)
+        val machine = getMachineUseCase(session.machineId)
+        _uiState.value = SessionUiState(
+            sessionId = session.id,
+            machineId = session.machineId,
+            machineName = machine?.name.orEmpty(),
+            counterItems = buildCounterItems(machine, session)
+        )
     }
 
     private fun updateCounter(counterKey: String, newValue: Int) {
         _uiState.update { currentState ->
             val updatedItems = currentState.counterItems.map { item ->
-                if (item.key == counterKey) {
-                    item.copy(value = newValue)
-                } else {
-                    item
-                }
+                if (item.key == counterKey) item.copy(value = newValue) else item
             }
 
-            val totalGames = updatedItems
-                .firstOrNull { it.key == TOTAL_GAMES_KEY }
-                ?.value ?: 0
+            val totalGames = updatedItems.firstOrNull { it.key == TOTAL_GAMES_KEY }?.value ?: 0
 
             currentState.copy(
                 counterItems = updatedItems.map { item ->
@@ -173,9 +178,7 @@ class SessionViewModel @Inject constructor(
         if (!definition.isDefaultVisible) return false
         if (definition.key == TOTAL_GAMES_KEY) return true
 
-        val references = machine.settingReferenceValues
-            .filter { it.counterKey == definition.key }
-
+        val references = machine.settingReferenceValues.filter { it.counterKey == definition.key }
         if (references.isEmpty()) return false
 
         val denominatorValues = references.mapNotNull { it.denominatorValue }
@@ -194,10 +197,7 @@ class SessionViewModel @Inject constructor(
         return "1/${"%.1f".format(totalGames.toDouble() / count.toDouble())}"
     }
 
-    private fun getCounterValue(
-        session: PlaySession,
-        key: String
-    ): Int {
+    private fun getCounterValue(session: PlaySession, key: String): Int {
         return session.counters.firstOrNull { it.counterKey == key }?.intValue ?: 0
     }
 

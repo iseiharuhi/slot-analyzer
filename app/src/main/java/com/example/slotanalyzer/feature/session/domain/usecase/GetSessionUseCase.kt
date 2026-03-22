@@ -6,5 +6,5 @@ import javax.inject.Inject
 class GetSessionUseCase @Inject constructor(
     private val repository: PlaySessionRepository
 ) {
-    suspend operator fun invoke() = repository.getCurrentSession()
+    suspend operator fun invoke(sessionId: String) = repository.getSession(sessionId)
 }

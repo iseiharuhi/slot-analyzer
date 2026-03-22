@@ -44,27 +44,25 @@ class MachineSelectViewModel @Inject constructor(
         }
     }
 
-    /**
-     * 機種を選択しただけでは何もしない。
-     * 方式Bでは、続きから再開か新規実戦開始かをユーザーに選ばせる。
-     */
     fun onMachineSelected(machine: MachineItemUiModel) {
         // no-op
     }
 
-    /**
-     * 新規実戦開始ボタン用。
-     * 明示的に新しいセッションを開始したい時だけ呼ぶ。
-     */
-    fun startNewSession(machine: MachineItemUiModel, onSuccess: () -> Unit = {}) {
+    fun startNewSession(machine: MachineItemUiModel, onSuccess: (String) -> Unit = {}) {
         viewModelScope.launch {
             runCatching {
                 startPlaySessionUseCase.startNewSession(machine.id)
-            }.onSuccess {
-                onSuccess()
-            }.onFailure {
-                it.printStackTrace()
-            }
+            }.onSuccess(onSuccess)
+                .onFailure { it.printStackTrace() }
+        }
+    }
+
+    fun resumeSession(machine: MachineItemUiModel, onSuccess: (String) -> Unit = {}) {
+        viewModelScope.launch {
+            runCatching {
+                startPlaySessionUseCase(machine.id)
+            }.onSuccess(onSuccess)
+                .onFailure { it.printStackTrace() }
         }
     }
 }

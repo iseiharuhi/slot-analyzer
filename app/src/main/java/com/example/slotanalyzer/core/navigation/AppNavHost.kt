@@ -32,23 +32,32 @@ fun AppNavHost() {
         composable(
             route = AppRoutes.SESSION_INPUT,
             arguments = listOf(
-                navArgument("machineId") {
+                navArgument("sessionId") {
                     type = NavType.StringType
                 }
             )
         ) { backStackEntry ->
+            val sessionId = backStackEntry.arguments?.getString("sessionId").orEmpty()
             SessionInputScreen(
-                onMoveToInference = {
-                    navController.navigate(AppRoutes.INFERENCE)
-                },
-                onBack = {
-                    navController.popBackStack()
-                }
+                sessionId = sessionId,
+                onMoveToInference = { navController.navigate(AppRoutes.inference(sessionId)) },
+                onBack = { navController.popBackStack() }
             )
         }
 
-        composable(AppRoutes.INFERENCE) {
-            InferenceScreen(navController = navController)
+        composable(
+            route = AppRoutes.INFERENCE,
+            arguments = listOf(
+                navArgument("sessionId") {
+                    type = NavType.StringType
+                }
+            )
+        ) { backStackEntry ->
+            val sessionId = backStackEntry.arguments?.getString("sessionId").orEmpty()
+            InferenceScreen(
+                navController = navController,
+                sessionId = sessionId
+            )
         }
 
         composable(AppRoutes.HISTORY_LIST) {

@@ -17,6 +17,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -32,10 +33,15 @@ import com.example.slotanalyzer.core.ui.component.extractTopSettingLabel
 @Composable
 fun InferenceScreen(
     navController: NavController,
+    sessionId: String,
     viewModel: InferenceViewModel = hiltViewModel()
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     val topSettingLabel = extractTopSettingLabel(state.topSettingText)
+
+    LaunchedEffect(sessionId) {
+        viewModel.loadInference(sessionId)
+    }
 
     Column(
         modifier = Modifier
@@ -75,10 +81,7 @@ fun InferenceScreen(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                Text(
-                    text = state.summary,
-                    style = MaterialTheme.typography.bodyMedium
-                )
+                Text(text = state.summary, style = MaterialTheme.typography.bodyMedium)
             }
         }
 
@@ -98,33 +101,19 @@ fun InferenceScreen(
                 )
 
                 state.inputItems.forEach { item ->
-                    InfoRow(
-                        label = item.label,
-                        value = item.valueText
-                    )
+                    InfoRow(label = item.label, value = item.valueText)
                 }
             }
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        BarSection(
-            title = "設定別推測スコア",
-            items = state.settingBars,
-            highlightedLabel = topSettingLabel
-        )
+        BarSection(title = "設定別推測スコア", items = state.settingBars, highlightedLabel = topSettingLabel)
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        BarSection(
-            title = "設定帯評価",
-            items = state.bandBars,
-            highlightedLabel = null
-        )
+        BarSection(title = "設定帯評価", items = state.bandBars, highlightedLabel = null)
 
         state.saveMessage?.let { message ->
             Spacer(modifier = Modifier.height(16.dp))
-
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(
@@ -167,10 +156,7 @@ fun InferenceScreen(
 }
 
 @Composable
-private fun InfoRow(
-    label: String,
-    value: String
-) {
+private fun InfoRow(label: String, value: String) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
@@ -189,4 +175,3 @@ private fun InfoRow(
 
     Spacer(modifier = Modifier.height(8.dp))
 }
-

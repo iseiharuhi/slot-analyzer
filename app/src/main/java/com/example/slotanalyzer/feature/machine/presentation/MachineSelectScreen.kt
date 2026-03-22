@@ -20,7 +20,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -28,7 +27,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.example.slotanalyzer.core.navigation.AppRoutes
-import kotlinx.coroutines.launch
 
 @Composable
 fun MachineSelectScreen(
@@ -36,14 +34,13 @@ fun MachineSelectScreen(
     viewModel: MachineSelectViewModel = hiltViewModel()
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
-    val scope = rememberCoroutineScope()
 
     var searchQuery by remember { mutableStateOf("") }
     var selectedMachineId by remember { mutableStateOf<String?>(null) }
 
     val filteredMachines = state.machines.filter { machine ->
         machine.name.contains(searchQuery, ignoreCase = true) ||
-                machine.name.replace(" ", "").contains(searchQuery.replace(" ", ""), true)
+            machine.name.replace(" ", "").contains(searchQuery.replace(" ", ""), true)
     }
 
     val selectedMachine = state.machines.firstOrNull { it.id == selectedMachineId }
@@ -110,10 +107,8 @@ fun MachineSelectScreen(
 
             Button(
                 onClick = {
-                    scope.launch {
-                        viewModel.startNewSession(selectedMachine) {
-                            navController.navigate(AppRoutes.sessionInput(selectedMachine.id))
-                        }
+                    viewModel.startNewSession(selectedMachine) { sessionId ->
+                        navController.navigate(AppRoutes.sessionInput(sessionId))
                     }
                 },
                 modifier = Modifier
@@ -125,7 +120,9 @@ fun MachineSelectScreen(
 
             OutlinedButton(
                 onClick = {
-                    navController.navigate(AppRoutes.sessionInput(selectedMachine.id))
+                    viewModel.resumeSession(selectedMachine) { sessionId ->
+                        navController.navigate(AppRoutes.sessionInput(sessionId))
+                    }
                 },
                 modifier = Modifier
                     .fillMaxWidth()

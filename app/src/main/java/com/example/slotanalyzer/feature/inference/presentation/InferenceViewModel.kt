@@ -11,7 +11,7 @@ import com.example.slotanalyzer.feature.inference.domain.usecase.CalculateInfere
 import com.example.slotanalyzer.feature.machine.domain.model.Machine
 import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
 import com.example.slotanalyzer.feature.session.domain.model.PlaySession
-import com.example.slotanalyzer.feature.session.domain.usecase.GetCurrentSessionUseCase
+import com.example.slotanalyzer.feature.session.domain.usecase.GetSessionUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 
 @HiltViewModel
 class InferenceViewModel @Inject constructor(
-    private val getCurrentSessionUseCase: GetCurrentSessionUseCase,
+    private val getSessionUseCase: GetSessionUseCase,
     private val getMachineUseCase: GetMachineUseCase,
     private val calculateInferenceUseCase: CalculateInferenceUseCase,
     private val savePlayHistoryUseCase: SavePlayHistoryUseCase
@@ -30,16 +30,16 @@ class InferenceViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(InferenceUiState())
     val uiState: StateFlow<InferenceUiState> = _uiState.asStateFlow()
 
+    private var loadedSessionId: String? = null
     private var currentSession: PlaySession? = null
     private var currentInferenceResult: InferenceResult? = null
 
-    init {
-        loadInference()
-    }
+    fun loadInference(sessionId: String) {
+        if (sessionId.isBlank() || loadedSessionId == sessionId) return
+        loadedSessionId = sessionId
 
-    private fun loadInference() {
         viewModelScope.launch {
-            val session = getCurrentSessionUseCase()
+            val session = getSessionUseCase(sessionId)
             val machine = getMachineUseCase(session.machineId)
 
             currentSession = session
@@ -55,11 +55,9 @@ class InferenceViewModel @Inject constructor(
             val topSetting = result.settingScores.maxByOrNull { it.normalizedValue }
 
             _uiState.value = InferenceUiState(
+                sessionId = sessionId,
                 machineName = machine?.name ?: session.machineNameSnapshot,
-                inputItems = buildInputItems(
-                    machine = machine,
-                    session = session
-                ),
+                inputItems = buildInputItems(machine, session),
                 summary = result.summary,
                 confidenceText = toConfidenceText(result.confidenceLabel.name),
                 topSettingText = topSetting?.let {
@@ -78,10 +76,7 @@ class InferenceViewModel @Inject constructor(
         if (_uiState.value.isSaving) return
 
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(
-                isSaving = true,
-                saveMessage = null
-            )
+            _uiState.value = _uiState.value.copy(isSaving = true, saveMessage = null)
 
             runCatching {
                 savePlayHistoryUseCase(session, result)
@@ -101,10 +96,7 @@ class InferenceViewModel @Inject constructor(
         }
     }
 
-    private fun buildInputItems(
-        machine: Machine?,
-        session: PlaySession
-    ): List<InferenceInputItemUiModel> {
+    private fun buildInputItems(machine: Machine?, session: PlaySession): List<InferenceInputItemUiModel> {
         val totalGames = getCounter(session, TOTAL_GAMES_KEY)
 
         val counterDefinitions = machine?.counters
@@ -119,11 +111,7 @@ class InferenceViewModel @Inject constructor(
                 "$count ${definition.unit}"
             } else {
                 val rateText = RateFormatter.calculateRateText(totalGames, count)
-                if (rateText == "--") {
-                    "$count ${definition.unit}"
-                } else {
-                    "$count ${definition.unit} / 確率 $rateText"
-                }
+                if (rateText == "--") "$count ${definition.unit}" else "$count ${definition.unit} / 確率 $rateText"
             }
 
             InferenceInputItemUiModel(
@@ -134,46 +122,24 @@ class InferenceViewModel @Inject constructor(
     }
 
     private fun buildSettingBars(settingScores: List<SettingScore>): List<ScoreBarItem> {
-        return settingScores
-            .sortedBy { it.setting }
-            .map {
-                ScoreBarItem(
-                    label = "設定${it.setting}",
-                    valueText = "${(it.normalizedValue * 100).toInt()}%",
-                    progress = it.normalizedValue.toFloat().coerceIn(0f, 1f)
-                )
-            }
+        return settingScores.sortedBy { it.setting }.map {
+            ScoreBarItem(
+                label = "設定${it.setting}",
+                valueText = "${(it.normalizedValue * 100).toInt()}%",
+                progress = it.normalizedValue.toFloat().coerceIn(0f, 1f)
+            )
+        }
     }
 
     private fun buildBandBars(settingScores: List<SettingScore>): List<ScoreBarItem> {
-        val low = settingScores
-            .filter { it.setting in 1..2 }
-            .sumOf { it.normalizedValue }
-
-        val middle = settingScores
-            .filter { it.setting in 3..4 }
-            .sumOf { it.normalizedValue }
-
-        val high = settingScores
-            .filter { it.setting in 5..6 }
-            .sumOf { it.normalizedValue }
+        val low = settingScores.filter { it.setting in 1..2 }.sumOf { it.normalizedValue }
+        val middle = settingScores.filter { it.setting in 3..4 }.sumOf { it.normalizedValue }
+        val high = settingScores.filter { it.setting in 5..6 }.sumOf { it.normalizedValue }
 
         return listOf(
-            ScoreBarItem(
-                label = "低設定帯",
-                valueText = "${(low * 100).toInt()}%",
-                progress = low.toFloat().coerceIn(0f, 1f)
-            ),
-            ScoreBarItem(
-                label = "中間設定帯",
-                valueText = "${(middle * 100).toInt()}%",
-                progress = middle.toFloat().coerceIn(0f, 1f)
-            ),
-            ScoreBarItem(
-                label = "高設定帯",
-                valueText = "${(high * 100).toInt()}%",
-                progress = high.toFloat().coerceIn(0f, 1f)
-            )
+            ScoreBarItem("低設定帯", "${(low * 100).toInt()}%", low.toFloat().coerceIn(0f, 1f)),
+            ScoreBarItem("中間設定帯", "${(middle * 100).toInt()}%", middle.toFloat().coerceIn(0f, 1f)),
+            ScoreBarItem("高設定帯", "${(high * 100).toInt()}%", high.toFloat().coerceIn(0f, 1f))
         )
     }
 

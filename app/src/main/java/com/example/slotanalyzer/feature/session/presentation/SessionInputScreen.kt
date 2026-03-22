@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,12 +36,17 @@ import com.example.slotanalyzer.feature.session.presentation.component.NumericAd
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SessionInputScreen(
+    sessionId: String,
     onMoveToInference: () -> Unit,
     onBack: () -> Unit,
     viewModel: SessionViewModel = hiltViewModel()
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     var showResetDialog by remember { mutableStateOf(false) }
+
+    LaunchedEffect(sessionId) {
+        viewModel.loadSession(sessionId)
+    }
 
     if (showResetDialog) {
         AlertDialog(
@@ -58,9 +64,7 @@ fun SessionInputScreen(
                 }
             },
             dismissButton = {
-                TextButton(
-                    onClick = { showResetDialog = false }
-                ) {
+                TextButton(onClick = { showResetDialog = false }) {
                     Text("キャンセル")
                 }
             }
@@ -73,10 +77,7 @@ fun SessionInputScreen(
                 title = { Text("実戦入力") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(
-                            imageVector = Icons.Default.ArrowBack,
-                            contentDescription = "戻る"
-                        )
+                        Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "戻る")
                     }
                 }
             )
@@ -127,9 +128,7 @@ fun SessionInputScreen(
                         rateText = item.rateText
                     ),
                     value = item.value,
-                    onValueChange = { value ->
-                        viewModel.setCounter(item.key, value)
-                    },
+                    onValueChange = { value -> viewModel.setCounter(item.key, value) },
                     steps = if (item.key == "total_games") {
                         listOf(1, 10, 100, 1000)
                     } else {
@@ -160,15 +159,6 @@ private fun buildLabel(
     unit: String,
     rateText: String?
 ): String {
-    val base = if (unit.isBlank()) {
-        displayName
-    } else {
-        "$displayName ($unit)"
-    }
-
-    return if (rateText.isNullOrBlank()) {
-        base
-    } else {
-        "$base  確率: $rateText"
-    }
+    val base = if (unit.isBlank()) displayName else "$displayName ($unit)"
+    return if (rateText.isNullOrBlank()) base else "$base  確率: $rateText"
 }

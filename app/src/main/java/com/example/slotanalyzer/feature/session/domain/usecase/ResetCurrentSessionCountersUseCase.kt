@@ -6,7 +6,7 @@ import javax.inject.Inject
 class ResetCurrentSessionCountersUseCase @Inject constructor(
     private val repository: PlaySessionRepository
 ) {
-    suspend operator fun invoke() {
-        repository.resetCurrentSessionCounters()
+    suspend operator fun invoke(sessionId: String) {
+        repository.resetSessionCounters(sessionId)
     }
 }

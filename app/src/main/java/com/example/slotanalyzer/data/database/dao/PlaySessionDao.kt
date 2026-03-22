@@ -21,17 +21,22 @@ interface PlaySessionDao {
     suspend fun upsertCounters(items: List<SessionCounterValueEntity>)
 
     @Transaction
-    @Query("SELECT * FROM play_sessions LIMIT 1")
-    suspend fun getAnySession(): SessionWithCounters?
+    @Query("SELECT * FROM play_sessions WHERE is_current = 1 ORDER BY updated_at DESC LIMIT 1")
+    suspend fun getCurrentSession(): SessionWithCounters?
 
-    @Query("SELECT * FROM play_sessions LIMIT 1")
-    suspend fun getAnySessionEntity(): PlaySessionEntity?
+    @Transaction
+    @Query("SELECT * FROM play_sessions WHERE id = :sessionId LIMIT 1")
+    suspend fun getSessionById(sessionId: String): SessionWithCounters?
 
-    @Query("DELETE FROM session_counter_values")
-    suspend fun deleteAllCounterValues()
+    @Transaction
+    @Query("SELECT * FROM play_sessions WHERE machine_id = :machineId ORDER BY updated_at DESC LIMIT 1")
+    suspend fun getLatestSessionByMachineId(machineId: String): SessionWithCounters?
 
-    @Query("DELETE FROM play_sessions")
-    suspend fun deleteAllSessions()
+    @Query("UPDATE play_sessions SET is_current = 0")
+    suspend fun clearCurrentFlags()
+
+    @Query("UPDATE play_sessions SET is_current = 1, updated_at = :updatedAt WHERE id = :sessionId")
+    suspend fun markCurrentSession(sessionId: String, updatedAt: Long)
 
     @Query("UPDATE play_sessions SET updated_at = :updatedAt WHERE id = :sessionId")
     suspend fun updateSessionUpdatedAt(sessionId: String, updatedAt: Long)
