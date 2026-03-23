@@ -73,6 +73,7 @@ class InferenceViewModel @Inject constructor(
                 } ?: "",
                 settingBars = settingBars,
                 bandBars = bandBars,
+                settingDistributionPoints = buildSettingDistributionPoints(result.settingScores),
                 isFinished = session.isFinished,
                 finishedStatusText = buildFinishedStatusText(session)
             )
@@ -294,6 +295,17 @@ class InferenceViewModel @Inject constructor(
                 progress = high.toFloat().coerceIn(0f, 1f)
             )
         )
+    }
+
+    private fun buildSettingDistributionPoints(settingScores: List<SettingScore>): List<SettingDistributionPointUiModel> {
+        return settingScores
+            .sortedBy { it.setting }
+            .map {
+                SettingDistributionPointUiModel(
+                    label = "設定${it.setting}",
+                    value = it.normalizedValue.toFloat().coerceIn(0f, 1f)
+                )
+            }
     }
 
     private fun buildCandidateSummary(settingScores: List<SettingScore>): String {

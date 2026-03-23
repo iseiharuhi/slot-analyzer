@@ -16,6 +16,11 @@ data class InferenceReasonUiModel(
     val levelKey: String = "neutral"
 )
 
+data class SettingDistributionPointUiModel(
+    val label: String,
+    val value: Float
+)
+
 data class InferenceUiState(
     val sessionId: String = "",
     val machineName: String = "",
@@ -30,6 +35,7 @@ data class InferenceUiState(
     val topSettingText: String = "",
     val settingBars: List<ScoreBarItem> = emptyList(),
     val bandBars: List<ScoreBarItem> = emptyList(),
+    val settingDistributionPoints: List<SettingDistributionPointUiModel> = emptyList(),
     val isFinished: Boolean = false,
     val finishedStatusText: String = "",
     val isFinishing: Boolean = false,
