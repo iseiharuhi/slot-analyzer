@@ -29,6 +29,17 @@ class CalculateInferenceUseCase @Inject constructor() {
             return emptyResult("設定差データがありません")
         }
 
+        val eligibleCounterKeys = groupedReferences
+            .filterValues { refs ->
+                val observed = getCounter(session, refs.first().counterKey)
+                observed > 0
+            }
+            .keys
+
+        if (eligibleCounterKeys.isEmpty()) {
+            return emptyResult("判別対象の入力がまだ不足しています")
+        }
+
         val scores = (1..6).map { setting ->
             val raw = calculateScore(
                 setting = setting,
@@ -45,8 +56,8 @@ class CalculateInferenceUseCase @Inject constructor() {
         }
 
         val normalized = normalize(scores)
-        val confidence = calculateConfidence(totalGames, normalized)
-        val summary = buildSummary(normalized, confidence)
+        val confidence = calculateConfidence(totalGames, normalized, eligibleCounterKeys.size)
+        val summary = buildSummary(normalized, confidence, eligibleCounterKeys.size)
 
         return InferenceResult(
             settingScores = normalized,
@@ -55,9 +66,7 @@ class CalculateInferenceUseCase @Inject constructor() {
         )
     }
 
-    private fun getValidReferences(
-        machine: Machine
-    ): Map<String, List<SettingReferenceValue>> {
+    private fun getValidReferences(machine: Machine): Map<String, List<SettingReferenceValue>> {
         val visibleKeys = machine.counters
             .filter { it.isEnabled && it.isDefaultVisible }
             .map { it.key }
@@ -78,15 +87,20 @@ class CalculateInferenceUseCase @Inject constructor() {
         session: PlaySession,
         totalGames: Int
     ): Double {
-        var sum = 0.0
-        var count = 0
+        var weightedSum = 0.0
+        var totalWeight = 0.0
 
         refs.forEach { (key, list) ->
+            val observed = getCounter(session, key)
+            if (observed <= 0) return@forEach
+
             val ref = list.firstOrNull { it.settingNo == setting } ?: return@forEach
             val denom = ref.denominatorValue ?: return@forEach
             if (denom <= 0.0) return@forEach
 
-            val observed = getCounter(session, key)
+            val minSampleSize = ref.minSampleSize ?: 1
+            val sampleFactor = (observed.toDouble() / minSampleSize.toDouble()).coerceIn(0.25, 1.0)
+            val weight = ref.weight.coerceAtLeast(0.1) * sampleFactor
             val expected = totalGames.toDouble() / denom
 
             val score = calcItemScore(
@@ -94,12 +108,12 @@ class CalculateInferenceUseCase @Inject constructor() {
                 expected = expected
             )
 
-            sum += score
-            count++
+            weightedSum += score * weight
+            totalWeight += weight
         }
 
-        if (count == 0) return MIN_SCORE
-        return sum / count
+        if (totalWeight <= 0.0) return MIN_SCORE
+        return weightedSum / totalWeight
     }
 
     private fun calcItemScore(
@@ -111,12 +125,17 @@ class CalculateInferenceUseCase @Inject constructor() {
         val diff = abs(observed - expected)
         val ratio = diff / expected
 
-        return (1.0 - ratio).coerceIn(MIN_SCORE, 1.0)
+        return when {
+            ratio <= 0.03 -> 1.0
+            ratio <= 0.08 -> 0.92
+            ratio <= 0.15 -> 0.82
+            ratio <= 0.25 -> 0.68
+            ratio <= 0.40 -> 0.45
+            else -> MIN_SCORE
+        }
     }
 
-    private fun normalize(
-        scores: List<SettingScore>
-    ): List<SettingScore> {
+    private fun normalize(scores: List<SettingScore>): List<SettingScore> {
         val adjusted = scores.map {
             it.copy(rawValue = it.rawValue.coerceAtLeast(MIN_SCORE))
         }
@@ -137,9 +156,11 @@ class CalculateInferenceUseCase @Inject constructor() {
 
     private fun calculateConfidence(
         totalGames: Int,
-        scores: List<SettingScore>
+        scores: List<SettingScore>,
+        observedItemCount: Int
     ): ConfidenceLabel {
         if (totalGames < 1000) return ConfidenceLabel.INSUFFICIENT
+        if (observedItemCount <= 1) return ConfidenceLabel.TEMPORARY
 
         val topTwo = scores
             .sortedByDescending { it.normalizedValue }
@@ -150,30 +171,34 @@ class CalculateInferenceUseCase @Inject constructor() {
         val gap = topTwo[0].normalizedValue - topTwo[1].normalizedValue
 
         return when {
-            totalGames >= 5000 && gap >= 0.20 -> ConfidenceLabel.HIGH
-            totalGames >= 3000 && gap >= 0.10 -> ConfidenceLabel.MEDIUM
-            else -> ConfidenceLabel.LOW
+            totalGames >= 5000 && observedItemCount >= 3 && gap >= 0.18 -> ConfidenceLabel.HIGH
+            totalGames >= 3000 && observedItemCount >= 2 && gap >= 0.10 -> ConfidenceLabel.MEDIUM
+            observedItemCount >= 2 -> ConfidenceLabel.LOW
+            else -> ConfidenceLabel.TEMPORARY
         }
     }
 
     private fun buildSummary(
         scores: List<SettingScore>,
-        confidence: ConfidenceLabel
+        confidence: ConfidenceLabel,
+        observedItemCount: Int
     ): String {
         val sorted = scores.sortedByDescending { it.normalizedValue }
         val top = sorted.firstOrNull() ?: return "不明"
+        val second = sorted.getOrNull(1)
 
         val percent = (top.normalizedValue * 100).toInt()
+        val gapPercent = second?.let { ((top.normalizedValue - it.normalizedValue) * 100).toInt() } ?: 0
 
         val confidenceText = when (confidence) {
-            ConfidenceLabel.HIGH -> "信頼度は高めです"
-            ConfidenceLabel.MEDIUM -> "信頼度は中程度です"
-            ConfidenceLabel.LOW -> "信頼度は低めです"
-            ConfidenceLabel.INSUFFICIENT -> "サンプル不足です"
-            else -> "暫定結果です"
+            ConfidenceLabel.HIGH -> "十分なサンプルがあり、信頼度は高めです"
+            ConfidenceLabel.MEDIUM -> "ある程度のサンプルがあり、信頼度は中程度です"
+            ConfidenceLabel.LOW -> "まだブレはありますが、現状では有力です"
+            ConfidenceLabel.TEMPORARY -> "入力項目が少なく、現時点では暫定です"
+            ConfidenceLabel.INSUFFICIENT -> "総ゲーム数が少なく、サンプル不足です"
         }
 
-        return "設定${top.setting}が最有力（${percent}%）。$confidenceText。"
+        return "設定${top.setting}が最有力（${percent}%）。判別に使えた項目は${observedItemCount}件、次点との差は約${gapPercent}%です。$confidenceText。"
     }
 
     private fun emptyResult(message: String): InferenceResult {
@@ -192,13 +217,8 @@ class CalculateInferenceUseCase @Inject constructor() {
         )
     }
 
-    private fun getCounter(
-        session: PlaySession,
-        key: String
-    ): Int {
-        return session.counters
-            .firstOrNull { it.counterKey == key }
-            ?.intValue ?: 0
+    private fun getCounter(session: PlaySession, key: String): Int {
+        return session.counters.firstOrNull { it.counterKey == key }?.intValue ?: 0
     }
 
     companion object {

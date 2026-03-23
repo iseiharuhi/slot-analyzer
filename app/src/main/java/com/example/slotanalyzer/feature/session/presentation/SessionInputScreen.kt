@@ -8,8 +8,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -28,6 +29,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -71,13 +73,15 @@ fun SessionInputScreen(
         )
     }
 
+    val groupedItems = state.counterItems.groupBy { it.categoryLabel }
+
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text("実戦入力") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "戻る")
+                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "戻る")
                     }
                 }
             )
@@ -94,47 +98,81 @@ fun SessionInputScreen(
             Card {
                 Column(
                     modifier = Modifier.padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     if (state.machineName.isNotBlank()) {
                         Text(
-                            text = "機種: ${state.machineName}",
-                            style = MaterialTheme.typography.titleMedium
+                            text = state.machineName,
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    if (state.machineTypeText.isNotBlank()) {
+                        AssistChip(
+                            onClick = {},
+                            enabled = false,
+                            label = { Text("タイプ: ${state.machineTypeText}") }
                         )
                     }
 
                     Text(
-                        text = "機種ごとに必要な入力項目だけ表示しています",
+                        text = if (state.guidanceText.isBlank()) {
+                            "機種ごとに必要な入力項目だけ表示しています。"
+                        } else {
+                            state.guidanceText
+                        },
                         style = MaterialTheme.typography.bodyMedium
                     )
 
                     Text(
-                        text = "総回転数は 1 / 10 / 100 / 1000、その他は 1 / 10 / 100 で調整できます",
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-
-                    Text(
-                        text = "数値は直接入力もできます",
-                        style = MaterialTheme.typography.bodySmall
+                        text = "総回転数は 1 / 10 / 100 / 1000、その他は 1 / 10 / 100 で調整できます。",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
 
-            state.counterItems.forEach { item ->
-                NumericAdjustField(
-                    label = buildLabel(
-                        displayName = item.displayName,
-                        unit = item.unit,
-                        rateText = item.rateText
-                    ),
-                    value = item.value,
-                    onValueChange = { value -> viewModel.setCounter(item.key, value) },
-                    steps = if (item.key == "total_games") {
-                        listOf(1, 10, 100, 1000)
-                    } else {
-                        listOf(1, 10, 100)
+            groupedItems.forEach { (categoryLabel, items) ->
+                Card {
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(14.dp)
+                    ) {
+                        Text(
+                            text = categoryLabel,
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.SemiBold
+                        )
+
+                        items.forEach { item ->
+                            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                NumericAdjustField(
+                                    label = buildLabel(
+                                        displayName = item.displayName,
+                                        unit = item.unit,
+                                        rateText = item.rateText
+                                    ),
+                                    value = item.value,
+                                    onValueChange = { value -> viewModel.setCounter(item.key, value) },
+                                    steps = if (item.key == "total_games") {
+                                        listOf(1, 10, 100, 1000)
+                                    } else {
+                                        listOf(1, 10, 100)
+                                    }
+                                )
+
+                                item.note?.takeIf { it.isNotBlank() }?.let { note ->
+                                    Text(
+                                        text = note,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                        }
                     }
-                )
+                }
             }
 
             OutlinedButton(

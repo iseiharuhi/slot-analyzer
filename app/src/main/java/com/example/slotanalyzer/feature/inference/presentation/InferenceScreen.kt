@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -62,18 +63,23 @@ fun InferenceScreen(
                 containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
             )
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(
                     text = "機種: ${state.machineName}",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
 
-                Spacer(modifier = Modifier.height(10.dp))
+                if (state.machineTypeText.isNotBlank()) {
+                    AssistChip(
+                        onClick = {},
+                        enabled = false,
+                        label = { Text("タイプ: ${state.machineTypeText}") }
+                    )
+                }
 
                 ConfidenceChip(state.confidenceText)
 
-                Spacer(modifier = Modifier.height(12.dp))
                 Text(
                     text = state.finishedStatusText,
                     style = MaterialTheme.typography.bodyMedium,
@@ -81,11 +87,8 @@ fun InferenceScreen(
                 )
 
                 if (state.topSettingText.isNotBlank()) {
-                    Spacer(modifier = Modifier.height(12.dp))
                     TopSettingCard(state.topSettingText)
                 }
-
-                Spacer(modifier = Modifier.height(12.dp))
 
                 Text(text = state.summary, style = MaterialTheme.typography.bodyMedium)
             }
@@ -99,16 +102,25 @@ fun InferenceScreen(
                 containerColor = MaterialTheme.colorScheme.surfaceContainer
             )
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(
                     text = "入力状況",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
 
-                state.inputItems.forEach { item ->
-                    InfoRow(label = item.label, value = item.valueText)
-                }
+                state.inputItems
+                    .groupBy { it.categoryLabel }
+                    .forEach { (category, items) ->
+                        Text(
+                            text = category,
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        items.forEach { item ->
+                            InfoRow(label = item.label, value = item.valueText)
+                        }
+                    }
             }
         }
 
@@ -142,7 +154,6 @@ fun InferenceScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
         BarSection(title = "設定帯評価", items = state.bandBars, highlightedLabel = null)
-
 
         state.finishMessage?.let { message ->
             Spacer(modifier = Modifier.height(16.dp))
@@ -245,6 +256,4 @@ private fun InfoRow(label: String, value: String) {
             fontWeight = FontWeight.Medium
         )
     }
-
-    Spacer(modifier = Modifier.height(8.dp))
 }

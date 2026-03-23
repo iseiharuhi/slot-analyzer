@@ -3,7 +3,6 @@ package com.example.slotanalyzer.feature.history.detail.presentation
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -97,15 +97,22 @@ fun HistoryDetailScreen(
                 containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
             )
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(
                     text = "機種: ${state.machineName}",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
 
+                if (state.machineTypeText.isNotBlank()) {
+                    AssistChip(
+                        onClick = {},
+                        enabled = false,
+                        label = { Text("タイプ: ${state.machineTypeText}") }
+                    )
+                }
+
                 if (state.playedAtText.isNotBlank()) {
-                    Spacer(modifier = Modifier.height(6.dp))
                     Text(
                         text = state.playedAtText,
                         style = MaterialTheme.typography.bodySmall,
@@ -113,16 +120,19 @@ fun HistoryDetailScreen(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(10.dp))
+                if (state.statusText.isNotBlank()) {
+                    Text(
+                        text = state.statusText,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
 
                 ConfidenceChip(state.confidenceText)
 
                 if (state.topSettingText.isNotBlank()) {
-                    Spacer(modifier = Modifier.height(12.dp))
                     TopSettingCard(state.topSettingText)
                 }
-
-                Spacer(modifier = Modifier.height(12.dp))
 
                 Text(
                     text = state.summary,
@@ -139,26 +149,55 @@ fun HistoryDetailScreen(
                 containerColor = MaterialTheme.colorScheme.surfaceContainer
             )
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(
                     text = "実戦データ",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
 
-                Spacer(modifier = Modifier.height(12.dp))
+                state.inputItems
+                    .groupBy { it.categoryLabel }
+                    .forEach { (category, items) ->
+                        Text(
+                            text = category,
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        items.forEach { item ->
+                            InfoRow(label = item.label, value = item.valueText)
+                        }
+                    }
+            }
+        }
 
-                InfoRow("総ゲーム数", "${state.totalGames}")
-                InfoRow("BIG確率", state.bigRateText)
-                InfoRow("REG確率", state.regRateText)
-                InfoRow("CZ回数", "${state.czCount}")
-                InfoRow("AT回数", "${state.atCount}")
+        if (state.reasonItems.isNotEmpty()) {
+            Spacer(modifier = Modifier.height(16.dp))
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceContainer
+                )
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Text(
+                        text = "推測理由",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold
+                    )
+
+                    state.reasonItems.forEach { item ->
+                        ReasonCard(item)
+                    }
+                }
             }
         }
 
         if (state.settingBars.isNotEmpty()) {
             Spacer(modifier = Modifier.height(16.dp))
-
             BarSection(
                 title = "設定別推測スコア",
                 items = state.settingBars,
@@ -168,7 +207,6 @@ fun HistoryDetailScreen(
 
         if (state.bandBars.isNotEmpty()) {
             Spacer(modifier = Modifier.height(16.dp))
-
             BarSection(
                 title = "設定帯評価",
                 items = state.bandBars,
@@ -199,11 +237,41 @@ fun HistoryDetailScreen(
 }
 
 @Composable
+private fun ReasonCard(item: HistoryDetailReasonUiModel) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
+        )
+    ) {
+        Column(
+            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
+            Text(
+                text = item.label,
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.SemiBold
+            )
+            Text(
+                text = item.valueText,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Text(
+                text = item.evaluationText,
+                style = MaterialTheme.typography.bodyMedium
+            )
+        }
+    }
+}
+
+@Composable
 private fun InfoRow(
     label: String,
     value: String
 ) {
-    Row(
+    androidx.compose.foundation.layout.Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
@@ -218,6 +286,4 @@ private fun InfoRow(
             fontWeight = FontWeight.Medium
         )
     }
-
-    Spacer(modifier = Modifier.height(8.dp))
 }

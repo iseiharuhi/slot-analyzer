@@ -2,6 +2,7 @@ package com.example.slotanalyzer.feature.session.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.slotanalyzer.domain.model.CounterCategory
 import com.example.slotanalyzer.feature.machine.domain.model.Machine
 import com.example.slotanalyzer.feature.machine.domain.model.MachineCounterDefinition
 import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
@@ -25,6 +26,8 @@ data class SessionCounterItemUiModel(
     val unit: String,
     val step: Int,
     val supportsMinus: Boolean,
+    val categoryLabel: String,
+    val note: String? = null,
     val rateText: String? = null
 )
 
@@ -32,6 +35,8 @@ data class SessionUiState(
     val sessionId: String = "",
     val machineId: String = "",
     val machineName: String = "",
+    val machineTypeText: String = "",
+    val guidanceText: String = "",
     val counterItems: List<SessionCounterItemUiModel> = emptyList()
 )
 
@@ -53,27 +58,8 @@ class SessionViewModel @Inject constructor(
             val session = getSessionUseCase(sessionId)
             val machine = getMachineUseCase(session.machineId)
 
-            _uiState.value = SessionUiState(
-                sessionId = session.id,
-                machineId = session.machineId,
-                machineName = machine?.name.orEmpty(),
-                counterItems = buildCounterItems(
-                    machine = machine,
-                    session = session
-                )
-            )
+            _uiState.value = buildUiState(session, machine)
         }
-    }
-
-    fun increaseCounter(counterKey: String) {
-        val item = _uiState.value.counterItems.firstOrNull { it.key == counterKey } ?: return
-        updateCounter(counterKey, item.value + item.step)
-    }
-
-    fun decreaseCounter(counterKey: String) {
-        val item = _uiState.value.counterItems.firstOrNull { it.key == counterKey } ?: return
-        val newValue = (item.value - item.step).coerceAtLeast(0)
-        updateCounter(counterKey, newValue)
     }
 
     fun setCounter(counterKey: String, value: Int) {
@@ -92,10 +78,16 @@ class SessionViewModel @Inject constructor(
     private suspend fun loadSessionForce(sessionId: String) {
         val session = getSessionUseCase(sessionId)
         val machine = getMachineUseCase(session.machineId)
-        _uiState.value = SessionUiState(
+        _uiState.value = buildUiState(session, machine)
+    }
+
+    private fun buildUiState(session: PlaySession, machine: Machine?): SessionUiState {
+        return SessionUiState(
             sessionId = session.id,
             machineId = session.machineId,
             machineName = machine?.name.orEmpty(),
+            machineTypeText = machine?.type.orEmpty(),
+            guidanceText = buildGuidanceText(machine),
             counterItems = buildCounterItems(machine, session)
         )
     }
@@ -161,6 +153,8 @@ class SessionViewModel @Inject constructor(
                     unit = definition.unit,
                     step = if (definition.key == TOTAL_GAMES_KEY) 100 else 1,
                     supportsMinus = definition.supportsMinus || definition.key == TOTAL_GAMES_KEY,
+                    categoryLabel = definition.category.toLabel(),
+                    note = definition.notes,
                     rateText = buildRateText(
                         counterKey = definition.key,
                         totalGames = totalGames,
@@ -179,12 +173,22 @@ class SessionViewModel @Inject constructor(
         if (definition.key == TOTAL_GAMES_KEY) return true
 
         val references = machine.settingReferenceValues.filter { it.counterKey == definition.key }
-        if (references.isEmpty()) return false
+        if (references.isEmpty()) return definition.category != CounterCategory.SPECIAL
 
         val denominatorValues = references.mapNotNull { it.denominatorValue }
         if (denominatorValues.isEmpty()) return false
 
         return denominatorValues.distinct().size > 1
+    }
+
+    private fun buildGuidanceText(machine: Machine?): String {
+        if (machine == null) return ""
+
+        return when (machine.type?.uppercase()) {
+            "AT" -> "AT・CZ系の初当たりを中心に入力すると、推測精度が上がります。"
+            "A", "A+ART", "A+AT" -> "ボーナス回数を中心に入力して、総ゲーム数とのバランスを見てください。"
+            else -> "機種ごとの設定差がある項目だけ表示しています。"
+        }
     }
 
     private fun buildRateText(
@@ -199,6 +203,16 @@ class SessionViewModel @Inject constructor(
 
     private fun getCounterValue(session: PlaySession, key: String): Int {
         return session.counters.firstOrNull { it.counterKey == key }?.intValue ?: 0
+    }
+
+    private fun CounterCategory.toLabel(): String {
+        return when (this) {
+            CounterCategory.BASIC -> "基本"
+            CounterCategory.BONUS -> "ボーナス"
+            CounterCategory.AT_CZ -> "AT / CZ"
+            CounterCategory.SMALL_ROLE -> "小役"
+            CounterCategory.SPECIAL -> "特殊"
+        }
     }
 
     companion object {

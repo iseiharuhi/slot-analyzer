@@ -4,7 +4,8 @@ import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 
 data class InferenceInputItemUiModel(
     val label: String,
-    val valueText: String
+    val valueText: String,
+    val categoryLabel: String
 )
 
 data class InferenceReasonUiModel(
@@ -16,6 +17,7 @@ data class InferenceReasonUiModel(
 data class InferenceUiState(
     val sessionId: String = "",
     val machineName: String = "",
+    val machineTypeText: String = "",
     val inputItems: List<InferenceInputItemUiModel> = emptyList(),
     val reasonItems: List<InferenceReasonUiModel> = emptyList(),
     val summary: String = "",
