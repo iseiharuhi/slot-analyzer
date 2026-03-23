@@ -52,6 +52,7 @@ class InferenceViewModel @Inject constructor(
                 session = session
             )
 
+            val reasonItems = buildReasonItems(machine, session, result)
             val settingBars = buildSettingBars(result.settingScores)
             val bandBars = buildBandBars(result.settingScores)
             val topSetting = result.settingScores.maxByOrNull { it.normalizedValue }
@@ -60,8 +61,11 @@ class InferenceViewModel @Inject constructor(
                 sessionId = sessionId,
                 machineName = machine?.name ?: session.machineNameSnapshot,
                 machineTypeText = machine?.type.orEmpty(),
+                probabilityModeText = "確率ベース推測（設定1〜6）",
+                candidateSummaryText = buildCandidateSummary(result.settingScores),
                 inputItems = buildInputItems(machine, session),
-                reasonItems = buildReasonItems(machine, session, result),
+                reasonItems = reasonItems,
+                reasonSummaryText = buildReasonSummaryText(reasonItems),
                 summary = result.summary,
                 confidenceText = toConfidenceText(result.confidenceLabel.name),
                 topSettingText = topSetting?.let {
@@ -153,15 +157,24 @@ class InferenceViewModel @Inject constructor(
         val totalGames = getCounter(session, TOTAL_GAMES_KEY)
         val reasons = mutableListOf<InferenceReasonUiModel>()
 
+        val sampleLevel = when {
+            totalGames >= 5000 -> "strong"
+            totalGames >= 3000 -> "positive"
+            totalGames >= 1000 -> "neutral"
+            else -> "weak"
+        }
+
         reasons += InferenceReasonUiModel(
             label = "サンプル数",
             valueText = "$totalGames G",
             evaluationText = when {
-                totalGames >= 5000 -> "十分に回されており、推測材料として強いです。"
-                totalGames >= 3000 -> "一定の判断はできますが、まだ上下にブレる余地があります。"
-                totalGames >= 1000 -> "暫定判断は可能ですが、追加サンプルが欲しいです。"
-                else -> "総ゲーム数が少なく、結果はかなり暫定です。"
-            }
+                totalGames >= 5000 -> "十分に回されており、推測材料としてかなり強いです。"
+                totalGames >= 3000 -> "一定の判断はしやすく、現時点でも有力な材料です。"
+                totalGames >= 1000 -> "暫定判断は可能ですが、追加サンプルがあると精度が上がります。"
+                else -> "総ゲーム数が少なく、結論を強く出すにはまだ弱いです。"
+            },
+            levelLabel = levelLabel(sampleLevel),
+            levelKey = sampleLevel
         )
 
         if (machine == null || totalGames <= 0) return reasons
@@ -187,25 +200,56 @@ class InferenceViewModel @Inject constructor(
 
                 val nearestDenominator = nearest.denominatorValue ?: observedDenominator
                 val diffRatio = if (nearestDenominator <= 0.0) 0.0 else abs(observedDenominator - nearestDenominator) / nearestDenominator
+                val alignsTopSetting = topSetting != null && nearest.settingNo == topSetting
+
+                val levelKey = when {
+                    alignsTopSetting && diffRatio <= 0.08 -> "strong"
+                    alignsTopSetting && diffRatio <= 0.18 -> "positive"
+                    !alignsTopSetting && topSetting != null && diffRatio <= 0.18 -> "contradiction"
+                    diffRatio >= 0.30 -> "weak"
+                    else -> "neutral"
+                }
+
                 val closenessText = when {
                     diffRatio <= 0.08 -> "かなり近い数値です"
                     diffRatio <= 0.18 -> "比較的近い数値です"
-                    else -> "まだ差があります"
+                    diffRatio <= 0.30 -> "一定の参考になります"
+                    else -> "理論値との差が大きめです"
                 }
+
                 val consistencyText = when {
-                    topSetting != null && nearest.settingNo == topSetting -> "最有力の設定${topSetting}と整合しています。"
-                    topSetting != null -> "単体では設定${nearest.settingNo}寄りで、最有力の設定${topSetting}とは少しズレています。"
+                    alignsTopSetting -> "最有力の設定${topSetting}と整合しています。"
+                    topSetting != null && diffRatio <= 0.18 -> "単体では設定${nearest.settingNo}寄りで、最有力の設定${topSetting}とは少し矛盾しています。"
+                    topSetting != null -> "単体では設定${nearest.settingNo}寄りですが、決め手としてはまだ弱めです。"
                     else -> "単体では設定${nearest.settingNo}寄りです。"
                 }
 
                 reasons += InferenceReasonUiModel(
                     label = definition.displayName,
                     valueText = "$count ${definition.unit} / 実測 1/${"%.1f".format(observedDenominator)}",
-                    evaluationText = "設定${nearest.settingNo}の理論値 1/${"%.1f".format(nearestDenominator)} に最も近く、$closenessText $consistencyText"
+                    evaluationText = "設定${nearest.settingNo}の理論値 1/${"%.1f".format(nearestDenominator)} に最も近く、$closenessText $consistencyText",
+                    levelLabel = levelLabel(levelKey),
+                    levelKey = levelKey
                 )
             }
 
         return reasons
+    }
+
+    private fun buildReasonSummaryText(items: List<InferenceReasonUiModel>): String {
+        if (items.isEmpty()) return ""
+        val strong = items.count { it.levelKey == "strong" }
+        val positive = items.count { it.levelKey == "positive" }
+        val contradiction = items.count { it.levelKey == "contradiction" }
+        val weak = items.count { it.levelKey == "weak" }
+
+        val parts = mutableListOf<String>()
+        if (strong > 0) parts += "強い根拠 $strong 件"
+        if (positive > 0) parts += "追い風 $positive 件"
+        if (contradiction > 0) parts += "矛盾 $contradiction 件"
+        if (weak > 0) parts += "弱い要素 $weak 件"
+
+        return if (parts.isEmpty()) "参考要素を確認中" else parts.joinToString(" / ")
     }
 
     private fun buildFinishedStatusText(session: PlaySession): String {
@@ -252,6 +296,15 @@ class InferenceViewModel @Inject constructor(
         )
     }
 
+    private fun buildCandidateSummary(settingScores: List<SettingScore>): String {
+        return settingScores
+            .sortedByDescending { it.normalizedValue }
+            .take(3)
+            .joinToString(" / ") {
+                "設定${it.setting} ${(it.normalizedValue * 100).toInt()}%"
+            }
+    }
+
     private fun toConfidenceText(raw: String): String {
         return when (raw) {
             "HIGH" -> "高"
@@ -274,6 +327,16 @@ class InferenceViewModel @Inject constructor(
             CounterCategory.AT_CZ -> "AT / CZ"
             CounterCategory.SMALL_ROLE -> "小役"
             CounterCategory.SPECIAL -> "特殊"
+        }
+    }
+
+    private fun levelLabel(levelKey: String): String {
+        return when (levelKey) {
+            "strong" -> "強い"
+            "positive" -> "追い風"
+            "contradiction" -> "矛盾"
+            "weak" -> "弱い"
+            else -> "参考"
         }
     }
 

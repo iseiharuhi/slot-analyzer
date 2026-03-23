@@ -1,12 +1,12 @@
 {
   "machine": {
-    "id": "hokuto",
-    "name": "スマスロ北斗の拳",
-    "manufacturer": "Sammy",
+    "id": "monster_hunter_rise",
+    "name": "スマスロ モンスターハンターライズ",
+    "manufacturer": "Enterrise",
     "type": "AT",
-    "releaseDate": "2023-04-03",
+    "releaseDate": "2024-01-01",
     "isActive": true,
-    "notes": "初期登録用の参考データ。CZ・AT・直撃ATで推測。"
+    "notes": "初期登録用の参考データ。直撃とAT初当たりを重視。"
   },
   "counterDefinitions": [
     {
@@ -76,37 +76,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 240.0,
+          "denominatorValue": 255.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 2,
-          "denominatorValue": 230.0,
+          "denominatorValue": 245.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 3,
-          "denominatorValue": 220.0,
+          "denominatorValue": 235.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 4,
-          "denominatorValue": 210.0,
+          "denominatorValue": 223.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 5,
-          "denominatorValue": 200.0,
+          "denominatorValue": 212.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 6,
-          "denominatorValue": 190.0,
+          "denominatorValue": 200.0,
           "weight": 0.9,
           "minSampleSize": 3
         }
@@ -117,37 +117,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 520.0,
+          "denominatorValue": 510.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 2,
-          "denominatorValue": 490.0,
+          "denominatorValue": 480.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 3,
-          "denominatorValue": 460.0,
+          "denominatorValue": 450.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 4,
-          "denominatorValue": 420.0,
+          "denominatorValue": 415.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 5,
-          "denominatorValue": 380.0,
+          "denominatorValue": 385.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 6,
-          "denominatorValue": 340.0,
+          "denominatorValue": 350.0,
           "weight": 1.2,
           "minSampleSize": 2
         }
@@ -158,37 +158,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 300.0,
+          "denominatorValue": 330.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 2,
-          "denominatorValue": 290.0,
+          "denominatorValue": 315.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 3,
-          "denominatorValue": 280.0,
+          "denominatorValue": 300.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 4,
-          "denominatorValue": 260.0,
+          "denominatorValue": 282.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 5,
-          "denominatorValue": 245.0,
+          "denominatorValue": 268.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 6,
-          "denominatorValue": 230.0,
+          "denominatorValue": 250.0,
           "weight": 0.7,
           "minSampleSize": 3
         }
@@ -199,37 +199,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 1800.0,
+          "denominatorValue": 2100.0,
           "weight": 1.4,
           "minSampleSize": 1
         },
         {
           "settingNo": 2,
-          "denominatorValue": 1500.0,
+          "denominatorValue": 1750.0,
           "weight": 1.4,
           "minSampleSize": 1
         },
         {
           "settingNo": 3,
-          "denominatorValue": 1200.0,
+          "denominatorValue": 1450.0,
           "weight": 1.4,
           "minSampleSize": 1
         },
         {
           "settingNo": 4,
-          "denominatorValue": 1000.0,
+          "denominatorValue": 1180.0,
           "weight": 1.4,
           "minSampleSize": 1
         },
         {
           "settingNo": 5,
-          "denominatorValue": 800.0,
+          "denominatorValue": 920.0,
           "weight": 1.4,
           "minSampleSize": 1
         },
         {
           "settingNo": 6,
-          "denominatorValue": 650.0,
+          "denominatorValue": 720.0,
           "weight": 1.4,
           "minSampleSize": 1
         }
@@ -241,7 +241,7 @@
       "ruleKey": "primary_ceiling",
       "displayName": "目安天井",
       "ceilingType": "GAME_COUNT",
-      "limitValue": 1268,
+      "limitValue": 999,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,

@@ -1,0 +1,211 @@
+{
+  "machine": {
+    "id": "happy_juggler_v3",
+    "name": "ハッピージャグラーV III",
+    "manufacturer": "Kita Denshi",
+    "type": "BONUS",
+    "releaseDate": "2025-01-01",
+    "isActive": true,
+    "notes": "初期登録用の参考データ。REGとぶどうで差を付けています。"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "grape_count",
+      "displayName": "ぶどう",
+      "category": "SMALL_ROLE",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "cherry_count",
+      "displayName": "チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "補助入力用"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 273.1,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 270.8,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 263.2,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 256.0,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 246.3,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 233.2,
+          "weight": 0.8,
+          "minSampleSize": 5
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 397.2,
+          "weight": 1.3,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 385.5,
+          "weight": 1.3,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 336.1,
+          "weight": 1.3,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 315.1,
+          "weight": 1.3,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 273.1,
+          "weight": 1.3,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 252.1,
+          "weight": 1.3,
+          "minSampleSize": 4
+        }
+      ]
+    },
+    {
+      "counterKey": "grape_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 5.98,
+          "weight": 1.0,
+          "minSampleSize": 220
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 5.94,
+          "weight": 1.0,
+          "minSampleSize": 220
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 5.89,
+          "weight": 1.0,
+          "minSampleSize": 220
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 5.83,
+          "weight": 1.0,
+          "minSampleSize": 220
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 5.79,
+          "weight": 1.0,
+          "minSampleSize": 220
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 5.75,
+          "weight": 1.0,
+          "minSampleSize": 220
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "primary_ceiling",
+      "displayName": "目安天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 950,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "初期データ用の参考値",
+      "isEnabled": true
+    }
+  ]
+}

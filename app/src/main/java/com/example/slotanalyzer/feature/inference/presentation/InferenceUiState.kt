@@ -11,15 +11,20 @@ data class InferenceInputItemUiModel(
 data class InferenceReasonUiModel(
     val label: String,
     val valueText: String,
-    val evaluationText: String
+    val evaluationText: String,
+    val levelLabel: String = "",
+    val levelKey: String = "neutral"
 )
 
 data class InferenceUiState(
     val sessionId: String = "",
     val machineName: String = "",
     val machineTypeText: String = "",
+    val probabilityModeText: String = "",
+    val candidateSummaryText: String = "",
     val inputItems: List<InferenceInputItemUiModel> = emptyList(),
     val reasonItems: List<InferenceReasonUiModel> = emptyList(),
+    val reasonSummaryText: String = "",
     val summary: String = "",
     val confidenceText: String = "",
     val topSettingText: String = "",

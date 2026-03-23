@@ -1,12 +1,12 @@
 {
   "machine": {
-    "id": "hokuto",
-    "name": "スマスロ北斗の拳",
-    "manufacturer": "Sammy",
+    "id": "karakuri_circus",
+    "name": "Lからくりサーカス",
+    "manufacturer": "SANKYO",
     "type": "AT",
-    "releaseDate": "2023-04-03",
+    "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "初期登録用の参考データ。CZ・AT・直撃ATで推測。"
+    "notes": "初期登録用の参考データ。荒波AT機の想定。"
   },
   "counterDefinitions": [
     {
@@ -76,37 +76,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 240.0,
+          "denominatorValue": 270.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 2,
-          "denominatorValue": 230.0,
+          "denominatorValue": 258.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 3,
-          "denominatorValue": 220.0,
+          "denominatorValue": 246.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 4,
-          "denominatorValue": 210.0,
+          "denominatorValue": 232.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 5,
-          "denominatorValue": 200.0,
+          "denominatorValue": 218.0,
           "weight": 0.9,
           "minSampleSize": 3
         },
         {
           "settingNo": 6,
-          "denominatorValue": 190.0,
+          "denominatorValue": 204.0,
           "weight": 0.9,
           "minSampleSize": 3
         }
@@ -117,37 +117,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 520.0,
+          "denominatorValue": 540.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 2,
-          "denominatorValue": 490.0,
+          "denominatorValue": 505.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 3,
-          "denominatorValue": 460.0,
+          "denominatorValue": 470.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 4,
-          "denominatorValue": 420.0,
+          "denominatorValue": 430.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 5,
-          "denominatorValue": 380.0,
+          "denominatorValue": 390.0,
           "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 6,
-          "denominatorValue": 340.0,
+          "denominatorValue": 350.0,
           "weight": 1.2,
           "minSampleSize": 2
         }
@@ -158,37 +158,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 300.0,
+          "denominatorValue": 350.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 2,
-          "denominatorValue": 290.0,
+          "denominatorValue": 330.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 3,
-          "denominatorValue": 280.0,
+          "denominatorValue": 312.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 4,
-          "denominatorValue": 260.0,
+          "denominatorValue": 292.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 5,
-          "denominatorValue": 245.0,
+          "denominatorValue": 272.0,
           "weight": 0.7,
           "minSampleSize": 3
         },
         {
           "settingNo": 6,
-          "denominatorValue": 230.0,
+          "denominatorValue": 252.0,
           "weight": 0.7,
           "minSampleSize": 3
         }
@@ -199,38 +199,38 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 1800.0,
-          "weight": 1.4,
+          "denominatorValue": 2400.0,
+          "weight": 1.5,
           "minSampleSize": 1
         },
         {
           "settingNo": 2,
-          "denominatorValue": 1500.0,
-          "weight": 1.4,
+          "denominatorValue": 1900.0,
+          "weight": 1.5,
           "minSampleSize": 1
         },
         {
           "settingNo": 3,
-          "denominatorValue": 1200.0,
-          "weight": 1.4,
+          "denominatorValue": 1550.0,
+          "weight": 1.5,
           "minSampleSize": 1
         },
         {
           "settingNo": 4,
-          "denominatorValue": 1000.0,
-          "weight": 1.4,
+          "denominatorValue": 1250.0,
+          "weight": 1.5,
           "minSampleSize": 1
         },
         {
           "settingNo": 5,
-          "denominatorValue": 800.0,
-          "weight": 1.4,
+          "denominatorValue": 980.0,
+          "weight": 1.5,
           "minSampleSize": 1
         },
         {
           "settingNo": 6,
-          "denominatorValue": 650.0,
-          "weight": 1.4,
+          "denominatorValue": 760.0,
+          "weight": 1.5,
           "minSampleSize": 1
         }
       ]
@@ -241,7 +241,7 @@
       "ruleKey": "primary_ceiling",
       "displayName": "目安天井",
       "ceilingType": "GAME_COUNT",
-      "limitValue": 1268,
+      "limitValue": 1200,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,

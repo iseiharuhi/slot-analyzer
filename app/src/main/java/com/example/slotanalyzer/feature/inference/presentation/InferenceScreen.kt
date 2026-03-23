@@ -78,6 +78,14 @@ fun InferenceScreen(
                     )
                 }
 
+                if (state.probabilityModeText.isNotBlank()) {
+                    AssistChip(
+                        onClick = {},
+                        enabled = false,
+                        label = { Text(state.probabilityModeText) }
+                    )
+                }
+
                 ConfidenceChip(state.confidenceText)
 
                 Text(
@@ -88,6 +96,14 @@ fun InferenceScreen(
 
                 if (state.topSettingText.isNotBlank()) {
                     TopSettingCard(state.topSettingText)
+                }
+
+                if (state.candidateSummaryText.isNotBlank()) {
+                    Text(
+                        text = "上位候補: ${state.candidateSummaryText}",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 }
 
                 Text(text = state.summary, style = MaterialTheme.typography.bodyMedium)
@@ -142,6 +158,14 @@ fun InferenceScreen(
                         fontWeight = FontWeight.SemiBold
                     )
 
+                    if (state.reasonSummaryText.isNotBlank()) {
+                        Text(
+                            text = state.reasonSummaryText,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+
                     state.reasonItems.forEach { item ->
                         ReasonCard(item)
                     }
@@ -194,6 +218,14 @@ fun InferenceScreen(
 
 @Composable
 private fun ReasonCard(item: InferenceReasonUiModel) {
+    val levelColor = when (item.levelKey) {
+        "strong" -> MaterialTheme.colorScheme.primary
+        "positive" -> MaterialTheme.colorScheme.tertiary
+        "contradiction" -> MaterialTheme.colorScheme.error
+        "weak" -> MaterialTheme.colorScheme.onSurfaceVariant
+        else -> MaterialTheme.colorScheme.secondary
+    }
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -202,8 +234,16 @@ private fun ReasonCard(item: InferenceReasonUiModel) {
     ) {
         Column(
             modifier = Modifier.padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+            verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
+            if (item.levelLabel.isNotBlank()) {
+                Text(
+                    text = item.levelLabel,
+                    style = MaterialTheme.typography.labelLarge,
+                    color = levelColor,
+                    fontWeight = FontWeight.Bold
+                )
+            }
             Text(
                 text = item.label,
                 style = MaterialTheme.typography.titleSmall,

@@ -1,10 +1,30 @@
 {
   "schemaVersion": 1,
-  "masterVersion": "2026.03.21.100",
+  "masterVersion": "2026.03.23.200",
   "machines": [
     {
-      "machineId": "sample_machine_a",
-      "fileName": "sample_machine_a.json",
+      "machineId": "im_juggler_ex",
+      "fileName": "im_juggler_ex.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "my_juggler_v",
+      "fileName": "my_juggler_v.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "funky_juggler_2",
+      "fileName": "funky_juggler_2.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "happy_juggler_v3",
+      "fileName": "happy_juggler_v3.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "gogo_juggler_3",
+      "fileName": "gogo_juggler_3.json",
       "checksum": ""
     },
     {
@@ -13,13 +33,23 @@
       "checksum": ""
     },
     {
-      "machineId": "monster_hunter",
-      "fileName": "monster_hunter.json",
+      "machineId": "kabaneri",
+      "fileName": "kabaneri.json",
       "checksum": ""
     },
     {
-      "machineId": "kabaneri",
-      "fileName": "kabaneri.json",
+      "machineId": "monster_hunter_rise",
+      "fileName": "monster_hunter_rise.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "karakuri_circus",
+      "fileName": "karakuri_circus.json",
+      "checksum": ""
+    },
+    {
+      "machineId": "valvrave",
+      "fileName": "valvrave.json",
       "checksum": ""
     }
   ]
