@@ -103,7 +103,7 @@ class PlaySessionRepositoryImpl @Inject constructor(
             mapper.toCounterEntity(
                 sessionId = command.sessionId,
                 key = command.counterKey,
-                value = command.intValue ?: 0,
+                value = command.intValue,
                 now = command.updatedAt
             )
         )
@@ -132,7 +132,7 @@ class PlaySessionRepositoryImpl @Inject constructor(
                 mapper.toCounterEntity(
                     sessionId = currentSession.id,
                     key = counter.counterKey,
-                    value = 0,
+                    value = if (counter.counterKey.startsWith("ceiling::")) null else 0,
                     now = now
                 )
             }

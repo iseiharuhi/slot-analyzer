@@ -35,6 +35,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.example.slotanalyzer.core.ui.component.BarSection
+import com.example.slotanalyzer.core.ui.component.CeilingStatusSection
 import com.example.slotanalyzer.core.ui.component.ConfidenceChip
 import com.example.slotanalyzer.core.ui.component.TopSettingCard
 import com.example.slotanalyzer.core.ui.component.extractTopSettingLabel
@@ -148,6 +149,8 @@ fun InferenceScreen(
                     fontWeight = FontWeight.SemiBold
                 )
 
+                InfoRow(label = "現在ハマり", value = "${state.currentGameCount} G")
+
                 state.inputItems
                     .groupBy { it.categoryLabel }
                     .forEach { (category, items) ->
@@ -162,6 +165,12 @@ fun InferenceScreen(
                     }
             }
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        CeilingStatusSection(
+            items = state.ceilingItems,
+            emptyText = "この機種には表示可能な天井情報がありません。"
+        )
 
         if (state.reasonItems.isNotEmpty()) {
             Spacer(modifier = Modifier.height(16.dp))

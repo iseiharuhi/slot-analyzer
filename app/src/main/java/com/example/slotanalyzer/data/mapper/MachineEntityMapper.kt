@@ -1,8 +1,13 @@
 package com.example.slotanalyzer.data.mapper
 
-import com.example.slotanalyzer.data.database.entity.*
+import com.example.slotanalyzer.data.database.entity.MachineCeilingRuleEntity
+import com.example.slotanalyzer.data.database.entity.MachineCounterDefinitionEntity
+import com.example.slotanalyzer.data.database.entity.MachineSettingReferenceValueEntity
 import com.example.slotanalyzer.data.database.relation.MachineWithDefinitions
-import com.example.slotanalyzer.feature.machine.domain.model.*
+import com.example.slotanalyzer.feature.machine.domain.model.CeilingRule
+import com.example.slotanalyzer.feature.machine.domain.model.Machine
+import com.example.slotanalyzer.feature.machine.domain.model.MachineCounterDefinition
+import com.example.slotanalyzer.feature.machine.domain.model.SettingReferenceValue
 import javax.inject.Inject
 
 class MachineEntityMapper @Inject constructor() {
@@ -46,16 +51,30 @@ class MachineEntityMapper @Inject constructor() {
             note = entity.note
         )
 
-    private fun toCeilingDomain(entity: MachineCeilingRuleEntity): CeilingRule =
-        CeilingRule(
+    private fun toCeilingDomain(entity: MachineCeilingRuleEntity): CeilingRule {
+        val ceilingType = entity.ceilingType.toCeilingType()
+        return CeilingRule(
             ruleKey = entity.ruleKey,
             displayName = entity.displayName,
-            ceilingType = entity.ceilingType.toCeilingType(),
+            ceilingType = ceilingType,
             limitValue = entity.limitValue,
             unit = entity.unit,
             resetOnHit = entity.resetOnHit,
             requiresResetFlag = entity.requiresResetFlag,
             description = entity.description,
-            isEnabled = entity.isEnabled
+            isEnabled = entity.isEnabled,
+            displayOrder = entity.displayOrder,
+            isPrimary = entity.isPrimary,
+            isHighlighted = entity.isHighlighted,
+            inputMode = entity.inputMode.toCeilingInputMode(ceilingType),
+            stepValue = entity.stepValue ?: when (ceilingType) {
+                com.example.slotanalyzer.domain.model.CeilingType.COUNT,
+                com.example.slotanalyzer.domain.model.CeilingType.CYCLE -> 1
+                else -> 10
+            },
+            showInput = entity.showInput,
+            benefitText = entity.benefitText,
+            resetText = entity.resetText
         )
+    }
 }

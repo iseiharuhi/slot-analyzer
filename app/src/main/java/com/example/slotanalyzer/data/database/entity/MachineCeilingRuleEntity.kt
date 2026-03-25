@@ -1,6 +1,10 @@
 package com.example.slotanalyzer.data.database.entity
 
-import androidx.room.*
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.Index
+import androidx.room.PrimaryKey
 
 @Entity(
     tableName = "machine_ceiling_rules",
@@ -25,5 +29,13 @@ data class MachineCeilingRuleEntity(
     @ColumnInfo(name = "reset_on_hit") val resetOnHit: Boolean = true,
     @ColumnInfo(name = "requires_reset_flag") val requiresResetFlag: Boolean = false,
     @ColumnInfo(name = "description") val description: String? = null,
-    @ColumnInfo(name = "is_enabled") val isEnabled: Boolean = true
+    @ColumnInfo(name = "is_enabled") val isEnabled: Boolean = true,
+    @ColumnInfo(name = "display_order") val displayOrder: Int = 0,
+    @ColumnInfo(name = "is_primary") val isPrimary: Boolean = false,
+    @ColumnInfo(name = "is_highlighted") val isHighlighted: Boolean = false,
+    @ColumnInfo(name = "input_mode") val inputMode: String? = null,
+    @ColumnInfo(name = "step_value") val stepValue: Int? = null,
+    @ColumnInfo(name = "show_input") val showInput: Boolean = true,
+    @ColumnInfo(name = "benefit_text") val benefitText: String? = null,
+    @ColumnInfo(name = "reset_text") val resetText: String? = null
 )

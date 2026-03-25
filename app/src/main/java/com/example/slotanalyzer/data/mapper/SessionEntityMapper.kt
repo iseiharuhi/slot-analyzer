@@ -37,7 +37,7 @@ class SessionEntityMapper @Inject constructor() {
     fun toCounterEntity(
         sessionId: String,
         key: String,
-        value: Int,
+        value: Int?,
         now: Long
     ): SessionCounterValueEntity =
         SessionCounterValueEntity(

@@ -2,9 +2,11 @@ package com.example.slotanalyzer.feature.inference.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.slotanalyzer.core.ui.model.CeilingStatusUiModel
 import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 import com.example.slotanalyzer.core.util.RateFormatter
 import com.example.slotanalyzer.domain.model.CounterCategory
+import com.example.slotanalyzer.domain.usecase.CalculateCeilingStatusUseCase
 import com.example.slotanalyzer.feature.inference.domain.model.InferenceResult
 import com.example.slotanalyzer.feature.inference.domain.model.SettingScore
 import com.example.slotanalyzer.feature.inference.domain.usecase.CalculateInferenceUseCase
@@ -28,7 +30,8 @@ class InferenceViewModel @Inject constructor(
     private val getMachineUseCase: GetMachineUseCase,
     private val calculateInferenceUseCase: CalculateInferenceUseCase,
     private val updateSessionInferenceSnapshotUseCase: UpdateSessionInferenceSnapshotUseCase,
-    private val finishPlaySessionUseCase: FinishPlaySessionUseCase
+    private val finishPlaySessionUseCase: FinishPlaySessionUseCase,
+    private val calculateCeilingStatusUseCase: CalculateCeilingStatusUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(InferenceUiState())
@@ -52,6 +55,7 @@ class InferenceViewModel @Inject constructor(
                 session = session
             )
 
+            val currentGameCount = getCounter(session, CURRENT_GAME_KEY)
             val reasonItems = buildReasonItems(machine, session, result)
             val settingBars = buildSettingBars(result.settingScores)
             val bandBars = buildBandBars(result.settingScores)
@@ -64,6 +68,8 @@ class InferenceViewModel @Inject constructor(
                 probabilityModeText = "確率ベース推測（設定1〜6）",
                 candidateSummaryText = buildCandidateSummary(result.settingScores),
                 inputItems = buildInputItems(machine, session),
+                currentGameCount = currentGameCount,
+                ceilingItems = buildCeilingItems(machine, currentGameCount),
                 reasonItems = reasonItems,
                 reasonSummaryText = buildReasonSummaryText(reasonItems),
                 summary = result.summary,
@@ -146,6 +152,23 @@ class InferenceViewModel @Inject constructor(
                 label = definition.displayName,
                 valueText = valueText,
                 categoryLabel = definition.category.toLabel()
+            )
+        }
+    }
+
+
+    private fun buildCeilingItems(machine: Machine?, currentGameCount: Int): List<CeilingStatusUiModel> {
+        return calculateCeilingStatusUseCase(
+            machine = machine,
+            currentGameCount = currentGameCount
+        ).statuses.map { status ->
+            val unitSuffix = status.unit.ifBlank { "G" }
+            CeilingStatusUiModel(
+                title = status.displayName,
+                currentText = "${status.currentValue}$unitSuffix",
+                limitText = "${status.limitValue}$unitSuffix",
+                remainText = "${status.remainValue}$unitSuffix",
+                note = status.description
             )
         }
     }
@@ -354,5 +377,6 @@ class InferenceViewModel @Inject constructor(
 
     companion object {
         private const val TOTAL_GAMES_KEY = "total_games"
+        private const val CURRENT_GAME_KEY = "current_game"
     }
 }

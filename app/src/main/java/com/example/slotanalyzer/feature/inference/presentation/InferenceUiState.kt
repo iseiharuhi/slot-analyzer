@@ -1,5 +1,6 @@
 package com.example.slotanalyzer.feature.inference.presentation
 
+import com.example.slotanalyzer.core.ui.model.CeilingStatusUiModel
 import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 
 data class InferenceInputItemUiModel(
@@ -28,6 +29,8 @@ data class InferenceUiState(
     val probabilityModeText: String = "",
     val candidateSummaryText: String = "",
     val inputItems: List<InferenceInputItemUiModel> = emptyList(),
+    val currentGameCount: Int = 0,
+    val ceilingItems: List<CeilingStatusUiModel> = emptyList(),
     val reasonItems: List<InferenceReasonUiModel> = emptyList(),
     val reasonSummaryText: String = "",
     val summary: String = "",

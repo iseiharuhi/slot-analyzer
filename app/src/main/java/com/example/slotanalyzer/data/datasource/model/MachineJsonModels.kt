@@ -74,5 +74,13 @@ data class CeilingRuleJson(
     val resetOnHit: Boolean,
     val requiresResetFlag: Boolean,
     val description: String? = null,
-    val isEnabled: Boolean
+    val isEnabled: Boolean,
+    val displayOrder: Int = 0,
+    val isPrimary: Boolean = false,
+    val isHighlighted: Boolean = false,
+    val inputMode: String? = null,
+    val stepValue: Int? = null,
+    val showInput: Boolean = true,
+    val benefitText: String? = null,
+    val resetText: String? = null
 )

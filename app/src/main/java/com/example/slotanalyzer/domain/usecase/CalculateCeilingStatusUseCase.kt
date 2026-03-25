@@ -1,25 +1,37 @@
 package com.example.slotanalyzer.domain.usecase
 
+import com.example.slotanalyzer.domain.model.CeilingType
 import com.example.slotanalyzer.domain.model.ceiling.CeilingCalculationResult
 import com.example.slotanalyzer.domain.model.ceiling.CeilingStatus
 import com.example.slotanalyzer.feature.machine.domain.model.Machine
-import com.example.slotanalyzer.feature.session.domain.model.PlaySession
 import javax.inject.Inject
+import kotlin.math.max
 
 class CalculateCeilingStatusUseCase @Inject constructor() {
-    operator fun invoke(machine: Machine?, session: PlaySession?): CeilingCalculationResult {
-        return CeilingCalculationResult(
-            statuses = listOf(
+    operator fun invoke(machine: Machine?, currentGameCount: Int): CeilingCalculationResult {
+        if (machine == null) {
+            return CeilingCalculationResult(statuses = emptyList())
+        }
+
+        val normalizedCurrentGameCount = currentGameCount.coerceAtLeast(0)
+
+        val statuses = machine.ceilingRules
+            .asSequence()
+            .filter { it.isEnabled }
+            .filter { it.ceilingType == CeilingType.GAME }
+            .map { rule ->
                 CeilingStatus(
-                    ruleKey = "bonus_ceiling",
-                    displayName = "ボーナス間天井",
-                    currentValue = 0,
-                    limitValue = 800,
-                    remainValue = 800,
-                    unit = "G",
-                    description = "サンプル"
+                    ruleKey = rule.ruleKey,
+                    displayName = rule.displayName,
+                    currentValue = normalizedCurrentGameCount,
+                    limitValue = rule.limitValue,
+                    remainValue = max(rule.limitValue - normalizedCurrentGameCount, 0),
+                    unit = rule.unit,
+                    description = rule.description
                 )
-            )
-        )
+            }
+            .toList()
+
+        return CeilingCalculationResult(statuses = statuses)
     }
 }

@@ -1,7 +1,13 @@
 package com.example.slotanalyzer.data.datasource.mapper
 
-import com.example.slotanalyzer.data.database.entity.*
-import com.example.slotanalyzer.data.datasource.model.*
+import com.example.slotanalyzer.data.database.entity.MachineCeilingRuleEntity
+import com.example.slotanalyzer.data.database.entity.MachineCounterDefinitionEntity
+import com.example.slotanalyzer.data.database.entity.MachineEntity
+import com.example.slotanalyzer.data.database.entity.MachineSettingReferenceValueEntity
+import com.example.slotanalyzer.data.datasource.model.CeilingRuleJson
+import com.example.slotanalyzer.data.datasource.model.CounterDefinitionJson
+import com.example.slotanalyzer.data.datasource.model.MachineJson
+import com.example.slotanalyzer.data.datasource.model.SettingReferenceGroupJson
 import javax.inject.Inject
 
 class MachineMasterJsonMapper @Inject constructor() {
@@ -72,7 +78,15 @@ class MachineMasterJsonMapper @Inject constructor() {
                 resetOnHit = it.resetOnHit,
                 requiresResetFlag = it.requiresResetFlag,
                 description = it.description,
-                isEnabled = it.isEnabled
+                isEnabled = it.isEnabled,
+                displayOrder = it.displayOrder,
+                isPrimary = it.isPrimary,
+                isHighlighted = it.isHighlighted,
+                inputMode = it.inputMode,
+                stepValue = it.stepValue,
+                showInput = it.showInput,
+                benefitText = it.benefitText,
+                resetText = it.resetText
             )
         }
 }
