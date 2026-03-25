@@ -238,14 +238,25 @@
   ],
   "ceilingRules": [
     {
-      "ruleKey": "primary_ceiling",
-      "displayName": "目安天井",
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時天井",
       "ceilingType": "GAME_COUNT",
       "limitValue": 1268,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "初期データ用の参考値",
+      "description": "通常時1268G+αでバトルボーナス。天井ATは継続率優遇・北斗揃い期待度アップ。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "reset_game_ceiling",
+      "displayName": "設定変更時短縮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時は800G+αに短縮。通常天井と同様の恩恵。",
       "isEnabled": true
     }
   ]

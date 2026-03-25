@@ -238,14 +238,25 @@
   ],
   "ceilingRules": [
     {
-      "ruleKey": "primary_ceiling",
-      "displayName": "目安天井",
+      "ruleKey": "game_ceiling",
+      "displayName": "通常時ゲーム数天井",
       "ceilingType": "GAME_COUNT",
       "limitValue": 999,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "初期データ用の参考値",
+      "description": "通常時999G消化で赤7ボーナス以上。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "quest_count_ceiling",
+      "displayName": "AT間クエスト天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間7回目のクエスト到達で天井。恩恵は赤7ボーナス以上。",
       "isEnabled": true
     }
   ]

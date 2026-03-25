@@ -238,14 +238,36 @@
   ],
   "ceilingRules": [
     {
-      "ruleKey": "primary_ceiling",
-      "displayName": "目安天井",
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
       "ceilingType": "GAME_COUNT",
       "limitValue": 1000,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "初期データ用の参考値",
+      "description": "通常時1000G+αでエピソードボーナス。駿城ボーナスではゲーム数を引き継ぐ。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "shortened_game_ceiling",
+      "displayName": "短縮ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 650,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時・美馬ST後・ST駆け抜け後は650G+αに短縮。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "suruga_bonus_through",
+      "displayName": "駿城ボーナス天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "駿城ボーナス4連続スルーで条件到達。次回(5回目)ボーナスでエピソードボーナス。",
       "isEnabled": true
     }
   ]

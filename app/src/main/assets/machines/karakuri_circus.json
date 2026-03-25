@@ -238,14 +238,36 @@
   ],
   "ceilingRules": [
     {
-      "ruleKey": "primary_ceiling",
-      "displayName": "目安天井",
+      "ruleKey": "game_cz_ceiling",
+      "displayName": "通常時ゲーム数天井",
       "ceilingType": "GAME_COUNT",
       "limitValue": 1200,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "初期データ用の参考値",
+      "description": "通常時最大1200G+αでCZ「機械仕掛けの神」以上。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZを4連続失敗で条件到達。次回(5回目)CZでAT直撃。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 2500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間2500G+αでAT+成功確定の激情ジャッジ。",
       "isEnabled": true
     }
   ]

@@ -195,17 +195,5 @@
       ]
     }
   ],
-  "ceilingRules": [
-    {
-      "ruleKey": "primary_ceiling",
-      "displayName": "目安天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 950,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "初期データ用の参考値",
-      "isEnabled": true
-    }
-  ]
+  "ceilingRules": []
 }

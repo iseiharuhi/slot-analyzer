@@ -69,7 +69,7 @@ class InferenceViewModel @Inject constructor(
                 candidateSummaryText = buildCandidateSummary(result.settingScores),
                 inputItems = buildInputItems(machine, session),
                 currentGameCount = currentGameCount,
-                ceilingItems = buildCeilingItems(machine, currentGameCount),
+                ceilingItems = buildCeilingItems(machine, session),
                 reasonItems = reasonItems,
                 reasonSummaryText = buildReasonSummaryText(reasonItems),
                 summary = result.summary,
@@ -157,18 +157,30 @@ class InferenceViewModel @Inject constructor(
     }
 
 
-    private fun buildCeilingItems(machine: Machine?, currentGameCount: Int): List<CeilingStatusUiModel> {
+    private fun buildCeilingItems(
+        machine: Machine?,
+        session: PlaySession
+    ): List<CeilingStatusUiModel> {
+        val currentInputs: Map<String, Int> =
+            session.counters
+                .filter { it.counterKey.startsWith("ceiling::") }
+                .associate { counter ->
+                    counter.counterKey.removePrefix("ceiling::") to (counter.intValue ?: 0)
+                }
+
         return calculateCeilingStatusUseCase(
             machine = machine,
-            currentGameCount = currentGameCount
+            currentInputs = currentInputs
         ).statuses.map { status ->
             val unitSuffix = status.unit.ifBlank { "G" }
             CeilingStatusUiModel(
                 title = status.displayName,
                 currentText = "${status.currentValue}$unitSuffix",
                 limitText = "${status.limitValue}$unitSuffix",
-                remainText = "${status.remainValue}$unitSuffix",
-                note = status.description
+                remainText = if (status.remainValue <= 0) "到達済み" else "${status.remainValue}$unitSuffix",
+                note = status.description,
+                isPrimary = status.isPrimary,
+                isHighlighted = status.isHighlighted
             )
         }
     }

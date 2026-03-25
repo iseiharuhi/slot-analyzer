@@ -238,14 +238,47 @@
   ],
   "ceilingRules": [
     {
-      "ruleKey": "primary_ceiling",
-      "displayName": "目安天井",
+      "ruleKey": "cz_interval_game_ceiling",
+      "displayName": "CZ間天井",
       "ceilingType": "GAME_COUNT",
-      "limitValue": 1100,
+      "limitValue": 1000,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "初期データ用の参考値",
+      "description": "液晶ゲーム数でCZ間約1000G+α。モードにより実質消化G数は短縮。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "bonus_at_interval_ceiling",
+      "displayName": "ボーナス&AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "実ゲーム数でボーナス&AT間約1500G+αでボーナス。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZを7回スルーで条件到達。次回(8回目)CZでボーナス。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "kessen_bonus_through",
+      "displayName": "決戦ボーナス天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT非当選の決戦ボーナスが4回連続で条件到達。次回ボーナスで革命ボーナス。",
       "isEnabled": true
     }
   ]

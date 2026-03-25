@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "masterVersion": "2026.03.23.200",
+  "masterVersion": "0.5.0-ceiling-realdata-ui",
   "machines": [
     {
       "machineId": "im_juggler_ex",

@@ -1,7 +1,6 @@
 package com.example.slotanalyzer.core.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -13,7 +12,6 @@ import com.example.slotanalyzer.feature.home.presentation.HomeScreen
 import com.example.slotanalyzer.feature.inference.presentation.InferenceScreen
 import com.example.slotanalyzer.feature.machine.presentation.MachineSelectScreen
 import com.example.slotanalyzer.feature.session.presentation.SessionInputScreen
-import com.example.slotanalyzer.feature.session.presentation.SessionInputViewModel
 
 @Composable
 fun AppNavHost() {
@@ -38,12 +36,17 @@ fun AppNavHost() {
                     type = NavType.StringType
                 }
             )
-        ) {
-            val viewModel: SessionInputViewModel = hiltViewModel()
+        ) { backStackEntry ->
+            val sessionId = backStackEntry.arguments?.getString("sessionId").orEmpty()
 
             SessionInputScreen(
-                viewModel = viewModel,
-                conditions = emptyList()
+                sessionId = sessionId,
+                onMoveToInference = {
+                    navController.navigate(AppRoutes.inference(sessionId))
+                },
+                onBack = {
+                    navController.popBackStack()
+                }
             )
         }
 
