@@ -2,9 +2,11 @@ package com.example.slotanalyzer.feature.session.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.slotanalyzer.core.ui.model.CeilingStatusUiModel
+import com.example.slotanalyzer.domain.model.CeilingType
 import com.example.slotanalyzer.domain.model.CounterCategory
 import com.example.slotanalyzer.domain.usecase.CalculateCeilingStatusUseCase
+import com.example.slotanalyzer.feature.machine.domain.model.CeilingInputMode
+import com.example.slotanalyzer.feature.machine.domain.model.CeilingRule
 import com.example.slotanalyzer.feature.machine.domain.model.Machine
 import com.example.slotanalyzer.feature.machine.domain.model.MachineCounterDefinition
 import com.example.slotanalyzer.feature.machine.domain.usecase.GetMachineUseCase
@@ -24,37 +26,33 @@ import kotlinx.coroutines.launch
 data class SessionCounterItemUiModel(
     val key: String,
     val displayName: String,
-    val value: Int,
+    val value: Int?,
     val unit: String,
     val step: Int,
     val supportsMinus: Boolean,
     val categoryLabel: String,
     val note: String? = null,
-    val rateText: String? = null
-)
-
-data class CeilingInputItemUiModel(
-    val ruleKey: String,
-    val displayName: String,
-    val unit: String,
-    val currentValue: Int,
-    val note: String? = null
+    val rateText: String? = null,
+    val allowEmpty: Boolean = true
 )
 
 data class CeilingBlockUiModel(
     val ruleKey: String,
     val title: String,
-    val unit: String,
     val currentValue: Int,
+    val currentText: String,
     val limitText: String,
     val remainText: String,
     val summaryText: String,
+    val unit: String,
+    val steps: List<Int>,
+    val inputVisible: Boolean,
     val note: String? = null,
     val benefitText: String? = null,
     val resetText: String? = null,
-    val steps: List<Int> = listOf(1, 10, 100),
+    val isPrimary: Boolean = false,
     val isHighlighted: Boolean = false,
-    val showInput: Boolean = true
+    val isComposite: Boolean = false
 )
 
 data class SessionUiState(
@@ -63,8 +61,6 @@ data class SessionUiState(
     val machineName: String = "",
     val machineTypeText: String = "",
     val guidanceText: String = "",
-    val ceilingInputItems: List<CeilingInputItemUiModel> = emptyList(),
-    val ceilingItems: List<CeilingStatusUiModel> = emptyList(),
     val ceilingBlocks: List<CeilingBlockUiModel> = emptyList(),
     val counterItems: List<SessionCounterItemUiModel> = emptyList()
 )
@@ -95,21 +91,24 @@ class SessionViewModel @Inject constructor(
         }
     }
 
-    fun setCounter(counterKey: String, value: Int) {
-        updateCounter(counterKey, value.coerceAtLeast(0))
+    fun setCounter(counterKey: String, value: Int?) {
+        val normalizedValue = value?.coerceAtLeast(0)
+        updateCounter(counterKey, normalizedValue)
     }
 
     fun setCeilingInput(ruleKey: String, value: Int) {
         val normalizedValue = value.coerceAtLeast(0)
         _uiState.update { currentState ->
-            val updatedInputs = currentState.ceilingInputItems.map { item ->
-                if (item.ruleKey == ruleKey) item.copy(currentValue = normalizedValue) else item
-            }
-            val updatedCeilingItems = buildCeilingItems(currentMachine, updatedInputs)
             currentState.copy(
-                ceilingInputItems = updatedInputs,
-                ceilingItems = updatedCeilingItems,
-                ceilingBlocks = buildCeilingBlocks(currentMachine, updatedInputs, updatedCeilingItems)
+                ceilingBlocks = currentState.ceilingBlocks.map { block ->
+                    if (block.ruleKey == ruleKey) {
+                        block.copy(currentValue = normalizedValue)
+                    } else {
+                        block
+                    }
+                }.let { updated ->
+                    rebuildCeilingBlocks(currentMachine, updated)
+                }
             )
         }
         persist(ceilingInputStorageKey(ruleKey), normalizedValue)
@@ -132,8 +131,7 @@ class SessionViewModel @Inject constructor(
     }
 
     private fun buildUiState(session: PlaySession, machine: Machine?): SessionUiState {
-        val ceilingInputItems = buildCeilingInputItems(session, machine)
-        val ceilingItems = buildCeilingItems(machine, ceilingInputItems)
+        val ceilingBlocks = buildCeilingBlocks(session, machine)
 
         return SessionUiState(
             sessionId = session.id,
@@ -141,14 +139,12 @@ class SessionViewModel @Inject constructor(
             machineName = machine?.name.orEmpty(),
             machineTypeText = machine?.type.orEmpty(),
             guidanceText = buildGuidanceText(machine),
-            ceilingInputItems = ceilingInputItems,
-            ceilingItems = ceilingItems,
-            ceilingBlocks = buildCeilingBlocks(machine, ceilingInputItems, ceilingItems),
+            ceilingBlocks = ceilingBlocks,
             counterItems = buildCounterItems(machine, session)
         )
     }
 
-    private fun updateCounter(counterKey: String, newValue: Int) {
+    private fun updateCounter(counterKey: String, newValue: Int?) {
         _uiState.update { currentState ->
             val updatedItems = currentState.counterItems.map { item ->
                 if (item.key == counterKey) item.copy(value = newValue) else item
@@ -172,7 +168,7 @@ class SessionViewModel @Inject constructor(
         persist(counterKey, newValue)
     }
 
-    private fun persist(key: String, value: Int) {
+    private fun persist(key: String, value: Int?) {
         viewModelScope.launch {
             val sessionId = _uiState.value.sessionId
             if (sessionId.isNotBlank()) {
@@ -200,7 +196,7 @@ class SessionViewModel @Inject constructor(
             .sortedBy { it.sortOrder }
             .filter { shouldShowCounter(machine, it) }
             .map { definition ->
-                val value = getCounterValue(session, definition.key)
+                val value = getCounterValueOrNull(session, definition.key)
 
                 SessionCounterItemUiModel(
                     key = definition.key,
@@ -215,7 +211,8 @@ class SessionViewModel @Inject constructor(
                         counterKey = definition.key,
                         totalGames = totalGames,
                         count = value
-                    )
+                    ),
+                    allowEmpty = true
                 )
             }
     }
@@ -237,97 +234,107 @@ class SessionViewModel @Inject constructor(
         return denominatorValues.distinct().size > 1
     }
 
-    private fun buildCeilingInputItems(
+    private fun buildCeilingBlocks(
         session: PlaySession,
         machine: Machine?
-    ): List<CeilingInputItemUiModel> {
+    ): List<CeilingBlockUiModel> {
         if (machine == null) return emptyList()
 
-        return machine.ceilingRules
+        val sortedRules = machine.ceilingRules
             .filter { it.isEnabled }
-            .sortedWith(compareBy({ it.displayOrder }, { it.limitValue }, { it.displayName }))
-            .map { rule ->
-                CeilingInputItemUiModel(
-                    ruleKey = rule.ruleKey,
-                    displayName = rule.displayName,
-                    unit = rule.unit,
-                    currentValue = getCounterValue(session, ceilingInputStorageKey(rule.ruleKey)),
-                    note = rule.description
-                )
-            }
-    }
+            .sortedWith(compareBy<CeilingRule> { it.displayOrder }.thenBy { it.limitValue })
 
-    private fun buildCeilingItems(
-        machine: Machine?,
-        inputItems: List<CeilingInputItemUiModel>
-    ): List<CeilingStatusUiModel> {
-        val currentInputs = inputItems.associate { it.ruleKey to it.currentValue }
-        return calculateCeilingStatusUseCase(
+        val currentInputs = sortedRules.associate { rule ->
+            rule.ruleKey to getCounterValue(session, ceilingInputStorageKey(rule.ruleKey))
+        }
+
+        val statusesByRuleKey = calculateCeilingStatusUseCase(
             machine = machine,
             currentInputs = currentInputs
-        ).statuses.map { status ->
-            val unitSuffix = status.unit.ifBlank { "G" }
-            CeilingStatusUiModel(
-                title = status.displayName,
-                currentText = "${status.currentValue}$unitSuffix",
-                limitText = "${status.limitValue}$unitSuffix",
-                remainText = if (status.remainValue <= 0) "到達済み" else "${status.remainValue}$unitSuffix",
-                note = status.description,
-                isPrimary = false,
-                isHighlighted = status.remainValue <= 0
+        ).statuses.associateBy { it.ruleKey }
+
+        return sortedRules.map { rule ->
+            val status = statusesByRuleKey[rule.ruleKey]
+            val currentValue = status?.currentValue ?: 0
+            val limitText = formatValue(status?.limitValue ?: rule.limitValue, status?.unit ?: rule.unit, rule.ceilingType)
+            val remainText = when {
+                status == null -> "-"
+                status.remainValue <= 0 -> "到達済み"
+                else -> formatValue(status.remainValue, status.unit, rule.ceilingType)
+            }
+            val currentText = formatValue(currentValue, status?.unit ?: rule.unit, rule.ceilingType)
+            val note = buildSupportNote(rule)
+            val summary = if (remainText == "到達済み") {
+                "現在 $currentText / 到達済み"
+            } else {
+                "現在 $currentText / 残り $remainText"
+            }
+
+            CeilingBlockUiModel(
+                ruleKey = rule.ruleKey,
+                title = rule.displayName,
+                currentValue = currentValue,
+                currentText = currentText,
+                limitText = limitText,
+                remainText = remainText,
+                summaryText = summary,
+                unit = status?.unit ?: rule.unit,
+                steps = buildCeilingSteps(rule),
+                inputVisible = rule.showInput && rule.inputMode != CeilingInputMode.READ_ONLY && rule.ceilingType != CeilingType.COMPOSITE,
+                note = note,
+                benefitText = rule.benefitText,
+                resetText = rule.resetText,
+                isPrimary = status?.isPrimary == true,
+                isHighlighted = status?.isHighlighted == true,
+                isComposite = rule.ceilingType == CeilingType.COMPOSITE
             )
         }
     }
 
-    private fun buildCeilingBlocks(
+    private fun rebuildCeilingBlocks(
         machine: Machine?,
-        inputItems: List<CeilingInputItemUiModel>,
-        statusItems: List<CeilingStatusUiModel>
+        currentBlocks: List<CeilingBlockUiModel>
     ): List<CeilingBlockUiModel> {
-        if (machine == null) return emptyList()
+        if (machine == null) return currentBlocks
+        val currentInputs = currentBlocks.associate { it.ruleKey to it.currentValue }
+        val statusesByRuleKey = calculateCeilingStatusUseCase(
+            machine = machine,
+            currentInputs = currentInputs
+        ).statuses.associateBy { it.ruleKey }
 
-        val inputByRuleKey = inputItems.associateBy { it.ruleKey }
-        val statusByTitle = statusItems.associateBy { it.title }
-
-        return machine.ceilingRules
-            .filter { it.isEnabled }
-            .sortedWith(compareBy({ it.displayOrder }, { it.limitValue }, { it.displayName }))
-            .map { rule ->
-                val input = inputByRuleKey[rule.ruleKey]
-                val status = statusByTitle[rule.displayName]
-                val unitSuffix = rule.unit.ifBlank { "G" }
-                val currentValue = input?.currentValue ?: 0
-                val remainText = status?.remainText ?: "ー"
-                val currentText = "${currentValue}$unitSuffix"
-                val summaryText = if (remainText == "到達済み") {
-                    "現在 $currentText / 到達済み"
-                } else {
-                    "現在 $currentText / 残り $remainText"
-                }
-
-                CeilingBlockUiModel(
-                    ruleKey = rule.ruleKey,
-                    title = rule.displayName,
-                    unit = rule.unit,
-                    currentValue = currentValue,
-                    limitText = status?.limitText ?: "${rule.limitValue}$unitSuffix",
-                    remainText = remainText,
-                    summaryText = summaryText,
-                    note = rule.description,
-                    benefitText = rule.benefitText,
-                    resetText = rule.resetText,
-                    steps = buildCeilingSteps(rule.unit, rule.stepValue),
-                    isHighlighted = remainText == "到達済み",
-                    showInput = rule.showInput
-                )
+        return currentBlocks.map { block ->
+            val status = statusesByRuleKey[block.ruleKey] ?: return@map block
+            val ceilingType = machine.ceilingRules.firstOrNull { it.ruleKey == block.ruleKey }?.ceilingType
+            val limitText = formatValue(status.limitValue, status.unit, ceilingType)
+            val remainText = if (status.remainValue <= 0) {
+                "到達済み"
+            } else {
+                formatValue(status.remainValue, status.unit, ceilingType)
             }
+            val currentText = formatValue(status.currentValue, status.unit, ceilingType)
+            val summary = if (remainText == "到達済み") {
+                "現在 $currentText / 到達済み"
+            } else {
+                "現在 $currentText / 残り $remainText"
+            }
+
+            block.copy(
+                currentValue = status.currentValue,
+                currentText = currentText,
+                limitText = limitText,
+                remainText = remainText,
+                summaryText = summary,
+                isPrimary = status.isPrimary,
+                isHighlighted = status.isHighlighted
+            )
+        }
     }
 
     private fun buildGuidanceText(machine: Machine?): String {
         if (machine == null) return ""
 
         return when (machine.type?.uppercase()) {
-            "AT" -> "天井条件ごとにカードを開いて、現在値入力と恩恵確認を行えます。"
+            "AT" -> "天井条件ごとに入力欄と恩恵をまとめて確認できます。"
             "A", "A+ART", "A+AT" -> "ボーナス回数を中心に入力して、総ゲーム数とのバランスを見てください。"
             else -> "機種ごとの設定差がある項目だけ表示しています。"
         }
@@ -336,15 +343,53 @@ class SessionViewModel @Inject constructor(
     private fun buildRateText(
         counterKey: String,
         totalGames: Int,
-        count: Int
+        count: Int?
     ): String? {
         if (counterKey == TOTAL_GAMES_KEY) return null
-        if (count <= 0 || totalGames <= 0) return null
+        if (count == null || count <= 0 || totalGames <= 0) return null
         return "1/${"%.1f".format(totalGames.toDouble() / count.toDouble())}"
+    }
+
+    private fun buildCeilingSteps(rule: CeilingRule): List<Int> {
+        val base = rule.stepValue.coerceAtLeast(1)
+        val rawSteps = when (rule.ceilingType) {
+            CeilingType.GAME -> listOf(1, base, base * 5, base * 10)
+            CeilingType.COUNT -> listOf(1, 2, 3)
+            CeilingType.CYCLE -> listOf(1, 2, 5)
+            CeilingType.POINT -> {
+                val pointBase = base.coerceAtLeast(10)
+                listOf(pointBase, pointBase * 5, pointBase * 10)
+            }
+            CeilingType.COMPOSITE -> emptyList()
+        }
+
+        return rawSteps.filter { it > 0 }.distinct().sorted()
+    }
+
+    private fun buildSupportNote(rule: CeilingRule): String? {
+        return when {
+            rule.ceilingType == CeilingType.COMPOSITE -> "複合条件は現在のUIでは個別入力未対応です。JSON定義を保持したまま、今後の自動判定対応に備えています。"
+            !rule.description.isNullOrBlank() -> rule.description
+            else -> null
+        }
+    }
+
+    private fun formatValue(value: Int, unit: String, ceilingType: CeilingType?): String {
+        val normalizedUnit = when {
+            unit.isNotBlank() -> unit
+            ceilingType == CeilingType.COUNT || ceilingType == CeilingType.CYCLE -> "回"
+            ceilingType == CeilingType.POINT -> "pt"
+            else -> "G"
+        }
+        return "$value$normalizedUnit"
     }
 
     private fun getCounterValue(session: PlaySession, key: String): Int {
         return session.counters.firstOrNull { it.counterKey == key }?.intValue ?: 0
+    }
+
+    private fun getCounterValueOrNull(session: PlaySession, key: String): Int? {
+        return session.counters.firstOrNull { it.counterKey == key }?.intValue
     }
 
     private fun CounterCategory.toLabel(): String {
@@ -354,15 +399,6 @@ class SessionViewModel @Inject constructor(
             CounterCategory.AT_CZ -> "AT / CZ"
             CounterCategory.SMALL_ROLE -> "小役"
             CounterCategory.SPECIAL -> "特殊"
-        }
-    }
-
-    private fun buildCeilingSteps(unit: String, stepValue: Int): List<Int> {
-        val normalizedStep = stepValue.coerceAtLeast(1)
-        return when (unit.lowercase()) {
-            "g" -> listOf(1, 10, 100)
-            "pt" -> listOf(10, 50, 100)
-            else -> listOf(1, normalizedStep, normalizedStep * 5).distinct().sorted()
         }
     }
 

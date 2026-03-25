@@ -55,7 +55,7 @@ class InferenceViewModel @Inject constructor(
                 session = session
             )
 
-            val currentGameCount = getCounter(session, CURRENT_GAME_KEY)
+            val currentGameCount = getCounterOrNull(session, CURRENT_GAME_KEY) ?: 0
             val reasonItems = buildReasonItems(machine, session, result)
             val settingBars = buildSettingBars(result.settingScores)
             val bandBars = buildBandBars(result.settingScores)
@@ -127,24 +127,31 @@ class InferenceViewModel @Inject constructor(
     }
 
     private fun buildInputItems(machine: Machine?, session: PlaySession): List<InferenceInputItemUiModel> {
-        val totalGames = getCounter(session, TOTAL_GAMES_KEY)
+        val totalGames = getCounterOrNull(session, TOTAL_GAMES_KEY) ?: 0
 
         val counterDefinitions = machine?.counters
             ?.sortedBy { it.sortOrder }
-            ?.filter { it.isEnabled && (it.key == TOTAL_GAMES_KEY || getCounter(session, it.key) > 0) }
+            ?.filter { definition ->
+                definition.isEnabled && (
+                    definition.key == TOTAL_GAMES_KEY || hasCounterEntry(session, definition.key)
+                )
+            }
             ?: emptyList()
 
         return counterDefinitions.map { definition ->
-            val count = getCounter(session, definition.key)
+            val count = getCounterOrNull(session, definition.key)
             val unitText = definition.unit.takeIf { it.isNotBlank() } ?: ""
-            val valueText = if (definition.key == TOTAL_GAMES_KEY) {
-                "$count $unitText".trim()
-            } else {
-                val rateText = RateFormatter.calculateRateText(totalGames, count)
-                if (rateText == "--") {
-                    "$count $unitText".trim()
-                } else {
-                    "$count $unitText / 確率 $rateText".trim()
+            val valueText = when {
+                definition.key == TOTAL_GAMES_KEY -> count?.let { "$it $unitText".trim() } ?: "ー"
+                count == null -> "ー"
+                count == 0 -> "$count $unitText / 確率 --".trim()
+                else -> {
+                    val rateText = RateFormatter.calculateRateText(totalGames, count)
+                    if (rateText == "--") {
+                        "$count $unitText".trim()
+                    } else {
+                        "$count $unitText / 確率 $rateText".trim()
+                    }
                 }
             }
 
@@ -155,7 +162,6 @@ class InferenceViewModel @Inject constructor(
             )
         }
     }
-
 
     private fun buildCeilingItems(
         machine: Machine?,
@@ -190,7 +196,7 @@ class InferenceViewModel @Inject constructor(
         session: PlaySession,
         result: InferenceResult
     ): List<InferenceReasonUiModel> {
-        val totalGames = getCounter(session, TOTAL_GAMES_KEY)
+        val totalGames = getCounterOrNull(session, TOTAL_GAMES_KEY) ?: 0
         val reasons = mutableListOf<InferenceReasonUiModel>()
 
         val sampleLevel = when {
@@ -225,9 +231,9 @@ class InferenceViewModel @Inject constructor(
             .filter { it.isEnabled && it.isDefaultVisible && it.key != TOTAL_GAMES_KEY }
             .sortedBy { it.sortOrder }
             .forEach { definition ->
-                val count = getCounter(session, definition.key)
+                val count = getCounterOrNull(session, definition.key)
                 val refs = groupedRefs[definition.key].orEmpty()
-                if (count <= 0 || refs.isEmpty()) return@forEach
+                if (count == null || count == 0 || refs.isEmpty()) return@forEach
 
                 val observedDenominator = totalGames.toDouble() / count.toDouble()
                 val nearest = refs.minByOrNull { ref ->
@@ -363,8 +369,12 @@ class InferenceViewModel @Inject constructor(
         }
     }
 
-    private fun getCounter(session: PlaySession, key: String): Int {
-        return session.counters.firstOrNull { it.counterKey == key }?.intValue ?: 0
+    private fun getCounterOrNull(session: PlaySession, key: String): Int? {
+        return session.counters.firstOrNull { it.counterKey == key }?.intValue
+    }
+
+    private fun hasCounterEntry(session: PlaySession, key: String): Boolean {
+        return session.counters.any { it.counterKey == key }
     }
 
     private fun CounterCategory.toLabel(): String {

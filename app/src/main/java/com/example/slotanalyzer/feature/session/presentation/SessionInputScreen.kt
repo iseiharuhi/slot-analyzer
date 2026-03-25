@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.slotanalyzer.feature.session.presentation.component.CeilingBlockCard
+import com.example.slotanalyzer.feature.session.presentation.component.NumericAdjustField
 
 private enum class SessionInputTab(val label: String) {
     CEILING("天井確認"),
@@ -173,13 +174,8 @@ fun SessionInputScreen(
                             Card(modifier = Modifier.fillMaxWidth()) {
                                 Column(
                                     modifier = Modifier.padding(16.dp),
-                                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                                    verticalArrangement = Arrangement.spacedBy(8.dp)
                                 ) {
-                                    Text(
-                                        text = "天井確認",
-                                        style = MaterialTheme.typography.titleMedium,
-                                        fontWeight = FontWeight.SemiBold
-                                    )
                                     Text(
                                         text = "天井機能：非搭載",
                                         style = MaterialTheme.typography.bodyMedium,
@@ -215,7 +211,7 @@ fun SessionInputScreen(
 
                                     items.forEach { item ->
                                         Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                            com.example.slotanalyzer.feature.session.presentation.component.NumericAdjustField(
+                                            NumericAdjustField(
                                                 label = buildLabel(
                                                     displayName = item.displayName,
                                                     unit = item.unit,
@@ -227,7 +223,8 @@ fun SessionInputScreen(
                                                     listOf(1, 10, 100, 1000)
                                                 } else {
                                                     listOf(1, 10, 100)
-                                                }
+                                                },
+                                                allowEmpty = item.allowEmpty
                                             )
 
                                             item.note?.takeIf { it.isNotBlank() }?.let { note ->

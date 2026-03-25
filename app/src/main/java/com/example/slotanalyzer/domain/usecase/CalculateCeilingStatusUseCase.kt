@@ -19,12 +19,11 @@ class CalculateCeilingStatusUseCase @Inject constructor() {
 
         val enabledRules = machine.ceilingRules
             .filter { it.isEnabled }
-            .sortedWith(
-                compareBy<CeilingRule> { it.displayOrder }
-                    .thenBy { it.limitValue }
-            )
+            .sortedWith(compareBy<CeilingRule> { it.displayOrder }.thenBy { it.limitValue })
 
-        val primaryRuleKey = enabledRules.firstOrNull { it.isPrimary }?.ruleKey
+        val representativeRuleKey = enabledRules
+            .firstOrNull { it.isPrimary }
+            ?.ruleKey
             ?: enabledRules.firstOrNull { it.ceilingType == CeilingType.GAME }?.ruleKey
             ?: enabledRules.firstOrNull { it.ceilingType == CeilingType.CYCLE }?.ruleKey
             ?: enabledRules.firstOrNull { it.ceilingType == CeilingType.COUNT }?.ruleKey
@@ -34,8 +33,6 @@ class CalculateCeilingStatusUseCase @Inject constructor() {
         val statuses = enabledRules.map { rule ->
             val currentValue = currentInputs[rule.ruleKey]?.coerceAtLeast(0) ?: 0
             val remainValue = max(rule.limitValue - currentValue, 0)
-            val reached = currentValue >= rule.limitValue
-
             CeilingStatus(
                 ruleKey = rule.ruleKey,
                 displayName = rule.displayName,
@@ -44,9 +41,8 @@ class CalculateCeilingStatusUseCase @Inject constructor() {
                 remainValue = remainValue,
                 unit = rule.unit,
                 description = rule.description,
-                ceilingType = rule.ceilingType,
-                isPrimary = rule.ruleKey == primaryRuleKey,
-                isHighlighted = reached || rule.isHighlighted
+                isPrimary = rule.ruleKey == representativeRuleKey,
+                isHighlighted = remainValue <= 0 || rule.isHighlighted
             )
         }
 

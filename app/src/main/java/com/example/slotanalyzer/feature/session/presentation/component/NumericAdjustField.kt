@@ -12,7 +12,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -21,13 +25,18 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun NumericAdjustField(
     label: String,
-    value: Int,
-    onValueChange: (Int) -> Unit,
+    value: Int?,
+    onValueChange: (Int?) -> Unit,
     modifier: Modifier = Modifier,
-    steps: List<Int> = listOf(1, 10, 100)
+    steps: List<Int> = listOf(1, 10, 100),
+    allowEmpty: Boolean = false
 ) {
     val safeSteps = remember(steps) {
         steps.distinct().filter { it > 0 }.sorted()
+    }
+
+    var text by rememberSaveable(value, allowEmpty) {
+        mutableStateOf(value?.toString().orEmpty())
     }
 
     Column(
@@ -40,11 +49,17 @@ fun NumericAdjustField(
         )
 
         OutlinedTextField(
-            value = value.toString(),
+            value = text,
             onValueChange = { input ->
                 when {
-                    input.isBlank() -> onValueChange(0)
-                    input.all { it.isDigit() } -> onValueChange(input.toIntOrNull() ?: 0)
+                    input.isBlank() -> {
+                        text = ""
+                        onValueChange(if (allowEmpty) null else 0)
+                    }
+                    input.all { it.isDigit() } -> {
+                        text = input
+                        onValueChange(input.toIntOrNull())
+                    }
                 }
             },
             modifier = Modifier.fillMaxWidth(),
@@ -62,10 +77,23 @@ fun NumericAdjustField(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+            if (allowEmpty) {
+                AssistChip(
+                    onClick = {
+                        text = ""
+                        onValueChange(null)
+                    },
+                    label = { Text("クリア") }
+                )
+            }
+
             safeSteps.sortedDescending().forEach { step ->
                 AssistChip(
                     onClick = {
-                        onValueChange((value - step).coerceAtLeast(0))
+                        val current = value ?: 0
+                        val next = (current - step).coerceAtLeast(0)
+                        text = next.toString()
+                        onValueChange(next)
                     },
                     label = { Text("-$step") }
                 )
@@ -74,7 +102,10 @@ fun NumericAdjustField(
             safeSteps.forEach { step ->
                 AssistChip(
                     onClick = {
-                        onValueChange(value + step)
+                        val current = value ?: 0
+                        val next = current + step
+                        text = next.toString()
+                        onValueChange(next)
                     },
                     label = { Text("+$step") }
                 )
