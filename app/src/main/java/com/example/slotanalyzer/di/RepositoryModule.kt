@@ -1,12 +1,10 @@
 package com.example.slotanalyzer.di
 
-import com.example.slotanalyzer.data.repository.MachineInferenceSpecRepositoryImpl
 import com.example.slotanalyzer.data.repository.MachineRepositoryImpl
-import com.example.slotanalyzer.data.repository.PlayHistoryRepositoryImpl
+import com.example.slotanalyzer.data.repository.MasterSyncRepositoryImpl
 import com.example.slotanalyzer.data.repository.PlaySessionRepositoryImpl
-import com.example.slotanalyzer.domain.repository.MachineInferenceSpecRepository
 import com.example.slotanalyzer.domain.repository.MachineRepository
-import com.example.slotanalyzer.domain.repository.PlayHistoryRepository
+import com.example.slotanalyzer.domain.repository.MasterSyncRepository
 import com.example.slotanalyzer.domain.repository.PlaySessionRepository
 import dagger.Binds
 import dagger.Module
@@ -32,13 +30,7 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindPlayHistoryRepository(
-        impl: PlayHistoryRepositoryImpl
-    ): PlayHistoryRepository
-
-    @Binds
-    @Singleton
-    abstract fun bindMachineInferenceSpecRepository(
-        impl: MachineInferenceSpecRepositoryImpl
-    ): MachineInferenceSpecRepository
+    abstract fun bindMasterSyncRepository(
+        impl: MasterSyncRepositoryImpl
+    ): MasterSyncRepository
 }

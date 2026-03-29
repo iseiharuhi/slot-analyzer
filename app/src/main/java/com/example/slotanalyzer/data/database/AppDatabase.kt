@@ -3,7 +3,10 @@ package com.example.slotanalyzer.data.database
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.example.slotanalyzer.data.database.dao.AppSettingDao
+import com.example.slotanalyzer.data.database.dao.MachineCeilingRuleDao
+import com.example.slotanalyzer.data.database.dao.MachineCounterDefinitionDao
 import com.example.slotanalyzer.data.database.dao.MachineDao
+import com.example.slotanalyzer.data.database.dao.MachineSettingReferenceValueDao
 import com.example.slotanalyzer.data.database.dao.MasterMetadataDao
 import com.example.slotanalyzer.data.database.dao.PlayHistoryDao
 import com.example.slotanalyzer.data.database.dao.PlaySessionDao
@@ -38,4 +41,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun playHistoryDao(): PlayHistoryDao
     abstract fun appSettingDao(): AppSettingDao
     abstract fun masterMetadataDao(): MasterMetadataDao
+    abstract fun machineCounterDefinitionDao(): MachineCounterDefinitionDao
+    abstract fun machineSettingReferenceValueDao(): MachineSettingReferenceValueDao
+    abstract fun machineCeilingRuleDao(): MachineCeilingRuleDao
 }

@@ -3,10 +3,11 @@ package com.example.slotanalyzer.di
 import android.content.Context
 import androidx.room.Room
 import com.example.slotanalyzer.data.database.AppDatabase
-import com.example.slotanalyzer.data.database.dao.AppSettingDao
+import com.example.slotanalyzer.data.database.dao.MachineCeilingRuleDao
+import com.example.slotanalyzer.data.database.dao.MachineCounterDefinitionDao
 import com.example.slotanalyzer.data.database.dao.MachineDao
+import com.example.slotanalyzer.data.database.dao.MachineSettingReferenceValueDao
 import com.example.slotanalyzer.data.database.dao.MasterMetadataDao
-import com.example.slotanalyzer.data.database.dao.PlayHistoryDao
 import com.example.slotanalyzer.data.database.dao.PlaySessionDao
 import dagger.Module
 import dagger.Provides
@@ -34,17 +35,32 @@ object DatabaseModule {
     }
 
     @Provides
-    fun provideMachineDao(db: AppDatabase): MachineDao = db.machineDao()
+    fun provideMachineDao(db: AppDatabase): MachineDao {
+        return db.machineDao()
+    }
 
     @Provides
-    fun providePlaySessionDao(db: AppDatabase): PlaySessionDao = db.playSessionDao()
+    fun provideCounterDao(db: AppDatabase): MachineCounterDefinitionDao {
+        return db.machineCounterDefinitionDao()
+    }
 
     @Provides
-    fun providePlayHistoryDao(db: AppDatabase): PlayHistoryDao = db.playHistoryDao()
+    fun provideReferenceDao(db: AppDatabase): MachineSettingReferenceValueDao {
+        return db.machineSettingReferenceValueDao()
+    }
 
     @Provides
-    fun provideAppSettingDao(db: AppDatabase): AppSettingDao = db.appSettingDao()
+    fun provideCeilingDao(db: AppDatabase): MachineCeilingRuleDao {
+        return db.machineCeilingRuleDao()
+    }
 
     @Provides
-    fun provideMasterMetadataDao(db: AppDatabase): MasterMetadataDao = db.masterMetadataDao()
+    fun provideMasterMetadataDao(db: AppDatabase): MasterMetadataDao {
+        return db.masterMetadataDao()
+    }
+
+    @Provides
+    fun providePlaySessionDao(db: AppDatabase): PlaySessionDao {
+        return db.playSessionDao()
+    }
 }

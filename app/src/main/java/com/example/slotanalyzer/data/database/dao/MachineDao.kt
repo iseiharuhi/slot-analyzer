@@ -1,12 +1,20 @@
 package com.example.slotanalyzer.data.database.dao
 
-import androidx.room.*
-import com.example.slotanalyzer.data.database.entity.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Transaction
+import com.example.slotanalyzer.data.database.entity.MachineCeilingRuleEntity
+import com.example.slotanalyzer.data.database.entity.MachineCounterDefinitionEntity
+import com.example.slotanalyzer.data.database.entity.MachineEntity
+import com.example.slotanalyzer.data.database.entity.MachineSettingReferenceValueEntity
 import com.example.slotanalyzer.data.database.relation.MachineWithDefinitions
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MachineDao {
+
     @Query("SELECT * FROM machines WHERE is_active = 1 ORDER BY name ASC")
     fun observeActiveMachines(): Flow<List<MachineEntity>>
 
@@ -37,4 +45,13 @@ interface MachineDao {
 
     @Query("DELETE FROM machines WHERE id = :machineId")
     suspend fun deleteMachineById(machineId: String)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrReplace(entity: MachineEntity)
+
+    @Query("DELETE FROM machines WHERE id IN (:ids)")
+    suspend fun deleteByIds(ids: List<String>)
+
+    @Query("DELETE FROM machines")
+    suspend fun deleteAll()
 }
