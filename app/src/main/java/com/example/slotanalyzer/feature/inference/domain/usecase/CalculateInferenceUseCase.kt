@@ -43,7 +43,8 @@ class CalculateInferenceUseCase @Inject constructor() {
             return emptyResult("判別対象の入力がまだ不足しています")
         }
 
-        val logScores = (1..6).associateWith { setting ->
+        val availableSettings = resolveAvailableSettings(machine, groupedReferences)
+        val logScores = availableSettings.associateWith { setting ->
             evidenceItems.sumOf { evidence ->
                 val ref = evidence.refsBySetting[setting] ?: return@sumOf 0.0
                 val denominator = ref.denominatorValue ?: return@sumOf 0.0
@@ -129,8 +130,13 @@ class CalculateInferenceUseCase @Inject constructor() {
 
     private fun normalizeFromLogScores(logScores: Map<Int, Double>): List<SettingScore> {
         if (logScores.isEmpty()) {
-            return (1..6).map {
-                SettingScore(setting = it, rawValue = MIN_SCORE, normalizedValue = 1.0 / 6.0)
+            val defaultSettings = DEFAULT_SETTINGS
+            return defaultSettings.map {
+                SettingScore(
+                    setting = it,
+                    rawValue = MIN_SCORE,
+                    normalizedValue = 1.0 / defaultSettings.size.toDouble()
+                )
             }
         }
 
@@ -189,16 +195,18 @@ class CalculateInferenceUseCase @Inject constructor() {
         val sorted = scores.sortedByDescending { it.normalizedValue }
         val top = sorted.firstOrNull() ?: return "不明"
         val second = sorted.getOrNull(1)
+        val settingNos = scores.map { it.setting }.toSet()
         val highBand = scores.filter { it.setting in 5..6 }.sumOf { it.normalizedValue }
         val middleBand = scores.filter { it.setting in 3..4 }.sumOf { it.normalizedValue }
         val lowBand = scores.filter { it.setting in 1..2 }.sumOf { it.normalizedValue }
 
         val topPercent = (top.normalizedValue * 100).toInt()
         val gapPercent = second?.let { ((top.normalizedValue - it.normalizedValue) * 100).toInt() } ?: 0
+        val hasMiddleBand = settingNos.any { it in 3..4 }
         val bandText = when {
             highBand >= 0.55 -> "高設定帯が優勢"
             lowBand >= 0.55 -> "低設定帯が優勢"
-            middleBand >= 0.45 -> "中間設定帯が中心"
+            hasMiddleBand && middleBand >= 0.45 -> "中間設定帯が中心"
             else -> "設定帯は拮抗"
         }
 
@@ -233,10 +241,11 @@ class CalculateInferenceUseCase @Inject constructor() {
     }
 
     private fun emptyResult(message: String): InferenceResult {
-        val even = 1.0 / 6.0
+        val defaultSettings = DEFAULT_SETTINGS
+        val even = 1.0 / defaultSettings.size.toDouble()
 
         return InferenceResult(
-            settingScores = (1..6).map { setting ->
+            settingScores = defaultSettings.map { setting ->
                 SettingScore(
                     setting = setting,
                     rawValue = MIN_SCORE,
@@ -246,6 +255,23 @@ class CalculateInferenceUseCase @Inject constructor() {
             summary = message,
             confidenceLabel = ConfidenceLabel.INSUFFICIENT
         )
+    }
+
+    private fun resolveAvailableSettings(
+        machine: Machine,
+        groupedReferences: Map<String, List<SettingReferenceValue>>
+    ): List<Int> {
+        val fromReferences = groupedReferences.values
+            .flatten()
+            .map { it.settingNo }
+            .distinct()
+            .sorted()
+
+        return if (fromReferences.isNotEmpty()) {
+            fromReferences
+        } else {
+            DEFAULT_SETTINGS
+        }
     }
 
     private fun getCounter(session: PlaySession, key: String): Int {
@@ -261,6 +287,7 @@ class CalculateInferenceUseCase @Inject constructor() {
 
     companion object {
         private const val TOTAL_GAMES_KEY = "total_games"
+        private val DEFAULT_SETTINGS = listOf(1, 2, 3, 4, 5, 6)
         private const val MIN_SCORE = 0.0001
         private const val MIN_LAMBDA = 0.0000001
         private const val MIN_WEIGHT = 0.1

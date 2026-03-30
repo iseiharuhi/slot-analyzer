@@ -1,24 +1,14 @@
 {
   "machineId": "dmm_slot_006",
   "machineName": "LB スロット GALFY",
-  "status": "draft",
+  "status": "partial",
   "capturedDate": "2026-03-31",
   "sourceListPage": 1,
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
       "url": "https://p-town.dmm.com/machines/4992",
-      "status": "verified_direct"
-    },
-    {
-      "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot",
-      "status": "verified_list_page"
-    },
-    {
-      "label": "一撃",
-      "url": null,
-      "status": "not_found"
+      "status": "verified_direct_url"
     }
   ]
 }

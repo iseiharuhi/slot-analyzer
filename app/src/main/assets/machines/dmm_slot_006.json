@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": "2026-06-08",
     "isActive": true,
-    "notes": "公開済みのリンク・導入日を反映。設定差は4段階設定ベースの外部先行値しか確認できず、現行アプリの6段階推測へ無理に変換すると誤判定を招くため推測データ反映は保留。カウンタ定義のみ先行整備。",
+    "notes": "4段階設定対応に合わせて設定1・2・5・6の公開済みボーナス確率を反映。小役差は公開未確認のため未収録。BIG/REGを主軸、合算ボーナスは補助扱い。",
     "dmmUrl": "https://p-town.dmm.com/machines/4992",
     "ichigekiUrl": null
   },
@@ -60,6 +60,106 @@
       "notes": "任意入力。BIG+REGの合算管理用"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 295.2,
+          "weight": 0.75,
+          "minSampleSize": 6,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 292.6,
+          "weight": 0.75,
+          "minSampleSize": 6,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 284.9,
+          "weight": 0.75,
+          "minSampleSize": 6,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 277.7,
+          "weight": 0.75,
+          "minSampleSize": 6,
+          "note": "設定1・2・5・6のみ公開値対応"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 399.6,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 360.1,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 312.1,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 277.7,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "設定1・2・5・6のみ公開値対応"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 169.8,
+          "weight": 0.35,
+          "minSampleSize": 12,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 161.4,
+          "weight": 0.35,
+          "minSampleSize": 12,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 148.9,
+          "weight": 0.35,
+          "minSampleSize": 12,
+          "note": "設定1・2・5・6のみ公開値対応"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 138.8,
+          "weight": 0.35,
+          "minSampleSize": 12,
+          "note": "設定1・2・5・6のみ公開値対応"
+        }
+      ]
+    }
+  ],
   "ceilingRules": []
 }

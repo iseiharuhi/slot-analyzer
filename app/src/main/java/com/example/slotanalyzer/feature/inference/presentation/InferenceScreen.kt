@@ -278,7 +278,7 @@ private fun SettingTrendCard(points: List<SettingDistributionPointUiModel>) {
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                text = "設定1〜6の推測比率を折れ線で確認できます。",
+                text = "${points.joinToString(separator = "・") { it.label }} の推測比率を折れ線で確認できます。",
                 style = MaterialTheme.typography.bodyMedium,
                 color = onSurfaceVariant
             )

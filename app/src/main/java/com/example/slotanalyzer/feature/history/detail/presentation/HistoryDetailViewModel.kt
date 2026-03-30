@@ -214,27 +214,36 @@ class HistoryDetailViewModel @Inject constructor(
     }
 
     private fun buildBandBars(settingScores: List<SettingScore>): List<ScoreBarItem> {
+        val availableSettings = settingScores.map { it.setting }.toSet()
         val low = settingScores.filter { it.setting in 1..2 }.sumOf { it.normalizedValue }
         val middle = settingScores.filter { it.setting in 3..4 }.sumOf { it.normalizedValue }
         val high = settingScores.filter { it.setting in 5..6 }.sumOf { it.normalizedValue }
 
-        return listOf(
-            ScoreBarItem(
-                label = "低設定帯",
-                valueText = "${(low * 100).toInt()}%",
-                progress = low.toFloat().coerceIn(0f, 1f)
-            ),
-            ScoreBarItem(
-                label = "中間設定帯",
-                valueText = "${(middle * 100).toInt()}%",
-                progress = middle.toFloat().coerceIn(0f, 1f)
-            ),
-            ScoreBarItem(
-                label = "高設定帯",
-                valueText = "${(high * 100).toInt()}%",
-                progress = high.toFloat().coerceIn(0f, 1f)
+        return buildList {
+            add(
+                ScoreBarItem(
+                    label = "低設定帯",
+                    valueText = "${(low * 100).toInt()}%",
+                    progress = low.toFloat().coerceIn(0f, 1f)
+                )
             )
-        )
+            if (availableSettings.any { it in 3..4 }) {
+                add(
+                    ScoreBarItem(
+                        label = "中間設定帯",
+                        valueText = "${(middle * 100).toInt()}%",
+                        progress = middle.toFloat().coerceIn(0f, 1f)
+                    )
+                )
+            }
+            add(
+                ScoreBarItem(
+                    label = "高設定帯",
+                    valueText = "${(high * 100).toInt()}%",
+                    progress = high.toFloat().coerceIn(0f, 1f)
+                )
+            )
+        }
     }
 
     private fun toConfidenceText(raw: String): String {

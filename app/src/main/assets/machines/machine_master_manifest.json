@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "masterVersion": "0.7.5-url-map-web-verified",
+  "masterVersion": "0.7.6-url-map-web-verified",
   "machines": [
     {
       "machineId": "im_juggler_ex",
