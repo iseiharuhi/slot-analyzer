@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "masterVersion": "0.7.6-url-map-web-verified",
+  "masterVersion": "0.7.7-slot-032-partial-upgrade",
   "machines": [
     {
       "machineId": "im_juggler_ex",
@@ -210,7 +210,7 @@
     {
       "machineId": "dmm_slot_032",
       "fileName": "dmm_slot_032.json",
-      "checksum": "aad5067b62ae768641a4517aa52f1a2c2427e126cdfa4c4b6b3d54b63586fa77"
+      "checksum": "15aa4a9d4c4216911f7addd3d2d434f518f1665bbb99015f3646fbdb76ab7e70"
     },
     {
       "machineId": "dmm_slot_033",

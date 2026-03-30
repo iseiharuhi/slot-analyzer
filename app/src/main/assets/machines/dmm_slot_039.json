@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期投入データを、推測精度改善用に重み・最小サンプル数を再調整した暫定版。AT初当たりと直撃を主軸に、CZ/ボーナスは補助扱いへ調整。",
+    "notes": "公開解析ベースへ更新。設定1・2・4・5・6の5段階対応。初当りとATを採用しました。",
     "dmmUrl": "https://p-town.dmm.com/machines/4414",
     "ichigekiUrl": "https://1geki.jp/slot/l_evasloasu/"
   },
@@ -15,108 +15,77 @@
       "key": "total_games",
       "displayName": "総ゲーム数",
       "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
       "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "supportsMinus": false,
+      "sortOrder": 1,
       "notes": "全計算の分母"
     },
     {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
-      "sortOrder": 10,
-      "unit": "回",
+      "key": "bonus_count",
+      "displayName": "初当り",
+      "category": "BONUS",
       "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "supportsMinus": true,
+      "sortOrder": 10,
       "notes": null
     },
     {
       "key": "at_count",
       "displayName": "AT",
       "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
       "sortOrder": 11,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
       "notes": null
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "ボーナス",
-      "category": "BONUS",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": null
-    },
-    {
-      "key": "direct_hit_count",
-      "displayName": "直撃AT",
-      "category": "SPECIAL",
-      "sortOrder": 30,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT直撃や上位契機の補助入力"
     }
   ],
   "settingReferenceValues": [
     {
-      "counterKey": "cz_count",
+      "counterKey": "bonus_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 265.0,
-          "weight": 0.8,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "denominatorValue": 725.3,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 252.0,
-          "weight": 0.8,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 240.0,
-          "weight": 0.8,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "denominatorValue": 701.9,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 226.0,
-          "weight": 0.8,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "denominatorValue": 659.2,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 214.0,
-          "weight": 0.8,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "denominatorValue": 614.6,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 202.0,
-          "weight": 0.8,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "denominatorValue": 588.8,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "設定1・2・4・5・6のみ公開"
         }
       ]
     },
@@ -125,139 +94,38 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 530.0,
-          "weight": 1.05,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 932.3,
+          "weight": 0.9,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 500.0,
-          "weight": 1.05,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 466.0,
-          "weight": 1.05,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 862.2,
+          "weight": 0.9,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 428.0,
-          "weight": 1.05,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 762.2,
+          "weight": 0.9,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 388.0,
-          "weight": 1.05,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 674.4,
+          "weight": 0.9,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 346.0,
-          "weight": 1.05,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
-        }
-      ]
-    },
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 345.0,
-          "weight": 0.45,
-          "minSampleSize": 6,
-          "note": "暫定精度改善版。ボーナス合算は補助指標として扱う。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 326.0,
-          "weight": 0.45,
-          "minSampleSize": 6,
-          "note": "暫定精度改善版。ボーナス合算は補助指標として扱う。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 308.0,
-          "weight": 0.45,
-          "minSampleSize": 6,
-          "note": "暫定精度改善版。ボーナス合算は補助指標として扱う。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 288.0,
-          "weight": 0.45,
-          "minSampleSize": 6,
-          "note": "暫定精度改善版。ボーナス合算は補助指標として扱う。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 268.0,
-          "weight": 0.45,
-          "minSampleSize": 6,
-          "note": "暫定精度改善版。ボーナス合算は補助指標として扱う。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 248.0,
-          "weight": 0.45,
-          "minSampleSize": 6,
-          "note": "暫定精度改善版。ボーナス合算は補助指標として扱う。"
-        }
-      ]
-    },
-    {
-      "counterKey": "direct_hit_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 9999.0,
-          "weight": 1.1,
-          "minSampleSize": 2,
-          "note": "暫定精度改善版。希少当選のため過信を抑制。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 7000.0,
-          "weight": 1.1,
-          "minSampleSize": 2,
-          "note": "暫定精度改善版。希少当選のため過信を抑制。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 5200.0,
-          "weight": 1.1,
-          "minSampleSize": 2,
-          "note": "暫定精度改善版。希少当選のため過信を抑制。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 3200.0,
-          "weight": 1.1,
-          "minSampleSize": 2,
-          "note": "暫定精度改善版。希少当選のため過信を抑制。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 2200.0,
-          "weight": 1.1,
-          "minSampleSize": 2,
-          "note": "暫定精度改善版。希少当選のため過信を抑制。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 1600.0,
-          "weight": 1.1,
-          "minSampleSize": 2,
-          "note": "暫定精度改善版。希少当選のため過信を抑制。"
+          "denominatorValue": 620.2,
+          "weight": 0.9,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
         }
       ]
     }

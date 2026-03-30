@@ -112,6 +112,14 @@ fun HistoryDetailScreen(
                     )
                 }
 
+                if (state.settingStageText.isNotBlank()) {
+                    AssistChip(
+                        onClick = {},
+                        enabled = false,
+                        label = { Text(state.settingStageText) }
+                    )
+                }
+
                 if (state.playedAtText.isNotBlank()) {
                     Text(
                         text = state.playedAtText,

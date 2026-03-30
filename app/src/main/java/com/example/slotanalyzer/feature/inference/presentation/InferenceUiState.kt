@@ -26,6 +26,7 @@ data class InferenceUiState(
     val sessionId: String = "",
     val machineName: String = "",
     val machineTypeText: String = "",
+    val settingStageText: String = "",
     val probabilityModeText: String = "",
     val candidateSummaryText: String = "",
     val inputItems: List<InferenceInputItemUiModel> = emptyList(),

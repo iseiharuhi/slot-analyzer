@@ -6,7 +6,7 @@
     "type": "HYBRID",
     "releaseDate": null,
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期投入データを、推測精度改善用に重み・最小サンプル数を再調整した暫定版。ボーナス偏重を抑え、REGとAT初当たりのバランスを取り直した。",
+    "notes": "公開解析ベースへ更新。BB合算・RB・ボーナス合算に加え、共通ベルとスイカを小役指標として採用しました。",
     "dmmUrl": "https://p-town.dmm.com/machines/4447",
     "ichigekiUrl": "https://1geki.jp/slot/l_higurashi_gou/"
   },
@@ -15,60 +15,72 @@
       "key": "total_games",
       "displayName": "総ゲーム数",
       "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
       "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "supportsMinus": false,
+      "sortOrder": 1,
       "notes": "全計算の分母"
     },
     {
       "key": "big_count",
-      "displayName": "BIG",
+      "displayName": "BB合算",
       "category": "BONUS",
-      "sortOrder": 10,
-      "unit": "回",
       "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "supportsMinus": true,
+      "sortOrder": 10,
       "notes": null
     },
     {
       "key": "reg_count",
-      "displayName": "REG",
+      "displayName": "RB",
       "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
       "sortOrder": 11,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
       "notes": null
     },
     {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 12,
+      "notes": null
+    },
+    {
+      "key": "common_bell_count",
+      "displayName": "共通ベル",
+      "category": "SMALL_ROLE",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
       "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
       "notes": null
     },
     {
-      "key": "at_count",
-      "displayName": "AT",
-      "category": "AT_CZ",
-      "sortOrder": 21,
-      "unit": "回",
+      "key": "suika_count",
+      "displayName": "スイカ",
+      "category": "SMALL_ROLE",
       "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "supportsMinus": true,
+      "sortOrder": 21,
       "notes": null
     }
   ],
@@ -78,45 +90,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 330.0,
-          "weight": 0.65,
+          "denominatorValue": 381.0,
+          "weight": 0.45,
           "minSampleSize": 6,
-          "note": "暫定精度改善版。BIGは補助寄りの指標。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 318.0,
-          "weight": 0.65,
+          "denominatorValue": 372.4,
+          "weight": 0.45,
           "minSampleSize": 6,
-          "note": "暫定精度改善版。BIGは補助寄りの指標。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 306.0,
-          "weight": 0.65,
+          "denominatorValue": 366.1,
+          "weight": 0.45,
           "minSampleSize": 6,
-          "note": "暫定精度改善版。BIGは補助寄りの指標。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 290.0,
-          "weight": 0.65,
+          "denominatorValue": 358.1,
+          "weight": 0.45,
           "minSampleSize": 6,
-          "note": "暫定精度改善版。BIGは補助寄りの指標。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 274.0,
-          "weight": 0.65,
+          "denominatorValue": 350.5,
+          "weight": 0.45,
           "minSampleSize": 6,
-          "note": "暫定精度改善版。BIGは補助寄りの指標。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 258.0,
-          "weight": 0.65,
+          "denominatorValue": 343.1,
+          "weight": 0.45,
           "minSampleSize": 6,
-          "note": "暫定精度改善版。BIGは補助寄りの指標。"
+          "note": "公開解析値"
         }
       ]
     },
@@ -125,139 +137,186 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 470.0,
-          "weight": 1.3,
+          "denominatorValue": 407.1,
+          "weight": 0.9,
           "minSampleSize": 5,
-          "note": "暫定精度改善版。REGを比較的重めに扱う。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 430.0,
-          "weight": 1.3,
+          "denominatorValue": 397.2,
+          "weight": 0.9,
           "minSampleSize": 5,
-          "note": "暫定精度改善版。REGを比較的重めに扱う。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 390.0,
-          "weight": 1.3,
+          "denominatorValue": 378.8,
+          "weight": 0.9,
           "minSampleSize": 5,
-          "note": "暫定精度改善版。REGを比較的重めに扱う。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 348.0,
-          "weight": 1.3,
+          "denominatorValue": 387.8,
+          "weight": 0.9,
           "minSampleSize": 5,
-          "note": "暫定精度改善版。REGを比較的重めに扱う。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 308.0,
-          "weight": 1.3,
+          "denominatorValue": 370.3,
+          "weight": 0.9,
           "minSampleSize": 5,
-          "note": "暫定精度改善版。REGを比較的重めに扱う。"
+          "note": "公開解析値"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 270.0,
-          "weight": 1.3,
+          "denominatorValue": 362.1,
+          "weight": 0.9,
           "minSampleSize": 5,
-          "note": "暫定精度改善版。REGを比較的重めに扱う。"
+          "note": "公開解析値"
         }
       ]
     },
     {
-      "counterKey": "cz_count",
+      "counterKey": "bonus_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 280.0,
+          "denominatorValue": 196.8,
           "weight": 0.75,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "minSampleSize": 10,
+          "note": "公開解析値"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 264.0,
+          "denominatorValue": 192.2,
           "weight": 0.75,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "minSampleSize": 10,
+          "note": "公開解析値"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 248.0,
+          "denominatorValue": 188.3,
           "weight": 0.75,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "minSampleSize": 10,
+          "note": "公開解析値"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 232.0,
+          "denominatorValue": 184.1,
           "weight": 0.75,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "minSampleSize": 10,
+          "note": "公開解析値"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 216.0,
+          "denominatorValue": 180.0,
           "weight": 0.75,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "minSampleSize": 10,
+          "note": "公開解析値"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 200.0,
+          "denominatorValue": 176.2,
           "weight": 0.75,
-          "minSampleSize": 4,
-          "note": "暫定精度改善版。CZは補助指標として扱う。"
+          "minSampleSize": 10,
+          "note": "公開解析値"
         }
       ]
     },
     {
-      "counterKey": "at_count",
+      "counterKey": "common_bell_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 620.0,
-          "weight": 0.95,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 23.54,
+          "weight": 0.45,
+          "minSampleSize": 50,
+          "note": "公開解析値"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 570.0,
-          "weight": 0.95,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 23.03,
+          "weight": 0.45,
+          "minSampleSize": 50,
+          "note": "公開解析値"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 520.0,
-          "weight": 0.95,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 22.34,
+          "weight": 0.45,
+          "minSampleSize": 50,
+          "note": "公開解析値"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 470.0,
-          "weight": 0.95,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 21.88,
+          "weight": 0.45,
+          "minSampleSize": 50,
+          "note": "公開解析値"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 420.0,
-          "weight": 0.95,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 21.44,
+          "weight": 0.45,
+          "minSampleSize": 50,
+          "note": "公開解析値"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 370.0,
-          "weight": 0.95,
-          "minSampleSize": 3,
-          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
+          "denominatorValue": 21.01,
+          "weight": 0.45,
+          "minSampleSize": 50,
+          "note": "公開解析値"
+        }
+      ]
+    },
+    {
+      "counterKey": "suika_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 107.26,
+          "weight": 0.35,
+          "minSampleSize": 15,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 105.19,
+          "weight": 0.35,
+          "minSampleSize": 15,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 103.53,
+          "weight": 0.35,
+          "minSampleSize": 15,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 101.76,
+          "weight": 0.35,
+          "minSampleSize": 15,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 100.05,
+          "weight": 0.35,
+          "minSampleSize": 15,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 98.25,
+          "weight": 0.35,
+          "minSampleSize": 15,
+          "note": "公開解析値"
         }
       ]
     }

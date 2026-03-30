@@ -2,6 +2,7 @@ package com.example.slotanalyzer.feature.session.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.slotanalyzer.core.util.SettingSpecFormatter
 import com.example.slotanalyzer.domain.model.CeilingType
 import com.example.slotanalyzer.domain.model.CounterCategory
 import com.example.slotanalyzer.domain.usecase.CalculateCeilingStatusUseCase
@@ -60,6 +61,7 @@ data class SessionUiState(
     val machineId: String = "",
     val machineName: String = "",
     val machineTypeText: String = "",
+    val settingStageText: String = "",
     val dmmUrl: String? = null,
     val ichigekiUrl: String? = null,
     val guidanceText: String = "",
@@ -140,6 +142,7 @@ class SessionViewModel @Inject constructor(
             machineId = session.machineId,
             machineName = machine?.name.orEmpty(),
             machineTypeText = machine?.type.orEmpty(),
+            settingStageText = SettingSpecFormatter.formatStageLabel(machine?.settingReferenceValues.orEmpty().map { it.settingNo }),
             dmmUrl = machine?.dmmUrl,
             ichigekiUrl = machine?.ichigekiUrl,
             guidanceText = buildGuidanceText(machine),

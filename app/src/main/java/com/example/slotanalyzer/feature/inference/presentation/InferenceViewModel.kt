@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.slotanalyzer.core.ui.model.CeilingStatusUiModel
 import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 import com.example.slotanalyzer.core.util.RateFormatter
+import com.example.slotanalyzer.core.util.SettingSpecFormatter
 import com.example.slotanalyzer.domain.model.CounterCategory
 import com.example.slotanalyzer.domain.usecase.CalculateCeilingStatusUseCase
 import com.example.slotanalyzer.feature.inference.domain.model.InferenceResult
@@ -65,6 +66,7 @@ class InferenceViewModel @Inject constructor(
                 sessionId = sessionId,
                 machineName = machine?.name ?: session.machineNameSnapshot,
                 machineTypeText = machine?.type.orEmpty(),
+                settingStageText = SettingSpecFormatter.formatStageLabel(result.settingScores.map { it.setting }),
                 probabilityModeText = "ベイズ尤度ベース推測（${formatSettingSpec(result.settingScores)}）",
                 candidateSummaryText = buildCandidateSummary(result.settingScores),
                 inputItems = buildInputItems(machine, session),
@@ -360,12 +362,7 @@ class InferenceViewModel @Inject constructor(
 
 
     private fun formatSettingSpec(settingScores: List<SettingScore>): String {
-        val settings = settingScores.map { it.setting }.distinct().sorted()
-        return when {
-            settings == listOf(1, 2, 3, 4, 5, 6) -> "設定1〜6"
-            settings.isEmpty() -> "設定1〜6"
-            else -> "設定" + settings.joinToString("・")
-        }
+        return SettingSpecFormatter.formatSummaryLabel(settingScores.map { it.setting })
     }
 
     private fun buildCandidateSummary(settingScores: List<SettingScore>): String {

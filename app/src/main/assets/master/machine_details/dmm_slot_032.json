@@ -1,14 +1,14 @@
 {
   "machineId": "dmm_slot_032",
   "machineName": "Sちゅらちゅら",
-  "status": "draft",
-  "capturedDate": "2026-03-29",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
   "sourceListPage": 2,
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "unresolved_direct_url"
+      "url": "https://p-town.dmm.com/machines/4486",
+      "status": "verified_direct_url"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",

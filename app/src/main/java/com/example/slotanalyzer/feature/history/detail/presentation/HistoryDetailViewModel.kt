@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 import com.example.slotanalyzer.core.util.RateFormatter
+import com.example.slotanalyzer.core.util.SettingSpecFormatter
 import com.example.slotanalyzer.domain.model.CounterCategory
 import com.example.slotanalyzer.feature.inference.domain.model.SettingScore
 import com.example.slotanalyzer.feature.inference.domain.usecase.CalculateInferenceUseCase
@@ -62,6 +63,7 @@ class HistoryDetailViewModel @Inject constructor(
                 HistoryDetailUiState(
                     machineName = machine?.name ?: session.machineNameSnapshot,
                     machineTypeText = machine?.type.orEmpty(),
+                    settingStageText = SettingSpecFormatter.formatStageLabel(result.settingScores.map { it.setting }),
                     playedAtText = formatDate(session.endedAt ?: session.updatedAt),
                     statusText = resolveStatusText(session),
                     inputItems = buildInputItems(machine, session),

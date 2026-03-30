@@ -141,6 +141,14 @@ fun SessionInputScreen(
                         )
                     }
 
+                    if (state.settingStageText.isNotBlank()) {
+                        AssistChip(
+                            onClick = {},
+                            enabled = false,
+                            label = { Text(state.settingStageText) }
+                        )
+                    }
+
                     Text(
                         text = if (state.guidanceText.isBlank()) {
                             "タブを切り替えて、実戦データ入力と天井確認を行えます。"

@@ -17,6 +17,7 @@ data class HistoryDetailReasonUiModel(
 data class HistoryDetailUiState(
     val machineName: String = "",
     val machineTypeText: String = "",
+    val settingStageText: String = "",
     val playedAtText: String = "",
     val statusText: String = "",
     val inputItems: List<HistoryDetailInputItemUiModel> = emptyList(),

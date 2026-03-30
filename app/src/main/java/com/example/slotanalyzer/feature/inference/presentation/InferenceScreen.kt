@@ -91,6 +91,14 @@ fun InferenceScreen(
                     )
                 }
 
+                if (state.settingStageText.isNotBlank()) {
+                    AssistChip(
+                        onClick = {},
+                        enabled = false,
+                        label = { Text(state.settingStageText) }
+                    )
+                }
+
                 if (state.probabilityModeText.isNotBlank()) {
                     AssistChip(
                         onClick = {},
