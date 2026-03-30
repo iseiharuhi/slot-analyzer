@@ -6,9 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-01-01",
     "isActive": true,
-    "notes": "初期登録用の参考データ。直撃とAT初当たりを重視。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4676",
-    "ichigekiUrl": "https://1geki.jp/slot/l_monhunrise/"
+    "notes": "初期登録用の参考データ。CZ・AT初当たり・弱チェリーを重視。"
   },
   "counterDefinitions": [
     {
@@ -70,6 +68,18 @@
       "isDefaultVisible": true,
       "supportsMinus": true,
       "notes": null
+    },
+    {
+      "key": "weak_cherry_count",
+      "displayName": "弱チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 40,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "設定差ありの小役"
     }
   ],
   "settingReferenceValues": [
@@ -234,6 +244,47 @@
           "denominatorValue": 720.0,
           "weight": 1.4,
           "minSampleSize": 1
+        }
+      ]
+    },
+    {
+      "counterKey": "weak_cherry_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 120.0,
+          "weight": 0.6,
+          "minSampleSize": 300
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 115.0,
+          "weight": 0.6,
+          "minSampleSize": 300
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 110.0,
+          "weight": 0.6,
+          "minSampleSize": 300
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 105.0,
+          "weight": 0.6,
+          "minSampleSize": 300
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 100.0,
+          "weight": 0.6,
+          "minSampleSize": 300
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 95.0,
+          "weight": 0.6,
+          "minSampleSize": 300
         }
       ]
     }

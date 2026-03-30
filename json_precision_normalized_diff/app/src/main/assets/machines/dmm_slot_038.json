@@ -1,0 +1,125 @@
+{
+  "machine": {
+    "id": "dmm_slot_038",
+    "name": "パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART",
+    "manufacturer": null,
+    "type": "ART",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "ART初当りを主軸に再整理した推測データ。低頻度項目は主判別から除外。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4419",
+    "ichigekiUrl": "https://1geki.jp/slot/s_eurekahievo_art/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "補助メモ用。主判別から除外。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "ART",
+      "category": "AT_CZ",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ART初当り回数。主判別項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 760.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 690.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 620.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 550.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 490.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 430.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

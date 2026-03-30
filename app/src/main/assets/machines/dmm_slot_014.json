@@ -2,13 +2,13 @@
   "machine": {
     "id": "dmm_slot_014",
     "name": "Lアクダマドライブ",
-    "manufacturer": null,
+    "manufacturer": "SanThree",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2026-04-06",
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。AT/CZ系の暫定推測ロジックを設定。",
+    "notes": "公開済みのCZ・ボーナス初当たり・AT初当たり確率で暫定差分を置換した更新版。未確認の直撃差は撤去し、AT初当たりを主判別、CZとボーナス初当たりを補助判別として扱う。",
     "dmmUrl": "https://p-town.dmm.com/machines/4956",
-    "ichigekiUrl": "https://1geki.jp/slot/syllabary/1/"
+    "ichigekiUrl": null
   },
   "counterDefinitions": [
     {
@@ -78,80 +78,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 265.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 166.1,
+          "weight": 0.6,
+          "minSampleSize": 8,
+          "note": "公開済みCZ突入率。補助指標。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 252.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 165.3,
+          "weight": 0.6,
+          "minSampleSize": 8,
+          "note": "公開済みCZ突入率。補助指標。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 240.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 163.8,
+          "weight": 0.6,
+          "minSampleSize": 8,
+          "note": "公開済みCZ突入率。補助指標。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 226.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 159.3,
+          "weight": 0.6,
+          "minSampleSize": 8,
+          "note": "公開済みCZ突入率。補助指標。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 214.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 154.8,
+          "weight": 0.6,
+          "minSampleSize": 8,
+          "note": "公開済みCZ突入率。補助指標。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 202.0,
-          "weight": 0.9,
-          "minSampleSize": 3
-        }
-      ]
-    },
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 530.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 500.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 466.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 428.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 388.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 346.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 152.1,
+          "weight": 0.6,
+          "minSampleSize": 8,
+          "note": "公開済みCZ突入率。補助指標。"
         }
       ]
     },
@@ -160,80 +125,92 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 345.0,
+          "denominatorValue": 321.2,
           "weight": 0.7,
-          "minSampleSize": 3
+          "minSampleSize": 5,
+          "note": "公開済みボーナス初当たり確率。補助指標。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 326.0,
+          "denominatorValue": 319.3,
           "weight": 0.7,
-          "minSampleSize": 3
+          "minSampleSize": 5,
+          "note": "公開済みボーナス初当たり確率。補助指標。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 308.0,
+          "denominatorValue": 315.8,
           "weight": 0.7,
-          "minSampleSize": 3
+          "minSampleSize": 5,
+          "note": "公開済みボーナス初当たり確率。補助指標。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 288.0,
+          "denominatorValue": 307.0,
           "weight": 0.7,
-          "minSampleSize": 3
+          "minSampleSize": 5,
+          "note": "公開済みボーナス初当たり確率。補助指標。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 268.0,
+          "denominatorValue": 296.9,
           "weight": 0.7,
-          "minSampleSize": 3
+          "minSampleSize": 5,
+          "note": "公開済みボーナス初当たり確率。補助指標。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 248.0,
+          "denominatorValue": 291.1,
           "weight": 0.7,
-          "minSampleSize": 3
+          "minSampleSize": 5,
+          "note": "公開済みボーナス初当たり確率。補助指標。"
         }
       ]
     },
     {
-      "counterKey": "direct_hit_count",
+      "counterKey": "at_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 9999.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 555.5,
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別軸。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 7000.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 550.7,
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別軸。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 5200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 543.6,
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別軸。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 3200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 517.8,
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別軸。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 2200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 487.7,
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別軸。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 1600.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 472.0,
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別軸。"
         }
       ]
     }

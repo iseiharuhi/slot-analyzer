@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-07-04",
     "isActive": true,
-    "notes": "初期登録用の参考データ。CZ初当たりとAT突入を重視。",
+    "notes": "公開解析ベースへ更新。初当りボーナス/ST合算に加え、共通6枚ベルの小役設定差を重視する。CZ・直撃系は補助扱い。",
     "dmmUrl": "https://p-town.dmm.com/machines/4160",
     "ichigekiUrl": "https://1geki.jp/slot/s_kabaneri/"
   },
@@ -24,20 +24,20 @@
       "notes": "全計算の分母"
     },
     {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
+      "key": "bonus_count",
+      "displayName": "初当りボーナス",
+      "category": "BONUS",
       "sortOrder": 10,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "エピソードボーナス＋駿城ボーナスの初当り合算"
     },
     {
       "key": "at_count",
-      "displayName": "AT",
+      "displayName": "ST",
       "category": "AT_CZ",
       "sortOrder": 11,
       "unit": "回",
@@ -45,72 +45,90 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "ST合算。初当り・引き戻しを問わず総回数で入力"
     },
     {
-      "key": "bonus_count",
-      "displayName": "ボーナス",
-      "category": "BONUS",
+      "key": "common_bell_count",
+      "displayName": "共通6枚ベル",
+      "category": "SMALL_ROLE",
       "sortOrder": 20,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "平行ベルをカウント。全状態不問で有効な主要判別要素。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "公開の全設定比較値を精査中のため今回は補助入力のみ。"
     },
     {
       "key": "direct_hit_count",
       "displayName": "直撃AT",
       "category": "SPECIAL",
-      "sortOrder": 30,
+      "sortOrder": 31,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": null
+      "notes": "美馬ST直行などの特殊契機メモ用。現段階では推測に未使用。"
     }
   ],
   "settingReferenceValues": [
     {
-      "counterKey": "cz_count",
+      "counterKey": "bonus_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 260.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 237.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当りボーナス合算"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 248.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 230.7,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当りボーナス合算"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 236.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 214.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当りボーナス合算"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 224.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 186.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当りボーナス合算"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 210.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 171.3,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当りボーナス合算"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 198.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 151.3,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当りボーナス合算"
         }
       ]
     },
@@ -119,121 +137,92 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 500.0,
+          "denominatorValue": 407.9,
           "weight": 1.2,
-          "minSampleSize": 2
+          "minSampleSize": 3,
+          "note": "ST合算確率"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 470.0,
+          "denominatorValue": 393.2,
           "weight": 1.2,
-          "minSampleSize": 2
+          "minSampleSize": 3,
+          "note": "ST合算確率"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 440.0,
+          "denominatorValue": 372.4,
           "weight": 1.2,
-          "minSampleSize": 2
+          "minSampleSize": 3,
+          "note": "ST合算確率"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 405.0,
+          "denominatorValue": 327.2,
           "weight": 1.2,
-          "minSampleSize": 2
+          "minSampleSize": 3,
+          "note": "ST合算確率"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 370.0,
+          "denominatorValue": 307.3,
           "weight": 1.2,
-          "minSampleSize": 2
+          "minSampleSize": 3,
+          "note": "ST合算確率"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 338.0,
+          "denominatorValue": 290.6,
           "weight": 1.2,
-          "minSampleSize": 2
+          "minSampleSize": 3,
+          "note": "ST合算確率"
         }
       ]
     },
     {
-      "counterKey": "bonus_count",
+      "counterKey": "common_bell_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 310.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "denominatorValue": 26.6,
+          "weight": 1.6,
+          "minSampleSize": 80,
+          "note": "共通6枚ベル出現率"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 295.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "denominatorValue": 26.6,
+          "weight": 1.6,
+          "minSampleSize": 80,
+          "note": "共通6枚ベル出現率"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 282.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "denominatorValue": 25.9,
+          "weight": 1.6,
+          "minSampleSize": 80,
+          "note": "共通6枚ベル出現率"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 268.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "denominatorValue": 25.4,
+          "weight": 1.6,
+          "minSampleSize": 80,
+          "note": "共通6枚ベル出現率"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 252.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "denominatorValue": 24.9,
+          "weight": 1.6,
+          "minSampleSize": 80,
+          "note": "共通6枚ベル出現率"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 236.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        }
-      ]
-    },
-    {
-      "counterKey": "direct_hit_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 2200.0,
-          "weight": 1.3,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 1800.0,
-          "weight": 1.3,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 1500.0,
-          "weight": 1.3,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 1200.0,
-          "weight": 1.3,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 950.0,
-          "weight": 1.3,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 760.0,
-          "weight": 1.3,
-          "minSampleSize": 1
+          "denominatorValue": 24.2,
+          "weight": 1.6,
+          "minSampleSize": 80,
+          "note": "共通6枚ベル出現率"
         }
       ]
     }

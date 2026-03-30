@@ -65,7 +65,7 @@ class InferenceViewModel @Inject constructor(
                 sessionId = sessionId,
                 machineName = machine?.name ?: session.machineNameSnapshot,
                 machineTypeText = machine?.type.orEmpty(),
-                probabilityModeText = "確率ベース推測（設定1〜6）",
+                probabilityModeText = "ベイズ尤度ベース推測（設定1〜6）",
                 candidateSummaryText = buildCandidateSummary(result.settingScores),
                 inputItems = buildInputItems(machine, session),
                 currentGameCount = currentGameCount,

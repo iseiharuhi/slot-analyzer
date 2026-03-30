@@ -1,0 +1,195 @@
+{
+  "machine": {
+    "id": "monster_hunter_rise",
+    "name": "スマスロ モンスターハンターライズ",
+    "manufacturer": "Enterrise",
+    "type": "AT",
+    "releaseDate": "2024-01-01",
+    "isActive": true,
+    "notes": "公開スペック不足機を含むため、AT初当り/CZ初当りを主軸に再整理した推測データ。低頻度の直撃・ボーナスは過信を避けるため主判別から除外。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4676",
+    "ichigekiUrl": "https://1geki.jp/slot/l_monhunrise/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のCZ初当り。AT機では補助判別用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。AT機の主判別項目。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "主判別からは除外。演出確認用メモ。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃AT",
+      "category": "SPECIAL",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "低頻度のため主判別からは除外。メモ用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 255.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 245.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 235.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 223.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 212.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 200.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 510.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 480.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 450.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 415.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 385.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（公開スペック中心）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 350.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（公開スペック中心）"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時999G消化で赤7ボーナス以上。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "quest_count_ceiling",
+      "displayName": "AT間クエスト天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間7回目のクエスト到達で天井。恩恵は赤7ボーナス以上。",
+      "isEnabled": true
+    }
+  ]
+}

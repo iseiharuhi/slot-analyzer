@@ -1,14 +1,14 @@
 {
   "machineId": "dmm_slot_014",
   "machineName": "Lアクダマドライブ",
-  "status": "draft",
+  "status": "partial",
   "capturedDate": "2026-03-29",
   "sourceListPage": 1,
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "unresolved_direct_url"
+      "url": "https://p-town.dmm.com/machines/4956",
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",
@@ -20,5 +20,6 @@
       "url": null,
       "status": "not_resolved_in_this_run"
     }
-  ]
+  ],
+  "notes": "公開済みのCZ・ボーナス初当たり・AT初当たり確率を反映。AT主軸、CZ/ボーナス補助で再構成。直撃差は未確認のため保留。"
 }

@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。A/BT系向けの暫定推測ロジックを設定。",
+    "notes": "DMM現行機種一覧から追加した初期投入データを、推測精度改善用に重み・最小サンプル数を再調整した暫定版。A/BT系はREG重視、合算ボーナスは補助扱いへ調整。",
     "dmmUrl": "https://p-town.dmm.com/machines/4449",
     "ichigekiUrl": "https://1geki.jp/slot/s_crankycrest/"
   },
@@ -67,38 +67,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 297.9,
-          "weight": 0.8,
-          "minSampleSize": 5
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 292.6,
-          "weight": 0.8,
-          "minSampleSize": 5
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 285.0,
-          "weight": 0.8,
-          "minSampleSize": 5
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 273.1,
-          "weight": 0.8,
-          "minSampleSize": 5
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 265.3,
-          "weight": 0.8,
-          "minSampleSize": 5
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 255.0,
-          "weight": 0.8,
-          "minSampleSize": 5
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         }
       ]
     },
@@ -108,38 +114,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 431.2,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "weight": 1.45,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを主指標として重めに扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 399.6,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "weight": 1.45,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを主指標として重めに扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 356.2,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "weight": 1.45,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを主指標として重めに扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 321.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "weight": 1.45,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを主指標として重めに扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 287.4,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "weight": 1.45,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを主指標として重めに扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 255.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "weight": 1.45,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを主指標として重めに扱う。"
         }
       ]
     },
@@ -149,38 +161,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 174.3,
-          "weight": 0.6,
-          "minSampleSize": 6
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "暫定精度改善版。合算ボーナスはダブルカウント抑制のため軽め。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 169.8,
-          "weight": 0.6,
-          "minSampleSize": 6
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "暫定精度改善版。合算ボーナスはダブルカウント抑制のため軽め。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 160.0,
-          "weight": 0.6,
-          "minSampleSize": 6
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "暫定精度改善版。合算ボーナスはダブルカウント抑制のため軽め。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 148.0,
-          "weight": 0.6,
-          "minSampleSize": 6
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "暫定精度改善版。合算ボーナスはダブルカウント抑制のため軽め。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 139.0,
-          "weight": 0.6,
-          "minSampleSize": 6
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "暫定精度改善版。合算ボーナスはダブルカウント抑制のため軽め。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 129.0,
-          "weight": 0.6,
-          "minSampleSize": 6
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "暫定精度改善版。合算ボーナスはダブルカウント抑制のため軽め。"
         }
       ]
     }

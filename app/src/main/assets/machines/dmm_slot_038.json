@@ -6,7 +6,7 @@
     "type": "ART",
     "releaseDate": null,
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。ART機向けの暫定推測ロジックを設定。",
+    "notes": "DMM現行機種一覧から追加した初期投入データを、推測精度改善用に重み・最小サンプル数を再調整した暫定版。ART初当たりとREGを軸に、BIG/CZの影響を抑えた。",
     "dmmUrl": "https://p-town.dmm.com/machines/4419",
     "ichigekiUrl": "https://1geki.jp/slot/s_eurekahievo_art/"
   },
@@ -80,37 +80,43 @@
           "settingNo": 1,
           "denominatorValue": 340.0,
           "weight": 0.6,
-          "minSampleSize": 4
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助指標として扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 326.0,
           "weight": 0.6,
-          "minSampleSize": 4
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助指標として扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 312.0,
           "weight": 0.6,
-          "minSampleSize": 4
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助指標として扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 296.0,
           "weight": 0.6,
-          "minSampleSize": 4
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助指標として扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 280.0,
           "weight": 0.6,
-          "minSampleSize": 4
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助指標として扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 264.0,
           "weight": 0.6,
-          "minSampleSize": 4
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助指標として扱う。"
         }
       ]
     },
@@ -120,38 +126,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 520.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGは中核指標の一つとして扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 480.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGは中核指標の一つとして扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 440.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGは中核指標の一つとして扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 398.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGは中核指標の一つとして扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 356.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGは中核指標の一つとして扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 320.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGは中核指標の一つとして扱う。"
         }
       ]
     },
@@ -161,38 +173,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 310.0,
-          "weight": 0.8,
-          "minSampleSize": 2
+          "weight": 0.85,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 292.0,
-          "weight": 0.8,
-          "minSampleSize": 2
+          "weight": 0.85,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 274.0,
-          "weight": 0.8,
-          "minSampleSize": 2
+          "weight": 0.85,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 254.0,
-          "weight": 0.8,
-          "minSampleSize": 2
+          "weight": 0.85,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 236.0,
-          "weight": 0.8,
-          "minSampleSize": 2
+          "weight": 0.85,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 218.0,
-          "weight": 0.8,
-          "minSampleSize": 2
+          "weight": 0.85,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         }
       ]
     },
@@ -202,38 +220,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 760.0,
-          "weight": 1.1,
-          "minSampleSize": 1
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。ART/AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 690.0,
-          "weight": 1.1,
-          "minSampleSize": 1
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。ART/AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 620.0,
-          "weight": 1.1,
-          "minSampleSize": 1
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。ART/AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 550.0,
-          "weight": 1.1,
-          "minSampleSize": 1
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。ART/AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 490.0,
-          "weight": 1.1,
-          "minSampleSize": 1
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。ART/AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 430.0,
-          "weight": 1.1,
-          "minSampleSize": 1
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。ART/AT初当たりを主指標として扱う。"
         }
       ]
     }

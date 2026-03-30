@@ -2,13 +2,13 @@
   "machine": {
     "id": "dmm_slot_010",
     "name": "LBトリプルクラウンセブン",
-    "manufacturer": null,
+    "manufacturer": "岡崎産業",
     "type": "BONUS",
-    "releaseDate": null,
+    "releaseDate": "2026-04-06",
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。A/BT系向けの暫定推測ロジックを設定。",
+    "notes": "公開済みのリンク・導入日を反映。ボーナス確率は4段階設定（1・2・5・6）ベースで公開されているが、現行アプリは6段階固定推測のため無理な補間は行わず反映保留。カウンタ定義のみ先行整備。",
     "dmmUrl": "https://p-town.dmm.com/machines/4986",
-    "ichigekiUrl": "https://1geki.jp/slot/lb_triplecrown/"
+    "ichigekiUrl": null
   },
   "counterDefinitions": [
     {
@@ -60,130 +60,6 @@
       "notes": "任意入力。BIG+REGの合算管理用"
     }
   ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "big_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 297.9,
-          "weight": 0.8,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 292.6,
-          "weight": 0.8,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 285.0,
-          "weight": 0.8,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 273.1,
-          "weight": 0.8,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 265.3,
-          "weight": 0.8,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 255.0,
-          "weight": 0.8,
-          "minSampleSize": 5
-        }
-      ]
-    },
-    {
-      "counterKey": "reg_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 431.2,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 399.6,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 356.2,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 321.0,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 287.4,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 255.0,
-          "weight": 1.2,
-          "minSampleSize": 4
-        }
-      ]
-    },
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 174.3,
-          "weight": 0.6,
-          "minSampleSize": 6
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 169.8,
-          "weight": 0.6,
-          "minSampleSize": 6
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 160.0,
-          "weight": 0.6,
-          "minSampleSize": 6
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 148.0,
-          "weight": 0.6,
-          "minSampleSize": 6
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 139.0,
-          "weight": 0.6,
-          "minSampleSize": 6
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 129.0,
-          "weight": 0.6,
-          "minSampleSize": 6
-        }
-      ]
-    }
-  ],
+  "settingReferenceValues": [],
   "ceilingRules": []
 }

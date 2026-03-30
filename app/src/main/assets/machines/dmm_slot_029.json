@@ -6,7 +6,7 @@
     "type": "HYBRID",
     "releaseDate": null,
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。ボーナス+CZ/ATのハイブリッド暫定推測ロジックを設定。",
+    "notes": "DMM現行機種一覧から追加した初期投入データを、推測精度改善用に重み・最小サンプル数を再調整した暫定版。ボーナス偏重を抑え、REGとAT初当たりのバランスを取り直した。",
     "dmmUrl": "https://p-town.dmm.com/machines/4423",
     "ichigekiUrl": "https://1geki.jp/slot/l_magicalhalloween8/"
   },
@@ -79,38 +79,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 330.0,
-          "weight": 0.7,
-          "minSampleSize": 4
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 318.0,
-          "weight": 0.7,
-          "minSampleSize": 4
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 306.0,
-          "weight": 0.7,
-          "minSampleSize": 4
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 290.0,
-          "weight": 0.7,
-          "minSampleSize": 4
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 274.0,
-          "weight": 0.7,
-          "minSampleSize": 4
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 258.0,
-          "weight": 0.7,
-          "minSampleSize": 4
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "暫定精度改善版。BIGは補助寄りの指標。"
         }
       ]
     },
@@ -120,38 +126,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 470.0,
-          "weight": 1.0,
-          "minSampleSize": 3
+          "weight": 1.3,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを比較的重めに扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 430.0,
-          "weight": 1.0,
-          "minSampleSize": 3
+          "weight": 1.3,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを比較的重めに扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 390.0,
-          "weight": 1.0,
-          "minSampleSize": 3
+          "weight": 1.3,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを比較的重めに扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 348.0,
-          "weight": 1.0,
-          "minSampleSize": 3
+          "weight": 1.3,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを比較的重めに扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 308.0,
-          "weight": 1.0,
-          "minSampleSize": 3
+          "weight": 1.3,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを比較的重めに扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 270.0,
-          "weight": 1.0,
-          "minSampleSize": 3
+          "weight": 1.3,
+          "minSampleSize": 5,
+          "note": "暫定精度改善版。REGを比較的重めに扱う。"
         }
       ]
     },
@@ -161,38 +173,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 280.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 0.75,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 264.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 0.75,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 248.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 0.75,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 232.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 0.75,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 216.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 0.75,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 200.0,
-          "weight": 0.8,
-          "minSampleSize": 3
+          "weight": 0.75,
+          "minSampleSize": 4,
+          "note": "暫定精度改善版。CZは補助指標として扱う。"
         }
       ]
     },
@@ -202,38 +220,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 620.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 570.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 520.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 470.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 420.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 370.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "暫定精度改善版。AT初当たりを主指標として扱う。"
         }
       ]
     }

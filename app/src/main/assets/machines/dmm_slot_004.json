@@ -2,11 +2,11 @@
   "machine": {
     "id": "dmm_slot_004",
     "name": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
-    "manufacturer": null,
+    "manufacturer": "Sammy",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2026-05-11",
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。AT/CZ系の暫定推測ロジックを設定。",
+    "notes": "公開解析ベースへ更新。CZ「ジャッジメント」とAT「ゴールデンボーナス」の確率差のみ採用し、根拠の薄いボーナス/直撃暫定値を除外。",
     "dmmUrl": "https://p-town.dmm.com/machines/4981",
     "ichigekiUrl": "https://1geki.jp/slot/syllabary/6/"
   },
@@ -25,7 +25,7 @@
     },
     {
       "key": "cz_count",
-      "displayName": "CZ",
+      "displayName": "CZ(ジャッジメント)",
       "category": "AT_CZ",
       "sortOrder": 10,
       "unit": "回",
@@ -33,11 +33,11 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "公開値あり。ATより差は小さいため補助指標。"
     },
     {
       "key": "at_count",
-      "displayName": "AT",
+      "displayName": "AT初当たり",
       "category": "AT_CZ",
       "sortOrder": 11,
       "unit": "回",
@@ -45,31 +45,31 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "AT「ゴールデンボーナス」初当たり回数。主判別要素。"
     },
     {
       "key": "bonus_count",
-      "displayName": "ボーナス",
+      "displayName": "DREAM JP BONUS",
       "category": "BONUS",
       "sortOrder": 20,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": null
+      "notes": "プレミアム契機は出現率が重く、全設定比較値も不足しているため推測に未使用。"
     },
     {
       "key": "direct_hit_count",
-      "displayName": "直撃AT",
+      "displayName": "直撃/特殊契機",
       "category": "SPECIAL",
       "sortOrder": 30,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "AT直撃や上位契機の補助入力"
+      "notes": "公開比較値未確認のため推測には未使用。"
     }
   ],
   "settingReferenceValues": [
@@ -78,39 +78,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 265.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 337.7,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 252.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 333.3,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 240.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 326.6,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 226.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 316.4,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 214.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 311.4,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 202.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 303.4,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
         }
       ]
     },
@@ -119,121 +125,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 530.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 629.3,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 500.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 615.3,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 466.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 599.1,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 428.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 562.6,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 388.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 551.1,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 346.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        }
-      ]
-    },
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 345.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 326.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 308.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 288.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 268.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 248.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        }
-      ]
-    },
-    {
-      "counterKey": "direct_hit_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 9999.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 7000.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 5200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 3200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 2200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 1600.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 536.2,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
         }
       ]
     }

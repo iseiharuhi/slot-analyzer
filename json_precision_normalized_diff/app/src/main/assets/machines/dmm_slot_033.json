@@ -1,0 +1,219 @@
+{
+  "machine": {
+    "id": "dmm_slot_033",
+    "name": "L ひぐらしのなく頃に 業",
+    "manufacturer": null,
+    "type": "HYBRID",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "ボーナス比率とAT初当りを主軸に再整理した推測データ。CZは二重計上を避けるため主判別から除外。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4447",
+    "ichigekiUrl": "https://1geki.jp/slot/l_higurashi_gou/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG初当り。補助～中核判別。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REG/異色ボーナス。高設定側を見抜く主判別項目。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "主判別から除外。メモ用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT/ART初当り。主判別項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 330.0,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 318.0,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 306.0,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 290.0,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 274.0,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 258.0,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 470.0,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 430.0,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 390.0,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 348.0,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 308.0,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 270.0,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 620.0,
+          "weight": 1.1,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 570.0,
+          "weight": 1.1,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 520.0,
+          "weight": 1.1,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 470.0,
+          "weight": 1.1,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 420.0,
+          "weight": 1.1,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 370.0,
+          "weight": 1.1,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

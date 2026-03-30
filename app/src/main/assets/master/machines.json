@@ -88,16 +88,16 @@
       "machineId": "dmm_slot_011",
       "machineName": "スマスロヨルムンガンド",
       "fileName": "dmm_slot_011.json",
-      "status": "draft",
-      "checksumSha256": "b8d12631c2faed351a0fc9f2dd2310379e205d780a27b719a095be4a2b723605",
+      "status": "partial",
+      "checksumSha256": "93cdb08cb5c89644a534afb83e462a4a0e32f60e877286f41a0fcf2f59484ccc",
       "sourceListPage": 1
     },
     {
       "machineId": "dmm_slot_012",
       "machineName": "L虚構推理",
       "fileName": "dmm_slot_012.json",
-      "status": "draft",
-      "checksumSha256": "6a657521186a8996c6ed47c777a3ed8fafe41656648c178c162865f4b839d704",
+      "status": "partial",
+      "checksumSha256": "324ad5525fda7ba879fa61630147200349bb95d2bfae838c187db55141f84efd",
       "sourceListPage": 1
     },
     {
@@ -105,15 +105,15 @@
       "machineName": "A-SLOT+ 異世界かるてっと BT",
       "fileName": "dmm_slot_013.json",
       "status": "draft",
-      "checksumSha256": "59b30ad4a4f58487d1ee2bd2f0db033806127eb9accc92a92fed2f9bdb7bd177",
+      "checksumSha256": "74dac8de0fe8d7d981a3c7d2e5acfb371aa950828ded11974ba772d86d567ffd",
       "sourceListPage": 1
     },
     {
       "machineId": "dmm_slot_014",
       "machineName": "Lアクダマドライブ",
       "fileName": "dmm_slot_014.json",
-      "status": "draft",
-      "checksumSha256": "909aeb23f19662d8c2a90e08bbb83383eb9c611569053835de4eb85b37667e6d",
+      "status": "partial",
+      "checksumSha256": "568cdf242876cb04dbee7b527bde7608247bcf59a905e47a5d30dca0113b950d",
       "sourceListPage": 1
     },
     {
@@ -121,7 +121,7 @@
       "machineName": "スマスロ サンダーV",
       "fileName": "dmm_slot_015.json",
       "status": "draft",
-      "checksumSha256": "a561fa73c142e4dad6d6300daebaf05dc7dc2c73b86b23915bc5b2b690451cb9",
+      "checksumSha256": "57c1891bb4f889dbf3af1237e468d85974865d3dbb1d45bac769bf00fce35dca",
       "sourceListPage": 1
     },
     {

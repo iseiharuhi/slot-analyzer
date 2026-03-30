@@ -2,11 +2,11 @@
   "machine": {
     "id": "dmm_slot_001",
     "name": "スマスロ BIRDIE WING -Golf Girls' Story-",
-    "manufacturer": null,
+    "manufacturer": "UNIVERSAL BROS.",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2026-06-08",
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。AT/CZ系の暫定推測ロジックを設定。",
+    "notes": "公開解析ベースへ更新。通常時初当たりとST初当たりのみを主判別に採用し、未確定のCZ/直撃差は推測対象から除外。暫定値を撤去した精度優先版。",
     "dmmUrl": "https://p-town.dmm.com/machines/4996",
     "ichigekiUrl": "https://1geki.jp/slot/l_birdie/"
   },
@@ -24,20 +24,20 @@
       "notes": "全計算の分母"
     },
     {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
+      "key": "bonus_count",
+      "displayName": "通常時初当たり",
+      "category": "BONUS",
       "sortOrder": 10,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "通常時のボーナス初当たり合算。公開値ありの主判別要素。"
     },
     {
       "key": "at_count",
-      "displayName": "AT",
+      "displayName": "ST初当たり",
       "category": "AT_CZ",
       "sortOrder": 11,
       "unit": "回",
@@ -45,72 +45,78 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "ST「ジャパンユニバーサルカップ」初当たり回数。最重要判別要素。"
     },
     {
-      "key": "bonus_count",
-      "displayName": "ボーナス",
-      "category": "BONUS",
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
       "sortOrder": 20,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": null
+      "notes": "CZ「バーディーチャレンジ」回数。設定差の公開数値未確認のため補助記録のみ。"
     },
     {
       "key": "direct_hit_count",
-      "displayName": "直撃AT",
+      "displayName": "直撃/特殊契機",
       "category": "SPECIAL",
       "sortOrder": 30,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "AT直撃や上位契機の補助入力"
+      "notes": "公開比較値未確認のため推測には未使用。"
     }
   ],
   "settingReferenceValues": [
     {
-      "counterKey": "cz_count",
+      "counterKey": "bonus_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 265.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 266.7,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "通常時初当たり確率。差は小さいため補助以上・主判別未満で扱う。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 252.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 264.1,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "通常時初当たり確率。差は小さいため補助以上・主判別未満で扱う。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 240.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 257.3,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "通常時初当たり確率。差は小さいため補助以上・主判別未満で扱う。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 226.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 256.0,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "通常時初当たり確率。差は小さいため補助以上・主判別未満で扱う。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 214.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 255.9,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "通常時初当たり確率。差は小さいため補助以上・主判別未満で扱う。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 202.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 255.9,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "通常時初当たり確率。差は小さいため補助以上・主判別未満で扱う。"
         }
       ]
     },
@@ -119,121 +125,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 530.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 421.2,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "ST初当たり確率。設定差が最も大きく、この機種の主判別要素。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 500.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 410.5,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "ST初当たり確率。設定差が最も大きく、この機種の主判別要素。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 466.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 381.9,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "ST初当たり確率。設定差が最も大きく、この機種の主判別要素。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 428.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 378.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "ST初当たり確率。設定差が最も大きく、この機種の主判別要素。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 388.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 377.6,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "ST初当たり確率。設定差が最も大きく、この機種の主判別要素。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 346.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        }
-      ]
-    },
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 345.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 326.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 308.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 288.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 268.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 248.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        }
-      ]
-    },
-    {
-      "counterKey": "direct_hit_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 9999.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 7000.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 5200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 3200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 2200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 1600.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 377.3,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "ST初当たり確率。設定差が最も大きく、この機種の主判別要素。"
         }
       ]
     }

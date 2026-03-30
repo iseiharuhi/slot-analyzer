@@ -1,0 +1,160 @@
+{
+  "machine": {
+    "id": "dmm_slot_008",
+    "name": "アニマルスロット ドッチ",
+    "manufacturer": null,
+    "type": "BONUS",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "BIG/REGの分離データを優先する推測データ。合算は二重計上を避けるため主判別から除外。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4964",
+    "ichigekiUrl": "https://1geki.jp/slot/syllabary/1/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG確率。補助判別項目。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REG確率。主判別項目。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "合算はBIG/REGとの二重計上を避けるため主判別から除外。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 297.9,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 292.6,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 285.0,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 273.1,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 265.3,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.0,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "BIG確率ベースで判別（テンプレ精度補正版）"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 431.2,
+          "weight": 1.3,
+          "minSampleSize": 4,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 399.6,
+          "weight": 1.3,
+          "minSampleSize": 4,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 356.2,
+          "weight": 1.3,
+          "minSampleSize": 4,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 321.0,
+          "weight": 1.3,
+          "minSampleSize": 4,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 287.4,
+          "weight": 1.3,
+          "minSampleSize": 4,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.0,
+          "weight": 1.3,
+          "minSampleSize": 4,
+          "note": "REG確率ベースで判別（テンプレ精度補正版）"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

@@ -7,8 +7,8 @@
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "unresolved_direct_url"
+      "url": "https://p-town.dmm.com/machines/4943",
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",
@@ -17,8 +17,9 @@
     },
     {
       "label": "一撃",
-      "url": null,
-      "status": "not_resolved_in_this_run"
+      "url": "https://1geki.jp/slot/l_thunder_v/",
+      "status": "verified_direct"
     }
-  ]
+  ],
+  "notes": "公開済み解析は設定1・2・5・6の4段階。小役・同時当選・終了画面まで出ているが、現行6段階推測に無理に補間すると誤判定リスクが高いため、ダミー差分を削除して保留。"
 }

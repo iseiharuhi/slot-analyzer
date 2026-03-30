@@ -2,13 +2,13 @@
   "machine": {
     "id": "dmm_slot_009",
     "name": "真打 吉宗",
-    "manufacturer": null,
+    "manufacturer": "大都技研",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2026-04-06",
     "isActive": true,
-    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。AT/CZ系の暫定推測ロジックを設定。",
+    "notes": "暫定テンプレ値を撤去し、公開済みのCZ確率・AT初当たり確率へ差し替え。AT初当たりを主判別、CZを補助に設定。未公開の小役・直撃・示唆演出は反映保留。",
     "dmmUrl": "https://p-town.dmm.com/machines/4983",
-    "ichigekiUrl": "https://1geki.jp/slot/l_yoshimune/"
+    "ichigekiUrl": null
   },
   "counterDefinitions": [
     {
@@ -57,7 +57,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "公開差分未確認のため、現段階では推測に未使用。"
     },
     {
       "key": "direct_hit_count",
@@ -69,7 +69,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "AT直撃や上位契機の補助入力"
+      "notes": "直撃差分未確認のため、現段階では推測に未使用。"
     }
   ],
   "settingReferenceValues": [
@@ -78,39 +78,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 265.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 313.0,
+          "weight": 0.55,
+          "minSampleSize": 6,
+          "note": "公開済みCZ確率。補助判別。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 252.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 303.0,
+          "weight": 0.55,
+          "minSampleSize": 6,
+          "note": "公開済みCZ確率。補助判別。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 240.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 283.5,
+          "weight": 0.55,
+          "minSampleSize": 6,
+          "note": "公開済みCZ確率。補助判別。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 226.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 267.1,
+          "weight": 0.55,
+          "minSampleSize": 6,
+          "note": "公開済みCZ確率。補助判別。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 214.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 256.9,
+          "weight": 0.55,
+          "minSampleSize": 6,
+          "note": "公開済みCZ確率。補助判別。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 202.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "denominatorValue": 250.6,
+          "weight": 0.55,
+          "minSampleSize": 6,
+          "note": "公開済みCZ確率。補助判別。"
         }
       ]
     },
@@ -119,121 +125,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 530.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 488.9,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 500.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 471.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 466.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 438.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 428.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 398.1,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 388.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "denominatorValue": 377.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 346.0,
-          "weight": 1.2,
-          "minSampleSize": 2
-        }
-      ]
-    },
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 345.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 326.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 308.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 288.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 268.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 248.0,
-          "weight": 0.7,
-          "minSampleSize": 3
-        }
-      ]
-    },
-    {
-      "counterKey": "direct_hit_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 9999.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 7000.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 5200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 3200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 2200.0,
-          "weight": 1.5,
-          "minSampleSize": 1
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 1600.0,
-          "weight": 1.5,
-          "minSampleSize": 1
+          "denominatorValue": 354.9,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開済みAT初当たり確率。主判別。"
         }
       ]
     }

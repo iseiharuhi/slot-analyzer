@@ -1,0 +1,172 @@
+{
+  "machine": {
+    "id": "dmm_slot_004",
+    "name": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
+    "manufacturer": null,
+    "type": "AT",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "公開スペック不足機を含むため、AT初当り/CZ初当りを主軸に再整理した推測データ。低頻度の直撃・ボーナスは過信を避けるため主判別から除外。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4981",
+    "ichigekiUrl": "https://1geki.jp/slot/syllabary/6/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のCZ初当り。AT機では補助判別用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。AT機の主判別項目。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "主判別からは除外。演出確認用メモ。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃AT",
+      "category": "SPECIAL",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "低頻度のため主判別からは除外。メモ用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 265.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 252.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 240.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 226.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 214.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 202.0,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "CZ初当りベースで補助判別（テンプレ精度補正版）"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 530.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 500.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 466.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 428.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 388.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 346.0,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT初当りベースで判別（テンプレ精度補正版）"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}
