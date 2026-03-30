@@ -32,7 +32,9 @@ data class MachineJson(
     val type: String? = null,
     val releaseDate: String? = null,
     val isActive: Boolean = true,
-    val notes: String? = null
+    val notes: String? = null,
+    val dmmUrl: String? = null,
+    val ichigekiUrl: String? = null
 )
 
 @Serializable

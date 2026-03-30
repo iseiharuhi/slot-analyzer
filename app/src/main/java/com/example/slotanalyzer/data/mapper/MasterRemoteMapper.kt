@@ -18,6 +18,8 @@ class MasterRemoteMapper @Inject constructor() {
             releaseDate = detail.releaseDate,
             isActive = detail.isActive,
             notes = buildNotes(detail),
+            dmmUrl = resolveDmmUrl(detail),
+            ichigekiUrl = resolveIchigekiUrl(detail),
             createdAt = now,
             updatedAt = now
         )
@@ -88,9 +90,25 @@ class MasterRemoteMapper @Inject constructor() {
             detail.notes?.takeIf { it.isNotBlank() }?.let { add(it) }
             if (detail.status.isNotBlank()) add("status=${detail.status}")
             if (detail.externalLinks.isNotEmpty()) {
-                add("links=${detail.externalLinks.joinToString(",")}")
+                add("links=${detail.externalLinks.joinToString(",") { it.url }}")
             }
         }
         return parts.takeIf { it.isNotEmpty() }?.joinToString("\n")
+    }
+
+    private fun resolveDmmUrl(detail: MachineDetailDto): String? {
+        return detail.dmmUrl?.takeIf { it.isNotBlank() }
+            ?: detail.externalLinks.firstOrNull {
+                val text = (it.label + " " + (it.site ?: "")).lowercase()
+                "dmm" in text
+            }?.url
+    }
+
+    private fun resolveIchigekiUrl(detail: MachineDetailDto): String? {
+        return detail.ichigekiUrl?.takeIf { it.isNotBlank() }
+            ?: detail.externalLinks.firstOrNull {
+                val text = (it.label + " " + (it.site ?: "")).lowercase()
+                "1geki" in text || "一撃" in text
+            }?.url
     }
 }

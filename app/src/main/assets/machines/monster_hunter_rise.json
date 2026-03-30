@@ -6,7 +6,9 @@
     "type": "AT",
     "releaseDate": "2024-01-01",
     "isActive": true,
-    "notes": "初期登録用の参考データ。直撃とAT初当たりを重視。"
+    "notes": "初期登録用の参考データ。直撃とAT初当たりを重視。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4676",
+    "ichigekiUrl": "https://1geki.jp/slot/l_monhunrise/"
   },
   "counterDefinitions": [
     {

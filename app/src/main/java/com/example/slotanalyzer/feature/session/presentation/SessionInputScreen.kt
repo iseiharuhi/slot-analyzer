@@ -1,10 +1,15 @@
 package com.example.slotanalyzer.feature.session.presentation
 
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -32,7 +37,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -53,6 +60,7 @@ fun SessionInputScreen(
     viewModel: SessionViewModel = hiltViewModel()
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    val context = LocalContext.current
     var showResetDialog by remember { mutableStateOf(false) }
     var selectedTabIndex by remember { mutableIntStateOf(0) }
 
@@ -116,6 +124,14 @@ fun SessionInputScreen(
                             fontWeight = FontWeight.Bold
                         )
                     }
+
+                    SiteLinksRow(
+                        dmmUrl = state.dmmUrl,
+                        ichigekiUrl = state.ichigekiUrl,
+                        onOpenUrl = { url ->
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                        }
+                    )
 
                     if (state.machineTypeText.isNotBlank()) {
                         AssistChip(
@@ -256,6 +272,45 @@ fun SessionInputScreen(
                     }
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun SiteLinksRow(
+    dmmUrl: String?,
+    ichigekiUrl: String?,
+    onOpenUrl: (String) -> Unit
+) {
+    val hasAnyLink = !dmmUrl.isNullOrBlank() || !ichigekiUrl.isNullOrBlank()
+    if (!hasAnyLink) return
+
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        dmmUrl?.takeIf { it.isNotBlank() }?.let { url ->
+            Text(
+                text = "DMM",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.primary,
+                textDecoration = TextDecoration.Underline,
+                modifier = Modifier
+                    .wrapContentWidth()
+                    .clickable { onOpenUrl(url) }
+            )
+        }
+
+        ichigekiUrl?.takeIf { it.isNotBlank() }?.let { url ->
+            Text(
+                text = "1撃",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.primary,
+                textDecoration = TextDecoration.Underline,
+                modifier = Modifier
+                    .wrapContentWidth()
+                    .clickable { onOpenUrl(url) }
+            )
         }
     }
 }

@@ -13,6 +13,8 @@ data class MachineEntity(
     @ColumnInfo(name = "release_date") val releaseDate: String? = null,
     @ColumnInfo(name = "is_active") val isActive: Boolean = true,
     @ColumnInfo(name = "notes") val notes: String? = null,
+    @ColumnInfo(name = "dmm_url") val dmmUrl: String? = null,
+    @ColumnInfo(name = "ichigeki_url") val ichigekiUrl: String? = null,
     @ColumnInfo(name = "created_at") val createdAt: Long,
     @ColumnInfo(name = "updated_at") val updatedAt: Long
 )

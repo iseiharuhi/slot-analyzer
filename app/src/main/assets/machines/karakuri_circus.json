@@ -6,7 +6,9 @@
     "type": "AT",
     "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "初期登録用の参考データ。荒波AT機の想定。"
+    "notes": "初期登録用の参考データ。荒波AT機の想定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4360",
+    "ichigekiUrl": "https://1geki.jp/slot/l_karakuricircus/"
   },
   "counterDefinitions": [
     {

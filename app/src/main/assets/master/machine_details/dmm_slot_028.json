@@ -1,0 +1,24 @@
+{
+  "machineId": "dmm_slot_028",
+  "machineName": "クランキークレスト",
+  "status": "draft",
+  "capturedDate": "2026-03-29",
+  "sourceListPage": 2,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": null,
+      "status": "unresolved_direct_url"
+    },
+    {
+      "label": "DMMぱちタウン(掲載一覧)",
+      "url": "https://p-town.dmm.com/machines/slot?page=2",
+      "status": "verified_list_page"
+    },
+    {
+      "label": "一撃",
+      "url": null,
+      "status": "not_resolved_in_this_run"
+    }
+  ]
+}

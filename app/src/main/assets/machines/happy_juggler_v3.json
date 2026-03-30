@@ -6,7 +6,9 @@
     "type": "BONUS",
     "releaseDate": "2025-01-01",
     "isActive": true,
-    "notes": "初期登録用の参考データ。REGとぶどうで差を付けています。"
+    "notes": "初期登録用の参考データ。REGとぶどうで差を付けています。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4230",
+    "ichigekiUrl": "https://1geki.jp/slot/s_happyjuggler8/"
   },
   "counterDefinitions": [
     {

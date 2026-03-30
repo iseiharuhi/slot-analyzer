@@ -21,6 +21,8 @@ class MachineMasterJsonMapper @Inject constructor() {
             releaseDate = json.releaseDate,
             isActive = json.isActive,
             notes = json.notes,
+            dmmUrl = json.dmmUrl,
+            ichigekiUrl = json.ichigekiUrl,
             createdAt = now,
             updatedAt = now
         )

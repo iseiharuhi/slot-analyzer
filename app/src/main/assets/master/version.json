@@ -1,0 +1,7 @@
+{
+  "latestVersion": 1,
+  "oldestAvailableDiffVersion": 1,
+  "updatedAt": "2026-03-29T00:00:00+09:00",
+  "forceFullSync": false,
+  "note": "This package contains 40 machines confirmed from pages 1-2 of DMM slot list in this environment. Pages 3-5 were inaccessible (403) during generation."
+}

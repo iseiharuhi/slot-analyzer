@@ -21,6 +21,8 @@ class MachineEntityMapper @Inject constructor() {
             releaseDate = source.machine.releaseDate,
             isActive = source.machine.isActive,
             notes = source.machine.notes,
+            dmmUrl = source.machine.dmmUrl,
+            ichigekiUrl = source.machine.ichigekiUrl,
             counters = source.counterDefinitions.map { toCounterDomain(it) },
             settingReferenceValues = source.settingReferenceValues.map { toReferenceDomain(it) },
             ceilingRules = source.ceilingRules.map { toCeilingDomain(it) }

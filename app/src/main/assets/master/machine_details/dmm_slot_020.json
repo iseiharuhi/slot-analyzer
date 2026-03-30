@@ -1,0 +1,24 @@
+{
+  "machineId": "dmm_slot_020",
+  "machineName": "Lパチスロ 炎炎ノ消防隊2",
+  "status": "partial",
+  "capturedDate": "2026-03-29",
+  "sourceListPage": 1,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": null,
+      "status": "unresolved_direct_url"
+    },
+    {
+      "label": "DMMぱちタウン(掲載一覧)",
+      "url": "https://p-town.dmm.com/machines/slot",
+      "status": "verified_list_page"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_ennenn2/",
+      "status": "verified_direct"
+    }
+  ]
+}

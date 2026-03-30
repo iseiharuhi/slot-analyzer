@@ -22,6 +22,9 @@ interface MachineDao {
     @Query("SELECT * FROM machines WHERE id = :machineId LIMIT 1")
     suspend fun getMachineWithDefinitions(machineId: String): MachineWithDefinitions?
 
+    @Query("SELECT * FROM machines WHERE id = :machineId LIMIT 1")
+    suspend fun getById(machineId: String): MachineEntity?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertMachines(items: List<MachineEntity>)
 

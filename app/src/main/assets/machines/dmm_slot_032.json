@@ -1,0 +1,189 @@
+{
+  "machine": {
+    "id": "dmm_slot_032",
+    "name": "Sちゅらちゅら",
+    "manufacturer": null,
+    "type": "BONUS",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。A/BT系向けの暫定推測ロジックを設定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4486",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "任意入力。BIG+REGの合算管理用"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 297.9,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 292.6,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 285.0,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 273.1,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 265.3,
+          "weight": 0.8,
+          "minSampleSize": 5
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.0,
+          "weight": 0.8,
+          "minSampleSize": 5
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 431.2,
+          "weight": 1.2,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 399.6,
+          "weight": 1.2,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 356.2,
+          "weight": 1.2,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 321.0,
+          "weight": 1.2,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 287.4,
+          "weight": 1.2,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.0,
+          "weight": 1.2,
+          "minSampleSize": 4
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 174.3,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 169.8,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 160.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 148.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 139.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 129.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

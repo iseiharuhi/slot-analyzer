@@ -3,11 +3,13 @@ package com.example.slotanalyzer.di
 import android.content.Context
 import androidx.room.Room
 import com.example.slotanalyzer.data.database.AppDatabase
+import com.example.slotanalyzer.data.database.dao.AppSettingDao
 import com.example.slotanalyzer.data.database.dao.MachineCeilingRuleDao
 import com.example.slotanalyzer.data.database.dao.MachineCounterDefinitionDao
 import com.example.slotanalyzer.data.database.dao.MachineDao
 import com.example.slotanalyzer.data.database.dao.MachineSettingReferenceValueDao
 import com.example.slotanalyzer.data.database.dao.MasterMetadataDao
+import com.example.slotanalyzer.data.database.dao.PlayHistoryDao
 import com.example.slotanalyzer.data.database.dao.PlaySessionDao
 import dagger.Module
 import dagger.Provides
@@ -35,32 +37,32 @@ object DatabaseModule {
     }
 
     @Provides
-    fun provideMachineDao(db: AppDatabase): MachineDao {
-        return db.machineDao()
-    }
+    fun provideMachineDao(db: AppDatabase): MachineDao = db.machineDao()
 
     @Provides
-    fun provideCounterDao(db: AppDatabase): MachineCounterDefinitionDao {
-        return db.machineCounterDefinitionDao()
-    }
+    fun provideMachineCounterDefinitionDao(
+        db: AppDatabase
+    ): MachineCounterDefinitionDao = db.machineCounterDefinitionDao()
 
     @Provides
-    fun provideReferenceDao(db: AppDatabase): MachineSettingReferenceValueDao {
-        return db.machineSettingReferenceValueDao()
-    }
+    fun provideMachineSettingReferenceValueDao(
+        db: AppDatabase
+    ): MachineSettingReferenceValueDao = db.machineSettingReferenceValueDao()
 
     @Provides
-    fun provideCeilingDao(db: AppDatabase): MachineCeilingRuleDao {
-        return db.machineCeilingRuleDao()
-    }
+    fun provideMachineCeilingRuleDao(
+        db: AppDatabase
+    ): MachineCeilingRuleDao = db.machineCeilingRuleDao()
 
     @Provides
-    fun provideMasterMetadataDao(db: AppDatabase): MasterMetadataDao {
-        return db.masterMetadataDao()
-    }
+    fun providePlaySessionDao(db: AppDatabase): PlaySessionDao = db.playSessionDao()
 
     @Provides
-    fun providePlaySessionDao(db: AppDatabase): PlaySessionDao {
-        return db.playSessionDao()
-    }
+    fun providePlayHistoryDao(db: AppDatabase): PlayHistoryDao = db.playHistoryDao()
+
+    @Provides
+    fun provideAppSettingDao(db: AppDatabase): AppSettingDao = db.appSettingDao()
+
+    @Provides
+    fun provideMasterMetadataDao(db: AppDatabase): MasterMetadataDao = db.masterMetadataDao()
 }

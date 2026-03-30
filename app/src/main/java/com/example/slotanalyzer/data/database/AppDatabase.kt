@@ -32,16 +32,16 @@ import com.example.slotanalyzer.data.database.entity.SessionCounterValueEntity
         AppSettingEntity::class,
         MasterMetadataEntity::class
     ],
-    version = 6,
+    version = 7,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun machineDao(): MachineDao
+    abstract fun machineCounterDefinitionDao(): MachineCounterDefinitionDao
+    abstract fun machineSettingReferenceValueDao(): MachineSettingReferenceValueDao
+    abstract fun machineCeilingRuleDao(): MachineCeilingRuleDao
     abstract fun playSessionDao(): PlaySessionDao
     abstract fun playHistoryDao(): PlayHistoryDao
     abstract fun appSettingDao(): AppSettingDao
     abstract fun masterMetadataDao(): MasterMetadataDao
-    abstract fun machineCounterDefinitionDao(): MachineCounterDefinitionDao
-    abstract fun machineSettingReferenceValueDao(): MachineSettingReferenceValueDao
-    abstract fun machineCeilingRuleDao(): MachineCeilingRuleDao
 }

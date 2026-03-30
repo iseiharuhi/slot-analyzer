@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-29",
+  "source": "https://p-town.dmm.com/machines/slot",
+  "count": 40,
+  "machines": [
+    {
+      "machineId": "dmm_slot_001",
+      "machineName": "スマスロ BIRDIE WING -Golf Girls' Story-",
+      "fileName": "dmm_slot_001.json",
+      "status": "verified",
+      "checksumSha256": "5955d24e3bd0cd97b1e306eb292ea6f72367aa1e16b52c976c3306a23f2050bd",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_002",
+      "machineName": "スマスロ バイオハザードRE:3",
+      "fileName": "dmm_slot_002.json",
+      "status": "partial",
+      "checksumSha256": "edbccad62d41bddeb318bbcfad96a312d19988c28d25dfb255641706defe51c1",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_003",
+      "machineName": "Ｌタクトオーパス デスティニー",
+      "fileName": "dmm_slot_003.json",
+      "status": "draft",
+      "checksumSha256": "2c415279cd7b1f2c98131aa4968b5a5ca3950b47ff0d24a8d250e50259121c2d",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_004",
+      "machineName": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
+      "fileName": "dmm_slot_004.json",
+      "status": "draft",
+      "checksumSha256": "c574ce049fe72363a3aba8d07298cabc39769e2326dff816bed8b972e0410045",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_005",
+      "machineName": "スマスロスーパーリオエース2",
+      "fileName": "dmm_slot_005.json",
+      "status": "draft",
+      "checksumSha256": "21777da479d78f50b6e33d418b635839c283609557771ab3a9a721b82943220c",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_006",
+      "machineName": "LB スロット GALFY",
+      "fileName": "dmm_slot_006.json",
+      "status": "draft",
+      "checksumSha256": "a8db2083a0c3ab0257ed93318014c9dda18a9c78a0707bdf1b8d880a60eca05d",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_007",
+      "machineName": "スマスロ ミリオンゴッド-神々の軌跡-",
+      "fileName": "dmm_slot_007.json",
+      "status": "partial",
+      "checksumSha256": "c23c3911a7b43b84f60aba4a3d366c6d83852ba01df7db1e8b3bd0bb0a6392d1",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_008",
+      "machineName": "アニマルスロット ドッチ",
+      "fileName": "dmm_slot_008.json",
+      "status": "partial",
+      "checksumSha256": "964ace8d30b6335b5c17d6d1581617b9754485e2faa24b85a11db60047151f25",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_009",
+      "machineName": "真打 吉宗",
+      "fileName": "dmm_slot_009.json",
+      "status": "partial",
+      "checksumSha256": "15576536b90382b9f3b12bc3b25886fbe648682e9e502874232785155e8befce",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_010",
+      "machineName": "LBトリプルクラウンセブン",
+      "fileName": "dmm_slot_010.json",
+      "status": "draft",
+      "checksumSha256": "e718723dc79327d76987341a422d3813628bd30ff8a78abe5195a1d581c1b910",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_011",
+      "machineName": "スマスロヨルムンガンド",
+      "fileName": "dmm_slot_011.json",
+      "status": "draft",
+      "checksumSha256": "b8d12631c2faed351a0fc9f2dd2310379e205d780a27b719a095be4a2b723605",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_012",
+      "machineName": "L虚構推理",
+      "fileName": "dmm_slot_012.json",
+      "status": "draft",
+      "checksumSha256": "6a657521186a8996c6ed47c777a3ed8fafe41656648c178c162865f4b839d704",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_013",
+      "machineName": "A-SLOT+ 異世界かるてっと BT",
+      "fileName": "dmm_slot_013.json",
+      "status": "draft",
+      "checksumSha256": "59b30ad4a4f58487d1ee2bd2f0db033806127eb9accc92a92fed2f9bdb7bd177",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_014",
+      "machineName": "Lアクダマドライブ",
+      "fileName": "dmm_slot_014.json",
+      "status": "draft",
+      "checksumSha256": "909aeb23f19662d8c2a90e08bbb83383eb9c611569053835de4eb85b37667e6d",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_015",
+      "machineName": "スマスロ サンダーV",
+      "fileName": "dmm_slot_015.json",
+      "status": "draft",
+      "checksumSha256": "a561fa73c142e4dad6d6300daebaf05dc7dc2c73b86b23915bc5b2b690451cb9",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_016",
+      "machineName": "スマスロ 甲鉄城のカバネリ 海門（うなと）決戦",
+      "fileName": "dmm_slot_016.json",
+      "status": "verified",
+      "checksumSha256": "5fe64e4b7bc6a95c12a95e10f6c88deaf7dfa09d060b9917ed8a11b5335354b6",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_017",
+      "machineName": "スマスロ ハナビ",
+      "fileName": "dmm_slot_017.json",
+      "status": "draft",
+      "checksumSha256": "afd98713a14b532d12716ec967f52d1f6577a36249599b86d00e7b6045965609",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_018",
+      "machineName": "スマスロ 攻殻機動隊",
+      "fileName": "dmm_slot_018.json",
+      "status": "draft",
+      "checksumSha256": "4740d9265ece9b9c7f9fed49f225880d41eeedca6be3e526a7dab19c78059376",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_019",
+      "machineName": "L範馬刃牙",
+      "fileName": "dmm_slot_019.json",
+      "status": "draft",
+      "checksumSha256": "a9496ad1aca86b00e5f30cc852be100ca9f2b995b37ed00aeda9f6c83cc7114a",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_020",
+      "machineName": "Lパチスロ 炎炎ノ消防隊2",
+      "fileName": "dmm_slot_020.json",
+      "status": "partial",
+      "checksumSha256": "3758105c4256a3c8afdb73cef4ae609bcf315661c2f8f630ca90b4a8f4f81f36",
+      "sourceListPage": 1
+    },
+    {
+      "machineId": "dmm_slot_021",
+      "machineName": "ミクちゃんとイドムンのミラクルチャレンジ2",
+      "fileName": "dmm_slot_021.json",
+      "status": "draft",
+      "checksumSha256": "b99a69a69d846318f2dfcf251f35339259b201d49a3a945aaec3172e1859f244",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_022",
+      "machineName": "ニューシオサイ",
+      "fileName": "dmm_slot_022.json",
+      "status": "draft",
+      "checksumSha256": "feed020cf438d5b68eb2c1c0959b095319b5aaedd2fe1fa6ee4630a764ad4237",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_023",
+      "machineName": "パチスロ琉神−30 スイカバージョン",
+      "fileName": "dmm_slot_023.json",
+      "status": "draft",
+      "checksumSha256": "b9ec61497014cb498f04f2d76a33b836548a603b50dbb0ccf23323c5f5426dc7",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_024",
+      "machineName": "L リングにかけろ1 V",
+      "fileName": "dmm_slot_024.json",
+      "status": "draft",
+      "checksumSha256": "d2dab43d4e8e38aa31dc7c497093704f1415cae1549865dfb9c7219b0761e0f8",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_025",
+      "machineName": "Lラブ嬢3〜Wご指名はいかがですか？〜",
+      "fileName": "dmm_slot_025.json",
+      "status": "draft",
+      "checksumSha256": "d7b562ffebd2db206afdf4b0065621d4151c4bcc2788422110da000cc05da171",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_026",
+      "machineName": "L花の慶次～佐渡攻めの章〜",
+      "fileName": "dmm_slot_026.json",
+      "status": "partial",
+      "checksumSha256": "86b0030b2f7c9fd654c400160145e46f4574bd08f5442637259965f3ac137d33",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_027",
+      "machineName": "スマスロモンキーターンV",
+      "fileName": "dmm_slot_027.json",
+      "status": "verified",
+      "checksumSha256": "5f1c63f2695fd89f302e9c4a23b75c825dafe43c556c51ee895e7f64f6685a20",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_028",
+      "machineName": "クランキークレスト",
+      "fileName": "dmm_slot_028.json",
+      "status": "draft",
+      "checksumSha256": "0c27bd0999f58e293ce35df5d257dfa2f30137c57db551b2464a26e7be2a3391",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_029",
+      "machineName": "マジカルハロウィン８",
+      "fileName": "dmm_slot_029.json",
+      "status": "draft",
+      "checksumSha256": "ca48de68835698246d246e8f2f22930262c9f036677d1334baec71de803daf75",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_030",
+      "machineName": "推しスロ アイドルVer.",
+      "fileName": "dmm_slot_030.json",
+      "status": "draft",
+      "checksumSha256": "35498978747d461ae185c982afffe21eafd3a6bd0029473fc0fa70b119a3daec",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_031",
+      "machineName": "パチスロ ケンガンアシュラ",
+      "fileName": "dmm_slot_031.json",
+      "status": "draft",
+      "checksumSha256": "b0bfad22897969ea0c7e3005c37e486b989615236571849944fbf48e6e95ad91",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_032",
+      "machineName": "Sちゅらちゅら",
+      "fileName": "dmm_slot_032.json",
+      "status": "draft",
+      "checksumSha256": "ab2e7aebdac06fa9932f7728de75709304e3c75da00e8e2f226ad2035dab703b",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_033",
+      "machineName": "L ひぐらしのなく頃に 業",
+      "fileName": "dmm_slot_033.json",
+      "status": "draft",
+      "checksumSha256": "78d1dfb90503fff705f13c1e20279495b0f5e771a93c50578663cc5569d4ebf6",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_034",
+      "machineName": "スマスロとある魔術の禁書目録",
+      "fileName": "dmm_slot_034.json",
+      "status": "draft",
+      "checksumSha256": "8c1ece74b896572ae4f84d3a505a29af674b24bfb14e8cf34f2e5d2143aa3f9f",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_035",
+      "machineName": "デジスロ JAC INバージョン",
+      "fileName": "dmm_slot_035.json",
+      "status": "draft",
+      "checksumSha256": "f0652b73f5776eca31d0d06d8b25274f997ef4e37acb5e1c9977ae80f34f2e07",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_036",
+      "machineName": "L大工の源さん超夢源",
+      "fileName": "dmm_slot_036.json",
+      "status": "draft",
+      "checksumSha256": "9ddfbaba58bcf16950714d7bc260d8f1e381d2b5f9a8da09e8392eaa20f921cf",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_037",
+      "machineName": "スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-",
+      "fileName": "dmm_slot_037.json",
+      "status": "draft",
+      "checksumSha256": "0867ffb8fac1fb84fb73152ce8524af0e28b8c856f342287bb9959af28f910b2",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_038",
+      "machineName": "パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART",
+      "fileName": "dmm_slot_038.json",
+      "status": "draft",
+      "checksumSha256": "dae8006839e98f5d90e176b40b017cff97c8ef09914b8793399651b66a3740cd",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_039",
+      "machineName": "L エヴァンゲリオン ～未来への創造～",
+      "fileName": "dmm_slot_039.json",
+      "status": "draft",
+      "checksumSha256": "4278e94900d72e24585f415d9c442e8d9af635dc951333e9156aa91a99520351",
+      "sourceListPage": 2
+    },
+    {
+      "machineId": "dmm_slot_040",
+      "machineName": "スーハナライジング-30",
+      "fileName": "dmm_slot_040.json",
+      "status": "draft",
+      "checksumSha256": "3c8b039487552618eeaaa27f83daba391831c325bfdfa40be4056442574b7d6d",
+      "sourceListPage": 2
+    }
+  ]
+}

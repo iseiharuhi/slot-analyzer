@@ -1,0 +1,242 @@
+{
+  "machine": {
+    "id": "dmm_slot_033",
+    "name": "L ひぐらしのなく頃に 業",
+    "manufacturer": null,
+    "type": "HYBRID",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。ボーナス+CZ/ATのハイブリッド暫定推測ロジックを設定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4447",
+    "ichigekiUrl": "https://1geki.jp/slot/l_higurashi_gou/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 330.0,
+          "weight": 0.7,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 318.0,
+          "weight": 0.7,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 306.0,
+          "weight": 0.7,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 290.0,
+          "weight": 0.7,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 274.0,
+          "weight": 0.7,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 258.0,
+          "weight": 0.7,
+          "minSampleSize": 4
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 470.0,
+          "weight": 1.0,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 430.0,
+          "weight": 1.0,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 390.0,
+          "weight": 1.0,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 348.0,
+          "weight": 1.0,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 308.0,
+          "weight": 1.0,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 270.0,
+          "weight": 1.0,
+          "minSampleSize": 3
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 280.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 264.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 248.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 232.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 216.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 200.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 620.0,
+          "weight": 1.2,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 570.0,
+          "weight": 1.2,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 520.0,
+          "weight": 1.2,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 470.0,
+          "weight": 1.2,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 420.0,
+          "weight": 1.2,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 370.0,
+          "weight": 1.2,
+          "minSampleSize": 2
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

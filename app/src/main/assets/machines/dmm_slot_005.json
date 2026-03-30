@@ -1,12 +1,14 @@
 {
   "machine": {
-    "id": "monster_hunter",
-    "name": "モンスターハンター",
-    "manufacturer": "Enterrise",
-    "type": "AT",
-    "releaseDate": "2024-01-01",
+    "id": "dmm_slot_005",
+    "name": "スマスロスーパーリオエース2",
+    "manufacturer": null,
+    "type": "HYBRID",
+    "releaseDate": null,
     "isActive": true,
-    "notes": "テスト用の機種データ（実機未特定のため天井情報は暫定）"
+    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。ボーナス+CZ/ATのハイブリッド暫定推測ロジックを設定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4984",
+    "ichigekiUrl": "https://1geki.jp/slot/s_sp_rioace/"
   },
   "counterDefinitions": [
     {
@@ -76,39 +78,39 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 295.0,
+          "denominatorValue": 330.0,
           "weight": 0.7,
-          "minSampleSize": 5
+          "minSampleSize": 4
         },
         {
           "settingNo": 2,
-          "denominatorValue": 288.0,
+          "denominatorValue": 318.0,
           "weight": 0.7,
-          "minSampleSize": 5
+          "minSampleSize": 4
         },
         {
           "settingNo": 3,
-          "denominatorValue": 276.0,
+          "denominatorValue": 306.0,
           "weight": 0.7,
-          "minSampleSize": 5
+          "minSampleSize": 4
         },
         {
           "settingNo": 4,
-          "denominatorValue": 260.0,
+          "denominatorValue": 290.0,
           "weight": 0.7,
-          "minSampleSize": 5
+          "minSampleSize": 4
         },
         {
           "settingNo": 5,
-          "denominatorValue": 245.0,
+          "denominatorValue": 274.0,
           "weight": 0.7,
-          "minSampleSize": 5
+          "minSampleSize": 4
         },
         {
           "settingNo": 6,
-          "denominatorValue": 230.0,
+          "denominatorValue": 258.0,
           "weight": 0.7,
-          "minSampleSize": 5
+          "minSampleSize": 4
         }
       ]
     },
@@ -117,39 +119,39 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 450.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "denominatorValue": 470.0,
+          "weight": 1.0,
+          "minSampleSize": 3
         },
         {
           "settingNo": 2,
-          "denominatorValue": 420.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "denominatorValue": 430.0,
+          "weight": 1.0,
+          "minSampleSize": 3
         },
         {
           "settingNo": 3,
           "denominatorValue": 390.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "weight": 1.0,
+          "minSampleSize": 3
         },
         {
           "settingNo": 4,
-          "denominatorValue": 350.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "denominatorValue": 348.0,
+          "weight": 1.0,
+          "minSampleSize": 3
         },
         {
           "settingNo": 5,
-          "denominatorValue": 315.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "denominatorValue": 308.0,
+          "weight": 1.0,
+          "minSampleSize": 3
         },
         {
           "settingNo": 6,
-          "denominatorValue": 280.0,
-          "weight": 1.2,
-          "minSampleSize": 4
+          "denominatorValue": 270.0,
+          "weight": 1.0,
+          "minSampleSize": 3
         }
       ]
     },
@@ -158,37 +160,37 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 210.0,
+          "denominatorValue": 280.0,
           "weight": 0.8,
           "minSampleSize": 3
         },
         {
           "settingNo": 2,
-          "denominatorValue": 205.0,
+          "denominatorValue": 264.0,
           "weight": 0.8,
           "minSampleSize": 3
         },
         {
           "settingNo": 3,
-          "denominatorValue": 198.0,
+          "denominatorValue": 248.0,
           "weight": 0.8,
           "minSampleSize": 3
         },
         {
           "settingNo": 4,
-          "denominatorValue": 190.0,
+          "denominatorValue": 232.0,
           "weight": 0.8,
           "minSampleSize": 3
         },
         {
           "settingNo": 5,
-          "denominatorValue": 182.0,
+          "denominatorValue": 216.0,
           "weight": 0.8,
           "minSampleSize": 3
         },
         {
           "settingNo": 6,
-          "denominatorValue": 175.0,
+          "denominatorValue": 200.0,
           "weight": 0.8,
           "minSampleSize": 3
         }
@@ -199,54 +201,42 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 540.0,
-          "weight": 0.9,
+          "denominatorValue": 620.0,
+          "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 2,
-          "denominatorValue": 510.0,
-          "weight": 0.9,
+          "denominatorValue": 570.0,
+          "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 3,
-          "denominatorValue": 480.0,
-          "weight": 0.9,
+          "denominatorValue": 520.0,
+          "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 4,
-          "denominatorValue": 440.0,
-          "weight": 0.9,
+          "denominatorValue": 470.0,
+          "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 5,
-          "denominatorValue": 400.0,
-          "weight": 0.9,
+          "denominatorValue": 420.0,
+          "weight": 1.2,
           "minSampleSize": 2
         },
         {
           "settingNo": 6,
-          "denominatorValue": 360.0,
-          "weight": 0.9,
+          "denominatorValue": 370.0,
+          "weight": 1.2,
           "minSampleSize": 2
         }
       ]
     }
   ],
-  "ceilingRules": [
-    {
-      "ruleKey": "bonus_ceiling",
-      "displayName": "ボーナス間天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 999,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "テスト用",
-      "isEnabled": true
-    }
-  ]
+  "ceilingRules": []
 }

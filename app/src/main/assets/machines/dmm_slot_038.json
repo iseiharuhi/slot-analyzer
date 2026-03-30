@@ -1,0 +1,242 @@
+{
+  "machine": {
+    "id": "dmm_slot_038",
+    "name": "パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART",
+    "manufacturer": null,
+    "type": "ART",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。ART機向けの暫定推測ロジックを設定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4419",
+    "ichigekiUrl": "https://1geki.jp/slot/s_eurekahievo_art/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "ART",
+      "category": "AT_CZ",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ART初当たりやART突入回数"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 340.0,
+          "weight": 0.6,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 326.0,
+          "weight": 0.6,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 312.0,
+          "weight": 0.6,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 296.0,
+          "weight": 0.6,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 280.0,
+          "weight": 0.6,
+          "minSampleSize": 4
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 264.0,
+          "weight": 0.6,
+          "minSampleSize": 4
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 520.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 480.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 440.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 398.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 356.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 320.0,
+          "weight": 0.8,
+          "minSampleSize": 3
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 310.0,
+          "weight": 0.8,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 292.0,
+          "weight": 0.8,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 274.0,
+          "weight": 0.8,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 254.0,
+          "weight": 0.8,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 236.0,
+          "weight": 0.8,
+          "minSampleSize": 2
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 218.0,
+          "weight": 0.8,
+          "minSampleSize": 2
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 760.0,
+          "weight": 1.1,
+          "minSampleSize": 1
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 690.0,
+          "weight": 1.1,
+          "minSampleSize": 1
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 620.0,
+          "weight": 1.1,
+          "minSampleSize": 1
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 550.0,
+          "weight": 1.1,
+          "minSampleSize": 1
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 490.0,
+          "weight": 1.1,
+          "minSampleSize": 1
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 430.0,
+          "weight": 1.1,
+          "minSampleSize": 1
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

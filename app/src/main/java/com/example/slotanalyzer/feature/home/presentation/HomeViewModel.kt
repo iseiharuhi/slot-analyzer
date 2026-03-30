@@ -30,7 +30,9 @@ class HomeViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             seedMachineMasterUseCase()
-            syncMasterDataUseCase()
+            // 現行の remote master は assets/machines とURL仕様が一致していないため、
+            // リンクが欠落したデータで上書きされるのを防ぐまで起動時同期は止める。
+            // syncMasterDataUseCase()
         }
         viewModelScope.launch {
             observeMachinesUseCase().collect { machines ->

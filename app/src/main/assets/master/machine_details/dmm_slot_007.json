@@ -1,0 +1,24 @@
+{
+  "machineId": "dmm_slot_007",
+  "machineName": "スマスロ ミリオンゴッド-神々の軌跡-",
+  "status": "partial",
+  "capturedDate": "2026-03-29",
+  "sourceListPage": 1,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4961",
+      "status": "verified_direct"
+    },
+    {
+      "label": "DMMぱちタウン(掲載一覧)",
+      "url": "https://p-town.dmm.com/machines/slot",
+      "status": "verified_list_page"
+    },
+    {
+      "label": "一撃",
+      "url": null,
+      "status": "not_resolved_in_this_run"
+    }
+  ]
+}

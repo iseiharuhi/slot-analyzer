@@ -1,9 +1,16 @@
 package com.example.slotanalyzer.data.repository
 
-import com.example.slotanalyzer.data.database.dao.*
+import com.example.slotanalyzer.data.database.dao.MachineCeilingRuleDao
+import com.example.slotanalyzer.data.database.dao.MachineCounterDefinitionDao
+import com.example.slotanalyzer.data.database.dao.MachineDao
+import com.example.slotanalyzer.data.database.dao.MachineSettingReferenceValueDao
+import com.example.slotanalyzer.data.database.entity.MachineEntity
 import com.example.slotanalyzer.data.mapper.MasterRemoteMapper
 import com.example.slotanalyzer.data.remote.api.MasterApi
-import com.example.slotanalyzer.data.remote.dto.*
+import com.example.slotanalyzer.data.remote.dto.DiffDto
+import com.example.slotanalyzer.data.remote.dto.MachineDetailDto
+import com.example.slotanalyzer.data.remote.dto.MachinesIndexDto
+import com.example.slotanalyzer.data.remote.dto.VersionDto
 import com.example.slotanalyzer.domain.repository.MasterSyncRepository
 import javax.inject.Inject
 
@@ -33,7 +40,8 @@ class MasterSyncRepositoryImpl @Inject constructor(
     }
 
     override suspend fun upsertMachineDetail(detail: MachineDetailDto, now: Long) {
-        val machine = mapper.toMachineEntity(detail, now)
+        val existing = machineDao.getById(detail.id)
+        val machine = mapper.toMachineEntity(detail, now).mergeUrlsFrom(existing)
         val counters = mapper.toCounterEntities(detail)
         val references = mapper.toReferenceEntities(detail)
         val ceilings = mapper.toCeilingEntities(detail)
@@ -54,13 +62,34 @@ class MasterSyncRepositoryImpl @Inject constructor(
     }
 
     override suspend fun replaceAll(details: List<MachineDetailDto>, now: Long) {
+        val existingById = details.mapNotNull { detail ->
+            machineDao.getById(detail.id)?.let { detail.id to it }
+        }.toMap()
+
         machineDao.deleteAll()
         counterDao.deleteAll()
         referenceDao.deleteAll()
         ceilingDao.deleteAll()
 
         details.forEach { detail ->
-            upsertMachineDetail(detail, now)
+            val machine = mapper.toMachineEntity(detail, now).mergeUrlsFrom(existingById[detail.id])
+            val counters = mapper.toCounterEntities(detail)
+            val references = mapper.toReferenceEntities(detail)
+            val ceilings = mapper.toCeilingEntities(detail)
+
+            machineDao.insertOrReplace(machine)
+            counterDao.insertAll(counters)
+            referenceDao.insertAll(references)
+            ceilingDao.insertAll(ceilings)
         }
+    }
+
+    private fun MachineEntity.mergeUrlsFrom(existing: MachineEntity?): MachineEntity {
+        if (existing == null) return this
+        return copy(
+            dmmUrl = dmmUrl ?: existing.dmmUrl,
+            ichigekiUrl = ichigekiUrl ?: existing.ichigekiUrl,
+            createdAt = existing.createdAt
+        )
     }
 }

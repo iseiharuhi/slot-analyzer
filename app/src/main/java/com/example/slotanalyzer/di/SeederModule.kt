@@ -1,6 +1,9 @@
 package com.example.slotanalyzer.di
 
-import com.example.slotanalyzer.data.datasource.seeder.*
+import com.example.slotanalyzer.data.datasource.seeder.MachineMasterImporter
+import com.example.slotanalyzer.data.datasource.seeder.MachineMasterImporterImpl
+import com.example.slotanalyzer.data.datasource.seeder.MachineMasterSeeder
+import com.example.slotanalyzer.data.datasource.seeder.MachineMasterSeederImpl
 import com.example.slotanalyzer.data.datasource.source.LocalAssetMachineMasterSource
 import com.example.slotanalyzer.data.datasource.source.MachineMasterSource
 import dagger.Binds
@@ -15,13 +18,19 @@ abstract class SeederModule {
 
     @Binds
     @Singleton
-    abstract fun bindMachineMasterSource(impl: LocalAssetMachineMasterSource): MachineMasterSource
+    abstract fun bindMachineMasterSource(
+        impl: LocalAssetMachineMasterSource
+    ): MachineMasterSource
 
     @Binds
     @Singleton
-    abstract fun bindMachineMasterImporter(impl: MachineMasterImporterImpl): MachineMasterImporter
+    abstract fun bindMachineMasterImporter(
+        impl: MachineMasterImporterImpl
+    ): MachineMasterImporter
 
     @Binds
     @Singleton
-    abstract fun bindMachineMasterSeeder(impl: MachineMasterSeederImpl): MachineMasterSeeder
+    abstract fun bindMachineMasterSeeder(
+        impl: MachineMasterSeederImpl
+    ): MachineMasterSeeder
 }

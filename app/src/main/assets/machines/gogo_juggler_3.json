@@ -6,7 +6,9 @@
     "type": "BONUS",
     "releaseDate": "2025-01-01",
     "isActive": true,
-    "notes": "初期登録用の参考データ。バランス型。"
+    "notes": "初期登録用の参考データ。バランス型。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4375",
+    "ichigekiUrl": "https://1geki.jp/slot/s_gogojuggler3/"
   },
   "counterDefinitions": [
     {

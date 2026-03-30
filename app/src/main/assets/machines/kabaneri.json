@@ -6,7 +6,9 @@
     "type": "AT",
     "releaseDate": "2022-07-04",
     "isActive": true,
-    "notes": "初期登録用の参考データ。CZ初当たりとAT突入を重視。"
+    "notes": "初期登録用の参考データ。CZ初当たりとAT突入を重視。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4160",
+    "ichigekiUrl": "https://1geki.jp/slot/s_kabaneri/"
   },
   "counterDefinitions": [
     {

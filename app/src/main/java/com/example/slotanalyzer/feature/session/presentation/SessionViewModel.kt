@@ -60,6 +60,8 @@ data class SessionUiState(
     val machineId: String = "",
     val machineName: String = "",
     val machineTypeText: String = "",
+    val dmmUrl: String? = null,
+    val ichigekiUrl: String? = null,
     val guidanceText: String = "",
     val ceilingBlocks: List<CeilingBlockUiModel> = emptyList(),
     val counterItems: List<SessionCounterItemUiModel> = emptyList()
@@ -138,6 +140,8 @@ class SessionViewModel @Inject constructor(
             machineId = session.machineId,
             machineName = machine?.name.orEmpty(),
             machineTypeText = machine?.type.orEmpty(),
+            dmmUrl = machine?.dmmUrl,
+            ichigekiUrl = machine?.ichigekiUrl,
             guidanceText = buildGuidanceText(machine),
             ceilingBlocks = ceilingBlocks,
             counterItems = buildCounterItems(machine, session)

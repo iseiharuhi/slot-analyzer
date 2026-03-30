@@ -1,12 +1,14 @@
 {
   "machine": {
-    "id": "sample_machine_a",
-    "name": "サンプルA機",
-    "manufacturer": "Sample Maker",
-    "type": "AT",
-    "releaseDate": "2026-01-01",
+    "id": "dmm_slot_030",
+    "name": "推しスロ アイドルVer.",
+    "manufacturer": null,
+    "type": "BONUS",
+    "releaseDate": null,
     "isActive": true,
-    "notes": "構造確認用サンプル"
+    "notes": "DMM現行機種一覧から追加した初期ロジック投入版。A/BT系向けの暫定推測ロジックを設定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4455",
+    "ichigekiUrl": "https://1geki.jp/slot/s_oshisloaid/"
   },
   "counterDefinitions": [
     {
@@ -46,28 +48,16 @@
       "notes": null
     },
     {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
-      "sortOrder": 20,
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 12,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT",
-      "category": "AT_CZ",
-      "sortOrder": 21,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": null
+      "notes": "任意入力。BIG+REGの合算管理用"
     }
   ],
   "settingReferenceValues": [
@@ -77,37 +67,37 @@
         {
           "settingNo": 1,
           "denominatorValue": 297.9,
-          "weight": 0.7,
+          "weight": 0.8,
           "minSampleSize": 5
         },
         {
           "settingNo": 2,
           "denominatorValue": 292.6,
-          "weight": 0.7,
+          "weight": 0.8,
           "minSampleSize": 5
         },
         {
           "settingNo": 3,
           "denominatorValue": 285.0,
-          "weight": 0.7,
+          "weight": 0.8,
           "minSampleSize": 5
         },
         {
           "settingNo": 4,
           "denominatorValue": 273.1,
-          "weight": 0.7,
+          "weight": 0.8,
           "minSampleSize": 5
         },
         {
           "settingNo": 5,
           "denominatorValue": 265.3,
-          "weight": 0.7,
+          "weight": 0.8,
           "minSampleSize": 5
         },
         {
           "settingNo": 6,
           "denominatorValue": 255.0,
-          "weight": 0.7,
+          "weight": 0.8,
           "minSampleSize": 5
         }
       ]
@@ -152,19 +142,48 @@
           "minSampleSize": 4
         }
       ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 174.3,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 169.8,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 160.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 148.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 139.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 129.0,
+          "weight": 0.6,
+          "minSampleSize": 6
+        }
+      ]
     }
   ],
-  "ceilingRules": [
-    {
-      "ruleKey": "bonus_ceiling",
-      "displayName": "ボーナス間天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 800,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "サンプル",
-      "isEnabled": true
-    }
-  ]
+  "ceilingRules": []
 }

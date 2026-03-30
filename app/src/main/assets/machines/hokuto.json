@@ -6,7 +6,9 @@
     "type": "AT",
     "releaseDate": "2023-04-03",
     "isActive": true,
-    "notes": "初期登録用の参考データ。CZ・AT・直撃ATで推測。"
+    "notes": "初期登録用の参考データ。CZ・AT・直撃ATで推測。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4301",
+    "ichigekiUrl": "https://1geki.jp/slot/l_hokutonoken/"
   },
   "counterDefinitions": [
     {

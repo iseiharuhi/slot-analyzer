@@ -6,7 +6,9 @@
     "type": "BONUS",
     "releaseDate": "2025-01-01",
     "isActive": true,
-    "notes": "初期登録用の参考データ。推測ロジック確認向け。"
+    "notes": "初期登録用の参考データ。推測ロジック確認向け。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3626",
+    "ichigekiUrl": "https://1geki.jp/slot/s_ij_ex_6/"
   },
   "counterDefinitions": [
     {

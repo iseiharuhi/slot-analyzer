@@ -1,5 +1,6 @@
 package com.example.slotanalyzer.data.remote.dto
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -12,10 +13,20 @@ data class MachineDetailDto(
     val isActive: Boolean = true,
     val notes: String? = null,
     val status: String = "verified",
-    val externalLinks: List<String> = emptyList(),
+    val dmmUrl: String? = null,
+    val ichigekiUrl: String? = null,
+    val externalLinks: List<ExternalLinkDto> = emptyList(),
     val counterDefinitions: List<CounterDefinitionDto> = emptyList(),
     val settingReferenceValues: List<SettingReferenceGroupDto> = emptyList(),
     val ceilingRules: List<CeilingRuleDto> = emptyList()
+)
+
+@Serializable
+data class ExternalLinkDto(
+    val label: String,
+    val url: String,
+    val status: String? = null,
+    @SerialName("site") val site: String? = null
 )
 
 @Serializable

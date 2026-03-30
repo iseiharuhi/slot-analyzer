@@ -1,56 +1,256 @@
 {
   "schemaVersion": 1,
-  "masterVersion": "0.5.0-ceiling-realdata-ui",
+  "masterVersion": "0.7.5-url-map-web-verified",
   "machines": [
     {
       "machineId": "im_juggler_ex",
       "fileName": "im_juggler_ex.json",
-      "checksum": ""
+      "checksum": "04e959b2040a0578b93a619b561df740648fd08cff3dd29355deb04ea77025a9"
     },
     {
       "machineId": "my_juggler_v",
       "fileName": "my_juggler_v.json",
-      "checksum": ""
+      "checksum": "6d8dcf98eca132dc875f987af8e109c77b7c6b712f71a7cbb1c230cff34ff1af"
     },
     {
       "machineId": "funky_juggler_2",
       "fileName": "funky_juggler_2.json",
-      "checksum": ""
+      "checksum": "c72471bde85f8c8e151a670758fd7db86f89831dcb6e670eb8e02a6111992a33"
     },
     {
       "machineId": "happy_juggler_v3",
       "fileName": "happy_juggler_v3.json",
-      "checksum": ""
+      "checksum": "487e62dce65be1982f70e306a611f45eb1152373896a7720c96845a2c3d668ea"
     },
     {
       "machineId": "gogo_juggler_3",
       "fileName": "gogo_juggler_3.json",
-      "checksum": ""
+      "checksum": "7622e32bd3935647768ebaa860bc5561f2ad2bfa3d33e6a893a186c5ca17929e"
     },
     {
       "machineId": "hokuto",
       "fileName": "hokuto.json",
-      "checksum": ""
+      "checksum": "1862fab8bc014714e3959f39a028774e916fdee2d62891db3c0660b192d97862"
     },
     {
       "machineId": "kabaneri",
       "fileName": "kabaneri.json",
-      "checksum": ""
+      "checksum": "54b4b240537541551373953fccf07a4bd4c082fdfd10f9c0644464fb651c1bc1"
     },
     {
       "machineId": "monster_hunter_rise",
       "fileName": "monster_hunter_rise.json",
-      "checksum": ""
+      "checksum": "44740fccbacb8b869cded55fd39a23fbc9f4f6631483ed611201cbe6b6a1fd09"
     },
     {
       "machineId": "karakuri_circus",
       "fileName": "karakuri_circus.json",
-      "checksum": ""
+      "checksum": "5d096150b60586e4d85978415d1903bcec4a47e689a77a6d6da9f78161448232"
     },
     {
       "machineId": "valvrave",
       "fileName": "valvrave.json",
-      "checksum": ""
+      "checksum": "fcfc052eefd5b53a5f426f3a4596bb1ef2eb873fd3f416f982e3dba077ab5bed"
+    },
+    {
+      "machineId": "dmm_slot_001",
+      "fileName": "dmm_slot_001.json",
+      "checksum": "fd3277930eb4fada8841997cdb6d3374808bf1458136d6cadee8d8e0b5de7072"
+    },
+    {
+      "machineId": "dmm_slot_002",
+      "fileName": "dmm_slot_002.json",
+      "checksum": "d8c4de262ff46e090c44c816156b9699a454bf770f92fd797f1e93baeed89e12"
+    },
+    {
+      "machineId": "dmm_slot_003",
+      "fileName": "dmm_slot_003.json",
+      "checksum": "659d584381d34b88f2dced87567bf66fafd6abbca350fd48cc22144f39e89dfd"
+    },
+    {
+      "machineId": "dmm_slot_004",
+      "fileName": "dmm_slot_004.json",
+      "checksum": "ebcc3ec7626decea36c181eda79867b7d97e2f0d6649bad958695f5ce594a3cd"
+    },
+    {
+      "machineId": "dmm_slot_005",
+      "fileName": "dmm_slot_005.json",
+      "checksum": "49a0308fd509fd33509e37be7a8e38eb10f65b642ef059fa60c567f2baa6920c"
+    },
+    {
+      "machineId": "dmm_slot_006",
+      "fileName": "dmm_slot_006.json",
+      "checksum": "e6068b2a8b8afca69e1a5dc285c60eab029442444df1abc135947db6b155fe6c"
+    },
+    {
+      "machineId": "dmm_slot_007",
+      "fileName": "dmm_slot_007.json",
+      "checksum": "07dea7814bdc563452c8a3ef6605b081e609ee7661ee87588fa6246ddacc64fc"
+    },
+    {
+      "machineId": "dmm_slot_008",
+      "fileName": "dmm_slot_008.json",
+      "checksum": "2637d331340e406dcba325b2a5564da3226d1ef0e86bb92480b9f413a60b630c"
+    },
+    {
+      "machineId": "dmm_slot_009",
+      "fileName": "dmm_slot_009.json",
+      "checksum": "b6976b5041ecad730f9402fbe79c9cc61b469ed92918dc04f71342182641f898"
+    },
+    {
+      "machineId": "dmm_slot_010",
+      "fileName": "dmm_slot_010.json",
+      "checksum": "4b8c1ec9166e3591d9ff67c0fd9ca70012e175f201117b53331a33603f976a36"
+    },
+    {
+      "machineId": "dmm_slot_011",
+      "fileName": "dmm_slot_011.json",
+      "checksum": "27d1ce632e812a5bd68350fca1122d69b3de4cfb64f8f35ddc7b4d2d0de67d4f"
+    },
+    {
+      "machineId": "dmm_slot_012",
+      "fileName": "dmm_slot_012.json",
+      "checksum": "0991951c4f7adf9139328ada8b1f155c8d555d3f78d9c2b90b3cba2ce5556641"
+    },
+    {
+      "machineId": "dmm_slot_013",
+      "fileName": "dmm_slot_013.json",
+      "checksum": "c291acbeffc4fcb5191667a8a6fc91e40b2bb71f2a2306a1258351e86e0c19e0"
+    },
+    {
+      "machineId": "dmm_slot_014",
+      "fileName": "dmm_slot_014.json",
+      "checksum": "0d9df704ee0a537301be9e10f9dbb04f0b3483e811d560e1db702219556089e9"
+    },
+    {
+      "machineId": "dmm_slot_015",
+      "fileName": "dmm_slot_015.json",
+      "checksum": "118c4b298ab7037f09db0b85caa3f78799e608cfb180ca7ff54cf1dfd7d047a0"
+    },
+    {
+      "machineId": "dmm_slot_016",
+      "fileName": "dmm_slot_016.json",
+      "checksum": "7af1e05678d0eb2bb15f23c08d999a930800573351b70b3c0671f67063fad0f3"
+    },
+    {
+      "machineId": "dmm_slot_017",
+      "fileName": "dmm_slot_017.json",
+      "checksum": "8276958f7004b930f99dc5bebe74c56edee84463ddaec993309cc91ac03c7982"
+    },
+    {
+      "machineId": "dmm_slot_018",
+      "fileName": "dmm_slot_018.json",
+      "checksum": "c118b1dc5cd3d896dec8e0031842a468f59e09cef74c43f16e3378f682e04a60"
+    },
+    {
+      "machineId": "dmm_slot_019",
+      "fileName": "dmm_slot_019.json",
+      "checksum": "c98074b7ec34a08197016b6aa7ab12878aee2251f358230549ce0113a14c509e"
+    },
+    {
+      "machineId": "dmm_slot_020",
+      "fileName": "dmm_slot_020.json",
+      "checksum": "e6ff719ba56272bd40e55423adbbe806a51d57cbb56f2b0bb8457916e7d7dd06"
+    },
+    {
+      "machineId": "dmm_slot_021",
+      "fileName": "dmm_slot_021.json",
+      "checksum": "f11dfecc53224f373c7d6ed67e79189b4a9c4ad5253205b5139b4582f44651a4"
+    },
+    {
+      "machineId": "dmm_slot_022",
+      "fileName": "dmm_slot_022.json",
+      "checksum": "e42d996eaf9f5acbfeb842b005ed14b44a1ec18302ceb47fb87b166573ffe005"
+    },
+    {
+      "machineId": "dmm_slot_023",
+      "fileName": "dmm_slot_023.json",
+      "checksum": "62c57824e3d29f20001fbdd7633426ed9268bf9601c7d97ad613c8f51483c65c"
+    },
+    {
+      "machineId": "dmm_slot_024",
+      "fileName": "dmm_slot_024.json",
+      "checksum": "f6e45286056f740bbcfa8cbe1f4d71d367bb0c3393e4ee5706b567cbbcf7997d"
+    },
+    {
+      "machineId": "dmm_slot_025",
+      "fileName": "dmm_slot_025.json",
+      "checksum": "1b0a5388982a1b9294a90a589e6f9ff8f53550a44465f8ee8d5d42cf456f2260"
+    },
+    {
+      "machineId": "dmm_slot_026",
+      "fileName": "dmm_slot_026.json",
+      "checksum": "06b8bcd7a96115a3eabd30612326a02aa44acc88fb766276a1014298b682f93c"
+    },
+    {
+      "machineId": "dmm_slot_027",
+      "fileName": "dmm_slot_027.json",
+      "checksum": "4ce45ef951d282ce925b66755483f177d722c313d3b7b3ec5ff8f7fe5238d770"
+    },
+    {
+      "machineId": "dmm_slot_028",
+      "fileName": "dmm_slot_028.json",
+      "checksum": "e71b7af7f43c1057a94794ed94a7d0bf4fac1ce4f554c5e0de5ee3477b379b72"
+    },
+    {
+      "machineId": "dmm_slot_029",
+      "fileName": "dmm_slot_029.json",
+      "checksum": "9b45af868428f67e7d01e2df960dd38470c60015bf8c92bd3b1e372be3b94d73"
+    },
+    {
+      "machineId": "dmm_slot_030",
+      "fileName": "dmm_slot_030.json",
+      "checksum": "f9ec555c10c42983b5bdfb7555794768ab3087186e1a49e9a25f41b37b4b6eed"
+    },
+    {
+      "machineId": "dmm_slot_031",
+      "fileName": "dmm_slot_031.json",
+      "checksum": "02b415d5e50765a742cb0ac28b118acf5803ea354e9af85a10f4d860ecc7c0bd"
+    },
+    {
+      "machineId": "dmm_slot_032",
+      "fileName": "dmm_slot_032.json",
+      "checksum": "aad5067b62ae768641a4517aa52f1a2c2427e126cdfa4c4b6b3d54b63586fa77"
+    },
+    {
+      "machineId": "dmm_slot_033",
+      "fileName": "dmm_slot_033.json",
+      "checksum": "d2695380c04d2911f607e8f5d89d73a99545621c400e8d614b94b93c29681478"
+    },
+    {
+      "machineId": "dmm_slot_034",
+      "fileName": "dmm_slot_034.json",
+      "checksum": "c243fad615699f23232ac3e21f2e64b6b2073a430ab2785c16eedbcf1df65fc1"
+    },
+    {
+      "machineId": "dmm_slot_035",
+      "fileName": "dmm_slot_035.json",
+      "checksum": "80bebc85aab7efe0b47792360c9cbaa113d691c937bab79b7fb2441b11c06619"
+    },
+    {
+      "machineId": "dmm_slot_036",
+      "fileName": "dmm_slot_036.json",
+      "checksum": "5f1550083c9555595b1331b84c4ab2a9e25c6c4dc37eec98f1357c190e376765"
+    },
+    {
+      "machineId": "dmm_slot_037",
+      "fileName": "dmm_slot_037.json",
+      "checksum": "222ceebd846d6091d939d1c5ab58d594d3a8f13af356e6bb0d2c4e2fdcf964b1"
+    },
+    {
+      "machineId": "dmm_slot_038",
+      "fileName": "dmm_slot_038.json",
+      "checksum": "b15b588e4b6943c5fffdb99870c971765803c441ad834b5c792eb19cacc377f0"
+    },
+    {
+      "machineId": "dmm_slot_039",
+      "fileName": "dmm_slot_039.json",
+      "checksum": "b4aa2663dcc5aabd836e10893f826d283dd8cf4e0b24a9a3188a855c0508e2bc"
+    },
+    {
+      "machineId": "dmm_slot_040",
+      "fileName": "dmm_slot_040.json",
+      "checksum": "3d6de26b814b85f5813b420567b651fd874a535658b95c9e934502cd59c85f44"
     }
   ]
 }

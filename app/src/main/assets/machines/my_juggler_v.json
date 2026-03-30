@@ -6,7 +6,9 @@
     "type": "BONUS",
     "releaseDate": "2025-01-01",
     "isActive": true,
-    "notes": "初期登録用の参考データ。REG比率を重めに設定。"
+    "notes": "初期登録用の参考データ。REG比率を重めに設定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4029",
+    "ichigekiUrl": "https://1geki.jp/slot/s_mj5/"
   },
   "counterDefinitions": [
     {
