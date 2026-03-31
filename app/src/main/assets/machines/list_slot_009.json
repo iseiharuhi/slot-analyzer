@@ -1,0 +1,193 @@
+{
+  "machine": {
+    "id": "list_slot_009",
+    "name": "L麻雀格闘倶楽部 覚醒",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2023-09-19",
+    "isActive": true,
+    "notes": "partial: 一撃掲載のAT初当り確率と通常時10枚ベル出現率を反映。AT初当りを主軸、10枚ベルを小役補助として採用。モード別天井は通常770G+α・引き戻し390G+α・裏覚醒準備960G+α・覚醒/裏覚醒160G+α。設定変更時は160G+αまでの当選割合が高いが固定短縮ではないため、notes と天井説明で補足する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4401",
+    "ichigekiUrl": "https://1geki.jp/slot/s_mfckakusei/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「格闘倶楽部RUSH」初当り回数。主判別項目。"
+    },
+    {
+      "key": "bell_count",
+      "displayName": "10枚ベル",
+      "category": "SMALL_ROLE",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時の10枚ベル回数。高設定ほど出現率が高い補助要素。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 246.8,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 236.3,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 223.9,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 208.9,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 172.9,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 141.6,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "AT初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "bell_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 10.7,
+          "weight": 0.8,
+          "minSampleSize": 100,
+          "note": "通常時10枚ベル出現率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 10.7,
+          "weight": 0.8,
+          "minSampleSize": 100,
+          "note": "通常時10枚ベル出現率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 10.3,
+          "weight": 0.8,
+          "minSampleSize": 100,
+          "note": "通常時10枚ベル出現率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 9.9,
+          "weight": 0.8,
+          "minSampleSize": 100,
+          "note": "通常時10枚ベル出現率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 9.6,
+          "weight": 0.8,
+          "minSampleSize": 100,
+          "note": "通常時10枚ベル出現率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 9.3,
+          "weight": 0.8,
+          "minSampleSize": 100,
+          "note": "通常時10枚ベル出現率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_mode_ceiling",
+      "displayName": "通常モード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 770,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "通常モードは770G+α消化後の次対局でAT当選。"
+    },
+    {
+      "ruleKey": "pullback_mode_ceiling",
+      "displayName": "引き戻しモード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 390,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "引き戻しモードは390G+αでAT当選。"
+    },
+    {
+      "ruleKey": "ura_kakusei_ready_ceiling",
+      "displayName": "裏覚醒準備モード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 960,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "裏覚醒準備モードは960G+αで到達。"
+    },
+    {
+      "ruleKey": "kakusei_mode_ceiling",
+      "displayName": "覚醒/裏覚醒モード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 160,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "覚醒モード・裏覚醒モードは160G+αでAT当選。設定変更時は160G+αまでの当選割合が高い。"
+    }
+  ]
+}

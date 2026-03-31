@@ -2,11 +2,11 @@
   "machine": {
     "id": "dmm_slot_026",
     "name": "L花の慶次～佐渡攻めの章〜",
-    "manufacturer": null,
+    "manufacturer": "EXCITE",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2023-12-04",
     "isActive": true,
-    "notes": "公開解析ベースへ更新。初当りとAT「修羅の刻」初当りを主軸に再構成。",
+    "notes": "partial: DMM公開の初当り確率とAT「修羅の刻」初当りを主軸に維持。おみくじ・終了画面などの示唆要素は強いが現行UIでの定量入力が難しいため、数値比較は初当り2軸に絞って保守運用する。",
     "dmmUrl": "https://p-town.dmm.com/machines/4456",
     "ichigekiUrl": "https://1geki.jp/slot/l_keiji_sado/"
   },

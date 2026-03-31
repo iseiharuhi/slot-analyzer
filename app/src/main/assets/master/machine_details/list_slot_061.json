@@ -1,0 +1,19 @@
+{
+  "machineId": "list_slot_061",
+  "machineName": "麻雀物語",
+  "status": "partial",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/specials/4159",
+      "status": "verified_special_page"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_mjnmngtr/",
+      "status": "verified_direct_page"
+    }
+  ]
+}

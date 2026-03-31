@@ -1,24 +1,24 @@
 {
   "machineId": "dmm_slot_022",
   "machineName": "ニューシオサイ",
-  "status": "draft",
-  "capturedDate": "2026-03-29",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
   "sourceListPage": 2,
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "unresolved_direct_url"
+      "url": "https://p-town.dmm.com/machines/4476",
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot?page=2",
+      "url": "https://p-town.dmm.com/machines/slot",
       "status": "verified_list_page"
     },
     {
       "label": "一撃",
-      "url": null,
-      "status": "not_resolved_in_this_run"
+      "url": "https://1geki.jp/slot/s_newsiosai_sa/",
+      "status": "verified_direct"
     }
   ]
 }

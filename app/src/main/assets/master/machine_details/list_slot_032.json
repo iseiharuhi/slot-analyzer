@@ -1,0 +1,24 @@
+{
+  "machineId": "list_slot_032",
+  "machineName": "FAIRY TAIL2",
+  "status": "partial",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4191",
+      "status": "verified_direct"
+    },
+    {
+      "label": "DMMぱちタウン(掲載一覧)",
+      "url": "https://p-town.dmm.com/machines/slot",
+      "status": "verified_list_page"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_fairytail2/",
+      "status": "verified_direct"
+    }
+  ]
+}

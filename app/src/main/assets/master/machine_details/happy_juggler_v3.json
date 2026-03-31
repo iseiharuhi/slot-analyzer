@@ -1,0 +1,19 @@
+{
+  "machineId": "happy_juggler_v3",
+  "machineName": "ハッピージャグラーV III",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4230",
+      "status": "verified_direct"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_happyjuggler8/",
+      "status": "verified_direct"
+    }
+  ]
+}

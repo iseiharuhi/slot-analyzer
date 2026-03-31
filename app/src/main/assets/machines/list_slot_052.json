@@ -1,0 +1,125 @@
+{
+  "machine": {
+    "id": "list_slot_052",
+    "name": "沖ドキ！DUO",
+    "manufacturer": "ACROSS",
+    "type": "AT",
+    "releaseDate": "2021-12-20",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 BIG初当り・REG初当り・チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4031",
+    "ichigekiUrl": "https://1geki.jp/slot/s_okidoki_duo_25/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "天国連を除いた初当り回数を入力。主判別項目。"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG初当り",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のBIG初当り回数。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG初当り",
+      "category": "BONUS",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のREG初当り回数。"
+    },
+    {
+      "key": "cherry_count",
+      "displayName": "チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "角チェリー・中段チェリー等をまとめた補助入力。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 255.1,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "一撃掲載の公開初当り確率。通常時の主判別項目。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 244.4,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "一撃掲載の公開初当り確率。通常時の主判別項目。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 228.4,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "一撃掲載の公開初当り確率。通常時の主判別項目。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 216.7,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "一撃掲載の公開初当り確率。通常時の主判別項目。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 206.1,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "一撃掲載の公開初当り確率。通常時の主判別項目。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 196.8,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "一撃掲載の公開初当り確率。通常時の主判別項目。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

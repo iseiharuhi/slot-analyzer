@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": "2026-03-02",
     "isActive": true,
-    "notes": "4段階設定対応に合わせて設定1・2・5・6のボーナス確率と通常時小役差を反映。REGとベル合算を主軸、スイカ合算は補助。チェリー系は差が小さいため未収録。",
+    "notes": "partial: 公開比較値を確認できたREG・ベル合算・スイカ合算・BIG・ボーナス合算を主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4943",
     "ichigekiUrl": "https://1geki.jp/slot/l_thunder_v/"
   },

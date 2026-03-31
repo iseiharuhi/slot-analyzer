@@ -6,7 +6,7 @@
     "type": "HYBRID",
     "releaseDate": "2026-05-11",
     "isActive": true,
-    "notes": "公開解析ベースへ更新。現時点で信頼できる数値差は初当たり確率のみのため、BIG/REG/CZ/ATの暫定差分は撤去。まずは初当たりを軸にした保守的な完全版。",
+    "notes": "partial: 公開比較値を確認できた初当たりを主軸に反映。 BIG・REG/その他ボーナス・CZなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4984",
     "ichigekiUrl": "https://1geki.jp/slot/s_sp_rioace/"
   },

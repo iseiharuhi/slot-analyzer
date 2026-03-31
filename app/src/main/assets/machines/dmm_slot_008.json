@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": "2026-04-20",
     "isActive": true,
-    "notes": "暫定テンプレ値を撤去し、公開済みのBIG・REG・合算ボーナス確率へ全面差し替え。現状は通常時ボーナス差のみを採用し、未公開の小役・CZ/ST関連は反映保留。合算はBIG/REGと重複するため補助指標として軽め。",
+    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4964",
     "ichigekiUrl": null
   },

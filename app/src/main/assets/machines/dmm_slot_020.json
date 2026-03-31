@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。ボーナス初当りと炎炎ループ初当りを主指標に再構成。未確定の補助要素は採用していません。",
+    "notes": "partial: 公開比較値を確認できたボーナス初当り・炎炎ループ初当りを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4926",
     "ichigekiUrl": "https://1geki.jp/slot/l_ennenn2/"
   },

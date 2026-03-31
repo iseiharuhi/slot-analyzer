@@ -1,0 +1,134 @@
+{
+  "machine": {
+    "id": "list_slot_012",
+    "name": "L南国育ち",
+    "manufacturer": "オリンピアエステート",
+    "type": "AT",
+    "releaseDate": "2024-03-04",
+    "isActive": true,
+    "notes": "partial: DMM公開のボーナス合算と初代モード突入率を反映。チェリー/スイカ契機当選率や楽曲変化にも設定差はあるが、総ゲーム数分母へ安全に落とし込みやすい2項目を優先した。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4512",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り合算",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常A/B・引き戻し・チャンスなどを含めた初当りボーナス合算。主判別項目。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "初代モード突入",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "初代モードへ入った回数。サンプルは重いが強い補助要素。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 299.8,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "DMMのモード合算ボーナス初当り"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 291.0,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "DMMのモード合算ボーナス初当り"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 267.3,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "DMMのモード合算ボーナス初当り"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 238.6,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "DMMのモード合算ボーナス初当り"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 208.8,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "DMMのモード合算ボーナス初当り"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 40000.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "DMMの初代モード突入確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 30000.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "DMMの初代モード突入確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 20000.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "DMMの初代モード突入確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 10000.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "DMMの初代モード突入確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 7000.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "DMMの初代モード突入確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

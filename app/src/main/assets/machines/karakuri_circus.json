@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "公開スペック不足機を含むため、AT初当り/CZ初当りを主軸に再整理した推測データ。低頻度の直撃・ボーナスは過信を避けるため主判別から除外。",
+    "notes": "公開解析とDMM掲載の設定推測記事を再監査。主判別はAT初当りを中心に、CZは補助判別として採用。AT直撃・終了画面・連打上乗せ枚数表示などは強いが入力形式を増やしすぎないため今回は未反映。数値の粗い項目は保守的な重みへ調整。",
     "dmmUrl": "https://p-town.dmm.com/machines/4360",
     "ichigekiUrl": "https://1geki.jp/slot/l_karakuricircus/"
   },
@@ -79,43 +79,43 @@
         {
           "settingNo": 1,
           "denominatorValue": 270.0,
-          "weight": 0.85,
-          "minSampleSize": 3,
+          "weight": 0.72,
+          "minSampleSize": 5,
           "note": "CZ初当りベースで補助判別（公開スペック中心）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 258.0,
-          "weight": 0.85,
-          "minSampleSize": 3,
+          "weight": 0.72,
+          "minSampleSize": 5,
           "note": "CZ初当りベースで補助判別（公開スペック中心）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 246.0,
-          "weight": 0.85,
-          "minSampleSize": 3,
+          "weight": 0.72,
+          "minSampleSize": 5,
           "note": "CZ初当りベースで補助判別（公開スペック中心）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 232.0,
-          "weight": 0.85,
-          "minSampleSize": 3,
+          "weight": 0.72,
+          "minSampleSize": 5,
           "note": "CZ初当りベースで補助判別（公開スペック中心）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 218.0,
-          "weight": 0.85,
-          "minSampleSize": 3,
+          "weight": 0.72,
+          "minSampleSize": 5,
           "note": "CZ初当りベースで補助判別（公開スペック中心）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 204.0,
-          "weight": 0.85,
-          "minSampleSize": 3,
+          "weight": 0.72,
+          "minSampleSize": 5,
           "note": "CZ初当りベースで補助判別（公開スペック中心）"
         }
       ]
@@ -126,43 +126,43 @@
         {
           "settingNo": 1,
           "denominatorValue": 540.0,
-          "weight": 1.25,
-          "minSampleSize": 2,
+          "weight": 1.1,
+          "minSampleSize": 3,
           "note": "AT初当りベースで判別（公開スペック中心）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 505.0,
-          "weight": 1.25,
-          "minSampleSize": 2,
+          "weight": 1.1,
+          "minSampleSize": 3,
           "note": "AT初当りベースで判別（公開スペック中心）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 470.0,
-          "weight": 1.25,
-          "minSampleSize": 2,
+          "weight": 1.1,
+          "minSampleSize": 3,
           "note": "AT初当りベースで判別（公開スペック中心）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 430.0,
-          "weight": 1.25,
-          "minSampleSize": 2,
+          "weight": 1.1,
+          "minSampleSize": 3,
           "note": "AT初当りベースで判別（公開スペック中心）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 390.0,
-          "weight": 1.25,
-          "minSampleSize": 2,
+          "weight": 1.1,
+          "minSampleSize": 3,
           "note": "AT初当りベースで判別（公開スペック中心）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 350.0,
-          "weight": 1.25,
-          "minSampleSize": 2,
+          "weight": 1.1,
+          "minSampleSize": 3,
           "note": "AT初当りベースで判別（公開スペック中心）"
         }
       ]

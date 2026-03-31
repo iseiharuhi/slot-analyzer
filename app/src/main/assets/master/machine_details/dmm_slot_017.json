@@ -8,12 +8,17 @@
     {
       "label": "DMMぱちタウン",
       "url": "https://p-town.dmm.com/machines/4928",
-      "status": "verified_direct_url"
+      "status": "verified_direct"
+    },
+    {
+      "label": "DMMぱちタウン(掲載一覧)",
+      "url": "https://p-town.dmm.com/machines/slot",
+      "status": "verified_list_page"
     },
     {
       "label": "一撃",
       "url": "https://1geki.jp/slot/l_hanabi/",
-      "status": "verified_direct_url"
+      "status": "verified_direct"
     }
   ]
 }

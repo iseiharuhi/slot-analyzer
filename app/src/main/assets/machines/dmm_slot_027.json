@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。設定1・2・4・5・6の5段階対応。公開差分はAT初当り中心のため単軸構成です。",
+    "notes": "公開解析とDMM実戦特集を再監査。設定段階は1・2・4・5・6対応。主判別はAT初当りで維持し、ライバルモードやAT直撃は有効だが試行不足になりやすいため次段階での追加候補とした。現段階では初当りの信頼性を優先して最低サンプルを引き上げている。",
     "dmmUrl": "https://p-town.dmm.com/machines/4450",
     "ichigekiUrl": "https://1geki.jp/slot/l_monkeyturn5/"
   },
@@ -43,36 +43,36 @@
         {
           "settingNo": 1,
           "denominatorValue": 299.8,
-          "weight": 1.0,
-          "minSampleSize": 4,
+          "weight": 1.1,
+          "minSampleSize": 5,
           "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 2,
           "denominatorValue": 295.5,
-          "weight": 1.0,
-          "minSampleSize": 4,
+          "weight": 1.1,
+          "minSampleSize": 5,
           "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 4,
           "denominatorValue": 258.8,
-          "weight": 1.0,
-          "minSampleSize": 4,
+          "weight": 1.1,
+          "minSampleSize": 5,
           "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 5,
           "denominatorValue": 235.7,
-          "weight": 1.0,
-          "minSampleSize": 4,
+          "weight": 1.1,
+          "minSampleSize": 5,
           "note": "設定1・2・4・5・6のみ公開"
         },
         {
           "settingNo": 6,
           "denominatorValue": 222.9,
-          "weight": 1.0,
-          "minSampleSize": 4,
+          "weight": 1.1,
+          "minSampleSize": 5,
           "note": "設定1・2・4・5・6のみ公開"
         }
       ]

@@ -1,0 +1,19 @@
+{
+  "machineId": "im_juggler_ex",
+  "machineName": "アイムジャグラーEX",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/3626",
+      "status": "verified_direct"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_ij_ex_6/",
+      "status": "verified_direct"
+    }
+  ]
+}

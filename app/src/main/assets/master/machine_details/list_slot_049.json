@@ -1,0 +1,24 @@
+{
+  "machineId": "list_slot_049",
+  "machineName": "A-SLOT+ ディスクアップ ULTRAREMIX",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": null,
+      "status": "not_resolved_in_this_run"
+    },
+    {
+      "label": "DMMぱちタウン(掲載一覧)",
+      "url": "https://p-town.dmm.com/machines/slot",
+      "status": "verified_list_page"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_discup_ur/",
+      "status": "verified_direct"
+    }
+  ]
+}

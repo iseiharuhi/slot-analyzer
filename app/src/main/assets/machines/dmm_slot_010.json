@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": "2026-04-06",
     "isActive": true,
-    "notes": "4段階設定対応に合わせて設定1・2・5・6の公開済みボーナス確率を反映。小役差は未確認のため未収録。REGと合算を重視し、BIGは補助に設定。",
+    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4986",
     "ichigekiUrl": null
   },

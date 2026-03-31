@@ -1,0 +1,172 @@
+{
+  "machine": {
+    "id": "list_slot_014",
+    "name": "L東京喰種",
+    "manufacturer": "スパイキー",
+    "type": "AT",
+    "releaseDate": "2025-02-03",
+    "isActive": true,
+    "notes": "partial: DMM公開値ベースでCZ合算とエピソードボーナスを反映。東京喰種はAT初当り差も大きいが、現時点ではDMM本文から全設定の個別数値を安定取得できなかったため、今回は総CZとエピソードボーナスを主軸に採用。AT終了画面や月山招待状などの示唆演出は入力カウンタ化よりもメモ運用向きのため notes 側に留める。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4742",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "エピソードボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "エピソードボーナス回数。高設定ほど当選しやすく、設定差が大きい補助判別要素。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ合算",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "レミニセンス＋大喰いの利世の合算回数。主要CZの総回数として扱う。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。公開記事では設定差が大きいとされるが、今回は個別分母値の採用を保留。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "直撃AT・特殊当選・上位契機などの補助記録用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 262.6,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "レミニセンス＋大喰いの利世のCZ合算"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 255.5,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "レミニセンス＋大喰いの利世のCZ合算"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 246.5,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "レミニセンス＋大喰いの利世のCZ合算"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 233.1,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "レミニセンス＋大喰いの利世のCZ合算"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 216.4,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "レミニセンス＋大喰いの利世のCZ合算"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 203.6,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "レミニセンス＋大喰いの利世のCZ合算"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 6620.2,
+          "weight": 1.1,
+          "minSampleSize": 1,
+          "note": "エピソードボーナス当選確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 5879.7,
+          "weight": 1.1,
+          "minSampleSize": 1,
+          "note": "エピソードボーナス当選確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 5114.5,
+          "weight": 1.1,
+          "minSampleSize": 1,
+          "note": "エピソードボーナス当選確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 4062.5,
+          "weight": 1.1,
+          "minSampleSize": 1,
+          "note": "エピソードボーナス当選確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 3166.7,
+          "weight": 1.1,
+          "minSampleSize": 1,
+          "note": "エピソードボーナス当選確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 2639.5,
+          "weight": 1.1,
+          "minSampleSize": 1,
+          "note": "エピソードボーナス当選確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

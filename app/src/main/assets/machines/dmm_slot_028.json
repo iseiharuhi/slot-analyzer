@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。設定1・2・5・6の4段階対応へ変更。REGと合算を主軸に、ベルAを小役補助として追加しました。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・ベルAを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4449",
     "ichigekiUrl": "https://1geki.jp/slot/s_crankycrest/"
   },

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。AT初当り・CZ「BREAK BATTLE」・EP&SP当選率を採用し、OVER BREAK率は手動集計負荷が高いため未採用です。",
+    "notes": "partial: 公開比較値を確認できたAT初当り・EP&SP当選・BREAK BATTLEを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4445",
     "ichigekiUrl": "https://1geki.jp/slot/l_toaru_index/"
   },

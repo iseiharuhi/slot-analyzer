@@ -1,0 +1,207 @@
+{
+  "machine": {
+    "id": "list_slot_001",
+    "name": "Lゴブリンスレイヤー",
+    "manufacturer": null,
+    "type": "AT",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "公開解析とDMM特集を再監査。主判別はAT初当りと共通ベル。CZはリプレイ3連や連続役契機など複数経路が混在するため補助指標として保守的な重みに調整。終了画面・藤丸コイン・羽・獲得枚数表示は強い示唆だが現行入力仕様では未反映。",
+    "dmmUrl": null,
+    "ichigekiUrl": "https://1geki.jp/slot/s_l_goblinslayer/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「ゴブリンスレイヤーRUSH」の初当り回数。主判別項目。"
+    },
+    {
+      "key": "common_bell_count",
+      "displayName": "共通ベル",
+      "category": "SMALL_ROLE",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "左から押して揃う共通ベル。設定差が大きい主判別項目。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ合算",
+      "category": "AT_CZ",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "全CZ合算。AT初当りと併せて補助評価に使う。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 547.9,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り合算"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 538.4,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り合算"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 517.7,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り合算"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 492.3,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り合算"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 470.5,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り合算"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 435.7,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り合算"
+        }
+      ]
+    },
+    {
+      "counterKey": "common_bell_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 102.4,
+          "weight": 1.25,
+          "minSampleSize": 30,
+          "note": "共通ベル確率。主判別項目。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 97.5,
+          "weight": 1.25,
+          "minSampleSize": 30,
+          "note": "共通ベル確率。主判別項目。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 93.1,
+          "weight": 1.25,
+          "minSampleSize": 30,
+          "note": "共通ベル確率。主判別項目。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 86.2,
+          "weight": 1.25,
+          "minSampleSize": 30,
+          "note": "共通ベル確率。主判別項目。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 81.9,
+          "weight": 1.25,
+          "minSampleSize": 30,
+          "note": "共通ベル確率。主判別項目。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 71.9,
+          "weight": 1.25,
+          "minSampleSize": 30,
+          "note": "共通ベル確率。主判別項目。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 226.0,
+          "weight": 0.72,
+          "minSampleSize": 10,
+          "note": "全CZ合算。補助判別。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 223.0,
+          "weight": 0.72,
+          "minSampleSize": 10,
+          "note": "全CZ合算。補助判別。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 215.0,
+          "weight": 0.72,
+          "minSampleSize": 10,
+          "note": "全CZ合算。補助判別。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 204.0,
+          "weight": 0.72,
+          "minSampleSize": 10,
+          "note": "全CZ合算。補助判別。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 196.0,
+          "weight": 0.72,
+          "minSampleSize": 10,
+          "note": "全CZ合算。補助判別。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 184.0,
+          "weight": 0.72,
+          "minSampleSize": 10,
+          "note": "全CZ合算。補助判別。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

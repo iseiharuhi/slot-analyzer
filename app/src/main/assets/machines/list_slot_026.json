@@ -1,0 +1,232 @@
+{
+  "machine": {
+    "id": "list_slot_026",
+    "name": "EVANGELION FESTIVAL",
+    "manufacturer": "ビスティ",
+    "type": "AT",
+    "releaseDate": "2020-03-02",
+    "isActive": true,
+    "notes": "partial: 公開解析ベースへ更新。CZ初当り・AT初当り・CZ+AT初当り合算を採用。弱チェリーにも設定差があるが、現行テンプレでは小役カウンタ未追加のため今回は導入を見送り、次回のカウンタ拡張候補として notes に残す。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3642",
+    "ichigekiUrl": "https://1geki.jp/slot/s_eva_fes/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "CZ+AT初当り",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "周期到達からのCZまたはAT初当り合算。全体の最重要指標。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ「フェスティバルチャレンジ」初当り",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ初当り回数。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ非経由を含むAT初当り回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "AT直行メモ",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "CZ非経由のAT直行回数メモ用。高設定ほど優遇。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 230.0,
+          "weight": 1.1,
+          "minSampleSize": 4,
+          "note": "CZ+AT初当り合算"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 220.7,
+          "weight": 1.1,
+          "minSampleSize": 4,
+          "note": "CZ+AT初当り合算"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 214.8,
+          "weight": 1.1,
+          "minSampleSize": 4,
+          "note": "CZ+AT初当り合算"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 184.5,
+          "weight": 1.1,
+          "minSampleSize": 4,
+          "note": "CZ+AT初当り合算"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 173.9,
+          "weight": 1.1,
+          "minSampleSize": 4,
+          "note": "CZ+AT初当り合算"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 136.9,
+          "weight": 1.1,
+          "minSampleSize": 4,
+          "note": "CZ+AT初当り合算"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 386.8,
+          "weight": 0.9,
+          "minSampleSize": 3,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 377.6,
+          "weight": 0.9,
+          "minSampleSize": 3,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 379.7,
+          "weight": 0.9,
+          "minSampleSize": 3,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 326.3,
+          "weight": 0.9,
+          "minSampleSize": 3,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 327.0,
+          "weight": 0.9,
+          "minSampleSize": 3,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 261.2,
+          "weight": 0.9,
+          "minSampleSize": 3,
+          "note": "CZ初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 567.3,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 531.0,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 494.8,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 424.6,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 371.7,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 287.7,
+          "weight": 1.0,
+          "minSampleSize": 2,
+          "note": "AT初当り確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "type": "CYCLE",
+      "value": 7,
+      "unit": "周期",
+      "detail": "最大7周期消化でCZ or ATに当選。平均約859G。"
+    },
+    {
+      "type": "CYCLE",
+      "value": 3,
+      "unit": "周期",
+      "detail": "フルコンプリート後とAT直撃後は最大3周期に短縮。"
+    }
+  ]
+}

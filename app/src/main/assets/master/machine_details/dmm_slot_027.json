@@ -2,7 +2,7 @@
   "machineId": "dmm_slot_027",
   "machineName": "スマスロモンキーターンV",
   "status": "verified",
-  "capturedDate": "2026-03-29",
+  "capturedDate": "2026-03-31",
   "sourceListPage": 2,
   "externalLinks": [
     {
@@ -12,7 +12,7 @@
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot?page=2",
+      "url": "https://p-town.dmm.com/machines/slot",
       "status": "verified_list_page"
     },
     {

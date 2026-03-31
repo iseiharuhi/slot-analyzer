@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。ニューシオサイはREGと合算を重視し、BIGは補助扱いで再構成しました。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4476",
     "ichigekiUrl": "https://1geki.jp/slot/s_newsiosai_sa/"
   },

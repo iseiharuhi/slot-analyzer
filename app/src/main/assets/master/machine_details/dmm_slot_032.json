@@ -8,11 +8,11 @@
     {
       "label": "DMMぱちタウン",
       "url": "https://p-town.dmm.com/machines/4486",
-      "status": "verified_direct_url"
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot?page=2",
+      "url": "https://p-town.dmm.com/machines/slot",
       "status": "verified_list_page"
     },
     {

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。ボーナス確率とAT初当りの2軸構成。公開差分のない補助指標は未採用です。",
+    "notes": "partial: 公開比較値を確認できたAT初当り・ボーナスを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4941",
     "ichigekiUrl": "https://1geki.jp/slot/l_baki2/"
   },

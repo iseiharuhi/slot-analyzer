@@ -1,0 +1,170 @@
+{
+  "machine": {
+    "id": "list_slot_005",
+    "name": "L転生したらスライムだった件",
+    "manufacturer": "YAMASA",
+    "type": "AT",
+    "releaseDate": "2023-10-02",
+    "isActive": true,
+    "notes": "partial: 一撃公開のAT「転スラっしゅ」初当りと夜の蝶当選率を採用。AT初当りを主軸、夜の蝶を補助に置き、通常C/天国移行率など割合ベースの要素はnotes管理に留める。DMM/一撃の機種URLと1200pt+α天井を反映。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4405",
+    "ichigekiUrl": "https://1geki.jp/slot/l_tensura/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "夜の蝶",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "pt特化ゾーン「夜の蝶」当選回数。公開値はあるが差は小さいため補助判別。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "特級魔族討伐戦",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "前兆/CZの回数入力用。全設定比較値が安定して公開されていないため今回は推測未使用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「転スラっしゅ」初当り回数。主判別項目。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "転生チャンス経由AT直撃などの補助メモ用。全設定の実数比較値は未採用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 370,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "AT「転スラっしゅ」初当り"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 355,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "AT「転スラっしゅ」初当り"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 296,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "AT「転スラっしゅ」初当り"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 262,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "AT「転スラっしゅ」初当り"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 245,
+          "weight": 1.2,
+          "minSampleSize": 3,
+          "note": "AT「転スラっしゅ」初当り"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 248,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "夜の蝶当選率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 236,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "夜の蝶当選率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 230,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "夜の蝶当選率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 229,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "夜の蝶当選率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 226,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "夜の蝶当選率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "point_ceiling",
+      "displayName": "通常時最大天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1200,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常Aは1200pt+αでAT抽選。通常B/Cは1000pt+α、天国は100pt+α。",
+      "isEnabled": true
+    }
+  ]
+}

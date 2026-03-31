@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "masterVersion": "0.7.7-slot-032-partial-upgrade",
+  "masterVersion": "0.7.8-list-draft-import-detailed-63",
   "machines": [
     {
       "machineId": "im_juggler_ex",
@@ -251,6 +251,321 @@
       "machineId": "dmm_slot_040",
       "fileName": "dmm_slot_040.json",
       "checksum": "3d6de26b814b85f5813b420567b651fd874a535658b95c9e934502cd59c85f44"
+    },
+    {
+      "machineId": "list_slot_001",
+      "fileName": "list_slot_001.json",
+      "checksum": "b88ce494e7a7cd646a646983747a735386b9106c2350c8878995f03528098176"
+    },
+    {
+      "machineId": "list_slot_002",
+      "fileName": "list_slot_002.json",
+      "checksum": "f05c7cc90b4f2c5b7b1437b64b0d9e40e6a3e42c5f82426ef42ef77a60b8901b"
+    },
+    {
+      "machineId": "list_slot_003",
+      "fileName": "list_slot_003.json",
+      "checksum": "5950d56898b8c3d4db363debf18a4a69594f4676ca5166c83216ec0df9551bc1"
+    },
+    {
+      "machineId": "list_slot_004",
+      "fileName": "list_slot_004.json",
+      "checksum": "08f7ed3614ca7d150fd5868c0868942498845ea16904666369b9e7834dc0a012"
+    },
+    {
+      "machineId": "list_slot_005",
+      "fileName": "list_slot_005.json",
+      "checksum": "6b5b15dde8ee7eca7883dd8a5be5df0fd548afa01973fbe4789fb173813c9064"
+    },
+    {
+      "machineId": "list_slot_006",
+      "fileName": "list_slot_006.json",
+      "checksum": "2310df47d0d0f7deb29f02a90c34327b9e7ca0307d50fc7711cfb007f182fbbf"
+    },
+    {
+      "machineId": "list_slot_007",
+      "fileName": "list_slot_007.json",
+      "checksum": "3646ba73472cef251694217c8cad2ff99bc05d71d4bfa0f5a46dabed1917b570"
+    },
+    {
+      "machineId": "list_slot_008",
+      "fileName": "list_slot_008.json",
+      "checksum": "d67bb1251c38110fb88fd1ab6b33c4d1d532cd1b57be2657031d4af95aaa9347"
+    },
+    {
+      "machineId": "list_slot_009",
+      "fileName": "list_slot_009.json",
+      "checksum": "4953db0889e78222d7844bdd8e745d2535e7e2827aaa36398ac143a20cb4f4df"
+    },
+    {
+      "machineId": "list_slot_010",
+      "fileName": "list_slot_010.json",
+      "checksum": "43b3407bcd7ba6c5cbfd4443d40d9a96b5f0697be90924145774e22b1f54f78e"
+    },
+    {
+      "machineId": "list_slot_011",
+      "fileName": "list_slot_011.json",
+      "checksum": "c848b827b1bcf33afee6329f800ae7689decafe921703e0f81c7c305cb18cb4b"
+    },
+    {
+      "machineId": "list_slot_012",
+      "fileName": "list_slot_012.json",
+      "checksum": "2f3582b8401fd11e3d092850d25c93bf740fe835984ea51263ed316831d03127"
+    },
+    {
+      "machineId": "list_slot_013",
+      "fileName": "list_slot_013.json",
+      "checksum": "2a1429b638a6886fdb7755adbe76e263e58d35fc45863f5bb2465454cfd4ca75"
+    },
+    {
+      "machineId": "list_slot_014",
+      "fileName": "list_slot_014.json",
+      "checksum": "0f424eadfefb56f0532ab5d030852f6e291bc0a41463160a6640b7f0d0825b31"
+    },
+    {
+      "machineId": "list_slot_015",
+      "fileName": "list_slot_015.json",
+      "checksum": "40e7fb85d3e25c45aae3d5f4d1ae1e7e46b9bf6d008e643fe4703ccac698cb79"
+    },
+    {
+      "machineId": "list_slot_016",
+      "fileName": "list_slot_016.json",
+      "checksum": "b22dc52b8c413d28417528ab96dcba2816edbf9ab019508a76866c3874cde8b5"
+    },
+    {
+      "machineId": "list_slot_017",
+      "fileName": "list_slot_017.json",
+      "checksum": "4953df2c84c2d1c41b4f634d8f9fab637a09303f3e8d6d03b9fadd59f8bf7447"
+    },
+    {
+      "machineId": "list_slot_018",
+      "fileName": "list_slot_018.json",
+      "checksum": "803b50133ecb365278e4150060d169a7022815635b9b5e39f175854834f5394b"
+    },
+    {
+      "machineId": "list_slot_019",
+      "fileName": "list_slot_019.json",
+      "checksum": "7fb7b1d1470d03384efd67bb2604207f051d8aa43b0357257237809ee32da733"
+    },
+    {
+      "machineId": "list_slot_020",
+      "fileName": "list_slot_020.json",
+      "checksum": "354fe118455d7977548e8be32f3b7541b8e951f25dddba3acfe537def042456c"
+    },
+    {
+      "machineId": "list_slot_021",
+      "fileName": "list_slot_021.json",
+      "checksum": "109ad6a3a926059030983d635dbe6fb665ee228ee1d629a7dedce340b56e236e"
+    },
+    {
+      "machineId": "list_slot_022",
+      "fileName": "list_slot_022.json",
+      "checksum": "14d954ed76e7637d0010dc32228f3a49c47aad3ddd47c825040a3ba0a8b8b297"
+    },
+    {
+      "machineId": "list_slot_023",
+      "fileName": "list_slot_023.json",
+      "checksum": "70af382c33398402113b654b83715a83a4afb0f3d072f6168e69d7c259e6e303"
+    },
+    {
+      "machineId": "list_slot_024",
+      "fileName": "list_slot_024.json",
+      "checksum": "0797ea001368ab171aca4e322eac1cf1176a257a02835f4241fc1c09a33d905e"
+    },
+    {
+      "machineId": "list_slot_025",
+      "fileName": "list_slot_025.json",
+      "checksum": "b53e10c143bd13820c43fcc490a1de1dc6c5f8595800fa2b8bfd2b589e6481ea"
+    },
+    {
+      "machineId": "list_slot_026",
+      "fileName": "list_slot_026.json",
+      "checksum": "bef4854cecd9d192e04297b892c53830e39d37c046bee54fe8e3bd41fc38501d"
+    },
+    {
+      "machineId": "list_slot_027",
+      "fileName": "list_slot_027.json",
+      "checksum": "58d0ad358e5614f69d20746eecc6d731de4cdfe39c27b79324ac3d17e0d18de9"
+    },
+    {
+      "machineId": "list_slot_028",
+      "fileName": "list_slot_028.json",
+      "checksum": "118172b227c41a90944b0e81ddc66eddff972ce9e30fa6edcee64aa8ad25fd9a"
+    },
+    {
+      "machineId": "list_slot_029",
+      "fileName": "list_slot_029.json",
+      "checksum": "c6d0d6de02723807f35142cbe827c5763fdfe3fb786201110896359dcec49e70"
+    },
+    {
+      "machineId": "list_slot_030",
+      "fileName": "list_slot_030.json",
+      "checksum": "a444faa2a09d04561caa1453a3ae688479bc33a47df13b3a876667dcc0172328"
+    },
+    {
+      "machineId": "list_slot_031",
+      "fileName": "list_slot_031.json",
+      "checksum": "7f5603f27b40b083bfd0bd978e728d67c8349dfe43cd8bac0011be8e54ef78a9"
+    },
+    {
+      "machineId": "list_slot_032",
+      "fileName": "list_slot_032.json",
+      "checksum": "513b35bb60b345f7fb0dd792ea86bba5b7ee6ac8751cf489ef9d3e2183e605fa"
+    },
+    {
+      "machineId": "list_slot_033",
+      "fileName": "list_slot_033.json",
+      "checksum": "935b0ed96940457f1333d3843f5bdb6c83ab9e32ca06596b3095cc591d91e67a"
+    },
+    {
+      "machineId": "list_slot_034",
+      "fileName": "list_slot_034.json",
+      "checksum": "d27aca6699b6b0756d4fbeabe9c7f0c7d6c31416d580c3bae299cd8ee4a0a4dc"
+    },
+    {
+      "machineId": "list_slot_035",
+      "fileName": "list_slot_035.json",
+      "checksum": "f2fe871bffb3a7bc354de9b746739082ece85d7b7fdd91c7ce64839ab55438d0"
+    },
+    {
+      "machineId": "list_slot_036",
+      "fileName": "list_slot_036.json",
+      "checksum": "49e8115178b5e14314a2270dbcc974154f5b239db048159cca54b3561aa16fbc"
+    },
+    {
+      "machineId": "list_slot_037",
+      "fileName": "list_slot_037.json",
+      "checksum": "11ded6fa6485ccd0b1e0f5f35524561678e20ebed3923b3d9445c70783d22851"
+    },
+    {
+      "machineId": "list_slot_038",
+      "fileName": "list_slot_038.json",
+      "checksum": "d4a240e9a5bd005df22f1ba2373a80bd5d57de12a167b6fdc65996abf93d4185"
+    },
+    {
+      "machineId": "list_slot_039",
+      "fileName": "list_slot_039.json",
+      "checksum": "5e36b3e21968f442d842fd295723eeeaf2c4ad3ee6dfb2b784b48b607536d781"
+    },
+    {
+      "machineId": "list_slot_040",
+      "fileName": "list_slot_040.json",
+      "checksum": "7b3535ba6fb8750abed9faa7f57ce0952883a00320ffe15564fe6d15b063434e"
+    },
+    {
+      "machineId": "list_slot_041",
+      "fileName": "list_slot_041.json",
+      "checksum": "66e414626cf15a3af1c6b7f008a31c51ef5827a67f94e7d0e03141a225e12511"
+    },
+    {
+      "machineId": "list_slot_042",
+      "fileName": "list_slot_042.json",
+      "checksum": "362def1c6c1da6e02e7793f5e0d70ad5c3e81a3a0ab5fc9627891950210750d0"
+    },
+    {
+      "machineId": "list_slot_043",
+      "fileName": "list_slot_043.json",
+      "checksum": "7c0f7990303d23e1941c334b887e961ab16b83444f4f513220ba96363d8bb600"
+    },
+    {
+      "machineId": "list_slot_044",
+      "fileName": "list_slot_044.json",
+      "checksum": "8f46587aab06230dda6c402ed9e39177295052ae58c61867069e9b7ccf709167"
+    },
+    {
+      "machineId": "list_slot_045",
+      "fileName": "list_slot_045.json",
+      "checksum": "b76b863479145613608a2d03c48e55b2bbfdc83486eb7df9ac58c81668ddccb9"
+    },
+    {
+      "machineId": "list_slot_046",
+      "fileName": "list_slot_046.json",
+      "checksum": "0687c7e0f6458173928b15267c834665c88c66e05592801861bda912a8bf2aac"
+    },
+    {
+      "machineId": "list_slot_047",
+      "fileName": "list_slot_047.json",
+      "checksum": "0402439421e3b12d8c0ca1347cfd4fc2c047728304e3d998a481b4a2873cca28"
+    },
+    {
+      "machineId": "list_slot_048",
+      "fileName": "list_slot_048.json",
+      "checksum": "ea7c026f00137e1933409f1bb6840861e2f809a5ae66666fe89e4114d7829a7e"
+    },
+    {
+      "machineId": "list_slot_049",
+      "fileName": "list_slot_049.json",
+      "checksum": "31bfaa65252407b420a3955feb1a085ce7c1ec8d45dc9788f61ddf519d4582c4"
+    },
+    {
+      "machineId": "list_slot_050",
+      "fileName": "list_slot_050.json",
+      "checksum": "31fae3256f0c642f0704ed73142feb2204338f9acc20329e884a005bf39b6a74"
+    },
+    {
+      "machineId": "list_slot_051",
+      "fileName": "list_slot_051.json",
+      "checksum": "ef12cd26cc01d79776e376665600faacfa531b870e32e1775e2ef1f8edffbd6c"
+    },
+    {
+      "machineId": "list_slot_052",
+      "fileName": "list_slot_052.json",
+      "checksum": "7875e95f978d5935aa01125d918e45b00daa08e02577ed5684806dcba8523ab6"
+    },
+    {
+      "machineId": "list_slot_053",
+      "fileName": "list_slot_053.json",
+      "checksum": "095d56f5fee6327d1c7d56b34eca488e29f9a8c472d08c8f1d4bcb146454681b"
+    },
+    {
+      "machineId": "list_slot_054",
+      "fileName": "list_slot_054.json",
+      "checksum": "d8747e4535735f2d5fcd5dbbdd4ca072c4b691d79b6bc2ed64dc7d67f30c8200"
+    },
+    {
+      "machineId": "list_slot_055",
+      "fileName": "list_slot_055.json",
+      "checksum": "eee0e57a87912baa3e0e590d07ed5135d451f87f674dbb16166c692286c74a28"
+    },
+    {
+      "machineId": "list_slot_056",
+      "fileName": "list_slot_056.json",
+      "checksum": "e4f22bd79918aeeddb44458863ccfbe38654f0115390e50c2ec7fb99cc261d05"
+    },
+    {
+      "machineId": "list_slot_057",
+      "fileName": "list_slot_057.json",
+      "checksum": "04bc8e9a8565a6d8b947b4846e3c09428e701145d0787b7e05e54411eb9ec9a3"
+    },
+    {
+      "machineId": "list_slot_058",
+      "fileName": "list_slot_058.json",
+      "checksum": "9b3d7a75898393255abbc98ee934e95ba8812d8fdf8d8ab202d0d0e964f9d7d5"
+    },
+    {
+      "machineId": "list_slot_059",
+      "fileName": "list_slot_059.json",
+      "checksum": "673b2b251a18a44689ab5e50bbf5cb24e73e7f3c8fd332d81ad89bb35db7fab3"
+    },
+    {
+      "machineId": "list_slot_060",
+      "fileName": "list_slot_060.json",
+      "checksum": "7374b8a0eebd8e79620193f7c0e7bfaad055418116db877c3095a00d79bb3d52"
+    },
+    {
+      "machineId": "list_slot_061",
+      "fileName": "list_slot_061.json",
+      "checksum": "bf20245fdee4ef75e8cbc7f636eea0fc18dcce144362a4191be72d1269d7d638"
+    },
+    {
+      "machineId": "list_slot_062",
+      "fileName": "list_slot_062.json",
+      "checksum": "0d20729a30459d5b24c6c6e19bb0ab20caf606fe6aa46853c8dd6695da04fdf7"
+    },
+    {
+      "machineId": "list_slot_063",
+      "fileName": "list_slot_063.json",
+      "checksum": "ccd42522b70689fd94534e53d06b2d6a5166a469022bc16b3db556c7a7ee11f5"
     }
   ]
 }

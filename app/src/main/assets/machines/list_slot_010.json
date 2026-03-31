@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "list_slot_010",
+    "name": "Lベルセルク無双",
+    "manufacturer": "EXCITE",
+    "type": "AT",
+    "releaseDate": "2023-06-05",
+    "isActive": true,
+    "notes": "partial: 一撃のAT初当り確率を主軸に更新。DMMでもAT終了画面・称号の示唆が豊富だが、現行UIで数値化しやすい項目はAT初当りのみ。終了画面や称号はメモ運用前提で、JSONは安全側の1軸比較に留める。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4367",
+    "ichigekiUrl": "https://1geki.jp/slot/l_berserkmuso/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「無双狂ラッシュ」の初当り回数。主判別項目。"
+    },
+    {
+      "key": "memo_count",
+      "displayName": "示唆メモ回数",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "AT終了画面・称号・バーサーカーモード示唆などを自分用にメモする補助欄。推測計算には未使用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 390.3,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 373.8,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 292.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 260.9,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 238.4,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

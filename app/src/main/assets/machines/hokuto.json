@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-04-03",
     "isActive": true,
-    "notes": "公開解析ベースへ更新。初当りBBに加え、弱スイカ・強スイカ・リーチ目役の小役設定差を重視する。CZ/直撃系は補助扱い。",
+    "notes": "公開解析とDMM系実戦特集を再監査。主判別は初当りBB・弱スイカ・強スイカ・リーチ目役。弱レア役契機BBやモード移行は有効だが入力の再現性を優先して補助扱いに留めた。小役は取りこぼしで誤差が出やすいため総ゲーム数3000G以上を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4301",
     "ichigekiUrl": "https://1geki.jp/slot/l_hokutonoken/"
   },
@@ -115,43 +115,43 @@
         {
           "settingNo": 1,
           "denominatorValue": 383.4,
-          "weight": 1.2,
-          "minSampleSize": 3,
+          "weight": 1.15,
+          "minSampleSize": 4,
           "note": "初当りBB合算"
         },
         {
           "settingNo": 2,
           "denominatorValue": 370.5,
-          "weight": 1.2,
-          "minSampleSize": 3,
+          "weight": 1.15,
+          "minSampleSize": 4,
           "note": "初当りBB合算"
         },
         {
           "settingNo": 3,
           "denominatorValue": 334.2,
-          "weight": 1.2,
-          "minSampleSize": 3,
+          "weight": 1.15,
+          "minSampleSize": 4,
           "note": "設定2/4の中間補間値"
         },
         {
           "settingNo": 4,
           "denominatorValue": 297.8,
-          "weight": 1.2,
-          "minSampleSize": 3,
+          "weight": 1.15,
+          "minSampleSize": 4,
           "note": "初当りBB合算"
         },
         {
           "settingNo": 5,
           "denominatorValue": 258.7,
-          "weight": 1.2,
-          "minSampleSize": 3,
+          "weight": 1.15,
+          "minSampleSize": 4,
           "note": "初当りBB合算"
         },
         {
           "settingNo": 6,
           "denominatorValue": 235.1,
-          "weight": 1.2,
-          "minSampleSize": 3,
+          "weight": 1.15,
+          "minSampleSize": 4,
           "note": "初当りBB合算"
         }
       ]
@@ -162,43 +162,43 @@
         {
           "settingNo": 1,
           "denominatorValue": 109.0,
-          "weight": 1.5,
-          "minSampleSize": 20,
+          "weight": 1.35,
+          "minSampleSize": 30,
           "note": "弱スイカ出現率"
         },
         {
           "settingNo": 2,
           "denominatorValue": 108.7,
-          "weight": 1.5,
-          "minSampleSize": 20,
+          "weight": 1.35,
+          "minSampleSize": 30,
           "note": "弱スイカ出現率"
         },
         {
           "settingNo": 3,
           "denominatorValue": 107.3,
-          "weight": 1.5,
-          "minSampleSize": 20,
+          "weight": 1.35,
+          "minSampleSize": 30,
           "note": "設定2/4の中間補間値"
         },
         {
           "settingNo": 4,
           "denominatorValue": 105.9,
-          "weight": 1.5,
-          "minSampleSize": 20,
+          "weight": 1.35,
+          "minSampleSize": 30,
           "note": "弱スイカ出現率"
         },
         {
           "settingNo": 5,
           "denominatorValue": 100.7,
-          "weight": 1.5,
-          "minSampleSize": 20,
+          "weight": 1.35,
+          "minSampleSize": 30,
           "note": "弱スイカ出現率"
         },
         {
           "settingNo": 6,
           "denominatorValue": 98.3,
-          "weight": 1.5,
-          "minSampleSize": 20,
+          "weight": 1.35,
+          "minSampleSize": 30,
           "note": "弱スイカ出現率"
         }
       ]
@@ -209,43 +209,43 @@
         {
           "settingNo": 1,
           "denominatorValue": 409.6,
-          "weight": 1.1,
-          "minSampleSize": 6,
+          "weight": 1.0,
+          "minSampleSize": 8,
           "note": "強スイカA/B合算"
         },
         {
           "settingNo": 2,
           "denominatorValue": 404.5,
-          "weight": 1.1,
-          "minSampleSize": 6,
+          "weight": 1.0,
+          "minSampleSize": 8,
           "note": "強スイカA/B合算"
         },
         {
           "settingNo": 3,
           "denominatorValue": 390.6,
-          "weight": 1.1,
-          "minSampleSize": 6,
+          "weight": 1.0,
+          "minSampleSize": 8,
           "note": "設定2/4の中間補間値"
         },
         {
           "settingNo": 4,
           "denominatorValue": 376.6,
-          "weight": 1.1,
-          "minSampleSize": 6,
+          "weight": 1.0,
+          "minSampleSize": 8,
           "note": "強スイカA/B合算"
         },
         {
           "settingNo": 5,
           "denominatorValue": 352.3,
-          "weight": 1.1,
-          "minSampleSize": 6,
+          "weight": 1.0,
+          "minSampleSize": 8,
           "note": "強スイカA/B合算"
         },
         {
           "settingNo": 6,
           "denominatorValue": 337.8,
-          "weight": 1.1,
-          "minSampleSize": 6,
+          "weight": 1.0,
+          "minSampleSize": 8,
           "note": "強スイカA/B合算"
         }
       ]
@@ -256,42 +256,42 @@
         {
           "settingNo": 1,
           "denominatorValue": 16384.0,
-          "weight": 1.7,
+          "weight": 1.65,
           "minSampleSize": 1,
           "note": "リーチ目役出現率"
         },
         {
           "settingNo": 2,
           "denominatorValue": 13107.2,
-          "weight": 1.7,
+          "weight": 1.65,
           "minSampleSize": 1,
           "note": "リーチ目役出現率"
         },
         {
           "settingNo": 3,
           "denominatorValue": 12014.9,
-          "weight": 1.7,
+          "weight": 1.65,
           "minSampleSize": 1,
           "note": "設定2/4の中間補間値"
         },
         {
           "settingNo": 4,
           "denominatorValue": 10922.7,
-          "weight": 1.7,
+          "weight": 1.65,
           "minSampleSize": 1,
           "note": "リーチ目役出現率"
         },
         {
           "settingNo": 5,
           "denominatorValue": 9362.3,
-          "weight": 1.7,
+          "weight": 1.65,
           "minSampleSize": 1,
           "note": "リーチ目役出現率"
         },
         {
           "settingNo": 6,
           "denominatorValue": 8192.0,
-          "weight": 1.7,
+          "weight": 1.65,
           "minSampleSize": 1,
           "note": "リーチ目役出現率"
         }

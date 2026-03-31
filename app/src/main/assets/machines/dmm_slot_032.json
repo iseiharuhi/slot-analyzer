@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "最新機種Sちゅらちゅら/Gベースで再整理。公開確認できたボーナス確率のみを採用し、BIG・REG・合算の3指標で構成。小役・示唆は未採用のため簡易推測扱い。",
+    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4486",
     "ichigekiUrl": null
   },

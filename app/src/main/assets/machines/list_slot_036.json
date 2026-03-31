@@ -1,0 +1,230 @@
+{
+  "machine": {
+    "id": "list_slot_036",
+    "name": "バイオハザード ヴィレッジ",
+    "manufacturer": "アデリオン",
+    "type": "AT",
+    "releaseDate": "2024-01-09",
+    "isActive": true,
+    "notes": "partial: DMM・一撃の公開解析から初当り、AT「ハザードラッシュ」初当り、弱チェリーを採用。PZ引き戻し率や通常状態での小役別PZ抽選も強いが、手動集計負荷が高いため今回は未採用。モード別天井のうち、通常A750Gと設定変更550Gを ceilingRules に反映。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4459",
+    "ichigekiUrl": "https://1geki.jp/slot/l_biovillage/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時の初当り回数。主判別項目。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT「ハザードラッシュ」初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。補助判別。"
+    },
+    {
+      "key": "weak_cherry_count",
+      "displayName": "弱チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "弱チェリー出現回数。長時間実戦の補助判別。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 281.5,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 275.3,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 264.5,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 240.3,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 229.3,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 224.2,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 445.3,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 434.1,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 415.7,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 372.9,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 354.4,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 342.8,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "weak_cherry_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 98.85,
+          "weight": 0.65,
+          "minSampleSize": 25,
+          "note": "弱チェリー確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 96.66,
+          "weight": 0.65,
+          "minSampleSize": 25,
+          "note": "弱チェリー確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 95.26,
+          "weight": 0.65,
+          "minSampleSize": 25,
+          "note": "弱チェリー確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 90.27,
+          "weight": 0.65,
+          "minSampleSize": 25,
+          "note": "弱チェリー確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 88.68,
+          "weight": 0.65,
+          "minSampleSize": 25,
+          "note": "弱チェリー確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 87.15,
+          "weight": 0.65,
+          "minSampleSize": 25,
+          "note": "弱チェリー確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常A天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 750,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A滞在時は750Gでクライマックスバトル当選。通常Bは650G、通常Cは600G、天国は150G。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "reset_game_ceiling",
+      "displayName": "設定変更時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 550,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時は設定変更モードへ移行し天井は550G。150G以内の当選率は20%。",
+      "isEnabled": true
+    }
+  ]
+}

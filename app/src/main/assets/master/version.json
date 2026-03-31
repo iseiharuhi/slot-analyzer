@@ -1,7 +1,9 @@
 {
   "latestVersion": 1,
   "oldestAvailableDiffVersion": 1,
-  "updatedAt": "2026-03-29T00:00:00+09:00",
+  "updatedAt": "2026-03-31T15:15:00+09:00",
   "forceFullSync": false,
-  "note": "This package contains 40 machines confirmed from pages 1-2 of DMM slot list in this environment. Pages 3-5 were inaccessible (403) during generation."
+  "note": "Precision batch 3: promoted 8 AT/smart-slot machines from draft to partial using published 1geki probability tables for initial hits and related indicators.",
+  "generatedAt": "2026-03-31",
+  "masterDataVersion": "0.7.8-list-draft-import-detailed-63+normal-precision-batch1+oki-hana-batch2"
 }

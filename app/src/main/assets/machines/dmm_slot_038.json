@@ -6,7 +6,7 @@
     "type": "ART",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。BB合算・RB合算・CM初当り・初当り合算を採用しました。",
+    "notes": "partial: 公開比較値を確認できたCM初当り・初当り合算・RB合算・BB合算を主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4419",
     "ichigekiUrl": "https://1geki.jp/slot/s_eurekahievo_art/"
   },

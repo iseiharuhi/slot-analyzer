@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-03-29",
+  "generatedAt": "2026-03-31",
   "source": "https://p-town.dmm.com/machines/slot",
   "count": 40,
   "machines": [
@@ -241,7 +241,7 @@
       "machineName": "推しスロ アイドルVer.",
       "fileName": "dmm_slot_030.json",
       "status": "draft",
-      "checksumSha256": "3341b44dc82ce1462150cc0c68b6822136c313112b781359eae6fc534568bc85",
+      "checksumSha256": "5a73dd0ec03dd01a4c2f3d12793bb62cc81637c8b9004fab73a67e5a3ad444cd",
       "sourceListPage": 2
     },
     {
@@ -323,6 +323,510 @@
       "status": "draft",
       "checksumSha256": "7b8e30f9131292f218ca7a65b29b9abd232047f46ebbc68967835e3ec8058d97",
       "sourceListPage": 2
+    },
+    {
+      "machineId": "list_slot_001",
+      "machineName": "Lゴブリンスレイヤー",
+      "fileName": "list_slot_001.json",
+      "status": "partial",
+      "checksumSha256": "a376c3354332e0745b9446a6e79c2a9cf6f90ff09f7f10002b9a7540758214b7",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_002",
+      "machineName": "L戦国乙女4 戦乱に閃く炯眼の軍師",
+      "fileName": "list_slot_002.json",
+      "status": "partial",
+      "checksumSha256": "6d6e5a4f35934a462e8123f67115f9a1880e807b6f0374d7830ce0db5bee1955",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_003",
+      "machineName": "スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ",
+      "fileName": "list_slot_003.json",
+      "status": "partial",
+      "checksumSha256": "93557feef739d286af35d73a3d167ec21e86bf4cf013182bfb308ac7cc63a4d5",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_004",
+      "machineName": "パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.",
+      "fileName": "list_slot_004.json",
+      "status": "partial",
+      "checksumSha256": "6c9a14043c9eed75677ef804e1c971c4a42c41f68d25565d9ee04d1d6e98b98f",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_005",
+      "machineName": "L転生したらスライムだった件",
+      "fileName": "list_slot_005.json",
+      "status": "draft",
+      "checksumSha256": "6b5b15dde8ee7eca7883dd8a5be5df0fd548afa01973fbe4789fb173813c9064",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_006",
+      "machineName": "スマスロ バイオハザード RE:2",
+      "fileName": "list_slot_006.json",
+      "status": "draft",
+      "checksumSha256": "2310df47d0d0f7deb29f02a90c34327b9e7ca0307d50fc7711cfb007f182fbbf",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_007",
+      "machineName": "L主役は銭形4",
+      "fileName": "list_slot_007.json",
+      "status": "draft",
+      "checksumSha256": "3646ba73472cef251694217c8cad2ff99bc05d71d4bfa0f5a46dabed1917b570",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_008",
+      "machineName": "Lストライクウィッチーズ2",
+      "fileName": "list_slot_008.json",
+      "status": "draft",
+      "checksumSha256": "d67bb1251c38110fb88fd1ab6b33c4d1d532cd1b57be2657031d4af95aaa9347",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_009",
+      "machineName": "L麻雀格闘倶楽部 覚醒",
+      "fileName": "list_slot_009.json",
+      "status": "draft",
+      "checksumSha256": "4953db0889e78222d7844bdd8e745d2535e7e2827aaa36398ac143a20cb4f4df",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_010",
+      "machineName": "Lベルセルク無双",
+      "fileName": "list_slot_010.json",
+      "status": "draft",
+      "checksumSha256": "43b3407bcd7ba6c5cbfd4443d40d9a96b5f0697be90924145774e22b1f54f78e",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_011",
+      "machineName": "押忍！番長4",
+      "fileName": "list_slot_011.json",
+      "status": "partial",
+      "checksumSha256": "832d4c3bd93f9ee5b3859d92eeff0b1c659254c3392eb0ebbf00a048fb4e7aee",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_012",
+      "machineName": "L南国育ち",
+      "fileName": "list_slot_012.json",
+      "status": "draft",
+      "checksumSha256": "2f3582b8401fd11e3d092850d25c93bf740fe835984ea51263ed316831d03127",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_013",
+      "machineName": "スマスロ痛いのは嫌なので防御力に極振りしたいと思います。",
+      "fileName": "list_slot_013.json",
+      "status": "draft",
+      "checksumSha256": "2a1429b638a6886fdb7755adbe76e263e58d35fc45863f5bb2465454cfd4ca75",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_014",
+      "machineName": "L東京喰種",
+      "fileName": "list_slot_014.json",
+      "status": "draft",
+      "checksumSha256": "0f424eadfefb56f0532ab5d030852f6e291bc0a41463160a6640b7f0d0825b31",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_015",
+      "machineName": "Lアズールレーン THE ANIMATION",
+      "fileName": "list_slot_015.json",
+      "status": "draft",
+      "checksumSha256": "40e7fb85d3e25c45aae3d5f4d1ae1e7e46b9bf6d008e643fe4703ccac698cb79",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_016",
+      "machineName": "Lダーリン・イン・ザ・フランキス",
+      "fileName": "list_slot_016.json",
+      "status": "draft",
+      "checksumSha256": "b22dc52b8c413d28417528ab96dcba2816edbf9ab019508a76866c3874cde8b5",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_017",
+      "machineName": "L咲-Saki- 頂上決戦",
+      "fileName": "list_slot_017.json",
+      "status": "draft",
+      "checksumSha256": "4953df2c84c2d1c41b4f634d8f9fab637a09303f3e8d6d03b9fadd59f8bf7447",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_018",
+      "machineName": "Lうしおととら 白面決戦",
+      "fileName": "list_slot_018.json",
+      "status": "draft",
+      "checksumSha256": "803b50133ecb365278e4150060d169a7022815635b9b5e39f175854834f5394b",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_019",
+      "machineName": "Lゴジラ",
+      "fileName": "list_slot_019.json",
+      "status": "draft",
+      "checksumSha256": "7fb7b1d1470d03384efd67bb2604207f051d8aa43b0357257237809ee32da733",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_020",
+      "machineName": "L少女☆歌劇 レヴュースタァライト -The SLOT-",
+      "fileName": "list_slot_020.json",
+      "status": "draft",
+      "checksumSha256": "354fe118455d7977548e8be32f3b7541b8e951f25dddba3acfe537def042456c",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_021",
+      "machineName": "L仮面ライダー電王",
+      "fileName": "list_slot_021.json",
+      "status": "draft",
+      "checksumSha256": "109ad6a3a926059030983d635dbe6fb665ee228ee1d629a7dedce340b56e236e",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_022",
+      "machineName": "Lありふれた職業で世界最強",
+      "fileName": "list_slot_022.json",
+      "status": "draft",
+      "checksumSha256": "14d954ed76e7637d0010dc32228f3a49c47aad3ddd47c825040a3ba0a8b8b297",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_023",
+      "machineName": "Lパチスロ シン・エヴァンゲリオン",
+      "fileName": "list_slot_023.json",
+      "status": "draft",
+      "checksumSha256": "70af382c33398402113b654b83715a83a4afb0f3d072f6168e69d7c259e6e303",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_024",
+      "machineName": "Lにゃんこ大戦争 超神速",
+      "fileName": "list_slot_024.json",
+      "status": "draft",
+      "checksumSha256": "0797ea001368ab171aca4e322eac1cf1176a257a02835f4241fc1c09a33d905e",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_025",
+      "machineName": "パチスロ 炎炎ノ消防隊",
+      "fileName": "list_slot_025.json",
+      "status": "partial",
+      "checksumSha256": "686ee698033f5600dd3caa5227a8285dfbefbb9289cdecb75494c66564ea84da",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_026",
+      "machineName": "EVANGELION FESTIVAL",
+      "fileName": "list_slot_026.json",
+      "status": "draft",
+      "checksumSha256": "bef4854cecd9d192e04297b892c53830e39d37c046bee54fe8e3bd41fc38501d",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_027",
+      "machineName": "パチスロ アクエリオン ALL STARS",
+      "fileName": "list_slot_027.json",
+      "status": "partial",
+      "checksumSha256": "38851dca2a16633b11515bf8359f94af0a842e6897e9ca20aab098662d8582df",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_028",
+      "machineName": "パチスロ鉄拳5",
+      "fileName": "list_slot_028.json",
+      "status": "partial",
+      "checksumSha256": "56f204b00b106a8e6d52008aba07d5d6a8f6789c5c9863d97fc61dda8934fa4c",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_029",
+      "machineName": "パチスロ幼女戦記",
+      "fileName": "list_slot_029.json",
+      "status": "partial",
+      "checksumSha256": "93e69b39870af5c908ea382addc8ed681913f9cdf0a13ae87b594f9dac9aa347",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_030",
+      "machineName": "スマスロ シャーマンキング",
+      "fileName": "list_slot_030.json",
+      "status": "partial",
+      "checksumSha256": "512c5f0393bd474441c3197329884fa4b00620c2940b451c23889e09ccb24b48",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_031",
+      "machineName": "パチスロ 新鬼武者2",
+      "fileName": "list_slot_031.json",
+      "status": "partial",
+      "checksumSha256": "68ce85c0049ba17523994ed799353c44675514abc8328467e7ed58f90ac0152c",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_032",
+      "machineName": "FAIRY TAIL2",
+      "fileName": "list_slot_032.json",
+      "status": "draft",
+      "checksumSha256": "513b35bb60b345f7fb0dd792ea86bba5b7ee6ac8751cf489ef9d3e2183e605fa",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_033",
+      "machineName": "ペルソナ5",
+      "fileName": "list_slot_033.json",
+      "status": "draft",
+      "checksumSha256": "935b0ed96940457f1333d3843f5bdb6c83ab9e32ca06596b3095cc591d91e67a",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_034",
+      "machineName": "パチスロ盾の勇者の成り上がり",
+      "fileName": "list_slot_034.json",
+      "status": "draft",
+      "checksumSha256": "d27aca6699b6b0756d4fbeabe9c7f0c7d6c31416d580c3bae299cd8ee4a0a4dc",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_035",
+      "machineName": "S BOØWY",
+      "fileName": "list_slot_035.json",
+      "status": "draft",
+      "checksumSha256": "f2fe871bffb3a7bc354de9b746739082ece85d7b7fdd91c7ce64839ab55438d0",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_036",
+      "machineName": "バイオハザード ヴィレッジ",
+      "fileName": "list_slot_036.json",
+      "status": "draft",
+      "checksumSha256": "49e8115178b5e14314a2270dbcc974154f5b239db048159cca54b3561aa16fbc",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_037",
+      "machineName": "パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2",
+      "fileName": "list_slot_037.json",
+      "status": "draft",
+      "checksumSha256": "11ded6fa6485ccd0b1e0f5f35524561678e20ebed3923b3d9445c70783d22851",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_038",
+      "machineName": "Re:ゼロから始める異世界生活 season2",
+      "fileName": "list_slot_038.json",
+      "status": "draft",
+      "checksumSha256": "d4a240e9a5bd005df22f1ba2373a80bd5d57de12a167b6fdc65996abf93d4185",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_039",
+      "machineName": "この素晴らしい世界に祝福を！",
+      "fileName": "list_slot_039.json",
+      "status": "draft",
+      "checksumSha256": "5e36b3e21968f442d842fd295723eeeaf2c4ad3ee6dfb2b784b48b607536d781",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_040",
+      "machineName": "Lルパン三世 大航海者の秘宝",
+      "fileName": "list_slot_040.json",
+      "status": "draft",
+      "checksumSha256": "7b3535ba6fb8750abed9faa7f57ce0952883a00320ffe15564fe6d15b063434e",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_041",
+      "machineName": "黄門ちゃま天",
+      "fileName": "list_slot_041.json",
+      "status": "draft",
+      "checksumSha256": "66e414626cf15a3af1c6b7f008a31c51ef5827a67f94e7d0e03141a225e12511",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_042",
+      "machineName": "ニューパルサーSP4",
+      "fileName": "list_slot_042.json",
+      "status": "partial",
+      "checksumSha256": "8940426eb67a6588694fcd7b192617afb7c07cd609e2af176ec4571729488a9b",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_043",
+      "machineName": "ニューパルサーDX3",
+      "fileName": "list_slot_043.json",
+      "status": "partial",
+      "checksumSha256": "13f62e95b923b47e9f8b1fa09c204447417f707c790195d95ce2f0649a1b6987",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_044",
+      "machineName": "ハナビ",
+      "fileName": "list_slot_044.json",
+      "status": "partial",
+      "checksumSha256": "b37fb22f303aaf28c88043c541eee9191cae63faf29b0990074b42cfc0204808",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_045",
+      "machineName": "バーサスリヴァイズ",
+      "fileName": "list_slot_045.json",
+      "status": "partial",
+      "checksumSha256": "20f149935fccf139d4a8a3ccdbe2f3d6d4b3ee1e8b5abd7ce57e923f5f2702e5",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_046",
+      "machineName": "サンダーVライトニング",
+      "fileName": "list_slot_046.json",
+      "status": "partial",
+      "checksumSha256": "1627564f3bc6a16595d73b1bf082701cacb258b0faae25b0f364166132cadff3",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_047",
+      "machineName": "アレックス ブライト",
+      "fileName": "list_slot_047.json",
+      "status": "partial",
+      "checksumSha256": "4afc0970c3f01329cb62f715ade4a4f8fcb3fba4b204dd98524d131f33a70a38",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_048",
+      "machineName": "ディスクアップ2",
+      "fileName": "list_slot_048.json",
+      "status": "partial",
+      "checksumSha256": "1b8273cad3ba0bfddc4af1b108befb6bc8914f73e5d09ca6649302e9aafb9a67",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_049",
+      "machineName": "A-SLOT+ ディスクアップ ULTRAREMIX",
+      "fileName": "list_slot_049.json",
+      "status": "partial",
+      "checksumSha256": "93ca35d8d921d5bf7868cb605b1d6791cad65b57a41bbfd60245c977dfe007f5",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_050",
+      "machineName": "ファミスタ回胴版!!",
+      "fileName": "list_slot_050.json",
+      "status": "partial",
+      "checksumSha256": "98443d7b13e6de4f027cb0ebecb4267ee6ecd8419ab2597e656728c47dfd4b8d",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_051",
+      "machineName": "沖ドキ！GOLD",
+      "fileName": "list_slot_051.json",
+      "status": "partial",
+      "checksumSha256": "fdf35110c9bb80116d7f324c8179fd274174a38e6e47193de83b19b243ca0b29",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_052",
+      "machineName": "沖ドキ！DUO",
+      "fileName": "list_slot_052.json",
+      "status": "partial",
+      "checksumSha256": "0d4b7125be4f855c4b177b32e8d526ec47f89a5ed7d4a073c601b92ecf351e5d",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_053",
+      "machineName": "スマート沖スロ 沖ドキ！DUO-30 アンコール",
+      "fileName": "list_slot_053.json",
+      "status": "partial",
+      "checksumSha256": "6b980849ab19ad4056b2f9f286b2101afbf85ad3f3621e7df82434b13ddd970d",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_054",
+      "machineName": "チバリヨ2プラス",
+      "fileName": "list_slot_054.json",
+      "status": "partial",
+      "checksumSha256": "8891171e6336431e926d4b8d4f507cbd2e8d26a719d8bdc9d2d499f6f7318ca4",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_055",
+      "machineName": "スマート沖スロ スターハナハナ",
+      "fileName": "list_slot_055.json",
+      "status": "partial",
+      "checksumSha256": "889671ae4f0bb8726a22bc05cfd75bf57a7f5f791e9d5ef54f5f5beca67803de",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_056",
+      "machineName": "スマート沖スロ ニューキングハナハナ-30",
+      "fileName": "list_slot_056.json",
+      "status": "partial",
+      "checksumSha256": "f9df7e1ec7894ad6d45a22c5b8cc8140e2d340fab69f2ca3189476d540ba9275",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_057",
+      "machineName": "ニューキングハナハナ-30",
+      "fileName": "list_slot_057.json",
+      "status": "partial",
+      "checksumSha256": "f89c6919b5c249957e0b532a4ec03e7917eb797a59a3de8800c145e23ee1a25d",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_058",
+      "machineName": "ドラゴンハナハナ～閃光～ 30",
+      "fileName": "list_slot_058.json",
+      "status": "partial",
+      "checksumSha256": "1d29e922a0a616ac92097c4afe625fc41d65069a4bf613ad8cc289054f9881ee",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_059",
+      "machineName": "キングハナハナ-30",
+      "fileName": "list_slot_059.json",
+      "status": "partial",
+      "checksumSha256": "0bb97d9640203b1c9d90b160bf16f2d2e75c7faf5dbbc8d9394a288bdbc83a6d",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_060",
+      "machineName": "ハナハナホウオウ～天翔～-30",
+      "fileName": "list_slot_060.json",
+      "status": "partial",
+      "checksumSha256": "8c5d3365739502d85d588dc5b04833a58430b2870e7090db0451d7b21804ebb0",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_061",
+      "machineName": "麻雀物語",
+      "fileName": "list_slot_061.json",
+      "status": "partial",
+      "checksumSha256": "9ded6ccc11fefb08bf7f2308789959a6089f6166f0556bc3fc19be5573c50fcf",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_062",
+      "machineName": "戦姫絶唱シンフォギア 正義の歌",
+      "fileName": "list_slot_062.json",
+      "status": "partial",
+      "checksumSha256": "5e743e065ca7854d2572fca0b9876af8977d53364daa4d23c91e0240c9ab9af2",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_063",
+      "machineName": "Lパチスロうみねこのなく頃に2",
+      "fileName": "list_slot_063.json",
+      "status": "draft",
+      "checksumSha256": "ccd42522b70689fd94534e53d06b2d6a5166a469022bc16b3db556c7a7ee11f5",
+      "sourceListPage": null
     }
   ]
 }

@@ -1,0 +1,148 @@
+{
+  "machine": {
+    "id": "list_slot_034",
+    "name": "パチスロ盾の勇者の成り上がり",
+    "manufacturer": "Sammy",
+    "type": "AT",
+    "releaseDate": "2023-02-20",
+    "isActive": true,
+    "notes": "partial: 公開解析ベースへ更新。AT「ウェイブウォー」初当りを主軸に採用。重い分母の設定差も重要という方針へ変更し、通常時直撃ATは入力重要項目として前面化。なお直撃ATは全設定の厳密な公表分母が未揃いのため、現時点では数値比較ではなく実戦補助カウンタとして扱う。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4292",
+    "ichigekiUrl": "https://1geki.jp/slot/s_tat_yu/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り/ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT「ウェイブウォー」初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ成功・通常時直撃を含むAT初当り回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "通常時直撃AT",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "分母は重いが設定差のある重要要素。公表分母未整備のため参考カウントとして記録。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 298.9,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "AT「ウェイブウォー」初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 284.0,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "AT「ウェイブウォー」初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 274.3,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "AT「ウェイブウォー」初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 246.7,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "AT「ウェイブウォー」初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 228.5,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "AT「ウェイブウォー」初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 190.5,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "AT「ウェイブウォー」初当り確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1173,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1173G+α消化でATに当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "reset_or_inherit_ceiling",
+      "displayName": "設定変更/有利区間引継ぎ時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "設定変更時または有利区間引継ぎ時は800G+αでATに当選。",
+      "isEnabled": true
+    }
+  ]
+}

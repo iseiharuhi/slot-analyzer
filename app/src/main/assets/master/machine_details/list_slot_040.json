@@ -1,0 +1,24 @@
+{
+  "machineId": "list_slot_040",
+  "machineName": "Lルパン三世 大航海者の秘宝",
+  "status": "partial",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4689",
+      "status": "verified"
+    },
+    {
+      "label": "DMMぱちタウン(掲載一覧)",
+      "url": "https://p-town.dmm.com/machines/slot",
+      "status": "verified_list_page"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_lupin_totgn/",
+      "status": "verified"
+    }
+  ]
+}

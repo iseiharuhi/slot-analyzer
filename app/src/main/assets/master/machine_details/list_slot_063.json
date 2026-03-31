@@ -1,0 +1,19 @@
+{
+  "machineId": "list_slot_063",
+  "machineName": "Lパチスロうみねこのなく頃に2",
+  "status": "partial",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4925",
+      "status": "verified_direct_page"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_umineko2/",
+      "status": "verified_direct_page"
+    }
+  ]
+}

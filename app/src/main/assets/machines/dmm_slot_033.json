@@ -6,7 +6,7 @@
     "type": "HYBRID",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。BB合算・RB・ボーナス合算に加え、共通ベルとスイカを小役指標として採用しました。",
+    "notes": "partial: 公開比較値を確認できたRB・ボーナス合算・BB合算・共通ベル・スイカを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4447",
     "ichigekiUrl": "https://1geki.jp/slot/l_higurashi_gou/"
   },

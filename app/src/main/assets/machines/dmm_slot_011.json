@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-04-06",
     "isActive": true,
-    "notes": "公開済みのCZ・AT初当たり確率で暫定差分を置換した更新版。未確認のボーナス・直撃差は撤去し、AT初当たりを主判別、CZを補助判別として扱う。",
+    "notes": "partial: 公開比較値を確認できたAT・CZを主軸に反映。 ボーナス・直撃ATなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4970",
     "ichigekiUrl": null
   },

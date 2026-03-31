@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。設定1・2・4・5・6の5段階対応へ変更。未公表の設定3は推測対象から除外しています。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4468",
     "ichigekiUrl": "https://1geki.jp/slot/s_ryujin30/"
   },

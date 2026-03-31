@@ -1,0 +1,198 @@
+{
+  "machine": {
+    "id": "list_slot_020",
+    "name": "L少女☆歌劇 レヴュースタァライト -The SLOT-",
+    "manufacturer": "オーイズミ",
+    "type": "AT",
+    "releaseDate": "2025-03-03",
+    "isActive": true,
+    "notes": "partial: 公開解析ベースへ更新。ボーナス合算・AT初当り・CZ出現率を主軸に採用。通常時RB後内部ボーナス中や高確中のAT直撃は設定差があるが、成立役依存の当選率公表が中心のため現段階では補助カウンタで管理する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4706",
+    "ichigekiUrl": "https://1geki.jp/slot/l_revuestarlight/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "実質抽選ベースのボーナス合算。A+AT機の土台指標。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ出現率",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ「レヴュー」系突入の総回数。高設定ほど軽い。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「レヴュー」初当り回数。主判別要素。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "AT直撃メモ",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "高確中 or 通常時RB後内部ボーナス中の強チェリー/チャンス目からのAT直撃記録。率公表は成立役契機ベースのため補助管理。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 179.1,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "実質抽選ベースのボーナス合算"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 176.6,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "実質抽選ベースのボーナス合算"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 164.3,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "実質抽選ベースのボーナス合算"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 159.9,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "実質抽選ベースのボーナス合算"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 154.9,
+          "weight": 0.9,
+          "minSampleSize": 4,
+          "note": "実質抽選ベースのボーナス合算"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 359.6,
+          "weight": 1.1,
+          "minSampleSize": 3,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 346.8,
+          "weight": 1.1,
+          "minSampleSize": 3,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 277.1,
+          "weight": 1.1,
+          "minSampleSize": 3,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 255.7,
+          "weight": 1.1,
+          "minSampleSize": 3,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 232.5,
+          "weight": 1.1,
+          "minSampleSize": 3,
+          "note": "AT初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 265.9,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "CZ出現率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 254.7,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "CZ出現率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 207.6,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "CZ出現率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 190.3,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "CZ出現率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 179.5,
+          "weight": 0.8,
+          "minSampleSize": 4,
+          "note": "CZ出現率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

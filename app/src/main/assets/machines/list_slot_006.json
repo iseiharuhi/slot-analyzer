@@ -1,0 +1,195 @@
+{
+  "machine": {
+    "id": "list_slot_006",
+    "name": "スマスロ バイオハザード RE:2",
+    "manufacturer": "Adelion",
+    "type": "AT",
+    "releaseDate": "2022-10-03",
+    "isActive": true,
+    "notes": "partial: 一撃公開のAT「ハザードラッシュ」初当りとAT直撃当選率を採用。AT初当りを主軸、直撃を重い分母の強根拠として補助に置く。CZ「Gバトル」は設定差の比較値が安定していないため回数入力のみ残し、1000G天井とGバトル7スルー天井を追加。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4217",
+    "ichigekiUrl": "https://1geki.jp/slot/s_bhr2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当りボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "初当りはボーナス+AT確定だが、設定比較の公開値はAT初当り側を採用。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "Gバトル",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ「Gバトル」回数。設定差比較値が安定していないため今回は推測未使用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「ハザードラッシュ」初当り回数。主判別項目。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "AT直撃",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "通常時チャンス役成立時のAT直撃回数。重い分母だが設定差が大きいため採用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 343.4,
+          "weight": 1.15,
+          "minSampleSize": 3,
+          "note": "AT「ハザードラッシュ」初当り"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 331.6,
+          "weight": 1.15,
+          "minSampleSize": 3,
+          "note": "AT「ハザードラッシュ」初当り"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 314.1,
+          "weight": 1.15,
+          "minSampleSize": 3,
+          "note": "AT「ハザードラッシュ」初当り"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 276.8,
+          "weight": 1.15,
+          "minSampleSize": 3,
+          "note": "AT「ハザードラッシュ」初当り"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 256.2,
+          "weight": 1.15,
+          "minSampleSize": 3,
+          "note": "AT「ハザードラッシュ」初当り"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 242.1,
+          "weight": 1.15,
+          "minSampleSize": 3,
+          "note": "AT「ハザードラッシュ」初当り"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 9101,
+          "weight": 1.3,
+          "minSampleSize": 1,
+          "note": "AT直撃当選率(実質出現率)"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 7419,
+          "weight": 1.3,
+          "minSampleSize": 1,
+          "note": "AT直撃当選率(実質出現率)"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 6016,
+          "weight": 1.3,
+          "minSampleSize": 1,
+          "note": "AT直撃当選率(実質出現率)"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 2914,
+          "weight": 1.3,
+          "minSampleSize": 1,
+          "note": "AT直撃当選率(実質出現率)"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 2379,
+          "weight": 1.3,
+          "minSampleSize": 1,
+          "note": "AT直撃当選率(実質出現率)"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 2094,
+          "weight": 1.3,
+          "minSampleSize": 1,
+          "note": "AT直撃当選率(実質出現率)"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "1000G消化後、チャンス役成立で前兆を経由してボーナス+ATに当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "g_battle_through",
+      "displayName": "Gバトルスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大7スルーで8回目のCZ「Gバトル」でボーナス+ATに当選。",
+      "isEnabled": true
+    }
+  ]
+}

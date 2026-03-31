@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-05-11",
     "isActive": true,
-    "notes": "公開解析ベースへ更新。AT初当たりのみ設定差が明確に公開されているため主判別に採用。未確定のCZ/ボーナス/直撃差は一旦除外した精度優先版。",
+    "notes": "partial: 公開比較値を確認できたAT初当たりを主軸に反映。 CZ・ボーナス・直撃/特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4974",
     "ichigekiUrl": "https://1geki.jp/slot/s_bh7/"
   },

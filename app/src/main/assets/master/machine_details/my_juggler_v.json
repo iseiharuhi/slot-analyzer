@@ -1,0 +1,19 @@
+{
+  "machineId": "my_juggler_v",
+  "machineName": "マイジャグラーV",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4029",
+      "status": "verified_direct"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_mj5/",
+      "status": "verified_direct"
+    }
+  ]
+}

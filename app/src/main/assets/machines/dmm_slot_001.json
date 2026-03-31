@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-06-08",
     "isActive": true,
-    "notes": "公開解析ベースへ更新。通常時初当たりとST初当たりのみを主判別に採用し、未確定のCZ/直撃差は推測対象から除外。暫定値を撤去した精度優先版。",
+    "notes": "公開解析ベースの精度優先版。主判別はST初当たり・通常時初当たりを採用。 CZ・直撃/特殊契機など比較値未整理の項目は入力補助に留め、推測比重を上げすぎない構成に調整。",
     "dmmUrl": "https://p-town.dmm.com/machines/4996",
     "ichigekiUrl": "https://1geki.jp/slot/l_birdie/"
   },

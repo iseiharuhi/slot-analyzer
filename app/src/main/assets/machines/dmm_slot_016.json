@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。ボーナス初当りとST確率を主軸に再構成した精度重視版。公開されていない直撃・補助指標は採用していません。",
+    "notes": "公開解析ベースの精度優先版。主判別はボーナス初当り・STを採用。",
     "dmmUrl": "https://p-town.dmm.com/machines/4930",
     "ichigekiUrl": "https://1geki.jp/slot/l_kabaneri2/"
   },

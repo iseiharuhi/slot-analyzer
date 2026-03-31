@@ -1,0 +1,231 @@
+{
+  "machine": {
+    "id": "list_slot_037",
+    "name": "パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2",
+    "manufacturer": "北電子",
+    "type": "AT",
+    "releaseDate": "2024-04-22",
+    "isActive": true,
+    "notes": "partial: 一撃の公開解析からファミリアボーナス・ファミリアチャンス・ボーナス合算を採用。スイカや強チャンス目にも設定差はあるが、ART主体機で入力項目が増えすぎるため今回はボーナス系3軸に限定。ボーナス/CZ間555G+αのCZ天井を追加。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4556",
+    "ichigekiUrl": "https://1geki.jp/slot/s_danmachi2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ファミリアボーナス+ファミリアチャンス合算。主判別項目。"
+    },
+    {
+      "key": "big_count",
+      "displayName": "ファミリアボーナス",
+      "category": "BONUS",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "青7/赤7/赤赤白を含むFB回数。補助判別。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "ファミリアチャンス",
+      "category": "BONUS",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "RB相当のFC回数。補助判別。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 40,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "ボーナス後のファミリアホーム/CZ当選回数。現在は補助記録のみ。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 183.6,
+          "weight": 1.0,
+          "minSampleSize": 8,
+          "note": "ボーナス合算確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 178.6,
+          "weight": 1.0,
+          "minSampleSize": 8,
+          "note": "ボーナス合算確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 173.8,
+          "weight": 1.0,
+          "minSampleSize": 8,
+          "note": "ボーナス合算確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 164.7,
+          "weight": 1.0,
+          "minSampleSize": 8,
+          "note": "ボーナス合算確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 158.3,
+          "weight": 1.0,
+          "minSampleSize": 8,
+          "note": "ボーナス合算確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 152.4,
+          "weight": 1.0,
+          "minSampleSize": 8,
+          "note": "ボーナス合算確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 255.0,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "ファミリアボーナス確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 245.4,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "ファミリアボーナス確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 236.6,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "ファミリアボーナス確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 219.9,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "ファミリアボーナス確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 208.7,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "ファミリアボーナス確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 198.6,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "ファミリアボーナス確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 655.4,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "ファミリアチャンス確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 537.2,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "ファミリアチャンス確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 448.4,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "ファミリアチャンス確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 385.5,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "ファミリアチャンス確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 347.6,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "ファミリアチャンス確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 319.7,
+          "weight": 0.85,
+          "minSampleSize": 3,
+          "note": "ファミリアチャンス確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_cz_game_ceiling",
+      "displayName": "ボーナス・CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス・CZ間で555G+α消化するとCZに当選。ファミリアボーナスは約50%で内部ゲーム数をリセット、ファミリアチャンスは100%引き継ぐ。",
+      "isEnabled": true
+    }
+  ]
+}

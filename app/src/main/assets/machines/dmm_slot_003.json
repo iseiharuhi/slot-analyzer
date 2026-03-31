@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-05-11",
     "isActive": true,
-    "notes": "公開スペック反映版。現時点で信頼できる設定差はAT初当たり中心のため、未確認のCZ/ボーナス差は除外。怪しい暫定値を外した保守的な完全版。",
+    "notes": "partial: 公開比較値を確認できたAT初当たりを主軸に反映。 DESTINY/EPISODE BONUS・CZ/SPCZ・特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/5000",
     "ichigekiUrl": "https://1geki.jp/slot/syllabary/4/"
   },

@@ -1,24 +1,24 @@
 {
   "machineId": "dmm_slot_037",
   "machineName": "スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-",
-  "status": "draft",
-  "capturedDate": "2026-03-29",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
   "sourceListPage": 2,
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "unresolved_direct_url"
+      "url": "https://p-town.dmm.com/machines/4420",
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot?page=2",
+      "url": "https://p-town.dmm.com/machines/slot",
       "status": "verified_list_page"
     },
     {
       "label": "一撃",
-      "url": null,
-      "status": "not_resolved_in_this_run"
+      "url": "https://1geki.jp/slot/l_madomagimov_forte/",
+      "status": "verified_direct"
     }
   ]
 }

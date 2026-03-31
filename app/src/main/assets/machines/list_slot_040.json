@@ -1,0 +1,253 @@
+{
+  "machine": {
+    "id": "list_slot_040",
+    "name": "Lルパン三世 大航海者の秘宝",
+    "manufacturer": "平和",
+    "type": "AT",
+    "releaseDate": "2024-12-02",
+    "isActive": true,
+    "notes": "partial: 公開解析ベースへ更新。初当り総合だけでなく、シングル7揃い・ダブル7揃い・CZ突入率を分解して採用。重い分母やAT直行系も今後は積極採用する方針だが、AT直撃選択率はゲーム分母換算の公表がないため補助メモ扱い。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4689",
+    "ichigekiUrl": "https://1geki.jp/slot/l_lupin_totgn/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "シングル7揃い",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス初当り回数。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ「ICPOチャレンジ」",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ突入回数。成功率は別途補助判断。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "ダブル7揃い/AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "スーパーヒーロー初当り回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "AT直行/直撃メモ",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "高設定ほどAT直行しやすいが、公表は選択率中心のため補助記録用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 920.1,
+          "weight": 0.8,
+          "minSampleSize": 2,
+          "note": "シングル7揃い（ボーナス）確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 879.1,
+          "weight": 0.8,
+          "minSampleSize": 2,
+          "note": "シングル7揃い（ボーナス）確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 831.3,
+          "weight": 0.8,
+          "minSampleSize": 2,
+          "note": "シングル7揃い（ボーナス）確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 685.2,
+          "weight": 0.8,
+          "minSampleSize": 2,
+          "note": "シングル7揃い（ボーナス）確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 633.5,
+          "weight": 0.8,
+          "minSampleSize": 2,
+          "note": "シングル7揃い（ボーナス）確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 636.9,
+          "weight": 0.8,
+          "minSampleSize": 2,
+          "note": "シングル7揃い（ボーナス）確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 421.5,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ダブル7揃い（スーパーヒーロー）確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 401.4,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ダブル7揃い（スーパーヒーロー）確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 383.9,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ダブル7揃い（スーパーヒーロー）確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 355.1,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ダブル7揃い（スーパーヒーロー）確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 345.6,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ダブル7揃い（スーパーヒーロー）確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 327.5,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ダブル7揃い（スーパーヒーロー）確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 211.5,
+          "weight": 0.8,
+          "minSampleSize": 5,
+          "note": "CZ「ICPOチャレンジ」突入率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 210.0,
+          "weight": 0.8,
+          "minSampleSize": 5,
+          "note": "CZ「ICPOチャレンジ」突入率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 204.9,
+          "weight": 0.8,
+          "minSampleSize": 5,
+          "note": "CZ「ICPOチャレンジ」突入率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 199.7,
+          "weight": 0.8,
+          "minSampleSize": 5,
+          "note": "CZ「ICPOチャレンジ」突入率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 199.0,
+          "weight": 0.8,
+          "minSampleSize": 5,
+          "note": "CZ「ICPOチャレンジ」突入率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 198.0,
+          "weight": 0.8,
+          "minSampleSize": 5,
+          "note": "CZ「ICPOチャレンジ」突入率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大1000Gで天井到達しAT「スーパーヒーロー」に当選。シングル7揃い後のAT非突入では天井G数を引き継ぐ。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "reset_game_ceiling",
+      "displayName": "設定変更時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 700,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時は天井が最大700Gに短縮。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "rescue_trigger",
+      "displayName": "救済発動候補",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 400,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "100G/200G/300G/400Gで救済発動の可能性あり（高設定ほど優遇とされる）。",
+      "isEnabled": true
+    }
+  ]
+}

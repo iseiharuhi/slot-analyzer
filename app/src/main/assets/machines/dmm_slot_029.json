@@ -6,7 +6,7 @@
     "type": "HYBRID",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。ART初当り・どこまじ出現率・ボーナス確率を採用。共通コインは入力負荷を考慮して今回は未採用です。",
+    "notes": "partial: 公開比較値を確認できたどこまじ・ART初当り・REG・BIGを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4423",
     "ichigekiUrl": "https://1geki.jp/slot/l_magicalhalloween8/"
   },

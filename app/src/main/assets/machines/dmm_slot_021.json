@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。A/BT系としてREGを主軸に、合算とBIGを補助化。チェリー合算も公開値で追加し、テンプレ値を排除しました。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・チェリー合算を主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4471",
     "ichigekiUrl": "https://1geki.jp/slot/s_mikuido2chal/"
   },

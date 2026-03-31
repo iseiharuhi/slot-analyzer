@@ -1,14 +1,14 @@
 {
   "machineId": "dmm_slot_005",
   "machineName": "スマスロスーパーリオエース2",
-  "status": "draft",
-  "capturedDate": "2026-03-29",
+  "status": "partial",
+  "capturedDate": "2026-03-31",
   "sourceListPage": 1,
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "unresolved_direct_url"
+      "url": "https://p-town.dmm.com/machines/4984",
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",
@@ -17,8 +17,8 @@
     },
     {
       "label": "一撃",
-      "url": null,
-      "status": "not_resolved_in_this_run"
+      "url": "https://1geki.jp/slot/s_sp_rioace/",
+      "status": "verified_direct"
     }
   ]
 }

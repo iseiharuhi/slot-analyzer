@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "公開解析ベースへ更新。設定1・2・4・5・6の5段階対応。ボーナス初当りを主軸に、CZ「源チャレンジ」を補助指標として採用しました。",
+    "notes": "partial: 公開比較値を確認できたボーナス初当り・源チャレンジを主軸に反映。 精度優先で暫定値は採用していない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4428",
     "ichigekiUrl": "https://1geki.jp/slot/l_d_gensantyomugen/"
   },

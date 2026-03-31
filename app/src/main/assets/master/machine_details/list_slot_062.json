@@ -1,0 +1,19 @@
+{
+  "machineId": "list_slot_062",
+  "machineName": "戦姫絶唱シンフォギア 正義の歌",
+  "status": "partial",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4579",
+      "status": "verified_direct_page"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_sympho/",
+      "status": "verified_direct_page"
+    }
+  ]
+}
