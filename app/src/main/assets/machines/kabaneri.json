@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-07-04",
     "isActive": true,
-    "notes": "公開解析ベースへ更新。初当りボーナス/ST合算に加え、共通6枚ベルの小役設定差を重視する。CZ・直撃系は補助扱い。",
+    "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当りとボーナス初当り。直撃ATや高確示唆は重い分母・UI外要素のため補助メモ運用とし、現行推測は見える数値に寄せて安定度を優先。ATは2000G超、CZとボーナスは2500〜3000G級で比較推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4160",
     "ichigekiUrl": "https://1geki.jp/slot/s_kabaneri/"
   },
@@ -33,7 +33,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "エピソードボーナス＋駿城ボーナスの初当り合算"
+      "notes": "ボーナス初当り。補助判別。"
     },
     {
       "key": "at_count",
@@ -45,7 +45,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "ST合算。初当り・引き戻しを問わず総回数で入力"
+      "notes": "AT初当り回数。主判別。"
     },
     {
       "key": "common_bell_count",
@@ -69,7 +69,7 @@
       "isEnabled": true,
       "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "公開の全設定比較値を精査中のため今回は補助入力のみ。"
+      "notes": "通常時CZ初当り。補助判別用。"
     },
     {
       "key": "direct_hit_count",
@@ -81,7 +81,7 @@
       "isEnabled": true,
       "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "美馬ST直行などの特殊契機メモ用。現段階では推測に未使用。"
+      "notes": "重い分母のため補助メモ用。長時間実戦時のみ参考。"
     }
   ],
   "settingReferenceValues": [
@@ -91,44 +91,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 237.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "初当りボーナス合算"
+          "weight": 0.68,
+          "minSampleSize": 6,
+          "note": "ボーナス初当り確率。補助判別。2500〜3000G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 230.7,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "初当りボーナス合算"
+          "weight": 0.68,
+          "minSampleSize": 6,
+          "note": "ボーナス初当り確率。補助判別。2500〜3000G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 214.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "初当りボーナス合算"
+          "weight": 0.68,
+          "minSampleSize": 6,
+          "note": "ボーナス初当り確率。補助判別。2500〜3000G級から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 186.5,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "初当りボーナス合算"
+          "weight": 0.68,
+          "minSampleSize": 6,
+          "note": "ボーナス初当り確率。補助判別。2500〜3000G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 171.3,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "初当りボーナス合算"
+          "weight": 0.68,
+          "minSampleSize": 6,
+          "note": "ボーナス初当り確率。補助判別。2500〜3000G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 151.3,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "初当りボーナス合算"
+          "weight": 0.68,
+          "minSampleSize": 6,
+          "note": "ボーナス初当り確率。補助判別。2500〜3000G級から傾向確認。"
         }
       ]
     },
@@ -138,44 +138,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 407.9,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "ST合算確率"
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 393.2,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "ST合算確率"
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 372.4,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "ST合算確率"
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 327.2,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "ST合算確率"
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 307.3,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "ST合算確率"
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 290.6,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "ST合算確率"
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         }
       ]
     },

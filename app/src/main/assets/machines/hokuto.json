@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-04-03",
     "isActive": true,
-    "notes": "公開解析とDMM特集を再監査。主判別は初当りBB、補助は弱スイカ・強スイカ・リーチ目役。初当りは総ゲーム数2000G超、弱スイカは3000G級、リーチ目役は10000G級で真価を発揮するため、重い分母は保守的に扱う。弱レア役契機BBや内部状態移行も有効だが、現行UIで再現しやすい指標へ絞って完成度を優先。",
+    "notes": "均一化フェーズ用に再整理。主判別は初当りBB、補助は弱スイカと強スイカ。リーチ目役は設定差が大きいが重い分母のため低weight補助へ固定し、現行UIでは長時間実戦の裏付け要素として扱う。初当りは2000G超、弱スイカは3000G級、強スイカは3000〜4000G級で比較推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4301",
     "ichigekiUrl": "https://1geki.jp/slot/l_hokutonoken/"
   },
@@ -57,7 +57,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "A/B合算で入力。試行が少ない間は参考補助。"
+      "notes": "強スイカ合算。試行が重いため補助判別。"
     },
     {
       "key": "reach_role_count",
@@ -67,9 +67,9 @@
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "出現率は重いが設定差が大きい。1回でも強い根拠。"
+      "notes": "重い分母のため通常は非表示。1回でも強いが過信しない。"
     },
     {
       "key": "cz_count",
@@ -115,44 +115,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 383.4,
-          "weight": 1.25,
+          "weight": 1.0,
           "minSampleSize": 6,
-          "note": "初当りBB合算。主判別。"
+          "note": "初当りBB合算。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 370.5,
-          "weight": 1.25,
+          "weight": 1.0,
           "minSampleSize": 6,
-          "note": "初当りBB合算。主判別。"
+          "note": "初当りBB合算。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 334.2,
-          "weight": 1.25,
+          "weight": 1.0,
           "minSampleSize": 6,
-          "note": "初当りBB合算。主判別。"
+          "note": "初当りBB合算。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 297.8,
-          "weight": 1.25,
+          "weight": 1.0,
           "minSampleSize": 6,
-          "note": "初当りBB合算。主判別。"
+          "note": "初当りBB合算。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 258.7,
-          "weight": 1.25,
+          "weight": 1.0,
           "minSampleSize": 6,
-          "note": "初当りBB合算。主判別。"
+          "note": "初当りBB合算。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 235.1,
-          "weight": 1.25,
+          "weight": 1.0,
           "minSampleSize": 6,
-          "note": "初当りBB合算。主判別。"
+          "note": "初当りBB合算。主判別。2000G超から比較しやすい。"
         }
       ]
     },
@@ -162,44 +162,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 109.0,
-          "weight": 0.95,
+          "weight": 0.72,
           "minSampleSize": 28,
-          "note": "弱スイカ出現率。3000G級から有効。"
+          "note": "弱スイカ出現率。補助判別。3000G級から有効。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 108.7,
-          "weight": 0.95,
+          "weight": 0.72,
           "minSampleSize": 28,
-          "note": "弱スイカ出現率。3000G級から有効。"
+          "note": "弱スイカ出現率。補助判別。3000G級から有効。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 107.3,
-          "weight": 0.95,
+          "weight": 0.72,
           "minSampleSize": 28,
-          "note": "弱スイカ出現率。3000G級から有効。"
+          "note": "弱スイカ出現率。補助判別。3000G級から有効。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 105.9,
-          "weight": 0.95,
+          "weight": 0.72,
           "minSampleSize": 28,
-          "note": "弱スイカ出現率。3000G級から有効。"
+          "note": "弱スイカ出現率。補助判別。3000G級から有効。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 100.7,
-          "weight": 0.95,
+          "weight": 0.72,
           "minSampleSize": 28,
-          "note": "弱スイカ出現率。3000G級から有効。"
+          "note": "弱スイカ出現率。補助判別。3000G級から有効。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 98.3,
-          "weight": 0.95,
+          "weight": 0.72,
           "minSampleSize": 28,
-          "note": "弱スイカ出現率。3000G級から有効。"
+          "note": "弱スイカ出現率。補助判別。3000G級から有効。"
         }
       ]
     },
@@ -209,44 +209,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 409.6,
-          "weight": 0.55,
-          "minSampleSize": 8,
-          "note": "強スイカ合算。差はあるが試行が重いため補助。"
+          "weight": 0.6,
+          "minSampleSize": 10,
+          "note": "強スイカ合算。補助判別。3000〜4000G級から参考。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 404.5,
-          "weight": 0.55,
-          "minSampleSize": 8,
-          "note": "強スイカ合算。差はあるが試行が重いため補助。"
+          "weight": 0.6,
+          "minSampleSize": 10,
+          "note": "強スイカ合算。補助判別。3000〜4000G級から参考。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 390.6,
-          "weight": 0.55,
-          "minSampleSize": 8,
-          "note": "強スイカ合算。差はあるが試行が重いため補助。"
+          "weight": 0.6,
+          "minSampleSize": 10,
+          "note": "強スイカ合算。補助判別。3000〜4000G級から参考。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 376.6,
-          "weight": 0.55,
-          "minSampleSize": 8,
-          "note": "強スイカ合算。差はあるが試行が重いため補助。"
+          "weight": 0.6,
+          "minSampleSize": 10,
+          "note": "強スイカ合算。補助判別。3000〜4000G級から参考。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 352.3,
-          "weight": 0.55,
-          "minSampleSize": 8,
-          "note": "強スイカ合算。差はあるが試行が重いため補助。"
+          "weight": 0.6,
+          "minSampleSize": 10,
+          "note": "強スイカ合算。補助判別。3000〜4000G級から参考。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 337.8,
-          "weight": 0.55,
-          "minSampleSize": 8,
-          "note": "強スイカ合算。差はあるが試行が重いため補助。"
+          "weight": 0.6,
+          "minSampleSize": 10,
+          "note": "強スイカ合算。補助判別。3000〜4000G級から参考。"
         }
       ]
     },
@@ -256,44 +256,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 16384.0,
-          "weight": 0.45,
-          "minSampleSize": 2,
-          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "重い分母の特殊役。1回で傾向は出るが断定材料にはせず長時間実戦で補強。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 13107.2,
-          "weight": 0.45,
-          "minSampleSize": 2,
-          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "重い分母の特殊役。1回で傾向は出るが断定材料にはせず長時間実戦で補強。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 12014.9,
-          "weight": 0.45,
-          "minSampleSize": 2,
-          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "重い分母の特殊役。1回で傾向は出るが断定材料にはせず長時間実戦で補強。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 10922.7,
-          "weight": 0.45,
-          "minSampleSize": 2,
-          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "重い分母の特殊役。1回で傾向は出るが断定材料にはせず長時間実戦で補強。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 9362.3,
-          "weight": 0.45,
-          "minSampleSize": 2,
-          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "重い分母の特殊役。1回で傾向は出るが断定材料にはせず長時間実戦で補強。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 8192.0,
-          "weight": 0.45,
-          "minSampleSize": 2,
-          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "重い分母の特殊役。1回で傾向は出るが断定材料にはせず長時間実戦で補強。"
         }
       ]
     }

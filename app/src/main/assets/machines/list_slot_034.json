@@ -1,148 +1,148 @@
 {
-  "machine": {
-    "id": "list_slot_034",
-    "name": "パチスロ盾の勇者の成り上がり",
-    "manufacturer": "Sammy",
-    "type": "AT",
-    "releaseDate": "2023-02-20",
-    "isActive": true,
-    "notes": "partial: DMM・一撃の公開解析を再整理。主判別はAT「ウェイブウォー」初当り。通常時直撃ATは設定6のみ目立って出やすい傾向が示されているが、全設定の厳密分母が未開示のため計算には未採用のままメモ専用とした。CZ成功率や奇偶挙動も有効だが入力再現性を優先して補助扱い。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4292",
-    "ichigekiUrl": "https://1geki.jp/slot/s_tat_yu/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "初当り/ボーナス",
-      "category": "BONUS",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
-    },
-    {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
-      "sortOrder": 11,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT「ウェイブウォー」初当り",
-      "category": "AT_CZ",
-      "sortOrder": 12,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "CZ成功・通常時直撃を含むAT初当り回数。"
-    },
-    {
-      "key": "direct_hit_count",
-      "displayName": "通常時直撃AT",
-      "category": "SPECIAL",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "通常時直撃AT。設定6のみ目立って出やすい傾向だが、全設定比較値未開示のためメモ用途。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 298.9,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT初当り。主判別"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 284.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT初当り。主判別"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 274.3,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT初当り。主判別"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 246.7,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT初当り。主判別"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 228.5,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT初当り。主判別"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 190.5,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT初当り。主判別"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "normal_game_ceiling",
-      "displayName": "通常時ゲーム数天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 1173,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時1173G+α消化でATに当選。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "reset_or_inherit_ceiling",
-      "displayName": "設定変更/有利区間引継ぎ時天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 800,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "設定変更時または有利区間引継ぎ時は800G+αでATに当選。",
-      "isEnabled": true
-    }
-  ]
+    "machine":  {
+                    "id":  "list_slot_034",
+                    "name":  "パチスロ盾の勇者の成り上がり",
+                    "manufacturer":  "Sammy",
+                    "type":  "AT",
+                    "releaseDate":  "2023-02-20",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はAT初当りに固定。盾の勇者は現行参照値で確実に使える軸がAT初当り中心のため、無理に補助軸を増やさず、1軸を丁寧に扱う構成で品質を揃える。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4292",
+                    "ichigekiUrl":  "https://1geki.jp/slot/s_tat_yu/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "初当り/ボーナス",
+                                   "category":  "BONUS",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
+                               },
+                               {
+                                   "key":  "cz_count",
+                                   "displayName":  "CZ",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  11,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT「ウェイブウォー」初当り",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  12,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "CZ成功・通常時直撃を含むAT初当り回数。"
+                               },
+                               {
+                                   "key":  "direct_hit_count",
+                                   "displayName":  "通常時直撃AT",
+                                   "category":  "SPECIAL",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "通常時直撃AT。設定6のみ目立って出やすい傾向だが、全設定比較値未開示のためメモ用途。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  298.9,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  284.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  274.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  246.7,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  228.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  190.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "normal_game_ceiling",
+                             "displayName":  "通常時ゲーム数天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  1173,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時1173G+α消化でATに当選。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "reset_or_inherit_ceiling",
+                             "displayName":  "設定変更/有利区間引継ぎ時天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  800,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "設定変更時または有利区間引継ぎ時は800G+αでATに当選。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

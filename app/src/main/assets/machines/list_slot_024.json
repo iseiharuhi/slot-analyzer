@@ -1,177 +1,177 @@
 {
-  "machine": {
-    "id": "list_slot_024",
-    "name": "Lにゃんこ大戦争 超神速",
-    "manufacturer": "京楽",
-    "type": "AT",
-    "releaseDate": "2025-01-20",
-    "isActive": true,
-    "notes": "partial: 公開解析ベースへ更新。初当りAT確率とCZ「大狂乱のネコ島」出現率を採用。222G天井は高設定期待度アップ要素として重要だが、比率公表のため ceilingRules と補助メモで扱う。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4724",
-    "ichigekiUrl": "https://1geki.jp/slot/l_nyanko2/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "初当りAT",
-      "category": "BONUS",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "通常時からの初当りAT回数。主判別要素。"
-    },
-    {
-      "key": "cz_count",
-      "displayName": "CZ「大狂乱のネコ島」",
-      "category": "AT_CZ",
-      "sortOrder": 11,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT当選チャンスとなるCZ出現率。"
-    },
-    {
-      "key": "at_count",
-      "displayName": "上位/特殊契機メモ",
-      "category": "AT_CZ",
-      "sortOrder": 12,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "BIG BANG揃い・夢想突入などの補助記録用。"
-    },
-    {
-      "key": "direct_hit_count",
-      "displayName": "222G天井当選メモ",
-      "category": "SPECIAL",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "222G+α選択時のメモ用。高設定ほど選択率が高い。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 395,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "初当りAT確率"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 383,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "初当りAT確率"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 336,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "初当りAT確率"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 313,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "初当りAT確率"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 303,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "初当りAT確率"
-        }
-      ]
-    },
-    {
-      "counterKey": "cz_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 544,
-          "weight": 0.9,
-          "minSampleSize": 3,
-          "note": "CZ「大狂乱のネコ島」出現率"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 538,
-          "weight": 0.9,
-          "minSampleSize": 3,
-          "note": "CZ「大狂乱のネコ島」出現率"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 489,
-          "weight": 0.9,
-          "minSampleSize": 3,
-          "note": "CZ「大狂乱のネコ島」出現率"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 464,
-          "weight": 0.9,
-          "minSampleSize": 3,
-          "note": "CZ「大狂乱のネコ島」出現率"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 461,
-          "weight": 0.9,
-          "minSampleSize": 3,
-          "note": "CZ「大狂乱のネコ島」出現率"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "type": "GAME_COUNT",
-      "value": 1122,
-      "unit": "G+α",
-      "detail": "通常時最大天井。到達でAT当選+金勝撫缶1個以上獲得。"
-    },
-    {
-      "type": "GAME_COUNT",
-      "value": 922,
-      "unit": "G+α",
-      "detail": "設定変更時の最大天井短縮。"
-    },
-    {
-      "type": "GAME_COUNT",
-      "value": 222,
-      "unit": "G+α",
-      "detail": "稀に選択される短縮天井。発生時は高設定期待度アップ。"
-    }
-  ]
+    "machine":  {
+                    "id":  "list_slot_024",
+                    "name":  "Lにゃんこ大戦争 超神速",
+                    "manufacturer":  "京楽",
+                    "type":  "AT",
+                    "releaseDate":  "2025-01-20",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はCZに整理。特化当選や波でAT結果が揺れやすいため、現行入力ではボーナス初当りを主軸にして安定度を優先する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4724",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_nyanko2/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "初当りAT",
+                                   "category":  "BONUS",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "通常時からの初当りAT回数。主判別要素。"
+                               },
+                               {
+                                   "key":  "cz_count",
+                                   "displayName":  "CZ「大狂乱のネコ島」",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  11,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "AT当選チャンスとなるCZ出現率。"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "上位/特殊契機メモ",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  12,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "BIG BANG揃い・夢想突入などの補助記録用。"
+                               },
+                               {
+                                   "key":  "direct_hit_count",
+                                   "displayName":  "222G天井当選メモ",
+                                   "category":  "SPECIAL",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "222G+α選択時のメモ用。高設定ほど選択率が高い。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "bonus_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  395,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  383,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  336,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  313,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  303,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "cz_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  544,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  538,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  489,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  464,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  461,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "type":  "GAME_COUNT",
+                             "value":  1122,
+                             "unit":  "G+α",
+                             "detail":  "通常時最大天井。到達でAT当選+金勝撫缶1個以上獲得。"
+                         },
+                         {
+                             "type":  "GAME_COUNT",
+                             "value":  922,
+                             "unit":  "G+α",
+                             "detail":  "設定変更時の最大天井短縮。"
+                         },
+                         {
+                             "type":  "GAME_COUNT",
+                             "value":  222,
+                             "unit":  "G+α",
+                             "detail":  "稀に選択される短縮天井。発生時は高設定期待度アップ。"
+                         }
+                     ]
 }

@@ -1,0 +1,266 @@
+{
+  "machine": {
+    "id": "list_slot_061",
+    "name": "麻雀物語",
+    "manufacturer": "オリンピアエステート",
+    "type": "AT",
+    "releaseDate": "2025-04-21",
+    "isActive": true,
+    "notes": "partial: 一撃掲載の通常時ボーナス初当り・AT合算・初当り合算に加え、通常時AT直撃率も反映。AT直撃は分母が重いが設定差が大きいため、1回でも強い補助根拠として扱う。終了画面やボイス示唆は入力UIに乗せにくいため補助メモ扱い。",
+    "dmmUrl": "https://p-town.dmm.com/specials/4159",
+    "ichigekiUrl": "https://1geki.jp/slot/l_mjnmngtr/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り合算",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のボーナス or ATの初当り合算。主判別項目。"
+    },
+    {
+      "key": "big_count",
+      "displayName": "通常時ボーナス初当り",
+      "category": "BONUS",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時ボーナス初当り回数。補助評価用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。補助評価用。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "AT直撃",
+      "category": "SPECIAL",
+      "sortOrder": 31,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時AT直撃回数。分母は重いが設定差が大きいので1回でも重要。前兆中昇格を除いた数値ベース。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 354.1,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "通常時のボーナス or AT合算初当り"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 349.2,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "通常時のボーナス or AT合算初当り"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 342.1,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "通常時のボーナス or AT合算初当り"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 328.8,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "通常時のボーナス or AT合算初当り"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 326.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "通常時のボーナス or AT合算初当り"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 323.8,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "通常時のボーナス or AT合算初当り"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 433.3,
+          "weight": 0.7,
+          "minSampleSize": 3,
+          "note": "通常時ボーナス初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 431.8,
+          "weight": 0.7,
+          "minSampleSize": 3,
+          "note": "通常時ボーナス初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 426.6,
+          "weight": 0.7,
+          "minSampleSize": 3,
+          "note": "通常時ボーナス初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 420.2,
+          "weight": 0.7,
+          "minSampleSize": 3,
+          "note": "通常時ボーナス初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 417.9,
+          "weight": 0.7,
+          "minSampleSize": 3,
+          "note": "通常時ボーナス初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 416.5,
+          "weight": 0.7,
+          "minSampleSize": 3,
+          "note": "通常時ボーナス初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 615.2,
+          "weight": 0.85,
+          "minSampleSize": 2,
+          "note": "AT合算確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 600.3,
+          "weight": 0.85,
+          "minSampleSize": 2,
+          "note": "AT合算確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 580.5,
+          "weight": 0.85,
+          "minSampleSize": 2,
+          "note": "AT合算確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 545.5,
+          "weight": 0.85,
+          "minSampleSize": 2,
+          "note": "AT合算確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 537.9,
+          "weight": 0.85,
+          "minSampleSize": 2,
+          "note": "AT合算確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 531.4,
+          "weight": 0.85,
+          "minSampleSize": 2,
+          "note": "AT合算確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 15142.4,
+          "weight": 1.55,
+          "minSampleSize": 1,
+          "note": "AT直撃率（前兆中昇格を含まない数値）"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 10716.9,
+          "weight": 1.55,
+          "minSampleSize": 1,
+          "note": "AT直撃率（前兆中昇格を含まない数値）"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 8351.0,
+          "weight": 1.55,
+          "minSampleSize": 1,
+          "note": "AT直撃率（前兆中昇格を含まない数値）"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 5164.8,
+          "weight": 1.55,
+          "minSampleSize": 1,
+          "note": "AT直撃率（前兆中昇格を含まない数値）"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 4886.1,
+          "weight": 1.55,
+          "minSampleSize": 1,
+          "note": "AT直撃率（前兆中昇格を含まない数値）"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 4631.9,
+          "weight": 1.55,
+          "minSampleSize": 1,
+          "note": "AT直撃率（前兆中昇格を含まない数値）"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

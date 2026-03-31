@@ -1,157 +1,157 @@
 {
-  "machine": {
-    "id": "list_slot_027",
-    "name": "パチスロ アクエリオン ALL STARS",
-    "manufacturer": "SANKYO",
-    "type": "AT",
-    "releaseDate": "2022-07-04",
-    "isActive": true,
-    "notes": "partial: 一撃公開のCZトータル当選率とAT「アクエリオンRUSH」初当り確率を採用。DMM掲載の1000G天井とCZ4スルー天井も反映。終了画面やテーブル選択率は現行UIにそのまま乗せづらいため今回は未実装。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4156",
-    "ichigekiUrl": "https://1geki.jp/slot/s_aguarion_allstars/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "cz_count",
-      "displayName": "CZ初当り",
-      "category": "AT_CZ",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "CZトータル当選回数。AT当選前の主判別。"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT初当り",
-      "category": "AT_CZ",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT「アクエリオンRUSH」初当り回数。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "cz_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 220.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "CZトータル当選率"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 206.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "CZトータル当選率"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 176.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "CZトータル当選率"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 167.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "CZトータル当選率"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 159.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "CZトータル当選率"
-        }
-      ]
-    },
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 393.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT「アクエリオンRUSH」初当り確率"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 374.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT「アクエリオンRUSH」初当り確率"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 331.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT「アクエリオンRUSH」初当り確率"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 309.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT「アクエリオンRUSH」初当り確率"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 289.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "AT「アクエリオンRUSH」初当り確率"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "normal_game_ceiling",
-      "displayName": "通常時天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 1000,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時1000G到達でAT当選。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "cz_through_ceiling",
-      "displayName": "CZスルー天井",
-      "ceilingType": "THROUGH_COUNT",
-      "limitValue": 4,
-      "unit": "回",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "CZ4スルー後の5回目CZでAT当選。",
-      "isEnabled": true
-    }
-  ]
+    "machine":  {
+                    "id":  "list_slot_027",
+                    "name":  "パチスロ アクエリオン ALL STARS",
+                    "manufacturer":  "SANKYO",
+                    "type":  "AT",
+                    "releaseDate":  "2022-07-04",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。2軸機種として扱い、無理に重い要素を足さず、実戦で使える初当りバランスの見やすさを優先する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4156",
+                    "ichigekiUrl":  "https://1geki.jp/slot/s_aguarion_allstars/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "cz_count",
+                                   "displayName":  "CZ初当り",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "CZトータル当選回数。AT当選前の主判別。"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT初当り",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "AT「アクエリオンRUSH」初当り回数。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  393.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  374.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  331.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  309.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  289.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "cz_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  220.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  206.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  176.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  167.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  159.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "normal_game_ceiling",
+                             "displayName":  "通常時天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  1000,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時1000G到達でAT当選。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "cz_through_ceiling",
+                             "displayName":  "CZスルー天井",
+                             "ceilingType":  "THROUGH_COUNT",
+                             "limitValue":  4,
+                             "unit":  "回",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "CZ4スルー後の5回目CZでAT当選。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

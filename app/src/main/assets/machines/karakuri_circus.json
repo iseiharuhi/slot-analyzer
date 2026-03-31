@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "DMM掲載の推測まとめを再監査。主判別はAT初当り、補助はCZ初当り。からくりレア役契機の幕間チャンスやAT終了画面は強いが、前者は全設定比較値が未揃い・後者は現行UI未対応のためメモ運用推奨。ATは2000G超、CZは3000G級で傾向を見たい。",
+    "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当り。直撃ATは重い分母のため低weightの補助メモ扱いに固定し、終了画面や示唆演出は現行UI外のため別メモ推奨。ATは2000G超、CZは2500〜3000G級で比較するとブレが減る。",
     "dmmUrl": "https://p-town.dmm.com/machines/4360",
     "ichigekiUrl": "https://1geki.jp/slot/l_karakuricircus/"
   },
@@ -33,7 +33,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "通常時のCZ初当り。AT機では補助判別用。"
+      "notes": "通常時CZ初当り。補助判別用。"
     },
     {
       "key": "at_count",
@@ -45,7 +45,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "AT初当り回数。AT機の主判別項目。"
+      "notes": "AT初当り回数。主判別。"
     },
     {
       "key": "bonus_count",
@@ -69,7 +69,7 @@
       "isEnabled": true,
       "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "低頻度のため主判別からは除外。メモ用。"
+      "notes": "重い分母のため補助メモ用。長時間実戦時のみ参考。"
     }
   ],
   "settingReferenceValues": [
@@ -79,44 +79,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 270.0,
-          "weight": 0.62,
+          "weight": 0.72,
           "minSampleSize": 8,
-          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 258.0,
-          "weight": 0.62,
+          "weight": 0.72,
           "minSampleSize": 8,
-          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 246.0,
-          "weight": 0.62,
+          "weight": 0.72,
           "minSampleSize": 8,
-          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 232.0,
-          "weight": 0.62,
+          "weight": 0.72,
           "minSampleSize": 8,
-          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 218.0,
-          "weight": 0.62,
+          "weight": 0.72,
           "minSampleSize": 8,
-          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 204.0,
-          "weight": 0.62,
+          "weight": 0.72,
           "minSampleSize": 8,
-          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
         }
       ]
     },
@@ -127,43 +127,43 @@
           "settingNo": 1,
           "denominatorValue": 540.0,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 505.0,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 470.0,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 430.0,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 390.0,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 350.0,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         }
       ]
     }

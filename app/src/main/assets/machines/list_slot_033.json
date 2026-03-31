@@ -1,171 +1,171 @@
 {
-  "machine": {
-    "id": "list_slot_033",
-    "name": "ペルソナ5",
-    "manufacturer": "サミー",
-    "type": "AT",
-    "releaseDate": "2022-09-05",
-    "isActive": true,
-    "notes": "partial: 一撃の公開解析から初当り確率とAT「テイクユアハート」初当りを採用。直撃ATや小役差は確認できるが、現行UIでの手入力負荷と分母の重さを考慮して今回は未採用。7回目ペルソナチャンス天井とPC間400G到達時の超高確移行を ceilingRules に整理。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4193",
-    "ichigekiUrl": "https://1geki.jp/slot/s_persona5/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "初当り",
-      "category": "BONUS",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "通常時の初当り回数。主判別項目。"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT「テイクユアハート」初当り",
-      "category": "AT_CZ",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT初当り回数。補助判別。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 127.5,
-          "weight": 1.0,
-          "minSampleSize": 10,
-          "note": "初当り確率"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 125.2,
-          "weight": 1.0,
-          "minSampleSize": 10,
-          "note": "初当り確率"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 122.0,
-          "weight": 1.0,
-          "minSampleSize": 10,
-          "note": "初当り確率"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 118.6,
-          "weight": 1.0,
-          "minSampleSize": 10,
-          "note": "初当り確率"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 116.0,
-          "weight": 1.0,
-          "minSampleSize": 10,
-          "note": "初当り確率"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 111.0,
-          "weight": 1.0,
-          "minSampleSize": 10,
-          "note": "初当り確率"
-        }
-      ]
-    },
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 338.8,
-          "weight": 0.9,
-          "minSampleSize": 4,
-          "note": "AT初当り確率"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 322.6,
-          "weight": 0.9,
-          "minSampleSize": 4,
-          "note": "AT初当り確率"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 321.1,
-          "weight": 0.9,
-          "minSampleSize": 4,
-          "note": "AT初当り確率"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 290.0,
-          "weight": 0.9,
-          "minSampleSize": 4,
-          "note": "AT初当り確率"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 289.7,
-          "weight": 0.9,
-          "minSampleSize": 4,
-          "note": "AT初当り確率"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 251.5,
-          "weight": 0.9,
-          "minSampleSize": 4,
-          "note": "AT初当り確率"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "pc_through_ceiling",
-      "displayName": "ペルソナチャンス回数天井",
-      "ceilingType": "THROUGH_COUNT",
-      "limitValue": 7,
-      "unit": "回",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "AT間で7回目のペルソナチャンス当選でAT「テイクユアハート」に当選。設定変更後は5回目に短縮。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "pc_game_ceiling",
-      "displayName": "ペルソナチャンス間天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 400,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時のペルソナチャンス間で最大400G消化すると超高確へ移行し、次回ペルソナチャンス当選率が大幅に上昇。",
-      "isEnabled": true
-    }
-  ]
+    "machine":  {
+                    "id":  "list_slot_033",
+                    "name":  "ペルソナ5",
+                    "manufacturer":  "サミー",
+                    "type":  "AT",
+                    "releaseDate":  "2022-09-05",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りに整理。高確や前兆の偏りでAT回数が揺れやすいため、主軸はボーナス初当りで固定して全体の均一性を優先する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4193",
+                    "ichigekiUrl":  "https://1geki.jp/slot/s_persona5/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "初当り",
+                                   "category":  "BONUS",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "通常時の初当り回数。主判別項目。"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT「テイクユアハート」初当り",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "AT初当り回数。補助判別。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "bonus_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  127.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  125.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  122.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  118.6,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  116.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  111.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  338.8,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  322.6,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  321.1,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  290.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  289.7,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  251.5,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "pc_through_ceiling",
+                             "displayName":  "ペルソナチャンス回数天井",
+                             "ceilingType":  "THROUGH_COUNT",
+                             "limitValue":  7,
+                             "unit":  "回",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "AT間で7回目のペルソナチャンス当選でAT「テイクユアハート」に当選。設定変更後は5回目に短縮。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "pc_game_ceiling",
+                             "displayName":  "ペルソナチャンス間天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  400,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時のペルソナチャンス間で最大400G消化すると超高確へ移行し、次回ペルソナチャンス当選率が大幅に上昇。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

@@ -1,125 +1,127 @@
 {
-  "machine": {
-    "id": "dmm_slot_002",
-    "name": "スマスロ バイオハザードRE:3",
-    "manufacturer": "Enterrise",
-    "type": "AT",
-    "releaseDate": "2026-05-11",
-    "isActive": true,
-    "notes": "partial: 公開比較値を確認できたAT初当たりを主軸に反映。 CZ・ボーナス・直撃/特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4974",
-    "ichigekiUrl": "https://1geki.jp/slot/s_bh7/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT初当たり",
-      "category": "AT_CZ",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT「ハザードラッシュ」初当たり回数。公開値ありの主判別要素。"
-    },
-    {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "CZ「ネメシスバトル」回数。全設定比較値が未公開のため補助記録のみ。"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "ボーナス",
-      "category": "BONUS",
-      "sortOrder": 21,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "全設定比較値が未公開のため推測には未使用。"
-    },
-    {
-      "key": "direct_hit_count",
-      "displayName": "直撃/特殊契機",
-      "category": "SPECIAL",
-      "sortOrder": 30,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "公開比較値未確認のため推測には未使用。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 399.0,
-          "weight": 1.3,
-          "minSampleSize": 2,
-          "note": "AT初当たり確率。1/349付近を上回るかが高設定域の重要目安。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 391.4,
-          "weight": 1.3,
-          "minSampleSize": 2,
-          "note": "AT初当たり確率。1/349付近を上回るかが高設定域の重要目安。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 372.8,
-          "weight": 1.3,
-          "minSampleSize": 2,
-          "note": "AT初当たり確率。1/349付近を上回るかが高設定域の重要目安。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 349.8,
-          "weight": 1.3,
-          "minSampleSize": 2,
-          "note": "AT初当たり確率。1/349付近を上回るかが高設定域の重要目安。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 323.5,
-          "weight": 1.3,
-          "minSampleSize": 2,
-          "note": "AT初当たり確率。1/349付近を上回るかが高設定域の重要目安。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 311.2,
-          "weight": 1.3,
-          "minSampleSize": 2,
-          "note": "AT初当たり確率。1/349付近を上回るかが高設定域の重要目安。"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": []
+    "machine":  {
+                    "id":  "dmm_slot_002",
+                    "name":  "スマスロ バイオハザードRE:3",
+                    "manufacturer":  "Enterrise",
+                    "type":  "AT",
+                    "releaseDate":  "2026-05-11",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZとボーナス、重い分母は直撃ATに整理。RE:3は出玉波で短期ブレが出やすいため、AT初当りを主軸に固定する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4974",
+                    "ichigekiUrl":  "https://1geki.jp/slot/s_bh7/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT初当たり",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "AT「ハザードラッシュ」初当たり回数。公開値ありの主判別要素。"
+                               },
+                               {
+                                   "key":  "cz_count",
+                                   "displayName":  "CZ",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "CZ「ネメシスバトル」回数。全設定比較値が未公開のため補助記録のみ。"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "ボーナス",
+                                   "category":  "BONUS",
+                                   "sortOrder":  21,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "全設定比較値が未公開のため推測には未使用。"
+                               },
+                               {
+                                   "key":  "direct_hit_count",
+                                   "displayName":  "直撃/特殊契機",
+                                   "category":  "SPECIAL",
+                                   "sortOrder":  30,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "公開比較値未確認のため推測には未使用。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  399.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  391.4,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  372.8,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  349.8,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  323.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  311.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+
+                     ]
 }

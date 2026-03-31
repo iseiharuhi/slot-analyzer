@@ -1,241 +1,241 @@
 {
-  "machine": {
-    "id": "dmm_slot_024",
-    "name": "L リングにかけろ1 V",
-    "manufacturer": null,
-    "type": "AT",
-    "releaseDate": null,
-    "isActive": true,
-    "notes": "partial: 公開比較値を確認できたボーナス初当り・ST初当り・菊チャンスを3軸で維持。加えて一撃掲載の666G天井選択率やリーチ目高確移行率は強い補助情報として notes に反映。天井はボーナス間999G、設定変更時666G、ブーメランRUSH間1500G以降のボーナスが同色BIG以上濃厚。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4460",
-    "ichigekiUrl": "https://1geki.jp/slot/l_rinkake1v/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "inputType": "NUMBER",
-      "unit": "G",
-      "supportsMinus": false,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 1,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "ボーナス",
-      "category": "BONUS",
-      "inputType": "COUNTER",
-      "unit": "回",
-      "supportsMinus": true,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 10,
-      "notes": null
-    },
-    {
-      "key": "at_count",
-      "displayName": "ST",
-      "category": "AT_CZ",
-      "inputType": "COUNTER",
-      "unit": "回",
-      "supportsMinus": true,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 11,
-      "notes": null
-    },
-    {
-      "key": "cz_count",
-      "displayName": "菊チャンス",
-      "category": "AT_CZ",
-      "inputType": "COUNTER",
-      "unit": "回",
-      "supportsMinus": true,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 12,
-      "notes": null
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 189.3,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "ボーナス初当り（主判別）"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 185.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "ボーナス初当り（主判別）"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 179.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "ボーナス初当り（主判別）"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 161.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "ボーナス初当り（主判別）"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 138.9,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "ボーナス初当り（主判別）"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 121.0,
-          "weight": 0.95,
-          "minSampleSize": 4,
-          "note": "ボーナス初当り（主判別）"
-        }
-      ]
-    },
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 516.0,
-          "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 497.0,
-          "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 467.0,
-          "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 393.0,
-          "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 305.0,
-          "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 236.0,
-          "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
-        }
-      ]
-    },
-    {
-      "counterKey": "cz_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 288.0,
-          "weight": 0.75,
-          "minSampleSize": 5,
-          "note": "菊チャンス当選（補助）"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 281.0,
-          "weight": 0.75,
-          "minSampleSize": 5,
-          "note": "菊チャンス当選（補助）"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 273.0,
-          "weight": 0.75,
-          "minSampleSize": 5,
-          "note": "菊チャンス当選（補助）"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 267.0,
-          "weight": 0.75,
-          "minSampleSize": 5,
-          "note": "菊チャンス当選（補助）"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 251.0,
-          "weight": 0.75,
-          "minSampleSize": 5,
-          "note": "菊チャンス当選（補助）"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 241.0,
-          "weight": 0.75,
-          "minSampleSize": 5,
-          "note": "菊チャンス当選（補助）"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "bonus_interval_ceiling",
-      "displayName": "ボーナス間天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 999,
-      "unit": "G",
-      "isEnabled": true,
-      "requiresResetFlag": false,
-      "resetOnHit": true,
-      "description": "ボーナス間999Gで天井到達となりボーナスに当選。"
-    },
-    {
-      "ruleKey": "reset_shortened_ceiling",
-      "displayName": "設定変更時短縮天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 666,
-      "unit": "G",
-      "isEnabled": true,
-      "requiresResetFlag": true,
-      "resetOnHit": true,
-      "description": "設定変更時は天井が666Gに短縮される。"
-    },
-    {
-      "ruleKey": "br_interval_ceiling",
-      "displayName": "ブーメランRUSH間恩恵",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 1500,
-      "unit": "G",
-      "isEnabled": true,
-      "requiresResetFlag": false,
-      "resetOnHit": true,
-      "description": "ブーメランRUSH間1500G以降のボーナスは同色BIG以上濃厚。"
-    }
-  ]
+    "machine":  {
+                    "id":  "dmm_slot_024",
+                    "name":  "L リングにかけろ1 V",
+                    "manufacturer":  null,
+                    "type":  "AT",
+                    "releaseDate":  null,
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとCZに整理。リングにかけろ1 Vはボーナス初当りを主軸にして均一性を優先する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4460",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_rinkake1v/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "inputType":  "NUMBER",
+                                   "unit":  "G",
+                                   "supportsMinus":  false,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  1,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "ボーナス",
+                                   "category":  "BONUS",
+                                   "inputType":  "COUNTER",
+                                   "unit":  "回",
+                                   "supportsMinus":  true,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  10,
+                                   "notes":  null
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "ST",
+                                   "category":  "AT_CZ",
+                                   "inputType":  "COUNTER",
+                                   "unit":  "回",
+                                   "supportsMinus":  true,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  11,
+                                   "notes":  null
+                               },
+                               {
+                                   "key":  "cz_count",
+                                   "displayName":  "菊チャンス",
+                                   "category":  "AT_CZ",
+                                   "inputType":  "COUNTER",
+                                   "unit":  "回",
+                                   "supportsMinus":  true,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  12,
+                                   "notes":  null
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "bonus_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  189.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  185.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  179.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  161.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  138.9,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  121.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  516.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  497.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  467.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  393.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  305.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  236.0,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "cz_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  288.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。単体ではなく主判別の補強として使う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  281.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。単体ではなく主判別の補強として使う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  273.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。単体ではなく主判別の補強として使う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  267.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。単体ではなく主判別の補強として使う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  251.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。単体ではなく主判別の補強として使う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  241.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。単体ではなく主判別の補強として使う。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "bonus_interval_ceiling",
+                             "displayName":  "ボーナス間天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  999,
+                             "unit":  "G",
+                             "isEnabled":  true,
+                             "requiresResetFlag":  false,
+                             "resetOnHit":  true,
+                             "description":  "ボーナス間999Gで天井到達となりボーナスに当選。"
+                         },
+                         {
+                             "ruleKey":  "reset_shortened_ceiling",
+                             "displayName":  "設定変更時短縮天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  666,
+                             "unit":  "G",
+                             "isEnabled":  true,
+                             "requiresResetFlag":  true,
+                             "resetOnHit":  true,
+                             "description":  "設定変更時は天井が666Gに短縮される。"
+                         },
+                         {
+                             "ruleKey":  "br_interval_ceiling",
+                             "displayName":  "ブーメランRUSH間恩恵",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  1500,
+                             "unit":  "G",
+                             "isEnabled":  true,
+                             "requiresResetFlag":  false,
+                             "resetOnHit":  true,
+                             "description":  "ブーメランRUSH間1500G以降のボーナスは同色BIG以上濃厚。"
+                         }
+                     ]
 }

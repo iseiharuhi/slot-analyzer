@@ -1,0 +1,134 @@
+{
+  "machine": {
+    "id": "dmm_slot_036",
+    "name": "L大工の源さん超夢源",
+    "manufacturer": null,
+    "type": "AT",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたボーナス初当り・源チャレンジを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4428",
+    "ichigekiUrl": "https://1geki.jp/slot/l_d_gensantyomugen/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 10,
+      "notes": null
+    },
+    {
+      "key": "cz_count",
+      "displayName": "源チャレンジ",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 11,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 337.4,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 321.2,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 278.7,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 245.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 210.2,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "設定1・2・4・5・6のみ公開"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 1241.5,
+          "weight": 0.65,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 1088.7,
+          "weight": 0.65,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 1017.9,
+          "weight": 0.65,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 910.2,
+          "weight": 0.65,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 840.9,
+          "weight": 0.65,
+          "minSampleSize": 1,
+          "note": "設定1・2・4・5・6のみ公開"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

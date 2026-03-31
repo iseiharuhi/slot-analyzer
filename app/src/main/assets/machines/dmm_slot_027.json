@@ -1,105 +1,105 @@
 {
-  "machine": {
-    "id": "dmm_slot_027",
-    "name": "スマスロモンキーターンV",
-    "manufacturer": "山佐",
-    "type": "AT",
-    "releaseDate": "2023-12-04",
-    "isActive": true,
-    "notes": "公開解析を再監査。主判別はAT初当りを維持し、天井を正式反映。ライバルモード移行率や弱レア役契機のAT直撃は設定4以上の手掛かりとして強いが、現行UIで安定入力しやすい主軸を優先した。AT初当りは2000G超から評価し、サブ液晶示唆や直撃契機は別途メモ併用を推奨。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4450",
-    "ichigekiUrl": "https://1geki.jp/slot/l_monkeyturn5/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "inputType": "NUMBER",
-      "unit": "G",
-      "supportsMinus": false,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 1,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT初当り",
-      "category": "AT_CZ",
-      "inputType": "COUNTER",
-      "unit": "回",
-      "supportsMinus": true,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 10,
-      "notes": null
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 299.8,
-          "weight": 1.2,
-          "minSampleSize": 7,
-          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 295.5,
-          "weight": 1.2,
-          "minSampleSize": 7,
-          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 258.8,
-          "weight": 1.2,
-          "minSampleSize": 7,
-          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 235.7,
-          "weight": 1.2,
-          "minSampleSize": 7,
-          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 222.9,
-          "weight": 1.2,
-          "minSampleSize": 7,
-          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "game_count_ceiling",
-      "displayName": "通常時ゲーム数天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 795,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時795G+αでAT当選。設定変更後と青島VS波多野敗北後は495G+αに短縮。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "cycle_ceiling",
-      "displayName": "周期天井",
-      "ceilingType": "THROUGH_COUNT",
-      "limitValue": 6,
-      "unit": "周期",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "6周期目の優出モード到達で天井。設定変更後と青島VS波多野敗北後は4周期に短縮。",
-      "isEnabled": true
-    }
-  ]
+    "machine":  {
+                    "id":  "dmm_slot_027",
+                    "name":  "スマスロモンキーターンV",
+                    "manufacturer":  "山佐",
+                    "type":  "AT",
+                    "releaseDate":  "2023-12-04",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。スマスロモンキーターンVはAT初当り主軸で見やすさを優先する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4450",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_monkeyturn5/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "inputType":  "NUMBER",
+                                   "unit":  "G",
+                                   "supportsMinus":  false,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  1,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT初当り",
+                                   "category":  "AT_CZ",
+                                   "inputType":  "COUNTER",
+                                   "unit":  "回",
+                                   "supportsMinus":  true,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  10,
+                                   "notes":  null
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  299.8,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  295.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  258.8,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  235.7,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  222.9,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "game_count_ceiling",
+                             "displayName":  "通常時ゲーム数天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  795,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時795G+αでAT当選。設定変更後と青島VS波多野敗北後は495G+αに短縮。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "cycle_ceiling",
+                             "displayName":  "周期天井",
+                             "ceilingType":  "THROUGH_COUNT",
+                             "limitValue":  6,
+                             "unit":  "周期",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "6周期目の優出モード到達で天井。設定変更後と青島VS波多野敗北後は4周期に短縮。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

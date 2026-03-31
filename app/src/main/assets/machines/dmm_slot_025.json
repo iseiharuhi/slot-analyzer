@@ -1,148 +1,150 @@
 {
-  "machine": {
-    "id": "dmm_slot_025",
-    "name": "Lラブ嬢3〜Wご指名はいかがですか？〜",
-    "manufacturer": null,
-    "type": "AT",
-    "releaseDate": null,
-    "isActive": true,
-    "notes": "partial: 公開比較値を確認できたAT初当り・W LOVE RUSHを主軸に反映。 精度優先で暫定値は採用していない。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4458",
-    "ichigekiUrl": "https://1geki.jp/slot/l_lovejou3/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "inputType": "NUMBER",
-      "unit": "G",
-      "supportsMinus": false,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 1,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT初当り",
-      "category": "AT_CZ",
-      "inputType": "COUNTER",
-      "unit": "回",
-      "supportsMinus": true,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 10,
-      "notes": null
-    },
-    {
-      "key": "wlove_rush_count",
-      "displayName": "W LOVE RUSH",
-      "category": "SPECIAL",
-      "inputType": "COUNTER",
-      "unit": "回",
-      "supportsMinus": true,
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "sortOrder": 20,
-      "notes": null
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 285.2,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 278.0,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 263.4,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 242.7,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 224.9,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 210.4,
-          "weight": 1.0,
-          "minSampleSize": 4,
-          "note": "公開解析値"
-        }
-      ]
-    },
-    {
-      "counterKey": "wlove_rush_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 1831.1,
-          "weight": 0.6,
-          "minSampleSize": 1,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 1806.8,
-          "weight": 0.6,
-          "minSampleSize": 1,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 1719.7,
-          "weight": 0.6,
-          "minSampleSize": 1,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 1596.1,
-          "weight": 0.6,
-          "minSampleSize": 1,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 1471.7,
-          "weight": 0.6,
-          "minSampleSize": 1,
-          "note": "公開解析値"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 1369.2,
-          "weight": 0.6,
-          "minSampleSize": 1,
-          "note": "公開解析値"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": []
+    "machine":  {
+                    "id":  "dmm_slot_025",
+                    "name":  "Lラブ嬢3〜Wご指名はいかがですか？〜",
+                    "manufacturer":  null,
+                    "type":  "AT",
+                    "releaseDate":  null,
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はWラブラッシュに整理。ラブ嬢3は現行入力で確実に使える軸を優先し、無理に重い要素を増やさない。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4458",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_lovejou3/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "inputType":  "NUMBER",
+                                   "unit":  "G",
+                                   "supportsMinus":  false,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  1,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT初当り",
+                                   "category":  "AT_CZ",
+                                   "inputType":  "COUNTER",
+                                   "unit":  "回",
+                                   "supportsMinus":  true,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  10,
+                                   "notes":  null
+                               },
+                               {
+                                   "key":  "wlove_rush_count",
+                                   "displayName":  "W LOVE RUSH",
+                                   "category":  "SPECIAL",
+                                   "inputType":  "COUNTER",
+                                   "unit":  "回",
+                                   "supportsMinus":  true,
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "sortOrder":  20,
+                                   "notes":  null
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  285.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。補助要素と合わせて総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  278.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。補助要素と合わせて総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  263.4,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。補助要素と合わせて総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  242.7,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。補助要素と合わせて総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  224.9,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。補助要素と合わせて総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  210.4,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。補助要素と合わせて総合判断。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "wlove_rush_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  1831.1,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  1806.8,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  1719.7,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  1596.1,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  1471.7,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  1369.2,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で見る。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+
+                     ]
 }

@@ -1,230 +1,230 @@
 {
-  "machine": {
-    "id": "list_slot_002",
-    "name": "L戦国乙女4 戦乱に閃く炯眼の軍師",
-    "manufacturer": "OLYMPIA ESTATE",
-    "type": "AT",
-    "releaseDate": "2023-09-04",
-    "isActive": true,
-    "notes": "DMM機種ページと設定差特集を再監査。主判別は初当りボーナス、補助は巫女ポイント0到達時の乙女アタック当選率を反映したCZ、重い分母要素として通常時AT直撃を採用。AT直撃は強いが（超）強カワループ滞在時をサンプルから除外して解釈したい。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4395",
-    "ichigekiUrl": "https://1geki.jp/slot/l_otome_keigan/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "初当り(ボーナス+AT)",
-      "category": "BONUS",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "ボーナスと通常時AT直撃を合算した初当り回数。主判別項目。"
-    },
-    {
-      "key": "direct_hit_count",
-      "displayName": "通常時AT直撃",
-      "category": "SPECIAL",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "強カワループ非滞在状態でのAT直撃。強い補助要素。"
-    },
-    {
-      "key": "cz_count",
-      "displayName": "乙女アタック",
-      "category": "AT_CZ",
-      "sortOrder": 30,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "CZ「乙女アタック」突入回数。補助判別。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 272.2,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "初当りボーナス確率。主判別。2000G超から評価。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 267.3,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "初当りボーナス確率。主判別。2000G超から評価。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 255.3,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "初当りボーナス確率。主判別。2000G超から評価。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 238.2,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "初当りボーナス確率。主判別。2000G超から評価。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 223.2,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "初当りボーナス確率。主判別。2000G超から評価。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 217.1,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "初当りボーナス確率。主判別。2000G超から評価。"
-        }
-      ]
-    },
-    {
-      "counterKey": "direct_hit_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 10922.7,
-          "weight": 0.42,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 9362.3,
-          "weight": 0.42,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 8192.0,
-          "weight": 0.42,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 6553.6,
-          "weight": 0.42,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 5957.8,
-          "weight": 0.42,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 5461.3,
-          "weight": 0.42,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
-        }
-      ]
-    },
-    {
-      "counterKey": "cz_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 467.6,
-          "weight": 0.52,
-          "minSampleSize": 6,
-          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 452.2,
-          "weight": 0.52,
-          "minSampleSize": 6,
-          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 434.7,
-          "weight": 0.52,
-          "minSampleSize": 6,
-          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 410.9,
-          "weight": 0.52,
-          "minSampleSize": 6,
-          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 394.9,
-          "weight": 0.52,
-          "minSampleSize": 6,
-          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 381.5,
-          "weight": 0.52,
-          "minSampleSize": 6,
-          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "normal_game_ceiling",
-      "displayName": "通常時ゲーム数天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 799,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時最大799G消化でボーナス到達。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "bonus_through_ceiling",
-      "displayName": "ボーナススルー天井",
-      "ceilingType": "THROUGH_COUNT",
-      "limitValue": 7,
-      "unit": "回",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "AT非当選の戦国乙女ボーナスを6回消化後、次回7回目の戦国乙女ボーナスがエピソードボーナス確定。エピソードボーナス・しゅつじんのとき・神謀覚醒を挟むとスルー回数はリセット。",
-      "isEnabled": true
-    }
-  ]
+    "machine":  {
+                    "id":  "list_slot_002",
+                    "name":  "L戦国乙女4 戦乱に閃く炯眼の軍師",
+                    "manufacturer":  "OLYMPIA ESTATE",
+                    "type":  "AT",
+                    "releaseDate":  "2023-09-04",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別は初当り(ボーナス+AT)、補助は乙女アタック、重い分母は通常時AT直撃で統一。強カワループなど特殊状態の影響を受ける直撃は過信せず、初当りとCZを主軸に見る。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4395",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_otome_keigan/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "初当り(ボーナス+AT)",
+                                   "category":  "BONUS",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "ボーナスと通常時AT直撃を合算した初当り回数。主判別項目。"
+                               },
+                               {
+                                   "key":  "direct_hit_count",
+                                   "displayName":  "通常時AT直撃",
+                                   "category":  "SPECIAL",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "強カワループ非滞在状態でのAT直撃。強い補助要素。"
+                               },
+                               {
+                                   "key":  "cz_count",
+                                   "displayName":  "乙女アタック",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  30,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "CZ「乙女アタック」突入回数。補助判別。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "bonus_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  272.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  5,
+                                                          "note":  "主判別。2000G以上で見たい。単体ではなくCZと合わせて判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  267.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  5,
+                                                          "note":  "主判別。2000G以上で見たい。単体ではなくCZと合わせて判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  255.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  5,
+                                                          "note":  "主判別。2000G以上で見たい。単体ではなくCZと合わせて判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  238.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  5,
+                                                          "note":  "主判別。2000G以上で見たい。単体ではなくCZと合わせて判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  223.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  5,
+                                                          "note":  "主判別。2000G以上で見たい。単体ではなくCZと合わせて判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  217.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  5,
+                                                          "note":  "主判別。2000G以上で見たい。単体ではなくCZと合わせて判断。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "cz_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  467.6,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4,
+                                                          "note":  "補助判別。序盤はサンプル不足になりやすい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  452.2,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4,
+                                                          "note":  "補助判別。序盤はサンプル不足になりやすい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  434.7,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4,
+                                                          "note":  "補助判別。序盤はサンプル不足になりやすい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  410.9,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4,
+                                                          "note":  "補助判別。序盤はサンプル不足になりやすい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  394.9,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4,
+                                                          "note":  "補助判別。序盤はサンプル不足になりやすい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  381.5,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4,
+                                                          "note":  "補助判別。序盤はサンプル不足になりやすい。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "direct_hit_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  10922.7,
+                                                          "weight":  0.25,
+                                                          "minSampleSize":  1,
+                                                          "note":  "重い分母。特殊状態を除外して参考程度に扱う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  9362.3,
+                                                          "weight":  0.25,
+                                                          "minSampleSize":  1,
+                                                          "note":  "重い分母。特殊状態を除外して参考程度に扱う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  8192,
+                                                          "weight":  0.25,
+                                                          "minSampleSize":  1,
+                                                          "note":  "重い分母。特殊状態を除外して参考程度に扱う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  6553.6,
+                                                          "weight":  0.25,
+                                                          "minSampleSize":  1,
+                                                          "note":  "重い分母。特殊状態を除外して参考程度に扱う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  5957.8,
+                                                          "weight":  0.25,
+                                                          "minSampleSize":  1,
+                                                          "note":  "重い分母。特殊状態を除外して参考程度に扱う。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  5461.3,
+                                                          "weight":  0.25,
+                                                          "minSampleSize":  1,
+                                                          "note":  "重い分母。特殊状態を除外して参考程度に扱う。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "normal_game_ceiling",
+                             "displayName":  "通常時ゲーム数天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  799,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時最大799G消化でボーナス到達。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "bonus_through_ceiling",
+                             "displayName":  "ボーナススルー天井",
+                             "ceilingType":  "THROUGH_COUNT",
+                             "limitValue":  7,
+                             "unit":  "回",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "AT非当選の戦国乙女ボーナスを6回消化後、次回7回目の戦国乙女ボーナスがエピソードボーナス確定。エピソードボーナス・しゅつじんのとき・神謀覚醒を挟むとスルー回数はリセット。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

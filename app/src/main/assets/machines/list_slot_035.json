@@ -1,106 +1,106 @@
 {
-  "machine": {
-    "id": "list_slot_035",
-    "name": "S BOØWY",
-    "manufacturer": "D-light",
-    "type": "AT",
-    "releaseDate": "2022-09-20",
-    "isActive": true,
-    "notes": "partial: 一撃の公開解析からAT「GIGS」出現率のみを採用。BOØWYはAT終了画面や上位AT移行契機も重要だが、定量入力に落とし込みやすい公開値がAT出現率中心のため単軸構成で固定。通常時1480G+αでの上位AT天井を追加。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4196",
-    "ichigekiUrl": "https://1geki.jp/slot/s_boowy/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT「GIGS」出現",
-      "category": "AT_CZ",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "通常AT出現回数。主判別項目。"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "BOØWY揃い/上位契機",
-      "category": "SPECIAL",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "BOØWY揃いなどの強契機メモ用。推測値には未使用。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 498.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT出現率"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 464.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT出現率"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 377.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT出現率"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 325.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT出現率"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 294.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT出現率"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "normal_game_ceiling",
-      "displayName": "通常時天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 1480,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時1480G+α（前兆最大32G）で上位AT「LAST GIGS」に当選。1/2で80%ループを選択。",
-      "isEnabled": true
-    }
-  ]
+    "machine":  {
+                    "id":  "list_slot_035",
+                    "name":  "S BOØWY",
+                    "manufacturer":  "D-light",
+                    "type":  "AT",
+                    "releaseDate":  "2022-09-20",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はAT初当りに固定。S BOØWYは現行入力で無理に補助項目を増やさず、AT初当りを高品質に扱う方針でブレを抑える。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4196",
+                    "ichigekiUrl":  "https://1geki.jp/slot/s_boowy/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT「GIGS」出現",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "通常AT出現回数。主判別項目。"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "BOØWY揃い/上位契機",
+                                   "category":  "SPECIAL",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "BOØWY揃いなどの強契機メモ用。推測値には未使用。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  498.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  464.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  377.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  325.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  294.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "normal_game_ceiling",
+                             "displayName":  "通常時天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  1480,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時1480G+α（前兆最大32G）で上位AT「LAST GIGS」に当選。1/2で80%ループを選択。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

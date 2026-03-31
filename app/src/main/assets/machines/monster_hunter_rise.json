@@ -4,9 +4,11 @@
     "name": "スマスロ モンスターハンターライズ",
     "manufacturer": "Enterrise",
     "type": "AT",
-    "releaseDate": "2024-01-01",
+    "releaseDate": "2024-11-18",
     "isActive": true,
-    "notes": "初期登録用の参考データ。CZ・AT初当たり・弱チェリーを重視。"
+    "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当りと弱チェリー。直撃ATは重い分母のため低weight・高めの成熟条件で補助扱い、ボーナスはATと相関が強いため推測対象から外してメモ用途へ後退。ATは2000G超、CZは2500〜3000G級、弱チェリーは3000G級で傾向確認を推奨。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4676",
+    "ichigekiUrl": "https://1geki.jp/slot/l_mh_rize/"
   },
   "counterDefinitions": [
     {
@@ -31,7 +33,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "通常時CZ初当り。AT機の補助判別用。"
     },
     {
       "key": "at_count",
@@ -43,7 +45,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": null
+      "notes": "AT初当り回数。主判別。"
     },
     {
       "key": "bonus_count",
@@ -53,9 +55,9 @@
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": null
+      "notes": "ATと相関が強いため推測では未使用。履歴メモ用。"
     },
     {
       "key": "direct_hit_count",
@@ -65,9 +67,9 @@
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": null
+      "notes": "重い分母のため補助メモ用。長時間実戦時のみ参考。"
     },
     {
       "key": "weak_cherry_count",
@@ -79,7 +81,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": false,
-      "notes": "設定差ありの小役"
+      "notes": "小役の補助判別。サンプル不足時は過信しない。"
     }
   ],
   "settingReferenceValues": [
@@ -89,38 +91,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 255.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 245.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 235.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 223.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 212.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 200.0,
-          "weight": 0.9,
-          "minSampleSize": 3
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
         }
       ]
     },
@@ -130,38 +138,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 510.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 480.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 450.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 415.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 385.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 350.0,
-          "weight": 1.2,
-          "minSampleSize": 2
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
         }
       ]
     },
@@ -171,38 +185,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 330.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 315.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 300.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 282.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 268.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 250.0,
-          "weight": 0.7,
-          "minSampleSize": 3
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
         }
       ]
     },
@@ -212,38 +232,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 2100.0,
-          "weight": 1.4,
-          "minSampleSize": 1
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 1750.0,
-          "weight": 1.4,
-          "minSampleSize": 1
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 1450.0,
-          "weight": 1.4,
-          "minSampleSize": 1
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 1180.0,
-          "weight": 1.4,
-          "minSampleSize": 1
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 920.0,
-          "weight": 1.4,
-          "minSampleSize": 1
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 720.0,
-          "weight": 1.4,
-          "minSampleSize": 1
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
         }
       ]
     },
@@ -253,38 +279,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 120.0,
-          "weight": 0.6,
-          "minSampleSize": 300
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 115.0,
-          "weight": 0.6,
-          "minSampleSize": 300
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 110.0,
-          "weight": 0.6,
-          "minSampleSize": 300
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 105.0,
-          "weight": 0.6,
-          "minSampleSize": 300
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 100.0,
-          "weight": 0.6,
-          "minSampleSize": 300
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 95.0,
-          "weight": 0.6,
-          "minSampleSize": 300
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
         }
       ]
     }

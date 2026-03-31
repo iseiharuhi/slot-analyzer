@@ -1,230 +1,230 @@
 {
-  "machine": {
-    "id": "list_slot_036",
-    "name": "バイオハザード ヴィレッジ",
-    "manufacturer": "アデリオン",
-    "type": "AT",
-    "releaseDate": "2024-01-09",
-    "isActive": true,
-    "notes": "partial: DMM・一撃の公開解析を再整理。主判別は通常時初当り、補助にAT初当りと弱チェリーを採用。PZ当選率や引き戻し率にも設定差はあるが内部状態依存が強く、手動入力の再現性を優先して今回は未採用。弱チェリーは取りこぼし/カウント漏れに注意し、3000G以上で効かせる前提。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4459",
-    "ichigekiUrl": "https://1geki.jp/slot/l_biovillage/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "初当り",
-      "category": "BONUS",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "通常時の初当り回数。主判別項目。"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT「ハザードラッシュ」初当り",
-      "category": "AT_CZ",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT初当り回数。補助判別。"
-    },
-    {
-      "key": "weak_cherry_count",
-      "displayName": "弱チェリー",
-      "category": "SMALL_ROLE",
-      "sortOrder": 30,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "弱チェリー出現回数。長時間実戦の補助判別。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 281.5,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "通常時初当り。主判別"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 275.3,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "通常時初当り。主判別"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 264.5,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "通常時初当り。主判別"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 240.3,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "通常時初当り。主判別"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 229.3,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "通常時初当り。主判別"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 224.2,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "通常時初当り。主判別"
-        }
-      ]
-    },
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 445.3,
-          "weight": 0.7,
-          "minSampleSize": 4,
-          "note": "AT初当り。補助判別"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 434.1,
-          "weight": 0.7,
-          "minSampleSize": 4,
-          "note": "AT初当り。補助判別"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 415.7,
-          "weight": 0.7,
-          "minSampleSize": 4,
-          "note": "AT初当り。補助判別"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 372.9,
-          "weight": 0.7,
-          "minSampleSize": 4,
-          "note": "AT初当り。補助判別"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 354.4,
-          "weight": 0.7,
-          "minSampleSize": 4,
-          "note": "AT初当り。補助判別"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 342.8,
-          "weight": 0.7,
-          "minSampleSize": 4,
-          "note": "AT初当り。補助判別"
-        }
-      ]
-    },
-    {
-      "counterKey": "weak_cherry_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 98.85,
-          "weight": 0.45,
-          "minSampleSize": 30,
-          "note": "弱チェリー。3000G以上で補助評価"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 96.66,
-          "weight": 0.45,
-          "minSampleSize": 30,
-          "note": "弱チェリー。3000G以上で補助評価"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 95.26,
-          "weight": 0.45,
-          "minSampleSize": 30,
-          "note": "弱チェリー。3000G以上で補助評価"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 90.27,
-          "weight": 0.45,
-          "minSampleSize": 30,
-          "note": "弱チェリー。3000G以上で補助評価"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 88.68,
-          "weight": 0.45,
-          "minSampleSize": 30,
-          "note": "弱チェリー。3000G以上で補助評価"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 87.15,
-          "weight": 0.45,
-          "minSampleSize": 30,
-          "note": "弱チェリー。3000G以上で補助評価"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "normal_game_ceiling",
-      "displayName": "通常A天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 750,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常A滞在時は750Gでクライマックスバトル当選。通常Bは650G、通常Cは600G、天国は150G。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "reset_game_ceiling",
-      "displayName": "設定変更時天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 550,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": true,
-      "description": "設定変更時は設定変更モードへ移行し天井は550G。150G以内の当選率は20%。",
-      "isEnabled": true
-    }
-  ]
+    "machine":  {
+                    "id":  "list_slot_036",
+                    "name":  "バイオハザード ヴィレッジ",
+                    "manufacturer":  "アデリオン",
+                    "type":  "AT",
+                    "releaseDate":  "2024-01-09",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りと弱チェリーに整理。弱チェリーは小役として高ゲーム数時の補強に留め、主軸はボーナス初当りで統一する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4459",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_biovillage/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "初当り",
+                                   "category":  "BONUS",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "通常時の初当り回数。主判別項目。"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT「ハザードラッシュ」初当り",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "AT初当り回数。補助判別。"
+                               },
+                               {
+                                   "key":  "weak_cherry_count",
+                                   "displayName":  "弱チェリー",
+                                   "category":  "SMALL_ROLE",
+                                   "sortOrder":  30,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "弱チェリー出現回数。長時間実戦の補助判別。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "bonus_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  281.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  275.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  264.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  240.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  229.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  224.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  445.3,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  434.1,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  415.7,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  372.9,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  354.4,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  342.8,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "weak_cherry_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  98.85,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  96.66,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  95.26,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  90.27,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  88.68,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  87.15,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "normal_game_ceiling",
+                             "displayName":  "通常A天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  750,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常A滞在時は750Gでクライマックスバトル当選。通常Bは650G、通常Cは600G、天国は150G。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "reset_game_ceiling",
+                             "displayName":  "設定変更時天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  550,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  true,
+                             "description":  "設定変更時は設定変更モードへ移行し天井は550G。150G以内の当選率は20%。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

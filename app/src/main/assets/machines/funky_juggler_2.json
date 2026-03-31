@@ -1,201 +1,221 @@
 {
-  "machine": {
-    "id": "funky_juggler_2",
-    "name": "ファンキージャグラー2",
-    "manufacturer": "Kita Denshi",
-    "type": "BONUS",
-    "releaseDate": "2025-01-01",
-    "isActive": true,
-    "notes": "初期登録用の参考データ。BIG先行寄り。",
-    "dmmUrl": "https://p-town.dmm.com/machines/3961",
-    "ichigekiUrl": "https://1geki.jp/slot/s_funkyjuggler2/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "big_count",
-      "displayName": "BIG",
-      "category": "BONUS",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": null
-    },
-    {
-      "key": "reg_count",
-      "displayName": "REG",
-      "category": "BONUS",
-      "sortOrder": 11,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": null
-    },
-    {
-      "key": "grape_count",
-      "displayName": "ぶどう",
-      "category": "SMALL_ROLE",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": null
-    },
-    {
-      "key": "cherry_count",
-      "displayName": "チェリー",
-      "category": "SMALL_ROLE",
-      "sortOrder": 21,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "補助入力用"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "big_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 266.4,
-          "weight": 0.9,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 259.0,
-          "weight": 0.9,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 256.0,
-          "weight": 0.9,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 249.0,
-          "weight": 0.9,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 240.1,
-          "weight": 0.9,
-          "minSampleSize": 5
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 222.2,
-          "weight": 0.9,
-          "minSampleSize": 5
-        }
-      ]
-    },
-    {
-      "counterKey": "reg_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 439.8,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 407.1,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 366.1,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 336.1,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 297.9,
-          "weight": 1.2,
-          "minSampleSize": 4
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 259.0,
-          "weight": 1.2,
-          "minSampleSize": 4
-        }
-      ]
-    },
-    {
-      "counterKey": "grape_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 5.96,
-          "weight": 1.0,
-          "minSampleSize": 220
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 5.92,
-          "weight": 1.0,
-          "minSampleSize": 220
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 5.89,
-          "weight": 1.0,
-          "minSampleSize": 220
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 5.84,
-          "weight": 1.0,
-          "minSampleSize": 220
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 5.8,
-          "weight": 1.0,
-          "minSampleSize": 220
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 5.76,
-          "weight": 1.0,
-          "minSampleSize": 220
-        }
-      ]
-    }
-  ],
-  "ceilingRules": []
+    "machine":  {
+                    "id":  "funky_juggler_2",
+                    "name":  "ファンキージャグラー2",
+                    "manufacturer":  "Kita Denshi",
+                    "type":  "BONUS",
+                    "releaseDate":  "2025-01-01",
+                    "isActive":  true,
+                    "notes":  "均一化フェーズ対応。主判別はREG、補助はぶどうとBIGに整理。ファンキー系もREGを主軸とし、ぶどうは高ゲーム数時の補強に使う。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/3961",
+                    "ichigekiUrl":  "https://1geki.jp/slot/s_funkyjuggler2/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "big_count",
+                                   "displayName":  "BIG",
+                                   "category":  "BONUS",
+                                   "sortOrder":  10,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  null
+                               },
+                               {
+                                   "key":  "reg_count",
+                                   "displayName":  "REG",
+                                   "category":  "BONUS",
+                                   "sortOrder":  11,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  null
+                               },
+                               {
+                                   "key":  "grape_count",
+                                   "displayName":  "ぶどう",
+                                   "category":  "SMALL_ROLE",
+                                   "sortOrder":  20,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  null
+                               },
+                               {
+                                   "key":  "cherry_count",
+                                   "displayName":  "チェリー",
+                                   "category":  "SMALL_ROLE",
+                                   "sortOrder":  21,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "補助入力用"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "reg_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  439.8,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  407.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  366.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  336.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  297.9,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  259.0,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "grape_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  5.96,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別①。ぶどうは試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  5.92,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別①。ぶどうは試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  5.89,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別①。ぶどうは試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  5.84,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別①。ぶどうは試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  5.8,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別①。ぶどうは試行不足でブレやすいため高ゲーム数で参照。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  5.76,
+                                                          "weight":  0.7,
+                                                          "minSampleSize":  4000,
+                                                          "note":  "補助判別①。ぶどうは試行不足でブレやすいため高ゲーム数で参照。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "big_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  266.4,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。BIG単体は荒れやすいのでREG主軸で総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  259.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。BIG単体は荒れやすいのでREG主軸で総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  256.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。BIG単体は荒れやすいのでREG主軸で総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  249.0,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。BIG単体は荒れやすいのでREG主軸で総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  240.1,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。BIG単体は荒れやすいのでREG主軸で総合判断。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  222.2,
+                                                          "weight":  0.6,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "補助判別②。BIG単体は荒れやすいのでREG主軸で総合判断。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+
+                     ]
 }
