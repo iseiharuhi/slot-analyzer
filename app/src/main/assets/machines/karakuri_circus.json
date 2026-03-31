@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "公開解析とDMM掲載の設定推測記事を再監査。主判別はAT初当りを中心に、CZは補助判別として採用。AT直撃・終了画面・連打上乗せ枚数表示などは強いが入力形式を増やしすぎないため今回は未反映。数値の粗い項目は保守的な重みへ調整。",
+    "notes": "DMM掲載の推測まとめを再監査。主判別はAT初当り、補助はCZ初当り。からくりレア役契機の幕間チャンスやAT終了画面は強いが、前者は全設定比較値が未揃い・後者は現行UI未対応のためメモ運用推奨。ATは2000G超、CZは3000G級で傾向を見たい。",
     "dmmUrl": "https://p-town.dmm.com/machines/4360",
     "ichigekiUrl": "https://1geki.jp/slot/l_karakuricircus/"
   },
@@ -79,44 +79,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 270.0,
-          "weight": 0.72,
-          "minSampleSize": 5,
-          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+          "weight": 0.62,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 258.0,
-          "weight": 0.72,
-          "minSampleSize": 5,
-          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+          "weight": 0.62,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 246.0,
-          "weight": 0.72,
-          "minSampleSize": 5,
-          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+          "weight": 0.62,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 232.0,
-          "weight": 0.72,
-          "minSampleSize": 5,
-          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+          "weight": 0.62,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 218.0,
-          "weight": 0.72,
-          "minSampleSize": 5,
-          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+          "weight": 0.62,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 204.0,
-          "weight": 0.72,
-          "minSampleSize": 5,
-          "note": "CZ初当りベースで補助判別（公開スペック中心）"
+          "weight": 0.62,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。AT後幕間チャンス除外の補助指標。3000G級から有効。"
         }
       ]
     },
@@ -126,44 +126,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 540.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT初当りベースで判別（公開スペック中心）"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 505.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT初当りベースで判別（公開スペック中心）"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 470.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT初当りベースで判別（公開スペック中心）"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 430.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT初当りベースで判別（公開スペック中心）"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 390.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT初当りベースで判別（公開スペック中心）"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 350.0,
-          "weight": 1.1,
-          "minSampleSize": 3,
-          "note": "AT初当りベースで判別（公開スペック中心）"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "AT初当り確率。主判別。2000G超から傾向確認。"
         }
       ]
     }
@@ -177,18 +177,18 @@
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "通常時最大1200G+αでCZ「機械仕掛けの神」以上。",
+      "description": "通常時最大1200G消化でCZ「機械仕掛けの神」以上。通常時はゲーム数加算があるため実ゲーム数の平均は約730G。1100G以上ハマり後は次回天井が最大300Gに短縮。",
       "isEnabled": true
     },
     {
       "ruleKey": "cz_through_ceiling",
       "displayName": "CZスルー天井",
       "ceilingType": "THROUGH_COUNT",
-      "limitValue": 4,
+      "limitValue": 5,
       "unit": "回",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "CZを4連続失敗で条件到達。次回(5回目)CZでAT直撃。",
+      "description": "CZ「機械仕掛けの神」を4連続失敗後、5回目のCZで条件到達。AT直撃契機として扱う。",
       "isEnabled": true
     },
     {
@@ -199,7 +199,7 @@
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "AT間2500G+αでAT+成功確定の激情ジャッジ。",
+      "description": "AT間2500G消化でAT＋成功確定の激情ジャッジ。",
       "isEnabled": true
     }
   ]

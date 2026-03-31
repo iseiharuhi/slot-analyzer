@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-04-03",
     "isActive": true,
-    "notes": "公開解析とDMM系実戦特集を再監査。主判別は初当りBB・弱スイカ・強スイカ・リーチ目役。弱レア役契機BBやモード移行は有効だが入力の再現性を優先して補助扱いに留めた。小役は取りこぼしで誤差が出やすいため総ゲーム数3000G以上を推奨。",
+    "notes": "公開解析とDMM特集を再監査。主判別は初当りBB、補助は弱スイカ・強スイカ・リーチ目役。初当りは総ゲーム数2000G超、弱スイカは3000G級、リーチ目役は10000G級で真価を発揮するため、重い分母は保守的に扱う。弱レア役契機BBや内部状態移行も有効だが、現行UIで再現しやすい指標へ絞って完成度を優先。",
     "dmmUrl": "https://p-town.dmm.com/machines/4301",
     "ichigekiUrl": "https://1geki.jp/slot/l_hokutonoken/"
   },
@@ -115,44 +115,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 383.4,
-          "weight": 1.15,
-          "minSampleSize": 4,
-          "note": "初当りBB合算"
+          "weight": 1.25,
+          "minSampleSize": 6,
+          "note": "初当りBB合算。主判別。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 370.5,
-          "weight": 1.15,
-          "minSampleSize": 4,
-          "note": "初当りBB合算"
+          "weight": 1.25,
+          "minSampleSize": 6,
+          "note": "初当りBB合算。主判別。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 334.2,
-          "weight": 1.15,
-          "minSampleSize": 4,
-          "note": "設定2/4の中間補間値"
+          "weight": 1.25,
+          "minSampleSize": 6,
+          "note": "初当りBB合算。主判別。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 297.8,
-          "weight": 1.15,
-          "minSampleSize": 4,
-          "note": "初当りBB合算"
+          "weight": 1.25,
+          "minSampleSize": 6,
+          "note": "初当りBB合算。主判別。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 258.7,
-          "weight": 1.15,
-          "minSampleSize": 4,
-          "note": "初当りBB合算"
+          "weight": 1.25,
+          "minSampleSize": 6,
+          "note": "初当りBB合算。主判別。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 235.1,
-          "weight": 1.15,
-          "minSampleSize": 4,
-          "note": "初当りBB合算"
+          "weight": 1.25,
+          "minSampleSize": 6,
+          "note": "初当りBB合算。主判別。"
         }
       ]
     },
@@ -162,44 +162,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 109.0,
-          "weight": 1.35,
-          "minSampleSize": 30,
-          "note": "弱スイカ出現率"
+          "weight": 0.95,
+          "minSampleSize": 28,
+          "note": "弱スイカ出現率。3000G級から有効。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 108.7,
-          "weight": 1.35,
-          "minSampleSize": 30,
-          "note": "弱スイカ出現率"
+          "weight": 0.95,
+          "minSampleSize": 28,
+          "note": "弱スイカ出現率。3000G級から有効。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 107.3,
-          "weight": 1.35,
-          "minSampleSize": 30,
-          "note": "設定2/4の中間補間値"
+          "weight": 0.95,
+          "minSampleSize": 28,
+          "note": "弱スイカ出現率。3000G級から有効。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 105.9,
-          "weight": 1.35,
-          "minSampleSize": 30,
-          "note": "弱スイカ出現率"
+          "weight": 0.95,
+          "minSampleSize": 28,
+          "note": "弱スイカ出現率。3000G級から有効。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 100.7,
-          "weight": 1.35,
-          "minSampleSize": 30,
-          "note": "弱スイカ出現率"
+          "weight": 0.95,
+          "minSampleSize": 28,
+          "note": "弱スイカ出現率。3000G級から有効。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 98.3,
-          "weight": 1.35,
-          "minSampleSize": 30,
-          "note": "弱スイカ出現率"
+          "weight": 0.95,
+          "minSampleSize": 28,
+          "note": "弱スイカ出現率。3000G級から有効。"
         }
       ]
     },
@@ -209,44 +209,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 409.6,
-          "weight": 1.0,
+          "weight": 0.55,
           "minSampleSize": 8,
-          "note": "強スイカA/B合算"
+          "note": "強スイカ合算。差はあるが試行が重いため補助。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 404.5,
-          "weight": 1.0,
+          "weight": 0.55,
           "minSampleSize": 8,
-          "note": "強スイカA/B合算"
+          "note": "強スイカ合算。差はあるが試行が重いため補助。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 390.6,
-          "weight": 1.0,
+          "weight": 0.55,
           "minSampleSize": 8,
-          "note": "設定2/4の中間補間値"
+          "note": "強スイカ合算。差はあるが試行が重いため補助。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 376.6,
-          "weight": 1.0,
+          "weight": 0.55,
           "minSampleSize": 8,
-          "note": "強スイカA/B合算"
+          "note": "強スイカ合算。差はあるが試行が重いため補助。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 352.3,
-          "weight": 1.0,
+          "weight": 0.55,
           "minSampleSize": 8,
-          "note": "強スイカA/B合算"
+          "note": "強スイカ合算。差はあるが試行が重いため補助。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 337.8,
-          "weight": 1.0,
+          "weight": 0.55,
           "minSampleSize": 8,
-          "note": "強スイカA/B合算"
+          "note": "強スイカ合算。差はあるが試行が重いため補助。"
         }
       ]
     },
@@ -256,44 +256,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 16384.0,
-          "weight": 1.65,
-          "minSampleSize": 1,
-          "note": "リーチ目役出現率"
+          "weight": 0.45,
+          "minSampleSize": 2,
+          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 13107.2,
-          "weight": 1.65,
-          "minSampleSize": 1,
-          "note": "リーチ目役出現率"
+          "weight": 0.45,
+          "minSampleSize": 2,
+          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 12014.9,
-          "weight": 1.65,
-          "minSampleSize": 1,
-          "note": "設定2/4の中間補間値"
+          "weight": 0.45,
+          "minSampleSize": 2,
+          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 10922.7,
-          "weight": 1.65,
-          "minSampleSize": 1,
-          "note": "リーチ目役出現率"
+          "weight": 0.45,
+          "minSampleSize": 2,
+          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 9362.3,
-          "weight": 1.65,
-          "minSampleSize": 1,
-          "note": "リーチ目役出現率"
+          "weight": 0.45,
+          "minSampleSize": 2,
+          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 8192.0,
-          "weight": 1.65,
-          "minSampleSize": 1,
-          "note": "リーチ目役出現率"
+          "weight": 0.45,
+          "minSampleSize": 2,
+          "note": "リーチ目役。1回でも強いが10000G級の補助要素。"
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "machineId": "list_slot_002",
   "machineName": "L戦国乙女4 戦乱に閃く炯眼の軍師",
-  "status": "partial",
-  "capturedDate": "2026-03-31",
-  "sourceListPage": null,
+  "status": "verified",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": "https://p-town.dmm.com/machines/4395",
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "not_resolved_in_this_run"
+      "url": "https://p-town.dmm.com/machines/4395",
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",

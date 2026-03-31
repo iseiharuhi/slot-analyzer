@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-04-22",
     "isActive": true,
-    "notes": "partial: 初当り合算と通常時AT直撃を維持。DMM特集では終了画面・エンディング中キャラ・共通ベル・ボーナス種別なども重要視されるが、現行入力で安定集計しやすいのは初当り合算とAT直撃。直撃は早期サンプルでも効く一方で試行回数が少ないため重みを強めすぎず、演出示唆は別途メモ併用を前提とする。",
+    "notes": "公開解析とDMM設定差記事を再監査。主判別は初当り合算、補助は共通ベル、重い分母要素としてAT直撃を採用。共通ベルは通常時左第1停止ベル／AT中ナビなしベルをカウント。直撃は10000G級の補助要素なので重みは抑え、終了画面やボーナス種別・確定対決は別途メモ前提とした。",
     "dmmUrl": "https://p-town.dmm.com/machines/4553",
     "ichigekiUrl": "https://1geki.jp/slot/l_osu_bancho4/"
   },
@@ -36,6 +36,18 @@
       "notes": "ボーナス/ATの初当り合算。主判別項目。"
     },
     {
+      "key": "common_bell_count",
+      "displayName": "共通ベル",
+      "category": "SMALL_ROLE",
+      "sortOrder": 15,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時は左第1停止ベル、AT中はナビなしベル。3000G級の補助判別。"
+    },
+    {
       "key": "direct_hit_count",
       "displayName": "AT直撃",
       "category": "SPECIAL",
@@ -56,43 +68,43 @@
           "settingNo": 1,
           "denominatorValue": 259.5,
           "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "初当り合算"
+          "minSampleSize": 7,
+          "note": "初当り合算。主判別。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 256.3,
           "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "初当り合算"
+          "minSampleSize": 7,
+          "note": "初当り合算。主判別。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 247.6,
           "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "初当り合算"
+          "minSampleSize": 7,
+          "note": "初当り合算。主判別。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 236.0,
           "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "初当り合算"
+          "minSampleSize": 7,
+          "note": "初当り合算。主判別。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 225.3,
           "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "初当り合算"
+          "minSampleSize": 7,
+          "note": "初当り合算。主判別。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 221.1,
           "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "初当り合算"
+          "minSampleSize": 7,
+          "note": "初当り合算。主判別。"
         }
       ]
     },
@@ -102,47 +114,106 @@
         {
           "settingNo": 1,
           "denominatorValue": 6411.0,
-          "weight": 1.3,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃"
+          "weight": 0.55,
+          "minSampleSize": 2,
+          "note": "通常時AT直撃。10000G級の補助要素。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 5624.0,
-          "weight": 1.3,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃"
+          "weight": 0.55,
+          "minSampleSize": 2,
+          "note": "通常時AT直撃。10000G級の補助要素。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 4344.0,
-          "weight": 1.3,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃"
+          "weight": 0.55,
+          "minSampleSize": 2,
+          "note": "通常時AT直撃。10000G級の補助要素。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 3053.0,
-          "weight": 1.3,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃"
+          "weight": 0.55,
+          "minSampleSize": 2,
+          "note": "通常時AT直撃。10000G級の補助要素。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 2420.0,
-          "weight": 1.3,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃"
+          "weight": 0.55,
+          "minSampleSize": 2,
+          "note": "通常時AT直撃。10000G級の補助要素。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 2150.0,
-          "weight": 1.3,
-          "minSampleSize": 1,
-          "note": "通常時AT直撃"
+          "weight": 0.55,
+          "minSampleSize": 2,
+          "note": "通常時AT直撃。10000G級の補助要素。"
+        }
+      ]
+    },
+    {
+      "counterKey": "common_bell_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 21.8,
+          "weight": 0.65,
+          "minSampleSize": 120,
+          "note": "共通ベル確率。3000G級の補助判別。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 21.6,
+          "weight": 0.65,
+          "minSampleSize": 120,
+          "note": "共通ベル確率。3000G級の補助判別。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 21.4,
+          "weight": 0.65,
+          "minSampleSize": 120,
+          "note": "共通ベル確率。3000G級の補助判別。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 21.2,
+          "weight": 0.65,
+          "minSampleSize": 120,
+          "note": "共通ベル確率。3000G級の補助判別。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 21.0,
+          "weight": 0.65,
+          "minSampleSize": 120,
+          "note": "共通ベル確率。3000G級の補助判別。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 20.6,
+          "weight": 0.65,
+          "minSampleSize": 120,
+          "note": "共通ベル確率。3000G級の補助判別。"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_interval_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 699,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス間699G+αでボーナス当選。ATを挟んでも有効だが、有利区間リセット時は再抽選。",
+      "isEnabled": true
+    }
+  ]
 }

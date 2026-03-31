@@ -2,13 +2,13 @@
   "machine": {
     "id": "list_slot_014",
     "name": "L東京喰種",
-    "manufacturer": "スパイキー",
+    "manufacturer": "CROSSALPHA",
     "type": "AT",
     "releaseDate": "2025-02-03",
     "isActive": true,
-    "notes": "partial: DMM公開値ベースでCZ合算とエピソードボーナスを反映。東京喰種はAT初当り差も大きいが、現時点ではDMM本文から全設定の個別数値を安定取得できなかったため、今回は総CZとエピソードボーナスを主軸に採用。AT終了画面や月山招待状などの示唆演出は入力カウンタ化よりもメモ運用向きのため notes 側に留める。",
+    "notes": "partial: DMM・一撃の公開解析を再監査。主判別はAT初当りとCZ確率の2軸、補助にエピソードボーナスとAT直撃を採用。AT直撃は重い分母だが全設定比較値が判明しているため低ウェイトで採用。CZ失敗時カードや月山招待状は重要だが、入力負荷が高いので notes 管理に留める。",
     "dmmUrl": "https://p-town.dmm.com/machines/4742",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_tokyoghoul/"
   },
   "counterDefinitions": [
     {
@@ -57,19 +57,19 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "AT初当り回数。公開記事では設定差が大きいとされるが、今回は個別分母値の採用を保留。"
+      "notes": "AT初当り。最重要。"
     },
     {
       "key": "direct_hit_count",
-      "displayName": "直撃/特殊契機",
+      "displayName": "AT直撃",
       "category": "SPECIAL",
       "sortOrder": 20,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": false,
+      "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "直撃AT・特殊当選・上位契機などの補助記録用。"
+      "notes": "通常時リプレイ成立時の一部で当選するAT直撃。1回でも強いが重い分母。"
     }
   ],
   "settingReferenceValues": [
@@ -79,44 +79,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 262.6,
-          "weight": 1.2,
-          "minSampleSize": 4,
-          "note": "レミニセンス＋大喰いの利世のCZ合算"
+          "weight": 0.9,
+          "minSampleSize": 5,
+          "note": "CZ確率。主軸級だがAT初当りを優先"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 255.5,
-          "weight": 1.2,
-          "minSampleSize": 4,
-          "note": "レミニセンス＋大喰いの利世のCZ合算"
+          "denominatorValue": 255.6,
+          "weight": 0.9,
+          "minSampleSize": 5,
+          "note": "CZ確率。主軸級だがAT初当りを優先"
         },
         {
           "settingNo": 3,
           "denominatorValue": 246.5,
-          "weight": 1.2,
-          "minSampleSize": 4,
-          "note": "レミニセンス＋大喰いの利世のCZ合算"
+          "weight": 0.9,
+          "minSampleSize": 5,
+          "note": "CZ確率。主軸級だがAT初当りを優先"
         },
         {
           "settingNo": 4,
           "denominatorValue": 233.1,
-          "weight": 1.2,
-          "minSampleSize": 4,
-          "note": "レミニセンス＋大喰いの利世のCZ合算"
+          "weight": 0.9,
+          "minSampleSize": 5,
+          "note": "CZ確率。主軸級だがAT初当りを優先"
         },
         {
           "settingNo": 5,
           "denominatorValue": 216.4,
-          "weight": 1.2,
-          "minSampleSize": 4,
-          "note": "レミニセンス＋大喰いの利世のCZ合算"
+          "weight": 0.9,
+          "minSampleSize": 5,
+          "note": "CZ確率。主軸級だがAT初当りを優先"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 203.6,
-          "weight": 1.2,
-          "minSampleSize": 4,
-          "note": "レミニセンス＋大喰いの利世のCZ合算"
+          "denominatorValue": 203.7,
+          "weight": 0.9,
+          "minSampleSize": 5,
+          "note": "CZ確率。主軸級だがAT初当りを優先"
         }
       ]
     },
@@ -126,47 +126,175 @@
         {
           "settingNo": 1,
           "denominatorValue": 6620.2,
-          "weight": 1.1,
+          "weight": 0.5,
           "minSampleSize": 1,
-          "note": "エピソードボーナス当選確率"
+          "note": "エピソードボーナス。出れば強い補助根拠"
         },
         {
           "settingNo": 2,
           "denominatorValue": 5879.7,
-          "weight": 1.1,
+          "weight": 0.5,
           "minSampleSize": 1,
-          "note": "エピソードボーナス当選確率"
+          "note": "エピソードボーナス。出れば強い補助根拠"
         },
         {
           "settingNo": 3,
           "denominatorValue": 5114.5,
-          "weight": 1.1,
+          "weight": 0.5,
           "minSampleSize": 1,
-          "note": "エピソードボーナス当選確率"
+          "note": "エピソードボーナス。出れば強い補助根拠"
         },
         {
           "settingNo": 4,
           "denominatorValue": 4062.5,
-          "weight": 1.1,
+          "weight": 0.5,
           "minSampleSize": 1,
-          "note": "エピソードボーナス当選確率"
+          "note": "エピソードボーナス。出れば強い補助根拠"
         },
         {
           "settingNo": 5,
           "denominatorValue": 3166.7,
-          "weight": 1.1,
+          "weight": 0.5,
           "minSampleSize": 1,
-          "note": "エピソードボーナス当選確率"
+          "note": "エピソードボーナス。出れば強い補助根拠"
         },
         {
           "settingNo": 6,
           "denominatorValue": 2639.5,
-          "weight": 1.1,
+          "weight": 0.5,
           "minSampleSize": 1,
-          "note": "エピソードボーナス当選確率"
+          "note": "エピソードボーナス。出れば強い補助根拠"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 394.4,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 380.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 357.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 325.9,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 291.2,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 261.3,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 28460.6,
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "AT直撃。重い分母の補助根拠"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 24453.5,
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "AT直撃。重い分母の補助根拠"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 18093.0,
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "AT直撃。重い分母の補助根拠"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 12019.5,
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "AT直撃。重い分母の補助根拠"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 8615.4,
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "AT直撃。重い分母の補助根拠"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 7036.8,
+          "weight": 0.35,
+          "minSampleSize": 1,
+          "note": "AT直撃。重い分母の補助根拠"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_game_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ間600G+αでCZ当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "at_game_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間1200G到達でAT当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "reset_short_ceiling",
+      "displayName": "設定変更時短縮",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時は特殊モードへ移行し200G+αに短縮。",
+      "isEnabled": true
+    }
+  ]
 }

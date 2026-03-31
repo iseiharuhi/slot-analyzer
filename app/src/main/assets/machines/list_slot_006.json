@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-10-03",
     "isActive": true,
-    "notes": "partial: 一撃公開のAT「ハザードラッシュ」初当りとAT直撃当選率を採用。AT初当りを主軸、直撃を重い分母の強根拠として補助に置く。CZ「Gバトル」は設定差の比較値が安定していないため回数入力のみ残し、1000G天井とGバトル7スルー天井を追加。",
+    "notes": "partial: DMM・一撃の公開解析を再整理。主判別はAT「ハザードラッシュ」初当り、重い分母のAT直撃を強い補助根拠として維持。CZ「Gバトル」は天井/スルー管理には有効だが、全設定比較で安定しないため回数入力のみ残す。直撃は1回でもかなり強いが、未出現だけで低設定断定はしない。",
     "dmmUrl": "https://p-town.dmm.com/machines/4217",
     "ichigekiUrl": "https://1geki.jp/slot/s_bhr2/"
   },
@@ -43,7 +43,7 @@
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
       "notes": "CZ「Gバトル」回数。設定差比較値が安定していないため今回は推測未使用。"
     },
@@ -67,7 +67,7 @@
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": false,
+      "isDefaultVisible": true,
       "supportsMinus": true,
       "notes": "通常時チャンス役成立時のAT直撃回数。重い分母だが設定差が大きいため採用。"
     }
@@ -79,44 +79,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 343.4,
-          "weight": 1.15,
-          "minSampleSize": 3,
-          "note": "AT「ハザードラッシュ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 331.6,
-          "weight": 1.15,
-          "minSampleSize": 3,
-          "note": "AT「ハザードラッシュ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 3,
           "denominatorValue": 314.1,
-          "weight": 1.15,
-          "minSampleSize": 3,
-          "note": "AT「ハザードラッシュ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 276.8,
-          "weight": 1.15,
-          "minSampleSize": 3,
-          "note": "AT「ハザードラッシュ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 256.2,
-          "weight": 1.15,
-          "minSampleSize": 3,
-          "note": "AT「ハザードラッシュ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 242.1,
-          "weight": 1.15,
-          "minSampleSize": 3,
-          "note": "AT「ハザードラッシュ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         }
       ]
     },
@@ -126,44 +126,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 9101,
-          "weight": 1.3,
+          "weight": 0.45,
           "minSampleSize": 1,
-          "note": "AT直撃当選率(実質出現率)"
+          "note": "AT直撃。1回でも強いが重い分母のため補助評価"
         },
         {
           "settingNo": 2,
           "denominatorValue": 7419,
-          "weight": 1.3,
+          "weight": 0.45,
           "minSampleSize": 1,
-          "note": "AT直撃当選率(実質出現率)"
+          "note": "AT直撃。1回でも強いが重い分母のため補助評価"
         },
         {
           "settingNo": 3,
           "denominatorValue": 6016,
-          "weight": 1.3,
+          "weight": 0.45,
           "minSampleSize": 1,
-          "note": "AT直撃当選率(実質出現率)"
+          "note": "AT直撃。1回でも強いが重い分母のため補助評価"
         },
         {
           "settingNo": 4,
           "denominatorValue": 2914,
-          "weight": 1.3,
+          "weight": 0.45,
           "minSampleSize": 1,
-          "note": "AT直撃当選率(実質出現率)"
+          "note": "AT直撃。1回でも強いが重い分母のため補助評価"
         },
         {
           "settingNo": 5,
           "denominatorValue": 2379,
-          "weight": 1.3,
+          "weight": 0.45,
           "minSampleSize": 1,
-          "note": "AT直撃当選率(実質出現率)"
+          "note": "AT直撃。1回でも強いが重い分母のため補助評価"
         },
         {
           "settingNo": 6,
           "denominatorValue": 2094,
-          "weight": 1.3,
+          "weight": 0.45,
           "minSampleSize": 1,
-          "note": "AT直撃当選率(実質出現率)"
+          "note": "AT直撃。1回でも強いが重い分母のため補助評価"
         }
       ]
     }

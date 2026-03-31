@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-06-05",
     "isActive": true,
-    "notes": "partial: 一撃のAT初当り確率を主軸に更新。DMMでもAT終了画面・称号の示唆が豊富だが、現行UIで数値化しやすい項目はAT初当りのみ。終了画面や称号はメモ運用前提で、JSONは安全側の1軸比較に留める。",
+    "notes": "partial: 一撃掲載のAT「無双狂ラッシュ」初当りを主軸に維持。DMMで確認できる終了画面・称号・ロングフリーズなどの強示唆は重い分母でも有効だが、全設定比較値を安全に固定できる数値項目はAT初当りのみのため、現段階では1軸+notes運用とする。天井は最大999G。",
     "dmmUrl": "https://p-town.dmm.com/machines/4367",
     "ichigekiUrl": "https://1geki.jp/slot/l_berserkmuso/"
   },
@@ -55,40 +55,52 @@
         {
           "settingNo": 1,
           "denominatorValue": 390.3,
-          "weight": 1.0,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 373.8,
-          "weight": 1.0,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 292.5,
-          "weight": 1.0,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 260.9,
-          "weight": 1.0,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 238.4,
-          "weight": 1.0,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "一撃のAT「無双狂ラッシュ」初当り確率"
+          "note": "AT初当り確率（主判別）"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "通常時最大999GでAT初当りに当選。"
+    }
+  ]
 }

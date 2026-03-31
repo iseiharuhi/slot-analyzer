@@ -1,9 +1,9 @@
 {
   "machineId": "karakuri_circus",
   "machineName": "Lからくりサーカス",
-  "status": "partial",
-  "capturedDate": "2026-03-31",
-  "sourceListPage": null,
+  "status": "verified",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": "https://p-town.dmm.com/machines/4360",
   "externalLinks": [
     {
       "label": "DMMぱちタウン",

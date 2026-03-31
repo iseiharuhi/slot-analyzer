@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-12-04",
     "isActive": true,
-    "notes": "partial: DMM公開の初当り確率とAT「修羅の刻」初当りを主軸に維持。おみくじ・終了画面などの示唆要素は強いが現行UIでの定量入力が難しいため、数値比較は初当り2軸に絞って保守運用する。",
+    "notes": "partial: DMM/一撃掲載の初当り確率とAT「修羅の刻」初当りを主軸2軸で維持。ボーナス終了画面のモード示唆やAT終了画面は強いが現行UIで定量化しにくいため notes 管理とし、数値比較は公開比較値が揃う初当り系を優先。天井は最大1000G+αを明記し、重い示唆要素は削除せず補助情報として扱う。",
     "dmmUrl": "https://p-town.dmm.com/machines/4456",
     "ichigekiUrl": "https://1geki.jp/slot/l_keiji_sado/"
   },
@@ -55,44 +55,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 260.7,
-          "weight": 0.9,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当り確率（主判別）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 253.7,
-          "weight": 0.9,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当り確率（主判別）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 247.0,
-          "weight": 0.9,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当り確率（主判別）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 231.5,
-          "weight": 0.9,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当り確率（主判別）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 222.1,
-          "weight": 0.9,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当り確率（主判別）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 211.5,
-          "weight": 0.9,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "初当り確率（主判別）"
         }
       ]
     },
@@ -104,45 +104,57 @@
           "denominatorValue": 474.7,
           "weight": 0.8,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "AT「修羅の刻」初当り（補助）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 460.1,
           "weight": 0.8,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "AT「修羅の刻」初当り（補助）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 438.0,
           "weight": 0.8,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "AT「修羅の刻」初当り（補助）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 398.7,
           "weight": 0.8,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "AT「修羅の刻」初当り（補助）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 364.0,
           "weight": 0.8,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "AT「修羅の刻」初当り（補助）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 335.8,
           "weight": 0.8,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "AT「修羅の刻」初当り（補助）"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "通常時最大1000G+αで初当りに当選。"
+    }
+  ]
 }

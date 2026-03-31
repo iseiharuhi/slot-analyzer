@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-01-09",
     "isActive": true,
-    "notes": "partial: DMM・一撃の公開解析から初当り、AT「ハザードラッシュ」初当り、弱チェリーを採用。PZ引き戻し率や通常状態での小役別PZ抽選も強いが、手動集計負荷が高いため今回は未採用。モード別天井のうち、通常A750Gと設定変更550Gを ceilingRules に反映。",
+    "notes": "partial: DMM・一撃の公開解析を再整理。主判別は通常時初当り、補助にAT初当りと弱チェリーを採用。PZ当選率や引き戻し率にも設定差はあるが内部状態依存が強く、手動入力の再現性を優先して今回は未採用。弱チェリーは取りこぼし/カウント漏れに注意し、3000G以上で効かせる前提。",
     "dmmUrl": "https://p-town.dmm.com/machines/4459",
     "ichigekiUrl": "https://1geki.jp/slot/l_biovillage/"
   },
@@ -69,42 +69,42 @@
           "denominatorValue": 281.5,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "初当り確率"
+          "note": "通常時初当り。主判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 275.3,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "初当り確率"
+          "note": "通常時初当り。主判別"
         },
         {
           "settingNo": 3,
           "denominatorValue": 264.5,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "初当り確率"
+          "note": "通常時初当り。主判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 240.3,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "初当り確率"
+          "note": "通常時初当り。主判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 229.3,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "初当り確率"
+          "note": "通常時初当り。主判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 224.2,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "初当り確率"
+          "note": "通常時初当り。主判別"
         }
       ]
     },
@@ -114,44 +114,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 445.3,
-          "weight": 0.9,
+          "weight": 0.7,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。補助判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 434.1,
-          "weight": 0.9,
+          "weight": 0.7,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。補助判別"
         },
         {
           "settingNo": 3,
           "denominatorValue": 415.7,
-          "weight": 0.9,
+          "weight": 0.7,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。補助判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 372.9,
-          "weight": 0.9,
+          "weight": 0.7,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。補助判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 354.4,
-          "weight": 0.9,
+          "weight": 0.7,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。補助判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 342.8,
-          "weight": 0.9,
+          "weight": 0.7,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。補助判別"
         }
       ]
     },
@@ -161,44 +161,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 98.85,
-          "weight": 0.65,
-          "minSampleSize": 25,
-          "note": "弱チェリー確率"
+          "weight": 0.45,
+          "minSampleSize": 30,
+          "note": "弱チェリー。3000G以上で補助評価"
         },
         {
           "settingNo": 2,
           "denominatorValue": 96.66,
-          "weight": 0.65,
-          "minSampleSize": 25,
-          "note": "弱チェリー確率"
+          "weight": 0.45,
+          "minSampleSize": 30,
+          "note": "弱チェリー。3000G以上で補助評価"
         },
         {
           "settingNo": 3,
           "denominatorValue": 95.26,
-          "weight": 0.65,
-          "minSampleSize": 25,
-          "note": "弱チェリー確率"
+          "weight": 0.45,
+          "minSampleSize": 30,
+          "note": "弱チェリー。3000G以上で補助評価"
         },
         {
           "settingNo": 4,
           "denominatorValue": 90.27,
-          "weight": 0.65,
-          "minSampleSize": 25,
-          "note": "弱チェリー確率"
+          "weight": 0.45,
+          "minSampleSize": 30,
+          "note": "弱チェリー。3000G以上で補助評価"
         },
         {
           "settingNo": 5,
           "denominatorValue": 88.68,
-          "weight": 0.65,
-          "minSampleSize": 25,
-          "note": "弱チェリー確率"
+          "weight": 0.45,
+          "minSampleSize": 30,
+          "note": "弱チェリー。3000G以上で補助評価"
         },
         {
           "settingNo": 6,
           "denominatorValue": 87.15,
-          "weight": 0.65,
-          "minSampleSize": 25,
-          "note": "弱チェリー確率"
+          "weight": 0.45,
+          "minSampleSize": 30,
+          "note": "弱チェリー。3000G以上で補助評価"
         }
       ]
     }

@@ -2,12 +2,12 @@
   "machine": {
     "id": "list_slot_001",
     "name": "Lゴブリンスレイヤー",
-    "manufacturer": null,
+    "manufacturer": "オレンジ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2023-04-17",
     "isActive": true,
-    "notes": "公開解析とDMM特集を再監査。主判別はAT初当りと共通ベル。CZはリプレイ3連や連続役契機など複数経路が混在するため補助指標として保守的な重みに調整。終了画面・藤丸コイン・羽・獲得枚数表示は強い示唆だが現行入力仕様では未反映。",
-    "dmmUrl": null,
+    "notes": "DMM機種ページと設定差特集を再監査。主判別は共通ベル、次点でAT初当り。CZは周期開始契機や内部状態でブレやすいため補助へ調整した。共通ベルは通常時から完全判別できるため最重要。ATは重い分母、周期CZは長時間実戦向け。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4340",
     "ichigekiUrl": "https://1geki.jp/slot/s_l_goblinslayer/"
   },
   "counterDefinitions": [
@@ -67,44 +67,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 547.9,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り合算"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "AT初当り確率。重い分母のため補助寄りの主軸。2000G級から確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 538.4,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り合算"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "AT初当り確率。重い分母のため補助寄りの主軸。2000G級から確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 517.7,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り合算"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "AT初当り確率。重い分母のため補助寄りの主軸。2000G級から確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 492.3,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り合算"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "AT初当り確率。重い分母のため補助寄りの主軸。2000G級から確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 470.5,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り合算"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "AT初当り確率。重い分母のため補助寄りの主軸。2000G級から確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 435.7,
-          "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "AT初当り合算"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "AT初当り確率。重い分母のため補助寄りの主軸。2000G級から確認。"
         }
       ]
     },
@@ -114,44 +114,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 102.4,
-          "weight": 1.25,
+          "weight": 1.3,
           "minSampleSize": 30,
-          "note": "共通ベル確率。主判別項目。"
+          "note": "共通ベル確率。設定差が大きい主判別。通常時から要カウント。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 97.5,
-          "weight": 1.25,
+          "weight": 1.3,
           "minSampleSize": 30,
-          "note": "共通ベル確率。主判別項目。"
+          "note": "共通ベル確率。設定差が大きい主判別。通常時から要カウント。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 93.1,
-          "weight": 1.25,
+          "weight": 1.3,
           "minSampleSize": 30,
-          "note": "共通ベル確率。主判別項目。"
+          "note": "共通ベル確率。設定差が大きい主判別。通常時から要カウント。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 86.2,
-          "weight": 1.25,
+          "weight": 1.3,
           "minSampleSize": 30,
-          "note": "共通ベル確率。主判別項目。"
+          "note": "共通ベル確率。設定差が大きい主判別。通常時から要カウント。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 81.9,
-          "weight": 1.25,
+          "weight": 1.3,
           "minSampleSize": 30,
-          "note": "共通ベル確率。主判別項目。"
+          "note": "共通ベル確率。設定差が大きい主判別。通常時から要カウント。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 71.9,
-          "weight": 1.25,
+          "weight": 1.3,
           "minSampleSize": 30,
-          "note": "共通ベル確率。主判別項目。"
+          "note": "共通ベル確率。設定差が大きい主判別。通常時から要カウント。"
         }
       ]
     },
@@ -161,47 +161,59 @@
         {
           "settingNo": 1,
           "denominatorValue": 226.0,
-          "weight": 0.72,
-          "minSampleSize": 10,
-          "note": "全CZ合算。補助判別。"
+          "weight": 0.58,
+          "minSampleSize": 8,
+          "note": "CZ初当り/周期当選の補助指標。設定差はあるが状態差の影響を受けやすい。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 223.0,
-          "weight": 0.72,
-          "minSampleSize": 10,
-          "note": "全CZ合算。補助判別。"
+          "weight": 0.58,
+          "minSampleSize": 8,
+          "note": "CZ初当り/周期当選の補助指標。設定差はあるが状態差の影響を受けやすい。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 215.0,
-          "weight": 0.72,
-          "minSampleSize": 10,
-          "note": "全CZ合算。補助判別。"
+          "weight": 0.58,
+          "minSampleSize": 8,
+          "note": "CZ初当り/周期当選の補助指標。設定差はあるが状態差の影響を受けやすい。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 204.0,
-          "weight": 0.72,
-          "minSampleSize": 10,
-          "note": "全CZ合算。補助判別。"
+          "weight": 0.58,
+          "minSampleSize": 8,
+          "note": "CZ初当り/周期当選の補助指標。設定差はあるが状態差の影響を受けやすい。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 196.0,
-          "weight": 0.72,
-          "minSampleSize": 10,
-          "note": "全CZ合算。補助判別。"
+          "weight": 0.58,
+          "minSampleSize": 8,
+          "note": "CZ初当り/周期当選の補助指標。設定差はあるが状態差の影響を受けやすい。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 184.0,
-          "weight": 0.72,
-          "minSampleSize": 10,
-          "note": "全CZ合算。補助判別。"
+          "weight": 0.58,
+          "minSampleSize": 8,
+          "note": "CZ初当り/周期当選の補助指標。設定差はあるが状態差の影響を受けやすい。"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時600G / 1000G / 1500G消化のいずれかで天井到達。到達時はATに突入し、約1/2で80%ループモードが選択される。",
+      "isEnabled": true
+    }
+  ]
 }

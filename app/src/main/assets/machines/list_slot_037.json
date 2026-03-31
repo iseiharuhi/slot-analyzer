@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-04-22",
     "isActive": true,
-    "notes": "partial: 一撃の公開解析からファミリアボーナス・ファミリアチャンス・ボーナス合算を採用。スイカや強チャンス目にも設定差はあるが、ART主体機で入力項目が増えすぎるため今回はボーナス系3軸に限定。ボーナス/CZ間555G+αのCZ天井を追加。",
+    "notes": "partial: DMM・一撃の公開解析を再整理。主判別はART初当り、補助にボーナス合算とファミリアボーナスを採用。ファミリアチャンスは設定差が大きいが単体では荒れやすいため第3補助へ下げた。CZや小役は有効だが状態依存やカウント負荷が高く、現行UIではメモ運用を優先。",
     "dmmUrl": "https://p-town.dmm.com/machines/4556",
     "ichigekiUrl": "https://1geki.jp/slot/s_danmachi2/"
   },
@@ -70,6 +70,18 @@
       "isDefaultVisible": false,
       "supportsMinus": true,
       "notes": "ボーナス後のファミリアホーム/CZ当選回数。現在は補助記録のみ。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "ART初当り",
+      "category": "AT_CZ",
+      "sortOrder": 15,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ART初当り。最重要。"
     }
   ],
   "settingReferenceValues": [
@@ -79,44 +91,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 183.6,
-          "weight": 1.0,
-          "minSampleSize": 8,
-          "note": "ボーナス合算確率"
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "ボーナス合算。補助判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 178.6,
-          "weight": 1.0,
-          "minSampleSize": 8,
-          "note": "ボーナス合算確率"
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "ボーナス合算。補助判別"
         },
         {
           "settingNo": 3,
           "denominatorValue": 173.8,
-          "weight": 1.0,
-          "minSampleSize": 8,
-          "note": "ボーナス合算確率"
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "ボーナス合算。補助判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 164.7,
-          "weight": 1.0,
-          "minSampleSize": 8,
-          "note": "ボーナス合算確率"
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "ボーナス合算。補助判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 158.3,
-          "weight": 1.0,
-          "minSampleSize": 8,
-          "note": "ボーナス合算確率"
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "ボーナス合算。補助判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 152.4,
-          "weight": 1.0,
-          "minSampleSize": 8,
-          "note": "ボーナス合算確率"
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "ボーナス合算。補助判別"
         }
       ]
     },
@@ -126,44 +138,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 255.0,
-          "weight": 0.85,
-          "minSampleSize": 5,
-          "note": "ファミリアボーナス確率"
+          "weight": 0.6,
+          "minSampleSize": 6,
+          "note": "ファミリアボーナス。補助判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 245.4,
-          "weight": 0.85,
-          "minSampleSize": 5,
-          "note": "ファミリアボーナス確率"
+          "weight": 0.6,
+          "minSampleSize": 6,
+          "note": "ファミリアボーナス。補助判別"
         },
         {
           "settingNo": 3,
           "denominatorValue": 236.6,
-          "weight": 0.85,
-          "minSampleSize": 5,
-          "note": "ファミリアボーナス確率"
+          "weight": 0.6,
+          "minSampleSize": 6,
+          "note": "ファミリアボーナス。補助判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 219.9,
-          "weight": 0.85,
-          "minSampleSize": 5,
-          "note": "ファミリアボーナス確率"
+          "weight": 0.6,
+          "minSampleSize": 6,
+          "note": "ファミリアボーナス。補助判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 208.7,
-          "weight": 0.85,
-          "minSampleSize": 5,
-          "note": "ファミリアボーナス確率"
+          "weight": 0.6,
+          "minSampleSize": 6,
+          "note": "ファミリアボーナス。補助判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 198.6,
-          "weight": 0.85,
-          "minSampleSize": 5,
-          "note": "ファミリアボーナス確率"
+          "weight": 0.6,
+          "minSampleSize": 6,
+          "note": "ファミリアボーナス。補助判別"
         }
       ]
     },
@@ -173,44 +185,91 @@
         {
           "settingNo": 1,
           "denominatorValue": 655.4,
-          "weight": 0.85,
+          "weight": 0.45,
           "minSampleSize": 3,
-          "note": "ファミリアチャンス確率"
+          "note": "ファミリアチャンス。単体では荒れやすい補助指標"
         },
         {
           "settingNo": 2,
           "denominatorValue": 537.2,
-          "weight": 0.85,
+          "weight": 0.45,
           "minSampleSize": 3,
-          "note": "ファミリアチャンス確率"
+          "note": "ファミリアチャンス。単体では荒れやすい補助指標"
         },
         {
           "settingNo": 3,
           "denominatorValue": 448.4,
-          "weight": 0.85,
+          "weight": 0.45,
           "minSampleSize": 3,
-          "note": "ファミリアチャンス確率"
+          "note": "ファミリアチャンス。単体では荒れやすい補助指標"
         },
         {
           "settingNo": 4,
           "denominatorValue": 385.5,
-          "weight": 0.85,
+          "weight": 0.45,
           "minSampleSize": 3,
-          "note": "ファミリアチャンス確率"
+          "note": "ファミリアチャンス。単体では荒れやすい補助指標"
         },
         {
           "settingNo": 5,
           "denominatorValue": 347.6,
-          "weight": 0.85,
+          "weight": 0.45,
           "minSampleSize": 3,
-          "note": "ファミリアチャンス確率"
+          "note": "ファミリアチャンス。単体では荒れやすい補助指標"
         },
         {
           "settingNo": 6,
           "denominatorValue": 319.7,
-          "weight": 0.85,
+          "weight": 0.45,
           "minSampleSize": 3,
-          "note": "ファミリアチャンス確率"
+          "note": "ファミリアチャンス。単体では荒れやすい補助指標"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 493.7,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ART初当り。主判別"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 476.0,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ART初当り。主判別"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 461.3,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ART初当り。主判別"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 393.2,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ART初当り。主判別"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 373.5,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ART初当り。主判別"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 354.7,
+          "weight": 1.0,
+          "minSampleSize": 3,
+          "note": "ART初当り。主判別"
         }
       ]
     }

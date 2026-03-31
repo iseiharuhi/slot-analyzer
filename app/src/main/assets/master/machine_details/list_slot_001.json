@@ -1,14 +1,14 @@
 {
   "machineId": "list_slot_001",
   "machineName": "Lゴブリンスレイヤー",
-  "status": "partial",
-  "capturedDate": "2026-03-31",
-  "sourceListPage": null,
+  "status": "verified",
+  "capturedDate": "2026-04-01",
+  "sourceListPage": "https://p-town.dmm.com/machines/4340",
   "externalLinks": [
     {
       "label": "DMMぱちタウン",
-      "url": null,
-      "status": "not_resolved_in_this_run"
+      "url": "https://p-town.dmm.com/machines/4340",
+      "status": "verified_direct"
     },
     {
       "label": "DMMぱちタウン(掲載一覧)",

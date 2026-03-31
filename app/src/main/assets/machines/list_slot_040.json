@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-12-02",
     "isActive": true,
-    "notes": "partial: 公開解析ベースへ更新。初当り総合だけでなく、シングル7揃い・ダブル7揃い・CZ突入率を分解して採用。重い分母やAT直行系も今後は積極採用する方針だが、AT直撃選択率はゲーム分母換算の公表がないため補助メモ扱い。",
+    "notes": "partial: DMM・一撃の公開解析を再整理。主判別はダブル7揃い/AT初当り、補助にシングル7揃いとCZ「ICPOチャレンジ」を採用。強チェリー契機のAT直行は設定差があるがゲーム分母へ正規化しづらいため direct_hit_count はメモ用途へ後退。シングル7は荒れやすいので2000G未満では過信せず、AT初当りを軸に判断する。",
     "dmmUrl": "https://p-town.dmm.com/machines/4689",
     "ichigekiUrl": "https://1geki.jp/slot/l_lupin_totgn/"
   },
@@ -67,9 +67,9 @@
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": true,
+      "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "高設定ほどAT直行しやすいが、公表は選択率中心のため補助記録用。"
+      "notes": "強チェリー契機AT直行などの実戦メモ。公開値は割合ベース中心のため現段階では推測計算に未採用。"
     }
   ],
   "settingReferenceValues": [
@@ -79,44 +79,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 920.1,
-          "weight": 0.8,
+          "weight": 0.7,
           "minSampleSize": 2,
-          "note": "シングル7揃い（ボーナス）確率"
+          "note": "シングル7揃い。AT側が主軸のため補助評価"
         },
         {
           "settingNo": 2,
           "denominatorValue": 879.1,
-          "weight": 0.8,
+          "weight": 0.7,
           "minSampleSize": 2,
-          "note": "シングル7揃い（ボーナス）確率"
+          "note": "シングル7揃い。AT側が主軸のため補助評価"
         },
         {
           "settingNo": 3,
           "denominatorValue": 831.3,
-          "weight": 0.8,
+          "weight": 0.7,
           "minSampleSize": 2,
-          "note": "シングル7揃い（ボーナス）確率"
+          "note": "シングル7揃い。AT側が主軸のため補助評価"
         },
         {
           "settingNo": 4,
           "denominatorValue": 685.2,
-          "weight": 0.8,
+          "weight": 0.7,
           "minSampleSize": 2,
-          "note": "シングル7揃い（ボーナス）確率"
+          "note": "シングル7揃い。AT側が主軸のため補助評価"
         },
         {
           "settingNo": 5,
           "denominatorValue": 633.5,
-          "weight": 0.8,
+          "weight": 0.7,
           "minSampleSize": 2,
-          "note": "シングル7揃い（ボーナス）確率"
+          "note": "シングル7揃い。AT側が主軸のため補助評価"
         },
         {
           "settingNo": 6,
           "denominatorValue": 636.9,
-          "weight": 0.8,
+          "weight": 0.7,
           "minSampleSize": 2,
-          "note": "シングル7揃い（ボーナス）確率"
+          "note": "シングル7揃い。AT側が主軸のため補助評価"
         }
       ]
     },
@@ -127,43 +127,43 @@
           "settingNo": 1,
           "denominatorValue": 421.5,
           "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ダブル7揃い（スーパーヒーロー）確率"
+          "minSampleSize": 4,
+          "note": "ダブル7揃い/AT初当り。主判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 401.4,
           "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ダブル7揃い（スーパーヒーロー）確率"
+          "minSampleSize": 4,
+          "note": "ダブル7揃い/AT初当り。主判別"
         },
         {
           "settingNo": 3,
           "denominatorValue": 383.9,
           "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ダブル7揃い（スーパーヒーロー）確率"
+          "minSampleSize": 4,
+          "note": "ダブル7揃い/AT初当り。主判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 355.1,
           "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ダブル7揃い（スーパーヒーロー）確率"
+          "minSampleSize": 4,
+          "note": "ダブル7揃い/AT初当り。主判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 345.6,
           "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ダブル7揃い（スーパーヒーロー）確率"
+          "minSampleSize": 4,
+          "note": "ダブル7揃い/AT初当り。主判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 327.5,
           "weight": 1.0,
-          "minSampleSize": 3,
-          "note": "ダブル7揃い（スーパーヒーロー）確率"
+          "minSampleSize": 4,
+          "note": "ダブル7揃い/AT初当り。主判別"
         }
       ]
     },
@@ -173,44 +173,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 211.5,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "CZ「ICPOチャレンジ」突入率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "CZ「ICPOチャレンジ」。差は小さめのため補助評価"
         },
         {
           "settingNo": 2,
           "denominatorValue": 210.0,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "CZ「ICPOチャレンジ」突入率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "CZ「ICPOチャレンジ」。差は小さめのため補助評価"
         },
         {
           "settingNo": 3,
           "denominatorValue": 204.9,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "CZ「ICPOチャレンジ」突入率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "CZ「ICPOチャレンジ」。差は小さめのため補助評価"
         },
         {
           "settingNo": 4,
           "denominatorValue": 199.7,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "CZ「ICPOチャレンジ」突入率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "CZ「ICPOチャレンジ」。差は小さめのため補助評価"
         },
         {
           "settingNo": 5,
           "denominatorValue": 199.0,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "CZ「ICPOチャレンジ」突入率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "CZ「ICPOチャレンジ」。差は小さめのため補助評価"
         },
         {
           "settingNo": 6,
           "denominatorValue": 198.0,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "CZ「ICPOチャレンジ」突入率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "CZ「ICPOチャレンジ」。差は小さめのため補助評価"
         }
       ]
     }

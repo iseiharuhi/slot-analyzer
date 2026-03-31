@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-10-02",
     "isActive": true,
-    "notes": "partial: 一撃公開のAT「転スラっしゅ」初当りと夜の蝶当選率を採用。AT初当りを主軸、夜の蝶を補助に置き、通常C/天国移行率など割合ベースの要素はnotes管理に留める。DMM/一撃の機種URLと1200pt+α天井を反映。",
+    "notes": "partial: DMM・一撃の公開解析を再整理。主判別はAT「転スラっしゅ」初当り、補助に夜の蝶を採用。特級魔族討伐戦は高設定ほど優遇だが内部状態依存が強く、手動入力の再現性を優先して回数メモ止まりにした。夜の蝶は母数が軽く見える一方で差は緩やかなので、AT初当りとセットで見る。",
     "dmmUrl": "https://p-town.dmm.com/machines/4405",
     "ichigekiUrl": "https://1geki.jp/slot/l_tensura/"
   },
@@ -45,7 +45,7 @@
       "isEnabled": true,
       "isDefaultVisible": false,
       "supportsMinus": true,
-      "notes": "前兆/CZの回数入力用。全設定比較値が安定して公開されていないため今回は推測未使用。"
+      "notes": "特級魔族討伐戦。状態依存が強く、現段階では推測計算に未採用。"
     },
     {
       "key": "at_count",
@@ -79,37 +79,37 @@
         {
           "settingNo": 1,
           "denominatorValue": 370,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "AT「転スラっしゅ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 355,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "AT「転スラっしゅ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 296,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "AT「転スラっしゅ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 262,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "AT「転スラっしゅ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 245,
-          "weight": 1.2,
-          "minSampleSize": 3,
-          "note": "AT「転スラっしゅ」初当り"
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り。主判別"
         }
       ]
     },
@@ -119,37 +119,37 @@
         {
           "settingNo": 1,
           "denominatorValue": 248,
-          "weight": 0.65,
-          "minSampleSize": 6,
-          "note": "夜の蝶当選率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "夜の蝶突入率。補助判別"
         },
         {
           "settingNo": 2,
           "denominatorValue": 236,
-          "weight": 0.65,
-          "minSampleSize": 6,
-          "note": "夜の蝶当選率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "夜の蝶突入率。補助判別"
         },
         {
           "settingNo": 4,
           "denominatorValue": 230,
-          "weight": 0.65,
-          "minSampleSize": 6,
-          "note": "夜の蝶当選率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "夜の蝶突入率。補助判別"
         },
         {
           "settingNo": 5,
           "denominatorValue": 229,
-          "weight": 0.65,
-          "minSampleSize": 6,
-          "note": "夜の蝶当選率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "夜の蝶突入率。補助判別"
         },
         {
           "settingNo": 6,
           "denominatorValue": 226,
-          "weight": 0.65,
-          "minSampleSize": 6,
-          "note": "夜の蝶当選率"
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "夜の蝶突入率。補助判別"
         }
       ]
     }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-09-19",
     "isActive": true,
-    "notes": "partial: 一撃掲載のAT初当り確率と通常時10枚ベル出現率を反映。AT初当りを主軸、10枚ベルを小役補助として採用。モード別天井は通常770G+α・引き戻し390G+α・裏覚醒準備960G+α・覚醒/裏覚醒160G+α。設定変更時は160G+αまでの当選割合が高いが固定短縮ではないため、notes と天井説明で補足する。",
+    "notes": "partial: DMM掲載のAT初当り確率と通常時10枚ベル確率を主軸+補助で維持。AT初当りを最重視し、10枚ベルは総ゲーム数3000G級から効く小役補助として採用。重い分母の直撃要素も強いが、全設定比較値を安全に固定できるまで notes 管理に留める。天井は通常770G+α・引き戻し390G+α・裏覚醒準備960G+α・覚醒/裏覚醒160G+αを保持。",
     "dmmUrl": "https://p-town.dmm.com/machines/4401",
     "ichigekiUrl": "https://1geki.jp/slot/s_mfckakusei/"
   },
@@ -55,44 +55,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 246.8,
-          "weight": 1.05,
-          "minSampleSize": 5,
-          "note": "AT初当り確率"
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 236.3,
-          "weight": 1.05,
-          "minSampleSize": 5,
-          "note": "AT初当り確率"
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 223.9,
-          "weight": 1.05,
-          "minSampleSize": 5,
-          "note": "AT初当り確率"
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 208.9,
-          "weight": 1.05,
-          "minSampleSize": 5,
-          "note": "AT初当り確率"
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 172.9,
-          "weight": 1.05,
-          "minSampleSize": 5,
-          "note": "AT初当り確率"
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "AT初当り確率（主判別）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 141.6,
-          "weight": 1.05,
-          "minSampleSize": 5,
-          "note": "AT初当り確率"
+          "weight": 1.15,
+          "minSampleSize": 4,
+          "note": "AT初当り確率（主判別）"
         }
       ]
     },
@@ -102,44 +102,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 10.7,
-          "weight": 0.8,
+          "weight": 0.75,
           "minSampleSize": 100,
-          "note": "通常時10枚ベル出現率"
+          "note": "通常時10枚ベル確率（補助）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 10.7,
-          "weight": 0.8,
+          "weight": 0.75,
           "minSampleSize": 100,
-          "note": "通常時10枚ベル出現率"
+          "note": "通常時10枚ベル確率（補助）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 10.3,
-          "weight": 0.8,
+          "weight": 0.75,
           "minSampleSize": 100,
-          "note": "通常時10枚ベル出現率"
+          "note": "通常時10枚ベル確率（補助）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 9.9,
-          "weight": 0.8,
+          "weight": 0.75,
           "minSampleSize": 100,
-          "note": "通常時10枚ベル出現率"
+          "note": "通常時10枚ベル確率（補助）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 9.6,
-          "weight": 0.8,
+          "weight": 0.75,
           "minSampleSize": 100,
-          "note": "通常時10枚ベル出現率"
+          "note": "通常時10枚ベル確率（補助）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 9.3,
-          "weight": 0.8,
+          "weight": 0.75,
           "minSampleSize": 100,
-          "note": "通常時10枚ベル出現率"
+          "note": "通常時10枚ベル確率（補助）"
         }
       ]
     }

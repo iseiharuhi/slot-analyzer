@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-05-08",
     "isActive": true,
-    "notes": "partial: 6.5号機「パチスロ 炎炎ノ消防隊」の公開値へ修正。前回のスマスロ版データ混入を避け、初当りボーナスと炎炎激闘初当りの2軸に整理した。終了画面示唆は強いが現行UIでは別入力欄がないため未採用。通常時最大850G+α天井を ceilingRules に追加。",
+    "notes": "DMM機種ページを再監査。主判別は通常時ボーナス初当り、補助は炎炎激闘初当り。十字目変換/十字目契機のボーナス当選率には設定差があるが、現行UIでは小役別入力がないため notes に退避。炎炎激闘直撃は実戦値のみのため推測ロジックには未反映。",
     "dmmUrl": "https://p-town.dmm.com/machines/4326",
     "ichigekiUrl": "https://1geki.jp/slot/s_ennenn/"
   },
@@ -33,7 +33,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "6.5号機版の主判別項目。通常時の初当りボーナス回数。"
+      "notes": "通常時ボーナス初当り。十字目変換/十字目契機の差を含む主判別。"
     },
     {
       "key": "big_count",
@@ -57,7 +57,7 @@
       "isEnabled": true,
       "isDefaultVisible": true,
       "supportsMinus": true,
-      "notes": "炎炎激闘初当り回数。高設定補助要素。"
+      "notes": "炎炎激闘初当り。ボーナスループの入口として補助判別に使用。"
     }
   ],
   "settingReferenceValues": [
@@ -67,37 +67,37 @@
         {
           "settingNo": 1,
           "denominatorValue": 243.0,
-          "weight": 1.05,
-          "minSampleSize": 4,
-          "note": "初当りボーナス確率"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "通常時ボーナス初当り。主判別。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 240.0,
-          "weight": 1.05,
-          "minSampleSize": 4,
-          "note": "初当りボーナス確率"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "通常時ボーナス初当り。主判別。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 224.0,
-          "weight": 1.05,
-          "minSampleSize": 4,
-          "note": "初当りボーナス確率"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "通常時ボーナス初当り。主判別。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 218.0,
-          "weight": 1.05,
-          "minSampleSize": 4,
-          "note": "初当りボーナス確率"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "通常時ボーナス初当り。主判別。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 208.0,
-          "weight": 1.05,
-          "minSampleSize": 4,
-          "note": "初当りボーナス確率"
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "通常時ボーナス初当り。主判別。"
         }
       ]
     },
@@ -107,37 +107,37 @@
         {
           "settingNo": 1,
           "denominatorValue": 689.0,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "炎炎激闘初当り確率"
+          "weight": 0.8,
+          "minSampleSize": 3,
+          "note": "炎炎激闘初当り。補助指標。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 652.0,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "炎炎激闘初当り確率"
+          "weight": 0.8,
+          "minSampleSize": 3,
+          "note": "炎炎激闘初当り。補助指標。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 581.0,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "炎炎激闘初当り確率"
+          "weight": 0.8,
+          "minSampleSize": 3,
+          "note": "炎炎激闘初当り。補助指標。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 535.0,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "炎炎激闘初当り確率"
+          "weight": 0.8,
+          "minSampleSize": 3,
+          "note": "炎炎激闘初当り。補助指標。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 479.0,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "炎炎激闘初当り確率"
+          "weight": 0.8,
+          "minSampleSize": 3,
+          "note": "炎炎激闘初当り。補助指標。"
         }
       ]
     }
@@ -145,13 +145,24 @@
   "ceilingRules": [
     {
       "ruleKey": "normal_game_ceiling",
-      "displayName": "通常時天井",
+      "displayName": "通常時ゲーム数天井",
       "ceilingType": "GAME_COUNT",
       "limitValue": 850,
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "通常時最大850G+αでボーナス当選。",
+      "description": "通常時最大850G+αでボーナス当選。設定変更後は最大650G+αに短縮。天井ゲーム数は通常A:850G、通常B:750G、通常C:250G、119モード:88G（いずれも前兆込み）。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "same_yuriku_ceiling",
+      "displayName": "同一有利区間ボーナス天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 3000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "炎炎激闘非当選のまま同一有利区間で3000G以上消化した状態でボーナス当選時に条件到達。",
       "isEnabled": true
     }
   ]

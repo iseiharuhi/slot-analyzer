@@ -6,8 +6,8 @@
     "type": "AT",
     "releaseDate": "2023-09-04",
     "isActive": true,
-    "notes": "公開解析とDMM特集を再監査。主判別は初当り合算と通常時AT直撃。乙女アタックは巫女ポイント0到達時の当選率に設定差があるが経由差を分離できないため補助扱い。ゾーン外ボーナスや終了画面は強いが入力再現性を優先して今回は未反映。",
-    "dmmUrl": null,
+    "notes": "DMM機種ページと設定差特集を再監査。主判別は初当りボーナス、補助は巫女ポイント0到達時の乙女アタック当選率を反映したCZ、重い分母要素として通常時AT直撃を採用。AT直撃は強いが（超）強カワループ滞在時をサンプルから除外して解釈したい。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4395",
     "ichigekiUrl": "https://1geki.jp/slot/l_otome_keigan/"
   },
   "counterDefinitions": [
@@ -67,44 +67,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 272.2,
-          "weight": 1.1,
+          "weight": 1.0,
           "minSampleSize": 5,
-          "note": "ボーナス+AT直撃の初当り合算"
+          "note": "初当りボーナス確率。主判別。2000G超から評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 267.3,
-          "weight": 1.1,
+          "weight": 1.0,
           "minSampleSize": 5,
-          "note": "ボーナス+AT直撃の初当り合算"
+          "note": "初当りボーナス確率。主判別。2000G超から評価。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 255.3,
-          "weight": 1.1,
+          "weight": 1.0,
           "minSampleSize": 5,
-          "note": "ボーナス+AT直撃の初当り合算"
+          "note": "初当りボーナス確率。主判別。2000G超から評価。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 238.2,
-          "weight": 1.1,
+          "weight": 1.0,
           "minSampleSize": 5,
-          "note": "ボーナス+AT直撃の初当り合算"
+          "note": "初当りボーナス確率。主判別。2000G超から評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 223.2,
-          "weight": 1.1,
+          "weight": 1.0,
           "minSampleSize": 5,
-          "note": "ボーナス+AT直撃の初当り合算"
+          "note": "初当りボーナス確率。主判別。2000G超から評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 217.1,
-          "weight": 1.1,
+          "weight": 1.0,
           "minSampleSize": 5,
-          "note": "ボーナス+AT直撃の初当り合算"
+          "note": "初当りボーナス確率。主判別。2000G超から評価。"
         }
       ]
     },
@@ -113,45 +113,45 @@
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 9776.9,
-          "weight": 1.1,
+          "denominatorValue": 10922.7,
+          "weight": 0.42,
           "minSampleSize": 1,
-          "note": "通常状態における実質AT直撃発生率"
+          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 8507.7,
-          "weight": 1.1,
+          "denominatorValue": 9362.3,
+          "weight": 0.42,
           "minSampleSize": 1,
-          "note": "通常状態における実質AT直撃発生率"
+          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 7513.3,
-          "weight": 1.1,
+          "denominatorValue": 8192.0,
+          "weight": 0.42,
           "minSampleSize": 1,
-          "note": "通常状態における実質AT直撃発生率"
+          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 6103.0,
-          "weight": 1.1,
+          "denominatorValue": 6553.6,
+          "weight": 0.42,
           "minSampleSize": 1,
-          "note": "通常状態における実質AT直撃発生率"
+          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 5572.0,
-          "weight": 1.1,
+          "denominatorValue": 5957.8,
+          "weight": 0.42,
           "minSampleSize": 1,
-          "note": "通常状態における実質AT直撃発生率"
+          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 5132.2,
-          "weight": 1.1,
+          "denominatorValue": 5461.3,
+          "weight": 0.42,
           "minSampleSize": 1,
-          "note": "通常状態における実質AT直撃発生率"
+          "note": "通常時AT直撃確率。（超）強カワループ滞在サンプルは除外推奨の重い分母要素。"
         }
       ]
     },
@@ -161,47 +161,70 @@
         {
           "settingNo": 1,
           "denominatorValue": 467.6,
-          "weight": 0.72,
+          "weight": 0.52,
           "minSampleSize": 6,
-          "note": "CZ「乙女アタック」トータル突入率"
+          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 452.2,
-          "weight": 0.72,
+          "weight": 0.52,
           "minSampleSize": 6,
-          "note": "CZ「乙女アタック」トータル突入率"
+          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 434.7,
-          "weight": 0.72,
+          "weight": 0.52,
           "minSampleSize": 6,
-          "note": "CZ「乙女アタック」トータル突入率"
+          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 410.9,
-          "weight": 0.72,
+          "weight": 0.52,
           "minSampleSize": 6,
-          "note": "CZ「乙女アタック」トータル突入率"
+          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 394.9,
-          "weight": 0.72,
+          "weight": 0.52,
           "minSampleSize": 6,
-          "note": "CZ「乙女アタック」トータル突入率"
+          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 381.5,
-          "weight": 0.72,
+          "weight": 0.52,
           "minSampleSize": 6,
-          "note": "CZ「乙女アタック」トータル突入率"
+          "note": "乙女アタック/CZ関連の補助指標。巫女ポイント0到達時の当選率や周期抽選を踏まえた補助要素。"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 799,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大799G消化でボーナス到達。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "bonus_through_ceiling",
+      "displayName": "ボーナススルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT非当選の戦国乙女ボーナスを6回消化後、次回7回目の戦国乙女ボーナスがエピソードボーナス確定。エピソードボーナス・しゅつじんのとき・神謀覚醒を挟むとスルー回数はリセット。",
+      "isEnabled": true
+    }
+  ]
 }

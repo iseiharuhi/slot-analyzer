@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-02-05",
     "isActive": true,
-    "notes": "partial: DMM掲載の正式機種名に修正。スマスロ版は「反逆のルルーシュ／復活のルルーシュ」の1機種として扱う。通常時ボーナス初当り・AT初当り・AT直撃当選率は一撃公開の共通比較値を採用。",
+    "notes": "DMM機種ページを再監査。高設定ほど強い要素はCZ確率、BIG初当り確率、AT直撃確率、通常C選択率。現行UIでは通常時ボーナス初当り・AT初当り・AT直撃の3軸で実戦入力しやすさを優先し、CZと通常Cはメモ運用前提とした。",
     "dmmUrl": "https://p-town.dmm.com/machines/4477",
     "ichigekiUrl": "https://1geki.jp/slot/l_codegeass/"
   },
@@ -69,42 +69,42 @@
           "denominatorValue": 282.9,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "通常時ボーナス初当り"
+          "note": "通常時ボーナス初当り（BIG初当り寄りの主判別）。2000G超から評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 278.1,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "通常時ボーナス初当り"
+          "note": "通常時ボーナス初当り（BIG初当り寄りの主判別）。2000G超から評価。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 260.6,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "通常時ボーナス初当り"
+          "note": "通常時ボーナス初当り（BIG初当り寄りの主判別）。2000G超から評価。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 244.1,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "通常時ボーナス初当り"
+          "note": "通常時ボーナス初当り（BIG初当り寄りの主判別）。2000G超から評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 229.2,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "通常時ボーナス初当り"
+          "note": "通常時ボーナス初当り（BIG初当り寄りの主判別）。2000G超から評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 217.5,
           "weight": 1.0,
           "minSampleSize": 5,
-          "note": "通常時ボーナス初当り"
+          "note": "通常時ボーナス初当り（BIG初当り寄りの主判別）。2000G超から評価。"
         }
       ]
     },
@@ -114,44 +114,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 439.5,
-          "weight": 0.95,
+          "weight": 0.82,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。ボーナス経由を含む補助主軸。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 432.1,
-          "weight": 0.95,
+          "weight": 0.82,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。ボーナス経由を含む補助主軸。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 403.3,
-          "weight": 0.95,
+          "weight": 0.82,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。ボーナス経由を含む補助主軸。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 355.9,
-          "weight": 0.95,
+          "weight": 0.82,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。ボーナス経由を含む補助主軸。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 320.3,
-          "weight": 0.95,
+          "weight": 0.82,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。ボーナス経由を含む補助主軸。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 296.1,
-          "weight": 0.95,
+          "weight": 0.82,
           "minSampleSize": 4,
-          "note": "AT初当り確率"
+          "note": "AT初当り。ボーナス経由を含む補助主軸。"
         }
       ]
     },
@@ -161,44 +161,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 6573.7,
-          "weight": 1.15,
+          "weight": 0.46,
           "minSampleSize": 1,
-          "note": "AT直撃当選率"
+          "note": "AT直撃確率。重い分母の補助要素。ハズレ時・CZ/ボーナス本前兆中レア役のトータル。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 5904.7,
-          "weight": 1.15,
+          "weight": 0.46,
           "minSampleSize": 1,
-          "note": "AT直撃当選率"
+          "note": "AT直撃確率。重い分母の補助要素。ハズレ時・CZ/ボーナス本前兆中レア役のトータル。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 4228.5,
-          "weight": 1.15,
+          "weight": 0.46,
           "minSampleSize": 1,
-          "note": "AT直撃当選率"
+          "note": "AT直撃確率。重い分母の補助要素。ハズレ時・CZ/ボーナス本前兆中レア役のトータル。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 3124.5,
-          "weight": 1.15,
+          "weight": 0.46,
           "minSampleSize": 1,
-          "note": "AT直撃当選率"
+          "note": "AT直撃確率。重い分母の補助要素。ハズレ時・CZ/ボーナス本前兆中レア役のトータル。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 2386.6,
-          "weight": 1.15,
+          "weight": 0.46,
           "minSampleSize": 1,
-          "note": "AT直撃当選率"
+          "note": "AT直撃確率。重い分母の補助要素。ハズレ時・CZ/ボーナス本前兆中レア役のトータル。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 1991.5,
-          "weight": 1.15,
+          "weight": 0.46,
           "minSampleSize": 1,
-          "note": "AT直撃当選率"
+          "note": "AT直撃確率。重い分母の補助要素。ハズレ時・CZ/ボーナス本前兆中レア役のトータル。"
         }
       ]
     }
@@ -212,7 +212,7 @@
       "unit": "G",
       "resetOnHit": true,
       "requiresResetFlag": false,
-      "description": "通常時1000G+αでボーナス当選。スマスロ版コードギアスのゲーム数天井。",
+      "description": "通常時1000G+αでボーナス当選。通常時ゲーム数はAT当選までリセットされない。",
       "isEnabled": true
     }
   ]

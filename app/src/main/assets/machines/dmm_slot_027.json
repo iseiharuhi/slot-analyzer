@@ -2,11 +2,11 @@
   "machine": {
     "id": "dmm_slot_027",
     "name": "スマスロモンキーターンV",
-    "manufacturer": null,
+    "manufacturer": "山佐",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2023-12-04",
     "isActive": true,
-    "notes": "公開解析とDMM実戦特集を再監査。設定段階は1・2・4・5・6対応。主判別はAT初当りで維持し、ライバルモードやAT直撃は有効だが試行不足になりやすいため次段階での追加候補とした。現段階では初当りの信頼性を優先して最低サンプルを引き上げている。",
+    "notes": "公開解析を再監査。主判別はAT初当りを維持し、天井を正式反映。ライバルモード移行率や弱レア役契機のAT直撃は設定4以上の手掛かりとして強いが、現行UIで安定入力しやすい主軸を優先した。AT初当りは2000G超から評価し、サブ液晶示唆や直撃契機は別途メモ併用を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4450",
     "ichigekiUrl": "https://1geki.jp/slot/l_monkeyturn5/"
   },
@@ -43,40 +43,63 @@
         {
           "settingNo": 1,
           "denominatorValue": 299.8,
-          "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "設定1・2・4・5・6のみ公開"
+          "weight": 1.2,
+          "minSampleSize": 7,
+          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 295.5,
-          "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "設定1・2・4・5・6のみ公開"
+          "weight": 1.2,
+          "minSampleSize": 7,
+          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 258.8,
-          "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "設定1・2・4・5・6のみ公開"
+          "weight": 1.2,
+          "minSampleSize": 7,
+          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 235.7,
-          "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "設定1・2・4・5・6のみ公開"
+          "weight": 1.2,
+          "minSampleSize": 7,
+          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 222.9,
-          "weight": 1.1,
-          "minSampleSize": 5,
-          "note": "設定1・2・4・5・6のみ公開"
+          "weight": 1.2,
+          "minSampleSize": 7,
+          "note": "AT初当り。設定1・2・4・5・6のみ公開。主判別。"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "game_count_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 795,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時795G+αでAT当選。設定変更後と青島VS波多野敗北後は495G+αに短縮。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 6,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "6周期目の優出モード到達で天井。設定変更後と青島VS波多野敗北後は4周期に短縮。",
+      "isEnabled": true
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-03-31",
+  "generatedAt": "2026-04-01",
   "source": "https://p-town.dmm.com/machines/slot",
   "count": 40,
   "machines": [
@@ -192,8 +192,8 @@
       "machineId": "dmm_slot_024",
       "machineName": "L リングにかけろ1 V",
       "fileName": "dmm_slot_024.json",
-      "status": "draft",
-      "checksumSha256": "2a9efaa5e6f453acdbeaabc2836a81bc39231d64eaeb3db5c019f85e7ad360fc",
+      "status": "partial",
+      "checksumSha256": "bde23f43f533f323642998a67caedae5594bff5314d4978fcbfefa771174cece",
       "sourceListPage": 2
     },
     {
@@ -209,7 +209,7 @@
       "machineName": "L花の慶次～佐渡攻めの章〜",
       "fileName": "dmm_slot_026.json",
       "status": "partial",
-      "checksumSha256": "80045645499b2adf2c19fcc4c341e1a07ad10af998b238954ae43167ee1fee2c",
+      "checksumSha256": "bf5ed50b54b06d5a50dda33d69d5cf039755f64e34336ba9c4ecae864bd765a5",
       "sourceListPage": 2
     },
     {
@@ -384,24 +384,24 @@
       "machineId": "list_slot_008",
       "machineName": "Lストライクウィッチーズ2",
       "fileName": "list_slot_008.json",
-      "status": "draft",
-      "checksumSha256": "d67bb1251c38110fb88fd1ab6b33c4d1d532cd1b57be2657031d4af95aaa9347",
+      "status": "partial",
+      "checksumSha256": "bbe365575c0dcf3d99b16a077b6ee712a58d79c75a6cab985c4a461ad7d71fb5",
       "sourceListPage": null
     },
     {
       "machineId": "list_slot_009",
       "machineName": "L麻雀格闘倶楽部 覚醒",
       "fileName": "list_slot_009.json",
-      "status": "draft",
-      "checksumSha256": "4953db0889e78222d7844bdd8e745d2535e7e2827aaa36398ac143a20cb4f4df",
+      "status": "partial",
+      "checksumSha256": "5754cf39a4086c30ba0069b08d4d2aceea5b7fd4cc5683d9df892e24e0aaace4",
       "sourceListPage": null
     },
     {
       "machineId": "list_slot_010",
       "machineName": "Lベルセルク無双",
       "fileName": "list_slot_010.json",
-      "status": "draft",
-      "checksumSha256": "43b3407bcd7ba6c5cbfd4443d40d9a96b5f0697be90924145774e22b1f54f78e",
+      "status": "partial",
+      "checksumSha256": "00ffafcf1c46af2ed3b67b8aec8631f1087d55b89cbeaaa1e0c944a701c0cd28",
       "sourceListPage": null
     },
     {
@@ -472,8 +472,8 @@
       "machineId": "list_slot_019",
       "machineName": "Lゴジラ",
       "fileName": "list_slot_019.json",
-      "status": "draft",
-      "checksumSha256": "7fb7b1d1470d03384efd67bb2604207f051d8aa43b0357257237809ee32da733",
+      "status": "partial",
+      "checksumSha256": "28bd9dd7a005a59f5ac4a34ffaecd3f646dfbebb47cf42b4cc14a6c35d65520e",
       "sourceListPage": null
     },
     {
@@ -496,8 +496,8 @@
       "machineId": "list_slot_022",
       "machineName": "Lありふれた職業で世界最強",
       "fileName": "list_slot_022.json",
-      "status": "draft",
-      "checksumSha256": "14d954ed76e7637d0010dc32228f3a49c47aad3ddd47c825040a3ba0a8b8b297",
+      "status": "partial",
+      "checksumSha256": "28bfa47464865dd103d5358800d3e0614c313085bf74d0090fb194701a19a27b",
       "sourceListPage": null
     },
     {

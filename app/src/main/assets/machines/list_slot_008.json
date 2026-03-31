@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-02-05",
     "isActive": true,
-    "notes": "partial: 一撃掲載の初回ボーナス初当りと通常時からのストライクボーナス直撃確率を反映。直撃は分母が重いが設定差が極大のため採用。ネウロイモードやファイナルジャッジ勝率は設定差があるものの、現行UIでは分母管理が難しいため notes に留める。リセット時は通常A非選択で600G/800G/400Gの短縮天井に期待できる。",
+    "notes": "partial: 一撃掲載のストライクボーナス初当りと通常時からの直撃ストライクボーナス確率を採用。直撃は分母が非常に重いが設定差が大きいため削除せず残し、weightを落として「刺さると強い補助」に調整。通常時ゲーム数天井950G+αとネウロイバトル初戦敗北5スルー天井を保持。",
     "dmmUrl": "https://p-town.dmm.com/machines/4490",
     "ichigekiUrl": "https://1geki.jp/slot/l_strikewitches2/"
   },
@@ -57,42 +57,42 @@
           "denominatorValue": 432.5,
           "weight": 1.0,
           "minSampleSize": 4,
-          "note": "ストライクボーナス初当り確率"
+          "note": "ストライクボーナス初当り（主判別）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 420.7,
           "weight": 1.0,
           "minSampleSize": 4,
-          "note": "ストライクボーナス初当り確率"
+          "note": "ストライクボーナス初当り（主判別）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 409.6,
           "weight": 1.0,
           "minSampleSize": 4,
-          "note": "ストライクボーナス初当り確率"
+          "note": "ストライクボーナス初当り（主判別）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 389.1,
           "weight": 1.0,
           "minSampleSize": 4,
-          "note": "ストライクボーナス初当り確率"
+          "note": "ストライクボーナス初当り（主判別）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 370.0,
           "weight": 1.0,
           "minSampleSize": 4,
-          "note": "ストライクボーナス初当り確率"
+          "note": "ストライクボーナス初当り（主判別）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 349.3,
           "weight": 1.0,
           "minSampleSize": 4,
-          "note": "ストライクボーナス初当り確率"
+          "note": "ストライクボーナス初当り（主判別）"
         }
       ]
     },
@@ -102,44 +102,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 8738.13,
-          "weight": 1.15,
+          "weight": 0.38,
           "minSampleSize": 1,
-          "note": "通常時からのストライクボーナス直撃確率"
+          "note": "通常時からの直撃ストライクボーナス（重い分母補助）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 5825.42,
-          "weight": 1.15,
+          "weight": 0.38,
           "minSampleSize": 1,
-          "note": "通常時からのストライクボーナス直撃確率"
+          "note": "通常時からの直撃ストライクボーナス（重い分母補助）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 4369.07,
-          "weight": 1.15,
+          "weight": 0.38,
           "minSampleSize": 1,
-          "note": "通常時からのストライクボーナス直撃確率"
+          "note": "通常時からの直撃ストライクボーナス（重い分母補助）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 2912.71,
-          "weight": 1.15,
+          "weight": 0.38,
           "minSampleSize": 1,
-          "note": "通常時からのストライクボーナス直撃確率"
+          "note": "通常時からの直撃ストライクボーナス（重い分母補助）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 2184.53,
-          "weight": 1.15,
+          "weight": 0.38,
           "minSampleSize": 1,
-          "note": "通常時からのストライクボーナス直撃確率"
+          "note": "通常時からの直撃ストライクボーナス（重い分母補助）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 1747.63,
-          "weight": 1.15,
+          "weight": 0.38,
           "minSampleSize": 1,
-          "note": "通常時からのストライクボーナス直撃確率"
+          "note": "通常時からの直撃ストライクボーナス（重い分母補助）"
         }
       ]
     }

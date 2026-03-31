@@ -6,9 +6,9 @@
     "type": "AT",
     "releaseDate": "2025-04-07",
     "isActive": true,
-    "notes": "partial: DMM公開値ベースで通常時CZ確率を反映。LゴジラはAT初当り差や怪獣振り分け示唆もあるが、今回確認できた中で最も入力しやすくブレが少ないのはCZ総回数。怪獣別内訳やセリフ示唆は後続バッチで扱う。",
+    "notes": "partial: DMM/一撃で確認できる通常時CZ確率を主軸に維持し、探索ZONE・ポイントモード・稀なAT直撃は補助情報として notes に整理。まずはCZサンプルを貯める運用を前提にしつつ、Gポイント天井はモードA1000pt/B700pt/C450pt/天国100ptを反映。重い直撃要素も切らずにメモ運用前提で残す。",
     "dmmUrl": "https://p-town.dmm.com/machines/4752",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_godzilla/"
   },
   "counterDefinitions": [
     {
@@ -79,47 +79,92 @@
         {
           "settingNo": 1,
           "denominatorValue": 306.9,
-          "weight": 1.2,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "通常時CZ確率"
+          "note": "通常時CZ確率（主判別）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 304.0,
-          "weight": 1.2,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "通常時CZ確率"
+          "note": "通常時CZ確率（主判別）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 303.0,
-          "weight": 1.2,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "通常時CZ確率"
+          "note": "通常時CZ確率（主判別）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 302.1,
-          "weight": 1.2,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "通常時CZ確率"
+          "note": "通常時CZ確率（主判別）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 299.6,
-          "weight": 1.2,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "通常時CZ確率"
+          "note": "通常時CZ確率（主判別）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 295.5,
-          "weight": 1.2,
+          "weight": 1.1,
           "minSampleSize": 4,
-          "note": "通常時CZ確率"
+          "note": "通常時CZ確率（主判別）"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "mode_a_point_ceiling",
+      "displayName": "Gポイント天井A",
+      "ceilingType": "POINT",
+      "limitValue": 1000,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "モードAは最大1000ptでCZに到達。"
+    },
+    {
+      "ruleKey": "mode_b_point_ceiling",
+      "displayName": "Gポイント天井B",
+      "ceilingType": "POINT",
+      "limitValue": 700,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "モードBは最大700ptでCZに到達。"
+    },
+    {
+      "ruleKey": "mode_c_point_ceiling",
+      "displayName": "Gポイント天井C",
+      "ceilingType": "POINT",
+      "limitValue": 450,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "モードCは最大450ptでCZに到達。"
+    },
+    {
+      "ruleKey": "heaven_point_ceiling",
+      "displayName": "Gポイント天井天国",
+      "ceilingType": "POINT",
+      "limitValue": 100,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "天国は最大100ptでCZに到達。"
+    }
+  ]
 }

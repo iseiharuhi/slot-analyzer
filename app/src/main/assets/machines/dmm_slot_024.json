@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたST・ボーナス・菊チャンスを主軸に反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたボーナス初当り・ST初当り・菊チャンスを3軸で維持。加えて一撃掲載の666G天井選択率やリーチ目高確移行率は強い補助情報として notes に反映。天井はボーナス間999G、設定変更時666G、ブーメランRUSH間1500G以降のボーナスが同色BIG以上濃厚。",
     "dmmUrl": "https://p-town.dmm.com/machines/4460",
     "ichigekiUrl": "https://1geki.jp/slot/l_rinkake1v/"
   },
@@ -67,44 +67,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 189.3,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "ボーナス初当り（主判別）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 185.0,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "ボーナス初当り（主判別）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 179.0,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "ボーナス初当り（主判別）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 161.0,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "ボーナス初当り（主判別）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 138.9,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "ボーナス初当り（主判別）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 121.0,
-          "weight": 0.8,
-          "minSampleSize": 5,
-          "note": "公開解析値"
+          "weight": 0.95,
+          "minSampleSize": 4,
+          "note": "ボーナス初当り（主判別）"
         }
       ]
     },
@@ -116,42 +116,42 @@
           "denominatorValue": 516.0,
           "weight": 1.0,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 497.0,
           "weight": 1.0,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 467.0,
           "weight": 1.0,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 393.0,
           "weight": 1.0,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 305.0,
           "weight": 1.0,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 236.0,
           "weight": 1.0,
           "minSampleSize": 3,
-          "note": "公開解析値"
+          "note": "ST「ブーメランRUSH」初当り（主判別補助）"
         }
       ]
     },
@@ -161,47 +161,81 @@
         {
           "settingNo": 1,
           "denominatorValue": 288.0,
-          "weight": 0.65,
+          "weight": 0.75,
           "minSampleSize": 5,
-          "note": "公開解析値"
+          "note": "菊チャンス当選（補助）"
         },
         {
           "settingNo": 2,
           "denominatorValue": 281.0,
-          "weight": 0.65,
+          "weight": 0.75,
           "minSampleSize": 5,
-          "note": "公開解析値"
+          "note": "菊チャンス当選（補助）"
         },
         {
           "settingNo": 3,
           "denominatorValue": 273.0,
-          "weight": 0.65,
+          "weight": 0.75,
           "minSampleSize": 5,
-          "note": "公開解析値"
+          "note": "菊チャンス当選（補助）"
         },
         {
           "settingNo": 4,
           "denominatorValue": 267.0,
-          "weight": 0.65,
+          "weight": 0.75,
           "minSampleSize": 5,
-          "note": "公開解析値"
+          "note": "菊チャンス当選（補助）"
         },
         {
           "settingNo": 5,
           "denominatorValue": 251.0,
-          "weight": 0.65,
+          "weight": 0.75,
           "minSampleSize": 5,
-          "note": "公開解析値"
+          "note": "菊チャンス当選（補助）"
         },
         {
           "settingNo": 6,
           "denominatorValue": 241.0,
-          "weight": 0.65,
+          "weight": 0.75,
           "minSampleSize": 5,
-          "note": "公開解析値"
+          "note": "菊チャンス当選（補助）"
         }
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_interval_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "ボーナス間999Gで天井到達となりボーナスに当選。"
+    },
+    {
+      "ruleKey": "reset_shortened_ceiling",
+      "displayName": "設定変更時短縮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 666,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": true,
+      "resetOnHit": true,
+      "description": "設定変更時は天井が666Gに短縮される。"
+    },
+    {
+      "ruleKey": "br_interval_ceiling",
+      "displayName": "ブーメランRUSH間恩恵",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "ブーメランRUSH間1500G以降のボーナスは同色BIG以上濃厚。"
+    }
+  ]
 }
