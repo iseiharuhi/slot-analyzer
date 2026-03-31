@@ -21,4 +21,11 @@ class LocalAssetMachineMasterSource @Inject constructor(
             .bufferedReader()
             .use { it.readText() }
     }
+
+    override suspend fun listMachineJsonFileNames(): List<String> = withContext(Dispatchers.IO) {
+        context.assets.list("machines")
+            ?.filter { it.endsWith(".json", ignoreCase = true) && it != "machine_master_manifest.json" }
+            ?.sorted()
+            .orEmpty()
+    }
 }
