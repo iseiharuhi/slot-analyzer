@@ -1,8 +1,8 @@
 {
   "machine": {
     "id": "hokuto",
-    "name": "スマスロ北斗の拳",
-    "manufacturer": "Sammy",
+    "name": "L北斗の拳",
+    "manufacturer": "サミー",
     "type": "AT",
     "releaseDate": "2023-04-03",
     "isActive": true,
@@ -67,7 +67,7 @@
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
-      "isDefaultVisible": false,
+      "isDefaultVisible": true,
       "supportsMinus": true,
       "notes": "重い分母のため通常は非表示。1回でも強いが過信しない。"
     },

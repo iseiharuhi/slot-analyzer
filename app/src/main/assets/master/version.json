@@ -1,9 +1,9 @@
 {
   "latestVersion": 1,
   "oldestAvailableDiffVersion": 1,
-  "updatedAt": "2026-03-31T15:15:00+09:00",
+  "updatedAt": "2026-04-03T03:30:00+09:00",
   "forceFullSync": false,
-  "note": "Precision batch 3: promoted 8 AT/smart-slot machines from draft to partial using published 1geki probability tables for initial hits and related indicators.",
-  "generatedAt": "2026-03-31",
-  "masterDataVersion": "0.7.8-list-draft-import-detailed-63+normal-precision-batch1+oki-hana-batch2"
+  "note": "Added ceiling and setting-reference data for list_slot_064 (北斗転生2) and list_slot_065 (ヴァルヴレイヴ2) using verified public machine pages and compatible total-games-based indicators.",
+  "generatedAt": "2026-04-03",
+  "masterDataVersion": "0.7.9-list-strict-datafill-65"
 }

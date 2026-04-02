@@ -1,0 +1,20 @@
+{
+  "machineId": "hokuto_tensei_2",
+  "machineName": "スマスロ 北斗の拳 転生の章2",
+  "status": "partial",
+  "capturedDate": "2026-04-03",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4909",
+      "status": "verified_direct"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_hokuto_tensei2/",
+      "status": "verified_direct"
+    }
+  ],
+  "fileName": "hokuto_tensei_2.json"
+}

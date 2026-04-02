@@ -1,8 +1,8 @@
 {
   "machine": {
     "id": "kabaneri",
-    "name": "甲鉄城のカバネリ",
-    "manufacturer": "Sammy",
+    "name": "パチスロ 甲鉄城のカバネリ",
+    "manufacturer": "サミー",
     "type": "AT",
     "releaseDate": "2022-07-04",
     "isActive": true,

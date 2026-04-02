@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-04-01",
+  "generatedAt": "2026-04-03",
   "source": "https://p-town.dmm.com/machines/slot",
-  "count": 40,
+  "count": 105,
   "machines": [
     {
       "machineId": "dmm_slot_001",
@@ -826,6 +826,22 @@
       "fileName": "list_slot_063.json",
       "status": "draft",
       "checksumSha256": "ccd42522b70689fd94534e53d06b2d6a5166a469022bc16b3db556c7a7ee11f5",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "list_slot_064",
+      "machineName": "スマスロ 北斗の拳 転生の章2",
+      "fileName": "list_slot_064.json",
+      "status": "partial",
+      "checksumSha256": "de810cc63ffa223100789e61781c97ba03c2163969d23838dd53549e3a9d43b7",
+      "sourceListPage": null
+    },
+    {
+      "machineId": "valvrave_2",
+      "machineName": "Lパチスロ 革命機ヴァルヴレイヴ2",
+      "fileName": "valvrave_2.json",
+      "status": "partial",
+      "checksumSha256": "a03c984e8e7e1faf37b7a6ce2da46f09f1ffe3e9e95b10c0e53b835e4b6a7fcd",
       "sourceListPage": null
     }
   ]

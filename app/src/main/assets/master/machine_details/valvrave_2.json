@@ -1,0 +1,19 @@
+{
+  "machineId": "valvrave_2",
+  "machineName": "Lパチスロ 革命機ヴァルヴレイヴ2",
+  "status": "partial",
+  "capturedDate": "2026-04-03",
+  "sourceListPage": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4885",
+      "status": "verified_direct"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_valvrave2/",
+      "status": "verified_direct"
+    }
+  ]
+}
