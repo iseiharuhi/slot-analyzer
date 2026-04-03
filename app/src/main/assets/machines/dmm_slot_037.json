@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": null,
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助は弱チェリー、重い分母はソウルジェム関連に整理。まどかf-フォルテ-はボーナス初当り主軸で扱う。",
+    "notes": "AT精度一括調整済み。主判別は初当り/ボーナス、小役/ベル。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4420",
     "ichigekiUrl": "https://1geki.jp/slot/l_madomagimov_forte/"
   },
@@ -69,42 +69,42 @@
           "denominatorValue": 251.2,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。小役系と複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 243.9,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。小役系と複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 223.4,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。小役系と複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 210.2,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。小役系と複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 197.7,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。小役系と複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 187.5,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。小役系と複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     },
@@ -116,42 +116,42 @@
           "denominatorValue": 79.9,
           "weight": 0.6,
           "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 79.0,
           "weight": 0.6,
           "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 77.1,
           "weight": 0.6,
           "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 75.3,
           "weight": 0.6,
           "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 73.6,
           "weight": 0.6,
           "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 72.0,
           "weight": 0.6,
           "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         }
       ]
     },
@@ -161,44 +161,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 3.01,
-          "weight": 0.25,
+          "weight": 0.58,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 2.94,
-          "weight": 0.25,
+          "weight": 0.58,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 2.81,
-          "weight": 0.25,
+          "weight": 0.58,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 2.69,
-          "weight": 0.25,
+          "weight": 0.58,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 2.6,
-          "weight": 0.25,
+          "weight": 0.58,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 2.51,
-          "weight": 0.25,
+          "weight": 0.58,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         }
       ]
     }

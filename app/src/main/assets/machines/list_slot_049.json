@@ -6,8 +6,8 @@
     "type": "BONUS",
     "releaseDate": "2025-01-20",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算と小役に整理。ディスクアップULTRAREMIXもREG主軸で揃え、小役は高ゲーム数時の補強として扱う。",
-    "dmmUrl": null,
+    "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算と小役に整理。小役は5000G以上でのみ補強に使い、REG主軸を維持する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4702",
     "ichigekiUrl": "https://1geki.jp/slot/l_discup_ur/"
   },
   "counterDefinitions": [
@@ -91,30 +91,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 495.3,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 477.2,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 398.6,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 334.1,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         }
       ]
     },
@@ -124,30 +124,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 181.8,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 178.2,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 162.3,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 146.5,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         }
       ]
     },
@@ -157,30 +157,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 13.7,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。3枚役は高ゲーム数で補強。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 13.4,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。3枚役は高ゲーム数で補強。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 12.9,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。3枚役は高ゲーム数で補強。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 12.6,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。3枚役は高ゲーム数で補強。"
         }
       ]
     },
@@ -190,30 +190,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 49.3,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。スイカは高ゲーム数で補強。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 49.0,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。スイカは高ゲーム数で補強。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 47.5,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。スイカは高ゲーム数で補強。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 45.7,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。スイカは高ゲーム数で補強。"
         }
       ]
     },

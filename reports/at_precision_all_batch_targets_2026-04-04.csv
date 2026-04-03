@@ -1,0 +1,75 @@
+file,name,schema,reference_count,status
+arifureta.json,Lありふれた職業で世界最強,legacy_simple,1,updated
+azure_lane.json,Lアズールレーン THE ANIMATION,legacy_simple,1,updated
+bancho4.json,押忍！番長4,legacy_simple,0,updated
+bio_re2.json,スマスロ バイオハザード RE:2,legacy_simple,0,updated
+code_geass_cc_kallen.json,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,legacy_simple,2,updated
+code_geass_fukkatsu.json,コードギアス 復活のルルーシュ,legacy_simple,2,updated
+darling_franxx.json,Lダーリン・イン・ザ・フランキス,legacy_simple,1,updated
+dmm_slot_016.json,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,full_machine,2,updated
+dmm_slot_018.json,スマスロ 攻殻機動隊,full_machine,2,updated
+dmm_slot_020.json,Lパチスロ 炎炎ノ消防隊2,full_machine,2,updated
+dmm_slot_024.json,L リングにかけろ1 V,full_machine,3,updated
+dmm_slot_025.json,Lラブ嬢3〜Wご指名はいかがですか？〜,full_machine,2,updated
+dmm_slot_026.json,L花の慶次～佐渡攻めの章〜,full_machine,2,updated
+dmm_slot_027.json,スマスロモンキーターンV,full_machine,1,updated
+dmm_slot_031.json,パチスロ ケンガンアシュラ,full_machine,2,updated
+dmm_slot_034.json,スマスロとある魔術の禁書目録,full_machine,3,updated
+dmm_slot_037.json,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,full_machine,3,updated
+dmm_slot_038.json,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,full_machine,4,updated
+eureka_zero.json,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,legacy_simple,2,updated
+fire_force.json,パチスロ 炎炎ノ消防隊,legacy_simple,2,updated
+ghost_shell.json,スマスロ攻殻機動隊,legacy_simple,2,updated
+goblin_slayer.json,Lゴブリンスレイヤー,legacy_simple,0,updated
+godzilla.json,Lゴジラ,legacy_simple,1,updated
+hanma_baki.json,L範馬刃牙,legacy_simple,2,updated
+hokuto.json,L北斗の拳,full_machine,4,updated
+hokuto_tensei_2.json,スマスロ 北斗の拳 転生の章2,full_machine,1,updated
+kabaneri.json,パチスロ 甲鉄城のカバネリ,full_machine,3,updated
+kabaneri_kaimon.json,スマスロ 甲鉄城のカバネリ 海門決戦,legacy_simple,2,updated
+kamen_rider_denoh.json,L仮面ライダー電王,legacy_simple,1,updated
+karakuri.json,からくりサーカス,legacy_simple,0,updated
+karakuri_circus.json,Lからくりサーカス,full_machine,2,updated
+kengan.json,Lケンガンアシュラ,legacy_simple,2,updated
+list_slot_003.json,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,full_machine,3,updated
+list_slot_004.json,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,full_machine,3,updated
+list_slot_009.json,L麻雀格闘倶楽部 覚醒,full_machine,2,updated
+list_slot_010.json,Lベルセルク無双,full_machine,1,updated
+list_slot_012.json,L南国育ち,full_machine,2,updated
+list_slot_013.json,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,full_machine,4,updated
+list_slot_026.json,EVANGELION FESTIVAL,full_machine,3,updated
+list_slot_027.json,パチスロ アクエリオン ALL STARS,full_machine,2,updated
+list_slot_028.json,パチスロ鉄拳5,full_machine,2,updated
+list_slot_029.json,パチスロ幼女戦記,full_machine,3,updated
+list_slot_030.json,スマスロ シャーマンキング,full_machine,2,updated
+list_slot_031.json,パチスロ 新鬼武者2,full_machine,2,updated
+list_slot_032.json,FAIRY TAIL2,full_machine,2,updated
+list_slot_033.json,ペルソナ5,full_machine,2,updated
+list_slot_034.json,パチスロ盾の勇者の成り上がり,full_machine,1,updated
+list_slot_035.json,S BOØWY,full_machine,1,updated
+list_slot_036.json,バイオハザード ヴィレッジ,full_machine,3,updated
+list_slot_037.json,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,full_machine,4,updated
+list_slot_038.json,Re:ゼロから始める異世界生活 season2,full_machine,1,updated
+list_slot_039.json,この素晴らしい世界に祝福を！,full_machine,1,updated
+list_slot_040.json,Lルパン三世 大航海者の秘宝,full_machine,3,updated
+list_slot_041.json,黄門ちゃま天,full_machine,1,updated
+lovejo3.json,ラブ嬢3～Wご指名はいかがですか？～,legacy_simple,2,updated
+lupin.json,ルパン三世 大航海者,legacy_simple,0,updated
+madoka_forte.json,劇場版魔法少女まどか☆マギカ f-フォルテ-,legacy_simple,1,updated
+monkey_turn_v.json,スマスロ モンキーターンV,legacy_simple,0,updated
+nyanko.json,Lにゃんこ大戦争 超神速,legacy_simple,2,updated
+revue_starlight.json,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_simple,1,updated
+ring_v.json,Lリングにかけろ1 V,legacy_simple,2,updated
+saki_top.json,L咲-Saki- 頂上決戦,legacy_simple,1,updated
+sengoku_otome4.json,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_simple,2,updated
+shin_eva.json,Lパチスロ シン・エヴァンゲリオン,legacy_simple,2,updated
+strike_witches2.json,Lストライクウィッチーズ2,legacy_simple,2,updated
+tensei_slime.json,L転生したらスライムだった件,legacy_simple,2,updated
+toaru.json,スマスロ とある魔術の禁書目録,legacy_simple,2,updated
+tokyo_ghoul.json,L東京喰種,legacy_simple,1,updated
+tokyoghoul.json,東京喰種,legacy_simple,0,updated
+ushio_tora.json,Lうしおととら 白面決戦,legacy_simple,1,updated
+valvrave.json,L革命機ヴァルヴレイヴ,full_machine,3,updated
+valvrave_2.json,Lパチスロ 革命機ヴァルヴレイヴ2,full_machine,0,unchanged
+vvv.json,革命機ヴァルヴレイヴ,legacy_simple,0,updated
+zenigata4.json,L主役は銭形4,legacy_simple,2,updated

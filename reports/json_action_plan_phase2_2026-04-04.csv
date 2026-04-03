@@ -1,0 +1,16 @@
+﻿file,id,name,action,canonical_id,canonical_file,reason
+karakuri.json,karakuri,からくりサーカス,delete_now,karakuri_circus,karakuri_circus.json,旧簡易JSON。manifest正本 karakuri_circus.json が存在し、名称も正式名側に統一できるため削除可。
+tokyoghoul.json,tokyoghoul,東京喰種,delete_now,tokyo_ghoul,tokyo_ghoul.json,旧別名JSON。manifest正本 tokyo_ghoul.json が存在し、L東京喰種 へ正式名称統一済みのため削除可。
+vvv.json,vvv,革命機ヴァルヴレイヴ,delete_now,valvrave,valvrave.json,旧略称JSON。manifest正本 valvrave.json が存在し、正式名称 L革命機ヴァルヴレイヴ に統一済みのため削除可。
+lupin.json,lupin,ルパン三世 大航海者,reconstruct_first,,,現パッケージ内に対応するmanifest正本が見当たらないため、削除はまだ不可。正本ID/正式名称/リンク/精度要素を決めてから再構成。
+code_geass_cc_kallen.json,code_geass_cc_kallen,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,reconstruct_first,,,未manifest採用。正式名称・シリーズ切り分けを確認後、正本JSONとして採用するか別機種扱いで再構成。
+code_geass_fukkatsu.json,code_geass_fukkatsu,コードギアス 復活のルルーシュ,reconstruct_first,,,未manifest採用。正式名称で別機種として扱うなら、manifest追加前提で再構成。
+eureka_zero.json,eureka_zero,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,reconstruct_first,,,未manifest採用。近似テンプレートからではなく正式機種として正本再構成が必要。
+ghost_shell.json,ghost_shell,スマスロ攻殻機動隊,reconstruct_first,,,未manifest採用。攻殻機動隊系の正本として採用可否を決めてから再構成。
+kabaneri_kaimon.json,kabaneri_kaimon,スマスロ 甲鉄城のカバネリ 海門決戦,reconstruct_first,,,海門決戦は本編カバネリと別機種扱いが必要。manifest追加前提で再構成。
+kengan.json,kengan,Lケンガンアシュラ,reconstruct_first,,,未manifest採用。正式名称固定・リンク確認・精度要素増強後に正本化。
+lovejo3.json,lovejo3,ラブ嬢3～Wご指名はいかがですか？～,reconstruct_first,,,未manifest採用。正式名称が長く、別名混在リスクがあるため正本再構成向き。
+madoka_forte.json,madoka_forte,劇場版魔法少女まどか☆マギカ f-フォルテ-,reconstruct_first,,,タイトル揺れが起きやすい機種。正式名称固定後にmanifest追加前提で再構成。
+monkey_turn_v.json,monkey_turn_v,スマスロ モンキーターンV,reconstruct_first,,,重要機種だが未manifest採用。精度強化対象として正本再構成優先度高。
+ring_v.json,ring_v,Lリングにかけろ1 V,reconstruct_first,,,未manifest採用。正式名称確認後に正本再構成。
+toaru.json,toaru,スマスロ とある魔術の禁書目録,reconstruct_first,,,未manifest採用。シリーズ名揺れ防止のため正本再構成。

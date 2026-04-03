@@ -1,206 +1,23 @@
 {
-  "machine": {
-    "id": "karakuri_circus",
-    "name": "Lからくりサーカス",
-    "manufacturer": "SANKYO",
-    "type": "AT",
-    "releaseDate": "2023-07-03",
-    "isActive": true,
-    "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当り。直撃ATは重い分母のため低weightの補助メモ扱いに固定し、終了画面や示唆演出は現行UI外のため別メモ推奨。ATは2000G超、CZは2500〜3000G級で比較するとブレが減る。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4360",
-    "ichigekiUrl": "https://1geki.jp/slot/l_karakuricircus/"
-  },
-  "counterDefinitions": [
+  "id": "karakuri_circus",
+  "name": "karakuri_circus",
+  "indicators": [
     {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
+      "type": "direct_hit",
+      "weight": 0.35
     },
     {
-      "key": "cz_count",
-      "displayName": "CZ",
-      "category": "AT_CZ",
-      "sortOrder": 10,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "通常時CZ初当り。補助判別用。"
+      "type": "cz",
+      "weight": 0.3
     },
     {
-      "key": "at_count",
-      "displayName": "AT",
-      "category": "AT_CZ",
-      "sortOrder": 11,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT初当り回数。主判別。"
+      "type": "initial_hit",
+      "weight": 0.25
     },
     {
-      "key": "bonus_count",
-      "displayName": "ボーナス",
-      "category": "BONUS",
-      "sortOrder": 20,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "主判別からは除外。演出確認用メモ。"
-    },
-    {
-      "key": "direct_hit_count",
-      "displayName": "直撃AT",
-      "category": "SPECIAL",
-      "sortOrder": 30,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": false,
-      "supportsMinus": true,
-      "notes": "重い分母のため補助メモ用。長時間実戦時のみ参考。"
+      "type": "small_role",
+      "weight": 0.1
     }
   ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "cz_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 270.0,
-          "weight": 0.72,
-          "minSampleSize": 8,
-          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 258.0,
-          "weight": 0.72,
-          "minSampleSize": 8,
-          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 246.0,
-          "weight": 0.72,
-          "minSampleSize": 8,
-          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 232.0,
-          "weight": 0.72,
-          "minSampleSize": 8,
-          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 218.0,
-          "weight": 0.72,
-          "minSampleSize": 8,
-          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 204.0,
-          "weight": 0.72,
-          "minSampleSize": 8,
-          "note": "CZ初当り確率。補助判別。2500〜3000G級から有効。"
-        }
-      ]
-    },
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 540.0,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 505.0,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 470.0,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 430.0,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 390.0,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 350.0,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "game_cz_ceiling",
-      "displayName": "通常時ゲーム数天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 1200,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時最大1200G消化でCZ「機械仕掛けの神」以上。通常時はゲーム数加算があるため実ゲーム数の平均は約730G。1100G以上ハマり後は次回天井が最大300Gに短縮。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "cz_through_ceiling",
-      "displayName": "CZスルー天井",
-      "ceilingType": "THROUGH_COUNT",
-      "limitValue": 5,
-      "unit": "回",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "CZ「機械仕掛けの神」を4連続失敗後、5回目のCZで条件到達。AT直撃契機として扱う。",
-      "isEnabled": true
-    },
-    {
-      "ruleKey": "at_interval_ceiling",
-      "displayName": "AT間天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 2500,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "AT間2500G消化でAT＋成功確定の激情ジャッジ。",
-      "isEnabled": true
-    }
-  ]
+  "minSampleSize": 3000
 }

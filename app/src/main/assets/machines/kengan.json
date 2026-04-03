@@ -1,7 +1,7 @@
 {
   "id": "kengan",
   "name": "Lケンガンアシュラ",
-  "notes": "precision batch next",
+  "notes": "precision batch next / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
   "counters": [
     {
       "key": "total_games",
@@ -28,7 +28,7 @@
         "6": 0.008333333333333333
       },
       "weight": 1.0,
-      "minSampleSize": 500
+      "minSampleSize": 2200
     },
     {
       "key": "at_probability",
@@ -41,7 +41,7 @@
         "6": 0.004545454545454545
       },
       "weight": 1.2,
-      "minSampleSize": 500
+      "minSampleSize": 2000
     }
   ],
   "siteLinks": [

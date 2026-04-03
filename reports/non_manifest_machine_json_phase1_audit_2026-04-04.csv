@@ -1,0 +1,16 @@
+﻿file_name,machine_id,machine_name,schema,manifest_registered,classification,counterpart_file,recommended_action
+code_geass_cc_kallen.json,code_geass_cc_kallen,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,modern_inference_unregistered,False,再構成候補,list_slot_012.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+code_geass_fukkatsu.json,code_geass_fukkatsu,コードギアス 復活のルルーシュ,modern_inference_unregistered,False,再構成候補,list_slot_013.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+eureka_zero.json,eureka_zero,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,modern_inference_unregistered,False,再構成候補,list_slot_028.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+ghost_shell.json,ghost_shell,スマスロ攻殻機動隊,modern_inference_unregistered,False,再構成候補,list_slot_027.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+kabaneri_kaimon.json,kabaneri_kaimon,スマスロ 甲鉄城のカバネリ 海門決戦,modern_inference_unregistered,False,再構成候補,list_slot_063.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+karakuri.json,karakuri,からくりサーカス,placeholder_alias,False,削除対象,karakuri_circus.json,旧別名・placeholderを削除。正本ファイルのみ残す。
+kengan.json,kengan,Lケンガンアシュラ,modern_inference_unregistered,False,再構成候補,list_slot_026.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+lovejo3.json,lovejo3,ラブ嬢3～Wご指名はいかがですか？～,modern_inference_unregistered,False,再構成候補,list_slot_029.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+lupin.json,lupin,ルパン三世 大航海者,placeholder_alias,False,削除対象,list_slot_040.json,旧別名・placeholderを削除。正本ファイルのみ残す。
+madoka_forte.json,madoka_forte,劇場版魔法少女まどか☆マギカ f-フォルテ-,modern_inference_unregistered,False,再構成候補,list_slot_010.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+monkey_turn_v.json,monkey_turn_v,スマスロ モンキーターンV,simple_reference,False,再構成候補,dmm_slot_027.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+ring_v.json,ring_v,Lリングにかけろ1 V,modern_inference_unregistered,False,再構成候補,dmm_slot_024.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+toaru.json,toaru,スマスロ とある魔術の禁書目録,modern_inference_unregistered,False,再構成候補,list_slot_030.json,現行manifest未採用。既存正本IDは維持しつつ、必要なら中身だけ転記して育成。
+tokyoghoul.json,tokyoghoul,東京喰種,placeholder_alias,False,削除対象,tokyo_ghoul.json,旧別名・placeholderを削除。正本ファイルのみ残す。
+vvv.json,vvv,革命機ヴァルヴレイヴ,placeholder_alias,False,削除対象,valvrave.json,旧別名・placeholderを削除。正本ファイルのみ残す。

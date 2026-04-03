@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-06-03",
     "isActive": true,
-    "notes": "partial: DMM/一撃公開のボーナス初当り合算・高確率ZONE当選率・EPBB直撃・上段ベルを反映。ゲーム数ゾーンや終了画面も強いが、現行UIでは総ゲーム数分母で扱いやすい数値差を優先した。",
+    "notes": "AT精度一括調整済み。主判別は直撃、初当り/ボーナス、補助はCZ、小役/ベル。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4566",
     "ichigekiUrl": "https://1geki.jp/slot/l_bofuri/"
   },
@@ -80,43 +80,43 @@
           "settingNo": 1,
           "denominatorValue": 319.0,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "一撃のボーナス初当り合算"
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 309.8,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "一撃のボーナス初当り合算"
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 307.1,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "一撃のボーナス初当り合算"
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 266.8,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "一撃のボーナス初当り合算"
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 257.1,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "一撃のボーナス初当り合算"
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 229.7,
           "weight": 1.0,
-          "minSampleSize": 5,
-          "note": "一撃のボーナス初当り合算"
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     },
@@ -127,43 +127,43 @@
           "settingNo": 1,
           "denominatorValue": 2356.0,
           "weight": 0.85,
-          "minSampleSize": 4,
-          "note": "高確中チェリー/スイカ契機CZ当選率を総ゲーム数換算の目安として採用"
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 1587.3,
           "weight": 0.85,
-          "minSampleSize": 4,
-          "note": "高確中チェリー/スイカ契機CZ当選率を総ゲーム数換算の目安として採用"
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 1587.3,
           "weight": 0.85,
-          "minSampleSize": 4,
-          "note": "高確中チェリー/スイカ契機CZ当選率を総ゲーム数換算の目安として採用"
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 1204.8,
           "weight": 0.85,
-          "minSampleSize": 4,
-          "note": "高確中チェリー/スイカ契機CZ当選率を総ゲーム数換算の目安として採用"
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 1136.4,
           "weight": 0.85,
-          "minSampleSize": 4,
-          "note": "高確中チェリー/スイカ契機CZ当選率を総ゲーム数換算の目安として採用"
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 1087.0,
           "weight": 0.85,
-          "minSampleSize": 4,
-          "note": "高確中チェリー/スイカ契機CZ当選率を総ゲーム数換算の目安として採用"
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         }
       ]
     },
@@ -174,43 +174,43 @@
           "settingNo": 1,
           "denominatorValue": 23560.0,
           "weight": 1.2,
-          "minSampleSize": 1,
-          "note": "ヒドラ目契機EPBB直撃当選率"
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 17029.0,
           "weight": 1.2,
-          "minSampleSize": 1,
-          "note": "ヒドラ目契機EPBB直撃当選率"
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 14743.0,
           "weight": 1.2,
-          "minSampleSize": 1,
-          "note": "ヒドラ目契機EPBB直撃当選率"
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 6902.0,
           "weight": 1.2,
-          "minSampleSize": 1,
-          "note": "ヒドラ目契機EPBB直撃当選率"
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 5663.0,
           "weight": 1.2,
-          "minSampleSize": 1,
-          "note": "ヒドラ目契機EPBB直撃当選率"
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 4889.0,
           "weight": 1.2,
-          "minSampleSize": 1,
-          "note": "ヒドラ目契機EPBB直撃当選率"
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         }
       ]
     },
@@ -222,42 +222,42 @@
           "denominatorValue": 18.3,
           "weight": 0.8,
           "minSampleSize": 120,
-          "note": "上段5枚ベル出現率"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 18.3,
           "weight": 0.8,
           "minSampleSize": 120,
-          "note": "上段5枚ベル出現率"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 18.3,
           "weight": 0.8,
           "minSampleSize": 120,
-          "note": "上段5枚ベル出現率"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 17.9,
           "weight": 0.8,
           "minSampleSize": 120,
-          "note": "上段5枚ベル出現率"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 17.3,
           "weight": 0.8,
           "minSampleSize": 120,
-          "note": "上段5枚ベル出現率"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 16.6,
           "weight": 0.8,
           "minSampleSize": 120,
-          "note": "上段5枚ベル出現率"
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
         }
       ]
     }

@@ -6,8 +6,8 @@
     "type": "BONUS",
     "releaseDate": "2022-01-24",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とBIGに整理。ディスクアップ2は波でBIG先行になりやすいため、REG主軸で見やすさを優先する。",
-    "dmmUrl": null,
+    "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算、BIGは最終補助に整理。ディスクアップ2は波でBIGが先行しやすいため、REG主軸をさらに強める。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4043",
     "ichigekiUrl": "https://1geki.jp/slot/s_discup2/"
   },
   "counterDefinitions": [
@@ -67,30 +67,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 496.5,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 436.9,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 422.8,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 397.2,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         }
       ]
     },
@@ -100,30 +100,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 182.0,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 172.9,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 168.0,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 163.0,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         }
       ]
     },
@@ -133,30 +133,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 287.4,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は荒れやすいためREG主軸で判断。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIG先行は過信しない。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 286.2,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は荒れやすいためREG主軸で判断。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIG先行は過信しない。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 278.9,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は荒れやすいためREG主軸で判断。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIG先行は過信しない。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 276.5,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は荒れやすいためREG主軸で判断。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIG先行は過信しない。"
         }
       ]
     }

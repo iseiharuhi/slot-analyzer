@@ -3,7 +3,7 @@
   "oldestAvailableDiffVersion": 1,
   "updatedAt": "2026-04-03T03:30:00+09:00",
   "forceFullSync": false,
-  "note": "Normalized legacy list_slot manifest/master references for 北斗転生2 and ヴァルヴレイヴ2, and added cleanup guidance for rogue auto-detected JSON files.",
+  "note": "Normalized duplicate machine registrations from legacy list_slot/dmm_slot files to canonical IDs and file names, and prepared bulk delete scripts for obsolete duplicate JSONs.",
   "generatedAt": "2026-04-03",
-  "masterDataVersion": "0.7.10-final-polish"
+  "masterDataVersion": "0.7.11-duplicate-cleanup"
 }

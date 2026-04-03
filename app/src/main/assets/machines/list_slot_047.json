@@ -6,8 +6,8 @@
     "type": "BONUS",
     "releaseDate": "2025-09-01",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算と羽・チェリー系に整理。小役系は高ゲーム数時の補強に留め、主軸はREGで揃える。",
-    "dmmUrl": null,
+    "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算と羽・チェリー系に整理。小役系は5000G以上での補強に限定し、主軸はREGで揃える。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4799",
     "ichigekiUrl": "https://1geki.jp/slot/lb_arexbright/"
   },
   "counterDefinitions": [
@@ -103,30 +103,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 428.3,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 409.6,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 366.1,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 312.1,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         }
       ]
     },
@@ -136,30 +136,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 179.6,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を補強。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 174.3,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を補強。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 163.4,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を補強。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 149.6,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を補強。"
         }
       ]
     },
@@ -169,30 +169,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 13.4,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。羽は高ゲーム数時のみ補強。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 13.0,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。羽は高ゲーム数時のみ補強。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 12.6,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。羽は高ゲーム数時のみ補強。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 12.2,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。羽は高ゲーム数時のみ補強。"
         }
       ]
     },
@@ -202,30 +202,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 40.5,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。チェリー系は高ゲーム数時のみ補強。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 38.1,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。チェリー系は高ゲーム数時のみ補強。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 39.2,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。チェリー系は高ゲーム数時のみ補強。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 38.3,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。チェリー系は高ゲーム数時のみ補強。"
         }
       ]
     },

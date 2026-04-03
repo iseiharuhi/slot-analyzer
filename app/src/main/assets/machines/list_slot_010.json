@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-06-05",
     "isActive": true,
-    "notes": "partial: 一撃掲載のAT「無双狂ラッシュ」初当りを主軸に維持。DMMで確認できる終了画面・称号・ロングフリーズなどの強示唆は重い分母でも有効だが、全設定比較値を安全に固定できる数値項目はAT初当りのみのため、現段階では1軸+notes運用とする。天井は最大999G。",
+    "notes": "AT精度一括調整済み。主判別はAT初当り。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4367",
     "ichigekiUrl": "https://1geki.jp/slot/l_berserkmuso/"
   },
@@ -56,36 +56,36 @@
           "settingNo": 1,
           "denominatorValue": 390.3,
           "weight": 1.1,
-          "minSampleSize": 4,
-          "note": "AT初当り確率（主判別）"
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 373.8,
           "weight": 1.1,
-          "minSampleSize": 4,
-          "note": "AT初当り確率（主判別）"
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 292.5,
           "weight": 1.1,
-          "minSampleSize": 4,
-          "note": "AT初当り確率（主判別）"
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 260.9,
           "weight": 1.1,
-          "minSampleSize": 4,
-          "note": "AT初当り確率（主判別）"
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 238.4,
           "weight": 1.1,
-          "minSampleSize": 4,
-          "note": "AT初当り確率（主判別）"
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         }
       ]
     }

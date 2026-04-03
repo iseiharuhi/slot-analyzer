@@ -143,9 +143,9 @@
       "checksum": "c118b1dc5cd3d896dec8e0031842a468f59e09cef74c43f16e3378f682e04a60"
     },
     {
-      "machineId": "dmm_slot_019",
-      "fileName": "dmm_slot_019.json",
-      "checksum": "c98074b7ec34a08197016b6aa7ab12878aee2251f358230549ce0113a14c509e"
+      "machineId": "hanma_baki",
+      "fileName": "hanma_baki.json",
+      "checksum": "5fce4a6a4b7864140d60f687ed3b1337f39d3e1a54601d4d801b60e385804846"
     },
     {
       "machineId": "dmm_slot_020",
@@ -253,14 +253,14 @@
       "checksum": "3d6de26b814b85f5813b420567b651fd874a535658b95c9e934502cd59c85f44"
     },
     {
-      "machineId": "list_slot_001",
-      "fileName": "list_slot_001.json",
-      "checksum": "b88ce494e7a7cd646a646983747a735386b9106c2350c8878995f03528098176"
+      "machineId": "goblin_slayer",
+      "fileName": "goblin_slayer.json",
+      "checksum": "68a1b38e0e1a97edca500d4dbd1ddd530992e5efe3188f5fc60ac3d9e062458d"
     },
     {
-      "machineId": "list_slot_002",
-      "fileName": "list_slot_002.json",
-      "checksum": "f05c7cc90b4f2c5b7b1437b64b0d9e40e6a3e42c5f82426ef42ef77a60b8901b"
+      "machineId": "sengoku_otome4",
+      "fileName": "sengoku_otome4.json",
+      "checksum": "7a0a884487cf8534fe0d449f1481e991924073d521926dd4fe114da35dc68dee"
     },
     {
       "machineId": "list_slot_003",
@@ -273,24 +273,24 @@
       "checksum": "08f7ed3614ca7d150fd5868c0868942498845ea16904666369b9e7834dc0a012"
     },
     {
-      "machineId": "list_slot_005",
-      "fileName": "list_slot_005.json",
-      "checksum": "6b5b15dde8ee7eca7883dd8a5be5df0fd548afa01973fbe4789fb173813c9064"
+      "machineId": "tensei_slime",
+      "fileName": "tensei_slime.json",
+      "checksum": "1723cd3512d5f4bdd5840c09b19d440759736b9c4c14ce620d4056d0510fb83e"
     },
     {
-      "machineId": "list_slot_006",
-      "fileName": "list_slot_006.json",
-      "checksum": "2310df47d0d0f7deb29f02a90c34327b9e7ca0307d50fc7711cfb007f182fbbf"
+      "machineId": "bio_re2",
+      "fileName": "bio_re2.json",
+      "checksum": "78f166dfc4f20f2149f2b4a3c4d24ec39751e9e9fcd89cbc1921452b588ae4de"
     },
     {
-      "machineId": "list_slot_007",
-      "fileName": "list_slot_007.json",
-      "checksum": "3646ba73472cef251694217c8cad2ff99bc05d71d4bfa0f5a46dabed1917b570"
+      "machineId": "zenigata4",
+      "fileName": "zenigata4.json",
+      "checksum": "f4060808530166dcff0fd946e3ec55468338e9abdbe32bf657a553d901ac5368"
     },
     {
-      "machineId": "list_slot_008",
-      "fileName": "list_slot_008.json",
-      "checksum": "d67bb1251c38110fb88fd1ab6b33c4d1d532cd1b57be2657031d4af95aaa9347"
+      "machineId": "strike_witches2",
+      "fileName": "strike_witches2.json",
+      "checksum": "c1b92ac050ce2bfef37f95831f81f7a5acbadccfe9950454b9183c353639922b"
     },
     {
       "machineId": "list_slot_009",
@@ -303,9 +303,9 @@
       "checksum": "43b3407bcd7ba6c5cbfd4443d40d9a96b5f0697be90924145774e22b1f54f78e"
     },
     {
-      "machineId": "list_slot_011",
-      "fileName": "list_slot_011.json",
-      "checksum": "c848b827b1bcf33afee6329f800ae7689decafe921703e0f81c7c305cb18cb4b"
+      "machineId": "bancho4",
+      "fileName": "bancho4.json",
+      "checksum": "391bc55a97facd35f495ad047b69c8f6a2db12fdbad6bc0a625b8ce66a4dae91"
     },
     {
       "machineId": "list_slot_012",
@@ -318,64 +318,64 @@
       "checksum": "2a1429b638a6886fdb7755adbe76e263e58d35fc45863f5bb2465454cfd4ca75"
     },
     {
-      "machineId": "list_slot_014",
-      "fileName": "list_slot_014.json",
-      "checksum": "0f424eadfefb56f0532ab5d030852f6e291bc0a41463160a6640b7f0d0825b31"
+      "machineId": "tokyo_ghoul",
+      "fileName": "tokyo_ghoul.json",
+      "checksum": "7e81387e6c1bade77f893d121450ac747eb33c1e95ba33949e18d300edee03ad"
     },
     {
-      "machineId": "list_slot_015",
-      "fileName": "list_slot_015.json",
-      "checksum": "40e7fb85d3e25c45aae3d5f4d1ae1e7e46b9bf6d008e643fe4703ccac698cb79"
+      "machineId": "azure_lane",
+      "fileName": "azure_lane.json",
+      "checksum": "033ed6f02c256e757445bc04542de9051c71d43a4d7302936d6cdaaf38768281"
     },
     {
-      "machineId": "list_slot_016",
-      "fileName": "list_slot_016.json",
-      "checksum": "b22dc52b8c413d28417528ab96dcba2816edbf9ab019508a76866c3874cde8b5"
+      "machineId": "darling_franxx",
+      "fileName": "darling_franxx.json",
+      "checksum": "b1df88ef0cdae942da5f6b52aedaf5bd76986ca8a31cd101f9ba813fefac274f"
     },
     {
-      "machineId": "list_slot_017",
-      "fileName": "list_slot_017.json",
-      "checksum": "4953df2c84c2d1c41b4f634d8f9fab637a09303f3e8d6d03b9fadd59f8bf7447"
+      "machineId": "saki_top",
+      "fileName": "saki_top.json",
+      "checksum": "95a7234726a826911a5a60536821a76b56a79efe43d671085e364dc4333c4073"
     },
     {
-      "machineId": "list_slot_018",
-      "fileName": "list_slot_018.json",
-      "checksum": "803b50133ecb365278e4150060d169a7022815635b9b5e39f175854834f5394b"
+      "machineId": "ushio_tora",
+      "fileName": "ushio_tora.json",
+      "checksum": "d3a0b16e2650f6ab9ae4b94e7c7f45e5781d2944828d0407e60b37f21ea05353"
     },
     {
-      "machineId": "list_slot_019",
-      "fileName": "list_slot_019.json",
-      "checksum": "7fb7b1d1470d03384efd67bb2604207f051d8aa43b0357257237809ee32da733"
+      "machineId": "godzilla",
+      "fileName": "godzilla.json",
+      "checksum": "854c2bc8a1969d7edecf3c6c977f0ae4bf9eccea224f5d17f47ca3ba75f11b18"
     },
     {
-      "machineId": "list_slot_020",
-      "fileName": "list_slot_020.json",
-      "checksum": "354fe118455d7977548e8be32f3b7541b8e951f25dddba3acfe537def042456c"
+      "machineId": "revue_starlight",
+      "fileName": "revue_starlight.json",
+      "checksum": "ff7fd31eeb8b19c2c873f09b82ef5a00eccee2145412fb5c1ec92368755c1e5f"
     },
     {
-      "machineId": "list_slot_021",
-      "fileName": "list_slot_021.json",
-      "checksum": "109ad6a3a926059030983d635dbe6fb665ee228ee1d629a7dedce340b56e236e"
+      "machineId": "kamen_rider_denoh",
+      "fileName": "kamen_rider_denoh.json",
+      "checksum": "ff5caf7c23908312b34dd7d2fea9b7577d07831d8d86bdb7fc3b5888c8f8e408"
     },
     {
-      "machineId": "list_slot_022",
-      "fileName": "list_slot_022.json",
-      "checksum": "14d954ed76e7637d0010dc32228f3a49c47aad3ddd47c825040a3ba0a8b8b297"
+      "machineId": "arifureta",
+      "fileName": "arifureta.json",
+      "checksum": "f21f81a3f52da2be6f749742087416bf94228118108c9c6332ec79d5d980c26c"
     },
     {
-      "machineId": "list_slot_023",
-      "fileName": "list_slot_023.json",
-      "checksum": "70af382c33398402113b654b83715a83a4afb0f3d072f6168e69d7c259e6e303"
+      "machineId": "shin_eva",
+      "fileName": "shin_eva.json",
+      "checksum": "9aaeb46fc63daa917cc4b5f505210e9067f8d0449157053af808335f8569bf86"
     },
     {
-      "machineId": "list_slot_024",
-      "fileName": "list_slot_024.json",
-      "checksum": "0797ea001368ab171aca4e322eac1cf1176a257a02835f4241fc1c09a33d905e"
+      "machineId": "nyanko",
+      "fileName": "nyanko.json",
+      "checksum": "4dc84c0e4a7b1937190a000888cf29d057c6aad17403026d919f05edcca2568e"
     },
     {
-      "machineId": "list_slot_025",
-      "fileName": "list_slot_025.json",
-      "checksum": "b53e10c143bd13820c43fcc490a1de1dc6c5f8595800fa2b8bfd2b589e6481ea"
+      "machineId": "fire_force",
+      "fileName": "fire_force.json",
+      "checksum": "be40f4d466516881189cf6c5cd21d62687b8dcf571221819094257910db3f07c"
     },
     {
       "machineId": "list_slot_026",

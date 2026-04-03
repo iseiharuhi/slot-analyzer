@@ -6,8 +6,8 @@
     "type": "BONUS",
     "releaseDate": "2025-01-01",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はREG、補助はぶどうとBIGに整理。アイム系はREGを主軸にし、ぶどうを高ゲーム数時の補強、BIGは補助に留める。",
-    "dmmUrl": "https://p-town.dmm.com/machines/3626",
+    "notes": "ノーマル精度仕上げ対応。主判別はREG、補助はぶどう、BIGは最終補助に固定。アイム系は短期のBIG偏りが出やすいため、3000G以上のREGを主軸にする。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4316",
     "ichigekiUrl": "https://1geki.jp/slot/s_ij_ex_6/"
   },
   "counterDefinitions": [
@@ -79,44 +79,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 439.8,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。3000G以上推奨。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 399.6,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。3000G以上推奨。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 331.0,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。3000G以上推奨。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 315.1,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。3000G以上推奨。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 255.0,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。3000G以上推奨。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 255.0,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。3000G以上推奨。"
         }
       ]
     },
@@ -126,44 +126,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 6.02,
-          "weight": 0.7,
-          "minSampleSize": 4000,
-          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは5000G以上で信頼度を持たせる。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 5.95,
-          "weight": 0.7,
-          "minSampleSize": 4000,
-          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは5000G以上で信頼度を持たせる。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 5.9,
-          "weight": 0.7,
-          "minSampleSize": 4000,
-          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは5000G以上で信頼度を持たせる。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 5.85,
-          "weight": 0.7,
-          "minSampleSize": 4000,
-          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは5000G以上で信頼度を持たせる。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 5.8,
-          "weight": 0.7,
-          "minSampleSize": 4000,
-          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは5000G以上で信頼度を持たせる。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 5.78,
-          "weight": 0.7,
-          "minSampleSize": 4000,
-          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは5000G以上で信頼度を持たせる。"
         }
       ]
     },
@@ -173,44 +173,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 273.1,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは単独では追い過ぎない。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 270.8,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは単独では追い過ぎない。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 266.4,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは単独では追い過ぎない。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 254.6,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは単独では追い過ぎない。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 244.4,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは単独では追い過ぎない。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 240.1,
-          "weight": 0.6,
-          "minSampleSize": 3000,
-          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは単独では追い過ぎない。"
         }
       ]
     }

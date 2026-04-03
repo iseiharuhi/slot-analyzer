@@ -149,11 +149,11 @@
       "sourceListPage": 1
     },
     {
-      "machineId": "dmm_slot_019",
+      "machineId": "hanma_baki",
       "machineName": "L範馬刃牙",
-      "fileName": "dmm_slot_019.json",
-      "status": "draft",
-      "checksumSha256": "dd3c9868c4805f993ce889f7b2f836eddc80a9e8657a5f51da29b65b6b282ed2",
+      "fileName": "hanma_baki.json",
+      "status": "available",
+      "checksumSha256": "5fce4a6a4b7864140d60f687ed3b1337f39d3e1a54601d4d801b60e385804846",
       "sourceListPage": 1
     },
     {
@@ -325,19 +325,19 @@
       "sourceListPage": 2
     },
     {
-      "machineId": "list_slot_001",
+      "machineId": "goblin_slayer",
       "machineName": "Lゴブリンスレイヤー",
-      "fileName": "list_slot_001.json",
-      "status": "partial",
-      "checksumSha256": "a376c3354332e0745b9446a6e79c2a9cf6f90ff09f7f10002b9a7540758214b7",
+      "fileName": "goblin_slayer.json",
+      "status": "available",
+      "checksumSha256": "68a1b38e0e1a97edca500d4dbd1ddd530992e5efe3188f5fc60ac3d9e062458d",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_002",
+      "machineId": "sengoku_otome4",
       "machineName": "L戦国乙女4 戦乱に閃く炯眼の軍師",
-      "fileName": "list_slot_002.json",
-      "status": "partial",
-      "checksumSha256": "6d6e5a4f35934a462e8123f67115f9a1880e807b6f0374d7830ce0db5bee1955",
+      "fileName": "sengoku_otome4.json",
+      "status": "available",
+      "checksumSha256": "7a0a884487cf8534fe0d449f1481e991924073d521926dd4fe114da35dc68dee",
       "sourceListPage": null
     },
     {
@@ -357,35 +357,35 @@
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_005",
+      "machineId": "tensei_slime",
       "machineName": "L転生したらスライムだった件",
-      "fileName": "list_slot_005.json",
-      "status": "draft",
-      "checksumSha256": "6b5b15dde8ee7eca7883dd8a5be5df0fd548afa01973fbe4789fb173813c9064",
+      "fileName": "tensei_slime.json",
+      "status": "available",
+      "checksumSha256": "1723cd3512d5f4bdd5840c09b19d440759736b9c4c14ce620d4056d0510fb83e",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_006",
+      "machineId": "bio_re2",
       "machineName": "スマスロ バイオハザード RE:2",
-      "fileName": "list_slot_006.json",
-      "status": "draft",
-      "checksumSha256": "2310df47d0d0f7deb29f02a90c34327b9e7ca0307d50fc7711cfb007f182fbbf",
+      "fileName": "bio_re2.json",
+      "status": "available",
+      "checksumSha256": "78f166dfc4f20f2149f2b4a3c4d24ec39751e9e9fcd89cbc1921452b588ae4de",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_007",
+      "machineId": "zenigata4",
       "machineName": "L主役は銭形4",
-      "fileName": "list_slot_007.json",
-      "status": "draft",
-      "checksumSha256": "3646ba73472cef251694217c8cad2ff99bc05d71d4bfa0f5a46dabed1917b570",
+      "fileName": "zenigata4.json",
+      "status": "available",
+      "checksumSha256": "f4060808530166dcff0fd946e3ec55468338e9abdbe32bf657a553d901ac5368",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_008",
+      "machineId": "strike_witches2",
       "machineName": "Lストライクウィッチーズ2",
-      "fileName": "list_slot_008.json",
-      "status": "partial",
-      "checksumSha256": "bbe365575c0dcf3d99b16a077b6ee712a58d79c75a6cab985c4a461ad7d71fb5",
+      "fileName": "strike_witches2.json",
+      "status": "available",
+      "checksumSha256": "c1b92ac050ce2bfef37f95831f81f7a5acbadccfe9950454b9183c353639922b",
       "sourceListPage": null
     },
     {
@@ -405,11 +405,11 @@
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_011",
+      "machineId": "bancho4",
       "machineName": "押忍！番長4",
-      "fileName": "list_slot_011.json",
-      "status": "partial",
-      "checksumSha256": "832d4c3bd93f9ee5b3859d92eeff0b1c659254c3392eb0ebbf00a048fb4e7aee",
+      "fileName": "bancho4.json",
+      "status": "available",
+      "checksumSha256": "391bc55a97facd35f495ad047b69c8f6a2db12fdbad6bc0a625b8ce66a4dae91",
       "sourceListPage": null
     },
     {
@@ -429,99 +429,99 @@
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_014",
+      "machineId": "tokyo_ghoul",
       "machineName": "L東京喰種",
-      "fileName": "list_slot_014.json",
-      "status": "draft",
-      "checksumSha256": "0f424eadfefb56f0532ab5d030852f6e291bc0a41463160a6640b7f0d0825b31",
+      "fileName": "tokyo_ghoul.json",
+      "status": "available",
+      "checksumSha256": "7e81387e6c1bade77f893d121450ac747eb33c1e95ba33949e18d300edee03ad",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_015",
+      "machineId": "azure_lane",
       "machineName": "Lアズールレーン THE ANIMATION",
-      "fileName": "list_slot_015.json",
-      "status": "draft",
-      "checksumSha256": "40e7fb85d3e25c45aae3d5f4d1ae1e7e46b9bf6d008e643fe4703ccac698cb79",
+      "fileName": "azure_lane.json",
+      "status": "available",
+      "checksumSha256": "033ed6f02c256e757445bc04542de9051c71d43a4d7302936d6cdaaf38768281",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_016",
+      "machineId": "darling_franxx",
       "machineName": "Lダーリン・イン・ザ・フランキス",
-      "fileName": "list_slot_016.json",
-      "status": "draft",
-      "checksumSha256": "b22dc52b8c413d28417528ab96dcba2816edbf9ab019508a76866c3874cde8b5",
+      "fileName": "darling_franxx.json",
+      "status": "available",
+      "checksumSha256": "b1df88ef0cdae942da5f6b52aedaf5bd76986ca8a31cd101f9ba813fefac274f",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_017",
+      "machineId": "saki_top",
       "machineName": "L咲-Saki- 頂上決戦",
-      "fileName": "list_slot_017.json",
-      "status": "draft",
-      "checksumSha256": "4953df2c84c2d1c41b4f634d8f9fab637a09303f3e8d6d03b9fadd59f8bf7447",
+      "fileName": "saki_top.json",
+      "status": "available",
+      "checksumSha256": "95a7234726a826911a5a60536821a76b56a79efe43d671085e364dc4333c4073",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_018",
+      "machineId": "ushio_tora",
       "machineName": "Lうしおととら 白面決戦",
-      "fileName": "list_slot_018.json",
-      "status": "draft",
-      "checksumSha256": "803b50133ecb365278e4150060d169a7022815635b9b5e39f175854834f5394b",
+      "fileName": "ushio_tora.json",
+      "status": "available",
+      "checksumSha256": "d3a0b16e2650f6ab9ae4b94e7c7f45e5781d2944828d0407e60b37f21ea05353",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_019",
+      "machineId": "godzilla",
       "machineName": "Lゴジラ",
-      "fileName": "list_slot_019.json",
-      "status": "partial",
-      "checksumSha256": "28bd9dd7a005a59f5ac4a34ffaecd3f646dfbebb47cf42b4cc14a6c35d65520e",
+      "fileName": "godzilla.json",
+      "status": "available",
+      "checksumSha256": "854c2bc8a1969d7edecf3c6c977f0ae4bf9eccea224f5d17f47ca3ba75f11b18",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_020",
+      "machineId": "revue_starlight",
       "machineName": "L少女☆歌劇 レヴュースタァライト -The SLOT-",
-      "fileName": "list_slot_020.json",
-      "status": "draft",
-      "checksumSha256": "354fe118455d7977548e8be32f3b7541b8e951f25dddba3acfe537def042456c",
+      "fileName": "revue_starlight.json",
+      "status": "available",
+      "checksumSha256": "ff7fd31eeb8b19c2c873f09b82ef5a00eccee2145412fb5c1ec92368755c1e5f",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_021",
+      "machineId": "kamen_rider_denoh",
       "machineName": "L仮面ライダー電王",
-      "fileName": "list_slot_021.json",
-      "status": "draft",
-      "checksumSha256": "109ad6a3a926059030983d635dbe6fb665ee228ee1d629a7dedce340b56e236e",
+      "fileName": "kamen_rider_denoh.json",
+      "status": "available",
+      "checksumSha256": "ff5caf7c23908312b34dd7d2fea9b7577d07831d8d86bdb7fc3b5888c8f8e408",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_022",
+      "machineId": "arifureta",
       "machineName": "Lありふれた職業で世界最強",
-      "fileName": "list_slot_022.json",
-      "status": "partial",
-      "checksumSha256": "28bfa47464865dd103d5358800d3e0614c313085bf74d0090fb194701a19a27b",
+      "fileName": "arifureta.json",
+      "status": "available",
+      "checksumSha256": "f21f81a3f52da2be6f749742087416bf94228118108c9c6332ec79d5d980c26c",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_023",
+      "machineId": "shin_eva",
       "machineName": "Lパチスロ シン・エヴァンゲリオン",
-      "fileName": "list_slot_023.json",
-      "status": "draft",
-      "checksumSha256": "70af382c33398402113b654b83715a83a4afb0f3d072f6168e69d7c259e6e303",
+      "fileName": "shin_eva.json",
+      "status": "available",
+      "checksumSha256": "9aaeb46fc63daa917cc4b5f505210e9067f8d0449157053af808335f8569bf86",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_024",
+      "machineId": "nyanko",
       "machineName": "Lにゃんこ大戦争 超神速",
-      "fileName": "list_slot_024.json",
-      "status": "draft",
-      "checksumSha256": "0797ea001368ab171aca4e322eac1cf1176a257a02835f4241fc1c09a33d905e",
+      "fileName": "nyanko.json",
+      "status": "available",
+      "checksumSha256": "4dc84c0e4a7b1937190a000888cf29d057c6aad17403026d919f05edcca2568e",
       "sourceListPage": null
     },
     {
-      "machineId": "list_slot_025",
+      "machineId": "fire_force",
       "machineName": "パチスロ 炎炎ノ消防隊",
-      "fileName": "list_slot_025.json",
-      "status": "partial",
-      "checksumSha256": "686ee698033f5600dd3caa5227a8285dfbefbb9289cdecb75494c66564ea84da",
+      "fileName": "fire_force.json",
+      "status": "available",
+      "checksumSha256": "be40f4d466516881189cf6c5cd21d62687b8dcf571221819094257910db3f07c",
       "sourceListPage": null
     },
     {

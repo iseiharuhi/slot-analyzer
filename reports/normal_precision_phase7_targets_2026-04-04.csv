@@ -1,0 +1,15 @@
+file,name,updatedCounters,dmmUrl
+my_juggler_v.json,マイジャグラーV,reg_count,grape_count,big_count,https://p-town.dmm.com/machines/4204
+im_juggler_ex.json,アイムジャグラーEX,reg_count,grape_count,big_count,https://p-town.dmm.com/machines/4316
+funky_juggler_2.json,ファンキージャグラー2,reg_count,grape_count,big_count,https://p-town.dmm.com/machines/4388
+happy_juggler_v3.json,ハッピージャグラーV III,reg_count,grape_count,big_count,https://p-town.dmm.com/machines/4656
+gogo_juggler_3.json,ゴーゴージャグラー3,reg_count,grape_count,big_count,https://p-town.dmm.com/machines/4782
+list_slot_042.json,ニューパルサーSP4,reg_count,bonus_count,big_count,https://p-town.dmm.com/machines/4550
+list_slot_043.json,ニューパルサーDX3,reg_count,bonus_count,big_count,https://p-town.dmm.com/machines/3953
+list_slot_044.json,ハナビ,reg_count,bonus_count,bell_count,big_count,https://p-town.dmm.com/machines/2042
+list_slot_045.json,バーサスリヴァイズ,reg_count,bonus_count,bell_count,vs_game_miss_count,https://p-town.dmm.com/machines/4033
+list_slot_046.json,サンダーVライトニング,big_count,https://p-town.dmm.com/machines/3647
+list_slot_047.json,アレックス ブライト,reg_count,bonus_count,feather_count,three_coin_role_count,https://p-town.dmm.com/machines/4799
+list_slot_048.json,ディスクアップ2,reg_count,bonus_count,big_count,https://p-town.dmm.com/machines/4043
+list_slot_049.json,A-SLOT+ ディスクアップ ULTRAREMIX,reg_count,bonus_count,three_coin_role_count,suika_count,https://p-town.dmm.com/machines/4702
+list_slot_050.json,ファミスタ回胴版!!,reg_count,bonus_count,big_count,https://p-town.dmm.com/machines/4393

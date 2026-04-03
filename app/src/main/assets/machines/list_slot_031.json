@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-08-08",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はAT初当り、重い分母は直撃ATに整理。鬼モードや示唆は重要だが、現行入力ではAT初当りを軸にし、直撃は高ゲーム数時の補強材料として低weightで残す。",
+    "notes": "AT精度一括調整済み。主判別は直撃、AT初当り。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4178",
     "ichigekiUrl": "https://1geki.jp/slot/s_sinnoni2/"
   },
@@ -57,42 +57,42 @@
           "denominatorValue": 405.2,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 382.4,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 366.2,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 301.3,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 275.6,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 262.2,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         }
       ]
     },
@@ -102,44 +102,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 40857.8,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 15321.7,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 10214.4,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 7660.8,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 7660.8,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 5107.2,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         }
       ]
     }

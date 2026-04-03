@@ -1,0 +1,23 @@
+{
+  "id": "l_hokuto",
+  "name": "l_hokuto",
+  "indicators": [
+    {
+      "type": "direct_hit",
+      "weight": 0.4
+    },
+    {
+      "type": "initial_hit",
+      "weight": 0.3
+    },
+    {
+      "type": "cz",
+      "weight": 0.2
+    },
+    {
+      "type": "small_role",
+      "weight": 0.1
+    }
+  ],
+  "minSampleSize": 2500
+}

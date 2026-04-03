@@ -1,7 +1,7 @@
 {
   "id": "sengoku_otome4",
   "name": "L戦国乙女4 戦乱に閃く炯眼の軍師",
-  "notes": "precision batch",
+  "notes": "precision batch / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
   "counters": [
     {
       "key": "total_games",
@@ -28,7 +28,7 @@
         "6": 0.01
       },
       "weight": 1.0,
-      "minSampleSize": 500
+      "minSampleSize": 2200
     },
     {
       "key": "at_probability",
@@ -41,7 +41,7 @@
         "6": 0.005
       },
       "weight": 1.2,
-      "minSampleSize": 500
+      "minSampleSize": 2000
     }
   ],
   "siteLinks": [

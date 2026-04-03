@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-04-22",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はボーナス合算、補助はBIG・REG・AT初当りに整理。ダンまち2はボーナス種別も見たいが、全体の均一性を優先してまず合算を主軸に置く。",
+    "notes": "AT精度一括調整済み。主判別はAT初当り、初当り/ボーナス。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4556",
     "ichigekiUrl": "https://1geki.jp/slot/s_danmachi2/"
   },
@@ -93,42 +93,42 @@
           "denominatorValue": 183.6,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。BIG・REG・ATと複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 178.6,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。BIG・REG・ATと複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 173.8,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。BIG・REG・ATと複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 164.7,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。BIG・REG・ATと複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 158.3,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。BIG・REG・ATと複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 152.4,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。BIG・REG・ATと複合で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     },
@@ -138,44 +138,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 255.0,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 245.4,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 236.6,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 219.9,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 208.7,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 198.6,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     },
@@ -185,44 +185,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 655.4,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 537.2,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 448.4,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 385.5,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 347.6,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 319.7,
-          "weight": 0.7,
+          "weight": 0.72,
           "minSampleSize": 3000,
-          "note": "補助判別①。単体ではなく合算主軸で判断。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     },
@@ -232,44 +232,44 @@
         {
           "settingNo": 1,
           "denominatorValue": 493.7,
-          "weight": 0.6,
+          "weight": 1.0,
           "minSampleSize": 3000,
-          "note": "補助判別②。序盤は荒れやすいため過信しない。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 476.0,
-          "weight": 0.6,
+          "weight": 1.0,
           "minSampleSize": 3000,
-          "note": "補助判別②。序盤は荒れやすいため過信しない。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 461.3,
-          "weight": 0.6,
+          "weight": 1.0,
           "minSampleSize": 3000,
-          "note": "補助判別②。序盤は荒れやすいため過信しない。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 393.2,
-          "weight": 0.6,
+          "weight": 1.0,
           "minSampleSize": 3000,
-          "note": "補助判別②。序盤は荒れやすいため過信しない。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 373.5,
-          "weight": 0.6,
+          "weight": 1.0,
           "minSampleSize": 3000,
-          "note": "補助判別②。序盤は荒れやすいため過信しない。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 354.7,
-          "weight": 0.6,
+          "weight": 1.0,
           "minSampleSize": 3000,
-          "note": "補助判別②。序盤は荒れやすいため過信しない。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         }
       ]
     }

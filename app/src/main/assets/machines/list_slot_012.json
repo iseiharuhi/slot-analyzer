@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-03-04",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はボーナス合算、重い分母は初代モード突入を補強材料として扱う構造に整理。モードや楽曲変化は重要だが、まずは合算を最優先で見る。",
+    "notes": "AT精度一括調整済み。主判別は直撃、初当り/ボーナス。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4512",
     "ichigekiUrl": null
   },
@@ -57,35 +57,35 @@
           "denominatorValue": 299.8,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 291.0,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 267.3,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 238.6,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 208.8,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     },
@@ -95,37 +95,37 @@
         {
           "settingNo": 1,
           "denominatorValue": 40000.0,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 30000.0,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 3,
           "denominatorValue": 20000.0,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 10000.0,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 7000.0,
-          "weight": 0.25,
+          "weight": 0.95,
           "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
         }
       ]
     }

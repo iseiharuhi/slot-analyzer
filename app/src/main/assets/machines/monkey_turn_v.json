@@ -1,66 +1,23 @@
 {
-  "name": "スマスロ モンキーターンV",
   "id": "monkey_turn_v",
-  "settingReferenceValues": [
+  "name": "monkey_turn_v",
+  "indicators": [
     {
-      "minSampleSize": 2500,
-      "label": "AT初当り",
-      "values": [
-        520,
-        500,
-        480,
-        460,
-        440,
-        420
-      ],
-      "weight": 1,
-      "key": "at_hit",
-      "notes": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+      "type": "direct_hit",
+      "weight": 0.35
     },
     {
-      "minSampleSize": 3000,
-      "label": "SG突入率",
-      "values": [
-        200,
-        190,
-        180,
-        170,
-        160,
-        150
-      ],
-      "weight": 0.7,
-      "key": "sg",
-      "notes": "補助判別①。序盤はブレやすいため過信注意。"
+      "type": "scenario",
+      "weight": 0.3
     },
     {
-      "minSampleSize": 4000,
-      "label": "弱チェリー",
-      "values": [
-        90,
-        87,
-        84,
-        81,
-        78,
-        75
-      ],
-      "weight": 0.6,
-      "key": "weak_cherry",
-      "notes": "補助判別②。他要素と組み合わせて判断すること。"
+      "type": "initial_hit",
+      "weight": 0.25
     },
     {
-      "minSampleSize": 12000,
-      "label": "AT直撃",
-      "values": [
-        65536,
-        32768,
-        16384,
-        8192,
-        4096,
-        2048
-      ],
-      "weight": 0.25,
-      "key": "direct_at",
-      "notes": "重い分母。サンプル不足時は判別に使用しないこと。"
+      "type": "small_role",
+      "weight": 0.1
     }
-  ]
+  ],
+  "minSampleSize": 2500
 }

@@ -1,0 +1,19 @@
+{
+  "id": "oki_doki_gold",
+  "name": "oki_doki_gold",
+  "indicators": [
+    {
+      "type": "initial_hit",
+      "weight": 0.5
+    },
+    {
+      "type": "mode",
+      "weight": 0.3
+    },
+    {
+      "type": "bonus_chain",
+      "weight": 0.2
+    }
+  ],
+  "minSampleSize": 2000
+}

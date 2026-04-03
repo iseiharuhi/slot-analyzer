@@ -1,0 +1,592 @@
+﻿file_name,machine_id,machine_name,schema_type,counter_key,counter_label,category,sort_order,unit,input_type,is_enabled,is_default_visible,supports_minus,notes
+arifureta.json,arifureta,Lありふれた職業で世界最強,modern_inference,total_games,ゲーム数,,,,,,,,
+arifureta.json,arifureta,Lありふれた職業で世界最強,modern_inference,cz,CZ,,,,,,,,
+arifureta.json,arifureta,Lありふれた職業で世界最強,modern_inference,at,AT,,,,,,,,
+azure_lane.json,azure_lane,Lアズールレーン THE ANIMATION,modern_inference,total_games,ゲーム数,,,,,,,,
+azure_lane.json,azure_lane,Lアズールレーン THE ANIMATION,modern_inference,cz,CZ,,,,,,,,
+azure_lane.json,azure_lane,Lアズールレーン THE ANIMATION,modern_inference,at,AT,,,,,,,,
+code_geass_cc_kallen.json,code_geass_cc_kallen,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,modern_inference,total_games,ゲーム数,,,,,,,,
+code_geass_cc_kallen.json,code_geass_cc_kallen,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,modern_inference,cz,CZ,,,,,,,,
+code_geass_cc_kallen.json,code_geass_cc_kallen,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,modern_inference,at,AT,,,,,,,,
+code_geass_fukkatsu.json,code_geass_fukkatsu,コードギアス 復活のルルーシュ,modern_inference,total_games,ゲーム数,,,,,,,,
+code_geass_fukkatsu.json,code_geass_fukkatsu,コードギアス 復活のルルーシュ,modern_inference,cz,CZ,,,,,,,,
+code_geass_fukkatsu.json,code_geass_fukkatsu,コードギアス 復活のルルーシュ,modern_inference,at,AT,,,,,,,,
+darling_franxx.json,darling_franxx,Lダーリン・イン・ザ・フランキス,modern_inference,total_games,ゲーム数,,,,,,,,
+darling_franxx.json,darling_franxx,Lダーリン・イン・ザ・フランキス,modern_inference,cz,CZ,,,,,,,,
+darling_franxx.json,darling_franxx,Lダーリン・イン・ザ・フランキス,modern_inference,at,AT,,,,,,,,
+dmm_slot_001.json,dmm_slot_001,スマスロ BIRDIE WING -Golf Girls' Story-,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_001.json,dmm_slot_001,スマスロ BIRDIE WING -Golf Girls' Story-,legacy_full,bonus_count,通常時初当たり,BONUS,10,回,COUNTER,True,True,True,通常時のボーナス初当たり合算。公開値ありの主判別要素。
+dmm_slot_001.json,dmm_slot_001,スマスロ BIRDIE WING -Golf Girls' Story-,legacy_full,at_count,ST初当たり,AT_CZ,11,回,COUNTER,True,True,True,ST「ジャパンユニバーサルカップ」初当たり回数。最重要判別要素。
+dmm_slot_001.json,dmm_slot_001,スマスロ BIRDIE WING -Golf Girls' Story-,legacy_full,cz_count,CZ,AT_CZ,20,回,COUNTER,True,False,True,CZ「バーディーチャレンジ」回数。設定差の公開数値未確認のため補助記録のみ。
+dmm_slot_001.json,dmm_slot_001,スマスロ BIRDIE WING -Golf Girls' Story-,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,30,回,COUNTER,True,False,True,公開比較値未確認のため推測には未使用。
+dmm_slot_002.json,dmm_slot_002,スマスロ バイオハザードRE:3,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_002.json,dmm_slot_002,スマスロ バイオハザードRE:3,legacy_full,at_count,AT初当たり,AT_CZ,10,回,COUNTER,True,True,True,AT「ハザードラッシュ」初当たり回数。公開値ありの主判別要素。
+dmm_slot_002.json,dmm_slot_002,スマスロ バイオハザードRE:3,legacy_full,cz_count,CZ,AT_CZ,20,回,COUNTER,True,False,True,CZ「ネメシスバトル」回数。全設定比較値が未公開のため補助記録のみ。
+dmm_slot_002.json,dmm_slot_002,スマスロ バイオハザードRE:3,legacy_full,bonus_count,ボーナス,BONUS,21,回,COUNTER,True,False,True,全設定比較値が未公開のため推測には未使用。
+dmm_slot_002.json,dmm_slot_002,スマスロ バイオハザードRE:3,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,30,回,COUNTER,True,False,True,公開比較値未確認のため推測には未使用。
+dmm_slot_003.json,dmm_slot_003,Ｌタクトオーパス デスティニー,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_003.json,dmm_slot_003,Ｌタクトオーパス デスティニー,legacy_full,at_count,AT初当たり,AT_CZ,10,回,COUNTER,True,True,True,AT「BATTLE ORCHESTRA」初当たり回数。現状の主判別要素。
+dmm_slot_003.json,dmm_slot_003,Ｌタクトオーパス デスティニー,legacy_full,bonus_count,DESTINY/EPISODE BONUS,BONUS,20,回,COUNTER,True,False,True,ボーナス確率は全設定共通寄り情報のみ確認済みのため、推測には未使用。
+dmm_slot_003.json,dmm_slot_003,Ｌタクトオーパス デスティニー,legacy_full,cz_count,CZ/SPCZ,AT_CZ,21,回,COUNTER,True,False,True,全設定比較値未公開のため補助記録のみ。
+dmm_slot_003.json,dmm_slot_003,Ｌタクトオーパス デスティニー,legacy_full,direct_hit_count,特殊契機,SPECIAL,30,回,COUNTER,True,False,True,公開比較値未確認のため推測には未使用。
+dmm_slot_004.json,dmm_slot_004,スマスロ ビッグドリーム THE GOLDEN PUSHER,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_004.json,dmm_slot_004,スマスロ ビッグドリーム THE GOLDEN PUSHER,legacy_full,cz_count,CZ(ジャッジメント),AT_CZ,10,回,COUNTER,True,True,True,公開値あり。ATより差は小さいため補助指標。
+dmm_slot_004.json,dmm_slot_004,スマスロ ビッグドリーム THE GOLDEN PUSHER,legacy_full,at_count,AT初当たり,AT_CZ,11,回,COUNTER,True,True,True,AT「ゴールデンボーナス」初当たり回数。主判別要素。
+dmm_slot_004.json,dmm_slot_004,スマスロ ビッグドリーム THE GOLDEN PUSHER,legacy_full,bonus_count,DREAM JP BONUS,BONUS,20,回,COUNTER,True,False,True,プレミアム契機は出現率が重く、全設定比較値も不足しているため推測に未使用。
+dmm_slot_004.json,dmm_slot_004,スマスロ ビッグドリーム THE GOLDEN PUSHER,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,30,回,COUNTER,True,False,True,公開比較値未確認のため推測には未使用。
+dmm_slot_005.json,dmm_slot_005,スマスロスーパーリオエース2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_005.json,dmm_slot_005,スマスロスーパーリオエース2,legacy_full,at_count,初当たり,AT_CZ,10,回,COUNTER,True,True,True,公開値のある初当たり合算。現状の主判別要素。
+dmm_slot_005.json,dmm_slot_005,スマスロスーパーリオエース2,legacy_full,big_count,BIG,BONUS,20,回,COUNTER,True,False,True,個別設定差未確認のため記録専用。
+dmm_slot_005.json,dmm_slot_005,スマスロスーパーリオエース2,legacy_full,reg_count,REG/その他ボーナス,BONUS,21,回,COUNTER,True,False,True,個別設定差未確認のため記録専用。
+dmm_slot_005.json,dmm_slot_005,スマスロスーパーリオエース2,legacy_full,cz_count,CZ,AT_CZ,22,回,COUNTER,True,False,True,全設定比較値未公開のため記録専用。
+dmm_slot_006.json,dmm_slot_006,LB スロット GALFY,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_006.json,dmm_slot_006,LB スロット GALFY,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_006.json,dmm_slot_006,LB スロット GALFY,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_006.json,dmm_slot_006,LB スロット GALFY,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,任意入力。BIG+REGの合算管理用
+dmm_slot_007.json,dmm_slot_007,スマスロ ミリオンゴッド-神々の軌跡-,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_007.json,dmm_slot_007,スマスロ ミリオンゴッド-神々の軌跡-,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,現時点の公開値は未採用。入力はできるが推測には未使用。
+dmm_slot_007.json,dmm_slot_007,スマスロ ミリオンゴッド-神々の軌跡-,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_007.json,dmm_slot_007,スマスロ ミリオンゴッド-神々の軌跡-,legacy_full,bonus_count,ボーナス,BONUS,20,回,COUNTER,True,True,True,現時点の公開値は未採用。入力はできるが推測には未使用。
+dmm_slot_007.json,dmm_slot_007,スマスロ ミリオンゴッド-神々の軌跡-,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,True,True,直撃関連の公開差分は未確認のため、現段階では推測に未使用。
+dmm_slot_008.json,dmm_slot_008,アニマルスロット ドッチ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_008.json,dmm_slot_008,アニマルスロット ドッチ,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_008.json,dmm_slot_008,アニマルスロット ドッチ,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_008.json,dmm_slot_008,アニマルスロット ドッチ,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,任意入力。BIG+REGの合算管理用
+dmm_slot_009.json,dmm_slot_009,真打 吉宗,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_009.json,dmm_slot_009,真打 吉宗,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_009.json,dmm_slot_009,真打 吉宗,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_009.json,dmm_slot_009,真打 吉宗,legacy_full,bonus_count,ボーナス,BONUS,20,回,COUNTER,True,True,True,公開差分未確認のため、現段階では推測に未使用。
+dmm_slot_009.json,dmm_slot_009,真打 吉宗,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,True,True,直撃差分未確認のため、現段階では推測に未使用。
+dmm_slot_010.json,dmm_slot_010,LBトリプルクラウンセブン,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_010.json,dmm_slot_010,LBトリプルクラウンセブン,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_010.json,dmm_slot_010,LBトリプルクラウンセブン,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_010.json,dmm_slot_010,LBトリプルクラウンセブン,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,任意入力。BIG+REGの合算管理用
+dmm_slot_011.json,dmm_slot_011,スマスロヨルムンガンド,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_011.json,dmm_slot_011,スマスロヨルムンガンド,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_011.json,dmm_slot_011,スマスロヨルムンガンド,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_011.json,dmm_slot_011,スマスロヨルムンガンド,legacy_full,bonus_count,ボーナス,BONUS,20,回,COUNTER,True,True,True,
+dmm_slot_011.json,dmm_slot_011,スマスロヨルムンガンド,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,True,True,AT直撃や上位契機の補助入力
+dmm_slot_012.json,dmm_slot_012,L虚構推理,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_012.json,dmm_slot_012,L虚構推理,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_012.json,dmm_slot_012,L虚構推理,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_012.json,dmm_slot_012,L虚構推理,legacy_full,bonus_count,ボーナス,BONUS,20,回,COUNTER,True,True,True,
+dmm_slot_012.json,dmm_slot_012,L虚構推理,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,True,True,AT直撃や上位契機の補助入力
+dmm_slot_013.json,dmm_slot_013,A-SLOT+ 異世界かるてっと BT,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_013.json,dmm_slot_013,A-SLOT+ 異世界かるてっと BT,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,False,True,詳細確率未公開のため入力のみ保持
+dmm_slot_013.json,dmm_slot_013,A-SLOT+ 異世界かるてっと BT,legacy_full,reg_count,REG/異世界ボーナス,BONUS,11,回,COUNTER,True,False,True,詳細確率未公開のため入力のみ保持
+dmm_slot_013.json,dmm_slot_013,A-SLOT+ 異世界かるてっと BT,legacy_full,bonus_count,ボーナス合算,BONUS,12,回,COUNTER,True,True,True,公開済み合算確率を反映
+dmm_slot_014.json,dmm_slot_014,Lアクダマドライブ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_014.json,dmm_slot_014,Lアクダマドライブ,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_014.json,dmm_slot_014,Lアクダマドライブ,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_014.json,dmm_slot_014,Lアクダマドライブ,legacy_full,bonus_count,ボーナス,BONUS,20,回,COUNTER,True,True,True,
+dmm_slot_014.json,dmm_slot_014,Lアクダマドライブ,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,True,True,AT直撃や上位契機の補助入力
+dmm_slot_015.json,dmm_slot_015,スマスロ サンダーV,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_015.json,dmm_slot_015,スマスロ サンダーV,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_015.json,dmm_slot_015,スマスロ サンダーV,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_015.json,dmm_slot_015,スマスロ サンダーV,legacy_full,bonus_count,ボーナス合算,BONUS,12,回,COUNTER,True,True,True,任意入力。BIG+REGの合算管理用
+dmm_slot_015.json,dmm_slot_015,スマスロ サンダーV,legacy_full,bell_count,ベル合算,SMALL_ROLE,20,回,COUNTER,True,True,True,通常時ベルA+ベルBの合算。ユニメモ向け
+dmm_slot_015.json,dmm_slot_015,スマスロ サンダーV,legacy_full,suika_count,スイカ合算,SMALL_ROLE,21,回,COUNTER,True,True,True,通常時スイカA+スイカBの合算。ユニメモ向け
+dmm_slot_016.json,dmm_slot_016,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_016.json,dmm_slot_016,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,legacy_full,bonus_count,ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_016.json,dmm_slot_016,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,legacy_full,at_count,ST,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_017.json,dmm_slot_017,スマスロ ハナビ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_017.json,dmm_slot_017,スマスロ ハナビ,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_017.json,dmm_slot_017,スマスロ ハナビ,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_017.json,dmm_slot_017,スマスロ ハナビ,legacy_full,bonus_count,ボーナス合算,BONUS,12,回,COUNTER,True,True,True,任意入力。BIG+REGの合算管理用
+dmm_slot_017.json,dmm_slot_017,スマスロ ハナビ,legacy_full,fuurin_count,風鈴合算,SMALL_ROLE,20,回,COUNTER,True,True,True,通常時風鈴A+Bの合算。ユニメモ向け
+dmm_slot_018.json,dmm_slot_018,スマスロ 攻殻機動隊,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_018.json,dmm_slot_018,スマスロ 攻殻機動隊,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_018.json,dmm_slot_018,スマスロ 攻殻機動隊,legacy_full,at_count,AT初当り,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_019.json,dmm_slot_019,L範馬刃牙,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_019.json,dmm_slot_019,L範馬刃牙,legacy_full,bonus_count,ボーナス,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_019.json,dmm_slot_019,L範馬刃牙,legacy_full,at_count,AT初当り,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_020.json,dmm_slot_020,Lパチスロ 炎炎ノ消防隊2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_020.json,dmm_slot_020,Lパチスロ 炎炎ノ消防隊2,legacy_full,bonus_count,ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_020.json,dmm_slot_020,Lパチスロ 炎炎ノ消防隊2,legacy_full,at_count,炎炎ループ初当り,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_021.json,dmm_slot_021,ミクちゃんとイドムンのミラクルチャレンジ2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_021.json,dmm_slot_021,ミクちゃんとイドムンのミラクルチャレンジ2,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_021.json,dmm_slot_021,ミクちゃんとイドムンのミラクルチャレンジ2,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_021.json,dmm_slot_021,ミクちゃんとイドムンのミラクルチャレンジ2,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,
+dmm_slot_021.json,dmm_slot_021,ミクちゃんとイドムンのミラクルチャレンジ2,legacy_full,cherry_count,チェリー合算,SMALL_ROLE,20,回,COUNTER,True,True,True,
+dmm_slot_022.json,dmm_slot_022,ニューシオサイ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_022.json,dmm_slot_022,ニューシオサイ,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_022.json,dmm_slot_022,ニューシオサイ,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_022.json,dmm_slot_022,ニューシオサイ,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,
+dmm_slot_023.json,dmm_slot_023,パチスロ琉神−30 スイカバージョン,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_023.json,dmm_slot_023,パチスロ琉神−30 スイカバージョン,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_023.json,dmm_slot_023,パチスロ琉神−30 スイカバージョン,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_023.json,dmm_slot_023,パチスロ琉神−30 スイカバージョン,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,legacy_full,bonus_count,ボーナス,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,legacy_full,at_count,ST,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,legacy_full,cz_count,菊チャンス,AT_CZ,12,回,COUNTER,True,True,True,
+dmm_slot_025.json,dmm_slot_025,Lラブ嬢3〜Wご指名はいかがですか？〜,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_025.json,dmm_slot_025,Lラブ嬢3〜Wご指名はいかがですか？〜,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_025.json,dmm_slot_025,Lラブ嬢3〜Wご指名はいかがですか？〜,legacy_full,wlove_rush_count,W LOVE RUSH,SPECIAL,20,回,COUNTER,True,True,True,
+dmm_slot_026.json,dmm_slot_026,L花の慶次～佐渡攻めの章〜,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_026.json,dmm_slot_026,L花の慶次～佐渡攻めの章〜,legacy_full,bonus_count,初当り,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_026.json,dmm_slot_026,L花の慶次～佐渡攻めの章〜,legacy_full,at_count,修羅の刻初当り,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_027.json,dmm_slot_027,スマスロモンキーターンV,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_027.json,dmm_slot_027,スマスロモンキーターンV,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_028.json,dmm_slot_028,クランキークレスト,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_028.json,dmm_slot_028,クランキークレスト,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_028.json,dmm_slot_028,クランキークレスト,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_028.json,dmm_slot_028,クランキークレスト,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,
+dmm_slot_028.json,dmm_slot_028,クランキークレスト,legacy_full,bell_a_count,ベルA,SMALL_ROLE,20,回,COUNTER,True,True,True,
+dmm_slot_029.json,dmm_slot_029,マジカルハロウィン８,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_029.json,dmm_slot_029,マジカルハロウィン８,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_029.json,dmm_slot_029,マジカルハロウィン８,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_029.json,dmm_slot_029,マジカルハロウィン８,legacy_full,cz_count,どこまじ,SPECIAL,20,回,COUNTER,True,True,True,
+dmm_slot_029.json,dmm_slot_029,マジカルハロウィン８,legacy_full,at_count,ART初当り,AT_CZ,21,回,COUNTER,True,True,True,
+dmm_slot_030.json,dmm_slot_030,推しスロ アイドルVer.,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_031.json,dmm_slot_031,パチスロ ケンガンアシュラ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_031.json,dmm_slot_031,パチスロ ケンガンアシュラ,legacy_full,cz_count,CZトータル,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_031.json,dmm_slot_031,パチスロ ケンガンアシュラ,legacy_full,at_count,AT初当り,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_032.json,dmm_slot_032,Sちゅらちゅら,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_032.json,dmm_slot_032,Sちゅらちゅら,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_032.json,dmm_slot_032,Sちゅらちゅら,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_032.json,dmm_slot_032,Sちゅらちゅら,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,任意入力。BIG+REGの合算管理用
+dmm_slot_033.json,dmm_slot_033,L ひぐらしのなく頃に 業,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_033.json,dmm_slot_033,L ひぐらしのなく頃に 業,legacy_full,big_count,BB合算,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_033.json,dmm_slot_033,L ひぐらしのなく頃に 業,legacy_full,reg_count,RB,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_033.json,dmm_slot_033,L ひぐらしのなく頃に 業,legacy_full,bonus_count,ボーナス合算,BONUS,12,回,COUNTER,True,True,True,
+dmm_slot_033.json,dmm_slot_033,L ひぐらしのなく頃に 業,legacy_full,common_bell_count,共通ベル,SMALL_ROLE,20,回,COUNTER,True,True,True,
+dmm_slot_033.json,dmm_slot_033,L ひぐらしのなく頃に 業,legacy_full,suika_count,スイカ,SMALL_ROLE,21,回,COUNTER,True,True,True,
+dmm_slot_034.json,dmm_slot_034,スマスロとある魔術の禁書目録,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_034.json,dmm_slot_034,スマスロとある魔術の禁書目録,legacy_full,cz_count,BREAK BATTLE,AT_CZ,10,回,COUNTER,True,True,True,
+dmm_slot_034.json,dmm_slot_034,スマスロとある魔術の禁書目録,legacy_full,at_count,AT初当り,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_034.json,dmm_slot_034,スマスロとある魔術の禁書目録,legacy_full,ep_sp_count,EP&SP当選,SPECIAL,20,回,COUNTER,True,True,True,
+dmm_slot_035.json,dmm_slot_035,デジスロ JAC INバージョン,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_035.json,dmm_slot_035,デジスロ JAC INバージョン,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_035.json,dmm_slot_035,デジスロ JAC INバージョン,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_035.json,dmm_slot_035,デジスロ JAC INバージョン,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,
+dmm_slot_036.json,dmm_slot_036,L大工の源さん超夢源,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_036.json,dmm_slot_036,L大工の源さん超夢源,legacy_full,bonus_count,ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_036.json,dmm_slot_036,L大工の源さん超夢源,legacy_full,cz_count,源チャレンジ,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_037.json,dmm_slot_037,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_037.json,dmm_slot_037,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,legacy_full,bonus_count,ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_037.json,dmm_slot_037,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,legacy_full,weak_cherry_count,弱チェリー,SMALL_ROLE,20,回,COUNTER,True,True,True,
+dmm_slot_037.json,dmm_slot_037,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,legacy_full,soul_gem_count,ソウルジェム発動,SPECIAL,21,回,COUNTER,True,True,True,
+dmm_slot_038.json,dmm_slot_038,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_038.json,dmm_slot_038,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,legacy_full,big_count,BB合算,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_038.json,dmm_slot_038,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,legacy_full,reg_count,RB合算,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_038.json,dmm_slot_038,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,legacy_full,cz_count,CM初当り,AT_CZ,20,回,COUNTER,True,True,True,
+dmm_slot_038.json,dmm_slot_038,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,legacy_full,at_count,初当り合算,AT_CZ,21,回,COUNTER,True,True,True,
+dmm_slot_039.json,dmm_slot_039,L エヴァンゲリオン ～未来への創造～,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_039.json,dmm_slot_039,L エヴァンゲリオン ～未来への創造～,legacy_full,bonus_count,初当り,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_039.json,dmm_slot_039,L エヴァンゲリオン ～未来への創造～,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,
+dmm_slot_040.json,dmm_slot_040,スーハナライジング-30,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+dmm_slot_040.json,dmm_slot_040,スーハナライジング-30,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+dmm_slot_040.json,dmm_slot_040,スーハナライジング-30,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+dmm_slot_040.json,dmm_slot_040,スーハナライジング-30,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,
+dmm_slot_040.json,dmm_slot_040,スーハナライジング-30,legacy_full,common_bell_a_count,共通ベルA,SMALL_ROLE,20,回,COUNTER,True,True,True,
+eureka_zero.json,eureka_zero,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,modern_inference,total_games,ゲーム数,,,,,,,,
+eureka_zero.json,eureka_zero,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,modern_inference,cz,CZ,,,,,,,,
+eureka_zero.json,eureka_zero,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,modern_inference,at,AT,,,,,,,,
+fire_force.json,fire_force,パチスロ 炎炎ノ消防隊,modern_inference,total_games,ゲーム数,,,,,,,,
+fire_force.json,fire_force,パチスロ 炎炎ノ消防隊,modern_inference,cz,CZ,,,,,,,,
+fire_force.json,fire_force,パチスロ 炎炎ノ消防隊,modern_inference,at,AT,,,,,,,,
+funky_juggler_2.json,funky_juggler_2,ファンキージャグラー2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+funky_juggler_2.json,funky_juggler_2,ファンキージャグラー2,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+funky_juggler_2.json,funky_juggler_2,ファンキージャグラー2,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+funky_juggler_2.json,funky_juggler_2,ファンキージャグラー2,legacy_full,grape_count,ぶどう,SMALL_ROLE,20,回,COUNTER,True,True,True,
+funky_juggler_2.json,funky_juggler_2,ファンキージャグラー2,legacy_full,cherry_count,チェリー,SMALL_ROLE,21,回,COUNTER,True,True,True,補助入力用
+ghost_shell.json,ghost_shell,スマスロ攻殻機動隊,modern_inference,total_games,ゲーム数,,,,,,,,
+ghost_shell.json,ghost_shell,スマスロ攻殻機動隊,modern_inference,cz,CZ,,,,,,,,
+ghost_shell.json,ghost_shell,スマスロ攻殻機動隊,modern_inference,at,AT,,,,,,,,
+godzilla.json,godzilla,Lゴジラ,modern_inference,total_games,ゲーム数,,,,,,,,
+godzilla.json,godzilla,Lゴジラ,modern_inference,cz,CZ,,,,,,,,
+godzilla.json,godzilla,Lゴジラ,modern_inference,at,AT,,,,,,,,
+gogo_juggler_3.json,gogo_juggler_3,ゴーゴージャグラー3,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+gogo_juggler_3.json,gogo_juggler_3,ゴーゴージャグラー3,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+gogo_juggler_3.json,gogo_juggler_3,ゴーゴージャグラー3,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+gogo_juggler_3.json,gogo_juggler_3,ゴーゴージャグラー3,legacy_full,grape_count,ぶどう,SMALL_ROLE,20,回,COUNTER,True,True,True,
+gogo_juggler_3.json,gogo_juggler_3,ゴーゴージャグラー3,legacy_full,cherry_count,チェリー,SMALL_ROLE,21,回,COUNTER,True,True,True,補助入力用
+hanma_baki.json,hanma_baki,L範馬刃牙,modern_inference,total_games,ゲーム数,,,,,,,,
+hanma_baki.json,hanma_baki,L範馬刃牙,modern_inference,cz,CZ,,,,,,,,
+hanma_baki.json,hanma_baki,L範馬刃牙,modern_inference,at,AT,,,,,,,,
+happy_juggler_v3.json,happy_juggler_v3,ハッピージャグラーV III,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+happy_juggler_v3.json,happy_juggler_v3,ハッピージャグラーV III,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+happy_juggler_v3.json,happy_juggler_v3,ハッピージャグラーV III,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+happy_juggler_v3.json,happy_juggler_v3,ハッピージャグラーV III,legacy_full,grape_count,ぶどう,SMALL_ROLE,20,回,COUNTER,True,True,True,
+happy_juggler_v3.json,happy_juggler_v3,ハッピージャグラーV III,legacy_full,cherry_count,チェリー,SMALL_ROLE,21,回,COUNTER,True,True,True,補助入力用
+hokuto.json,hokuto,L北斗の拳,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+hokuto.json,hokuto,L北斗の拳,legacy_full,at_count,初当りBB,AT_CZ,10,回,COUNTER,True,True,True,北斗揃いを含む初当りバトルボーナス回数
+hokuto.json,hokuto,L北斗の拳,legacy_full,weak_suika_count,弱スイカ,SMALL_ROLE,20,回,COUNTER,True,True,True,マイスロ併用推奨。北斗の小役判別で最重要。
+hokuto.json,hokuto,L北斗の拳,legacy_full,strong_suika_count,強スイカ,SMALL_ROLE,21,回,COUNTER,True,True,True,強スイカ合算。試行が重いため補助判別。
+hokuto.json,hokuto,L北斗の拳,legacy_full,reach_role_count,リーチ目役,SMALL_ROLE,22,回,COUNTER,True,True,True,重い分母のため通常は非表示。1回でも強いが過信しない。
+hokuto.json,hokuto,L北斗の拳,legacy_full,cz_count,CZ/天井短縮当選,AT_CZ,30,回,COUNTER,True,False,True,公開の全設定比較値が未整理のため補助入力のみ。
+hokuto.json,hokuto,L北斗の拳,legacy_full,bonus_count,ボーナス,BONUS,31,回,COUNTER,True,False,True,初当りBBと重複しやすいため通常は未使用。
+hokuto.json,hokuto,L北斗の拳,legacy_full,direct_hit_count,直撃AT,SPECIAL,32,回,COUNTER,True,False,True,特例入力用。現段階では推測に未使用。
+hokuto_tensei_2.json,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+hokuto_tensei_2.json,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,闘神演舞の初当り回数。主判別。
+hokuto_tensei_2.json,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,legacy_full,tenha_count,天破の刻,AT_CZ,11,回,COUNTER,True,True,True,設定差があるとされるが、現時点ではメモ入力用。
+hokuto_tensei_2.json,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,legacy_full,direct_hit_count,AT直撃,SPECIAL,12,回,COUNTER,True,False,True,規定あべし以外からのAT直撃メモ。公開比較値未確認のため補助入力のみ。
+hokuto_tensei_2.json,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,legacy_full,small_role_count,レア役/示唆補助,SMALL_ROLE,20,回,COUNTER,True,False,True,弱チェリー・スイカ・枠ランプ示唆などのメモ用。
+im_juggler_ex.json,im_juggler_ex,アイムジャグラーEX,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+im_juggler_ex.json,im_juggler_ex,アイムジャグラーEX,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+im_juggler_ex.json,im_juggler_ex,アイムジャグラーEX,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+im_juggler_ex.json,im_juggler_ex,アイムジャグラーEX,legacy_full,grape_count,ぶどう,SMALL_ROLE,20,回,COUNTER,True,True,True,
+im_juggler_ex.json,im_juggler_ex,アイムジャグラーEX,legacy_full,cherry_count,チェリー,SMALL_ROLE,21,回,COUNTER,True,True,True,補助入力用
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,bonus_count,初当りボーナス,BONUS,10,回,COUNTER,True,True,True,ボーナス初当り。補助判別。
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,at_count,ST,AT_CZ,11,回,COUNTER,True,True,True,AT初当り回数。主判別。
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,common_bell_count,共通6枚ベル,SMALL_ROLE,20,回,COUNTER,True,True,True,平行ベルをカウント。全状態不問で有効な主要判別要素。
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,cz_count,CZ,AT_CZ,30,回,COUNTER,True,False,True,通常時CZ初当り。補助判別用。
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,direct_hit_count,直撃AT,SPECIAL,31,回,COUNTER,True,False,True,重い分母のため補助メモ用。長時間実戦時のみ参考。
+kabaneri_kaimon.json,kabaneri_kaimon,スマスロ 甲鉄城のカバネリ 海門決戦,modern_inference,total_games,ゲーム数,,,,,,,,
+kabaneri_kaimon.json,kabaneri_kaimon,スマスロ 甲鉄城のカバネリ 海門決戦,modern_inference,cz,CZ,,,,,,,,
+kabaneri_kaimon.json,kabaneri_kaimon,スマスロ 甲鉄城のカバネリ 海門決戦,modern_inference,at,AT,,,,,,,,
+kamen_rider_denoh.json,kamen_rider_denoh,L仮面ライダー電王,modern_inference,total_games,ゲーム数,,,,,,,,
+kamen_rider_denoh.json,kamen_rider_denoh,L仮面ライダー電王,modern_inference,cz,CZ,,,,,,,,
+kamen_rider_denoh.json,kamen_rider_denoh,L仮面ライダー電王,modern_inference,at,AT,,,,,,,,
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,通常時CZ初当り。補助判別用。
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,AT初当り回数。主判別。
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,bonus_count,ボーナス,BONUS,20,回,COUNTER,True,False,True,主判別からは除外。演出確認用メモ。
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,False,True,重い分母のため補助メモ用。長時間実戦時のみ参考。
+kengan.json,kengan,Lケンガンアシュラ,modern_inference,total_games,ゲーム数,,,,,,,,
+kengan.json,kengan,Lケンガンアシュラ,modern_inference,cz,CZ,,,,,,,,
+kengan.json,kengan,Lケンガンアシュラ,modern_inference,at,AT,,,,,,,,
+list_slot_001.json,list_slot_001,Lゴブリンスレイヤー,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_001.json,list_slot_001,Lゴブリンスレイヤー,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,AT「ゴブリンスレイヤーRUSH」の初当り回数。主判別項目。
+list_slot_001.json,list_slot_001,Lゴブリンスレイヤー,legacy_full,common_bell_count,共通ベル,SMALL_ROLE,20,回,COUNTER,True,True,True,左から押して揃う共通ベル。設定差が大きい主判別項目。
+list_slot_001.json,list_slot_001,Lゴブリンスレイヤー,legacy_full,cz_count,CZ合算,AT_CZ,30,回,COUNTER,True,True,True,全CZ合算。AT初当りと併せて補助評価に使う。
+list_slot_002.json,list_slot_002,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_002.json,list_slot_002,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_full,bonus_count,初当り(ボーナス+AT),BONUS,10,回,COUNTER,True,True,True,ボーナスと通常時AT直撃を合算した初当り回数。主判別項目。
+list_slot_002.json,list_slot_002,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_full,direct_hit_count,通常時AT直撃,SPECIAL,20,回,COUNTER,True,True,True,強カワループ非滞在状態でのAT直撃。強い補助要素。
+list_slot_002.json,list_slot_002,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_full,cz_count,乙女アタック,AT_CZ,30,回,COUNTER,True,True,True,CZ「乙女アタック」突入回数。補助判別。
+list_slot_003.json,list_slot_003,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_003.json,list_slot_003,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,legacy_full,bonus_count,通常時ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,通常時のボーナス初当り回数。主判別項目。
+list_slot_003.json,list_slot_003,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,legacy_full,at_count,AT初当り,AT_CZ,20,回,COUNTER,True,True,True,AT初当り回数。ボーナス経由を含むトータル。
+list_slot_003.json,list_slot_003,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,legacy_full,direct_hit_count,AT直撃,SPECIAL,30,回,COUNTER,True,True,True,ハズレ/レア役契機を均したAT直撃当選回数。強い補助要素。
+list_slot_004.json,list_slot_004,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_004.json,list_slot_004,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,legacy_full,bonus_count,ボーナス合算,BONUS,10,回,COUNTER,True,True,True,HBB/BB/RBの合算回数。最も素直な主判別項目。
+list_slot_004.json,list_slot_004,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,legacy_full,at_count,RB後AT中 無限移行C.C.揃い,SPECIAL,20,回,COUNTER,True,True,True,REG後50GのAT中に出現した無限移行契機のC.C.揃い回数。重いが高設定ほど強い。
+list_slot_004.json,list_slot_004,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,legacy_full,direct_hit_count,共通ベル+赤同色BB,SPECIAL,30,回,COUNTER,True,True,True,通常時の共通ベル契機による赤同色BB当選回数。極めて重いが設定差が大きい。
+list_slot_005.json,list_slot_005,L転生したらスライムだった件,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_005.json,list_slot_005,L転生したらスライムだった件,legacy_full,bonus_count,夜の蝶,BONUS,10,回,COUNTER,True,True,True,pt特化ゾーン「夜の蝶」当選回数。公開値はあるが差は小さいため補助判別。
+list_slot_005.json,list_slot_005,L転生したらスライムだった件,legacy_full,cz_count,特級魔族討伐戦,AT_CZ,11,回,COUNTER,True,False,True,特級魔族討伐戦。状態依存が強く、現段階では推測計算に未採用。
+list_slot_005.json,list_slot_005,L転生したらスライムだった件,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,AT「転スラっしゅ」初当り回数。主判別項目。
+list_slot_005.json,list_slot_005,L転生したらスライムだった件,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,20,回,COUNTER,True,False,True,転生チャンス経由AT直撃などの補助メモ用。全設定の実数比較値は未採用。
+list_slot_006.json,list_slot_006,スマスロ バイオハザード RE:2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_006.json,list_slot_006,スマスロ バイオハザード RE:2,legacy_full,bonus_count,初当りボーナス,BONUS,10,回,COUNTER,True,False,True,初当りはボーナス+AT確定だが、設定比較の公開値はAT初当り側を採用。
+list_slot_006.json,list_slot_006,スマスロ バイオハザード RE:2,legacy_full,cz_count,Gバトル,AT_CZ,11,回,COUNTER,True,False,True,CZ「Gバトル」回数。設定差比較値が安定していないため今回は推測未使用。
+list_slot_006.json,list_slot_006,スマスロ バイオハザード RE:2,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,AT「ハザードラッシュ」初当り回数。主判別項目。
+list_slot_006.json,list_slot_006,スマスロ バイオハザード RE:2,legacy_full,direct_hit_count,AT直撃,SPECIAL,20,回,COUNTER,True,True,True,通常時チャンス役成立時のAT直撃回数。重い分母だが設定差が大きいため採用。
+list_slot_007.json,list_slot_007,L主役は銭形4,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_007.json,list_slot_007,L主役は銭形4,legacy_full,bonus_count,ゼニガダッシュ,BONUS,10,回,COUNTER,True,True,True,ガッツ獲得特化ゾーン突入率。差は小さいため低ウェイトの補助判別。
+list_slot_007.json,list_slot_007,L主役は銭形4,legacy_full,cz_count,デカチャンス,AT_CZ,11,回,COUNTER,True,False,True,AT中CZ回数入力用。全設定比較値が未整理のため今回は推測未使用。
+list_slot_007.json,list_slot_007,L主役は銭形4,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,AT「逮捕RUSH」初当り。主判別項目。
+list_slot_007.json,list_slot_007,L主役は銭形4,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,20,回,COUNTER,True,False,True,今回の公開比較値では未採用。終了画面/ボイスと合わせて補助メモ用。
+list_slot_008.json,list_slot_008,Lストライクウィッチーズ2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_008.json,list_slot_008,Lストライクウィッチーズ2,legacy_full,bonus_count,ストライクボーナス初当り,BONUS,10,回,COUNTER,True,True,True,初回ボーナス「ストライクボーナス」の初当り回数。主判別項目。
+list_slot_008.json,list_slot_008,Lストライクウィッチーズ2,legacy_full,direct_hit_count,ストライクボーナス直撃,SPECIAL,20,回,COUNTER,True,True,True,CZ非経由のストライクボーナス直撃回数。重いが設定差が非常に大きい。
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,AT「格闘倶楽部RUSH」初当り回数。主判別項目。
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,legacy_full,bell_count,10枚ベル,SMALL_ROLE,20,回,COUNTER,True,True,True,通常時の10枚ベル回数。高設定ほど出現率が高い補助要素。
+list_slot_010.json,list_slot_010,Lベルセルク無双,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_010.json,list_slot_010,Lベルセルク無双,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,AT「無双狂ラッシュ」の初当り回数。主判別項目。
+list_slot_010.json,list_slot_010,Lベルセルク無双,legacy_full,memo_count,示唆メモ回数,SPECIAL,20,回,COUNTER,True,False,True,AT終了画面・称号・バーサーカーモード示唆などを自分用にメモする補助欄。推測計算には未使用。
+list_slot_011.json,list_slot_011,押忍！番長4,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_011.json,list_slot_011,押忍！番長4,legacy_full,bonus_count,初当り合算,BONUS,10,回,COUNTER,True,True,True,ボーナス/ATの初当り合算。主判別項目。
+list_slot_011.json,list_slot_011,押忍！番長4,legacy_full,common_bell_count,共通ベル,SMALL_ROLE,15,回,COUNTER,True,True,True,通常時は左第1停止ベル、AT中はナビなしベル。3000G級の補助判別。
+list_slot_011.json,list_slot_011,押忍！番長4,legacy_full,direct_hit_count,AT直撃,SPECIAL,20,回,COUNTER,True,True,True,通常時の頂RISE/頂RISEUP直撃回数。強い補助要素。
+list_slot_012.json,list_slot_012,L南国育ち,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_012.json,list_slot_012,L南国育ち,legacy_full,bonus_count,ボーナス初当り合算,BONUS,10,回,COUNTER,True,True,True,通常A/B・引き戻し・チャンスなどを含めた初当りボーナス合算。主判別項目。
+list_slot_012.json,list_slot_012,L南国育ち,legacy_full,direct_hit_count,初代モード突入,SPECIAL,20,回,COUNTER,True,True,True,初代モードへ入った回数。サンプルは重いが強い補助要素。
+list_slot_013.json,list_slot_013,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_013.json,list_slot_013,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,legacy_full,bonus_count,ボーナス初当り合算,BONUS,10,回,COUNTER,True,True,True,ボーナス初当り合算。主判別項目。
+list_slot_013.json,list_slot_013,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,legacy_full,cz_count,高確率ZONE当選,AT_CZ,11,回,COUNTER,True,True,True,高確滞在時のチェリー/スイカ契機を含むCZ当選回数。
+list_slot_013.json,list_slot_013,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,legacy_full,direct_hit_count,EPBB直撃,SPECIAL,20,回,COUNTER,True,False,True,ヒドラ目契機のエピソードボーナス直撃回数。強い補助要素。
+list_slot_013.json,list_slot_013,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,legacy_full,bell_count,上段ベル(5枚),SMALL_ROLE,30,回,COUNTER,True,True,True,上段5枚ベルの出現回数。サンプルが取れれば安定要素。
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,bonus_count,エピソードボーナス,BONUS,10,回,COUNTER,True,True,True,エピソードボーナス回数。高設定ほど当選しやすく、設定差が大きい補助判別要素。
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,cz_count,CZ合算,AT_CZ,11,回,COUNTER,True,True,True,レミニセンス＋大喰いの利世の合算回数。主要CZの総回数として扱う。
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,AT初当り。最重要。
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,direct_hit_count,AT直撃,SPECIAL,20,回,COUNTER,True,True,True,通常時リプレイ成立時の一部で当選するAT直撃。1回でも強いが重い分母。
+list_slot_015.json,list_slot_015,Lアズールレーン THE ANIMATION,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_015.json,list_slot_015,Lアズールレーン THE ANIMATION,legacy_full,bonus_count,ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,通常時のボーナス初当り。設定差は小さいため補助。
+list_slot_015.json,list_slot_015,Lアズールレーン THE ANIMATION,legacy_full,at_count,AT初当り,AT_CZ,11,回,COUNTER,True,True,True,AT初当り回数。主判別項目。
+list_slot_015.json,list_slot_015,Lアズールレーン THE ANIMATION,legacy_full,weak_cherry_count,弱チェリー,SMALL_ROLE,20,回,COUNTER,True,True,True,通常時/AT中を通した弱チェリー出現回数。
+list_slot_015.json,list_slot_015,Lアズールレーン THE ANIMATION,legacy_full,weak_suika_count,弱スイカ,SMALL_ROLE,21,回,COUNTER,True,True,True,通常時/AT中を通した弱スイカ出現回数。
+list_slot_015.json,list_slot_015,Lアズールレーン THE ANIMATION,legacy_full,direct_hit_count,青7海戦ボーナス,SPECIAL,30,回,COUNTER,True,False,True,通常時の青7海戦ボーナス当選回数。サンプルは重いが強い補助要素。
+list_slot_016.json,list_slot_016,Lダーリン・イン・ザ・フランキス,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_016.json,list_slot_016,Lダーリン・イン・ザ・フランキス,legacy_full,bonus_count,ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,ボーナス初当り回数。主判別項目。
+list_slot_016.json,list_slot_016,Lダーリン・イン・ザ・フランキス,legacy_full,cz_count,コネクトチャンス,AT_CZ,11,回,COUNTER,True,True,True,コネクトチャンス出現回数。
+list_slot_016.json,list_slot_016,Lダーリン・イン・ザ・フランキス,legacy_full,direct_hit_count,フランクス高確移行,SPECIAL,20,回,COUNTER,True,True,True,通常時からのフランクス高確移行回数。高設定ほど優遇。
+list_slot_017.json,list_slot_017,L咲-Saki- 頂上決戦,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_017.json,list_slot_017,L咲-Saki- 頂上決戦,legacy_full,cz_count,特打(CZ)初当り,AT_CZ,10,回,COUNTER,True,True,True,CZ「特打」の初当り回数。主判別項目。
+list_slot_017.json,list_slot_017,L咲-Saki- 頂上決戦,legacy_full,at_count,頂上決戦(AT)初当り,AT_CZ,20,回,COUNTER,True,True,True,AT「頂上決戦」の初当り回数。補助判別項目。
+list_slot_018.json,list_slot_018,Lうしおととら 白面決戦,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_018.json,list_slot_018,Lうしおととら 白面決戦,legacy_full,cz_count,CZ初当り,AT_CZ,10,回,COUNTER,True,True,True,CZ「うしとらチャンス」初当り回数。主判別項目。
+list_slot_018.json,list_slot_018,Lうしおととら 白面決戦,legacy_full,at_count,AT初当り,AT_CZ,20,回,COUNTER,True,True,True,AT初当り回数。補助判別項目。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,bonus_count,初当り/ボーナス,BONUS,10,回,COUNTER,True,True,True,機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,cz_count,CZ,AT_CZ,11,回,COUNTER,True,True,True,通常時CZ合算回数。襲来ゾーン＋ブレイクダウンを含む総CZ。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,AT初当り回数。今回差分では公開個別分母値の採用を保留。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,20,回,COUNTER,True,False,True,直撃AT・特殊当選・上位契機などの補助記録用。
+list_slot_020.json,list_slot_020,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_020.json,list_slot_020,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_full,bonus_count,ボーナス合算,BONUS,10,回,COUNTER,True,True,True,実質抽選ベースのボーナス合算。A+AT機の土台指標。
+list_slot_020.json,list_slot_020,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_full,cz_count,CZ出現率,AT_CZ,11,回,COUNTER,True,True,True,CZ「レヴュー」系突入の総回数。高設定ほど軽い。
+list_slot_020.json,list_slot_020,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,AT「レヴュー」初当り回数。主判別要素。
+list_slot_020.json,list_slot_020,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_full,direct_hit_count,AT直撃メモ,SPECIAL,20,回,COUNTER,True,False,True,高確中 or 通常時RB後内部ボーナス中の強チェリー/チャンス目からのAT直撃記録。率公表は成立役契機ベースのため補助管理。
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,bonus_count,電王ボーナス初当り,BONUS,10,回,COUNTER,True,True,True,通常時からの電王ボーナス初当り回数。
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,cz_count,俺CLIMAX,AT_CZ,11,回,COUNTER,True,True,True,上位突入契機の俺CLIMAX回数。分母は重いが設定差あり。
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,at_count,AT「俺FEVER」初当り,AT_CZ,12,回,COUNTER,True,True,True,主出玉区間AT初当り回数。
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,direct_hit_count,ゾロ目当選メモ,SPECIAL,20,回,COUNTER,True,False,True,111G〜888Gのゾロ目規定G数での当選挙動メモ用。
+list_slot_022.json,list_slot_022,Lありふれた職業で世界最強,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_022.json,list_slot_022,Lありふれた職業で世界最強,legacy_full,bonus_count,初当り合算,BONUS,10,回,COUNTER,True,True,True,ミュウボーナス+AT初当りの合算。最も安定して見やすい全体指標。
+list_slot_022.json,list_slot_022,Lありふれた職業で世界最強,legacy_full,cz_count,ミュウボーナス,AT_CZ,11,回,COUNTER,True,True,True,初当りボーナス回数。高設定ほど軽い。
+list_slot_022.json,list_slot_022,Lありふれた職業で世界最強,legacy_full,at_count,AT「大迷宮RUSH」初当り,AT_CZ,12,回,COUNTER,True,True,True,AT初当り回数。主判別要素。
+list_slot_022.json,list_slot_022,Lありふれた職業で世界最強,legacy_full,direct_hit_count,直撃/上位契機メモ,SPECIAL,20,回,COUNTER,True,False,True,直撃ATや上位関連の補助記録用。
+list_slot_023.json,list_slot_023,Lパチスロ シン・エヴァンゲリオン,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_023.json,list_slot_023,Lパチスロ シン・エヴァンゲリオン,legacy_full,bonus_count,初当り,BONUS,10,回,COUNTER,True,True,True,通常時からの初当り総数。ST直行型の主判別要素。
+list_slot_023.json,list_slot_023,Lパチスロ シン・エヴァンゲリオン,legacy_full,cz_count,150G以内当選メモ,AT_CZ,11,回,COUNTER,True,False,True,150G以内の初当り回数メモ用。設定差はあるが全初当りに対する割合公表のため補助管理。
+list_slot_023.json,list_slot_023,Lパチスロ シン・エヴァンゲリオン,legacy_full,at_count,作戦ST/ボーナスメモ,AT_CZ,12,回,COUNTER,True,False,True,作戦STやボーナス到達の実戦メモ用。現段階では推測値には未使用。
+list_slot_023.json,list_slot_023,Lパチスロ シン・エヴァンゲリオン,legacy_full,direct_hit_count,上位/特殊契機メモ,SPECIAL,20,回,COUNTER,True,False,True,裏CODE:999や特化直結などの補助記録用。
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,bonus_count,初当りAT,BONUS,10,回,COUNTER,True,True,True,通常時からの初当りAT回数。主判別要素。
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,cz_count,CZ「大狂乱のネコ島」,AT_CZ,11,回,COUNTER,True,True,True,AT当選チャンスとなるCZ出現率。
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,at_count,上位/特殊契機メモ,AT_CZ,12,回,COUNTER,True,False,True,BIG BANG揃い・夢想突入などの補助記録用。
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,direct_hit_count,222G天井当選メモ,SPECIAL,20,回,COUNTER,True,False,True,222G+α選択時のメモ用。高設定ほど選択率が高い。
+list_slot_025.json,list_slot_025,パチスロ 炎炎ノ消防隊,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_025.json,list_slot_025,パチスロ 炎炎ノ消防隊,legacy_full,bonus_count,初当りボーナス,BONUS,10,回,COUNTER,True,True,True,通常時ボーナス初当り。十字目変換/十字目契機の差を含む主判別。
+list_slot_025.json,list_slot_025,パチスロ 炎炎ノ消防隊,legacy_full,big_count,補助メモ,BONUS,20,回,COUNTER,True,False,True,終了画面・規定ゲーム数示唆などの補助記録用。比較値は未採用。
+list_slot_025.json,list_slot_025,パチスロ 炎炎ノ消防隊,legacy_full,at_count,炎炎激闘,AT_CZ,30,回,COUNTER,True,True,True,炎炎激闘初当り。ボーナスループの入口として補助判別に使用。
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,legacy_full,bonus_count,CZ+AT初当り,BONUS,10,回,COUNTER,True,True,True,周期到達からのCZまたはAT初当り合算。全体の最重要指標。
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,legacy_full,cz_count,CZ「フェスティバルチャレンジ」初当り,AT_CZ,11,回,COUNTER,True,True,True,CZ初当り回数。
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,CZ非経由を含むAT初当り回数。
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,legacy_full,direct_hit_count,AT直行メモ,SPECIAL,20,回,COUNTER,True,False,True,CZ非経由のAT直行回数メモ用。高設定ほど優遇。
+list_slot_027.json,list_slot_027,パチスロ アクエリオン ALL STARS,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_027.json,list_slot_027,パチスロ アクエリオン ALL STARS,legacy_full,cz_count,CZ初当り,AT_CZ,10,回,COUNTER,True,True,True,CZトータル当選回数。AT当選前の主判別。
+list_slot_027.json,list_slot_027,パチスロ アクエリオン ALL STARS,legacy_full,at_count,AT初当り,AT_CZ,20,回,COUNTER,True,True,True,AT「アクエリオンRUSH」初当り回数。
+list_slot_028.json,list_slot_028,パチスロ鉄拳5,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_028.json,list_slot_028,パチスロ鉄拳5,legacy_full,bonus_count,ボーナス合算,BONUS,10,回,COUNTER,True,True,True,BIG+REGの合算初当り。
+list_slot_028.json,list_slot_028,パチスロ鉄拳5,legacy_full,at_count,AT初当り,AT_CZ,20,回,COUNTER,True,True,True,AT「鉄拳ラッシュ」初当り回数。
+list_slot_029.json,list_slot_029,パチスロ幼女戦記,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_029.json,list_slot_029,パチスロ幼女戦記,legacy_full,bonus_count,ボーナス合算,BONUS,10,回,COUNTER,True,True,True,幼女戦記BONUS+FAIRY BONUS合算。
+list_slot_029.json,list_slot_029,パチスロ幼女戦記,legacy_full,at_count,AT初当り,AT_CZ,20,回,COUNTER,True,True,True,AT「白銀RUSH」初当り回数。
+list_slot_029.json,list_slot_029,パチスロ幼女戦記,legacy_full,common_9bell_count,共通9枚ベル,SMALL_ROLE,30,回,COUNTER,True,False,True,通常時/AT中の共通9枚ベル。マイスロ等で把握できる場合の補助要素。
+list_slot_030.json,list_slot_030,スマスロ シャーマンキング,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_030.json,list_slot_030,スマスロ シャーマンキング,legacy_full,bonus_count,通常時初当り,BONUS,10,回,COUNTER,True,True,True,シャーマンボーナス/エピソードボーナス/ボーナス非経由AT直撃を含む通常時初当り合算。
+list_slot_030.json,list_slot_030,スマスロ シャーマンキング,legacy_full,at_count,AT初当り,AT_CZ,20,回,COUNTER,True,True,True,AT「シャーマンファイト」初当り回数。
+list_slot_031.json,list_slot_031,パチスロ 新鬼武者2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_031.json,list_slot_031,パチスロ 新鬼武者2,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,AT「蒼剣ラッシュ」初当り回数。
+list_slot_031.json,list_slot_031,パチスロ 新鬼武者2,legacy_full,direct_hit_count,直撃AT(リーチ目),SPECIAL,20,回,COUNTER,True,True,True,通常時リーチ目出現からの直撃AT回数。非常に重いが設定差が大きい。
+list_slot_032.json,list_slot_032,FAIRY TAIL2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_032.json,list_slot_032,FAIRY TAIL2,legacy_full,cz_count,CZ「FAIRY BATTLE CHALLENGE」,AT_CZ,10,回,COUNTER,True,True,True,通常時のCZ当選回数。主判別補助。
+list_slot_032.json,list_slot_032,FAIRY TAIL2,legacy_full,at_count,AT「FAIRY BATTLE」初当り,AT_CZ,20,回,COUNTER,True,True,True,AT初当り回数。主判別項目。
+list_slot_033.json,list_slot_033,ペルソナ5,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_033.json,list_slot_033,ペルソナ5,legacy_full,bonus_count,初当り,BONUS,10,回,COUNTER,True,True,True,通常時の初当り回数。主判別項目。
+list_slot_033.json,list_slot_033,ペルソナ5,legacy_full,at_count,AT「テイクユアハート」初当り,AT_CZ,20,回,COUNTER,True,True,True,AT初当り回数。補助判別。
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,legacy_full,bonus_count,初当り/ボーナス,BONUS,10,回,COUNTER,True,True,True,機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,legacy_full,cz_count,CZ,AT_CZ,11,回,COUNTER,True,True,True,CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,legacy_full,at_count,AT「ウェイブウォー」初当り,AT_CZ,12,回,COUNTER,True,True,True,CZ成功・通常時直撃を含むAT初当り回数。
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,legacy_full,direct_hit_count,通常時直撃AT,SPECIAL,20,回,COUNTER,True,False,True,通常時直撃AT。設定6のみ目立って出やすい傾向だが、全設定比較値未開示のためメモ用途。
+list_slot_035.json,list_slot_035,S BOØWY,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_035.json,list_slot_035,S BOØWY,legacy_full,at_count,AT「GIGS」出現,AT_CZ,10,回,COUNTER,True,True,True,通常AT出現回数。主判別項目。
+list_slot_035.json,list_slot_035,S BOØWY,legacy_full,bonus_count,BOØWY揃い/上位契機,SPECIAL,20,回,COUNTER,True,False,True,BOØWY揃いなどの強契機メモ用。推測値には未使用。
+list_slot_036.json,list_slot_036,バイオハザード ヴィレッジ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_036.json,list_slot_036,バイオハザード ヴィレッジ,legacy_full,bonus_count,初当り,BONUS,10,回,COUNTER,True,True,True,通常時の初当り回数。主判別項目。
+list_slot_036.json,list_slot_036,バイオハザード ヴィレッジ,legacy_full,at_count,AT「ハザードラッシュ」初当り,AT_CZ,20,回,COUNTER,True,True,True,AT初当り回数。補助判別。
+list_slot_036.json,list_slot_036,バイオハザード ヴィレッジ,legacy_full,weak_cherry_count,弱チェリー,SMALL_ROLE,30,回,COUNTER,True,False,True,弱チェリー出現回数。長時間実戦の補助判別。
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,legacy_full,bonus_count,ボーナス合算,BONUS,10,回,COUNTER,True,True,True,ファミリアボーナス+ファミリアチャンス合算。主判別項目。
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,legacy_full,big_count,ファミリアボーナス,BONUS,20,回,COUNTER,True,True,True,青7/赤7/赤赤白を含むFB回数。補助判別。
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,legacy_full,reg_count,ファミリアチャンス,BONUS,30,回,COUNTER,True,True,True,RB相当のFC回数。補助判別。
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,legacy_full,cz_count,CZ,AT_CZ,40,回,COUNTER,True,False,True,ボーナス後のファミリアホーム/CZ当選回数。現在は補助記録のみ。
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,legacy_full,at_count,ART初当り,AT_CZ,15,回,COUNTER,True,True,True,ART初当り。最重要。
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,bonus_count,初当り/ボーナス,BONUS,10,回,COUNTER,True,False,True,機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,cz_count,CZ,AT_CZ,11,回,COUNTER,True,False,True,CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,at_count,AT「殲滅ラッシュ」初当り,AT_CZ,12,回,COUNTER,True,True,True,規定pt到達や一部契機からのAT初当り。
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,20,回,COUNTER,True,False,True,直撃AT・特殊当選・上位契機などの補助記録用。
+list_slot_039.json,list_slot_039,この素晴らしい世界に祝福を！,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_039.json,list_slot_039,この素晴らしい世界に祝福を！,legacy_full,bonus_count,初当り/ボーナス,BONUS,10,回,COUNTER,True,True,True,機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。
+list_slot_039.json,list_slot_039,この素晴らしい世界に祝福を！,legacy_full,cz_count,CZ,AT_CZ,11,回,COUNTER,True,True,True,CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。
+list_slot_039.json,list_slot_039,この素晴らしい世界に祝福を！,legacy_full,at_count,AT初当り,AT_CZ,12,回,COUNTER,True,True,True,AT「このすばチャンス」初当り回数。
+list_slot_039.json,list_slot_039,この素晴らしい世界に祝福を！,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,20,回,COUNTER,True,False,True,直撃AT・特殊当選・上位契機などの補助記録用。
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,bonus_count,シングル7揃い,BONUS,10,回,COUNTER,True,True,True,ボーナス初当り回数。
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,cz_count,CZ「ICPOチャレンジ」,AT_CZ,11,回,COUNTER,True,True,True,CZ突入回数。成功率は別途補助判断。
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,at_count,ダブル7揃い/AT,AT_CZ,12,回,COUNTER,True,True,True,スーパーヒーロー初当り回数。
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,direct_hit_count,AT直行/直撃メモ,SPECIAL,20,回,COUNTER,True,False,True,強チェリー契機AT直行などの実戦メモ。公開値は割合ベース中心のため現段階では推測計算に未採用。
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,bonus_count,初当り/ボーナス,BONUS,10,回,COUNTER,True,True,True,機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,cz_count,CZ,AT_CZ,11,回,COUNTER,True,True,True,CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,at_count,AT「ええじゃないかRUSH」初当り,AT_CZ,12,回,COUNTER,True,True,True,初当りはすべてAT。
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,direct_hit_count,直撃/特殊契機,SPECIAL,20,回,COUNTER,True,False,True,直撃AT・特殊当選・上位契機などの補助記録用。
+list_slot_042.json,list_slot_042,ニューパルサーSP4,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_042.json,list_slot_042,ニューパルサーSP4,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BB確率は補助指標。
+list_slot_042.json,list_slot_042,ニューパルサーSP4,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REG確率を主軸に評価。
+list_slot_042.json,list_slot_042,ニューパルサーSP4,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_043.json,list_slot_043,ニューパルサーDX3,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_043.json,list_slot_043,ニューパルサーDX3,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BBは補助指標。
+list_slot_043.json,list_slot_043,ニューパルサーDX3,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REGを主判別に使用。
+list_slot_043.json,list_slot_043,ニューパルサーDX3,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_044.json,list_slot_044,ハナビ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_044.json,list_slot_044,ハナビ,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BBは補助指標。
+list_slot_044.json,list_slot_044,ハナビ,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REGを主判別に使用。
+list_slot_044.json,list_slot_044,ハナビ,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_044.json,list_slot_044,ハナビ,legacy_full,bell_count,ベルA+B,SMALL_ROLE,20,回,COUNTER,True,True,True,通常時ベルA/B合算。ユニメモ等での記録推奨。
+list_slot_045.json,list_slot_045,バーサスリヴァイズ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_045.json,list_slot_045,バーサスリヴァイズ,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BBは補助指標。
+list_slot_045.json,list_slot_045,バーサスリヴァイズ,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REGを主判別に使用。
+list_slot_045.json,list_slot_045,バーサスリヴァイズ,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_045.json,list_slot_045,バーサスリヴァイズ,legacy_full,bell_count,ベルA+B,SMALL_ROLE,20,回,COUNTER,True,True,True,通常時ベルA/B合算。
+list_slot_045.json,list_slot_045,バーサスリヴァイズ,legacy_full,vs_game_miss_count,VS GAME中ハズレ,SPECIAL,30,回,COUNTER,True,True,True,RT「VS GAME」中のハズレ。取りやすいRT判別要素。
+list_slot_046.json,list_slot_046,サンダーVライトニング,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_046.json,list_slot_046,サンダーVライトニング,legacy_full,big_count,BIG合成,BONUS,10,回,COUNTER,True,True,True,VBIG+赤7BIGの合成。
+list_slot_046.json,list_slot_046,サンダーVライトニング,legacy_full,bonus_count,BIG合成,BONUS,11,回,COUNTER,True,False,True,big_countと同義の補助欄。
+list_slot_047.json,list_slot_047,アレックス ブライト,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_047.json,list_slot_047,アレックス ブライト,legacy_full,big_count,BB,BONUS,10,回,COUNTER,True,True,True,BBは補助指標。
+list_slot_047.json,list_slot_047,アレックス ブライト,legacy_full,reg_count,RB,BONUS,11,回,COUNTER,True,True,True,RBを主判別に使用。
+list_slot_047.json,list_slot_047,アレックス ブライト,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BB+RBの合算管理用。
+list_slot_047.json,list_slot_047,アレックス ブライト,legacy_full,feather_count,羽,SMALL_ROLE,20,回,COUNTER,True,True,True,羽揃い（羽・羽・鳥）。
+list_slot_047.json,list_slot_047,アレックス ブライト,legacy_full,three_coin_role_count,3枚役,SMALL_ROLE,21,回,COUNTER,True,True,True,3枚役（7・☆・☆）。
+list_slot_047.json,list_slot_047,アレックス ブライト,legacy_full,cherry_count,チェリー合算,SMALL_ROLE,22,回,COUNTER,True,True,True,チェリーA/B合算。
+list_slot_048.json,list_slot_048,ディスクアップ2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_048.json,list_slot_048,ディスクアップ2,legacy_full,big_count,BB,BONUS,10,回,COUNTER,True,True,True,BBは補助指標。
+list_slot_048.json,list_slot_048,ディスクアップ2,legacy_full,reg_count,RB,BONUS,11,回,COUNTER,True,True,True,RBを主判別に使用。
+list_slot_048.json,list_slot_048,ディスクアップ2,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BB+RBの合算管理用。
+list_slot_049.json,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_049.json,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,legacy_full,big_count,BB,BONUS,10,回,COUNTER,True,True,True,BBは補助指標。
+list_slot_049.json,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,legacy_full,reg_count,RB,BONUS,11,回,COUNTER,True,True,True,RBを主判別に使用。
+list_slot_049.json,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BB+RBの合算管理用。
+list_slot_049.json,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,legacy_full,three_coin_role_count,3枚役,SMALL_ROLE,20,回,COUNTER,True,True,True,通常時3枚役（7・☆・☆）。
+list_slot_049.json,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,legacy_full,suika_count,スイカA+B,SMALL_ROLE,21,回,COUNTER,True,True,True,通常時スイカA/B合算。
+list_slot_050.json,list_slot_050,ファミスタ回胴版!!,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_050.json,list_slot_050,ファミスタ回胴版!!,legacy_full,big_count,BB,BONUS,10,回,COUNTER,True,True,True,BBは補助指標。
+list_slot_050.json,list_slot_050,ファミスタ回胴版!!,legacy_full,reg_count,RB,BONUS,11,回,COUNTER,True,True,True,RBを主判別に使用。
+list_slot_050.json,list_slot_050,ファミスタ回胴版!!,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BB+RBの合算管理用。
+list_slot_051.json,list_slot_051,沖ドキ！GOLD,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_051.json,list_slot_051,沖ドキ！GOLD,legacy_full,bonus_count,ボーナス初当り,AT_CZ,10,回,COUNTER,True,True,True,天国連を除いた初当り回数を入力。主判別項目。
+list_slot_051.json,list_slot_051,沖ドキ！GOLD,legacy_full,big_count,BIG初当り,BONUS,11,回,COUNTER,True,True,True,通常時のBIG初当り回数。補助評価用。
+list_slot_051.json,list_slot_051,沖ドキ！GOLD,legacy_full,reg_count,REG初当り,BONUS,12,回,COUNTER,True,True,True,通常時のREG初当り回数。補助評価用。
+list_slot_051.json,list_slot_051,沖ドキ！GOLD,legacy_full,common_bell_count,共通ベル,SMALL_ROLE,20,回,COUNTER,True,False,True,実戦上の設定差が示されているが全設定比較が未完のため補助入力のみ。
+list_slot_051.json,list_slot_051,沖ドキ！GOLD,legacy_full,cherry_count,チェリー,SMALL_ROLE,21,回,COUNTER,True,False,True,チェリーA/Bをまとめた補助入力。
+list_slot_052.json,list_slot_052,沖ドキ！DUO,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_052.json,list_slot_052,沖ドキ！DUO,legacy_full,bonus_count,ボーナス初当り,AT_CZ,10,回,COUNTER,True,True,True,天国連を除いた初当り回数を入力。主判別項目。
+list_slot_052.json,list_slot_052,沖ドキ！DUO,legacy_full,big_count,BIG初当り,BONUS,11,回,COUNTER,True,True,True,通常時のBIG初当り回数。
+list_slot_052.json,list_slot_052,沖ドキ！DUO,legacy_full,reg_count,REG初当り,BONUS,12,回,COUNTER,True,True,True,通常時のREG初当り回数。
+list_slot_052.json,list_slot_052,沖ドキ！DUO,legacy_full,cherry_count,チェリー,SMALL_ROLE,20,回,COUNTER,True,False,True,角チェリー・中段チェリー等をまとめた補助入力。
+list_slot_053.json,list_slot_053,スマート沖スロ 沖ドキ！DUO-30 アンコール,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_053.json,list_slot_053,スマート沖スロ 沖ドキ！DUO-30 アンコール,legacy_full,bonus_count,ボーナス初当り,AT_CZ,10,回,COUNTER,True,True,True,通常時の初当り回数を入力。主判別項目。
+list_slot_053.json,list_slot_053,スマート沖スロ 沖ドキ！DUO-30 アンコール,legacy_full,big_count,BIG初当り,BONUS,11,回,COUNTER,True,True,True,通常時BIG初当り回数。補助評価。
+list_slot_053.json,list_slot_053,スマート沖スロ 沖ドキ！DUO-30 アンコール,legacy_full,reg_count,REG初当り,BONUS,12,回,COUNTER,True,True,True,通常時REG初当り回数。補助評価。
+list_slot_053.json,list_slot_053,スマート沖スロ 沖ドキ！DUO-30 アンコール,legacy_full,cherry_count,角チェリー,SMALL_ROLE,20,回,COUNTER,True,False,True,公開解析で設定差が示される小役。今回は入力欄のみ用意。
+list_slot_054.json,list_slot_054,チバリヨ2プラス,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_054.json,list_slot_054,チバリヨ2プラス,legacy_full,bonus_count,ボーナス初当り,AT_CZ,10,回,COUNTER,True,True,True,通常時の初当り回数。主判別項目。
+list_slot_054.json,list_slot_054,チバリヨ2プラス,legacy_full,weak_cherry_count,弱チェリー,SMALL_ROLE,20,回,COUNTER,True,False,True,設定差があるが実戦入力負担が高いため補助用途。
+list_slot_054.json,list_slot_054,チバリヨ2プラス,legacy_full,strong_cherry_count,強チェリー,SMALL_ROLE,21,回,COUNTER,True,False,True,補助入力用。
+list_slot_054.json,list_slot_054,チバリヨ2プラス,legacy_full,at_count,連荘/AT当選,AT_CZ,30,回,COUNTER,True,False,True,連荘性能把握用の補助カウンタ。
+list_slot_055.json,list_slot_055,スマート沖スロ スターハナハナ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_055.json,list_slot_055,スマート沖スロ スターハナハナ,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BB確率は補助指標。
+list_slot_055.json,list_slot_055,スマート沖スロ スターハナハナ,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REG確率をやや重めに評価。
+list_slot_055.json,list_slot_055,スマート沖スロ スターハナハナ,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_055.json,list_slot_055,スマート沖スロ スターハナハナ,legacy_full,small_role_count,小役/示唆補助,SMALL_ROLE,20,回,COUNTER,True,False,True,スイカや示唆系メモ用。
+list_slot_056.json,list_slot_056,スマート沖スロ ニューキングハナハナ-30,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_056.json,list_slot_056,スマート沖スロ ニューキングハナハナ-30,legacy_full,big_count,BIG(BT込),BONUS,10,回,COUNTER,True,True,True,BB確率は補助指標。
+list_slot_056.json,list_slot_056,スマート沖スロ ニューキングハナハナ-30,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REG確率を主軸に評価。
+list_slot_056.json,list_slot_056,スマート沖スロ ニューキングハナハナ-30,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_056.json,list_slot_056,スマート沖スロ ニューキングハナハナ-30,legacy_full,small_role_count,小役/示唆補助,SMALL_ROLE,20,回,COUNTER,True,False,True,スイカやハイビスカスランプ示唆メモ用。
+list_slot_057.json,list_slot_057,ニューキングハナハナ-30,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_057.json,list_slot_057,ニューキングハナハナ-30,legacy_full,big_count,BIG(BT込),BONUS,10,回,COUNTER,True,True,True,BB確率は補助指標。
+list_slot_057.json,list_slot_057,ニューキングハナハナ-30,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REG確率を主軸に評価。
+list_slot_057.json,list_slot_057,ニューキングハナハナ-30,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_057.json,list_slot_057,ニューキングハナハナ-30,legacy_full,small_role_count,小役/示唆補助,SMALL_ROLE,20,回,COUNTER,True,False,True,スイカやハイビスカスランプ示唆メモ用。
+list_slot_058.json,list_slot_058,ドラゴンハナハナ～閃光～ 30,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_058.json,list_slot_058,ドラゴンハナハナ～閃光～ 30,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BB確率は補助指標。
+list_slot_058.json,list_slot_058,ドラゴンハナハナ～閃光～ 30,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REG確率を主軸に評価。
+list_slot_058.json,list_slot_058,ドラゴンハナハナ～閃光～ 30,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_058.json,list_slot_058,ドラゴンハナハナ～閃光～ 30,legacy_full,suika_count,BIG中スイカ,SMALL_ROLE,20,回,COUNTER,True,False,True,BIG中スイカは高設定ほど優遇。今回は補助入力のみ。
+list_slot_059.json,list_slot_059,キングハナハナ-30,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_059.json,list_slot_059,キングハナハナ-30,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BB確率は補助指標。
+list_slot_059.json,list_slot_059,キングハナハナ-30,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REG確率を主軸に評価。
+list_slot_059.json,list_slot_059,キングハナハナ-30,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_059.json,list_slot_059,キングハナハナ-30,legacy_full,small_role_count,小役/示唆補助,SMALL_ROLE,20,回,COUNTER,True,False,True,スイカやフェザーランプ示唆メモ用。
+list_slot_060.json,list_slot_060,ハナハナホウオウ～天翔～-30,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_060.json,list_slot_060,ハナハナホウオウ～天翔～-30,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,BB確率は補助指標。
+list_slot_060.json,list_slot_060,ハナハナホウオウ～天翔～-30,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,REG確率を主軸に評価。
+list_slot_060.json,list_slot_060,ハナハナホウオウ～天翔～-30,legacy_full,bonus_count,合算ボーナス,BONUS,12,回,COUNTER,True,True,True,BIG+REGの合算管理用。
+list_slot_060.json,list_slot_060,ハナハナホウオウ～天翔～-30,legacy_full,small_role_count,小役/示唆補助,SMALL_ROLE,20,回,COUNTER,True,False,True,ランプ示唆や小役メモ用。
+list_slot_061.json,list_slot_061,麻雀物語,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_061.json,list_slot_061,麻雀物語,legacy_full,bonus_count,初当り合算,BONUS,10,回,COUNTER,True,True,True,通常時のボーナス or ATの初当り合算。主判別項目。
+list_slot_061.json,list_slot_061,麻雀物語,legacy_full,big_count,通常時ボーナス初当り,BONUS,20,回,COUNTER,True,True,True,通常時ボーナス初当り回数。補助評価用。
+list_slot_061.json,list_slot_061,麻雀物語,legacy_full,at_count,AT初当り,AT_CZ,30,回,COUNTER,True,True,True,AT初当り回数。補助評価用。
+list_slot_061.json,list_slot_061,麻雀物語,legacy_full,direct_hit_count,AT直撃,SPECIAL,31,回,COUNTER,True,True,True,通常時AT直撃回数。分母は重いが設定差が大きいので1回でも重要。前兆中昇格を除いた数値ベース。
+list_slot_062.json,list_slot_062,戦姫絶唱シンフォギア 正義の歌,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_062.json,list_slot_062,戦姫絶唱シンフォギア 正義の歌,legacy_full,at_count,AT初当り,AT_CZ,10,回,COUNTER,True,True,True,AT初当り回数。主判別項目。
+list_slot_062.json,list_slot_062,戦姫絶唱シンフォギア 正義の歌,legacy_full,direct_hit_count,最終決戦,SPECIAL,20,回,COUNTER,True,True,True,上位CZ「最終決戦」当選回数。分母は重いが設定差が大きい補助項目。
+list_slot_063.json,list_slot_063,Lパチスロうみねこのなく頃に2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+list_slot_063.json,list_slot_063,Lパチスロうみねこのなく頃に2,legacy_full,bonus_count,ボーナス合算,BONUS,10,回,COUNTER,True,True,True,BIG+REGの合算回数。完走型ARTのためデータ機上では若干重く見える場合がある。
+list_slot_063.json,list_slot_063,Lパチスロうみねこのなく頃に2,legacy_full,direct_hit_count,REG中斜め青7揃い,SPECIAL,20,回,COUNTER,True,True,True,REG中の斜め青7揃い回数。分母は重いが設定差が大きい。
+list_slot_063.json,list_slot_063,Lパチスロうみねこのなく頃に2,legacy_full,cz_count,運命分岐モード,AT_CZ,30,回,COUNTER,True,False,True,CZ当選回数の補助記録用。今回は比較値未反映。
+list_slot_063.json,list_slot_063,Lパチスロうみねこのなく頃に2,legacy_full,at_count,ART当選,AT_CZ,31,回,COUNTER,True,False,True,幻想論戦などART当選回数の補助記録用。今回は比較値未反映。
+lovejo3.json,lovejo3,ラブ嬢3～Wご指名はいかがですか？～,modern_inference,total_games,ゲーム数,,,,,,,,
+lovejo3.json,lovejo3,ラブ嬢3～Wご指名はいかがですか？～,modern_inference,cz,CZ,,,,,,,,
+lovejo3.json,lovejo3,ラブ嬢3～Wご指名はいかがですか？～,modern_inference,at,AT,,,,,,,,
+madoka_forte.json,madoka_forte,劇場版魔法少女まどか☆マギカ f-フォルテ-,modern_inference,total_games,ゲーム数,,,,,,,,
+madoka_forte.json,madoka_forte,劇場版魔法少女まどか☆マギカ f-フォルテ-,modern_inference,cz,CZ,,,,,,,,
+madoka_forte.json,madoka_forte,劇場版魔法少女まどか☆マギカ f-フォルテ-,modern_inference,at,AT,,,,,,,,
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,通常時CZ初当り。AT機の補助判別用。
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,at_count,AT,AT_CZ,11,回,COUNTER,True,True,True,AT初当り回数。主判別。
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,bonus_count,ボーナス,BONUS,20,回,COUNTER,True,False,True,ATと相関が強いため推測では未使用。履歴メモ用。
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,False,True,重い分母のため補助メモ用。長時間実戦時のみ参考。
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,weak_cherry_count,弱チェリー,SMALL_ROLE,40,回,COUNTER,True,True,False,小役の補助判別。サンプル不足時は過信しない。
+my_juggler_v.json,my_juggler_v,マイジャグラーV,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+my_juggler_v.json,my_juggler_v,マイジャグラーV,legacy_full,big_count,BIG,BONUS,10,回,COUNTER,True,True,True,
+my_juggler_v.json,my_juggler_v,マイジャグラーV,legacy_full,reg_count,REG,BONUS,11,回,COUNTER,True,True,True,
+my_juggler_v.json,my_juggler_v,マイジャグラーV,legacy_full,grape_count,ぶどう,SMALL_ROLE,20,回,COUNTER,True,True,True,
+my_juggler_v.json,my_juggler_v,マイジャグラーV,legacy_full,cherry_count,チェリー,SMALL_ROLE,21,回,COUNTER,True,True,True,補助入力用
+nyanko.json,nyanko,Lにゃんこ大戦争 超神速,modern_inference,total_games,ゲーム数,,,,,,,,
+nyanko.json,nyanko,Lにゃんこ大戦争 超神速,modern_inference,cz,CZ,,,,,,,,
+nyanko.json,nyanko,Lにゃんこ大戦争 超神速,modern_inference,at,AT,,,,,,,,
+revue_starlight.json,revue_starlight,L少女☆歌劇 レヴュースタァライト -The SLOT-,modern_inference,total_games,ゲーム数,,,,,,,,
+revue_starlight.json,revue_starlight,L少女☆歌劇 レヴュースタァライト -The SLOT-,modern_inference,cz,CZ,,,,,,,,
+revue_starlight.json,revue_starlight,L少女☆歌劇 レヴュースタァライト -The SLOT-,modern_inference,at,AT,,,,,,,,
+ring_v.json,ring_v,Lリングにかけろ1 V,modern_inference,total_games,ゲーム数,,,,,,,,
+ring_v.json,ring_v,Lリングにかけろ1 V,modern_inference,cz,CZ,,,,,,,,
+ring_v.json,ring_v,Lリングにかけろ1 V,modern_inference,at,AT,,,,,,,,
+saki_top.json,saki_top,L咲-Saki- 頂上決戦,modern_inference,total_games,ゲーム数,,,,,,,,
+saki_top.json,saki_top,L咲-Saki- 頂上決戦,modern_inference,cz,CZ,,,,,,,,
+saki_top.json,saki_top,L咲-Saki- 頂上決戦,modern_inference,at,AT,,,,,,,,
+sengoku_otome4.json,sengoku_otome4,L戦国乙女4 戦乱に閃く炯眼の軍師,modern_inference,total_games,ゲーム数,,,,,,,,
+sengoku_otome4.json,sengoku_otome4,L戦国乙女4 戦乱に閃く炯眼の軍師,modern_inference,cz,CZ,,,,,,,,
+sengoku_otome4.json,sengoku_otome4,L戦国乙女4 戦乱に閃く炯眼の軍師,modern_inference,at,AT,,,,,,,,
+shin_eva.json,shin_eva,Lパチスロ シン・エヴァンゲリオン,modern_inference,total_games,ゲーム数,,,,,,,,
+shin_eva.json,shin_eva,Lパチスロ シン・エヴァンゲリオン,modern_inference,cz,CZ,,,,,,,,
+shin_eva.json,shin_eva,Lパチスロ シン・エヴァンゲリオン,modern_inference,at,AT,,,,,,,,
+strike_witches2.json,strike_witches2,Lストライクウィッチーズ2,modern_inference,total_games,ゲーム数,,,,,,,,
+strike_witches2.json,strike_witches2,Lストライクウィッチーズ2,modern_inference,cz,CZ,,,,,,,,
+strike_witches2.json,strike_witches2,Lストライクウィッチーズ2,modern_inference,at,AT,,,,,,,,
+tensei_slime.json,tensei_slime,L転生したらスライムだった件,modern_inference,total_games,ゲーム数,,,,,,,,
+tensei_slime.json,tensei_slime,L転生したらスライムだった件,modern_inference,cz,CZ,,,,,,,,
+tensei_slime.json,tensei_slime,L転生したらスライムだった件,modern_inference,at,AT,,,,,,,,
+toaru.json,toaru,スマスロ とある魔術の禁書目録,modern_inference,total_games,ゲーム数,,,,,,,,
+toaru.json,toaru,スマスロ とある魔術の禁書目録,modern_inference,cz,CZ,,,,,,,,
+toaru.json,toaru,スマスロ とある魔術の禁書目録,modern_inference,at,AT,,,,,,,,
+tokyo_ghoul.json,tokyo_ghoul,L東京喰種,modern_inference,total_games,ゲーム数,,,,,,,,
+tokyo_ghoul.json,tokyo_ghoul,L東京喰種,modern_inference,cz,CZ,,,,,,,,
+tokyo_ghoul.json,tokyo_ghoul,L東京喰種,modern_inference,at,AT,,,,,,,,
+ushio_tora.json,ushio_tora,Lうしおととら 白面決戦,modern_inference,total_games,ゲーム数,,,,,,,,
+ushio_tora.json,ushio_tora,Lうしおととら 白面決戦,modern_inference,cz,CZ,,,,,,,,
+ushio_tora.json,ushio_tora,Lうしおととら 白面決戦,modern_inference,at,AT,,,,,,,,
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,CZ初当り回数。補助判別用。
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,at_count,AT,AT_CZ,20,回,COUNTER,True,False,True,AT回数メモ用。主判別からは除外。
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,bonus_count,ボーナス,BONUS,11,回,COUNTER,True,True,True,ボーナス初当り回数。主判別。
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,False,True,重い分母のため補助メモ用。長時間実戦時のみ参考。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,total_games,総ゲーム数,BASIC,1,G,NUMBER,True,True,False,全計算の分母
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,cz_count,CZ,AT_CZ,10,回,COUNTER,True,True,True,CZ初当り回数。補助判別用。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,at_count,AT,AT_CZ,20,回,COUNTER,True,False,True,AT回数メモ用。主判別からは除外。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,bonus_count,ボーナス,BONUS,11,回,COUNTER,True,True,True,ボーナス初当り回数。主判別。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,direct_hit_count,直撃AT,SPECIAL,30,回,COUNTER,True,False,True,重い分母のため補助メモ用。長時間実戦時のみ参考。
+zenigata4.json,zenigata4,L主役は銭形4,modern_inference,total_games,ゲーム数,,,,,,,,
+zenigata4.json,zenigata4,L主役は銭形4,modern_inference,cz,CZ,,,,,,,,
+zenigata4.json,zenigata4,L主役は銭形4,modern_inference,at,AT,,,,,,,,

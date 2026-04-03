@@ -6,8 +6,8 @@
     "type": "BONUS",
     "releaseDate": "2020-02-03",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はBIGに固定。現行参照値ではBIGのみのため、無理に軸を増やさず、1軸を丁寧に扱う構成で品質を揃える。",
-    "dmmUrl": null,
+    "notes": "ノーマル精度仕上げ対応。現行参照値ではBIGのみを主判別に採用。1軸構成のため短時間実戦のブレを避け、3500G以上での評価を前提にする。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3647",
     "ichigekiUrl": "https://1geki.jp/slot/s_thunderv_lg/"
   },
   "counterDefinitions": [
@@ -55,30 +55,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 277.7,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 277.7,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 264.3,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 256.0,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
         }
       ]
     }

@@ -6,8 +6,8 @@
     "type": "BONUS",
     "releaseDate": "2022-01-11",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算・ベル・VSゲームハズレに整理。重い補助要素は低weightで残し、REG主軸を崩さない構成にする。",
-    "dmmUrl": null,
+    "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算とベル、VSゲームハズレは長時間実戦時のみ参照。重い補助要素はさらに低weightで残し、REG主軸を崩さない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4033",
     "ichigekiUrl": "https://1geki.jp/slot/s_versus_rexse/"
   },
   "counterDefinitions": [
@@ -91,30 +91,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 374.5,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 341.3,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 319.7,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 292.6,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         }
       ]
     },
@@ -124,30 +124,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 164.3,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 155.3,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 147.9,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 138.8,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         }
       ]
     },
@@ -157,30 +157,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 7.2,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは高ゲーム数時の補強材料。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数域で補強。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 7.1,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは高ゲーム数時の補強材料。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数域で補強。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 6.9,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは高ゲーム数時の補強材料。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数域で補強。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 6.8,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは高ゲーム数時の補強材料。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数域で補強。"
         }
       ]
     },
@@ -190,30 +190,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 10.1,
-          "weight": 0.25,
-          "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体では決めない。"
+          "weight": 0.2,
+          "minSampleSize": 15000,
+          "note": "補助判別。長時間実戦時のみ参考にする。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 9.4,
-          "weight": 0.25,
-          "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体では決めない。"
+          "weight": 0.2,
+          "minSampleSize": 15000,
+          "note": "補助判別。長時間実戦時のみ参考にする。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 8.7,
-          "weight": 0.25,
-          "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体では決めない。"
+          "weight": 0.2,
+          "minSampleSize": 15000,
+          "note": "補助判別。長時間実戦時のみ参考にする。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 8.1,
-          "weight": 0.25,
-          "minSampleSize": 12000,
-          "note": "重い分母。確認できても補強材料として扱い、単体では決めない。"
+          "weight": 0.2,
+          "minSampleSize": 15000,
+          "note": "補助判別。長時間実戦時のみ参考にする。"
         }
       ]
     },

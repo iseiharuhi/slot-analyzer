@@ -6,8 +6,8 @@
     "type": "BONUS",
     "releaseDate": "2021-07-05",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とベルに整理。ハナビ系はREGとベルを高ゲーム数で確認しつつ、合算で全体傾向を見る。",
-    "dmmUrl": null,
+    "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算とベル、BIGは最終補助に整理。ハナビ系はREG基準を崩さず、ベルは5000G以上で補強に使う。",
+    "dmmUrl": "https://p-town.dmm.com/machines/2042",
     "ichigekiUrl": "https://1geki.jp/slot/s_shinhanabi/"
   },
   "counterDefinitions": [
@@ -79,30 +79,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 356.2,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 331.0,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 306.2,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 280.1,
-          "weight": 1,
-          "minSampleSize": 2500,
-          "note": "主判別。REGを軸に2500G以上で評価したい。"
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
         }
       ]
     },
@@ -112,30 +112,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 156.0,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 148.3,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 139.4,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 131.6,
-          "weight": 0.7,
-          "minSampleSize": 3000,
-          "note": "補助判別①。合算は全体傾向の確認に使う。"
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
         }
       ]
     },
@@ -145,30 +145,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 7.65,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 7.62,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 7.2,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 7.14,
-          "weight": 0.6,
-          "minSampleSize": 4000,
-          "note": "補助判別②。ベルは試行不足でブレやすいため高ゲーム数で参照。"
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
         }
       ]
     },
@@ -178,30 +178,30 @@
         {
           "settingNo": 1,
           "denominatorValue": 277.7,
-          "weight": 0.5,
-          "minSampleSize": 3000,
-          "note": "補助判別。BIG単体は主軸にしない。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 268.6,
-          "weight": 0.5,
-          "minSampleSize": 3000,
-          "note": "補助判別。BIG単体は主軸にしない。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 256.0,
-          "weight": 0.5,
-          "minSampleSize": 3000,
-          "note": "補助判別。BIG単体は主軸にしない。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 248.2,
-          "weight": 0.5,
-          "minSampleSize": 3000,
-          "note": "補助判別。BIG単体は主軸にしない。"
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
         }
       ]
     }

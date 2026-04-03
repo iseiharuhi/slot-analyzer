@@ -1,0 +1,98 @@
+﻿file_name,machine_id,machine_name,schema_type,ceiling_index,rule_key,display_name,ceiling_type,limit_value,unit,reset_on_hit,requires_reset_flag,is_enabled,description
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,legacy_full,1,bonus_interval_ceiling,ボーナス間天井,GAME_COUNT,999,G,True,False,True,ボーナス間999Gで天井到達となりボーナスに当選。
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,legacy_full,2,reset_shortened_ceiling,設定変更時短縮天井,GAME_COUNT,666,G,True,True,True,設定変更時は天井が666Gに短縮される。
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,legacy_full,3,br_interval_ceiling,ブーメランRUSH間恩恵,GAME_COUNT,1500,G,True,False,True,ブーメランRUSH間1500G以降のボーナスは同色BIG以上濃厚。
+dmm_slot_026.json,dmm_slot_026,L花の慶次～佐渡攻めの章〜,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,1000,G,True,False,True,通常時最大1000G+αで初当りに当選。
+dmm_slot_027.json,dmm_slot_027,スマスロモンキーターンV,legacy_full,1,game_count_ceiling,通常時ゲーム数天井,GAME_COUNT,795,G,True,False,True,通常時795G+αでAT当選。設定変更後と青島VS波多野敗北後は495G+αに短縮。
+dmm_slot_027.json,dmm_slot_027,スマスロモンキーターンV,legacy_full,2,cycle_ceiling,周期天井,THROUGH_COUNT,6,周期,True,False,True,6周期目の優出モード到達で天井。設定変更後と青島VS波多野敗北後は4周期に短縮。
+dmm_slot_030.json,dmm_slot_030,推しスロ アイドルVer.,legacy_full,1,ゲーム数天井,ゲーム数天井,,,,,,,基本的に150Gの天井のみでボーナスが当選。
+hokuto.json,hokuto,L北斗の拳,legacy_full,1,normal_game_ceiling,通常時天井,GAME_COUNT,1268,G,True,False,True,通常時1268G+αでバトルボーナス。天井ATは継続率優遇・北斗揃い期待度アップ。
+hokuto.json,hokuto,L北斗の拳,legacy_full,2,reset_game_ceiling,設定変更時短縮天井,GAME_COUNT,800,G,True,True,True,設定変更時は800G+αに短縮。通常天井と同様の恩恵。
+hokuto_tensei_2.json,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,legacy_full,1,abeshi_max_ceiling,最大天井,POINT,1536,あべし,True,False,True,通常Aの最大天井。通常Bは896あべし、通常Cは576あべし、天国は128あべし。設定変更時は最大1280あべしに短縮。
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,1000,G,True,False,True,通常時1000G+αでエピソードボーナス。駿城ボーナスではゲーム数を引き継ぐ。
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,2,shortened_game_ceiling,短縮ゲーム数天井,GAME_COUNT,650,G,True,True,True,設定変更時・美馬ST後・ST駆け抜け後は650G+αに短縮。
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,legacy_full,3,suruga_bonus_through,駿城ボーナス天井,THROUGH_COUNT,4,回,True,False,True,駿城ボーナス4連続スルーで条件到達。次回(5回目)ボーナスでエピソードボーナス。
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,1,game_cz_ceiling,通常時ゲーム数天井,GAME_COUNT,1200,G,True,False,True,通常時最大1200G消化でCZ「機械仕掛けの神」以上。通常時はゲーム数加算があるため実ゲーム数の平均は約730G。1100G以上ハマり後は次回天井が最大300Gに短縮。
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,2,cz_through_ceiling,CZスルー天井,THROUGH_COUNT,5,回,True,False,True,CZ「機械仕掛けの神」を4連続失敗後、5回目のCZで条件到達。AT直撃契機として扱う。
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,legacy_full,3,at_interval_ceiling,AT間天井,GAME_COUNT,2500,G,True,False,True,AT間2500G消化でAT＋成功確定の激情ジャッジ。
+list_slot_001.json,list_slot_001,Lゴブリンスレイヤー,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,1500,G,True,False,True,通常時600G / 1000G / 1500G消化のいずれかで天井到達。到達時はATに突入し、約1/2で80%ループモードが選択される。
+list_slot_002.json,list_slot_002,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,799,G,True,False,True,通常時最大799G消化でボーナス到達。
+list_slot_002.json,list_slot_002,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_full,2,bonus_through_ceiling,ボーナススルー天井,THROUGH_COUNT,7,回,True,False,True,AT非当選の戦国乙女ボーナスを6回消化後、次回7回目の戦国乙女ボーナスがエピソードボーナス確定。エピソードボーナス・しゅつじんのとき・神謀覚醒を挟むとスルー回数はリセット。
+list_slot_003.json,list_slot_003,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,legacy_full,1,normal_game_ceiling,通常時天井,GAME_COUNT,1000,G,True,False,True,通常時1000G+αでボーナス当選。通常時ゲーム数はAT当選までリセットされない。
+list_slot_005.json,list_slot_005,L転生したらスライムだった件,legacy_full,1,point_ceiling,通常時最大天井,GAME_COUNT,1200,pt,True,False,True,通常Aは1200pt+αでAT抽選。通常B/Cは1000pt+α、天国は100pt+α。
+list_slot_006.json,list_slot_006,スマスロ バイオハザード RE:2,legacy_full,1,game_ceiling,ゲーム数天井,GAME_COUNT,1000,G,True,False,True,1000G消化後、チャンス役成立で前兆を経由してボーナス+ATに当選。
+list_slot_006.json,list_slot_006,スマスロ バイオハザード RE:2,legacy_full,2,g_battle_through,Gバトルスルー天井,THROUGH_COUNT,7,回,True,False,True,最大7スルーで8回目のCZ「Gバトル」でボーナス+ATに当選。
+list_slot_007.json,list_slot_007,L主役は銭形4,legacy_full,1,game_ceiling,ゲーム数天井,GAME_COUNT,999,G,True,False,True,通常時最大999G到達でAT当選。
+list_slot_007.json,list_slot_007,L主役は銭形4,legacy_full,2,guts_ceiling,ガッツ到達天井,GAME_COUNT,1399,pt,True,False,True,1399ガッツ到達でAT当選。規定ガッツはAT終了後も一部持ち越し。
+list_slot_008.json,list_slot_008,Lストライクウィッチーズ2,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,950,G,True,False,True,通常時最大950G+αでストライクボーナス当選。
+list_slot_008.json,list_slot_008,Lストライクウィッチーズ2,legacy_full,2,neuroi_battle_through,ネウロイバトル初戦敗北天井,THROUGH_COUNT,5,回,True,False,True,ネウロイバトル初戦敗北を5回続けると、次回(6回目)は勝利濃厚。
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,legacy_full,1,normal_mode_ceiling,通常モード天井,GAME_COUNT,770,G,True,False,True,通常モードは770G+α消化後の次対局でAT当選。
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,legacy_full,2,pullback_mode_ceiling,引き戻しモード天井,GAME_COUNT,390,G,True,False,True,引き戻しモードは390G+αでAT当選。
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,legacy_full,3,ura_kakusei_ready_ceiling,裏覚醒準備モード天井,GAME_COUNT,960,G,True,False,True,裏覚醒準備モードは960G+αで到達。
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,legacy_full,4,kakusei_mode_ceiling,覚醒/裏覚醒モード天井,GAME_COUNT,160,G,True,False,True,覚醒モード・裏覚醒モードは160G+αでAT当選。設定変更時は160G+αまでの当選割合が高い。
+list_slot_010.json,list_slot_010,Lベルセルク無双,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,999,G,True,False,True,通常時最大999GでAT初当りに当選。
+list_slot_011.json,list_slot_011,押忍！番長4,legacy_full,1,bonus_interval_ceiling,ボーナス間天井,GAME_COUNT,699,G,True,False,True,ボーナス間699G+αでボーナス当選。ATを挟んでも有効だが、有利区間リセット時は再抽選。
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,1,cz_game_ceiling,CZ間天井,GAME_COUNT,600,G,True,False,True,CZ間600G+αでCZ当選。
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,2,at_game_ceiling,AT間天井,GAME_COUNT,1200,G,True,False,True,AT間1200G到達でAT当選。
+list_slot_014.json,list_slot_014,L東京喰種,legacy_full,3,reset_short_ceiling,設定変更時短縮,GAME_COUNT,200,G,True,True,True,設定変更時は特殊モードへ移行し200G+αに短縮。
+list_slot_017.json,list_slot_017,L咲-Saki- 頂上決戦,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,1000,G,True,False,True,通常時最大1000G+αでAT当選。AT駆け抜け後は800G+αに短縮。
+list_slot_017.json,list_slot_017,L咲-Saki- 頂上決戦,legacy_full,2,cz_through_ceiling,CZスルー天井,THROUGH_COUNT,6,回,True,False,True,特打(CZ)を6回連続でAT非突入の場合、次回(7回目)CZでAT当選濃厚。
+list_slot_017.json,list_slot_017,L咲-Saki- 頂上決戦,legacy_full,3,cycle_ceiling,周期天井,CYCLE_COUNT,8,周期,True,False,True,周期抽選は最大8周期(南4局)でCZ当選。設定変更時は600G+αに短縮。
+list_slot_018.json,list_slot_018,Lうしおととら 白面決戦,legacy_full,1,cz_interval_ceiling,CZ間天井,GAME_COUNT,600,G,True,False,True,CZ間最大600GでCZ当選。設定変更時は300Gに短縮。
+list_slot_018.json,list_slot_018,Lうしおととら 白面決戦,legacy_full,2,cz_interval_reset_ceiling,設定変更時CZ間短縮天井,GAME_COUNT,300,G,True,True,True,設定変更時はCZ間天井が300Gに短縮。
+list_slot_018.json,list_slot_018,Lうしおととら 白面決戦,legacy_full,3,at_interval_ceiling,AT間天井,GAME_COUNT,2500,G,True,False,True,AT間最大2500Gで成功濃厚のCZに当選。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,1,mode_a_point_ceiling,Gポイント天井A,POINT,1000,pt,True,False,True,モードAは最大1000ptでCZに到達。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,2,mode_b_point_ceiling,Gポイント天井B,POINT,700,pt,True,False,True,モードBは最大700ptでCZに到達。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,3,mode_c_point_ceiling,Gポイント天井C,POINT,450,pt,True,False,True,モードCは最大450ptでCZに到達。
+list_slot_019.json,list_slot_019,Lゴジラ,legacy_full,4,heaven_point_ceiling,Gポイント天井天国,POINT,100,pt,True,False,True,天国は最大100ptでCZに到達。
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,1,,,GAME_COUNT,888,G+α,,,,
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,2,,,GAME_COUNT,777,G+α,,,,
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,3,,,GAME_COUNT,444,G+α,,,,
+list_slot_021.json,list_slot_021,L仮面ライダー電王,legacy_full,4,,,GAME_COUNT,111,G+α,,,,
+list_slot_022.json,list_slot_022,Lありふれた職業で世界最強,legacy_full,1,,,GAME_COUNT,1000,G+α,,,,
+list_slot_023.json,list_slot_023,Lパチスロ シン・エヴァンゲリオン,legacy_full,1,,,GAME_COUNT,800,G+α,,,,
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,1,,,GAME_COUNT,1122,G+α,,,,
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,2,,,GAME_COUNT,922,G+α,,,,
+list_slot_024.json,list_slot_024,Lにゃんこ大戦争 超神速,legacy_full,3,,,GAME_COUNT,222,G+α,,,,
+list_slot_025.json,list_slot_025,パチスロ 炎炎ノ消防隊,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,850,G,True,False,True,通常時最大850G+αでボーナス当選。設定変更後は最大650G+αに短縮。天井ゲーム数は通常A:850G、通常B:750G、通常C:250G、119モード:88G（いずれも前兆込み）。
+list_slot_025.json,list_slot_025,パチスロ 炎炎ノ消防隊,legacy_full,2,same_yuriku_ceiling,同一有利区間ボーナス天井,GAME_COUNT,3000,G,True,False,True,炎炎激闘非当選のまま同一有利区間で3000G以上消化した状態でボーナス当選時に条件到達。
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,legacy_full,1,,,CYCLE,7,周期,,,,
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,legacy_full,2,,,CYCLE,3,周期,,,,
+list_slot_027.json,list_slot_027,パチスロ アクエリオン ALL STARS,legacy_full,1,normal_game_ceiling,通常時天井,GAME_COUNT,1000,G,True,False,True,通常時1000G到達でAT当選。
+list_slot_027.json,list_slot_027,パチスロ アクエリオン ALL STARS,legacy_full,2,cz_through_ceiling,CZスルー天井,THROUGH_COUNT,4,回,True,False,True,CZ4スルー後の5回目CZでAT当選。
+list_slot_028.json,list_slot_028,パチスロ鉄拳5,legacy_full,1,normal_game_ceiling,通常時天井,GAME_COUNT,750,G,True,False,True,有利区間移行後750G+α消化でAT「鉄拳ラッシュ」に当選。
+list_slot_029.json,list_slot_029,パチスロ幼女戦記,legacy_full,1,normal_game_ceiling,通常時天井,GAME_COUNT,512,G,True,False,True,通常時512G+α消化でボーナス確定。
+list_slot_030.json,list_slot_030,スマスロ シャーマンキング,legacy_full,1,normal_game_ceiling,通常時天井,GAME_COUNT,800,G,True,False,True,通常時800G+α到達でボーナス当選。
+list_slot_030.json,list_slot_030,スマスロ シャーマンキング,legacy_full,2,bonus_through_ceiling,ボーナススルー天井,THROUGH_COUNT,10,回,True,False,True,AT10スルー後の11回目ボーナスでAT当選。
+list_slot_031.json,list_slot_031,パチスロ 新鬼武者2,legacy_full,1,bz_between_ceiling,BZ間天井,GAME_COUNT,333,G,True,False,True,BZ間333G消化で前兆を経てBZに突入。
+list_slot_031.json,list_slot_031,パチスロ 新鬼武者2,legacy_full,2,at_between_ceiling,AT間天井,GAME_COUNT,1000,G,True,False,True,AT間1000G消化で前兆を経て天井BZに突入し、最終的にAT当選。
+list_slot_032.json,list_slot_032,FAIRY TAIL2,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,1536,G,True,False,True,通常時1536G+α到達後のCZ成功でAT「FAIRY BATTLE」に当選。CZ失敗時は特殊モード移行で100pt到達時AT当選。
+list_slot_033.json,list_slot_033,ペルソナ5,legacy_full,1,pc_through_ceiling,ペルソナチャンス回数天井,THROUGH_COUNT,7,回,True,False,True,AT間で7回目のペルソナチャンス当選でAT「テイクユアハート」に当選。設定変更後は5回目に短縮。
+list_slot_033.json,list_slot_033,ペルソナ5,legacy_full,2,pc_game_ceiling,ペルソナチャンス間天井,GAME_COUNT,400,G,True,False,True,通常時のペルソナチャンス間で最大400G消化すると超高確へ移行し、次回ペルソナチャンス当選率が大幅に上昇。
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,1173,G,True,False,True,通常時1173G+α消化でATに当選。
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,legacy_full,2,reset_or_inherit_ceiling,設定変更/有利区間引継ぎ時天井,GAME_COUNT,800,G,True,False,True,設定変更時または有利区間引継ぎ時は800G+αでATに当選。
+list_slot_035.json,list_slot_035,S BOØWY,legacy_full,1,normal_game_ceiling,通常時天井,GAME_COUNT,1480,G,True,False,True,通常時1480G+α（前兆最大32G）で上位AT「LAST GIGS」に当選。1/2で80%ループを選択。
+list_slot_036.json,list_slot_036,バイオハザード ヴィレッジ,legacy_full,1,normal_game_ceiling,通常A天井,GAME_COUNT,750,G,True,False,True,通常A滞在時は750Gでクライマックスバトル当選。通常Bは650G、通常Cは600G、天国は150G。
+list_slot_036.json,list_slot_036,バイオハザード ヴィレッジ,legacy_full,2,reset_game_ceiling,設定変更時天井,GAME_COUNT,550,G,True,True,True,設定変更時は設定変更モードへ移行し天井は550G。150G以内の当選率は20%。
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,legacy_full,1,bonus_cz_game_ceiling,ボーナス・CZ間天井,GAME_COUNT,555,G,True,False,True,ボーナス・CZ間で555G+α消化するとCZに当選。ファミリアボーナスは約50%で内部ゲーム数をリセット、ファミリアチャンスは100%引き継ぐ。
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,1,point_ceiling,規定pt天井,POINT,1400,pt,True,False,True,最大1400pt到達でAT「殲滅ラッシュ」に当選。AT単発後は次回天井pt数が約50%で1000pt以下。
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,2,game_freeze_ceiling,AT間ゲーム数天井,GAME_COUNT,1300,G,True,False,True,AT間1300G消化でロングフリーズ発生が濃厚。エピソードボーナス+上位AT濃厚。
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,legacy_full,3,reset_point_shortening,設定変更時規定pt短縮,POINT,1000,pt,True,True,True,設定変更時は400/600/800/1000ptのいずれかでAT当選。
+list_slot_039.json,list_slot_039,この素晴らしい世界に祝福を！,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,598,G,True,False,True,通常時598G+α消化でAT直撃+駄女神ぼーなすに当選。
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,1000,G,True,False,True,通常時最大1000Gで天井到達しAT「スーパーヒーロー」に当選。シングル7揃い後のAT非突入では天井G数を引き継ぐ。
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,2,reset_game_ceiling,設定変更時ゲーム数天井,GAME_COUNT,700,G,True,True,True,設定変更時は天井が最大700Gに短縮。
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,legacy_full,3,rescue_trigger,救済発動候補,GAME_COUNT,400,G,True,False,True,100G/200G/300G/400Gで救済発動の可能性あり（高設定ほど優遇とされる）。
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,1,normal_game_ceiling,通常時ゲーム数天井,GAME_COUNT,999,G,True,False,True,通常時最大999G+αでATに当選。ダブルちゃんモード滞在時は500G+α。
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,2,lantern_count_ceiling,世直し提灯点灯回数天井,COUNT,7,回,True,False,True,世直し提灯点灯7回目でATに当選。設定変更時は3回目。
+list_slot_041.json,list_slot_041,黄門ちゃま天,legacy_full,3,lantern_interval_ceiling,世直し提灯点灯間,GAME_COUNT,310,G,True,False,True,世直し提灯間310G消化で世直し提灯が点灯。千年桜ステージ中の点灯ではこのG数はリセットされない。
+list_slot_063.json,list_slot_063,Lパチスロうみねこのなく頃に2,legacy_full,1,cz_game_ceiling,CZ間天井,GAME_COUNT,200,G,True,False,True,通常時（運命分岐モード間）200G消化でCZ「運命分岐モード」へ当選。
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,1,game_ceiling,通常時ゲーム数天井,GAME_COUNT,999,G,True,False,True,通常時999G消化で赤7ボーナス以上。
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,legacy_full,2,quest_count_ceiling,AT間クエスト天井,THROUGH_COUNT,7,回,True,False,True,AT間7回目のクエスト到達で天井。恩恵は赤7ボーナス以上。
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,1,cz_interval_game_ceiling,CZ間天井,GAME_COUNT,1000,G,True,False,True,液晶ゲーム数でCZ間約1000G+α。モードにより実質消化G数は短縮。
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,2,bonus_at_interval_ceiling,ボーナス&AT間天井,GAME_COUNT,1500,G,True,False,True,実ゲーム数でボーナス&AT間約1500G+αでボーナス。
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,3,cz_through_ceiling,CZスルー天井,THROUGH_COUNT,7,回,True,False,True,CZを7回スルーで条件到達。次回(8回目)CZでボーナス。
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,legacy_full,4,kessen_bonus_through,決戦ボーナス天井,THROUGH_COUNT,4,回,True,False,True,AT非当選の決戦ボーナスが4回連続で条件到達。次回ボーナスで革命ボーナス。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,1,cz_interval_game_ceiling,CZ間天井,GAME_COUNT,1000,G,True,False,True,液晶ゲーム数でCZ間約1000G+α。モードにより実質消化G数は短縮。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,2,bonus_at_interval_ceiling,ボーナス&AT間天井,GAME_COUNT,1500,G,True,False,True,実ゲーム数でボーナス&AT間約1500G+αでボーナス。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,3,cz_through_ceiling,CZスルー天井,THROUGH_COUNT,7,回,True,False,True,CZを7回スルーで条件到達。次回(8回目)CZでボーナス。
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,legacy_full,4,kessen_bonus_through,決戦ボーナス天井,THROUGH_COUNT,4,回,True,False,True,AT非当選の決戦ボーナスが4回連続で条件到達。次回ボーナスで革命ボーナス。

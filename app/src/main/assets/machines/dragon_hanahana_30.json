@@ -1,0 +1,19 @@
+{
+  "id": "dragon_hanahana_30",
+  "name": "dragon_hanahana_30",
+  "indicators": [
+    {
+      "type": "initial_hit",
+      "weight": 0.5
+    },
+    {
+      "type": "mode",
+      "weight": 0.3
+    },
+    {
+      "type": "bonus_chain",
+      "weight": 0.2
+    }
+  ],
+  "minSampleSize": 2000
+}

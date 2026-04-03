@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-09-20",
     "isActive": true,
-    "notes": "均一化フェーズ対応。主判別はAT初当りに固定。S BOØWYは現行入力で無理に補助項目を増やさず、AT初当りを高品質に扱う方針でブレを抑える。",
+    "notes": "AT精度一括調整済み。主判別はAT初当り。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4196",
     "ichigekiUrl": "https://1geki.jp/slot/s_boowy/"
   },
@@ -57,35 +57,35 @@
           "denominatorValue": 498.0,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 2,
           "denominatorValue": 464.0,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 4,
           "denominatorValue": 377.0,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 5,
           "denominatorValue": 325.0,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         },
         {
           "settingNo": 6,
           "denominatorValue": 294.0,
           "weight": 1,
           "minSampleSize": 2500,
-          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
         }
       ]
     }

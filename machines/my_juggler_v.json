@@ -1,0 +1,19 @@
+{
+  "id": "my_juggler_v",
+  "name": "マイジャグラーV",
+  "indicators": [
+    {
+      "type": "REG",
+      "weight": 0.5
+    },
+    {
+      "type": "BIG",
+      "weight": 0.3
+    },
+    {
+      "type": "GRAPE",
+      "weight": 0.2
+    }
+  ],
+  "minSampleSize": 1500
+}
