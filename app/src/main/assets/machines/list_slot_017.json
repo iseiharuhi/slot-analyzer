@@ -1,182 +1,182 @@
 {
-    "machine":  {
-                    "id":  "list_slot_017",
-                    "name":  "L咲-Saki- 頂上決戦",
-                    "manufacturer":  "三洋",
-                    "type":  "AT",
-                    "releaseDate":  "2025-08-04",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。現行入力では2軸構成だが、主軸と補助の優先度を明確化してブレを抑える。CZ単体では決めず、AT初当りを優先して見る。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4834",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_saki/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "特打(CZ)初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "CZ「特打」の初当り回数。主判別項目。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "頂上決戦(AT)初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「頂上決戦」の初当り回数。補助判別項目。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  398.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  386.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  372.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  351.7,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  327.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  294.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "cz_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  184.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  181.7,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  176.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  168.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  158.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  154.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時ゲーム数天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  1000,
-                             "unit":  "G",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "通常時最大1000G+αでAT当選。AT駆け抜け後は800G+αに短縮。"
-                         },
-                         {
-                             "ruleKey":  "cz_through_ceiling",
-                             "displayName":  "CZスルー天井",
-                             "ceilingType":  "THROUGH_COUNT",
-                             "limitValue":  6,
-                             "unit":  "回",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "特打(CZ)を6回連続でAT非突入の場合、次回(7回目)CZでAT当選濃厚。"
-                         },
-                         {
-                             "ruleKey":  "cycle_ceiling",
-                             "displayName":  "周期天井",
-                             "ceilingType":  "CYCLE_COUNT",
-                             "limitValue":  8,
-                             "unit":  "周期",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "周期抽選は最大8周期(南4局)でCZ当選。設定変更時は600G+αに短縮。"
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_017",
+    "name": "L咲-Saki- 頂上決戦",
+    "manufacturer": "三洋",
+    "type": "AT",
+    "releaseDate": "2025-08-04",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。現行入力では2軸構成だが、主軸と補助の優先度を明確化してブレを抑える。CZ単体では決めず、AT初当りを優先して見る。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4834",
+    "ichigekiUrl": "https://1geki.jp/slot/l_saki/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "特打(CZ)初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ「特打」の初当り回数。主判別項目。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "頂上決戦(AT)初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「頂上決戦」の初当り回数。補助判別項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 398.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 386.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 372.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 351.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 327.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 294.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断する。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 184.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 181.7,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 176.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 168.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 158.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 154.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいためAT初当り優先で評価。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "通常時最大1000G+αでAT当選。AT駆け抜け後は800G+αに短縮。"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 6,
+      "unit": "回",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "特打(CZ)を6回連続でAT非突入の場合、次回(7回目)CZでAT当選濃厚。"
+    },
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 8,
+      "unit": "周期",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "周期抽選は最大8周期(南4局)でCZ当選。設定変更時は600G+αに短縮。"
+    }
+  ]
 }

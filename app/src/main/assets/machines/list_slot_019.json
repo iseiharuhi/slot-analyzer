@@ -1,170 +1,170 @@
 {
-    "machine":  {
-                    "id":  "list_slot_019",
-                    "name":  "Lゴジラ",
-                    "manufacturer":  "ニューギン",
-                    "type":  "AT",
-                    "releaseDate":  "2025-04-07",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はCZ、補助はボーナスとAT初当り、重い分母は直撃系に整理。現行参照値の中ではCZが最も軸にしやすいため主軸に据えるが、ボーナス・ATと複合で判断する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4752",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_godzilla/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "初当り/ボーナス",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "CZ",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  11,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時CZ合算回数。襲来ゾーン＋ブレイクダウンを含む総CZ。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  12,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT初当り回数。今回差分では公開個別分母値の採用を保留。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "直撃/特殊契機",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "直撃AT・特殊当選・上位契機などの補助記録用。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "cz_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  306.9,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  304.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  303.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  302.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  299.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  295.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "mode_a_point_ceiling",
-                             "displayName":  "Gポイント天井A",
-                             "ceilingType":  "POINT",
-                             "limitValue":  1000,
-                             "unit":  "pt",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "モードAは最大1000ptでCZに到達。"
-                         },
-                         {
-                             "ruleKey":  "mode_b_point_ceiling",
-                             "displayName":  "Gポイント天井B",
-                             "ceilingType":  "POINT",
-                             "limitValue":  700,
-                             "unit":  "pt",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "モードBは最大700ptでCZに到達。"
-                         },
-                         {
-                             "ruleKey":  "mode_c_point_ceiling",
-                             "displayName":  "Gポイント天井C",
-                             "ceilingType":  "POINT",
-                             "limitValue":  450,
-                             "unit":  "pt",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "モードCは最大450ptでCZに到達。"
-                         },
-                         {
-                             "ruleKey":  "heaven_point_ceiling",
-                             "displayName":  "Gポイント天井天国",
-                             "ceilingType":  "POINT",
-                             "limitValue":  100,
-                             "unit":  "pt",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "天国は最大100ptでCZに到達。"
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_019",
+    "name": "Lゴジラ",
+    "manufacturer": "ニューギン",
+    "type": "AT",
+    "releaseDate": "2025-04-07",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はCZ、補助はボーナスとAT初当り、重い分母は直撃系に整理。現行参照値の中ではCZが最も軸にしやすいため主軸に据えるが、ボーナス・ATと複合で判断する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4752",
+    "ichigekiUrl": "https://1geki.jp/slot/l_godzilla/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り/ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時CZ合算回数。襲来ゾーン＋ブレイクダウンを含む総CZ。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。今回差分では公開個別分母値の採用を保留。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "直撃AT・特殊当選・上位契機などの補助記録用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 306.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 304.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 303.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 302.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 299.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 295.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。ボーナス・ATと合わせて判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "mode_a_point_ceiling",
+      "displayName": "Gポイント天井A",
+      "ceilingType": "POINT",
+      "limitValue": 1000,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "モードAは最大1000ptでCZに到達。"
+    },
+    {
+      "ruleKey": "mode_b_point_ceiling",
+      "displayName": "Gポイント天井B",
+      "ceilingType": "POINT",
+      "limitValue": 700,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "モードBは最大700ptでCZに到達。"
+    },
+    {
+      "ruleKey": "mode_c_point_ceiling",
+      "displayName": "Gポイント天井C",
+      "ceilingType": "POINT",
+      "limitValue": 450,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "モードCは最大450ptでCZに到達。"
+    },
+    {
+      "ruleKey": "heaven_point_ceiling",
+      "displayName": "Gポイント天井天国",
+      "ceilingType": "POINT",
+      "limitValue": 100,
+      "unit": "pt",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "天国は最大100ptでCZに到達。"
+    }
+  ]
 }

@@ -1,221 +1,219 @@
 {
-    "machine":  {
-                    "id":  "im_juggler_ex",
-                    "name":  "アイムジャグラーEX",
-                    "manufacturer":  "Kita Denshi",
-                    "type":  "BONUS",
-                    "releaseDate":  "2025-01-01",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はREG、補助はぶどうとBIGに整理。アイム系はREGを主軸にし、ぶどうを高ゲーム数時の補強、BIGは補助に留める。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/3626",
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_ij_ex_6/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "big_count",
-                                   "displayName":  "BIG",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  null
-                               },
-                               {
-                                   "key":  "reg_count",
-                                   "displayName":  "REG",
-                                   "category":  "BONUS",
-                                   "sortOrder":  11,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  null
-                               },
-                               {
-                                   "key":  "grape_count",
-                                   "displayName":  "ぶどう",
-                                   "category":  "SMALL_ROLE",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  null
-                               },
-                               {
-                                   "key":  "cherry_count",
-                                   "displayName":  "チェリー",
-                                   "category":  "SMALL_ROLE",
-                                   "sortOrder":  21,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "補助入力用"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "reg_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  439.8,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  399.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  331.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  315.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  255.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  255.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REG先行を主軸に2500G以上で評価したい。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "grape_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  6.02,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  5.95,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  5.9,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  5.85,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  5.8,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  5.78,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "big_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  273.1,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  270.8,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  266.4,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  254.6,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  244.4,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  240.1,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-
-                     ]
+  "machine": {
+    "id": "im_juggler_ex",
+    "name": "アイムジャグラーEX",
+    "manufacturer": "Kita Denshi",
+    "type": "BONUS",
+    "releaseDate": "2025-01-01",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はREG、補助はぶどうとBIGに整理。アイム系はREGを主軸にし、ぶどうを高ゲーム数時の補強、BIGは補助に留める。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3626",
+    "ichigekiUrl": "https://1geki.jp/slot/s_ij_ex_6/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "grape_count",
+      "displayName": "ぶどう",
+      "category": "SMALL_ROLE",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "cherry_count",
+      "displayName": "チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "補助入力用"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 439.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 399.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 331.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 315.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 255.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を主軸に2500G以上で評価したい。"
+        }
+      ]
+    },
+    {
+      "counterKey": "grape_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 6.02,
+          "weight": 0.7,
+          "minSampleSize": 4000,
+          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 5.95,
+          "weight": 0.7,
+          "minSampleSize": 4000,
+          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 5.9,
+          "weight": 0.7,
+          "minSampleSize": 4000,
+          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 5.85,
+          "weight": 0.7,
+          "minSampleSize": 4000,
+          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 5.8,
+          "weight": 0.7,
+          "minSampleSize": 4000,
+          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 5.78,
+          "weight": 0.7,
+          "minSampleSize": 4000,
+          "note": "補助判別①。ぶどうは高ゲーム数時の補強材料として使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 273.1,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 270.8,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 266.4,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 254.6,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 244.4,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 240.1,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

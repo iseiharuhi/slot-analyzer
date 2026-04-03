@@ -1,0 +1,44 @@
+{
+  "id": "azure_lane",
+  "name": "Lアズールレーン THE ANIMATION",
+  "notes": "precision batch remaining",
+  "counters": [
+    {
+      "key": "total_games",
+      "label": "ゲーム数"
+    },
+    {
+      "key": "cz",
+      "label": "CZ"
+    },
+    {
+      "key": "at",
+      "label": "AT"
+    }
+  ],
+  "inferenceElements": [
+    {
+      "key": "cz_probability",
+      "values": {
+        "1": 0.005,
+        "2": 0.005555555555555556,
+        "3": 0.00625,
+        "4": 0.007142857142857143,
+        "5": 0.008333333333333333,
+        "6": 0.01
+      },
+      "weight": 1.0,
+      "minSampleSize": 500
+    }
+  ],
+  "siteLinks": [
+    {
+      "name": "DMM",
+      "url": "https://p-town.dmm.com"
+    },
+    {
+      "name": "一撃",
+      "url": "https://1geki.jp"
+    }
+  ]
+}

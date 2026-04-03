@@ -1,160 +1,160 @@
 {
-    "machine":  {
-                    "id":  "list_slot_028",
-                    "name":  "パチスロ鉄拳5",
-                    "manufacturer":  "YAMASA",
-                    "type":  "AT",
-                    "releaseDate":  "2022-07-19",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りに整理。上位移行や連鎖の影響でAT回数が偏るため、まずはボーナス初当りを軸にしてブレを抑える。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4162",
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_tekken5/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "ボーナス合算",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "BIG+REGの合算初当り。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「鉄拳ラッシュ」初当り回数。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  273.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  266.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  260.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  249.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  239.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  229.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  475.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  468.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  454.3,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  427.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  401.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  369.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  750,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "有利区間移行後750G+α消化でAT「鉄拳ラッシュ」に当選。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_028",
+    "name": "パチスロ鉄拳5",
+    "manufacturer": "YAMASA",
+    "type": "AT",
+    "releaseDate": "2022-07-19",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りに整理。上位移行や連鎖の影響でAT回数が偏るため、まずはボーナス初当りを軸にしてブレを抑える。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4162",
+    "ichigekiUrl": "https://1geki.jp/slot/s_tekken5/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG+REGの合算初当り。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「鉄拳ラッシュ」初当り回数。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 273.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 266.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 260.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 249.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 239.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 229.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 475.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 468.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 454.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 427.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 401.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 369.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 750,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間移行後750G+α消化でAT「鉄拳ラッシュ」に当選。",
+      "isEnabled": true
+    }
+  ]
 }

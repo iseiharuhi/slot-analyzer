@@ -1,160 +1,160 @@
 {
-    "machine":  {
-                    "id":  "list_slot_032",
-                    "name":  "FAIRY TAIL2",
-                    "manufacturer":  "藤商事",
-                    "type":  "AT",
-                    "releaseDate":  "2022-08-01",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。フェアリーテイル2はCZからの流れで短期ブレが出やすいため、CZ単体を追い過ぎずAT初当りを主軸に固定する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4191",
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_fairytail2/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "CZ「FAIRY BATTLE CHALLENGE」",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時のCZ当選回数。主判別補助。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT「FAIRY BATTLE」初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT初当り回数。主判別項目。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  459.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  432.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  393.9,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  337.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  321.7,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  273.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "cz_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  242.1,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  234.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  223.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  206.7,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  201.8,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  187.1,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時ゲーム数天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  1536,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "通常時1536G+α到達後のCZ成功でAT「FAIRY BATTLE」に当選。CZ失敗時は特殊モード移行で100pt到達時AT当選。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_032",
+    "name": "FAIRY TAIL2",
+    "manufacturer": "藤商事",
+    "type": "AT",
+    "releaseDate": "2022-08-01",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。フェアリーテイル2はCZからの流れで短期ブレが出やすいため、CZ単体を追い過ぎずAT初当りを主軸に固定する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4191",
+    "ichigekiUrl": "https://1geki.jp/slot/s_fairytail2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ「FAIRY BATTLE CHALLENGE」",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のCZ当選回数。主判別補助。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT「FAIRY BATTLE」初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。主判別項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 459.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 432.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 393.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 337.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 321.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 273.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 242.1,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 234.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 223.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 206.7,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 201.8,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 187.1,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1536,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1536G+α到達後のCZ成功でAT「FAIRY BATTLE」に当選。CZ失敗時は特殊モード移行で100pt到達時AT当選。",
+      "isEnabled": true
+    }
+  ]
 }

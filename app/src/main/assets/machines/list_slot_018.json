@@ -1,182 +1,182 @@
 {
-    "machine":  {
-                    "id":  "list_slot_018",
-                    "name":  "Lうしおととら 白面決戦",
-                    "manufacturer":  "Daiichi",
-                    "type":  "AT",
-                    "releaseDate":  "2025-04-07",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。現行UIでは入力しやすい2軸を優先採用し、CZは補助評価に留める。主軸はAT初当りで、序盤のCZ偏りを過信しない。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4776",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_ushiototora/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "CZ初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "CZ「うしとらチャンス」初当り回数。主判別項目。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT初当り回数。補助判別項目。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  397.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  389.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  378.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  365.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  360.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  356.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "cz_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  178.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。CZは序盤に偏りやすいため過信しない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  175.6,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。CZは序盤に偏りやすいため過信しない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  169.7,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。CZは序盤に偏りやすいため過信しない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  164.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。CZは序盤に偏りやすいため過信しない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  161.9,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。CZは序盤に偏りやすいため過信しない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  159.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。CZは序盤に偏りやすいため過信しない。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "cz_interval_ceiling",
-                             "displayName":  "CZ間天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  600,
-                             "unit":  "G",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "CZ間最大600GでCZ当選。設定変更時は300Gに短縮。"
-                         },
-                         {
-                             "ruleKey":  "cz_interval_reset_ceiling",
-                             "displayName":  "設定変更時CZ間短縮天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  300,
-                             "unit":  "G",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  true,
-                             "resetOnHit":  true,
-                             "description":  "設定変更時はCZ間天井が300Gに短縮。"
-                         },
-                         {
-                             "ruleKey":  "at_interval_ceiling",
-                             "displayName":  "AT間天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  2500,
-                             "unit":  "G",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "AT間最大2500Gで成功濃厚のCZに当選。"
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_018",
+    "name": "Lうしおととら 白面決戦",
+    "manufacturer": "Daiichi",
+    "type": "AT",
+    "releaseDate": "2025-04-07",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。現行UIでは入力しやすい2軸を優先採用し、CZは補助評価に留める。主軸はAT初当りで、序盤のCZ偏りを過信しない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4776",
+    "ichigekiUrl": "https://1geki.jp/slot/l_ushiototora/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ「うしとらチャンス」初当り回数。主判別項目。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。補助判別項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 397.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 389.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 378.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 365.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 360.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 356.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと合わせて総合判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 178.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。CZは序盤に偏りやすいため過信しない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 175.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。CZは序盤に偏りやすいため過信しない。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 169.7,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。CZは序盤に偏りやすいため過信しない。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 164.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。CZは序盤に偏りやすいため過信しない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 161.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。CZは序盤に偏りやすいため過信しない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 159.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。CZは序盤に偏りやすいため過信しない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "CZ間最大600GでCZ当選。設定変更時は300Gに短縮。"
+    },
+    {
+      "ruleKey": "cz_interval_reset_ceiling",
+      "displayName": "設定変更時CZ間短縮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 300,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": true,
+      "resetOnHit": true,
+      "description": "設定変更時はCZ間天井が300Gに短縮。"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 2500,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "AT間最大2500Gで成功濃厚のCZに当選。"
+    }
+  ]
 }

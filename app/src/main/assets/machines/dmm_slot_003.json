@@ -1,127 +1,125 @@
 {
-    "machine":  {
-                    "id":  "dmm_slot_003",
-                    "name":  "Ｌタクトオーパス デスティニー",
-                    "manufacturer":  "HEIWA",
-                    "type":  "AT",
-                    "releaseDate":  "2026-05-11",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZとボーナス、重い分母は直撃ATに整理。主軸はAT初当りで、CZは補助評価に留める。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/5000",
-                    "ichigekiUrl":  "https://1geki.jp/slot/syllabary/4/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当たり",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「BATTLE ORCHESTRA」初当たり回数。現状の主判別要素。"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "DESTINY/EPISODE BONUS",
-                                   "category":  "BONUS",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "ボーナス確率は全設定共通寄り情報のみ確認済みのため、推測には未使用。"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "CZ/SPCZ",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  21,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "全設定比較値未公開のため補助記録のみ。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "特殊契機",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  30,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "公開比較値未確認のため推測には未使用。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  358.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  350.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  330.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  299.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  297.8,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  297.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-
-                     ]
+  "machine": {
+    "id": "dmm_slot_003",
+    "name": "Ｌタクトオーパス デスティニー",
+    "manufacturer": "HEIWA",
+    "type": "AT",
+    "releaseDate": "2026-05-11",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、補助はCZとボーナス、重い分母は直撃ATに整理。主軸はAT初当りで、CZは補助評価に留める。",
+    "dmmUrl": "https://p-town.dmm.com/machines/5000",
+    "ichigekiUrl": "https://1geki.jp/slot/syllabary/4/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当たり",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「BATTLE ORCHESTRA」初当たり回数。現状の主判別要素。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "DESTINY/EPISODE BONUS",
+      "category": "BONUS",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "ボーナス確率は全設定共通寄り情報のみ確認済みのため、推測には未使用。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ/SPCZ",
+      "category": "AT_CZ",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "全設定比較値未公開のため補助記録のみ。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "公開比較値未確認のため推測には未使用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 358.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 350.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 330.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 299.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 297.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 297.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

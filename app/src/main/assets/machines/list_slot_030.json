@@ -1,171 +1,171 @@
 {
-    "machine":  {
-                    "id":  "list_slot_030",
-                    "name":  "スマスロ シャーマンキング",
-                    "manufacturer":  "Eleco",
-                    "type":  "AT",
-                    "releaseDate":  "2025-02-03",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りに整理。上位状態やループでAT側が短期的に偏りやすいため、まずはボーナス初当りを軸にして実戦での見やすさを優先する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4719",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_shamanking/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "通常時初当り",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "シャーマンボーナス/エピソードボーナス/ボーナス非経由AT直撃を含む通常時初当り合算。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「シャーマンファイト」初当り回数。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  288.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  280.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  268.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  248.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  227.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  207.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  573.6,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  553.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  523.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  461.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  412.8,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  367.3,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  800,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "通常時800G+α到達でボーナス当選。",
-                             "isEnabled":  true
-                         },
-                         {
-                             "ruleKey":  "bonus_through_ceiling",
-                             "displayName":  "ボーナススルー天井",
-                             "ceilingType":  "THROUGH_COUNT",
-                             "limitValue":  10,
-                             "unit":  "回",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "AT10スルー後の11回目ボーナスでAT当選。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_030",
+    "name": "スマスロ シャーマンキング",
+    "manufacturer": "Eleco",
+    "type": "AT",
+    "releaseDate": "2025-02-03",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りに整理。上位状態やループでAT側が短期的に偏りやすいため、まずはボーナス初当りを軸にして実戦での見やすさを優先する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4719",
+    "ichigekiUrl": "https://1geki.jp/slot/l_shamanking/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "通常時初当り",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "シャーマンボーナス/エピソードボーナス/ボーナス非経由AT直撃を含む通常時初当り合算。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「シャーマンファイト」初当り回数。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 288.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 280.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 268.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 248.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 227.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 207.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 573.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 553.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 523.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 461.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 412.8,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 367.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時800G+α到達でボーナス当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "bonus_through_ceiling",
+      "displayName": "ボーナススルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 10,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT10スルー後の11回目ボーナスでAT当選。",
+      "isEnabled": true
+    }
+  ]
 }

@@ -1,169 +1,169 @@
 {
-    "machine":  {
-                    "id":  "list_slot_025",
-                    "name":  "パチスロ 炎炎ノ消防隊",
-                    "manufacturer":  "JB",
-                    "type":  "AT",
-                    "releaseDate":  "2023-05-08",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りに整理。高確や状態差でAT側が荒れやすいため、炎炎はボーナス初当りを軸に実戦向けの見やすさを優先する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4326",
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_ennenn/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "初当りボーナス",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時ボーナス初当り。十字目変換/十字目契機の差を含む主判別。"
-                               },
-                               {
-                                   "key":  "big_count",
-                                   "displayName":  "補助メモ",
-                                   "category":  "BONUS",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "終了画面・規定ゲーム数示唆などの補助記録用。比較値は未採用。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "炎炎激闘",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  30,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "炎炎激闘初当り。ボーナスループの入口として補助判別に使用。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  243.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  240.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  224.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  218.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  208.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  689.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  652.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  581.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  535.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  479.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時ゲーム数天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  850,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "通常時最大850G+αでボーナス当選。設定変更後は最大650G+αに短縮。天井ゲーム数は通常A:850G、通常B:750G、通常C:250G、119モード:88G（いずれも前兆込み）。",
-                             "isEnabled":  true
-                         },
-                         {
-                             "ruleKey":  "same_yuriku_ceiling",
-                             "displayName":  "同一有利区間ボーナス天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  3000,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "炎炎激闘非当選のまま同一有利区間で3000G以上消化した状態でボーナス当選時に条件到達。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_025",
+    "name": "パチスロ 炎炎ノ消防隊",
+    "manufacturer": "JB",
+    "type": "AT",
+    "releaseDate": "2023-05-08",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りに整理。高確や状態差でAT側が荒れやすいため、炎炎はボーナス初当りを軸に実戦向けの見やすさを優先する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4326",
+    "ichigekiUrl": "https://1geki.jp/slot/s_ennenn/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当りボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時ボーナス初当り。十字目変換/十字目契機の差を含む主判別。"
+    },
+    {
+      "key": "big_count",
+      "displayName": "補助メモ",
+      "category": "BONUS",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "終了画面・規定ゲーム数示唆などの補助記録用。比較値は未採用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "炎炎激闘",
+      "category": "AT_CZ",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "炎炎激闘初当り。ボーナスループの入口として補助判別に使用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 243.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 240.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 224.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 218.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 208.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 689.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 652.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 581.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 535.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 479.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は差が荒れやすいため主判別優先で見る。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 850,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大850G+αでボーナス当選。設定変更後は最大650G+αに短縮。天井ゲーム数は通常A:850G、通常B:750G、通常C:250G、119モード:88G（いずれも前兆込み）。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "same_yuriku_ceiling",
+      "displayName": "同一有利区間ボーナス天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 3000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "炎炎激闘非当選のまま同一有利区間で3000G以上消化した状態でボーナス当選時に条件到達。",
+      "isEnabled": true
+    }
+  ]
 }

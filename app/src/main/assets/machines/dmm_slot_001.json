@@ -1,174 +1,172 @@
 {
-    "machine":  {
-                    "id":  "dmm_slot_001",
-                    "name":  "スマスロ BIRDIE WING -Golf Girls\u0027 Story-",
-                    "manufacturer":  "UNIVERSAL BROS.",
-                    "type":  "AT",
-                    "releaseDate":  "2026-06-08",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとCZ、重い分母は直撃ATに整理。短期のAT偏りを追い過ぎず、まずはボーナス初当りを軸に評価する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4996",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_birdie/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "通常時初当たり",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時のボーナス初当たり合算。公開値ありの主判別要素。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "ST初当たり",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  11,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "ST「ジャパンユニバーサルカップ」初当たり回数。最重要判別要素。"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "CZ",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "CZ「バーディーチャレンジ」回数。設定差の公開数値未確認のため補助記録のみ。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "直撃/特殊契機",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  30,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "公開比較値未確認のため推測には未使用。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  266.7,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  264.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  257.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  256.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  255.9,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  255.9,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  421.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  410.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  381.9,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  378.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  377.6,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  377.3,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいため主判別優先で見る。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-
-                     ]
+  "machine": {
+    "id": "dmm_slot_001",
+    "name": "スマスロ BIRDIE WING -Golf Girls' Story-",
+    "manufacturer": "UNIVERSAL BROS.",
+    "type": "AT",
+    "releaseDate": "2026-06-08",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとCZ、重い分母は直撃ATに整理。短期のAT偏りを追い過ぎず、まずはボーナス初当りを軸に評価する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4996",
+    "ichigekiUrl": "https://1geki.jp/slot/l_birdie/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "通常時初当たり",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のボーナス初当たり合算。公開値ありの主判別要素。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "ST初当たり",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ST「ジャパンユニバーサルカップ」初当たり回数。最重要判別要素。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "CZ「バーディーチャレンジ」回数。設定差の公開数値未確認のため補助記録のみ。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "公開比較値未確認のため推測には未使用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 266.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 264.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 257.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 256.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 255.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 421.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 410.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 381.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 378.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 377.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 377.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいため主判別優先で見る。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

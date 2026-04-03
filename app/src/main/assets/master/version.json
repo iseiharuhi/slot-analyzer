@@ -3,7 +3,7 @@
   "oldestAvailableDiffVersion": 1,
   "updatedAt": "2026-04-03T03:30:00+09:00",
   "forceFullSync": false,
-  "note": "Added ceiling and setting-reference data for list_slot_064 (北斗転生2) and list_slot_065 (ヴァルヴレイヴ2) using verified public machine pages and compatible total-games-based indicators.",
+  "note": "Normalized legacy list_slot manifest/master references for 北斗転生2 and ヴァルヴレイヴ2, and added cleanup guidance for rogue auto-detected JSON files.",
   "generatedAt": "2026-04-03",
-  "masterDataVersion": "0.7.9-list-strict-datafill-65"
+  "masterDataVersion": "0.7.10-final-polish"
 }

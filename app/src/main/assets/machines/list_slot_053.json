@@ -1,120 +1,118 @@
 {
-    "machine":  {
-                    "id":  "list_slot_053",
-                    "name":  "スマート沖スロ 沖ドキ！DUO-30 アンコール",
-                    "manufacturer":  "MACY",
-                    "type":  "AT",
-                    "releaseDate":  "2025-12-22",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はボーナス合算に固定。アンコール版も現行参照値では合算のみのため、1軸を丁寧に扱う構成で揃える。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4906",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_okidoki_duo_encore/0/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "ボーナス初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時の初当り回数を入力。主判別項目。"
-                               },
-                               {
-                                   "key":  "big_count",
-                                   "displayName":  "BIG初当り",
-                                   "category":  "BONUS",
-                                   "sortOrder":  11,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時BIG初当り回数。補助評価。"
-                               },
-                               {
-                                   "key":  "reg_count",
-                                   "displayName":  "REG初当り",
-                                   "category":  "BONUS",
-                                   "sortOrder":  12,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時REG初当り回数。補助評価。"
-                               },
-                               {
-                                   "key":  "cherry_count",
-                                   "displayName":  "角チェリー",
-                                   "category":  "SMALL_ROLE",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "公開解析で設定差が示される小役。今回は入力欄のみ用意。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  240.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  230.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  215.8,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  192.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  181.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-
-                     ]
+  "machine": {
+    "id": "list_slot_053",
+    "name": "スマート沖スロ 沖ドキ！DUO-30 アンコール",
+    "manufacturer": "MACY",
+    "type": "AT",
+    "releaseDate": "2025-12-22",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はボーナス合算に固定。アンコール版も現行参照値では合算のみのため、1軸を丁寧に扱う構成で揃える。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4906",
+    "ichigekiUrl": "https://1geki.jp/slot/l_okidoki_duo_encore/0/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時の初当り回数を入力。主判別項目。"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG初当り",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時BIG初当り回数。補助評価。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG初当り",
+      "category": "BONUS",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時REG初当り回数。補助評価。"
+    },
+    {
+      "key": "cherry_count",
+      "displayName": "角チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "公開解析で設定差が示される小役。今回は入力欄のみ用意。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 240.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 230.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 215.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 192.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 181.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と総合判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

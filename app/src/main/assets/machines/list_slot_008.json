@@ -1,171 +1,171 @@
 {
-    "machine":  {
-                    "id":  "list_slot_008",
-                    "name":  "Lストライクウィッチーズ2",
-                    "manufacturer":  "サンスリー",
-                    "type":  "AT",
-                    "releaseDate":  "2024-02-05",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はストライクボーナス初当り、重い分母は通常時直撃を補強材料として扱う構造に整理。直撃は設定差が大きいが分母が重いため、長時間実戦でのみ効かせる。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4490",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_strikewitches2/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "ストライクボーナス初当り",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "初回ボーナス「ストライクボーナス」の初当り回数。主判別項目。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "ストライクボーナス直撃",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "CZ非経由のストライクボーナス直撃回数。重いが設定差が非常に大きい。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  432.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  420.7,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  409.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  389.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  370.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  349.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "direct_hit_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  8738.13,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  5825.42,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  4369.07,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  2912.71,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  2184.53,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  1747.63,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時ゲーム数天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  950,
-                             "unit":  "G",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "通常時最大950G+αでストライクボーナス当選。"
-                         },
-                         {
-                             "ruleKey":  "neuroi_battle_through",
-                             "displayName":  "ネウロイバトル初戦敗北天井",
-                             "ceilingType":  "THROUGH_COUNT",
-                             "limitValue":  5,
-                             "unit":  "回",
-                             "isEnabled":  true,
-                             "requiresResetFlag":  false,
-                             "resetOnHit":  true,
-                             "description":  "ネウロイバトル初戦敗北を5回続けると、次回(6回目)は勝利濃厚。"
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_008",
+    "name": "Lストライクウィッチーズ2",
+    "manufacturer": "サンスリー",
+    "type": "AT",
+    "releaseDate": "2024-02-05",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はストライクボーナス初当り、重い分母は通常時直撃を補強材料として扱う構造に整理。直撃は設定差が大きいが分母が重いため、長時間実戦でのみ効かせる。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4490",
+    "ichigekiUrl": "https://1geki.jp/slot/l_strikewitches2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ストライクボーナス初当り",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "初回ボーナス「ストライクボーナス」の初当り回数。主判別項目。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "ストライクボーナス直撃",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ非経由のストライクボーナス直撃回数。重いが設定差が非常に大きい。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 432.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 420.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 409.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 389.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 370.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 349.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で評価したい。単体ではなく示唆系と合わせて判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 8738.13,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 5825.42,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 4369.07,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 2912.71,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 2184.53,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 1747.63,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。刺さると強いが、サンプル不足時は判別に使用しないこと。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 950,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "通常時最大950G+αでストライクボーナス当選。"
+    },
+    {
+      "ruleKey": "neuroi_battle_through",
+      "displayName": "ネウロイバトル初戦敗北天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "ネウロイバトル初戦敗北を5回続けると、次回(6回目)は勝利濃厚。"
+    }
+  ]
 }

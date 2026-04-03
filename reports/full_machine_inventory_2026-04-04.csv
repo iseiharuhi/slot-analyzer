@@ -1,0 +1,126 @@
+﻿file,schema,id,name,counter_count,reference_count,ceiling_rule_count,has_bom
+bancho4.json,legacy_simple,bancho4,押忍！番長4,0,4,0,False
+bio_re2.json,legacy_simple,bio_re2,スマスロ バイオハザード RE:2,0,4,0,False
+dmm_slot_001.json,full_machine,dmm_slot_001,スマスロ BIRDIE WING -Golf Girls' Story-,5,2,0,False
+dmm_slot_002.json,full_machine,dmm_slot_002,スマスロ バイオハザードRE:3,5,1,0,False
+dmm_slot_003.json,full_machine,dmm_slot_003,Ｌタクトオーパス デスティニー,5,1,0,False
+dmm_slot_004.json,full_machine,dmm_slot_004,スマスロ ビッグドリーム THE GOLDEN PUSHER,5,2,0,False
+dmm_slot_005.json,full_machine,dmm_slot_005,スマスロスーパーリオエース2,5,1,0,False
+dmm_slot_006.json,full_machine,dmm_slot_006,LB スロット GALFY,4,3,0,False
+dmm_slot_007.json,full_machine,dmm_slot_007,スマスロ ミリオンゴッド-神々の軌跡-,5,1,0,False
+dmm_slot_008.json,full_machine,dmm_slot_008,アニマルスロット ドッチ,4,3,0,False
+dmm_slot_009.json,full_machine,dmm_slot_009,真打 吉宗,5,2,0,False
+dmm_slot_010.json,full_machine,dmm_slot_010,LBトリプルクラウンセブン,4,3,0,False
+dmm_slot_011.json,full_machine,dmm_slot_011,スマスロヨルムンガンド,5,2,0,False
+dmm_slot_012.json,full_machine,dmm_slot_012,L虚構推理,5,2,0,False
+dmm_slot_013.json,full_machine,dmm_slot_013,A-SLOT+ 異世界かるてっと BT,4,1,0,False
+dmm_slot_014.json,full_machine,dmm_slot_014,Lアクダマドライブ,5,3,0,False
+dmm_slot_015.json,full_machine,dmm_slot_015,スマスロ サンダーV,6,5,0,False
+dmm_slot_016.json,full_machine,dmm_slot_016,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,3,2,0,False
+dmm_slot_017.json,full_machine,dmm_slot_017,スマスロ ハナビ,5,4,0,False
+dmm_slot_018.json,full_machine,dmm_slot_018,スマスロ 攻殻機動隊,3,2,0,False
+dmm_slot_019.json,full_machine,dmm_slot_019,L範馬刃牙,3,2,0,False
+dmm_slot_020.json,full_machine,dmm_slot_020,Lパチスロ 炎炎ノ消防隊2,3,2,0,False
+dmm_slot_021.json,full_machine,dmm_slot_021,ミクちゃんとイドムンのミラクルチャレンジ2,5,4,0,False
+dmm_slot_022.json,full_machine,dmm_slot_022,ニューシオサイ,4,3,0,False
+dmm_slot_023.json,full_machine,dmm_slot_023,パチスロ琉神−30 スイカバージョン,4,3,0,False
+dmm_slot_024.json,full_machine,dmm_slot_024,L リングにかけろ1 V,4,3,3,False
+dmm_slot_025.json,full_machine,dmm_slot_025,Lラブ嬢3〜Wご指名はいかがですか？〜,3,2,0,False
+dmm_slot_026.json,full_machine,dmm_slot_026,L花の慶次～佐渡攻めの章〜,3,2,1,False
+dmm_slot_027.json,full_machine,dmm_slot_027,スマスロモンキーターンV,2,1,2,False
+dmm_slot_028.json,full_machine,dmm_slot_028,クランキークレスト,5,4,0,False
+dmm_slot_029.json,full_machine,dmm_slot_029,マジカルハロウィン８,5,4,0,False
+dmm_slot_030.json,full_machine,dmm_slot_030,推しスロ アイドルVer.,1,0,1,False
+dmm_slot_031.json,full_machine,dmm_slot_031,パチスロ ケンガンアシュラ,3,2,0,False
+dmm_slot_032.json,full_machine,dmm_slot_032,Sちゅらちゅら,4,3,0,False
+dmm_slot_033.json,full_machine,dmm_slot_033,L ひぐらしのなく頃に 業,6,5,0,False
+dmm_slot_034.json,full_machine,dmm_slot_034,スマスロとある魔術の禁書目録,4,3,0,False
+dmm_slot_035.json,full_machine,dmm_slot_035,デジスロ JAC INバージョン,4,3,0,False
+dmm_slot_036.json,full_machine,dmm_slot_036,L大工の源さん超夢源,3,2,0,False
+dmm_slot_037.json,full_machine,dmm_slot_037,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,4,3,0,False
+dmm_slot_038.json,full_machine,dmm_slot_038,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,5,4,0,False
+dmm_slot_039.json,full_machine,dmm_slot_039,L エヴァンゲリオン ～未来への創造～,3,2,0,False
+dmm_slot_040.json,full_machine,dmm_slot_040,スーハナライジング-30,5,4,0,False
+enen.json,legacy_simple,enen,パチスロ 炎炎ノ消防隊,0,4,0,False
+funky_juggler_2.json,full_machine,funky_juggler_2,ファンキージャグラー2,5,3,0,False
+goblin_slayer.json,legacy_simple,goblin_slayer,Lゴブリンスレイヤー,0,4,0,False
+gogo_juggler_3.json,full_machine,gogo_juggler_3,ゴーゴージャグラー3,5,3,0,False
+happy_juggler_v3.json,full_machine,happy_juggler_v3,ハッピージャグラーV III,5,3,0,False
+hokuto.json,full_machine,hokuto,L北斗の拳,8,4,2,False
+hokuto_tensei_2.json,full_machine,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,5,1,1,False
+im_juggler_ex.json,full_machine,im_juggler_ex,アイムジャグラーEX,5,3,0,False
+kabaneri.json,full_machine,kabaneri,パチスロ 甲鉄城のカバネリ,6,3,3,False
+karakuri.json,unknown,,,0,0,0,True
+karakuri_circus.json,full_machine,karakuri_circus,Lからくりサーカス,5,2,3,False
+list_slot_001.json,full_machine,list_slot_001,Lゴブリンスレイヤー,4,3,1,False
+list_slot_002.json,full_machine,list_slot_002,L戦国乙女4 戦乱に閃く炯眼の軍師,4,3,2,False
+list_slot_003.json,full_machine,list_slot_003,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,4,3,1,False
+list_slot_004.json,full_machine,list_slot_004,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,4,3,0,False
+list_slot_005.json,full_machine,list_slot_005,L転生したらスライムだった件,5,3,1,False
+list_slot_006.json,full_machine,list_slot_006,スマスロ バイオハザード RE:2,5,2,2,False
+list_slot_007.json,full_machine,list_slot_007,L主役は銭形4,5,2,2,False
+list_slot_008.json,full_machine,list_slot_008,Lストライクウィッチーズ2,3,2,2,False
+list_slot_009.json,full_machine,list_slot_009,L麻雀格闘倶楽部 覚醒,3,2,4,False
+list_slot_010.json,full_machine,list_slot_010,Lベルセルク無双,3,1,1,False
+list_slot_011.json,full_machine,list_slot_011,押忍！番長4,4,3,1,False
+list_slot_012.json,full_machine,list_slot_012,L南国育ち,3,2,0,False
+list_slot_013.json,full_machine,list_slot_013,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,5,4,0,False
+list_slot_014.json,full_machine,list_slot_014,L東京喰種,5,4,3,False
+list_slot_015.json,full_machine,list_slot_015,Lアズールレーン THE ANIMATION,6,5,0,False
+list_slot_016.json,full_machine,list_slot_016,Lダーリン・イン・ザ・フランキス,4,3,0,False
+list_slot_017.json,full_machine,list_slot_017,L咲-Saki- 頂上決戦,3,2,3,False
+list_slot_018.json,full_machine,list_slot_018,Lうしおととら 白面決戦,3,2,3,False
+list_slot_019.json,full_machine,list_slot_019,Lゴジラ,5,1,4,False
+list_slot_020.json,full_machine,list_slot_020,L少女☆歌劇 レヴュースタァライト -The SLOT-,5,3,0,False
+list_slot_021.json,full_machine,list_slot_021,L仮面ライダー電王,5,3,4,False
+list_slot_022.json,full_machine,list_slot_022,Lありふれた職業で世界最強,5,3,1,False
+list_slot_023.json,full_machine,list_slot_023,Lパチスロ シン・エヴァンゲリオン,5,1,1,False
+list_slot_024.json,full_machine,list_slot_024,Lにゃんこ大戦争 超神速,5,2,3,False
+list_slot_025.json,full_machine,list_slot_025,パチスロ 炎炎ノ消防隊,4,2,2,False
+list_slot_026.json,full_machine,list_slot_026,EVANGELION FESTIVAL,5,3,2,False
+list_slot_027.json,full_machine,list_slot_027,パチスロ アクエリオン ALL STARS,3,2,2,False
+list_slot_028.json,full_machine,list_slot_028,パチスロ鉄拳5,3,2,1,False
+list_slot_029.json,full_machine,list_slot_029,パチスロ幼女戦記,4,3,1,False
+list_slot_030.json,full_machine,list_slot_030,スマスロ シャーマンキング,3,2,2,False
+list_slot_031.json,full_machine,list_slot_031,パチスロ 新鬼武者2,3,2,2,False
+list_slot_032.json,full_machine,list_slot_032,FAIRY TAIL2,3,2,1,False
+list_slot_033.json,full_machine,list_slot_033,ペルソナ5,3,2,2,False
+list_slot_034.json,full_machine,list_slot_034,パチスロ盾の勇者の成り上がり,5,1,2,False
+list_slot_035.json,full_machine,list_slot_035,S BOØWY,3,1,1,False
+list_slot_036.json,full_machine,list_slot_036,バイオハザード ヴィレッジ,4,3,2,False
+list_slot_037.json,full_machine,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,6,4,1,False
+list_slot_038.json,full_machine,list_slot_038,Re:ゼロから始める異世界生活 season2,5,1,3,False
+list_slot_039.json,full_machine,list_slot_039,この素晴らしい世界に祝福を！,5,1,1,False
+list_slot_040.json,full_machine,list_slot_040,Lルパン三世 大航海者の秘宝,5,3,3,False
+list_slot_041.json,full_machine,list_slot_041,黄門ちゃま天,5,1,3,False
+list_slot_042.json,full_machine,list_slot_042,ニューパルサーSP4,4,3,0,False
+list_slot_043.json,full_machine,list_slot_043,ニューパルサーDX3,4,3,0,False
+list_slot_044.json,full_machine,list_slot_044,ハナビ,5,4,0,False
+list_slot_045.json,full_machine,list_slot_045,バーサスリヴァイズ,6,5,0,False
+list_slot_046.json,full_machine,list_slot_046,サンダーVライトニング,3,1,0,False
+list_slot_047.json,full_machine,list_slot_047,アレックス ブライト,7,6,0,False
+list_slot_048.json,full_machine,list_slot_048,ディスクアップ2,4,3,0,False
+list_slot_049.json,full_machine,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,6,5,0,False
+list_slot_050.json,full_machine,list_slot_050,ファミスタ回胴版!!,4,3,0,False
+list_slot_051.json,full_machine,list_slot_051,沖ドキ！GOLD,6,3,0,False
+list_slot_052.json,full_machine,list_slot_052,沖ドキ！DUO,5,1,0,False
+list_slot_053.json,full_machine,list_slot_053,スマート沖スロ 沖ドキ！DUO-30 アンコール,5,1,0,False
+list_slot_054.json,full_machine,list_slot_054,チバリヨ2プラス,5,1,0,False
+list_slot_055.json,full_machine,list_slot_055,スマート沖スロ スターハナハナ,5,3,0,False
+list_slot_056.json,full_machine,list_slot_056,スマート沖スロ ニューキングハナハナ-30,5,3,0,False
+list_slot_057.json,full_machine,list_slot_057,ニューキングハナハナ-30,5,3,0,False
+list_slot_058.json,full_machine,list_slot_058,ドラゴンハナハナ～閃光～ 30,5,3,0,False
+list_slot_059.json,full_machine,list_slot_059,キングハナハナ-30,5,3,0,False
+list_slot_060.json,full_machine,list_slot_060,ハナハナホウオウ～天翔～-30,5,3,0,False
+list_slot_061.json,full_machine,list_slot_061,麻雀物語,5,4,0,False
+list_slot_062.json,full_machine,list_slot_062,戦姫絶唱シンフォギア 正義の歌,3,2,0,False
+list_slot_063.json,full_machine,list_slot_063,Lパチスロうみねこのなく頃に2,5,2,1,False
+lupin.json,unknown,,,0,0,0,True
+machine_master_manifest.json,manifest,,,0,0,0,False
+monkey_turn_v.json,legacy_simple,monkey_turn_v,スマスロ モンキーターンV,0,4,0,False
+monster_hunter_rise.json,full_machine,monster_hunter_rise,スマスロ モンスターハンターライズ,6,5,2,False
+my_juggler_v.json,full_machine,my_juggler_v,マイジャグラーV,5,3,0,False
+tokyoghoul.json,unknown,,,0,0,0,True
+valvrave.json,full_machine,valvrave,L革命機ヴァルヴレイヴ,5,3,4,False
+valvrave_2.json,full_machine,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,5,0,4,False
+vvv.json,unknown,,,0,0,0,True

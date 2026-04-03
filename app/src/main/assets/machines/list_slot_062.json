@@ -1,136 +1,134 @@
 {
-    "machine":  {
-                    "id":  "list_slot_062",
-                    "name":  "戦姫絶唱シンフォギア 正義の歌",
-                    "manufacturer":  "SANKYO",
-                    "type":  "AT",
-                    "releaseDate":  "2024-09-02",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、重い分母は直撃ATに整理。シンフォギアは展開で短期ブレが大きいため、AT初当りを主軸にし、直撃は高ゲーム数時のみ効かせる。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4579",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_sympho/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT初当り回数。主判別項目。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "最終決戦",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "上位CZ「最終決戦」当選回数。分母は重いが設定差が大きい補助項目。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  295.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  285.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  250.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  227.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  199.0,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "direct_hit_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  13000.0,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  10900.0,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  4600.0,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  2900.0,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  2500.0,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-
-                     ]
+  "machine": {
+    "id": "list_slot_062",
+    "name": "戦姫絶唱シンフォギア 正義の歌",
+    "manufacturer": "SANKYO",
+    "type": "AT",
+    "releaseDate": "2024-09-02",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、重い分母は直撃ATに整理。シンフォギアは展開で短期ブレが大きいため、AT初当りを主軸にし、直撃は高ゲーム数時のみ効かせる。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4579",
+    "ichigekiUrl": "https://1geki.jp/slot/l_sympho/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。主判別項目。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "最終決戦",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "上位CZ「最終決戦」当選回数。分母は重いが設定差が大きい補助項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 295.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 285.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 250.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 227.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 199.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 13000.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 10900.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 4600.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 2900.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 2500.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

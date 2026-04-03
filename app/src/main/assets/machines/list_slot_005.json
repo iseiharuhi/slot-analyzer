@@ -1,210 +1,210 @@
 {
-    "machine":  {
-                    "id":  "list_slot_005",
-                    "name":  "L転生したらスライムだった件",
-                    "manufacturer":  "YAMASA",
-                    "type":  "AT",
-                    "releaseDate":  "2023-10-02",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助は夜の蝶、重い分母は直撃/特殊契機で統一。設定2・4・5・6の段階機なので、存在しない設定値はそのまま作らず実在設定のみ評価する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4405",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_tensura/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "夜の蝶",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "pt特化ゾーン「夜の蝶」当選回数。公開値はあるが差は小さいため補助判別。"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "特級魔族討伐戦",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  11,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "特級魔族討伐戦。状態依存が強く、現段階では推測計算に未採用。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  12,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「転スラっしゅ」初当り回数。主判別項目。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "直撃/特殊契機",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "転生チャンス経由AT直撃などの補助メモ用。全設定の実数比較値は未採用。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  370,
-                                                          "weight":  1,
-                                                          "minSampleSize":  4,
-                                                          "note":  "主判別。2000G以上で見たい。補助要素と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  355,
-                                                          "weight":  1,
-                                                          "minSampleSize":  4,
-                                                          "note":  "主判別。2000G以上で見たい。補助要素と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  296,
-                                                          "weight":  1,
-                                                          "minSampleSize":  4,
-                                                          "note":  "主判別。2000G以上で見たい。補助要素と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  262,
-                                                          "weight":  1,
-                                                          "minSampleSize":  4,
-                                                          "note":  "主判別。2000G以上で見たい。補助要素と合わせて判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  245,
-                                                          "weight":  1,
-                                                          "minSampleSize":  4,
-                                                          "note":  "主判別。2000G以上で見たい。補助要素と合わせて判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  248,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  6,
-                                                          "note":  "補助判別。序盤はブレやすいのでAT初当り優先。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  236,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  6,
-                                                          "note":  "補助判別。序盤はブレやすいのでAT初当り優先。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  230,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  6,
-                                                          "note":  "補助判別。序盤はブレやすいのでAT初当り優先。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  229,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  6,
-                                                          "note":  "補助判別。序盤はブレやすいのでAT初当り優先。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  226,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  6,
-                                                          "note":  "補助判別。序盤はブレやすいのでAT初当り優先。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "direct_hit_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  65536,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  1,
-                                                          "note":  "重い分母。確認できても補強材料として扱う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  32768,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  1,
-                                                          "note":  "重い分母。確認できても補強材料として扱う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  16384,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  1,
-                                                          "note":  "重い分母。確認できても補強材料として扱う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  8192,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  1,
-                                                          "note":  "重い分母。確認できても補強材料として扱う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  4096,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  1,
-                                                          "note":  "重い分母。確認できても補強材料として扱う。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "point_ceiling",
-                             "displayName":  "通常時最大天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  1200,
-                             "unit":  "pt",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "通常Aは1200pt+αでAT抽選。通常B/Cは1000pt+α、天国は100pt+α。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_005",
+    "name": "L転生したらスライムだった件",
+    "manufacturer": "YAMASA",
+    "type": "AT",
+    "releaseDate": "2023-10-02",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、補助は夜の蝶、重い分母は直撃/特殊契機で統一。設定2・4・5・6の段階機なので、存在しない設定値はそのまま作らず実在設定のみ評価する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4405",
+    "ichigekiUrl": "https://1geki.jp/slot/l_tensura/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "夜の蝶",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "pt特化ゾーン「夜の蝶」当選回数。公開値はあるが差は小さいため補助判別。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "特級魔族討伐戦",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "特級魔族討伐戦。状態依存が強く、現段階では推測計算に未採用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「転スラっしゅ」初当り回数。主判別項目。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "転生チャンス経由AT直撃などの補助メモ用。全設定の実数比較値は未採用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 370,
+          "weight": 1,
+          "minSampleSize": 4,
+          "note": "主判別。2000G以上で見たい。補助要素と合わせて判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 355,
+          "weight": 1,
+          "minSampleSize": 4,
+          "note": "主判別。2000G以上で見たい。補助要素と合わせて判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 296,
+          "weight": 1,
+          "minSampleSize": 4,
+          "note": "主判別。2000G以上で見たい。補助要素と合わせて判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 262,
+          "weight": 1,
+          "minSampleSize": 4,
+          "note": "主判別。2000G以上で見たい。補助要素と合わせて判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 245,
+          "weight": 1,
+          "minSampleSize": 4,
+          "note": "主判別。2000G以上で見たい。補助要素と合わせて判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 248,
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "補助判別。序盤はブレやすいのでAT初当り優先。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 236,
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "補助判別。序盤はブレやすいのでAT初当り優先。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 230,
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "補助判別。序盤はブレやすいのでAT初当り優先。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 229,
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "補助判別。序盤はブレやすいのでAT初当り優先。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 226,
+          "weight": 0.7,
+          "minSampleSize": 6,
+          "note": "補助判別。序盤はブレやすいのでAT初当り優先。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 65536,
+          "weight": 0.25,
+          "minSampleSize": 1,
+          "note": "重い分母。確認できても補強材料として扱う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 32768,
+          "weight": 0.25,
+          "minSampleSize": 1,
+          "note": "重い分母。確認できても補強材料として扱う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 16384,
+          "weight": 0.25,
+          "minSampleSize": 1,
+          "note": "重い分母。確認できても補強材料として扱う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 8192,
+          "weight": 0.25,
+          "minSampleSize": 1,
+          "note": "重い分母。確認できても補強材料として扱う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 4096,
+          "weight": 0.25,
+          "minSampleSize": 1,
+          "note": "重い分母。確認できても補強材料として扱う。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "point_ceiling",
+      "displayName": "通常時最大天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1200,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常Aは1200pt+αでAT抽選。通常B/Cは1000pt+α、天国は100pt+α。",
+      "isEnabled": true
+    }
+  ]
 }

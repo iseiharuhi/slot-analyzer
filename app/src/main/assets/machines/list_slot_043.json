@@ -1,188 +1,186 @@
 {
-    "machine":  {
-                    "id":  "list_slot_043",
-                    "name":  "ニューパルサーDX3",
-                    "manufacturer":  "YAMASA NEXT",
-                    "type":  "BONUS",
-                    "releaseDate":  "2021-10-04",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はREG、補助はボーナス合算とBIGに整理。DX3もREG主軸で揃え、合算で全体傾向を補強する。",
-                    "dmmUrl":  null,
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_newpal_dx3/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "big_count",
-                                   "displayName":  "BIG",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "BBは補助指標。"
-                               },
-                               {
-                                   "key":  "reg_count",
-                                   "displayName":  "REG",
-                                   "category":  "BONUS",
-                                   "sortOrder":  11,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "REGを主判別に使用。"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "合算ボーナス",
-                                   "category":  "BONUS",
-                                   "sortOrder":  12,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "BIG+REGの合算管理用。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "reg_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  356.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REGを軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  348.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REGを軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  337.8,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REGを軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  292.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REGを軸に2500G以上で評価したい。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  273.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。REGを軸に2500G以上で評価したい。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  168.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。合算は全体傾向の確認に使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  165.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。合算は全体傾向の確認に使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  160.6,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。合算は全体傾向の確認に使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  145.6,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。合算は全体傾向の確認に使う。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  136.5,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。合算は全体傾向の確認に使う。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "big_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  318.1,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  315.1,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  306.2,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  290.0,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  273.1,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別②。BIG単体は過信せずREG主軸で判断。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-
-                     ]
+  "machine": {
+    "id": "list_slot_043",
+    "name": "ニューパルサーDX3",
+    "manufacturer": "YAMASA NEXT",
+    "type": "BONUS",
+    "releaseDate": "2021-10-04",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とBIGに整理。DX3もREG主軸で揃え、合算で全体傾向を補強する。",
+    "dmmUrl": null,
+    "ichigekiUrl": "https://1geki.jp/slot/s_newpal_dx3/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BBは補助指標。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REGを主判別に使用。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG+REGの合算管理用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 356.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 348.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 337.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 292.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 273.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 168.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 165.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 160.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 145.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 136.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 318.1,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 315.1,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 306.2,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 290.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 273.1,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

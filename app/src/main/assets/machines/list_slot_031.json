@@ -1,171 +1,171 @@
 {
-    "machine":  {
-                    "id":  "list_slot_031",
-                    "name":  "パチスロ 新鬼武者2",
-                    "manufacturer":  "Enterrise",
-                    "type":  "AT",
-                    "releaseDate":  "2022-08-08",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、重い分母は直撃ATに整理。鬼モードや示唆は重要だが、現行入力ではAT初当りを軸にし、直撃は高ゲーム数時の補強材料として低weightで残す。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4178",
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_sinnoni2/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「蒼剣ラッシュ」初当り回数。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "直撃AT(リーチ目)",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時リーチ目出現からの直撃AT回数。非常に重いが設定差が大きい。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  405.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  382.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  366.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  301.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  275.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  262.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "direct_hit_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  40857.8,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  15321.7,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  10214.4,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  7660.8,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  7660.8,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  5107.2,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "bz_between_ceiling",
-                             "displayName":  "BZ間天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  333,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "BZ間333G消化で前兆を経てBZに突入。",
-                             "isEnabled":  true
-                         },
-                         {
-                             "ruleKey":  "at_between_ceiling",
-                             "displayName":  "AT間天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  1000,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "AT間1000G消化で前兆を経て天井BZに突入し、最終的にAT当選。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_031",
+    "name": "パチスロ 新鬼武者2",
+    "manufacturer": "Enterrise",
+    "type": "AT",
+    "releaseDate": "2022-08-08",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、重い分母は直撃ATに整理。鬼モードや示唆は重要だが、現行入力ではAT初当りを軸にし、直撃は高ゲーム数時の補強材料として低weightで残す。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4178",
+    "ichigekiUrl": "https://1geki.jp/slot/s_sinnoni2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「蒼剣ラッシュ」初当り回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃AT(リーチ目)",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時リーチ目出現からの直撃AT回数。非常に重いが設定差が大きい。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 405.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 382.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 366.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 301.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 275.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 262.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。示唆要素と合わせて総合判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 40857.8,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 15321.7,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 10214.4,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 7660.8,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 7660.8,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 5107.2,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "bz_between_ceiling",
+      "displayName": "BZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 333,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "BZ間333G消化で前兆を経てBZに突入。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "at_between_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間1000G消化で前兆を経て天井BZに突入し、最終的にAT当選。",
+      "isEnabled": true
+    }
+  ]
 }

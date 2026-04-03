@@ -1,184 +1,184 @@
 {
-    "machine":  {
-                    "id":  "list_slot_063",
-                    "name":  "Lパチスロうみねこのなく頃に2",
-                    "manufacturer":  "オーイズミ",
-                    "type":  "AT",
-                    "releaseDate":  "2026-02-02",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとCZ、重い分母は直撃系に整理。うみねこ2は複数契機で数値が散りやすいため、主軸はボーナス初当りで固定する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4925",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_umineko2/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "ボーナス合算",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "BIG+REGの合算回数。完走型ARTのためデータ機上では若干重く見える場合がある。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "REG中斜め青7揃い",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "REG中の斜め青7揃い回数。分母は重いが設定差が大きい。"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "運命分岐モード",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  30,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "CZ当選回数の補助記録用。今回は比較値未反映。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "ART当選",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  31,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "幻想論戦などART当選回数の補助記録用。今回は比較値未反映。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  189.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  184.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  179.1,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  174.8,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  170.7,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  167.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "direct_hit_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  555.4,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  474.9,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  442.8,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  300.6,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  268.6,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  258.0,
-                                                          "weight":  0.25,
-                                                          "minSampleSize":  12000,
-                                                          "note":  "重い分母。確認できても補強材料として扱い、単体で決めない。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "cz_game_ceiling",
-                             "displayName":  "CZ間天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  200,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "通常時（運命分岐モード間）200G消化でCZ「運命分岐モード」へ当選。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_063",
+    "name": "Lパチスロうみねこのなく頃に2",
+    "manufacturer": "オーイズミ",
+    "type": "AT",
+    "releaseDate": "2026-02-02",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとCZ、重い分母は直撃系に整理。うみねこ2は複数契機で数値が散りやすいため、主軸はボーナス初当りで固定する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4925",
+    "ichigekiUrl": "https://1geki.jp/slot/l_umineko2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG+REGの合算回数。完走型ARTのためデータ機上では若干重く見える場合がある。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "REG中斜め青7揃い",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REG中の斜め青7揃い回数。分母は重いが設定差が大きい。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "運命分岐モード",
+      "category": "AT_CZ",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "CZ当選回数の補助記録用。今回は比較値未反映。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "ART当選",
+      "category": "AT_CZ",
+      "sortOrder": 31,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "幻想論戦などART当選回数の補助記録用。今回は比較値未反映。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 189.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 184.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 179.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 174.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 170.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 167.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・CZと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 555.4,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 474.9,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 442.8,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 300.6,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 268.6,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 258.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_game_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時（運命分岐モード間）200G消化でCZ「運命分岐モード」へ当選。",
+      "isEnabled": true
+    }
+  ]
 }

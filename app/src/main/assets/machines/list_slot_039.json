@@ -1,137 +1,137 @@
 {
-    "machine":  {
-                    "id":  "list_slot_039",
-                    "name":  "この素晴らしい世界に祝福を！",
-                    "manufacturer":  "サミー",
-                    "type":  "AT",
-                    "releaseDate":  "2022-04-04",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当りに固定。このすばは現行入力で確実に使える軸がAT初当り中心のため、無理に補助項目を増やさず高品質な1軸運用を維持する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4097",
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_konosuba/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "初当り/ボーナス",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "CZ",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  11,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  12,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「このすばチャンス」初当り回数。"
-                               },
-                               {
-                                   "key":  "direct_hit_count",
-                                   "displayName":  "直撃/特殊契機",
-                                   "category":  "SPECIAL",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "直撃AT・特殊当選・上位契機などの補助記録用。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  261.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  251.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  247.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  233.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  230.8,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  216.9,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時ゲーム数天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  598,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "通常時598G+α消化でAT直撃+駄女神ぼーなすに当選。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_039",
+    "name": "この素晴らしい世界に祝福を！",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2022-04-04",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当りに固定。このすばは現行入力で確実に使える軸がAT初当り中心のため、無理に補助項目を増やさず高品質な1軸運用を維持する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4097",
+    "ichigekiUrl": "https://1geki.jp/slot/s_konosuba/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り/ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「このすばチャンス」初当り回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "直撃AT・特殊当選・上位契機などの補助記録用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 261.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 251.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 247.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 233.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 230.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 216.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく示唆系と総合判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 598,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時598G+α消化でAT直撃+駄女神ぼーなすに当選。",
+      "isEnabled": true
+    }
+  ]
 }

@@ -568,19 +568,14 @@
       "checksum": "ccd42522b70689fd94534e53d06b2d6a5166a469022bc16b3db556c7a7ee11f5"
     },
     {
-      "machineId": "list_slot_064",
-      "fileName": "list_slot_064.json",
-      "checksum": "de810cc63ffa223100789e61781c97ba03c2163969d23838dd53549e3a9d43b7"
-    },
-    {
-      "machineId": "list_slot_065",
-      "fileName": "list_slot_065.json",
-      "checksum": "a03c984e8e7e1faf37b7a6ce2da46f09f1ffe3e9e95b10c0e53b835e4b6a7fcd"
+      "machineId": "hokuto_tensei_2",
+      "fileName": "hokuto_tensei_2.json",
+      "checksum": "a2af024ef2831bd843c7f7204e10cbca4e77f566177c3502f1b9d23ea9aa19f7"
     },
     {
       "machineId": "valvrave_2",
       "fileName": "valvrave_2.json",
-      "checksum": ""
+      "checksum": "142006b72c46b4de3141bdbabeb110104e621ea8c1c67043c1bef2a9521259d6"
     }
   ]
 }

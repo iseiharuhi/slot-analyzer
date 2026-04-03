@@ -1,150 +1,148 @@
 {
-    "machine":  {
-                    "id":  "dmm_slot_031",
-                    "name":  "パチスロ ケンガンアシュラ",
-                    "manufacturer":  null,
-                    "type":  "AT",
-                    "releaseDate":  null,
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。ケンガンアシュラはAT初当り主軸で見やすさを優先する。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4434",
-                    "ichigekiUrl":  "https://1geki.jp/slot/l_kengan_ashura/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "inputType":  "NUMBER",
-                                   "unit":  "G",
-                                   "supportsMinus":  false,
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "sortOrder":  1,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "cz_count",
-                                   "displayName":  "CZトータル",
-                                   "category":  "AT_CZ",
-                                   "inputType":  "COUNTER",
-                                   "unit":  "回",
-                                   "supportsMinus":  true,
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "sortOrder":  10,
-                                   "notes":  null
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "inputType":  "COUNTER",
-                                   "unit":  "回",
-                                   "supportsMinus":  true,
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "sortOrder":  11,
-                                   "notes":  null
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  399.6,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  389.9,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  354.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  315.4,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  285.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  256.2,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "cz_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  177.6,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  177.1,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  3,
-                                                          "denominatorValue":  170.3,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  161.2,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  154.0,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  145.9,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-
-                     ]
+  "machine": {
+    "id": "dmm_slot_031",
+    "name": "パチスロ ケンガンアシュラ",
+    "manufacturer": null,
+    "type": "AT",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はAT初当り、補助はCZに整理。ケンガンアシュラはAT初当り主軸で見やすさを優先する。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4434",
+    "ichigekiUrl": "https://1geki.jp/slot/l_kengan_ashura/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZトータル",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 10,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 11,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 399.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 389.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 354.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 315.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 285.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 256.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 177.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 177.1,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 170.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 161.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 154.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 145.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

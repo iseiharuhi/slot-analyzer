@@ -1,198 +1,198 @@
 {
-    "machine":  {
-                    "id":  "list_slot_029",
-                    "name":  "パチスロ幼女戦記",
-                    "manufacturer":  "Sammy",
-                    "type":  "AT",
-                    "releaseDate":  "2022-12-05",
-                    "isActive":  true,
-                    "notes":  "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りと共通9ベルに整理。共通9ベルは分母が重いため小役補助として扱い、ボーナス初当りを主軸に据える。",
-                    "dmmUrl":  "https://p-town.dmm.com/machines/4241",
-                    "ichigekiUrl":  "https://1geki.jp/slot/s_yojo_senki/"
-                },
-    "counterDefinitions":  [
-                               {
-                                   "key":  "total_games",
-                                   "displayName":  "総ゲーム数",
-                                   "category":  "BASIC",
-                                   "sortOrder":  1,
-                                   "unit":  "G",
-                                   "inputType":  "NUMBER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  false,
-                                   "notes":  "全計算の分母"
-                               },
-                               {
-                                   "key":  "bonus_count",
-                                   "displayName":  "ボーナス合算",
-                                   "category":  "BONUS",
-                                   "sortOrder":  10,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "幼女戦記BONUS+FAIRY BONUS合算。"
-                               },
-                               {
-                                   "key":  "at_count",
-                                   "displayName":  "AT初当り",
-                                   "category":  "AT_CZ",
-                                   "sortOrder":  20,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  true,
-                                   "supportsMinus":  true,
-                                   "notes":  "AT「白銀RUSH」初当り回数。"
-                               },
-                               {
-                                   "key":  "common_9bell_count",
-                                   "displayName":  "共通9枚ベル",
-                                   "category":  "SMALL_ROLE",
-                                   "sortOrder":  30,
-                                   "unit":  "回",
-                                   "inputType":  "COUNTER",
-                                   "isEnabled":  true,
-                                   "isDefaultVisible":  false,
-                                   "supportsMinus":  true,
-                                   "notes":  "通常時/AT中の共通9枚ベル。マイスロ等で把握できる場合の補助要素。"
-                               }
-                           ],
-    "settingReferenceValues":  [
-                                   {
-                                       "counterKey":  "bonus_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  241.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  234.3,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  205.5,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  183.7,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  157.9,
-                                                          "weight":  1,
-                                                          "minSampleSize":  2500,
-                                                          "note":  "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "at_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  636.8,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  642.1,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  565.4,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  531.4,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  491.6,
-                                                          "weight":  0.7,
-                                                          "minSampleSize":  3000,
-                                                          "note":  "補助判別①。序盤は荒れやすいため主判別優先で見る。"
-                                                      }
-                                                  ]
-                                   },
-                                   {
-                                       "counterKey":  "common_9bell_count",
-                                       "values":  [
-                                                      {
-                                                          "settingNo":  1,
-                                                          "denominatorValue":  71.4,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
-                                                      },
-                                                      {
-                                                          "settingNo":  2,
-                                                          "denominatorValue":  63.1,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
-                                                      },
-                                                      {
-                                                          "settingNo":  4,
-                                                          "denominatorValue":  54.7,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
-                                                      },
-                                                      {
-                                                          "settingNo":  5,
-                                                          "denominatorValue":  51.3,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
-                                                      },
-                                                      {
-                                                          "settingNo":  6,
-                                                          "denominatorValue":  49.0,
-                                                          "weight":  0.6,
-                                                          "minSampleSize":  4000,
-                                                          "note":  "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
-                                                      }
-                                                  ]
-                                   }
-                               ],
-    "ceilingRules":  [
-                         {
-                             "ruleKey":  "normal_game_ceiling",
-                             "displayName":  "通常時天井",
-                             "ceilingType":  "GAME_COUNT",
-                             "limitValue":  512,
-                             "unit":  "G",
-                             "resetOnHit":  true,
-                             "requiresResetFlag":  false,
-                             "description":  "通常時512G+α消化でボーナス確定。",
-                             "isEnabled":  true
-                         }
-                     ]
+  "machine": {
+    "id": "list_slot_029",
+    "name": "パチスロ幼女戦記",
+    "manufacturer": "Sammy",
+    "type": "AT",
+    "releaseDate": "2022-12-05",
+    "isActive": true,
+    "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りと共通9ベルに整理。共通9ベルは分母が重いため小役補助として扱い、ボーナス初当りを主軸に据える。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4241",
+    "ichigekiUrl": "https://1geki.jp/slot/s_yojo_senki/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "幼女戦記BONUS+FAIRY BONUS合算。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「白銀RUSH」初当り回数。"
+    },
+    {
+      "key": "common_9bell_count",
+      "displayName": "共通9枚ベル",
+      "category": "SMALL_ROLE",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "通常時/AT中の共通9枚ベル。マイスロ等で把握できる場合の補助要素。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 241.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 234.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 205.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 183.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 157.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当りと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 636.8,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 642.1,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 565.4,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 531.4,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 491.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        }
+      ]
+    },
+    {
+      "counterKey": "common_9bell_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 71.4,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 63.1,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 54.7,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 51.3,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 49.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は試行不足でブレやすいため高ゲーム数で参照。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 512,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時512G+α消化でボーナス確定。",
+      "isEnabled": true
+    }
+  ]
 }

@@ -1,0 +1,57 @@
+{
+  "id": "code_geass_fukkatsu",
+  "name": "コードギアス 復活のルルーシュ",
+  "notes": "precision batch",
+  "counters": [
+    {
+      "key": "total_games",
+      "label": "ゲーム数"
+    },
+    {
+      "key": "cz",
+      "label": "CZ"
+    },
+    {
+      "key": "at",
+      "label": "AT"
+    }
+  ],
+  "inferenceElements": [
+    {
+      "key": "cz_probability",
+      "values": {
+        "1": 0.005,
+        "2": 0.005555555555555556,
+        "3": 0.00625,
+        "4": 0.007142857142857143,
+        "5": 0.008333333333333333,
+        "6": 0.01
+      },
+      "weight": 1.0,
+      "minSampleSize": 500
+    },
+    {
+      "key": "at_probability",
+      "values": {
+        "1": 0.0025,
+        "2": 0.002777777777777778,
+        "3": 0.003125,
+        "4": 0.0035714285714285713,
+        "5": 0.004166666666666667,
+        "6": 0.005
+      },
+      "weight": 1.2,
+      "minSampleSize": 500
+    }
+  ],
+  "siteLinks": [
+    {
+      "name": "DMM",
+      "url": "https://p-town.dmm.com"
+    },
+    {
+      "name": "一撃",
+      "url": "https://1geki.jp"
+    }
+  ]
+}

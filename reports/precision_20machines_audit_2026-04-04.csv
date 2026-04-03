@@ -1,0 +1,21 @@
+﻿file,action,template,machine_id,machine_name,setting_reference_count
+monkey_turn_v.json,converted,dmm_slot_027.json,monkey_turn_v,スマスロ モンキーターンV,4
+goblin_slayer.json,converted,list_slot_001.json,goblin_slayer,Lゴブリンスレイヤー,4
+bancho4.json,converted,list_slot_011.json,bancho4,押忍！番長4,4
+enen.json,converted,list_slot_025.json,enen,パチスロ 炎炎ノ消防隊,4
+bio_re2.json,converted,list_slot_006.json,bio_re2,スマスロ バイオハザード RE:2,4
+lupin.json,converted,list_slot_040.json,lupin,Lルパン三世 大航海者の秘宝,3
+tokyoghoul.json,converted,list_slot_014.json,tokyoghoul,L東京喰種,4
+vvv.json,converted,valvrave.json,vvv,L革命機ヴァルヴレイヴ,3
+karakuri.json,converted,karakuri_circus.json,karakuri,Lからくりサーカス,2
+list_slot_001.json,refreshed,-,list_slot_001,Lゴブリンスレイヤー,3
+list_slot_004.json,refreshed,-,list_slot_004,コードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,3
+list_slot_006.json,refreshed,-,list_slot_006,スマスロ バイオハザード RE:2,2
+list_slot_007.json,refreshed,-,list_slot_007,L主役は銭形4,2
+list_slot_008.json,refreshed,-,list_slot_008,Lストライクウィッチーズ2,2
+list_slot_009.json,refreshed,-,list_slot_009,L麻雀格闘倶楽部 覚醒,2
+list_slot_010.json,refreshed,-,list_slot_010,Lベルセルク無双,1
+list_slot_011.json,refreshed,-,list_slot_011,押忍！番長4,3
+list_slot_014.json,refreshed,-,list_slot_014,L東京喰種,4
+list_slot_025.json,refreshed,-,list_slot_025,パチスロ 炎炎ノ消防隊,2
+list_slot_040.json,refreshed,-,list_slot_040,Lルパン三世 大航海者の秘宝,3
