@@ -1,8 +1,10 @@
 package com.example.slotanalyzer.di
 
+import com.example.slotanalyzer.data.repository.AppSettingRepositoryImpl
 import com.example.slotanalyzer.data.repository.MachineRepositoryImpl
 import com.example.slotanalyzer.data.repository.MasterSyncRepositoryImpl
 import com.example.slotanalyzer.data.repository.PlaySessionRepositoryImpl
+import com.example.slotanalyzer.domain.repository.AppSettingRepository
 import com.example.slotanalyzer.domain.repository.MachineRepository
 import com.example.slotanalyzer.domain.repository.MasterSyncRepository
 import com.example.slotanalyzer.domain.repository.PlaySessionRepository
@@ -15,6 +17,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
+
+    @Binds
+    @Singleton
+    abstract fun bindAppSettingRepository(
+        impl: AppSettingRepositoryImpl
+    ): AppSettingRepository
 
     @Binds
     @Singleton

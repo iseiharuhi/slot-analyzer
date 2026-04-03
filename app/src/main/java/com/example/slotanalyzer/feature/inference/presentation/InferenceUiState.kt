@@ -31,6 +31,7 @@ data class InferenceUiState(
     val candidateSummaryText: String = "",
     val inputItems: List<InferenceInputItemUiModel> = emptyList(),
     val currentGameCount: Int = 0,
+    val showCeilingSection: Boolean = true,
     val ceilingItems: List<CeilingStatusUiModel> = emptyList(),
     val reasonItems: List<InferenceReasonUiModel> = emptyList(),
     val reasonSummaryText: String = "",

@@ -7,6 +7,7 @@ import com.example.slotanalyzer.core.ui.model.ScoreBarItem
 import com.example.slotanalyzer.core.util.RateFormatter
 import com.example.slotanalyzer.core.util.SettingSpecFormatter
 import com.example.slotanalyzer.domain.model.CounterCategory
+import com.example.slotanalyzer.domain.repository.AppSettingRepository
 import com.example.slotanalyzer.domain.usecase.CalculateCeilingStatusUseCase
 import com.example.slotanalyzer.feature.inference.domain.model.InferenceResult
 import com.example.slotanalyzer.feature.inference.domain.model.SettingScore
@@ -32,7 +33,8 @@ class InferenceViewModel @Inject constructor(
     private val calculateInferenceUseCase: CalculateInferenceUseCase,
     private val updateSessionInferenceSnapshotUseCase: UpdateSessionInferenceSnapshotUseCase,
     private val finishPlaySessionUseCase: FinishPlaySessionUseCase,
-    private val calculateCeilingStatusUseCase: CalculateCeilingStatusUseCase
+    private val calculateCeilingStatusUseCase: CalculateCeilingStatusUseCase,
+    appSettingRepository: AppSettingRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(InferenceUiState())
@@ -40,6 +42,16 @@ class InferenceViewModel @Inject constructor(
 
     private var loadedSessionId: String? = null
     private var currentSession: PlaySession? = null
+    private var showCeilingSection: Boolean = true
+
+    init {
+        viewModelScope.launch {
+            appSettingRepository.observeUserPreferences().collect { preferences ->
+                showCeilingSection = preferences.showCeiling
+                _uiState.value = _uiState.value.copy(showCeilingSection = preferences.showCeiling)
+            }
+        }
+    }
 
     fun loadInference(sessionId: String) {
         if (sessionId.isBlank() || loadedSessionId == sessionId) return
@@ -71,6 +83,7 @@ class InferenceViewModel @Inject constructor(
                 candidateSummaryText = buildCandidateSummary(result.settingScores),
                 inputItems = buildInputItems(machine, session),
                 currentGameCount = currentGameCount,
+                showCeilingSection = showCeilingSection,
                 ceilingItems = buildCeilingItems(machine, session),
                 reasonItems = reasonItems,
                 reasonSummaryText = buildReasonSummaryText(reasonItems),

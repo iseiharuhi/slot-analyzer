@@ -12,6 +12,7 @@ import com.example.slotanalyzer.feature.home.presentation.HomeScreen
 import com.example.slotanalyzer.feature.inference.presentation.InferenceScreen
 import com.example.slotanalyzer.feature.machine.presentation.MachineSelectScreen
 import com.example.slotanalyzer.feature.session.presentation.SessionInputScreen
+import com.example.slotanalyzer.feature.settings.presentation.SettingsScreen
 
 @Composable
 fun AppNavHost() {
@@ -27,6 +28,10 @@ fun AppNavHost() {
 
         composable(AppRoutes.MACHINE_SELECT) {
             MachineSelectScreen(navController = navController)
+        }
+
+        composable(AppRoutes.SETTINGS) {
+            SettingsScreen(onBack = { navController.popBackStack() })
         }
 
         composable(

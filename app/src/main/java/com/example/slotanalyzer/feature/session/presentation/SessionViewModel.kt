@@ -3,6 +3,7 @@ package com.example.slotanalyzer.feature.session.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.slotanalyzer.core.util.SettingSpecFormatter
+import com.example.slotanalyzer.domain.repository.AppSettingRepository
 import com.example.slotanalyzer.domain.model.CeilingType
 import com.example.slotanalyzer.domain.model.CounterCategory
 import com.example.slotanalyzer.domain.usecase.CalculateCeilingStatusUseCase
@@ -65,6 +66,8 @@ data class SessionUiState(
     val dmmUrl: String? = null,
     val ichigekiUrl: String? = null,
     val guidanceText: String = "",
+    val showCeilingSection: Boolean = true,
+    val showExternalLinks: Boolean = true,
     val ceilingBlocks: List<CeilingBlockUiModel> = emptyList(),
     val counterItems: List<SessionCounterItemUiModel> = emptyList()
 )
@@ -75,13 +78,31 @@ class SessionViewModel @Inject constructor(
     private val getMachineUseCase: GetMachineUseCase,
     private val updateCounterUseCase: UpdateCounterUseCase,
     private val resetCurrentSessionCountersUseCase: ResetCurrentSessionCountersUseCase,
-    private val calculateCeilingStatusUseCase: CalculateCeilingStatusUseCase
+    private val calculateCeilingStatusUseCase: CalculateCeilingStatusUseCase,
+    appSettingRepository: AppSettingRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SessionUiState())
     val uiState: StateFlow<SessionUiState> = _uiState.asStateFlow()
 
     private var currentMachine: Machine? = null
+    private var showCeilingSection: Boolean = true
+    private var showExternalLinks: Boolean = true
+
+    init {
+        viewModelScope.launch {
+            appSettingRepository.observeUserPreferences().collect { preferences ->
+                showCeilingSection = preferences.showCeiling
+                showExternalLinks = preferences.showExternalLinks
+                _uiState.update { current ->
+                    current.copy(
+                        showCeilingSection = preferences.showCeiling,
+                        showExternalLinks = preferences.showExternalLinks
+                    )
+                }
+            }
+        }
+    }
 
     fun loadSession(sessionId: String) {
         if (sessionId.isBlank() || _uiState.value.sessionId == sessionId) return
@@ -146,6 +167,8 @@ class SessionViewModel @Inject constructor(
             dmmUrl = machine?.dmmUrl,
             ichigekiUrl = machine?.ichigekiUrl,
             guidanceText = buildGuidanceText(machine),
+            showCeilingSection = showCeilingSection,
+            showExternalLinks = showExternalLinks,
             ceilingBlocks = ceilingBlocks,
             counterItems = buildCounterItems(machine, session)
         )

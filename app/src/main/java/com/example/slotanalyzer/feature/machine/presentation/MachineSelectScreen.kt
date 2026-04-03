@@ -53,6 +53,13 @@ fun MachineSelectScreen(
         Text(
             text = "機種を選択",
             style = MaterialTheme.typography.headlineSmall,
+            modifier = Modifier.padding(bottom = 8.dp)
+        )
+
+        Text(
+            text = "並び順: ${state.sortOrderLabel} / 表示対象: ${state.filterLabel}",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(bottom = 16.dp)
         )
 
@@ -130,6 +137,15 @@ fun MachineSelectScreen(
             ) {
                 Text("続きから再開")
             }
+        }
+
+        OutlinedButton(
+            onClick = { navController.navigate(AppRoutes.SETTINGS) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 8.dp)
+        ) {
+            Text("設定を開く")
         }
 
         OutlinedButton(

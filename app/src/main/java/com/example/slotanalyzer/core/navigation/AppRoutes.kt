@@ -7,6 +7,7 @@ object AppRoutes {
     const val INFERENCE = "inference/{sessionId}"
     const val HISTORY_LIST = "history_list"
     const val HISTORY_DETAIL = "history_detail/{sessionId}"
+    const val SETTINGS = "settings"
 
     fun sessionInput(sessionId: String): String = "session_input/$sessionId"
     fun inference(sessionId: String): String = "inference/$sessionId"

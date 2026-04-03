@@ -39,14 +39,17 @@ import com.example.slotanalyzer.core.ui.component.CeilingStatusSection
 import com.example.slotanalyzer.core.ui.component.ConfidenceChip
 import com.example.slotanalyzer.core.ui.component.TopSettingCard
 import com.example.slotanalyzer.core.ui.component.extractTopSettingLabel
+import com.example.slotanalyzer.feature.settings.presentation.SettingsViewModel
 
 @Composable
 fun InferenceScreen(
     navController: NavController,
     sessionId: String,
-    viewModel: InferenceViewModel = hiltViewModel()
+    viewModel: InferenceViewModel = hiltViewModel(),
+    settingsViewModel: SettingsViewModel = hiltViewModel()
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    val userPreferences by settingsViewModel.uiState.collectAsStateWithLifecycle()
     val topSettingLabel = extractTopSettingLabel(state.topSettingText)
 
     LaunchedEffect(sessionId) {
@@ -174,11 +177,13 @@ fun InferenceScreen(
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
-        CeilingStatusSection(
-            items = state.ceilingItems,
-            emptyText = "この機種には表示可能な天井情報がありません。"
-        )
+        if (userPreferences.showCeiling) {
+            Spacer(modifier = Modifier.height(16.dp))
+            CeilingStatusSection(
+                items = state.ceilingItems,
+                emptyText = "この機種には表示可能な天井情報がありません。"
+            )
+        }
 
         if (state.reasonItems.isNotEmpty()) {
             Spacer(modifier = Modifier.height(16.dp))

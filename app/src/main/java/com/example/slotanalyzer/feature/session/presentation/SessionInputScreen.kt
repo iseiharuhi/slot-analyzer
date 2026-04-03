@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.slotanalyzer.feature.session.presentation.component.CeilingBlockCard
+import com.example.slotanalyzer.feature.settings.presentation.SettingsViewModel
 import com.example.slotanalyzer.feature.session.presentation.component.NumericAdjustField
 
 private enum class SessionInputTab(val label: String) {
@@ -57,9 +58,11 @@ fun SessionInputScreen(
     sessionId: String,
     onMoveToInference: () -> Unit,
     onBack: () -> Unit,
-    viewModel: SessionViewModel = hiltViewModel()
+    viewModel: SessionViewModel = hiltViewModel(),
+    settingsViewModel: SettingsViewModel = hiltViewModel()
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    val userPreferences by settingsViewModel.uiState.collectAsStateWithLifecycle()
     val context = LocalContext.current
     var showResetDialog by remember { mutableStateOf(false) }
     var selectedTabIndex by remember { mutableIntStateOf(0) }
@@ -92,7 +95,16 @@ fun SessionInputScreen(
     }
 
     val groupedItems = state.counterItems.groupBy { it.categoryLabel }
-    val tabs = SessionInputTab.entries
+    val tabs = buildList {
+        if (userPreferences.showCeiling) add(SessionInputTab.CEILING)
+        add(SessionInputTab.COUNTER)
+    }
+
+    LaunchedEffect(tabs.size) {
+        if (selectedTabIndex > tabs.lastIndex) {
+            selectedTabIndex = tabs.lastIndex.coerceAtLeast(0)
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -125,13 +137,15 @@ fun SessionInputScreen(
                         )
                     }
 
-                    SiteLinksRow(
-                        dmmUrl = state.dmmUrl,
-                        ichigekiUrl = state.ichigekiUrl,
-                        onOpenUrl = { url ->
-                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                        }
-                    )
+                    if (userPreferences.showExternalLinks) {
+                        SiteLinksRow(
+                            dmmUrl = state.dmmUrl,
+                            ichigekiUrl = state.ichigekiUrl,
+                            onOpenUrl = { url ->
+                                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                            }
+                        )
+                    }
 
                     if (state.machineTypeText.isNotBlank()) {
                         AssistChip(
@@ -160,27 +174,29 @@ fun SessionInputScreen(
                 }
             }
 
-            TabRow(
-                selectedTabIndex = selectedTabIndex,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp)
-            ) {
-                tabs.forEachIndexed { index, tab ->
-                    Tab(
-                        selected = selectedTabIndex == index,
-                        onClick = { selectedTabIndex = index },
-                        text = {
-                            Text(
-                                text = tab.label,
-                                fontWeight = if (selectedTabIndex == index) {
-                                    FontWeight.SemiBold
-                                } else {
-                                    FontWeight.Normal
-                                }
-                            )
-                        }
-                    )
+            if (tabs.size > 1) {
+                TabRow(
+                    selectedTabIndex = selectedTabIndex,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp)
+                ) {
+                    tabs.forEachIndexed { index, tab ->
+                        Tab(
+                            selected = selectedTabIndex == index,
+                            onClick = { selectedTabIndex = index },
+                            text = {
+                                Text(
+                                    text = tab.label,
+                                    fontWeight = if (selectedTabIndex == index) {
+                                        FontWeight.SemiBold
+                                    } else {
+                                        FontWeight.Normal
+                                    }
+                                )
+                            }
+                        )
+                    }
                 }
             }
 

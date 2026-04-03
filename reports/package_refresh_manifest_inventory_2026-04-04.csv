@@ -1,0 +1,116 @@
+﻿machine_id,file_name,machine_name,schema_type,counter_count,reference_group_count,setting_value_count,ceiling_rule_count,has_dmm_url,has_ichigeki_url,notes_length,checksum,listed_category
+im_juggler_ex,im_juggler_ex.json,アイムジャグラーEX,full_machine,5,3,18,0,True,True,71,04e959b2040a0578b93a619b561df740648fd08cff3dd29355deb04ea77025a9,ノーマルタイプ
+my_juggler_v,my_juggler_v.json,マイジャグラーV,full_machine,5,3,18,0,True,True,76,6d8dcf98eca132dc875f987af8e109c77b7c6b712f71a7cbb1c230cff34ff1af,ノーマルタイプ
+funky_juggler_2,funky_juggler_2.json,ファンキージャグラー2,full_machine,5,3,18,0,True,True,65,c72471bde85f8c8e151a670758fd7db86f89831dcb6e670eb8e02a6111992a33,ノーマルタイプ
+happy_juggler_v3,happy_juggler_v3.json,ハッピージャグラーV III,full_machine,5,3,18,0,True,True,64,487e62dce65be1982f70e306a611f45eb1152373896a7720c96845a2c3d668ea,ノーマルタイプ
+gogo_juggler_3,gogo_juggler_3.json,ゴーゴージャグラー3,full_machine,5,3,18,0,True,True,66,7622e32bd3935647768ebaa860bc5561f2ad2bfa3d33e6a893a186c5ca17929e,ノーマルタイプ
+hokuto,hokuto.json,L北斗の拳,full_machine,8,4,24,2,True,True,139,1862fab8bc014714e3959f39a028774e916fdee2d62891db3c0660b192d97862,スマスロ・AT/BT系
+kabaneri,kabaneri.json,パチスロ 甲鉄城のカバネリ,full_machine,6,3,18,3,True,True,128,54b4b240537541551373953fccf07a4bd4c082fdfd10f9c0644464fb651c1bc1,6.5号機〜AT系
+monster_hunter_rise,monster_hunter_rise.json,スマスロ モンスターハンターライズ,full_machine,6,5,30,2,True,True,149,44740fccbacb8b869cded55fd39a23fbc9f4f6631483ed611201cbe6b6a1fd09,未掲載/別表記
+karakuri_circus,karakuri_circus.json,Lからくりサーカス,full_machine,5,2,12,3,True,True,123,5d096150b60586e4d85978415d1903bcec4a47e689a77a6d6da9f78161448232,スマスロ・AT/BT系
+valvrave,valvrave.json,L革命機ヴァルヴレイヴ,full_machine,5,3,18,4,True,True,95,fcfc052eefd5b53a5f426f3a4596bb1ef2eb873fd3f416f982e3dba077ab5bed,スマスロ・AT/BT系
+dmm_slot_001,dmm_slot_001.json,スマスロ BIRDIE WING -Golf Girls' Story-,full_machine,5,2,12,0,True,True,79,fd3277930eb4fada8841997cdb6d3374808bf1458136d6cadee8d8e0b5de7072,未掲載/別表記
+dmm_slot_002,dmm_slot_002.json,スマスロ バイオハザードRE:3,full_machine,5,1,6,0,True,True,79,d8c4de262ff46e090c44c816156b9699a454bf770f92fd797f1e93baeed89e12,未掲載/別表記
+dmm_slot_003,dmm_slot_003.json,Ｌタクトオーパス デスティニー,full_machine,5,1,6,0,True,True,66,659d584381d34b88f2dced87567bf66fafd6abbca350fd48cc22144f39e89dfd,未掲載/別表記
+dmm_slot_004,dmm_slot_004.json,スマスロ ビッグドリーム THE GOLDEN PUSHER,full_machine,5,2,12,0,True,True,73,ebcc3ec7626decea36c181eda79867b7d97e2f0d6649bad958695f5ce594a3cd,未掲載/別表記
+dmm_slot_005,dmm_slot_005.json,スマスロスーパーリオエース2,full_machine,5,1,6,0,True,True,68,49a0308fd509fd33509e37be7a8e38eb10f65b642ef059fa60c567f2baa6920c,未掲載/別表記
+dmm_slot_006,dmm_slot_006.json,LB スロット GALFY,full_machine,4,3,12,0,True,False,59,e6068b2a8b8afca69e1a5dc285c60eab029442444df1abc135947db6b155fe6c,未掲載/別表記
+dmm_slot_007,dmm_slot_007.json,スマスロ ミリオンゴッド-神々の軌跡-,full_machine,5,1,6,0,True,False,71,07dea7814bdc563452c8a3ef6605b081e609ee7661ee87588fa6246ddacc64fc,未掲載/別表記
+dmm_slot_008,dmm_slot_008.json,アニマルスロット ドッチ,full_machine,4,3,18,0,True,False,68,2637d331340e406dcba325b2a5564da3226d1ef0e86bb92480b9f413a60b630c,未掲載/別表記
+dmm_slot_009,dmm_slot_009.json,真打 吉宗,full_machine,5,2,12,0,True,False,69,b6976b5041ecad730f9402fbe79c9cc61b469ed92918dc04f71342182641f898,未掲載/別表記
+dmm_slot_010,dmm_slot_010.json,LBトリプルクラウンセブン,full_machine,4,3,12,0,True,False,59,4b8c1ec9166e3591d9ff67c0fd9ca70012e175f201117b53331a33603f976a36,未掲載/別表記
+dmm_slot_011,dmm_slot_011.json,スマスロヨルムンガンド,full_machine,5,2,12,0,True,False,73,27d1ce632e812a5bd68350fca1122d69b3de4cfb64f8f35ddc7b4d2d0de67d4f,未掲載/別表記
+dmm_slot_012,dmm_slot_012.json,L虚構推理,full_machine,5,2,12,0,True,False,72,0991951c4f7adf9139328ada8b1f155c8d555d3f78d9c2b90b3cba2ce5556641,未掲載/別表記
+dmm_slot_013,dmm_slot_013.json,A-SLOT+ 異世界かるてっと BT,full_machine,4,1,4,0,True,False,56,c291acbeffc4fcb5191667a8a6fc91e40b2bb71f2a2306a1258351e86e0c19e0,未掲載/別表記
+dmm_slot_014,dmm_slot_014.json,Lアクダマドライブ,full_machine,5,3,18,0,True,False,71,0d9df704ee0a537301be9e10f9dbb04f0b3483e811d560e1db702219556089e9,未掲載/別表記
+dmm_slot_015,dmm_slot_015.json,スマスロ サンダーV,full_machine,6,5,20,0,True,True,78,118c4b298ab7037f09db0b85caa3f78799e608cfb180ca7ff54cf1dfd7d047a0,ノーマルタイプ
+dmm_slot_016,dmm_slot_016.json,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,full_machine,3,2,12,0,True,True,69,7af1e05678d0eb2bb15f23c08d999a930800573351b70b3c0671f67063fad0f3,その他・バラエティ
+dmm_slot_017,dmm_slot_017.json,スマスロ ハナビ,full_machine,5,4,16,0,True,True,68,8276958f7004b930f99dc5bebe74c56edee84463ddaec993309cc91ac03c7982,ノーマルタイプ
+dmm_slot_018,dmm_slot_018.json,スマスロ 攻殻機動隊,full_machine,3,2,12,0,True,True,63,c118b1dc5cd3d896dec8e0031842a468f59e09cef74c43f16e3378f682e04a60,6.5号機〜AT系
+hanma_baki,hanma_baki.json,L範馬刃牙,legacy_simple,0,0,0,0,False,False,0,5fce4a6a4b7864140d60f687ed3b1337f39d3e1a54601d4d801b60e385804846,6.5号機〜AT系
+dmm_slot_020,dmm_slot_020.json,Lパチスロ 炎炎ノ消防隊2,full_machine,3,2,12,0,True,True,67,e6ff719ba56272bd40e55423adbbe806a51d57cbb56f2b0bb8457916e7d7dd06,未掲載/別表記
+dmm_slot_021,dmm_slot_021.json,ミクちゃんとイドムンのミラクルチャレンジ2,full_machine,5,4,24,0,True,True,71,f11dfecc53224f373c7d6ed67e79189b4a9c4ad5253205b5139b4582f44651a4,その他・バラエティ
+dmm_slot_022,dmm_slot_022.json,ニューシオサイ,full_machine,4,3,18,0,True,True,62,e42d996eaf9f5acbfeb842b005ed14b44a1ec18302ceb47fb87b166573ffe005,未掲載/別表記
+dmm_slot_023,dmm_slot_023.json,パチスロ琉神−30 スイカバージョン,full_machine,4,3,15,0,True,True,51,62c57824e3d29f20001fbdd7633426ed9268bf9601c7d97ad613c8f51483c65c,未掲載/別表記
+dmm_slot_024,dmm_slot_024.json,L リングにかけろ1 V,full_machine,4,3,18,3,True,True,70,f6e45286056f740bbcfa8cbe1f4d71d367bb0c3393e4ee5706b567cbbcf7997d,スマスロ・AT/BT系
+dmm_slot_025,dmm_slot_025.json,Lラブ嬢3〜Wご指名はいかがですか？〜,full_machine,3,2,12,0,True,True,70,1b0a5388982a1b9294a90a589e6f9ff8f53550a44465f8ee8d5d42cf456f2260,未掲載/別表記
+dmm_slot_026,dmm_slot_026.json,L花の慶次～佐渡攻めの章〜,full_machine,3,2,12,1,True,True,63,06b8bcd7a96115a3eabd30612326a02aa44acc88fb766276a1014298b682f93c,未掲載/別表記
+dmm_slot_027,dmm_slot_027.json,スマスロモンキーターンV,full_machine,2,1,5,2,True,True,60,4ce45ef951d282ce925b66755483f177d722c313d3b7b3ec5ff8f7fe5238d770,スマスロ・AT/BT系
+dmm_slot_028,dmm_slot_028.json,クランキークレスト,full_machine,5,4,16,0,True,True,57,e71b7af7f43c1057a94794ed94a7d0bf4fac1ce4f554c5e0de5ee3477b379b72,ノーマルタイプ
+dmm_slot_029,dmm_slot_029.json,マジカルハロウィン８,full_machine,5,4,24,0,True,True,67,9b45af868428f67e7d01e2df960dd38470c60015bf8c92bd3b1e372be3b94d73,未掲載/別表記
+dmm_slot_030,dmm_slot_030.json,推しスロ アイドルVer.,full_machine,1,0,0,1,True,True,142,f9ec555c10c42983b5bdfb7555794768ab3087186e1a49e9a25f41b37b4b6eed,その他・バラエティ
+dmm_slot_031,dmm_slot_031.json,パチスロ ケンガンアシュラ,full_machine,3,2,12,0,True,True,56,02b415d5e50765a742cb0ac28b118acf5803ea354e9af85a10f4d860ecc7c0bd,未掲載/別表記
+dmm_slot_032,dmm_slot_032.json,Sちゅらちゅら,full_machine,4,3,18,0,True,False,52,15aa4a9d4c4216911f7addd3d2d434f518f1665bbb99015f3646fbdb76ab7e70,未掲載/別表記
+dmm_slot_033,dmm_slot_033.json,L ひぐらしのなく頃に 業,full_machine,6,5,30,0,True,True,67,d2695380c04d2911f607e8f5d89d73a99545621c400e8d614b94b93c29681478,未掲載/別表記
+dmm_slot_034,dmm_slot_034.json,スマスロとある魔術の禁書目録,full_machine,4,3,18,0,True,True,84,c243fad615699f23232ac3e21f2e64b6b2073a430ab2785c16eedbcf1df65fc1,6.5号機〜AT系
+dmm_slot_035,dmm_slot_035.json,デジスロ JAC INバージョン,full_machine,4,3,12,0,True,True,59,80bebc85aab7efe0b47792360c9cbaa113d691c937bab79b7fb2441b11c06619,未掲載/別表記
+dmm_slot_036,dmm_slot_036.json,L大工の源さん超夢源,full_machine,3,2,10,0,True,True,69,5f1550083c9555595b1331b84c4ab2a9e25c6c4dc37eec98f1357c190e376765,未掲載/別表記
+dmm_slot_037,dmm_slot_037.json,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,full_machine,4,3,18,0,True,True,72,222ceebd846d6091d939d1c5ab58d594d3a8f13af356e6bb0d2c4e2fdcf964b1,未掲載/別表記
+dmm_slot_038,dmm_slot_038.json,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,full_machine,5,4,24,0,True,True,83,b15b588e4b6943c5fffdb99870c971765803c441ad834b5c792eb19cacc377f0,未掲載/別表記
+dmm_slot_039,dmm_slot_039.json,L エヴァンゲリオン ～未来への創造～,full_machine,3,2,10,0,True,True,68,b4aa2663dcc5aabd836e10893f826d283dd8cf4e0b24a9a3188a855c0508e2bc,未掲載/別表記
+dmm_slot_040,dmm_slot_040.json,スーハナライジング-30,full_machine,5,4,20,0,True,True,62,3d6de26b814b85f5813b420567b651fd874a535658b95c9e934502cd59c85f44,沖スロ・ハナハナ系
+goblin_slayer,goblin_slayer.json,Lゴブリンスレイヤー,legacy_simple,0,4,24,0,False,False,0,68a1b38e0e1a97edca500d4dbd1ddd530992e5efe3188f5fc60ac3d9e062458d,スマスロ・AT/BT系
+sengoku_otome4,sengoku_otome4.json,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_simple,0,0,0,0,False,False,0,7a0a884487cf8534fe0d449f1481e991924073d521926dd4fe114da35dc68dee,スマスロ・AT/BT系
+list_slot_003,list_slot_003.json,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,full_machine,4,3,18,1,True,True,89,5950d56898b8c3d4db363debf18a4a69594f4676ca5166c83216ec0df9551bc1,未掲載/別表記
+list_slot_004,list_slot_004.json,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,full_machine,4,3,18,0,True,True,92,08f7ed3614ca7d150fd5868c0868942498845ea16904666369b9e7834dc0a012,未掲載/別表記
+tensei_slime,tensei_slime.json,L転生したらスライムだった件,legacy_simple,0,0,0,0,False,False,0,1723cd3512d5f4bdd5840c09b19d440759736b9c4c14ce620d4056d0510fb83e,スマスロ・AT/BT系
+bio_re2,bio_re2.json,スマスロ バイオハザード RE:2,legacy_simple,0,4,24,0,False,False,0,78f166dfc4f20f2149f2b4a3c4d24ec39751e9e9fcd89cbc1921452b588ae4de,スマスロ・AT/BT系
+zenigata4,zenigata4.json,L主役は銭形4,legacy_simple,0,0,0,0,False,False,0,f4060808530166dcff0fd946e3ec55468338e9abdbe32bf657a553d901ac5368,スマスロ・AT/BT系
+strike_witches2,strike_witches2.json,Lストライクウィッチーズ2,legacy_simple,0,0,0,0,False,False,0,c1b92ac050ce2bfef37f95831f81f7a5acbadccfe9950454b9183c353639922b,スマスロ・AT/BT系
+list_slot_009,list_slot_009.json,L麻雀格闘倶楽部 覚醒,full_machine,3,2,12,4,True,True,79,4953db0889e78222d7844bdd8e745d2535e7e2827aaa36398ac143a20cb4f4df,スマスロ・AT/BT系
+list_slot_010,list_slot_010.json,Lベルセルク無双,full_machine,3,1,5,1,True,True,137,43b3407bcd7ba6c5cbfd4443d40d9a96b5f0697be90924145774e22b1f54f78e,スマスロ・AT/BT系
+bancho4,bancho4.json,押忍！番長4,legacy_simple,0,4,24,0,False,False,0,391bc55a97facd35f495ad047b69c8f6a2db12fdbad6bc0a625b8ce66a4dae91,スマスロ・AT/BT系
+list_slot_012,list_slot_012.json,L南国育ち,full_machine,3,2,10,0,True,False,76,2f3582b8401fd11e3d092850d25c93bf740fe835984ea51263ed316831d03127,スマスロ・AT/BT系
+list_slot_013,list_slot_013.json,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,full_machine,5,4,24,0,True,True,99,2a1429b638a6886fdb7755adbe76e263e58d35fc45863f5bb2465454cfd4ca75,スマスロ・AT/BT系
+tokyo_ghoul,tokyo_ghoul.json,L東京喰種,legacy_simple,0,0,0,0,False,False,0,7e81387e6c1bade77f893d121450ac747eb33c1e95ba33949e18d300edee03ad,スマスロ・AT/BT系
+azure_lane,azure_lane.json,Lアズールレーン THE ANIMATION,legacy_simple,0,0,0,0,False,False,0,033ed6f02c256e757445bc04542de9051c71d43a4d7302936d6cdaaf38768281,スマスロ・AT/BT系
+darling_franxx,darling_franxx.json,Lダーリン・イン・ザ・フランキス,legacy_simple,0,0,0,0,False,False,0,b1df88ef0cdae942da5f6b52aedaf5bd76986ca8a31cd101f9ba813fefac274f,スマスロ・AT/BT系
+saki_top,saki_top.json,L咲-Saki- 頂上決戦,legacy_simple,0,0,0,0,False,False,0,95a7234726a826911a5a60536821a76b56a79efe43d671085e364dc4333c4073,スマスロ・AT/BT系
+ushio_tora,ushio_tora.json,Lうしおととら 白面決戦,legacy_simple,0,0,0,0,False,False,0,d3a0b16e2650f6ab9ae4b94e7c7f45e5781d2944828d0407e60b37f21ea05353,スマスロ・AT/BT系
+godzilla,godzilla.json,Lゴジラ,legacy_simple,0,0,0,0,False,False,0,854c2bc8a1969d7edecf3c6c977f0ae4bf9eccea224f5d17f47ca3ba75f11b18,スマスロ・AT/BT系
+revue_starlight,revue_starlight.json,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_simple,0,0,0,0,False,False,0,ff7fd31eeb8b19c2c873f09b82ef5a00eccee2145412fb5c1ec92368755c1e5f,スマスロ・AT/BT系
+kamen_rider_denoh,kamen_rider_denoh.json,L仮面ライダー電王,legacy_simple,0,0,0,0,False,False,0,ff5caf7c23908312b34dd7d2fea9b7577d07831d8d86bdb7fc3b5888c8f8e408,スマスロ・AT/BT系
+arifureta,arifureta.json,Lありふれた職業で世界最強,legacy_simple,0,0,0,0,False,False,0,f21f81a3f52da2be6f749742087416bf94228118108c9c6332ec79d5d980c26c,スマスロ・AT/BT系
+shin_eva,shin_eva.json,Lパチスロ シン・エヴァンゲリオン,legacy_simple,0,0,0,0,False,False,0,9aaeb46fc63daa917cc4b5f505210e9067f8d0449157053af808335f8569bf86,スマスロ・AT/BT系
+nyanko,nyanko.json,Lにゃんこ大戦争 超神速,legacy_simple,0,0,0,0,False,False,0,4dc84c0e4a7b1937190a000888cf29d057c6aad17403026d919f05edcca2568e,スマスロ・AT/BT系
+fire_force,fire_force.json,パチスロ 炎炎ノ消防隊,legacy_simple,0,0,0,0,False,False,0,be40f4d466516881189cf6c5cd21d62687b8dcf571221819094257910db3f07c,6.5号機〜AT系
+list_slot_026,list_slot_026.json,EVANGELION FESTIVAL,full_machine,5,3,18,2,True,True,82,bef4854cecd9d192e04297b892c53830e39d37c046bee54fe8e3bd41fc38501d,6.5号機〜AT系
+list_slot_027,list_slot_027.json,パチスロ アクエリオン ALL STARS,full_machine,3,2,10,2,True,True,75,58d0ad358e5614f69d20746eecc6d731de4cdfe39c27b79324ac3d17e0d18de9,未掲載/別表記
+list_slot_028,list_slot_028.json,パチスロ鉄拳5,full_machine,3,2,12,1,True,True,77,118172b227c41a90944b0e81ddc66eddff972ce9e30fa6edcee64aa8ad25fd9a,未掲載/別表記
+list_slot_029,list_slot_029.json,パチスロ幼女戦記,full_machine,4,3,15,1,True,True,78,c6d0d6de02723807f35142cbe827c5763fdfe3fb786201110896359dcec49e70,6.5号機〜AT系
+list_slot_030,list_slot_030.json,スマスロ シャーマンキング,full_machine,3,2,12,2,True,True,88,a444faa2a09d04561caa1453a3ae688479bc33a47df13b3a876667dcc0172328,6.5号機〜AT系
+list_slot_031,list_slot_031.json,パチスロ 新鬼武者2,full_machine,3,2,12,2,True,True,90,7f5603f27b40b083bfd0bd978e728d67c8349dfe43cd8bac0011be8e54ef78a9,未掲載/別表記
+list_slot_032,list_slot_032.json,FAIRY TAIL2,full_machine,3,2,12,1,True,True,83,513b35bb60b345f7fb0dd792ea86bba5b7ee6ac8751cf489ef9d3e2183e605fa,6.5号機〜AT系
+list_slot_033,list_slot_033.json,ペルソナ5,full_machine,3,2,12,2,True,True,83,935b0ed96940457f1333d3843f5bdb6c83ab9e32ca06596b3095cc591d91e67a,6.5号機〜AT系
+list_slot_034,list_slot_034.json,パチスロ盾の勇者の成り上がり,full_machine,5,1,6,2,True,True,83,d27aca6699b6b0756d4fbeabe9c7f0c7d6c31416d580c3bae299cd8ee4a0a4dc,6.5号機〜AT系
+list_slot_035,list_slot_035.json,S BOØWY,full_machine,3,1,5,1,True,True,71,f2fe871bffb3a7bc354de9b746739082ece85d7b7fdd91c7ce64839ab55438d0,6.5号機〜AT系
+list_slot_036,list_slot_036.json,バイオハザード ヴィレッジ,full_machine,4,3,18,2,True,True,80,49e8115178b5e14314a2270dbcc974154f5b239db048159cca54b3561aa16fbc,6.5号機〜AT系
+list_slot_037,list_slot_037.json,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,full_machine,6,4,24,1,True,True,81,11ded6fa6485ccd0b1e0f5f35524561678e20ebed3923b3d9445c70783d22851,6.5号機〜AT系
+list_slot_038,list_slot_038.json,Re:ゼロから始める異世界生活 season2,full_machine,5,1,6,3,True,True,71,d4a240e9a5bd005df22f1ba2373a80bd5d57de12a167b6fdc65996abf93d4185,6.5号機〜AT系
+list_slot_039,list_slot_039.json,この素晴らしい世界に祝福を！,full_machine,5,1,6,1,True,True,78,5e36b3e21968f442d842fd295723eeeaf2c4ad3ee6dfb2b784b48b607536d781,6.5号機〜AT系
+list_slot_040,list_slot_040.json,Lルパン三世 大航海者の秘宝,full_machine,5,3,18,3,True,True,79,7b3535ba6fb8750abed9faa7f57ce0952883a00320ffe15564fe6d15b063434e,6.5号機〜AT系
+list_slot_041,list_slot_041.json,黄門ちゃま天,full_machine,5,1,6,3,True,True,76,66e414626cf15a3af1c6b7f008a31c51ef5827a67f94e7d0e03141a225e12511,6.5号機〜AT系
+list_slot_042,list_slot_042.json,ニューパルサーSP4,full_machine,4,3,18,0,False,True,69,362def1c6c1da6e02e7793f5e0d70ad5c3e81a3a0ab5fc9627891950210750d0,ノーマルタイプ
+list_slot_043,list_slot_043.json,ニューパルサーDX3,full_machine,4,3,15,0,False,True,61,7c0f7990303d23e1941c334b887e961ab16b83444f4f513220ba96363d8bb600,ノーマルタイプ
+list_slot_044,list_slot_044.json,ハナビ,full_machine,5,4,16,0,False,True,69,8f46587aab06230dda6c402ed9e39177295052ae58c61867069e9b7ccf709167,ノーマルタイプ
+list_slot_045,list_slot_045.json,バーサスリヴァイズ,full_machine,6,5,20,0,False,True,77,b76b863479145613608a2d03c48e55b2bbfdc83486eb7df9ac58c81668ddccb9,ノーマルタイプ
+list_slot_046,list_slot_046.json,サンダーVライトニング,full_machine,3,1,4,0,False,True,65,0687c7e0f6458173928b15267c834665c88c66e05592801861bda912a8bf2aac,ノーマルタイプ
+list_slot_047,list_slot_047.json,アレックス ブライト,full_machine,7,6,24,0,False,True,67,0402439421e3b12d8c0ca1347cfd4fc2c047728304e3d998a481b4a2873cca28,ノーマルタイプ
+list_slot_048,list_slot_048.json,ディスクアップ2,full_machine,4,3,12,0,False,True,76,ea7c026f00137e1933409f1bb6840861e2f809a5ae66666fe89e4114d7829a7e,ノーマルタイプ
+list_slot_049,list_slot_049.json,A-SLOT+ ディスクアップ ULTRAREMIX,full_machine,6,5,20,0,False,True,79,31bfaa65252407b420a3955feb1a085ce7c1ec8d45dc9788f61ddf519d4582c4,ノーマルタイプ
+list_slot_050,list_slot_050.json,ファミスタ回胴版!!,full_machine,4,3,12,0,False,True,73,31fae3256f0c642f0704ed73142feb2204338f9acc20329e884a005bf39b6a74,ノーマルタイプ
+list_slot_051,list_slot_051.json,沖ドキ！GOLD,full_machine,6,3,15,0,True,True,76,ef12cd26cc01d79776e376665600faacfa531b870e32e1775e2ef1f8edffbd6c,沖スロ・ハナハナ系
+list_slot_052,list_slot_052.json,沖ドキ！DUO,full_machine,5,1,6,0,True,True,67,7875e95f978d5935aa01125d918e45b00daa08e02577ed5684806dcba8523ab6,沖スロ・ハナハナ系
+list_slot_053,list_slot_053.json,スマート沖スロ 沖ドキ！DUO-30 アンコール,full_machine,5,1,5,0,True,True,61,095d56f5fee6327d1c7d56b34eca488e29f9a8c472d08c8f1d4bcb146454681b,沖スロ・ハナハナ系
+list_slot_054,list_slot_054.json,チバリヨ2プラス,full_machine,5,1,5,0,True,True,73,d8747e4535735f2d5fcd5dbbdd4ca072c4b691d79b6bc2ed64dc7d67f30c8200,沖スロ・ハナハナ系
+list_slot_055,list_slot_055.json,スマート沖スロ スターハナハナ,full_machine,5,3,18,0,True,True,71,eee0e57a87912baa3e0e590d07ed5135d451f87f674dbb16166c692286c74a28,沖スロ・ハナハナ系
+list_slot_056,list_slot_056.json,スマート沖スロ ニューキングハナハナ-30,full_machine,5,3,15,0,True,False,64,e4f22bd79918aeeddb44458863ccfbe38654f0115390e50c2ec7fb99cc261d05,沖スロ・ハナハナ系
+list_slot_057,list_slot_057.json,ニューキングハナハナ-30,full_machine,5,3,15,0,True,True,60,04bc8e9a8565a6d8b947b4846e3c09428e701145d0787b7e05e54411eb9ec9a3,沖スロ・ハナハナ系
+list_slot_058,list_slot_058.json,ドラゴンハナハナ～閃光～ 30,full_machine,5,3,18,0,True,True,67,9b3d7a75898393255abbc98ee934e95ba8812d8fdf8d8ab202d0d0e964f9d7d5,沖スロ・ハナハナ系
+list_slot_059,list_slot_059.json,キングハナハナ-30,full_machine,5,3,18,0,True,True,63,673b2b251a18a44689ab5e50bbf5cb24e73e7f3c8fd332d81ad89bb35db7fab3,沖スロ・ハナハナ系
+list_slot_060,list_slot_060.json,ハナハナホウオウ～天翔～-30,full_machine,5,3,18,0,True,True,61,7374b8a0eebd8e79620193f7c0e7bfaad055418116db877c3095a00d79bb3d52,沖スロ・ハナハナ系
+list_slot_061,list_slot_061.json,麻雀物語,full_machine,5,4,24,0,True,True,81,bf20245fdee4ef75e8cbc7f636eea0fc18dcce144362a4191be72d1269d7d638,その他・バラエティ
+list_slot_062,list_slot_062.json,戦姫絶唱シンフォギア 正義の歌,full_machine,3,2,10,0,True,True,81,0d20729a30459d5b24c6c6e19bb0ab20caf606fe6aa46853c8dd6695da04fdf7,その他・バラエティ
+list_slot_063,list_slot_063.json,Lパチスロうみねこのなく頃に2,full_machine,5,2,12,1,True,True,84,ccd42522b70689fd94534e53d06b2d6a5166a469022bc16b3db556c7a7ee11f5,その他・バラエティ
+hokuto_tensei_2,hokuto_tensei_2.json,スマスロ 北斗の拳 転生の章2,full_machine,5,1,6,1,True,True,134,a2af024ef2831bd843c7f7204e10cbca4e77f566177c3502f1b9d23ea9aa19f7,未掲載/別表記
+valvrave_2,valvrave_2.json,Lパチスロ 革命機ヴァルヴレイヴ2,full_machine,5,0,0,4,True,True,108,142006b72c46b4de3141bdbabeb110104e621ea8c1c67043c1bef2a9521259d6,未掲載/別表記

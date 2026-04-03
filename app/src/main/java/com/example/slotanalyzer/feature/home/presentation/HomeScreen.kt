@@ -1,8 +1,15 @@
 package com.example.slotanalyzer.feature.home.presentation
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -49,6 +56,15 @@ fun HomeScreen(
             modifier = Modifier.width(220.dp)
         ) {
             Text("履歴を見る")
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        OutlinedButton(
+            onClick = { navController.navigate(AppRoutes.SETTINGS) },
+            modifier = Modifier.width(220.dp)
+        ) {
+            Text("設定")
         }
 
         if (!state.isLoading) {
