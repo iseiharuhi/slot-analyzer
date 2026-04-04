@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "AT精度一括調整済み。主判別はAT初当り、CZ。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4156",
-    "ichigekiUrl": "https://1geki.jp/slot/s_aguarion_allstars/"
+    "ichigekiUrl": "https://1geki.jp/slot/s_aguarion_allstars/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "cz_count",
       "displayName": "CZ初当り",
       "category": "AT_CZ",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "at_count",
       "displayName": "AT初当り",
       "category": "AT_CZ",
-      "sortOrder": 20,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

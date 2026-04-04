@@ -1,0 +1,101 @@
+{
+  "machine": {
+    "id": "anemone",
+    "name": "パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION",
+    "manufacturer": "サミー",
+    "type": "BONUS_PLUS_AT",
+    "releaseDate": "2021-12-06",
+    "isActive": true,
+    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "dmmUrl": null,
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG回数のメモ用。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REG回数のメモ用。"
+    },
+    {
+      "key": "reg_through_count",
+      "displayName": "REGスルー",
+      "category": "SPECIAL",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "同一有利区間内のREG連続回数。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "G数天井",
+      "ceilingType": "GAME",
+      "limitValue": 808,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "808G到達でBIG＋AT濃厚。REGでは天井はリセットされない。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BIG＋AT濃厚",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "reg_through_ceiling",
+      "displayName": "REGスルー天井",
+      "ceilingType": "COUNT",
+      "limitValue": 6,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "同一有利区間内でREG6スルー到達時、7回目のボーナスでニルヴァーシュXボーナス。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "7回目のボーナスでニルヴァーシュXボーナス",
+      "resetText": "設定変更でリセット",
+      "stepValue": 1
+    }
+  ]
+}

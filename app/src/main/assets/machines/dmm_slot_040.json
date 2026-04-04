@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算と共通ベルAに整理。スーハナライジング-30もREG主軸で均一化する。",
     "dmmUrl": "https://p-town.dmm.com/machines/4409",
-    "ichigekiUrl": "https://1geki.jp/slot/s_suhana_rising30/"
+    "ichigekiUrl": "https://1geki.jp/slot/s_suhana_rising30/",
+    "status": "partial"
   },
   "counterDefinitions": [
     {
@@ -32,7 +33,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 10,
+      "sortOrder": 2,
       "notes": null
     },
     {
@@ -44,7 +45,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 11,
+      "sortOrder": 3,
       "notes": null
     },
     {
@@ -56,7 +57,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 12,
+      "sortOrder": 4,
       "notes": null
     },
     {
@@ -68,7 +69,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 20,
+      "sortOrder": 5,
       "notes": null
     }
   ],

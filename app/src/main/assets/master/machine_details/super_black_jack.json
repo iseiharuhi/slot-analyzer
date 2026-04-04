@@ -1,0 +1,120 @@
+{
+  "id": "super_black_jack",
+  "name": "スマスロスーパーブラックジャック",
+  "manufacturer": "セブンリーグ",
+  "type": "BONUS_PLUS_AT",
+  "releaseDate": "2025-02-03",
+  "isActive": true,
+  "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4712",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4712",
+      "status": "present",
+      "site": "dmm"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bb_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG回数のメモ用。"
+    },
+    {
+      "key": "rb_count",
+      "displayName": "RB",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "RB回数のメモ用。"
+    },
+    {
+      "key": "rb_through_count",
+      "displayName": "RB天井用RB回数",
+      "category": "SPECIAL",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "RB連続回数メモ。"
+    },
+    {
+      "key": "at_like_st_count",
+      "displayName": "ストックタイム",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "ストックタイム到達メモ。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "G数天井",
+      "ceilingType": "GAME",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "999G到達でBIGボーナス。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BIGボーナス",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "rb_ceiling",
+      "displayName": "RB天井",
+      "ceilingType": "COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "RB4回到達で次回BB。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "stepValue": 1,
+      "benefitText": "次回BB",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

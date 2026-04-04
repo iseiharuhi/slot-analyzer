@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとCZ、重い分母は直撃ATに整理。短期のAT偏りを追い過ぎず、まずはボーナス初当りを軸に評価する。",
     "dmmUrl": "https://p-town.dmm.com/machines/4996",
-    "ichigekiUrl": "https://1geki.jp/slot/l_birdie/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_birdie/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "bonus_count",
       "displayName": "通常時初当たり",
       "category": "BONUS",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "at_count",
       "displayName": "ST初当たり",
       "category": "AT_CZ",
-      "sortOrder": 11,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "cz_count",
       "displayName": "CZ",
       "category": "AT_CZ",
-      "sortOrder": 20,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -63,7 +64,7 @@
       "key": "direct_hit_count",
       "displayName": "直撃/特殊契機",
       "category": "SPECIAL",
-      "sortOrder": 30,
+      "sortOrder": 5,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

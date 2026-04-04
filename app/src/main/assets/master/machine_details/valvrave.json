@@ -1,19 +1,258 @@
 {
-  "machineId": "valvrave",
-  "machineName": "L革命機ヴァルヴレイヴ",
+  "id": "valvrave",
+  "name": "L革命機ヴァルヴレイヴ",
+  "manufacturer": "SANKYO",
+  "type": "AT",
+  "releaseDate": "2022-11-21",
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別は革命ボーナス初当り、補助はCZ、重い分母は直撃ATで統一。ボーナス初当りを最優先に、CZは補助、直撃ATは高サンプル時のみ使用。AT回数単体は推測の主軸にしない。",
   "status": "verified",
-  "capturedDate": "2026-04-01",
-  "sourceListPage": null,
+  "dmmUrl": "https://p-town.dmm.com/machines/4244",
+  "ichigekiUrl": "https://1geki.jp/slot/s_valvrave/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4244",
-      "status": "verified_direct"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4244"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/s_valvrave/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/s_valvrave/"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃",
+      "category": "CUSTOM",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "initial_hit_count",
+      "displayName": "初当り",
+      "category": "CUSTOM",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "small_role_count",
+      "displayName": "小役",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 265.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ当選確率。補助判別。2500〜3000G級から有効。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 252.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ当選確率。補助判別。2500〜3000G級から有効。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 240.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ当選確率。補助判別。2500〜3000G級から有効。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 226.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ当選確率。補助判別。2500〜3000G級から有効。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 214.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ当選確率。補助判別。2500〜3000G級から有効。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 202.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ当選確率。補助判別。2500〜3000G級から有効。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 519.0,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "ボーナス初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 516.0,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "ボーナス初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 514.0,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "ボーナス初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 507.0,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "ボーナス初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 499.0,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "ボーナス初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 490.0,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "ボーナス初当り確率。主判別。2000G超から比較しやすい。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_game_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "液晶ゲーム数でCZ間約1000G+α。モードにより実質消化G数は短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "inputMode": null,
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": null,
+      "resetText": null
+    },
+    {
+      "ruleKey": "bonus_at_interval_ceiling",
+      "displayName": "ボーナス&AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "実ゲーム数でボーナス&AT間約1500G+αでボーナス。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "inputMode": null,
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": null,
+      "resetText": null
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZを7回スルーで条件到達。次回(8回目)CZでボーナス。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "inputMode": null,
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": null,
+      "resetText": null
+    },
+    {
+      "ruleKey": "kessen_bonus_through",
+      "displayName": "決戦ボーナス天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT非当選の決戦ボーナスが4回連続で条件到達。次回ボーナスで革命ボーナス。",
+      "isEnabled": true,
+      "displayOrder": 4,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "inputMode": null,
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": null,
+      "resetText": null
     }
   ]
 }

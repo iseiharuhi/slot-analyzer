@@ -17,9 +17,10 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -35,15 +36,27 @@ fun MachineSelectScreen(
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
 
-    var searchQuery by remember { mutableStateOf("") }
-    var selectedMachineId by remember { mutableStateOf<String?>(null) }
+    var searchQuery by rememberSaveable { mutableStateOf("") }
+    var selectedMachineId by rememberSaveable { mutableStateOf<String?>(null) }
 
+    val normalizedQuery = searchQuery.trim()
     val filteredMachines = state.machines.filter { machine ->
-        machine.name.contains(searchQuery, ignoreCase = true) ||
-            machine.name.replace(" ", "").contains(searchQuery.replace(" ", ""), true)
+        normalizedQuery.isBlank() ||
+            machine.name.contains(normalizedQuery, ignoreCase = true) ||
+            machine.name.replace(" ", "").contains(
+                normalizedQuery.replace(" ", ""),
+                ignoreCase = true
+            )
     }
 
-    val selectedMachine = state.machines.firstOrNull { it.id == selectedMachineId }
+    val selectedMachine = filteredMachines.firstOrNull { it.id == selectedMachineId }
+        ?: state.machines.firstOrNull { it.id == selectedMachineId }
+
+    LaunchedEffect(state.machines, selectedMachineId) {
+        if (selectedMachineId != null && state.machines.none { it.id == selectedMachineId }) {
+            selectedMachineId = null
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -77,7 +90,10 @@ fun MachineSelectScreen(
             modifier = Modifier.weight(1f),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            items(filteredMachines) { machine ->
+            items(
+                items = filteredMachines,
+                key = { it.id }
+            ) { machine ->
                 val isSelected = machine.id == selectedMachineId
 
                 Box(
@@ -99,7 +115,12 @@ fun MachineSelectScreen(
                 ) {
                     Text(
                         text = machine.name,
-                        style = MaterialTheme.typography.titleMedium
+                        style = MaterialTheme.typography.titleMedium,
+                        color = if (isSelected) {
+                            MaterialTheme.colorScheme.onSecondaryContainer
+                        } else {
+                            MaterialTheme.colorScheme.onSurfaceVariant
+                        }
                     )
                 }
             }

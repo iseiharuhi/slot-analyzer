@@ -1,23 +1,78 @@
 {
-  "id": "l_hokuto",
-  "name": "l_hokuto",
-  "indicators": [
+  "machine": {
+    "id": "l_hokuto",
+    "name": "l_hokuto",
+    "manufacturer": null,
+    "type": null,
+    "releaseDate": null,
+    "isActive": true,
+    "notes": null,
+    "dmmUrl": null,
+    "ichigekiUrl": null,
+    "status": "partial"
+  },
+  "counterDefinitions": [
     {
-      "type": "direct_hit",
-      "weight": 0.4
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
     },
     {
-      "type": "initial_hit",
-      "weight": 0.3
+      "key": "direct_hit_count",
+      "displayName": "直撃",
+      "category": "CUSTOM",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     },
     {
-      "type": "cz",
-      "weight": 0.2
+      "key": "initial_hit_count",
+      "displayName": "初当り",
+      "category": "CUSTOM",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     },
     {
-      "type": "small_role",
-      "weight": 0.1
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "small_role_count",
+      "displayName": "小役",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     }
   ],
-  "minSampleSize": 2500
+  "settingReferenceValues": [],
+  "ceilingRules": []
 }

@@ -1,19 +1,228 @@
 {
-  "machineId": "funky_juggler_2",
-  "machineName": "ファンキージャグラー2",
-  "status": "partial",
-  "capturedDate": "2026-03-31",
-  "sourceListPage": null,
+  "id": "funky_juggler_2",
+  "name": "ファンキージャグラー2",
+  "manufacturer": "Kita Denshi",
+  "type": "BONUS",
+  "releaseDate": "2025-01-01",
+  "isActive": true,
+  "notes": "ノーマル精度仕上げ対応。主判別はREG、補助はぶどう、BIGは最終補助に固定。ファンキー系もREG先行の確認を優先し、ぶどうで補強する。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4388",
+  "ichigekiUrl": "https://1geki.jp/slot/s_funkyjuggler2/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/3961",
-      "status": "verified_direct"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4388"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/s_funkyjuggler2/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/s_funkyjuggler2/"
     }
-  ]
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "grape_count",
+      "displayName": "ぶどう",
+      "category": "SMALL_ROLE",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "cherry_count",
+      "displayName": "チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "補助入力用"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 439.8,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 407.1,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 366.1,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 336.1,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 297.9,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 259.0,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        }
+      ]
+    },
+    {
+      "counterKey": "grape_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 5.96,
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは高ゲーム数時のみ補強。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 5.92,
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは高ゲーム数時のみ補強。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 5.89,
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは高ゲーム数時のみ補強。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 5.84,
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは高ゲーム数時のみ補強。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 5.8,
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは高ゲーム数時のみ補強。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 5.76,
+          "weight": 0.75,
+          "minSampleSize": 5000,
+          "note": "補助判別。ぶどうは高ゲーム数時のみ補強。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 266.4,
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは波の影響を考慮して低weight維持。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 259.0,
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは波の影響を考慮して低weight維持。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 256.0,
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは波の影響を考慮して低weight維持。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 249.0,
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは波の影響を考慮して低weight維持。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 240.1,
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは波の影響を考慮して低weight維持。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 222.2,
+          "weight": 0.45,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは波の影響を考慮して低weight維持。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

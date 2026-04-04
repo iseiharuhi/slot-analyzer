@@ -1,0 +1,4 @@
+﻿priority_group,source_zip,implementation_stage,machine_count,details_count,manifest_updated_in_zip,machines_with_ceiling,machines_without_ceiling,machines_with_reference_values
+A,slot_analyzer_A_priority_diff_2026-04-04.zip,full_machine_partial_with_ceiling,24,24,True,24,0,0
+B,B_priority_diff_2026-04-04.zip,full_machine_partial_with_ceiling,22,22,True,22,0,0
+C,C_priority_partial_shell_diff_2026-04-04.zip,shell_partial_without_ceiling,38,38,True,0,38,0

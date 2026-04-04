@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はAT初当り、重い分母は直撃ATに整理。シンフォギアは展開で短期ブレが大きいため、AT初当りを主軸にし、直撃は高ゲーム数時のみ効かせる。",
     "dmmUrl": "https://p-town.dmm.com/machines/4579",
-    "ichigekiUrl": "https://1geki.jp/slot/l_sympho/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_sympho/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "at_count",
       "displayName": "AT初当り",
       "category": "AT_CZ",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "direct_hit_count",
       "displayName": "最終決戦",
       "category": "SPECIAL",
-      "sortOrder": 20,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

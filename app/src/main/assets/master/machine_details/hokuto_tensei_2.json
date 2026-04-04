@@ -1,20 +1,154 @@
 {
-  "machineId": "hokuto_tensei_2",
-  "machineName": "スマスロ 北斗の拳 転生の章2",
-  "status": "partial",
-  "capturedDate": "2026-04-03",
-  "sourceListPage": null,
+  "id": "hokuto_tensei_2",
+  "name": "スマスロ 北斗の拳 転生の章2",
+  "manufacturer": "サミー",
+  "type": "AT",
+  "releaseDate": "2026-01-05",
+  "isActive": true,
+  "notes": "AT精度一括調整済み。主判別はAT初当り。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4909",
+  "ichigekiUrl": "https://1geki.jp/slot/l_hokuto_tensei2/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4909",
-      "status": "verified_direct"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4909"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/l_hokuto_tensei2/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/l_hokuto_tensei2/"
     }
   ],
-  "fileName": "hokuto_tensei_2.json"
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "闘神演舞の初当り回数。主判別。"
+    },
+    {
+      "key": "tenha_count",
+      "displayName": "天破の刻",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "設定差があるとされるが、現時点ではメモ入力用。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "AT直撃",
+      "category": "SPECIAL",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "規定あべし以外からのAT直撃メモ。公開比較値未確認のため補助入力のみ。"
+    },
+    {
+      "key": "small_role_count",
+      "displayName": "レア役/示唆補助",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "弱チェリー・スイカ・枠ランプ示唆などのメモ用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 366.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 357.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 336.3,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 298.7,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 283.2,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 273.1,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "abeshi_max_ceiling",
+      "displayName": "最大天井",
+      "ceilingType": "POINT",
+      "limitValue": 1536,
+      "unit": "あべし",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常Aの最大天井。通常Bは896あべし、通常Cは576あべし、天国は128あべし。設定変更時は最大1280あべしに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "inputMode": "TEXT",
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": "AT『闘神演舞』当選",
+      "resetText": "AT当選後にリセット"
+    }
+  ]
 }

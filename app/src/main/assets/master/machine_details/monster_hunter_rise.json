@@ -1,19 +1,357 @@
 {
-  "machineId": "monster_hunter_rise",
-  "machineName": "スマスロ モンスターハンターライズ",
-  "status": "partial",
-  "capturedDate": "2026-04-01",
-  "sourceListPage": "https://p-town.dmm.com/machines/4676",
+  "id": "monster_hunter_rise",
+  "name": "スマスロ モンスターハンターライズ",
+  "manufacturer": "エンターライズ",
+  "type": "AT",
+  "releaseDate": "2024-11-18",
+  "isActive": true,
+  "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当りと弱チェリー。直撃ATは重い分母のため低weight・高めの成熟条件で補助扱い、ボーナスはATと相関が強いため推測対象から外してメモ用途へ後退。ATは2000G超、CZは2500〜3000G級、弱チェリーは3000G級で傾向確認を推奨。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4676",
+  "ichigekiUrl": "https://1geki.jp/slot/l_mh_rize/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4676",
-      "status": "verified_direct"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4676"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/l_mh_rize/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/l_mh_rize/"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時CZ初当り。AT機の補助判別用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。主判別。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "ATと相関が強いため推測では未使用。履歴メモ用。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃AT",
+      "category": "SPECIAL",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "重い分母のため補助メモ用。長時間実戦時のみ参考。"
+    },
+    {
+      "key": "weak_cherry_count",
+      "displayName": "弱チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 6,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "小役の補助判別。サンプル不足時は過信しない。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 255.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 245.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 235.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 223.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 212.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 200.0,
+          "weight": 0.72,
+          "minSampleSize": 8,
+          "note": "CZ初当り確率。補助判別。2500〜3000G級から精度が安定。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 510.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 480.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 450.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 415.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 385.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 350.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当り確率。主判別。2000G超から比較しやすい。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 330.0,
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 315.0,
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 300.0,
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 282.0,
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 268.0,
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 250.0,
+          "weight": 0.3,
+          "minSampleSize": 6,
+          "note": "ATと相関が強いため主判別では使わず、参考メモ扱い。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 2100.0,
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 1750.0,
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 1450.0,
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 1180.0,
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 920.0,
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 720.0,
+          "weight": 0.35,
+          "minSampleSize": 2,
+          "note": "重い分母のため補助扱い。1回だけで断定せず、10000G級の長時間実戦で評価。"
+        }
+      ]
+    },
+    {
+      "counterKey": "weak_cherry_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 120.0,
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 115.0,
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 110.0,
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 105.0,
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 100.0,
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 95.0,
+          "weight": 0.68,
+          "minSampleSize": 25,
+          "note": "弱チェリー出現率。小役補助。3000G級から傾向確認。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時999G消化で赤7ボーナス以上。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "quest_count_ceiling",
+      "displayName": "AT間クエスト天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間7回目のクエスト到達で天井。恩恵は赤7ボーナス以上。",
+      "isEnabled": true
     }
   ]
 }

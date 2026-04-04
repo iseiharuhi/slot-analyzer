@@ -1,24 +1,219 @@
 {
-  "machineId": "list_slot_044",
-  "machineName": "ハナビ",
-  "status": "partial",
-  "capturedDate": "2026-03-31",
-  "sourceListPage": null,
+  "id": "list_slot_044",
+  "name": "ハナビ",
+  "manufacturer": "ACROSS",
+  "type": "BONUS",
+  "releaseDate": "2021-07-05",
+  "isActive": true,
+  "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算とベル、BIGは最終補助に整理。ハナビ系はREG基準を崩さず、ベルは5000G以上で補強に使う。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/2042",
+  "ichigekiUrl": "https://1geki.jp/slot/s_shinhanabi/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": null,
-      "status": "not_resolved_in_this_run"
-    },
-    {
-      "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot",
-      "status": "verified_list_page"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/2042"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/s_shinhanabi/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/s_shinhanabi/"
     }
-  ]
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BBは補助指標。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REGを主判別に使用。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG+REGの合算管理用。"
+    },
+    {
+      "key": "bell_count",
+      "displayName": "ベルA+B",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時ベルA/B合算。ユニメモ等での記録推奨。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 356.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 331.0,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 306.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 280.1,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "主判別。REGを最優先に評価。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 156.0,
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 148.3,
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 139.4,
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 131.6,
+          "weight": 0.8,
+          "minSampleSize": 3500,
+          "note": "補助判別。合算で全体傾向を確認。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bell_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 7.65,
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 7.62,
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 7.2,
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 7.14,
+          "weight": 0.65,
+          "minSampleSize": 5000,
+          "note": "補助判別。ベルは高ゲーム数時のみ補強に使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 277.7,
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 268.6,
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 256.0,
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 248.2,
+          "weight": 0.4,
+          "minSampleSize": 3500,
+          "note": "補助判別。BIGは過信しない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

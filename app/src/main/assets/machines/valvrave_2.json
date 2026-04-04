@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "機種追加差分。登録漏れ防止用に追加。入力UIはヴァルヴレイヴ系の近似テンプレートを流用し、設定判別の分母データは未投入のため推測結果では未使用。メーカー正式名称の完全一致で既存ヴァルヴレイヴとは別機種として管理する。",
     "dmmUrl": "https://p-town.dmm.com/machines/4885",
-    "ichigekiUrl": "https://1geki.jp/slot/l_valvrave2/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_valvrave2/",
+    "status": "partial"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "cz_count",
       "displayName": "CZ",
       "category": "AT_CZ",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "at_count",
       "displayName": "AT",
       "category": "AT_CZ",
-      "sortOrder": 20,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "bonus_count",
       "displayName": "ボーナス",
       "category": "BONUS",
-      "sortOrder": 11,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -63,7 +64,7 @@
       "key": "direct_hit_count",
       "displayName": "直撃AT",
       "category": "SPECIAL",
-      "sortOrder": 30,
+      "sortOrder": 5,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

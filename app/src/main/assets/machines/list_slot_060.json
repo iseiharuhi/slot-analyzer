@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とBIGに整理。ホウオウ天翔もREG主軸で統一し、合算を補助に使う。",
     "dmmUrl": "https://p-town.dmm.com/machines/4013",
-    "ichigekiUrl": "https://1geki.jp/slot/s_hanahana_houoh_tensho30/"
+    "ichigekiUrl": "https://1geki.jp/slot/s_hanahana_houoh_tensho30/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "big_count",
       "displayName": "BIG",
       "category": "BONUS",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "reg_count",
       "displayName": "REG",
       "category": "BONUS",
-      "sortOrder": 11,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "bonus_count",
       "displayName": "合算ボーナス",
       "category": "BONUS",
-      "sortOrder": 12,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -63,7 +64,7 @@
       "key": "small_role_count",
       "displayName": "小役/示唆補助",
       "category": "SMALL_ROLE",
-      "sortOrder": 20,
+      "sortOrder": 5,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

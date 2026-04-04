@@ -1,0 +1,161 @@
+machine_id,file_name,name,source_schema_before,status,counter_count,reference_group_count,ceiling_rule_count,details_regenerated
+akame_ga_kill_2,akame_ga_kill_2.json,Lアカメが斬る！ 2,full_machine,verified,4,0,1,yes
+arifureta,arifureta.json,Lありふれた職業で世界最強,legacy_simple,partial,3,1,0,yes
+azure_lane,azure_lane.json,Lアズールレーン THE ANIMATION,legacy_simple,partial,3,1,0,yes
+bakemonogatari,bakemonogatari.json,スマスロ 化物語,full_machine,verified,4,0,1,yes
+bancho4,bancho4.json,bancho4,legacy_indicators,draft,5,0,0,yes
+bandori,bandori.json,Lバンドリ！,full_machine,verified,4,0,1,yes
+bio_re2,bio_re2.json,スマスロ バイオハザード RE:2,legacy_reference_values,partial,5,4,0,yes
+chibariyo2_plus,chibariyo2_plus.json,chibariyo2_plus,legacy_indicators,draft,4,0,0,yes
+code_geass_cc_kallen,code_geass_cc_kallen.json,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,legacy_simple,partial,3,2,0,yes
+code_geass_fukkatsu,code_geass_fukkatsu.json,コードギアス 復活のルルーシュ,legacy_simple,partial,3,2,0,yes
+d4dj_pachi_slot_mix,d4dj_pachi_slot_mix.json,L D4DJ Pachi-Slot Mix,full_machine,verified,4,0,1,yes
+darling_franxx,darling_franxx.json,Lダーリン・イン・ザ・フランキス,legacy_simple,partial,3,1,0,yes
+dmm_slot_001,dmm_slot_001.json,スマスロ BIRDIE WING -Golf Girls' Story-,full_machine,verified,5,2,0,yes
+dmm_slot_002,dmm_slot_002.json,スマスロ バイオハザードRE:3,full_machine,partial,5,1,0,yes
+dmm_slot_003,dmm_slot_003.json,Ｌタクトオーパス デスティニー,full_machine,draft,5,1,0,yes
+dmm_slot_004,dmm_slot_004.json,スマスロ ビッグドリーム THE GOLDEN PUSHER,full_machine,draft,5,2,0,yes
+dmm_slot_005,dmm_slot_005.json,スマスロスーパーリオエース2,full_machine,draft,5,1,0,yes
+dmm_slot_006,dmm_slot_006.json,LB スロット GALFY,full_machine,partial,4,3,0,yes
+dmm_slot_007,dmm_slot_007.json,スマスロ ミリオンゴッド-神々の軌跡-,full_machine,partial,5,1,0,yes
+dmm_slot_008,dmm_slot_008.json,アニマルスロット ドッチ,full_machine,partial,4,3,0,yes
+dmm_slot_009,dmm_slot_009.json,真打 吉宗,full_machine,partial,5,2,0,yes
+dmm_slot_010,dmm_slot_010.json,LBトリプルクラウンセブン,full_machine,partial,4,3,0,yes
+dmm_slot_011,dmm_slot_011.json,スマスロヨルムンガンド,full_machine,partial,5,2,0,yes
+dmm_slot_012,dmm_slot_012.json,L虚構推理,full_machine,partial,5,2,0,yes
+dmm_slot_013,dmm_slot_013.json,A-SLOT+ 異世界かるてっと BT,full_machine,partial,4,1,0,yes
+dmm_slot_014,dmm_slot_014.json,Lアクダマドライブ,full_machine,partial,5,3,0,yes
+dmm_slot_015,dmm_slot_015.json,スマスロ サンダーV,full_machine,partial,6,5,0,yes
+dmm_slot_016,dmm_slot_016.json,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,full_machine,verified,3,2,0,yes
+dmm_slot_017,dmm_slot_017.json,スマスロ ハナビ,full_machine,partial,5,4,0,yes
+dmm_slot_018,dmm_slot_018.json,スマスロ 攻殻機動隊,full_machine,draft,3,2,0,yes
+dmm_slot_020,dmm_slot_020.json,Lパチスロ 炎炎ノ消防隊2,full_machine,partial,3,2,0,yes
+dmm_slot_021,dmm_slot_021.json,ミクちゃんとイドムンのミラクルチャレンジ2,full_machine,draft,5,4,0,yes
+dmm_slot_022,dmm_slot_022.json,ニューシオサイ,full_machine,draft,4,3,0,yes
+dmm_slot_023,dmm_slot_023.json,パチスロ琉神−30 スイカバージョン,full_machine,draft,4,3,0,yes
+dmm_slot_024,dmm_slot_024.json,L リングにかけろ1 V,full_machine,partial,4,3,3,yes
+dmm_slot_025,dmm_slot_025.json,Lラブ嬢3〜Wご指名はいかがですか？〜,full_machine,draft,3,2,0,yes
+dmm_slot_026,dmm_slot_026.json,L花の慶次～佐渡攻めの章〜,full_machine,partial,3,2,1,yes
+dmm_slot_027,dmm_slot_027.json,スマスロモンキーターンV,full_machine,verified,2,1,2,yes
+dmm_slot_028,dmm_slot_028.json,クランキークレスト,full_machine,draft,5,4,0,yes
+dmm_slot_029,dmm_slot_029.json,マジカルハロウィン８,full_machine,draft,5,4,0,yes
+dmm_slot_030,dmm_slot_030.json,推しスロ アイドルVer.,full_machine,draft,1,0,1,yes
+dmm_slot_031,dmm_slot_031.json,パチスロ ケンガンアシュラ,full_machine,draft,3,2,0,yes
+dmm_slot_032,dmm_slot_032.json,Sちゅらちゅら,full_machine,draft,4,3,0,yes
+dmm_slot_033,dmm_slot_033.json,L ひぐらしのなく頃に 業,full_machine,draft,6,5,0,yes
+dmm_slot_034,dmm_slot_034.json,スマスロとある魔術の禁書目録,full_machine,draft,4,3,0,yes
+dmm_slot_035,dmm_slot_035.json,デジスロ JAC INバージョン,full_machine,draft,4,3,0,yes
+dmm_slot_036,dmm_slot_036.json,L大工の源さん超夢源,full_machine,draft,3,2,0,yes
+dmm_slot_037,dmm_slot_037.json,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,full_machine,draft,4,3,0,yes
+dmm_slot_038,dmm_slot_038.json,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,full_machine,draft,5,4,0,yes
+dmm_slot_039,dmm_slot_039.json,L エヴァンゲリオン ～未来への創造～,full_machine,draft,3,2,0,yes
+dmm_slot_040,dmm_slot_040.json,スーハナライジング-30,full_machine,draft,5,4,0,yes
+dragon_hanahana_30,dragon_hanahana_30.json,dragon_hanahana_30,legacy_indicators,draft,4,0,0,yes
+eureka_zero,eureka_zero.json,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,legacy_simple,partial,3,2,0,yes
+fire_force,fire_force.json,パチスロ 炎炎ノ消防隊,legacy_simple,partial,3,2,0,yes
+funky_juggler_2,funky_juggler_2.json,ファンキージャグラー2,full_machine,verified,5,3,0,yes
+ghost_shell,ghost_shell.json,スマスロ攻殻機動隊,legacy_simple,partial,3,2,0,yes
+goblin_slayer,goblin_slayer.json,goblin_slayer,legacy_indicators,draft,5,0,0,yes
+godzilla,godzilla.json,Lゴジラ,legacy_simple,partial,3,1,0,yes
+gogo_juggler_3,gogo_juggler_3.json,ゴーゴージャグラー3,full_machine,verified,5,3,0,yes
+gundam_seed,gundam_seed.json,Lパチスロ 機動戦士ガンダムSEED,full_machine,verified,3,0,2,yes
+hanma_baki,hanma_baki.json,L範馬刃牙,legacy_simple,partial,3,2,0,yes
+happy_juggler_v3,happy_juggler_v3.json,ハッピージャグラーV III,full_machine,verified,5,3,0,yes
+hihouden,hihouden.json,スマスロ 秘宝伝,full_machine,verified,4,0,1,yes
+hokuto,hokuto.json,L北斗の拳,full_machine,verified,8,4,2,yes
+hokuto_tensei_2,hokuto_tensei_2.json,スマスロ 北斗の拳 転生の章2,full_machine,partial,5,1,1,yes
+idolmaster_million_live,idolmaster_million_live.json,スマスロ アイドルマスター ミリオンライブ！ ネクストプロローグ,full_machine,verified,3,0,1,yes
+im_juggler_ex,im_juggler_ex.json,アイムジャグラーEX,full_machine,verified,5,3,0,yes
+initial_d_2,initial_d_2.json,スマスロ頭文字D 2nd,full_machine,verified,4,0,2,yes
+inuyasha,inuyasha.json,パチスロ犬夜叉,full_machine,verified,4,0,3,yes
+inuyasha_2,inuyasha_2.json,L 犬夜叉2,full_machine,verified,4,0,2,yes
+iza_bancho,iza_bancho.json,いざ！番長,full_machine,verified,4,0,1,yes
+kabaneri,kabaneri.json,kabaneri,legacy_indicators,draft,5,0,0,yes
+kabaneri_kaimon,kabaneri_kaimon.json,スマスロ 甲鉄城のカバネリ 海門決戦,legacy_simple,partial,3,2,0,yes
+kaiji_kyouen,kaiji_kyouen.json,回胴黙示録カイジ 狂宴,full_machine,verified,4,0,1,yes
+kamen_rider_denoh,kamen_rider_denoh.json,L仮面ライダー電王,legacy_simple,partial,3,1,0,yes
+karakuri,karakuri.json,からくりサーカス,minimal,draft,1,0,0,yes
+karakuri_circus,karakuri_circus.json,karakuri_circus,legacy_indicators,draft,5,0,0,yes
+kengan,kengan.json,Lケンガンアシュラ,legacy_simple,partial,3,2,0,yes
+king_hanahana_30,king_hanahana_30.json,king_hanahana_30,legacy_indicators,draft,4,0,0,yes
+kinnikuman_7devils,kinnikuman_7devils.json,スマスロキン肉マン～7人の悪魔超人編～,full_machine,verified,3,0,1,yes
+l_hokuto,l_hokuto.json,l_hokuto,legacy_indicators,draft,5,0,0,yes
+list_slot_003,list_slot_003.json,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,full_machine,partial,4,3,1,yes
+list_slot_004,list_slot_004.json,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,full_machine,partial,4,3,0,yes
+list_slot_009,list_slot_009.json,L麻雀格闘倶楽部 覚醒,full_machine,partial,3,2,4,yes
+list_slot_010,list_slot_010.json,Lベルセルク無双,full_machine,partial,3,1,1,yes
+list_slot_012,list_slot_012.json,L南国育ち,full_machine,draft,3,2,0,yes
+list_slot_013,list_slot_013.json,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,full_machine,draft,5,4,0,yes
+list_slot_026,list_slot_026.json,EVANGELION FESTIVAL,full_machine,draft,5,3,2,yes
+list_slot_027,list_slot_027.json,パチスロ アクエリオン ALL STARS,full_machine,partial,3,2,2,yes
+list_slot_028,list_slot_028.json,パチスロ鉄拳5,full_machine,partial,3,2,1,yes
+list_slot_029,list_slot_029.json,パチスロ幼女戦記,full_machine,partial,4,3,1,yes
+list_slot_030,list_slot_030.json,スマスロ シャーマンキング,full_machine,partial,3,2,2,yes
+list_slot_031,list_slot_031.json,パチスロ 新鬼武者2,full_machine,partial,3,2,2,yes
+list_slot_032,list_slot_032.json,FAIRY TAIL2,full_machine,draft,3,2,1,yes
+list_slot_033,list_slot_033.json,ペルソナ5,full_machine,draft,3,2,2,yes
+list_slot_034,list_slot_034.json,パチスロ盾の勇者の成り上がり,full_machine,draft,5,1,2,yes
+list_slot_035,list_slot_035.json,S BOØWY,full_machine,draft,3,1,1,yes
+list_slot_036,list_slot_036.json,バイオハザード ヴィレッジ,full_machine,draft,4,3,2,yes
+list_slot_037,list_slot_037.json,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,full_machine,draft,6,4,1,yes
+list_slot_038,list_slot_038.json,Re:ゼロから始める異世界生活 season2,full_machine,draft,5,1,3,yes
+list_slot_039,list_slot_039.json,この素晴らしい世界に祝福を！,full_machine,draft,5,1,1,yes
+list_slot_040,list_slot_040.json,Lルパン三世 大航海者の秘宝,full_machine,draft,5,3,3,yes
+list_slot_041,list_slot_041.json,黄門ちゃま天,full_machine,draft,5,1,3,yes
+list_slot_042,list_slot_042.json,ニューパルサーSP4,full_machine,partial,4,3,0,yes
+list_slot_043,list_slot_043.json,ニューパルサーDX3,full_machine,partial,4,3,0,yes
+list_slot_044,list_slot_044.json,ハナビ,full_machine,partial,5,4,0,yes
+list_slot_045,list_slot_045.json,バーサスリヴァイズ,full_machine,partial,6,5,0,yes
+list_slot_046,list_slot_046.json,サンダーVライトニング,full_machine,partial,3,1,0,yes
+list_slot_047,list_slot_047.json,アレックス ブライト,full_machine,partial,7,6,0,yes
+list_slot_048,list_slot_048.json,ディスクアップ2,full_machine,partial,4,3,0,yes
+list_slot_049,list_slot_049.json,A-SLOT+ ディスクアップ ULTRAREMIX,full_machine,partial,6,5,0,yes
+list_slot_050,list_slot_050.json,ファミスタ回胴版!!,full_machine,partial,4,3,0,yes
+list_slot_051,list_slot_051.json,沖ドキ！GOLD,full_machine,partial,6,3,0,yes
+list_slot_052,list_slot_052.json,沖ドキ！DUO,full_machine,partial,5,1,0,yes
+list_slot_053,list_slot_053.json,スマート沖スロ 沖ドキ！DUO-30 アンコール,full_machine,partial,5,1,0,yes
+list_slot_054,list_slot_054.json,チバリヨ2プラス,full_machine,partial,5,1,0,yes
+list_slot_055,list_slot_055.json,スマート沖スロ スターハナハナ,full_machine,partial,5,3,0,yes
+list_slot_056,list_slot_056.json,スマート沖スロ ニューキングハナハナ-30,full_machine,partial,5,3,0,yes
+list_slot_057,list_slot_057.json,ニューキングハナハナ-30,full_machine,partial,5,3,0,yes
+list_slot_058,list_slot_058.json,ドラゴンハナハナ～閃光～ 30,full_machine,partial,5,3,0,yes
+list_slot_059,list_slot_059.json,キングハナハナ-30,full_machine,partial,5,3,0,yes
+list_slot_060,list_slot_060.json,ハナハナホウオウ～天翔～-30,full_machine,partial,5,3,0,yes
+list_slot_061,list_slot_061.json,麻雀物語,full_machine,partial,5,4,0,yes
+list_slot_062,list_slot_062.json,戦姫絶唱シンフォギア 正義の歌,full_machine,partial,3,2,0,yes
+list_slot_063,list_slot_063.json,Lパチスロうみねこのなく頃に2,full_machine,draft,5,2,1,yes
+lovejo3,lovejo3.json,ラブ嬢3～Wご指名はいかがですか？～,legacy_simple,partial,3,2,0,yes
+lupin,lupin.json,ルパン三世 大航海者,minimal,draft,1,0,0,yes
+macross_frontier_4,macross_frontier_4.json,Lパチスロマクロスフロンティア4,full_machine,verified,4,0,2,yes
+madoka_forte,madoka_forte.json,劇場版魔法少女まどか☆マギカ f-フォルテ-,legacy_simple,partial,3,1,0,yes
+magia_record,magia_record.json,スマスロ マギアレコード 魔法少女まどか☆マギカ外伝,full_machine,verified,4,0,1,yes
+mahjong_monogatari,mahjong_monogatari.json,L麻雀物語,full_machine,verified,5,0,3,yes
+monkey_turn_v,monkey_turn_v.json,monkey_turn_v,legacy_indicators,draft,5,0,0,yes
+monster_hunter_rise,monster_hunter_rise.json,スマスロ モンスターハンターライズ,full_machine,verified,6,5,2,yes
+mushoku_tensei,mushoku_tensei.json,L無職転生～異世界行ったら本気だす～,full_machine,verified,4,0,2,yes
+my_juggler_v,my_juggler_v.json,マイジャグラーV,full_machine,verified,5,3,0,yes
+nogizaka_46,nogizaka_46.json,ぱちスロ 乃木坂46,full_machine,verified,4,0,1,yes
+nyanko,nyanko.json,Lにゃんこ大戦争 超神速,legacy_simple,partial,3,2,0,yes
+oki_doki_duo,oki_doki_duo.json,oki_doki_duo,legacy_indicators,draft,4,0,0,yes
+oki_doki_gold,oki_doki_gold.json,oki_doki_gold,legacy_indicators,draft,4,0,0,yes
+one_punch_man,one_punch_man.json,Lワンパンマン,full_machine,verified,5,0,2,yes
+revue_starlight,revue_starlight.json,L少女☆歌劇 レヴュースタァライト -The SLOT-,legacy_simple,partial,3,1,0,yes
+rezero_season2,rezero_season2.json,スロット Re:ゼロから始める異世界生活 season2,full_machine,verified,4,0,2,yes
+ring_v,ring_v.json,Lリングにかけろ1 V,legacy_simple,partial,3,2,0,yes
+saint_seiya_kaiou_custom_edition,saint_seiya_kaiou_custom_edition.json,L聖闘士星矢 海皇覚醒 CUSTOM EDITION,full_machine,verified,4,0,2,yes
+saki_top,saki_top.json,L咲-Saki- 頂上決戦,legacy_simple,partial,3,1,0,yes
+sengoku_otome4,sengoku_otome4.json,L戦国乙女4 戦乱に閃く炯眼の軍師,legacy_simple,partial,3,2,0,yes
+shin_eva,shin_eva.json,Lパチスロ シン・エヴァンゲリオン,legacy_simple,partial,3,2,0,yes
+strike_witches2,strike_witches2.json,Lストライクウィッチーズ2,legacy_simple,partial,3,2,0,yes
+super_black_jack,super_black_jack.json,スマスロスーパーブラックジャック,full_machine,verified,5,0,2,yes
+tensei_slime,tensei_slime.json,L転生したらスライムだった件,legacy_simple,partial,3,2,0,yes
+toaru,toaru.json,スマスロ とある魔術の禁書目録,legacy_simple,partial,3,2,0,yes
+tokyo_ghoul,tokyo_ghoul.json,L東京喰種,legacy_simple,partial,3,1,0,yes
+tokyoghoul,tokyoghoul.json,東京喰種,minimal,draft,1,0,0,yes
+ushio_tora,ushio_tora.json,Lうしおととら 白面決戦,legacy_simple,partial,3,1,0,yes
+valvrave,valvrave.json,valvrave,legacy_indicators,draft,5,0,0,yes
+valvrave_2,valvrave_2.json,Lパチスロ 革命機ヴァルヴレイヴ2,full_machine,partial,5,0,4,yes
+vvv,vvv.json,革命機ヴァルヴレイヴ,minimal,draft,1,0,0,yes
+watakon,watakon.json,わたしの幸せな結婚,full_machine,verified,6,0,4,yes
+youzitsu,youzitsu.json,スマスロ ようこそ実力至上主義の教室へ,full_machine,verified,4,0,3,yes
+zenigata4,zenigata4.json,L主役は銭形4,legacy_simple,partial,3,2,0,yes

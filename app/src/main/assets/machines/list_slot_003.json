@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "AT精度一括調整済み。主判別は直撃、AT初当り、補助は初当り/ボーナス。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4477",
-    "ichigekiUrl": "https://1geki.jp/slot/l_codegeass/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_codegeass/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "bonus_count",
       "displayName": "通常時ボーナス初当り",
       "category": "BONUS",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "at_count",
       "displayName": "AT初当り",
       "category": "AT_CZ",
-      "sortOrder": 20,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "direct_hit_count",
       "displayName": "AT直撃",
       "category": "SPECIAL",
-      "sortOrder": 30,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

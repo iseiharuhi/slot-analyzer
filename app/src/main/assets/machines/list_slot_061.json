@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとBIG、重い分母は直撃系に整理。AT寄りに見える展開でも、まずはボーナス初当りを軸に全体を評価する。",
     "dmmUrl": "https://p-town.dmm.com/specials/4159",
-    "ichigekiUrl": "https://1geki.jp/slot/l_mjnmngtr/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_mjnmngtr/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "bonus_count",
       "displayName": "初当り合算",
       "category": "BONUS",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "big_count",
       "displayName": "通常時ボーナス初当り",
       "category": "BONUS",
-      "sortOrder": 20,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "at_count",
       "displayName": "AT初当り",
       "category": "AT_CZ",
-      "sortOrder": 30,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -63,7 +64,7 @@
       "key": "direct_hit_count",
       "displayName": "AT直撃",
       "category": "SPECIAL",
-      "sortOrder": 31,
+      "sortOrder": 5,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

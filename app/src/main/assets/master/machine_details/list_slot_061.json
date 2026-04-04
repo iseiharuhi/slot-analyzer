@@ -1,19 +1,275 @@
 {
-  "machineId": "list_slot_061",
-  "machineName": "麻雀物語",
-  "status": "partial",
-  "capturedDate": "2026-04-01",
-  "sourceListPage": null,
+  "id": "list_slot_061",
+  "name": "麻雀物語",
+  "manufacturer": "オリンピアエステート",
+  "type": "AT",
+  "releaseDate": "2025-04-21",
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はAT初当りとBIG、重い分母は直撃系に整理。AT寄りに見える展開でも、まずはボーナス初当りを軸に全体を評価する。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/specials/4159",
+  "ichigekiUrl": "https://1geki.jp/slot/l_mjnmngtr/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/specials/4159",
-      "status": "verified_special_page"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/specials/4159"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/l_mjnmngtr/",
-      "status": "verified_direct_page"
+      "url": "https://1geki.jp/slot/l_mjnmngtr/"
     }
-  ]
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り合算",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のボーナス or ATの初当り合算。主判別項目。"
+    },
+    {
+      "key": "big_count",
+      "displayName": "通常時ボーナス初当り",
+      "category": "BONUS",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時ボーナス初当り回数。補助評価用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。補助評価用。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "AT直撃",
+      "category": "SPECIAL",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時AT直撃回数。分母は重いが設定差が大きいので1回でも重要。前兆中昇格を除いた数値ベース。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 354.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・BIGと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 349.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・BIGと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 342.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・BIGと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 328.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・BIGと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 326.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・BIGと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 323.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。AT初当り・BIGと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 615.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 600.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 580.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 545.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 537.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 531.4,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいため主判別優先で見る。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 433.3,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。単体ではなく主判別の補強として使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 431.8,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。単体ではなく主判別の補強として使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 426.6,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。単体ではなく主判別の補強として使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 420.2,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。単体ではなく主判別の補強として使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 417.9,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。単体ではなく主判別の補強として使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 416.5,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。単体ではなく主判別の補強として使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 15142.4,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 10716.9,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 8351.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 5164.8,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 4886.1,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 4631.9,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。確認できても補強材料として扱い、単体で決めない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

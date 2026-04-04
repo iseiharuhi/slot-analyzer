@@ -2,7 +2,7 @@ package com.example.slotanalyzer.feature.machine.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.slotanalyzer.domain.model.MachineFilter
+import com.example.slotanalyzer.domain.model.MachineFilterKeys
 import com.example.slotanalyzer.domain.model.MachineSortOrder
 import com.example.slotanalyzer.domain.repository.AppSettingRepository
 import com.example.slotanalyzer.feature.machine.domain.model.Machine
@@ -24,7 +24,7 @@ data class MachineItemUiModel(
 data class MachineSelectUiState(
     val machines: List<MachineItemUiModel> = emptyList(),
     val sortOrderLabel: String = "リリース日順",
-    val filterLabel: String = "すべて"
+    val filterLabel: String = "すべて表示"
 )
 
 @HiltViewModel
@@ -44,7 +44,7 @@ class MachineSelectViewModel @Inject constructor(
                 appSettingRepository.observeUserPreferences()
             ) { machines, preferences ->
                 val filtered = machines
-                    .filter { machine -> matchesFilter(machine, preferences.machineFilter) }
+                    .filter { machine -> matchesFilter(machine, preferences.selectedMachineFilters) }
                     .sortedWith(machineComparator(preferences.machineSortOrder))
 
                 MachineSelectUiState(
@@ -58,12 +58,7 @@ class MachineSelectViewModel @Inject constructor(
                         MachineSortOrder.NAME -> "名前順"
                         else -> "リリース日順"
                     },
-                    filterLabel = when (preferences.machineFilter) {
-                        MachineFilter.AT_SMART -> "AT / スマスロ"
-                        MachineFilter.NORMAL -> "ノーマル"
-                        MachineFilter.OKINAWA -> "沖スロ / ハナハナ"
-                        else -> "すべて"
-                    }
+                    filterLabel = buildFilterLabel(preferences.selectedMachineFilters)
                 )
             }.collect { state ->
                 _uiState.value = state
@@ -101,26 +96,36 @@ class MachineSelectViewModel @Inject constructor(
         }
     }
 
-    private fun matchesFilter(machine: Machine, filter: String): Boolean {
-        return when (filter) {
-            MachineFilter.AT_SMART -> isAtSmartMachine(machine)
-            MachineFilter.NORMAL -> isNormalMachine(machine)
-            MachineFilter.OKINAWA -> isOkinawaMachine(machine)
-            else -> true
+    private fun matchesFilter(machine: Machine, filters: Set<String>): Boolean {
+        if (filters.isEmpty() || filters.containsAll(MachineFilterKeys.defaultSelected)) {
+            return true
+        }
+
+        return filters.any { filter ->
+            when (filter) {
+                MachineFilterKeys.AT_SMART -> isAtSmartMachine(machine)
+                MachineFilterKeys.NORMAL -> isNormalMachine(machine)
+                MachineFilterKeys.OKINAWA -> isOkinawaMachine(machine)
+                else -> false
+            }
         }
     }
 
     private fun isAtSmartMachine(machine: Machine): Boolean {
         val type = machine.type.orEmpty().uppercase()
         val name = machine.name
-        return type in setOf("AT", "ART", "HYBRID") ||
+        return type in setOf("AT", "ART", "BT", "A+AT", "A+ART", "ST", "BONUS+AT") ||
             name.startsWith("L") ||
             name.contains("スマスロ") ||
             name.contains("BT")
     }
 
     private fun isNormalMachine(machine: Machine): Boolean {
-        return machine.type.orEmpty().uppercase() == "BONUS"
+        val type = machine.type.orEmpty().uppercase()
+        val name = machine.name
+        return type in setOf("A", "A+RT", "A+AT", "BONUS") ||
+            listOf("ジャグラー", "ハナビ", "バーサス", "サンダーV", "クランキー", "アレックス", "ディスクアップ", "ひぐらし", "ファミスタ")
+                .any { keyword -> name.contains(keyword) }
     }
 
     private fun isOkinawaMachine(machine: Machine): Boolean {
@@ -134,5 +139,19 @@ class MachineSelectViewModel @Inject constructor(
             "ちゅら",
             "スイカバージョン"
         ).any { keyword -> name.contains(keyword) }
+    }
+
+    private fun buildFilterLabel(filters: Set<String>): String {
+        if (filters.isEmpty() || filters.containsAll(MachineFilterKeys.defaultSelected)) {
+            return "すべて表示"
+        }
+
+        val labels = buildList {
+            if (filters.contains(MachineFilterKeys.AT_SMART)) add("AT / スマスロ")
+            if (filters.contains(MachineFilterKeys.NORMAL)) add("ノーマル")
+            if (filters.contains(MachineFilterKeys.OKINAWA)) add("沖スロ / ハナハナ")
+        }
+
+        return labels.joinToString("・").ifBlank { "すべて表示" }
     }
 }

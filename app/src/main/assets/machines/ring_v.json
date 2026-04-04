@@ -1,57 +1,149 @@
 {
-  "id": "ring_v",
-  "name": "Lリングにかけろ1 V",
-  "notes": "precision batch / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
-  "counters": [
+  "machine": {
+    "id": "ring_v",
+    "name": "Lリングにかけろ1 V",
+    "manufacturer": null,
+    "type": null,
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "precision batch / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
+    "dmmUrl": "https://p-town.dmm.com",
+    "ichigekiUrl": "https://1geki.jp",
+    "status": "partial"
+  },
+  "counterDefinitions": [
     {
       "key": "total_games",
-      "label": "ゲーム数"
+      "displayName": "ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": null
     },
     {
       "key": "cz",
-      "label": "CZ"
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     },
     {
       "key": "at",
-      "label": "AT"
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     }
   ],
-  "inferenceElements": [
+  "settingReferenceValues": [
     {
-      "key": "cz_probability",
-      "values": {
-        "1": 0.005,
-        "2": 0.005555555555555556,
-        "3": 0.00625,
-        "4": 0.007142857142857143,
-        "5": 0.008333333333333333,
-        "6": 0.01
-      },
-      "weight": 1.0,
-      "minSampleSize": 2200
+      "counterKey": "cz",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 200.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 180.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 160.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 140.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 120.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 100.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        }
+      ]
     },
     {
-      "key": "at_probability",
-      "values": {
-        "1": 0.0025,
-        "2": 0.002777777777777778,
-        "3": 0.003125,
-        "4": 0.0035714285714285713,
-        "5": 0.004166666666666667,
-        "6": 0.005
-      },
-      "weight": 1.2,
-      "minSampleSize": 2000
+      "counterKey": "at",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 400.0,
+          "weight": 1.2,
+          "minSampleSize": 2000,
+          "note": null
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 360.0,
+          "weight": 1.2,
+          "minSampleSize": 2000,
+          "note": null
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 320.0,
+          "weight": 1.2,
+          "minSampleSize": 2000,
+          "note": null
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 280.0,
+          "weight": 1.2,
+          "minSampleSize": 2000,
+          "note": null
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 240.0,
+          "weight": 1.2,
+          "minSampleSize": 2000,
+          "note": null
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 200.0,
+          "weight": 1.2,
+          "minSampleSize": 2000,
+          "note": null
+        }
+      ]
     }
   ],
-  "siteLinks": [
-    {
-      "name": "DMM",
-      "url": "https://p-town.dmm.com"
-    },
-    {
-      "name": "一撃",
-      "url": "https://1geki.jp"
-    }
-  ]
+  "ceilingRules": []
 }

@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "AT精度一括調整済み。主判別はAT初当り、初当り/ボーナス、補助はCZ。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4689",
-    "ichigekiUrl": "https://1geki.jp/slot/l_lupin_totgn/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_lupin_totgn/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "bonus_count",
       "displayName": "シングル7揃い",
       "category": "BONUS",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "cz_count",
       "displayName": "CZ「ICPOチャレンジ」",
       "category": "AT_CZ",
-      "sortOrder": 11,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "at_count",
       "displayName": "ダブル7揃い/AT",
       "category": "AT_CZ",
-      "sortOrder": 12,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -63,7 +64,7 @@
       "key": "direct_hit_count",
       "displayName": "AT直行/直撃メモ",
       "category": "SPECIAL",
-      "sortOrder": 20,
+      "sortOrder": 5,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

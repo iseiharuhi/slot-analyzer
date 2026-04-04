@@ -1,24 +1,168 @@
 {
-  "machineId": "list_slot_041",
-  "machineName": "黄門ちゃま天",
-  "status": "partial",
-  "capturedDate": "2026-04-01",
-  "sourceListPage": null,
+  "id": "list_slot_041",
+  "name": "黄門ちゃま天",
+  "manufacturer": "オリンピア",
+  "type": "AT",
+  "releaseDate": "2024-09-02",
+  "isActive": true,
+  "notes": "AT精度一括調整済み。主判別はAT初当り。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4609",
+  "ichigekiUrl": "https://1geki.jp/slot/l_komonchama_ten/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4609",
-      "status": "verified"
-    },
-    {
-      "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot",
-      "status": "verified_list_page"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4609"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/l_komonchama_ten/",
-      "status": "verified"
+      "url": "https://1geki.jp/slot/l_komonchama_ten/"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り/ボーナス",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "機種ごとの初当り・ボーナス・擬似ボーナス合算入力用の汎用カウンタ。詳細解析が固まり次第、正式名称へ差し替え予定。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ搭載機向けの汎用入力欄。非搭載機は未入力想定。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT「ええじゃないかRUSH」初当り",
+      "category": "AT_CZ",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "初当りはすべてAT。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "直撃AT・特殊当選・上位契機などの補助記録用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 398.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 384.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 354.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 313.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 285.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 271.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大999G+αでATに当選。ダブルちゃんモード滞在時は500G+α。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "lantern_count_ceiling",
+      "displayName": "世直し提灯点灯回数天井",
+      "ceilingType": "COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "世直し提灯点灯7回目でATに当選。設定変更時は3回目。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "lantern_interval_ceiling",
+      "displayName": "世直し提灯点灯間",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 310,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "世直し提灯間310G消化で世直し提灯が点灯。千年桜ステージ中の点灯ではこのG数はリセットされない。",
+      "isEnabled": true
     }
   ]
 }

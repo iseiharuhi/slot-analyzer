@@ -1,24 +1,177 @@
 {
-  "machineId": "dmm_slot_009",
-  "machineName": "真打 吉宗",
-  "status": "partial",
-  "capturedDate": "2026-03-31",
-  "sourceListPage": 1,
+  "id": "dmm_slot_009",
+  "name": "真打 吉宗",
+  "manufacturer": "大都技研",
+  "type": "AT",
+  "releaseDate": "2026-04-06",
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はAT初当り、補助はCZとボーナス、重い分母は直撃ATに整理。主軸はAT初当りで、短期のCZ偏りを追い過ぎない。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4983",
+  "ichigekiUrl": null,
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4983",
-      "status": "verified_direct"
-    },
-    {
-      "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot",
-      "status": "verified_list_page"
-    },
-    {
-      "label": "一撃",
-      "url": null,
-      "status": "not_resolved_in_this_run"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4983"
     }
-  ]
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "公開差分未確認のため、現段階では推測に未使用。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃AT",
+      "category": "SPECIAL",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "直撃差分未確認のため、現段階では推測に未使用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 488.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 471.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 438.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 398.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 377.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 354.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 313.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 303.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 283.5,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 267.1,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 256.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 250.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は偏りやすいためAT初当り優先で評価。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

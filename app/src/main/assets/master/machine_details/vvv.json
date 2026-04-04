@@ -1,0 +1,29 @@
+{
+  "id": "vvv",
+  "name": "革命機ヴァルヴレイヴ",
+  "manufacturer": null,
+  "type": null,
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "ボーナス主軸。CZは参考程度。荒波注意。 / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
+  "status": "partial",
+  "dmmUrl": null,
+  "ichigekiUrl": null,
+  "externalLinks": [],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": []
+}

@@ -1,24 +1,169 @@
 {
-  "machineId": "list_slot_032",
-  "machineName": "FAIRY TAIL2",
-  "status": "partial",
-  "capturedDate": "2026-04-01",
-  "sourceListPage": null,
+  "id": "list_slot_032",
+  "name": "FAIRY TAIL2",
+  "manufacturer": "藤商事",
+  "type": "AT",
+  "releaseDate": "2022-08-01",
+  "isActive": true,
+  "notes": "AT精度一括調整済み。主判別はAT初当り、CZ。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4191",
+  "ichigekiUrl": "https://1geki.jp/slot/s_fairytail2/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4191",
-      "status": "verified_direct"
-    },
-    {
-      "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot",
-      "status": "verified_list_page"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4191"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/s_fairytail2/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/s_fairytail2/"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ「FAIRY BATTLE CHALLENGE」",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のCZ当選回数。主判別補助。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT「FAIRY BATTLE」初当り",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。主判別項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 459.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 432.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 393.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 337.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 321.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 273.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 242.1,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 234.5,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 223.5,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 206.7,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 201.8,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 187.1,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1536,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1536G+α到達後のCZ成功でAT「FAIRY BATTLE」に当選。CZ失敗時は特殊モード移行で100pt到達時AT当選。",
+      "isEnabled": true
     }
   ]
 }

@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はボーナス初当り、補助はCZに整理。大工の源さん超夢源は無理に軸を増やさず、現行入力で使いやすい2軸を優先する。",
     "dmmUrl": "https://p-town.dmm.com/machines/4428",
-    "ichigekiUrl": "https://1geki.jp/slot/l_d_gensantyomugen/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_d_gensantyomugen/",
+    "status": "partial"
   },
   "counterDefinitions": [
     {
@@ -32,7 +33,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 10,
+      "sortOrder": 2,
       "notes": null
     },
     {
@@ -44,7 +45,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 11,
+      "sortOrder": 3,
       "notes": null
     }
   ],

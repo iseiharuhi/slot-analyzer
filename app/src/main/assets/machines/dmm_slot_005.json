@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はREG、補助はAT初当りとBIGに整理。スーパーリオエース2はREGを軸にし、AT初当りは補助評価に留める。",
     "dmmUrl": "https://p-town.dmm.com/machines/4984",
-    "ichigekiUrl": "https://1geki.jp/slot/s_sp_rioace/"
+    "ichigekiUrl": "https://1geki.jp/slot/s_sp_rioace/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "at_count",
       "displayName": "初当たり",
       "category": "AT_CZ",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "big_count",
       "displayName": "BIG",
       "category": "BONUS",
-      "sortOrder": 20,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "reg_count",
       "displayName": "REG/その他ボーナス",
       "category": "BONUS",
-      "sortOrder": 21,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -63,7 +64,7 @@
       "key": "cz_count",
       "displayName": "CZ",
       "category": "AT_CZ",
-      "sortOrder": 22,
+      "sortOrder": 5,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

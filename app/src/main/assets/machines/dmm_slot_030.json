@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "draft: DMM/一撃でメーカー・導入日・150G天井を確認して整備。台枠ランプ色などの直接示唆が主軸で、総ゲーム数分母に落とせる全設定比較値を安全に抽出できないため settingReferenceValues は未実装のまま保持。公開比較値が確認でき次第 partial 化。",
     "dmmUrl": "https://p-town.dmm.com/machines/4455",
-    "ichigekiUrl": "https://1geki.jp/slot/s_oshisloaid/"
+    "ichigekiUrl": "https://1geki.jp/slot/s_oshisloaid/",
+    "status": "partial"
   },
   "counterDefinitions": [
     {

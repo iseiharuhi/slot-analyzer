@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "AT精度一括調整済み。主判別はAT初当り、初当り/ボーナス。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4926",
-    "ichigekiUrl": "https://1geki.jp/slot/l_ennenn2/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_ennenn2/",
+    "status": "partial"
   },
   "counterDefinitions": [
     {
@@ -32,7 +33,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 10,
+      "sortOrder": 2,
       "notes": null
     },
     {
@@ -44,7 +45,7 @@
       "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
-      "sortOrder": 11,
+      "sortOrder": 3,
       "notes": null
     }
   ],

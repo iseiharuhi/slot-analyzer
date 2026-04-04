@@ -20,12 +20,6 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindAppSettingRepository(
-        impl: AppSettingRepositoryImpl
-    ): AppSettingRepository
-
-    @Binds
-    @Singleton
     abstract fun bindMachineRepository(
         impl: MachineRepositoryImpl
     ): MachineRepository
@@ -41,4 +35,10 @@ abstract class RepositoryModule {
     abstract fun bindMasterSyncRepository(
         impl: MasterSyncRepositoryImpl
     ): MasterSyncRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindAppSettingRepository(
+        impl: AppSettingRepositoryImpl
+    ): AppSettingRepository
 }

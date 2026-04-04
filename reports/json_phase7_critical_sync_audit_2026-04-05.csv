@@ -1,0 +1,137 @@
+﻿machine_id,file_name,machine_name,manufacturer,machine_type,release_date,has_placeholder_name,has_dmm_url,has_ichigeki_url,reference_group_count,ceiling_rule_count,status
+arifureta,arifureta.json,Lありふれた職業で世界最強,,,,no,yes,yes,1,0,partial
+azure_lane,azure_lane.json,Lアズールレーン THE ANIMATION,,,,no,yes,yes,1,0,partial
+bancho4,bancho4.json,押忍！番長4,,,,no,no,no,0,0,partial
+bio_re2,bio_re2.json,スマスロ バイオハザード RE:2,,,,no,no,no,0,0,partial
+chibariyo2_plus,chibariyo2_plus.json,チバリヨ2プラス,,,,no,no,no,0,0,partial
+code_geass_cc_kallen,code_geass_cc_kallen.json,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,,,,no,yes,yes,2,0,partial
+code_geass_fukkatsu,code_geass_fukkatsu.json,コードギアス 復活のルルーシュ,,,,no,yes,yes,2,0,partial
+darling_franxx,darling_franxx.json,Lダーリン・イン・ザ・フランキス,,,,no,yes,yes,1,0,partial
+dmm_slot_001,dmm_slot_001.json,スマスロ BIRDIE WING -Golf Girls' Story-,UNIVERSAL BROS.,AT,2026-06-08,no,yes,yes,2,0,verified
+dmm_slot_002,dmm_slot_002.json,スマスロ バイオハザードRE:3,Enterrise,AT,2026-05-11,no,yes,yes,1,0,verified
+dmm_slot_003,dmm_slot_003.json,Ｌタクトオーパス デスティニー,HEIWA,AT,2026-05-11,no,yes,yes,1,0,verified
+dmm_slot_004,dmm_slot_004.json,スマスロ ビッグドリーム THE GOLDEN PUSHER,Sammy,AT,2026-05-11,no,yes,yes,2,0,verified
+dmm_slot_005,dmm_slot_005.json,スマスロスーパーリオエース2,YAMASA NEXT,HYBRID,2026-05-11,no,yes,yes,1,0,verified
+dmm_slot_006,dmm_slot_006.json,LB スロット GALFY,オーイズミ,BONUS,2026-06-08,no,yes,no,3,0,verified
+dmm_slot_007,dmm_slot_007.json,スマスロ ミリオンゴッド-神々の軌跡-,ミズホ,AT,2026-04-20,no,yes,no,1,0,verified
+dmm_slot_008,dmm_slot_008.json,アニマルスロット ドッチ,北電子,BONUS,2026-04-20,no,yes,no,3,0,verified
+dmm_slot_009,dmm_slot_009.json,真打 吉宗,大都技研,AT,2026-04-06,no,yes,no,2,0,verified
+dmm_slot_010,dmm_slot_010.json,LBトリプルクラウンセブン,岡崎産業,BONUS,2026-04-06,no,yes,no,3,0,verified
+dmm_slot_011,dmm_slot_011.json,スマスロヨルムンガンド,YAMASA NEXT,AT,2026-04-06,no,yes,no,2,0,verified
+dmm_slot_012,dmm_slot_012.json,L虚構推理,D-light,AT,2026-04-06,no,yes,no,2,0,verified
+dmm_slot_013,dmm_slot_013.json,A-SLOT+ 異世界かるてっと BT,GINZA,BONUS,2026-04-06,no,yes,no,1,0,verified
+dmm_slot_014,dmm_slot_014.json,Lアクダマドライブ,SanThree,AT,2026-04-06,no,yes,no,3,0,verified
+dmm_slot_015,dmm_slot_015.json,スマスロ サンダーV,ELECO,BONUS,2026-03-02,no,yes,yes,5,0,verified
+dmm_slot_016,dmm_slot_016.json,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,,AT,,no,yes,yes,2,0,verified
+dmm_slot_017,dmm_slot_017.json,スマスロ ハナビ,アクロス,BONUS,2026-02-02,no,yes,yes,4,0,verified
+dmm_slot_018,dmm_slot_018.json,スマスロ 攻殻機動隊,,AT,,no,yes,yes,2,0,verified
+dmm_slot_020,dmm_slot_020.json,Lパチスロ 炎炎ノ消防隊2,,AT,,no,yes,yes,2,0,verified
+dmm_slot_021,dmm_slot_021.json,ミクちゃんとイドムンのミラクルチャレンジ2,,BONUS,,no,yes,yes,4,0,verified
+dmm_slot_022,dmm_slot_022.json,ニューシオサイ,,BONUS,,no,yes,yes,3,0,verified
+dmm_slot_023,dmm_slot_023.json,パチスロ琉神−30 スイカバージョン,,BONUS,,no,yes,yes,3,0,verified
+dmm_slot_024,dmm_slot_024.json,L リングにかけろ1 V,,AT,,no,yes,yes,3,3,verified
+dmm_slot_025,dmm_slot_025.json,Lラブ嬢3〜Wご指名はいかがですか？〜,,AT,,no,yes,yes,2,0,verified
+dmm_slot_026,dmm_slot_026.json,L花の慶次～佐渡攻めの章〜,EXCITE,AT,2023-12-04,no,yes,yes,2,1,verified
+dmm_slot_027,dmm_slot_027.json,スマスロモンキーターンV,山佐,AT,2023-12-04,no,yes,yes,1,2,verified
+dmm_slot_028,dmm_slot_028.json,クランキークレスト,,BONUS,,no,yes,yes,4,0,verified
+dmm_slot_029,dmm_slot_029.json,マジカルハロウィン８,,HYBRID,,no,yes,yes,4,0,verified
+dmm_slot_030,dmm_slot_030.json,推しスロ アイドルVer.,タツミコーポレーション,BONUS,2023-12-01,no,yes,yes,0,1,verified
+dmm_slot_031,dmm_slot_031.json,パチスロ ケンガンアシュラ,,AT,,no,yes,yes,2,0,verified
+dmm_slot_032,dmm_slot_032.json,Sちゅらちゅら,,BONUS,,no,yes,no,3,0,verified
+dmm_slot_033,dmm_slot_033.json,L ひぐらしのなく頃に 業,,HYBRID,,no,yes,yes,5,0,verified
+dmm_slot_034,dmm_slot_034.json,スマスロとある魔術の禁書目録,,AT,,no,yes,yes,3,0,verified
+dmm_slot_035,dmm_slot_035.json,デジスロ JAC INバージョン,,BONUS,,no,yes,yes,3,0,verified
+dmm_slot_036,dmm_slot_036.json,L大工の源さん超夢源,,AT,,no,yes,yes,2,0,verified
+dmm_slot_037,dmm_slot_037.json,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,,AT,,no,yes,yes,3,0,verified
+dmm_slot_038,dmm_slot_038.json,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,,ART,,no,yes,yes,4,0,verified
+dmm_slot_039,dmm_slot_039.json,L エヴァンゲリオン ～未来への創造～,,AT,,no,yes,yes,2,0,verified
+dmm_slot_040,dmm_slot_040.json,スーハナライジング-30,,BONUS,,no,yes,yes,4,0,verified
+dragon_hanahana_30,dragon_hanahana_30.json,ドラゴンハナハナ～閃光～ 30,,,,no,no,no,0,0,partial
+eureka_zero,eureka_zero.json,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,,,,no,yes,yes,2,0,partial
+fire_force,fire_force.json,パチスロ 炎炎ノ消防隊,,,,no,yes,yes,2,0,partial
+funky_juggler_2,funky_juggler_2.json,ファンキージャグラー2,Kita Denshi,BONUS,2025-01-01,no,yes,yes,3,0,partial
+ghost_shell,ghost_shell.json,スマスロ攻殻機動隊,,,,no,yes,yes,2,0,partial
+goblin_slayer,goblin_slayer.json,Lゴブリンスレイヤー,,,,no,no,no,0,0,partial
+godzilla,godzilla.json,Lゴジラ,,,,no,yes,yes,1,0,partial
+gogo_juggler_3,gogo_juggler_3.json,ゴーゴージャグラー3,Kita Denshi,BONUS,2025-01-01,no,yes,yes,3,0,partial
+hanma_baki,hanma_baki.json,L範馬刃牙,,,,no,yes,yes,2,0,partial
+happy_juggler_v3,happy_juggler_v3.json,ハッピージャグラーV III,Kita Denshi,BONUS,2025-01-01,no,yes,yes,3,0,partial
+hokuto,hokuto.json,L北斗の拳,サミー,AT,2023-04-03,no,yes,yes,4,2,verified
+hokuto_tensei_2,hokuto_tensei_2.json,スマスロ 北斗の拳 転生の章2,サミー,AT,2026-01-05,no,yes,yes,1,1,verified
+im_juggler_ex,im_juggler_ex.json,アイムジャグラーEX,Kita Denshi,BONUS,2025-01-01,no,yes,yes,3,0,partial
+kabaneri,kabaneri.json,甲鉄城のカバネリ,サミー,AT,2022-07-04,no,yes,yes,0,0,partial
+kabaneri_kaimon,kabaneri_kaimon.json,スマスロ 甲鉄城のカバネリ 海門決戦,,,,no,yes,yes,2,0,partial
+kamen_rider_denoh,kamen_rider_denoh.json,L仮面ライダー電王,,,,no,yes,yes,1,0,partial
+karakuri,karakuri.json,からくりサーカス,,,,no,no,no,0,0,partial
+karakuri_circus,karakuri_circus.json,Lからくりサーカス,SANKYO,AT,2023-07-03,no,yes,yes,0,0,partial
+kengan,kengan.json,Lケンガンアシュラ,,,,no,yes,yes,2,0,partial
+king_hanahana_30,king_hanahana_30.json,キングハナハナ-30,,,,no,no,no,0,0,partial
+l_hokuto,l_hokuto.json,L北斗の拳,サミー,AT,2023-04-03,no,yes,yes,0,0,partial
+list_slot_003,list_slot_003.json,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,Sammy,AT,2024-02-05,no,yes,yes,3,1,verified
+list_slot_004,list_slot_004.json,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,Sammy,AT,2023-06-05,no,yes,yes,3,0,partial
+list_slot_009,list_slot_009.json,L麻雀格闘倶楽部 覚醒,コナミアミューズメント,AT,2023-09-19,no,yes,yes,2,4,verified
+list_slot_010,list_slot_010.json,Lベルセルク無双,EXCITE,AT,2023-06-05,no,yes,yes,1,1,verified
+list_slot_012,list_slot_012.json,L南国育ち,オリンピアエステート,AT,2024-03-04,no,yes,no,2,0,partial
+list_slot_013,list_slot_013.json,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,サミー,AT,2024-06-03,no,yes,yes,4,0,partial
+list_slot_026,list_slot_026.json,EVANGELION FESTIVAL,ビスティ,AT,2020-03-02,no,yes,yes,3,2,verified
+list_slot_027,list_slot_027.json,パチスロ アクエリオン ALL STARS,SANKYO,AT,2022-07-04,no,yes,yes,2,2,verified
+list_slot_028,list_slot_028.json,パチスロ鉄拳5,YAMASA,AT,2022-07-19,no,yes,yes,2,1,verified
+list_slot_029,list_slot_029.json,パチスロ幼女戦記,Sammy,AT,2022-12-05,no,yes,yes,3,1,verified
+list_slot_030,list_slot_030.json,スマスロ シャーマンキング,Eleco,AT,2025-02-03,no,yes,yes,2,2,verified
+list_slot_031,list_slot_031.json,パチスロ 新鬼武者2,Enterrise,AT,2022-08-08,no,yes,yes,2,2,verified
+list_slot_032,list_slot_032.json,FAIRY TAIL2,藤商事,AT,2022-08-01,no,yes,yes,2,1,verified
+list_slot_033,list_slot_033.json,ペルソナ5,サミー,AT,2022-09-05,no,yes,yes,2,2,verified
+list_slot_034,list_slot_034.json,パチスロ盾の勇者の成り上がり,Sammy,AT,2023-02-20,no,yes,yes,1,2,verified
+list_slot_035,list_slot_035.json,S BOØWY,D-light,AT,2022-09-20,no,yes,yes,1,1,verified
+list_slot_036,list_slot_036.json,バイオハザード ヴィレッジ,アデリオン,AT,2024-01-09,no,yes,yes,3,2,verified
+list_slot_037,list_slot_037.json,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,北電子,AT,2024-04-22,no,yes,yes,4,1,verified
+list_slot_038,list_slot_038.json,Re:ゼロから始める異世界生活 season2,パオン・ディーピー,AT,2024-10-21,no,yes,yes,1,3,verified
+list_slot_039,list_slot_039.json,この素晴らしい世界に祝福を！,サミー,AT,2022-04-04,no,yes,yes,1,1,verified
+list_slot_040,list_slot_040.json,Lルパン三世 大航海者の秘宝,平和,AT,2024-12-02,no,yes,yes,3,3,verified
+list_slot_041,list_slot_041.json,黄門ちゃま天,オリンピア,AT,2024-09-02,no,yes,yes,1,3,verified
+list_slot_042,list_slot_042.json,ニューパルサーSP4,SEVEN LEAGUE,BONUS,2024-05-07,no,yes,yes,3,0,partial
+list_slot_043,list_slot_043.json,ニューパルサーDX3,YAMASA NEXT,BONUS,2021-10-04,no,yes,yes,3,0,partial
+list_slot_044,list_slot_044.json,ハナビ,ACROSS,BONUS,2021-07-05,no,yes,yes,4,0,partial
+list_slot_045,list_slot_045.json,バーサスリヴァイズ,ELECO,BONUS,2022-01-11,no,yes,yes,5,0,partial
+list_slot_046,list_slot_046.json,サンダーVライトニング,ACROSS,BONUS,2020-02-03,no,yes,yes,1,0,partial
+list_slot_047,list_slot_047.json,アレックス ブライト,UNIVERSAL BROS.,BONUS,2025-09-01,no,yes,yes,6,0,partial
+list_slot_048,list_slot_048.json,ディスクアップ2,Sammy,BONUS,2022-01-24,no,yes,yes,3,0,partial
+list_slot_049,list_slot_049.json,A-SLOT+ ディスクアップ ULTRAREMIX,Sammy,BONUS,2025-01-20,no,yes,yes,5,0,partial
+list_slot_050,list_slot_050.json,ファミスタ回胴版!!,UNIVERSAL BROS.,BONUS,2023-09-04,no,yes,yes,3,0,partial
+list_slot_051,list_slot_051.json,沖ドキ！GOLD,UNIVERSAL BROS.,AT,2022-12-19,no,yes,yes,3,0,partial
+list_slot_052,list_slot_052.json,沖ドキ！DUO,ACROSS,AT,2021-12-20,no,yes,yes,1,0,partial
+list_slot_053,list_slot_053.json,スマート沖スロ 沖ドキ！DUO-30 アンコール,MACY,AT,2025-12-22,no,yes,yes,1,0,partial
+list_slot_054,list_slot_054.json,チバリヨ2プラス,NET,AT,2025-01-06,no,yes,yes,1,0,partial
+list_slot_055,list_slot_055.json,スマート沖スロ スターハナハナ,PIONEER,BONUS,2025-01-06,no,yes,yes,3,0,partial
+list_slot_056,list_slot_056.json,スマート沖スロ ニューキングハナハナ-30,PIONEER,BONUS,2026-01-05,no,yes,no,3,0,partial
+list_slot_057,list_slot_057.json,ニューキングハナハナ-30,PIONEER,BONUS,2026-01-05,no,yes,yes,3,0,partial
+list_slot_058,list_slot_058.json,ドラゴンハナハナ～閃光～ 30,PIONEER,BONUS,2023-12-18,no,yes,yes,3,0,partial
+list_slot_059,list_slot_059.json,キングハナハナ-30,PIONEER,BONUS,2023-03-20,no,yes,yes,3,0,partial
+list_slot_060,list_slot_060.json,ハナハナホウオウ～天翔～-30,PIONEER,BONUS,2022-01-24,no,yes,yes,3,0,partial
+list_slot_061,list_slot_061.json,麻雀物語,オリンピアエステート,AT,2025-04-21,no,yes,yes,4,0,partial
+list_slot_062,list_slot_062.json,戦姫絶唱シンフォギア 正義の歌,SANKYO,AT,2024-09-02,no,yes,yes,2,0,partial
+list_slot_063,list_slot_063.json,Lパチスロうみねこのなく頃に2,オーイズミ,AT,2026-02-02,no,yes,yes,2,1,verified
+lovejo3,lovejo3.json,ラブ嬢3～Wご指名はいかがですか？～,,,,no,yes,yes,2,0,partial
+lupin,lupin.json,ルパン三世 大航海者,,,,no,no,no,0,0,partial
+madoka_forte,madoka_forte.json,劇場版魔法少女まどか☆マギカ f-フォルテ-,,,,no,yes,yes,1,0,partial
+monkey_turn_v,monkey_turn_v.json,スマスロ モンキーターンV,,,,no,no,no,0,0,partial
+monster_hunter_rise,monster_hunter_rise.json,スマスロ モンスターハンターライズ,エンターライズ,AT,2024-11-18,no,yes,yes,5,2,verified
+my_juggler_v,my_juggler_v.json,マイジャグラーV,Kita Denshi,BONUS,2025-01-01,no,yes,yes,3,0,partial
+nyanko,nyanko.json,Lにゃんこ大戦争 超神速,,,,no,yes,yes,2,0,partial
+oki_doki_duo,oki_doki_duo.json,沖ドキ！DUO,,,,no,no,no,0,0,partial
+oki_doki_gold,oki_doki_gold.json,沖ドキ！GOLD,,,,no,no,no,0,0,partial
+revue_starlight,revue_starlight.json,L少女☆歌劇 レヴュースタァライト -The SLOT-,,,,no,yes,yes,1,0,partial
+ring_v,ring_v.json,Lリングにかけろ1 V,,,,no,yes,yes,2,0,partial
+saki_top,saki_top.json,L咲-Saki- 頂上決戦,,,,no,yes,yes,1,0,partial
+sengoku_otome4,sengoku_otome4.json,L戦国乙女4 戦乱に閃く炯眼の軍師,,,,no,yes,yes,2,0,partial
+shin_eva,shin_eva.json,Lパチスロ シン・エヴァンゲリオン,,,,no,yes,yes,2,0,partial
+strike_witches2,strike_witches2.json,Lストライクウィッチーズ2,,,,no,yes,yes,2,0,partial
+tensei_slime,tensei_slime.json,L転生したらスライムだった件,,,,no,yes,yes,2,0,partial
+toaru,toaru.json,スマスロ とある魔術の禁書目録,,,,no,yes,yes,2,0,partial
+tokyo_ghoul,tokyo_ghoul.json,L東京喰種,,,,no,yes,yes,1,0,partial
+tokyoghoul,tokyoghoul.json,東京喰種,,,,no,no,no,0,0,partial
+ushio_tora,ushio_tora.json,Lうしおととら 白面決戦,,,,no,yes,yes,1,0,partial
+valvrave,valvrave.json,L革命機ヴァルヴレイヴ,SANKYO,AT,2022-11-21,no,yes,yes,0,0,partial
+valvrave_2,valvrave_2.json,Lパチスロ 革命機ヴァルヴレイヴ2,SANKYO,AT,2025-11-04,no,yes,yes,0,4,partial
+vvv,vvv.json,革命機ヴァルヴレイヴ,,,,no,no,no,0,0,partial
+zenigata4,zenigata4.json,L主役は銭形4,,,,no,yes,yes,2,0,partial

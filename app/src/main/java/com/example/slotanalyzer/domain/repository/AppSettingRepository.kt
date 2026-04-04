@@ -9,5 +9,5 @@ interface AppSettingRepository {
     suspend fun setShowCeiling(show: Boolean)
     suspend fun setShowExternalLinks(show: Boolean)
     suspend fun setMachineSortOrder(sortOrder: String)
-    suspend fun setMachineFilter(filter: String)
+    suspend fun setSelectedMachineFilters(filters: Set<String>)
 }

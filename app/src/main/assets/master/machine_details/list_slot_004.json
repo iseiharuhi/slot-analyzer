@@ -1,24 +1,216 @@
 {
-  "machineId": "list_slot_004",
-  "machineName": "パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.",
-  "status": "partial",
-  "capturedDate": "2026-04-01",
-  "sourceListPage": null,
+  "id": "list_slot_004",
+  "name": "パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.",
+  "manufacturer": "Sammy",
+  "type": "AT",
+  "releaseDate": "2023-06-05",
+  "isActive": true,
+  "notes": "AT精度一括調整済み。主判別は直撃、AT初当り、補助は初当り/ボーナス。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4342",
+  "ichigekiUrl": "https://1geki.jp/slot/s_codegeass3cc/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4342",
-      "status": "verified_direct"
-    },
-    {
-      "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot",
-      "status": "verified_list_page"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4342"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/s_codegeass3cc/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/s_codegeass3cc/"
     }
-  ]
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "HBB/BB/RBの合算回数。最も素直な主判別項目。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "RB後AT中 無限移行C.C.揃い",
+      "category": "SPECIAL",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REG後50GのAT中に出現した無限移行契機のC.C.揃い回数。重いが高設定ほど強い。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "共通ベル+赤同色BB",
+      "category": "SPECIAL",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時の共通ベル契機による赤同色BB当選回数。極めて重いが設定差が大きい。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 198,
+          "weight": 1,
+          "minSampleSize": 8,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 193.9,
+          "weight": 1,
+          "minSampleSize": 8,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 184.6,
+          "weight": 1,
+          "minSampleSize": 8,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 169.8,
+          "weight": 1,
+          "minSampleSize": 8,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 157.9,
+          "weight": 1,
+          "minSampleSize": 8,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 148.9,
+          "weight": 1,
+          "minSampleSize": 8,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 993,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 993,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 963.8,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 595.8,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 425.6,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 331,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 16384,
+          "weight": 0.95,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 16384,
+          "weight": 0.95,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 10922.7,
+          "weight": 0.95,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 8192,
+          "weight": 0.95,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 5461.3,
+          "weight": 0.95,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 4096,
+          "weight": 0.95,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

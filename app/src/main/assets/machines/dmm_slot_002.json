@@ -8,7 +8,8 @@
     "isActive": true,
     "notes": "均一化フェーズ対応。主判別はAT初当り、補助はCZとボーナス、重い分母は直撃ATに整理。RE:3は出玉波で短期ブレが出やすいため、AT初当りを主軸に固定する。",
     "dmmUrl": "https://p-town.dmm.com/machines/4974",
-    "ichigekiUrl": "https://1geki.jp/slot/s_bh7/"
+    "ichigekiUrl": "https://1geki.jp/slot/s_bh7/",
+    "status": "verified"
   },
   "counterDefinitions": [
     {
@@ -27,7 +28,7 @@
       "key": "at_count",
       "displayName": "AT初当たり",
       "category": "AT_CZ",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -39,7 +40,7 @@
       "key": "cz_count",
       "displayName": "CZ",
       "category": "AT_CZ",
-      "sortOrder": 20,
+      "sortOrder": 3,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -51,7 +52,7 @@
       "key": "bonus_count",
       "displayName": "ボーナス",
       "category": "BONUS",
-      "sortOrder": 21,
+      "sortOrder": 4,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,
@@ -63,7 +64,7 @@
       "key": "direct_hit_count",
       "displayName": "直撃/特殊契機",
       "category": "SPECIAL",
-      "sortOrder": 30,
+      "sortOrder": 5,
       "unit": "回",
       "inputType": "COUNTER",
       "isEnabled": true,

@@ -1,0 +1,110 @@
+{
+  "id": "azure_lane",
+  "name": "Lアズールレーン THE ANIMATION",
+  "manufacturer": null,
+  "type": null,
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "precision batch remaining / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com",
+  "ichigekiUrl": "https://1geki.jp",
+  "externalLinks": [
+    {
+      "label": "DMM",
+      "url": "https://p-town.dmm.com"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": null
+    },
+    {
+      "key": "cz",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "at",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 200.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 180.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 160.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 140.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 120.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 100.0,
+          "weight": 1.0,
+          "minSampleSize": 2200,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

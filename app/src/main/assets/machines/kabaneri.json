@@ -1,23 +1,136 @@
 {
-  "id": "kabaneri",
-  "name": "kabaneri",
-  "indicators": [
+  "machine": {
+    "id": "kabaneri",
+    "name": "パチスロ 甲鉄城のカバネリ",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2022-07-04",
+    "isActive": true,
+    "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当りとボーナス初当り。直撃ATや高確示唆は重い分母・UI外要素のため補助メモ運用とし、現行推測は見える数値に寄せて安定度を優先。ATは2000G超、CZとボーナスは2500〜3000G級で比較推奨。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4160",
+    "ichigekiUrl": "https://1geki.jp/slot/s_kabaneri/",
+    "status": "partial"
+  },
+  "counterDefinitions": [
     {
-      "type": "initial_hit",
-      "weight": 0.4
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
     },
     {
-      "type": "st",
-      "weight": 0.3
+      "key": "initial_hit_count",
+      "displayName": "初当り",
+      "category": "CUSTOM",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     },
     {
-      "type": "cz",
-      "weight": 0.2
+      "key": "st_count",
+      "displayName": "st",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     },
     {
-      "type": "small_role",
-      "weight": 0.1
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "small_role_count",
+      "displayName": "小役",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     }
   ],
-  "minSampleSize": 2000
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1000G+αでエピソードボーナス。駿城ボーナスではゲーム数を引き継ぐ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "inputMode": null,
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": null,
+      "resetText": null
+    },
+    {
+      "ruleKey": "shortened_game_ceiling",
+      "displayName": "短縮ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 650,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時・美馬ST後・ST駆け抜け後は650G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "inputMode": null,
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": null,
+      "resetText": null
+    },
+    {
+      "ruleKey": "suruga_bonus_through",
+      "displayName": "駿城ボーナス天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "駿城ボーナス4連続スルーで条件到達。次回(5回目)ボーナスでエピソードボーナス。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "inputMode": null,
+      "stepValue": 1,
+      "showInput": true,
+      "benefitText": null,
+      "resetText": null
+    }
+  ]
 }

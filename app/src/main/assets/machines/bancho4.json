@@ -1,23 +1,78 @@
 {
-  "id": "bancho4",
-  "name": "bancho4",
-  "indicators": [
+  "machine": {
+    "id": "bancho4",
+    "name": "押忍！番長4",
+    "manufacturer": null,
+    "type": null,
+    "releaseDate": null,
+    "isActive": true,
+    "notes": null,
+    "dmmUrl": null,
+    "ichigekiUrl": null,
+    "status": "partial"
+  },
+  "counterDefinitions": [
     {
-      "type": "direct_hit",
-      "weight": 0.4
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
     },
     {
-      "type": "mode",
-      "weight": 0.3
+      "key": "direct_hit_count",
+      "displayName": "直撃",
+      "category": "CUSTOM",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     },
     {
-      "type": "initial_hit",
-      "weight": 0.2
+      "key": "mode_count",
+      "displayName": "モード",
+      "category": "CUSTOM",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     },
     {
-      "type": "small_role",
-      "weight": 0.1
+      "key": "initial_hit_count",
+      "displayName": "初当り",
+      "category": "CUSTOM",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "small_role_count",
+      "displayName": "小役",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
     }
   ],
-  "minSampleSize": 3000
+  "settingReferenceValues": [],
+  "ceilingRules": []
 }

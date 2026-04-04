@@ -1,0 +1,65 @@
+{
+  "id": "oki_doki_duo",
+  "name": "oki_doki_duo",
+  "manufacturer": null,
+  "type": null,
+  "releaseDate": null,
+  "isActive": true,
+  "notes": null,
+  "status": "partial",
+  "dmmUrl": null,
+  "ichigekiUrl": null,
+  "externalLinks": [],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "initial_hit_count",
+      "displayName": "初当り",
+      "category": "CUSTOM",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "mode_count",
+      "displayName": "モード",
+      "category": "CUSTOM",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "bonus_chain_count",
+      "displayName": "bonus_chain",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": []
+}

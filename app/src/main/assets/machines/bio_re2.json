@@ -1,67 +1,267 @@
 {
-  "name": "スマスロ バイオハザード RE:2",
-  "id": "bio_re2",
-  "settingReferenceValues": [
+  "machine": {
+    "id": "bio_re2",
+    "name": "スマスロ バイオハザード RE:2",
+    "manufacturer": null,
+    "type": null,
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
+    "dmmUrl": null,
+    "ichigekiUrl": null,
+    "status": "partial"
+  },
+  "counterDefinitions": [
     {
-      "minSampleSize": 2500,
-      "label": "AT初当り",
-      "values": [
-        500,
-        480,
-        460,
-        440,
-        420,
-        400
-      ],
-      "weight": 1,
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
       "key": "at_hit",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
       "notes": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
     },
     {
-      "minSampleSize": 3000,
-      "label": "CZ確率",
-      "values": [
-        200,
-        190,
-        180,
-        170,
-        160,
-        150
-      ],
-      "weight": 0.7,
       "key": "cz",
+      "displayName": "CZ確率",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
       "notes": "補助判別①。序盤はブレやすいため過信注意。"
     },
     {
-      "minSampleSize": 4000,
-      "label": "弱チェリー",
-      "values": [
-        88,
-        85,
-        82,
-        79,
-        76,
-        73
-      ],
-      "weight": 0.6,
       "key": "weak_cherry",
+      "displayName": "弱チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
       "notes": "補助判別②。他要素と組み合わせて判断すること。"
     },
     {
-      "minSampleSize": 12000,
-      "label": "AT直撃",
-      "values": [
-        65536,
-        32768,
-        16384,
-        8192,
-        4096,
-        2048
-      ],
-      "weight": 0.25,
       "key": "direct_at",
+      "displayName": "AT直撃",
+      "category": "AT_CZ",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
       "notes": "重い分母。サンプル不足時は判別に使用しないこと。"
     }
   ],
-  "notes": "AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。"
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_hit",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 500.0,
+          "weight": 1.0,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 480.0,
+          "weight": 1.0,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 460.0,
+          "weight": 1.0,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 440.0,
+          "weight": 1.0,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 420.0,
+          "weight": 1.0,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 400.0,
+          "weight": 1.0,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。単体ではなく他要素と併用推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 200.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいため過信注意。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 190.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいため過信注意。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 180.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいため過信注意。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 170.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいため過信注意。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 160.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいため過信注意。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 150.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤はブレやすいため過信注意。"
+        }
+      ]
+    },
+    {
+      "counterKey": "weak_cherry",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 88.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。他要素と組み合わせて判断すること。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 85.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。他要素と組み合わせて判断すること。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 82.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。他要素と組み合わせて判断すること。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 79.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。他要素と組み合わせて判断すること。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 76.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。他要素と組み合わせて判断すること。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 73.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。他要素と組み合わせて判断すること。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_at",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 65536.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 32768.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 16384.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 8192.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 4096.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。サンプル不足時は判別に使用しないこと。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 2048.0,
+          "weight": 0.25,
+          "minSampleSize": 12000,
+          "note": "重い分母。サンプル不足時は判別に使用しないこと。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

@@ -1,24 +1,216 @@
 {
-  "machineId": "dmm_slot_037",
-  "machineName": "スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-",
+  "id": "dmm_slot_037",
+  "name": "スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-",
+  "manufacturer": null,
+  "type": "AT",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "AT精度一括調整済み。主判別は初当り/ボーナス、小役/ベル。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
   "status": "partial",
-  "capturedDate": "2026-03-31",
-  "sourceListPage": 2,
+  "dmmUrl": "https://p-town.dmm.com/machines/4420",
+  "ichigekiUrl": "https://1geki.jp/slot/l_madomagimov_forte/",
   "externalLinks": [
     {
-      "label": "DMMぱちタウン",
-      "url": "https://p-town.dmm.com/machines/4420",
-      "status": "verified_direct"
-    },
-    {
-      "label": "DMMぱちタウン(掲載一覧)",
-      "url": "https://p-town.dmm.com/machines/slot",
-      "status": "verified_list_page"
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4420"
     },
     {
       "label": "一撃",
-      "url": "https://1geki.jp/slot/l_madomagimov_forte/",
-      "status": "verified_direct"
+      "url": "https://1geki.jp/slot/l_madomagimov_forte/"
     }
-  ]
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 2,
+      "notes": null
+    },
+    {
+      "key": "weak_cherry_count",
+      "displayName": "弱チェリー",
+      "category": "SMALL_ROLE",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 3,
+      "notes": null
+    },
+    {
+      "key": "soul_gem_count",
+      "displayName": "ソウルジェム発動",
+      "category": "SPECIAL",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 4,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 251.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 243.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 223.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 210.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 197.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 187.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        }
+      ]
+    },
+    {
+      "counterKey": "weak_cherry_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 79.9,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 79.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 77.1,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 75.3,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 73.6,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 72.0,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        }
+      ]
+    },
+    {
+      "counterKey": "soul_gem_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 3.01,
+          "weight": 0.58,
+          "minSampleSize": 12000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 2.94,
+          "weight": 0.58,
+          "minSampleSize": 12000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 2.81,
+          "weight": 0.58,
+          "minSampleSize": 12000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 2.69,
+          "weight": 0.58,
+          "minSampleSize": 12000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 2.6,
+          "weight": 0.58,
+          "minSampleSize": 12000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 2.51,
+          "weight": 0.58,
+          "minSampleSize": 12000,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
 }

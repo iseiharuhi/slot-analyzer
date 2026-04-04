@@ -1,0 +1,90 @@
+{
+  "id": "akame_ga_kill_2",
+  "name": "Lアカメが斬る！ 2",
+  "manufacturer": "SNT（新日テクノロジー）",
+  "type": "BONUS_PLUS_AT",
+  "releaseDate": "2024-07-08",
+  "isActive": true,
+  "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4597",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4597",
+      "status": "present",
+      "site": "dmm"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "リアルボーナス初当りのメモ用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当りのメモ用。"
+    },
+    {
+      "key": "zan_point_trigger_count",
+      "displayName": "斬ポイント契機AT",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "斬ポイント由来のATや強め挙動メモ用。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "G数天井",
+      "ceilingType": "GAME",
+      "limitValue": 970,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時970G到達で斬ポイント5個スタートのAT。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT（斬ポイント5個スタート）",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

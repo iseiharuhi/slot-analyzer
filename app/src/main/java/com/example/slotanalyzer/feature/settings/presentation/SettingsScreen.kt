@@ -12,6 +12,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Card
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -29,7 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.slotanalyzer.domain.model.MachineFilter
+import com.example.slotanalyzer.domain.model.MachineFilterKeys
 import com.example.slotanalyzer.domain.model.MachineSortOrder
 import com.example.slotanalyzer.domain.model.ThemeMode
 
@@ -71,7 +72,6 @@ fun SettingsScreen(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
-
                 SettingsRadioRow(
                     label = "端末設定に従う",
                     selected = state.themeMode == ThemeMode.SYSTEM,
@@ -107,7 +107,6 @@ fun SettingsScreen(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
-
                 SettingsRadioRow(
                     label = "リリース日順",
                     selected = state.machineSortOrder == MachineSortOrder.RELEASE_DATE,
@@ -125,26 +124,25 @@ fun SettingsScreen(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(top = 12.dp, bottom = 8.dp)
                 )
-
-                SettingsRadioRow(
-                    label = "すべて",
-                    selected = state.machineFilter == MachineFilter.ALL,
-                    onClick = { viewModel.setMachineFilter(MachineFilter.ALL) }
+                SettingsSwitchRow(
+                    label = "すべて表示",
+                    checked = state.isAllTypesSelected,
+                    onCheckedChange = viewModel::setShowAllTypes
                 )
-                SettingsRadioRow(
+                SettingsCheckboxRow(
                     label = "AT / スマスロ",
-                    selected = state.machineFilter == MachineFilter.AT_SMART,
-                    onClick = { viewModel.setMachineFilter(MachineFilter.AT_SMART) }
+                    checked = state.selectedMachineFilters.contains(MachineFilterKeys.AT_SMART),
+                    onCheckedChange = { viewModel.toggleMachineFilter(MachineFilterKeys.AT_SMART) }
                 )
-                SettingsRadioRow(
+                SettingsCheckboxRow(
                     label = "ノーマル",
-                    selected = state.machineFilter == MachineFilter.NORMAL,
-                    onClick = { viewModel.setMachineFilter(MachineFilter.NORMAL) }
+                    checked = state.selectedMachineFilters.contains(MachineFilterKeys.NORMAL),
+                    onCheckedChange = { viewModel.toggleMachineFilter(MachineFilterKeys.NORMAL) }
                 )
-                SettingsRadioRow(
+                SettingsCheckboxRow(
                     label = "沖スロ / ハナハナ",
-                    selected = state.machineFilter == MachineFilter.OKINAWA,
-                    onClick = { viewModel.setMachineFilter(MachineFilter.OKINAWA) }
+                    checked = state.selectedMachineFilters.contains(MachineFilterKeys.OKINAWA),
+                    onCheckedChange = { viewModel.toggleMachineFilter(MachineFilterKeys.OKINAWA) }
                 )
             }
         }
@@ -156,9 +154,7 @@ private fun SettingsSectionCard(
     title: String,
     content: @Composable () -> Unit
 ) {
-    Card(
-        modifier = Modifier.fillMaxWidth()
-    ) {
+    Card(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(4.dp)
@@ -192,10 +188,7 @@ private fun SettingsRadioRow(
             selected = selected,
             onClick = onClick
         )
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyLarge
-        )
+        Text(text = label, style = MaterialTheme.typography.bodyLarge)
     }
 }
 
@@ -212,13 +205,32 @@ private fun SettingsSwitchRow(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyLarge
-        )
+        Text(text = label, style = MaterialTheme.typography.bodyLarge)
         Switch(
             checked = checked,
             onCheckedChange = onCheckedChange
         )
+    }
+}
+
+@Composable
+private fun SettingsCheckboxRow(
+    label: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onCheckedChange(!checked) }
+            .padding(vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Checkbox(
+            checked = checked,
+            onCheckedChange = onCheckedChange
+        )
+        Text(text = label, style = MaterialTheme.typography.bodyLarge)
     }
 }

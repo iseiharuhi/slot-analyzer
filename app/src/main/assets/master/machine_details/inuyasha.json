@@ -1,0 +1,125 @@
+{
+  "id": "inuyasha",
+  "name": "パチスロ犬夜叉",
+  "manufacturer": "クロスアルファ",
+  "type": "AT",
+  "releaseDate": "2022-07-04",
+  "isActive": true,
+  "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4173",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4173",
+      "status": "present",
+      "site": "dmm"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "四魂ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス初当りのメモ用。"
+    },
+    {
+      "key": "bonus_through_count",
+      "displayName": "ボーナスATスルー",
+      "category": "SPECIAL",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス経由AT非当選回数のメモ。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当りのメモ用。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_at_interval_ceiling",
+      "displayName": "ボーナス&AT間天井",
+      "ceilingType": "GAME",
+      "limitValue": 666,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス&AT間666G到達で四魂ボーナス。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "四魂ボーナス",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "bonus_through_ceiling",
+      "displayName": "ボーナススルー天井",
+      "ceilingType": "COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナスでATを7連続スルーすると8回目のボーナスでAT。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "stepValue": 1,
+      "benefitText": "8回目のボーナスでAT",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "advantage_game_ceiling",
+      "displayName": "有利区間天井",
+      "ceilingType": "GAME",
+      "limitValue": 3000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間3000G到達でAT。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}
