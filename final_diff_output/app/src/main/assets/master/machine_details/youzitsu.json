@@ -1,0 +1,125 @@
+{
+  "id": "youzitsu",
+  "name": "スマスロ ようこそ実力至上主義の教室へ",
+  "manufacturer": "DAXEL",
+  "type": "AT",
+  "releaseDate": "2025-05-07",
+  "isActive": true,
+  "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4770",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4770",
+      "status": "present",
+      "site": "dmm"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ初当りのメモ用。"
+    },
+    {
+      "key": "cz_through_count",
+      "displayName": "CZスルー",
+      "category": "SPECIAL",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ失敗回数メモ。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当りのメモ用。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_game_ceiling",
+      "displayName": "CZ天井",
+      "ceilingType": "GAME",
+      "limitValue": 500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "500G到達でCZ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "at_game_ceiling",
+      "displayName": "AT天井",
+      "ceilingType": "GAME",
+      "limitValue": 980,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "980G到達でAT以上。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT以上",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ7スルーで8回目のCZがAT契機。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "stepValue": 1,
+      "benefitText": "8回目のCZでAT",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+file,name,status,ceilingRules,dmmUrl,manufacturer,releaseDate
+fire_force.json,パチスロ 炎炎ノ消防隊,verified,1,https://p-town.dmm.com/machines/4326,SANKYO,2023-05-08
+code_geass_fukkatsu.json,コードギアス 復活のルルーシュ,verified,1,https://p-town.dmm.com/machines/4477,サミー,2024-02-05
+code_geass_cc_kallen.json,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,partial,0,https://p-town.dmm.com/machines/4342,サミー,2023-06-05
+toaru.json,スマスロ とある魔術の禁書目録,verified,1,https://p-town.dmm.com/machines/4445,藤商事,2023-11-06
+kengan.json,Lケンガンアシュラ,verified,2,https://p-town.dmm.com/machines/4434,NET,2023-11-20
+godzilla.json,Lゴジラ,verified,2,https://p-town.dmm.com/machines/4752,ニューギン,2025-04-07
+nyanko.json,Lにゃんこ大戦争 超神速,verified,1,https://p-town.dmm.com/machines/4724,京楽,2025-01-20
+shin_eva.json,Lパチスロ シン・エヴァンゲリオン,verified,2,https://p-town.dmm.com/machines/4730,ビスティ,2025-01-20
+ghost_shell.json,スマスロ 攻殻機動隊 STAND ALONE COMPLEX,verified,2,https://p-town.dmm.com/machines/4931,Sammy,2026-02-02
+kabaneri_kaimon.json,スマスロ 甲鉄城のカバネリ うなと決戦,verified,2,https://p-town.dmm.com/machines/4930,Sammy,2026-03-02

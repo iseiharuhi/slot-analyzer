@@ -1,0 +1,101 @@
+{
+  "machine": {
+    "id": "saint_seiya_kaiou_custom_edition",
+    "name": "L聖闘士星矢 海皇覚醒 CUSTOM EDITION",
+    "manufacturer": "サンスリー",
+    "type": "AT",
+    "releaseDate": "2024-06-03",
+    "isActive": true,
+    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4572",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "gb_count",
+      "displayName": "GB",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ジェネラルバトル回数。"
+    },
+    {
+      "key": "gb_through_count",
+      "displayName": "GBスルー",
+      "category": "SPECIAL",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "GB失敗回数メモ。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "聖闘士RUSH",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当りのメモ用。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "gb_game_ceiling",
+      "displayName": "G数天井",
+      "ceilingType": "GAME",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "999G到達でGB。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "GB",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "gb_through_ceiling",
+      "displayName": "GBスルー天井",
+      "ceilingType": "COUNT",
+      "limitValue": 8,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "GB8スルーで9回目のGBが聖闘士RUSH契機。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "stepValue": 1,
+      "benefitText": "9回目で聖闘士RUSH",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

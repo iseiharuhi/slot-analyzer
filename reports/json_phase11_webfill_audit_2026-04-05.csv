@@ -1,0 +1,137 @@
+file,name,status,manufacturer,type,releaseDate,dmmUrl,ichigekiUrl,referenceGroups,ceilingRules
+arifureta.json,Lありふれた職業で世界最強,verified,SANKYO,AT,2025-02-03,https://p-town.dmm.com/machines/4715,https://1geki.jp,1,2
+azure_lane.json,Lアズールレーン THE ANIMATION,verified,京楽,AT,2025-08-04,https://p-town.dmm.com/machines/4847,https://1geki.jp,1,3
+bancho4.json,押忍！番長4,verified,大都技研,AT,2024-04-22,https://p-town.dmm.com/machines/4553,,1,3
+bio_re2.json,スマスロ バイオハザード RE:2,verified,アデリオン,AT,2022-10-03,https://p-town.dmm.com/machines/4217,,4,2
+chibariyo2_plus.json,chibariyo2_plus,partial,,,,,,0,0
+code_geass_cc_kallen.json,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,partial,サミー,AT,2023-06-05,https://p-town.dmm.com/machines/4342,https://1geki.jp,2,0
+code_geass_fukkatsu.json,コードギアス 復活のルルーシュ,partial,サミー,AT,2024-02-05,https://p-town.dmm.com/machines/4477,https://1geki.jp,2,0
+darling_franxx.json,Lダーリン・イン・ザ・フランキス,verified,スパイキー,AT,2025-08-04,https://p-town.dmm.com/machines/4855,https://1geki.jp,1,2
+dmm_slot_001.json,スマスロ BIRDIE WING -Golf Girls' Story-,partial,UNIVERSAL BROS.,AT,2026-06-08,https://p-town.dmm.com/machines/4996,https://1geki.jp/slot/l_birdie/,2,0
+dmm_slot_002.json,スマスロ バイオハザードRE:3,partial,Enterrise,AT,2026-05-11,https://p-town.dmm.com/machines/4974,https://1geki.jp/slot/s_bh7/,1,0
+dmm_slot_003.json,Ｌタクトオーパス デスティニー,partial,HEIWA,AT,2026-05-11,https://p-town.dmm.com/machines/5000,https://1geki.jp/slot/syllabary/4/,1,0
+dmm_slot_004.json,スマスロ ビッグドリーム THE GOLDEN PUSHER,partial,Sammy,AT,2026-05-11,https://p-town.dmm.com/machines/4981,https://1geki.jp/slot/syllabary/6/,2,0
+dmm_slot_005.json,スマスロスーパーリオエース2,partial,YAMASA NEXT,HYBRID,2026-05-11,https://p-town.dmm.com/machines/4984,https://1geki.jp/slot/s_sp_rioace/,1,0
+dmm_slot_006.json,LB スロット GALFY,partial,オーイズミ,BONUS,2026-06-08,https://p-town.dmm.com/machines/4992,,3,0
+dmm_slot_007.json,スマスロ ミリオンゴッド-神々の軌跡-,partial,ミズホ,AT,2026-04-20,https://p-town.dmm.com/machines/4961,,1,0
+dmm_slot_008.json,アニマルスロット ドッチ,partial,北電子,BONUS,2026-04-20,https://p-town.dmm.com/machines/4964,,3,0
+dmm_slot_009.json,真打 吉宗,partial,大都技研,AT,2026-04-06,https://p-town.dmm.com/machines/4983,,2,0
+dmm_slot_010.json,LBトリプルクラウンセブン,partial,岡崎産業,BONUS,2026-04-06,https://p-town.dmm.com/machines/4986,,3,0
+dmm_slot_011.json,スマスロヨルムンガンド,partial,YAMASA NEXT,AT,2026-04-06,https://p-town.dmm.com/machines/4970,,2,0
+dmm_slot_012.json,L虚構推理,partial,D-light,AT,2026-04-06,https://p-town.dmm.com/machines/4973,,2,0
+dmm_slot_013.json,A-SLOT+ 異世界かるてっと BT,partial,GINZA,BONUS,2026-04-06,https://p-town.dmm.com/machines/4965,,1,0
+dmm_slot_014.json,Lアクダマドライブ,partial,SanThree,AT,2026-04-06,https://p-town.dmm.com/machines/4956,,3,0
+dmm_slot_015.json,スマスロ サンダーV,partial,ELECO,BONUS,2026-03-02,https://p-town.dmm.com/machines/4943,https://1geki.jp/slot/l_thunder_v/,5,0
+dmm_slot_016.json,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,partial,,AT,,https://p-town.dmm.com/machines/4930,https://1geki.jp/slot/l_kabaneri2/,2,0
+dmm_slot_017.json,スマスロ ハナビ,partial,アクロス,BONUS,2026-02-02,https://p-town.dmm.com/machines/4928,https://1geki.jp/slot/l_hanabi/,4,0
+dmm_slot_018.json,スマスロ 攻殻機動隊,partial,,AT,,https://p-town.dmm.com/machines/4931,https://1geki.jp/slot/l_kokaku/,2,0
+dmm_slot_020.json,Lパチスロ 炎炎ノ消防隊2,partial,,AT,,https://p-town.dmm.com/machines/4926,https://1geki.jp/slot/l_ennenn2/,2,0
+dmm_slot_021.json,ミクちゃんとイドムンのミラクルチャレンジ2,partial,,BONUS,,https://p-town.dmm.com/machines/4471,https://1geki.jp/slot/s_mikuido2chal/,4,0
+dmm_slot_022.json,ニューシオサイ,partial,,BONUS,,https://p-town.dmm.com/machines/4476,https://1geki.jp/slot/s_newsiosai_sa/,3,0
+dmm_slot_023.json,パチスロ琉神−30 スイカバージョン,partial,,BONUS,,https://p-town.dmm.com/machines/4468,https://1geki.jp/slot/s_ryujin30/,3,0
+dmm_slot_024.json,L リングにかけろ1 V,partial,,AT,,https://p-town.dmm.com/machines/4460,https://1geki.jp/slot/l_rinkake1v/,3,3
+dmm_slot_025.json,Lラブ嬢3〜Wご指名はいかがですか？〜,partial,,AT,,https://p-town.dmm.com/machines/4458,https://1geki.jp/slot/l_lovejou3/,2,0
+dmm_slot_026.json,L花の慶次～佐渡攻めの章〜,verified,EXCITE,AT,2023-12-04,https://p-town.dmm.com/machines/4456,https://1geki.jp/slot/l_keiji_sado/,2,1
+dmm_slot_027.json,スマスロモンキーターンV,verified,山佐,AT,2023-12-04,https://p-town.dmm.com/machines/4450,https://1geki.jp/slot/l_monkeyturn5/,1,2
+dmm_slot_028.json,クランキークレスト,partial,,BONUS,,https://p-town.dmm.com/machines/4449,https://1geki.jp/slot/s_crankycrest/,4,0
+dmm_slot_029.json,マジカルハロウィン８,partial,,HYBRID,,https://p-town.dmm.com/machines/4423,https://1geki.jp/slot/l_magicalhalloween8/,4,0
+dmm_slot_030.json,推しスロ アイドルVer.,partial,タツミコーポレーション,BONUS,2023-12-01,https://p-town.dmm.com/machines/4455,https://1geki.jp/slot/s_oshisloaid/,0,1
+dmm_slot_031.json,パチスロ ケンガンアシュラ,partial,,AT,,https://p-town.dmm.com/machines/4434,https://1geki.jp/slot/l_kengan_ashura/,2,0
+dmm_slot_032.json,Sちゅらちゅら,partial,,BONUS,,https://p-town.dmm.com/machines/4486,,3,0
+dmm_slot_033.json,L ひぐらしのなく頃に 業,partial,,HYBRID,,https://p-town.dmm.com/machines/4447,https://1geki.jp/slot/l_higurashi_gou/,5,0
+dmm_slot_034.json,スマスロとある魔術の禁書目録,partial,,AT,,https://p-town.dmm.com/machines/4445,https://1geki.jp/slot/l_toaru_index/,3,0
+dmm_slot_035.json,デジスロ JAC INバージョン,partial,,BONUS,,https://p-town.dmm.com/machines/4433,https://1geki.jp/slot/s_digislo_jacin/,3,0
+dmm_slot_036.json,L大工の源さん超夢源,partial,,AT,,https://p-town.dmm.com/machines/4428,https://1geki.jp/slot/l_d_gensantyomugen/,2,0
+dmm_slot_037.json,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,partial,,AT,,https://p-town.dmm.com/machines/4420,https://1geki.jp/slot/l_madomagimov_forte/,3,0
+dmm_slot_038.json,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,partial,,ART,,https://p-town.dmm.com/machines/4419,https://1geki.jp/slot/s_eurekahievo_art/,4,0
+dmm_slot_039.json,L エヴァンゲリオン ～未来への創造～,partial,,AT,,https://p-town.dmm.com/machines/4414,https://1geki.jp/slot/l_evasloasu/,2,0
+dmm_slot_040.json,スーハナライジング-30,partial,,BONUS,,https://p-town.dmm.com/machines/4409,https://1geki.jp/slot/s_suhana_rising30/,4,0
+dragon_hanahana_30.json,dragon_hanahana_30,partial,,,,,,0,0
+eureka_zero.json,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,partial,,ART,,https://p-town.dmm.com,https://1geki.jp,2,0
+fire_force.json,パチスロ 炎炎ノ消防隊,partial,SANKYO,AT,2023-05-08,https://p-town.dmm.com/machines/4326,https://1geki.jp,2,0
+funky_juggler_2.json,ファンキージャグラー2,partial,Kita Denshi,BONUS,2025-01-01,https://p-town.dmm.com/machines/4388,https://1geki.jp/slot/s_funkyjuggler2/,3,0
+ghost_shell.json,スマスロ攻殻機動隊,partial,,AT,,https://p-town.dmm.com,https://1geki.jp,2,0
+goblin_slayer.json,Lゴブリンスレイヤー,partial,,,,,,0,0
+godzilla.json,Lゴジラ,partial,,,,https://p-town.dmm.com,https://1geki.jp,1,0
+gogo_juggler_3.json,ゴーゴージャグラー3,partial,Kita Denshi,BONUS,2025-01-01,https://p-town.dmm.com/machines/4782,https://1geki.jp/slot/s_gogojuggler3/,3,0
+hanma_baki.json,L範馬刃牙,verified,オリンピア,AT,2026-02-02,https://p-town.dmm.com/machines/4941,https://1geki.jp,2,1
+happy_juggler_v3.json,ハッピージャグラーV III,partial,Kita Denshi,BONUS,2025-01-01,https://p-town.dmm.com/machines/4656,https://1geki.jp/slot/s_happyjuggler8/,3,0
+hokuto.json,L北斗の拳,verified,サミー,AT,2023-04-03,https://p-town.dmm.com/machines/4301,https://1geki.jp/slot/l_hokutonoken/,4,2
+hokuto_tensei_2.json,スマスロ 北斗の拳 転生の章2,verified,サミー,AT,2026-01-05,https://p-town.dmm.com/machines/4909,https://1geki.jp/slot/l_hokuto_tensei2/,1,1
+im_juggler_ex.json,アイムジャグラーEX,partial,Kita Denshi,BONUS,2025-01-01,https://p-town.dmm.com/machines/4316,https://1geki.jp/slot/s_ij_ex_6/,3,0
+kabaneri.json,パチスロ 甲鉄城のカバネリ,partial,サミー,AT,2022-07-04,https://p-town.dmm.com/machines/4160,https://1geki.jp/slot/s_kabaneri/,0,3
+kabaneri_kaimon.json,スマスロ 甲鉄城のカバネリ 海門決戦,partial,,AT,,https://p-town.dmm.com,https://1geki.jp,2,0
+kamen_rider_denoh.json,L仮面ライダー電王,verified,京楽,AT,2025-03-03,https://p-town.dmm.com/machines/4756,https://1geki.jp,1,1
+karakuri.json,からくりサーカス,partial,,,,,,0,0
+karakuri_circus.json,Lからくりサーカス,partial,SANKYO,AT,2023-07-03,https://p-town.dmm.com/machines/4360,https://1geki.jp/slot/l_karakuricircus/,0,3
+kengan.json,Lケンガンアシュラ,partial,,AT,,https://p-town.dmm.com,https://1geki.jp,2,0
+king_hanahana_30.json,king_hanahana_30,partial,,,,,,0,0
+l_hokuto.json,l_hokuto,verified,サミー,AT,2023-04-03,https://p-town.dmm.com/machines/4301,https://1geki.jp/slot/l_hokutonoken/,4,2
+list_slot_003.json,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,verified,Sammy,AT,2024-02-05,https://p-town.dmm.com/machines/4477,https://1geki.jp/slot/l_codegeass/,3,1
+list_slot_004.json,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,partial,Sammy,AT,2023-06-05,https://p-town.dmm.com/machines/4342,https://1geki.jp/slot/s_codegeass3cc/,3,0
+list_slot_009.json,L麻雀格闘倶楽部 覚醒,verified,コナミアミューズメント,AT,2023-09-19,https://p-town.dmm.com/machines/4401,https://1geki.jp/slot/s_mfckakusei/,2,4
+list_slot_010.json,Lベルセルク無双,verified,EXCITE,AT,2023-06-05,https://p-town.dmm.com/machines/4367,https://1geki.jp/slot/l_berserkmuso/,1,1
+list_slot_012.json,L南国育ち,partial,オリンピアエステート,AT,2024-03-04,https://p-town.dmm.com/machines/4512,,2,0
+list_slot_013.json,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,partial,サミー,AT,2024-06-03,https://p-town.dmm.com/machines/4566,https://1geki.jp/slot/l_bofuri/,4,0
+list_slot_026.json,EVANGELION FESTIVAL,verified,ビスティ,AT,2020-03-02,https://p-town.dmm.com/machines/3642,https://1geki.jp/slot/s_eva_fes/,3,2
+list_slot_027.json,パチスロ アクエリオン ALL STARS,verified,SANKYO,AT,2022-07-04,https://p-town.dmm.com/machines/4156,https://1geki.jp/slot/s_aguarion_allstars/,2,2
+list_slot_028.json,パチスロ鉄拳5,verified,YAMASA,AT,2022-07-19,https://p-town.dmm.com/machines/4162,https://1geki.jp/slot/s_tekken5/,2,1
+list_slot_029.json,パチスロ幼女戦記,verified,Sammy,AT,2022-12-05,https://p-town.dmm.com/machines/4241,https://1geki.jp/slot/s_yojo_senki/,3,1
+list_slot_030.json,スマスロ シャーマンキング,verified,Eleco,AT,2025-02-03,https://p-town.dmm.com/machines/4719,https://1geki.jp/slot/l_shamanking/,2,2
+list_slot_031.json,パチスロ 新鬼武者2,verified,Enterrise,AT,2022-08-08,https://p-town.dmm.com/machines/4178,https://1geki.jp/slot/s_sinnoni2/,2,2
+list_slot_032.json,FAIRY TAIL2,verified,藤商事,AT,2022-08-01,https://p-town.dmm.com/machines/4191,https://1geki.jp/slot/s_fairytail2/,2,1
+list_slot_033.json,ペルソナ5,verified,サミー,AT,2022-09-05,https://p-town.dmm.com/machines/4193,https://1geki.jp/slot/s_persona5/,2,2
+list_slot_034.json,パチスロ盾の勇者の成り上がり,verified,Sammy,AT,2023-02-20,https://p-town.dmm.com/machines/4292,https://1geki.jp/slot/s_tat_yu/,1,2
+list_slot_035.json,S BOØWY,verified,D-light,AT,2022-09-20,https://p-town.dmm.com/machines/4196,https://1geki.jp/slot/s_boowy/,1,1
+list_slot_036.json,バイオハザード ヴィレッジ,verified,アデリオン,AT,2024-01-09,https://p-town.dmm.com/machines/4459,https://1geki.jp/slot/l_biovillage/,3,2
+list_slot_037.json,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,verified,北電子,AT,2024-04-22,https://p-town.dmm.com/machines/4556,https://1geki.jp/slot/s_danmachi2/,4,1
+list_slot_038.json,Re:ゼロから始める異世界生活 season2,verified,パオン・ディーピー,AT,2024-10-21,https://p-town.dmm.com/machines/4658,https://1geki.jp/slot/l_rezero_season2/,1,3
+list_slot_039.json,この素晴らしい世界に祝福を！,verified,サミー,AT,2022-04-04,https://p-town.dmm.com/machines/4097,https://1geki.jp/slot/s_konosuba/,1,1
+list_slot_040.json,Lルパン三世 大航海者の秘宝,verified,平和,AT,2024-12-02,https://p-town.dmm.com/machines/4689,https://1geki.jp/slot/l_lupin_totgn/,3,3
+list_slot_041.json,黄門ちゃま天,verified,オリンピア,AT,2024-09-02,https://p-town.dmm.com/machines/4609,https://1geki.jp/slot/l_komonchama_ten/,1,3
+list_slot_042.json,ニューパルサーSP4,partial,SEVEN LEAGUE,BONUS,2024-05-07,https://p-town.dmm.com/machines/4550,https://1geki.jp/slot/s_newpulsar_with_tt/,3,0
+list_slot_043.json,ニューパルサーDX3,partial,YAMASA NEXT,BONUS,2021-10-04,https://p-town.dmm.com/machines/3953,https://1geki.jp/slot/s_newpal_dx3/,3,0
+list_slot_044.json,ハナビ,partial,ACROSS,BONUS,2021-07-05,https://p-town.dmm.com/machines/2042,https://1geki.jp/slot/s_shinhanabi/,4,0
+list_slot_045.json,バーサスリヴァイズ,partial,ELECO,BONUS,2022-01-11,https://p-town.dmm.com/machines/4033,https://1geki.jp/slot/s_versus_rexse/,5,0
+list_slot_046.json,サンダーVライトニング,partial,ACROSS,BONUS,2020-02-03,https://p-town.dmm.com/machines/3647,https://1geki.jp/slot/s_thunderv_lg/,1,0
+list_slot_047.json,アレックス ブライト,partial,UNIVERSAL BROS.,BONUS,2025-09-01,https://p-town.dmm.com/machines/4799,https://1geki.jp/slot/lb_arexbright/,6,0
+list_slot_048.json,ディスクアップ2,partial,Sammy,BONUS,2022-01-24,https://p-town.dmm.com/machines/4043,https://1geki.jp/slot/s_discup2/,3,0
+list_slot_049.json,A-SLOT+ ディスクアップ ULTRAREMIX,partial,Sammy,BONUS,2025-01-20,https://p-town.dmm.com/machines/4702,https://1geki.jp/slot/l_discup_ur/,5,0
+list_slot_050.json,ファミスタ回胴版!!,partial,UNIVERSAL BROS.,BONUS,2023-09-04,https://p-town.dmm.com/machines/4393,https://1geki.jp/slot/s_famista_kaido/,3,0
+list_slot_051.json,沖ドキ！GOLD,partial,UNIVERSAL BROS.,AT,2022-12-19,https://p-town.dmm.com/machines/4258,https://1geki.jp/slot/s_okidoki_gold/,3,0
+list_slot_052.json,沖ドキ！DUO,partial,ACROSS,AT,2021-12-20,https://p-town.dmm.com/machines/4031,https://1geki.jp/slot/s_okidoki_duo_25/,1,0
+list_slot_053.json,スマート沖スロ 沖ドキ！DUO-30 アンコール,partial,MACY,AT,2025-12-22,https://p-town.dmm.com/machines/4906,https://1geki.jp/slot/l_okidoki_duo_encore/0/,1,0
+list_slot_054.json,チバリヨ2プラス,partial,NET,AT,2025-01-06,https://p-town.dmm.com/machines/4717,https://1geki.jp/slot/l_cbry2_plus/,1,0
+list_slot_055.json,スマート沖スロ スターハナハナ,partial,PIONEER,BONUS,2025-01-06,https://p-town.dmm.com/machines/4680,https://1geki.jp/slot/l_starhnhn30/0/,3,0
+list_slot_056.json,スマート沖スロ ニューキングハナハナ-30,partial,PIONEER,BONUS,2026-01-05,https://p-town.dmm.com/machines/4911,,3,0
+list_slot_057.json,ニューキングハナハナ-30,partial,PIONEER,BONUS,2026-01-05,https://p-town.dmm.com/machines/4912,https://1geki.jp/slot/s_new_king_hanahana_v30/,3,0
+list_slot_058.json,ドラゴンハナハナ～閃光～ 30,partial,PIONEER,BONUS,2023-12-18,https://p-town.dmm.com/machines/4453,https://1geki.jp/slot/s_drahana_senko30/0/,3,0
+list_slot_059.json,キングハナハナ-30,partial,PIONEER,BONUS,2023-03-20,https://p-town.dmm.com/machines/4311,https://1geki.jp/slot/s_kinghanahana2023/,3,0
+list_slot_060.json,ハナハナホウオウ～天翔～-30,partial,PIONEER,BONUS,2022-01-24,https://p-town.dmm.com/machines/4013,https://1geki.jp/slot/s_hanahana_houoh_tensho30/,3,0
+list_slot_061.json,麻雀物語,partial,オリンピアエステート,AT,2025-04-21,https://p-town.dmm.com/specials/4159,https://1geki.jp/slot/l_mjnmngtr/,4,0
+list_slot_062.json,戦姫絶唱シンフォギア 正義の歌,partial,SANKYO,AT,2024-09-02,https://p-town.dmm.com/machines/4579,https://1geki.jp/slot/l_sympho/,2,0
+list_slot_063.json,Lパチスロうみねこのなく頃に2,verified,オーイズミ,AT,2026-02-02,https://p-town.dmm.com/machines/4925,https://1geki.jp/slot/l_umineko2/,2,1
+lovejo3.json,ラブ嬢3～Wご指名はいかがですか？～,partial,,AT,,https://p-town.dmm.com,https://1geki.jp,2,0
+lupin.json,ルパン三世 大航海者,verified,平和,AT,2024-12-02,https://p-town.dmm.com/machines/4689,https://1geki.jp/slot/l_lupin_totgn/,3,3
+madoka_forte.json,劇場版魔法少女まどか☆マギカ f-フォルテ-,partial,,AT,,https://p-town.dmm.com,https://1geki.jp,1,0
+monkey_turn_v.json,スマスロ モンキーターンV,verified,山佐,AT,2023-12-04,https://p-town.dmm.com/machines/4450,https://1geki.jp/slot/l_monkeyturn5/,1,2
+monster_hunter_rise.json,スマスロ モンスターハンターライズ,verified,エンターライズ,AT,2024-11-18,https://p-town.dmm.com/machines/4676,https://1geki.jp/slot/l_mh_rize/,5,2
+my_juggler_v.json,マイジャグラーV,partial,Kita Denshi,BONUS,2025-01-01,https://p-town.dmm.com/machines/4204,https://1geki.jp/slot/s_mj5/,3,0
+nyanko.json,Lにゃんこ大戦争 超神速,partial,,,,https://p-town.dmm.com,https://1geki.jp,2,0
+oki_doki_duo.json,oki_doki_duo,partial,,,,,,0,0
+oki_doki_gold.json,oki_doki_gold,partial,,,,,,0,0
+revue_starlight.json,L少女☆歌劇 レヴュースタァライト -The SLOT-,partial,,,,https://p-town.dmm.com,https://1geki.jp,1,0
+ring_v.json,Lリングにかけろ1 V,partial,,AT,,https://p-town.dmm.com,https://1geki.jp,2,3
+saki_top.json,L咲-Saki- 頂上決戦,partial,,,,https://p-town.dmm.com,https://1geki.jp,1,0
+sengoku_otome4.json,L戦国乙女4 戦乱に閃く炯眼の軍師,verified,オリンピアエステート,AT,2023-09-04,https://p-town.dmm.com/machines/4395,https://1geki.jp,2,2
+shin_eva.json,Lパチスロ シン・エヴァンゲリオン,partial,,,,https://p-town.dmm.com,https://1geki.jp,2,0
+strike_witches2.json,Lストライクウィッチーズ2,verified,サンスリー,AT,2024-02-05,https://p-town.dmm.com/machines/4490,https://1geki.jp,2,2
+tensei_slime.json,L転生したらスライムだった件,verified,山佐,AT,2023-10-02,https://p-town.dmm.com/machines/4405,https://1geki.jp,2,1
+toaru.json,スマスロ とある魔術の禁書目録,partial,,AT,,https://p-town.dmm.com,https://1geki.jp,2,0
+tokyo_ghoul.json,L東京喰種,verified,スパイキー,AT,2025-02-03,https://p-town.dmm.com/machines/4742,https://1geki.jp,1,2
+tokyoghoul.json,東京喰種,partial,,,,,,0,0
+ushio_tora.json,Lうしおととら 白面決戦,verified,Daiichi,AT,2025-04-07,https://p-town.dmm.com/machines/4776,https://1geki.jp,1,1
+valvrave.json,L革命機ヴァルヴレイヴ,verified,SANKYO,AT,2022-11-21,https://p-town.dmm.com/machines/4244,https://1geki.jp/slot/s_valvrave/,2,4
+valvrave_2.json,Lパチスロ 革命機ヴァルヴレイヴ2,partial,SANKYO,AT,2025-11-04,https://p-town.dmm.com/machines/4885,https://1geki.jp/slot/l_valvrave2/,0,4
+vvv.json,革命機ヴァルヴレイヴ,verified,SANKYO,AT,2022-11-21,https://p-town.dmm.com/machines/4244,https://1geki.jp/slot/s_valvrave/,2,4
+zenigata4.json,L主役は銭形4,verified,オリンピア,AT,2023-05-08,https://p-town.dmm.com/machines/4335,https://1geki.jp,2,1

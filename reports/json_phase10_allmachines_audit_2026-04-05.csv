@@ -1,0 +1,137 @@
+﻿file,id,name,status,manufacturer_present,type_present,releaseDate_present,dmm_present,ichigeki_present,counter_count,reference_count,ceiling_count
+dmm_slot_033.json,dmm_slot_033,L ひぐらしのなく頃に 業,partial,False,True,False,True,True,6,5,0
+dmm_slot_039.json,dmm_slot_039,L エヴァンゲリオン ～未来への創造～,partial,False,True,False,True,True,3,2,0
+dmm_slot_024.json,dmm_slot_024,L リングにかけろ1 V,partial,False,True,False,True,True,4,3,3
+kengan.json,kengan,Lケンガンアシュラ,partial,False,True,False,True,True,3,2,0
+dmm_slot_020.json,dmm_slot_020,Lパチスロ 炎炎ノ消防隊2,partial,False,True,False,True,True,3,2,0
+valvrave_2.json,valvrave_2,Lパチスロ 革命機ヴァルヴレイヴ2,partial,True,True,True,True,True,5,0,4
+dmm_slot_025.json,dmm_slot_025,Lラブ嬢3〜Wご指名はいかがですか？〜,partial,False,True,False,True,True,3,2,0
+ring_v.json,ring_v,Lリングにかけろ1 V,partial,False,True,False,True,True,4,3,3
+dmm_slot_036.json,dmm_slot_036,L大工の源さん超夢源,partial,False,True,False,True,True,3,2,0
+hanma_baki.json,hanma_baki,L範馬刃牙,partial,False,True,False,True,True,3,2,0
+dmm_slot_032.json,dmm_slot_032,Sちゅらちゅら,partial,False,True,False,True,False,4,3,0
+eureka_zero.json,eureka_zero,エウレカセブン HI-EVOLUTION ZERO TYPE-ART,partial,False,False,False,True,True,3,2,0
+dmm_slot_028.json,dmm_slot_028,クランキークレスト,partial,False,True,False,True,True,5,4,0
+toaru.json,toaru,スマスロ とある魔術の禁書目録,partial,False,True,False,True,True,4,3,0
+dmm_slot_018.json,dmm_slot_018,スマスロ 攻殻機動隊,partial,False,True,False,True,True,3,2,0
+kabaneri_kaimon.json,kabaneri_kaimon,スマスロ 甲鉄城のカバネリ 海門決戦,partial,False,True,False,True,True,3,2,0
+dmm_slot_016.json,dmm_slot_016,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,partial,False,True,False,True,True,3,2,0
+dmm_slot_034.json,dmm_slot_034,スマスロとある魔術の禁書目録,partial,False,True,False,True,True,4,3,0
+dmm_slot_037.json,dmm_slot_037,スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-,partial,False,True,False,True,True,4,3,0
+ghost_shell.json,ghost_shell,スマスロ攻殻機動隊,partial,False,True,False,True,True,3,2,0
+dmm_slot_040.json,dmm_slot_040,スーハナライジング-30,partial,False,True,False,True,True,5,4,0
+dmm_slot_035.json,dmm_slot_035,デジスロ JAC INバージョン,partial,False,True,False,True,True,4,3,0
+dmm_slot_022.json,dmm_slot_022,ニューシオサイ,partial,False,True,False,True,True,4,3,0
+dmm_slot_038.json,dmm_slot_038,パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART,partial,False,True,False,True,True,5,4,0
+dmm_slot_031.json,dmm_slot_031,パチスロ ケンガンアシュラ,partial,False,True,False,True,True,3,2,0
+fire_force.json,fire_force,パチスロ 炎炎ノ消防隊,partial,False,False,False,True,True,3,2,0
+dmm_slot_023.json,dmm_slot_023,パチスロ琉神−30 スイカバージョン,partial,False,True,False,True,True,4,3,0
+dmm_slot_029.json,dmm_slot_029,マジカルハロウィン８,partial,False,True,False,True,True,5,4,0
+dmm_slot_021.json,dmm_slot_021,ミクちゃんとイドムンのミラクルチャレンジ2,partial,False,True,False,True,True,5,4,0
+lovejo3.json,lovejo3,ラブ嬢3～Wご指名はいかがですか？～,partial,False,True,False,True,True,3,2,0
+madoka_forte.json,madoka_forte,劇場版魔法少女まどか☆マギカ f-フォルテ-,partial,False,True,False,True,True,4,3,0
+dmm_slot_030.json,dmm_slot_030,推しスロ アイドルVer.,partial,True,True,True,True,True,1,0,1
+list_slot_049.json,list_slot_049,A-SLOT+ ディスクアップ ULTRAREMIX,verified,True,True,True,True,True,6,5,0
+dmm_slot_013.json,dmm_slot_013,A-SLOT+ 異世界かるてっと BT,verified,True,True,True,True,False,4,1,0
+list_slot_026.json,list_slot_026,EVANGELION FESTIVAL,verified,True,True,True,True,True,5,3,2
+list_slot_032.json,list_slot_032,FAIRY TAIL2,verified,True,True,True,True,True,3,2,1
+dmm_slot_006.json,dmm_slot_006,LB スロット GALFY,verified,True,True,True,True,False,4,3,0
+dmm_slot_010.json,dmm_slot_010,LBトリプルクラウンセブン,verified,True,True,True,True,False,4,3,0
+arifureta.json,arifureta,Lありふれた職業で世界最強,verified,True,True,True,True,True,3,1,1
+ushio_tora.json,ushio_tora,Lうしおととら 白面決戦,verified,True,True,True,True,True,3,1,3
+karakuri_circus.json,karakuri_circus,Lからくりサーカス,verified,True,True,True,True,True,5,2,3
+nyanko.json,nyanko,Lにゃんこ大戦争 超神速,verified,True,True,True,True,True,3,2,3
+dmm_slot_014.json,dmm_slot_014,Lアクダマドライブ,verified,True,True,True,True,False,5,3,0
+azure_lane.json,azure_lane,Lアズールレーン THE ANIMATION,verified,True,True,True,True,True,3,1,0
+godzilla.json,godzilla,Lゴジラ,verified,True,True,True,True,True,3,1,4
+goblin_slayer.json,goblin_slayer,Lゴブリンスレイヤー,verified,True,True,True,True,True,5,3,1
+strike_witches2.json,strike_witches2,Lストライクウィッチーズ2,verified,True,True,True,True,True,3,2,2
+darling_franxx.json,darling_franxx,Lダーリン・イン・ザ・フランキス,verified,True,True,True,True,True,3,1,0
+shin_eva.json,shin_eva,Lパチスロ シン・エヴァンゲリオン,verified,True,True,True,True,True,3,2,1
+list_slot_063.json,list_slot_063,Lパチスロうみねこのなく頃に2,verified,True,True,True,True,True,5,2,1
+list_slot_010.json,list_slot_010,Lベルセルク無双,verified,True,True,True,True,True,3,1,1
+list_slot_040.json,list_slot_040,Lルパン三世 大航海者の秘宝,verified,True,True,True,True,True,5,3,3
+zenigata4.json,zenigata4,L主役は銭形4,verified,True,True,True,True,True,3,2,2
+kamen_rider_denoh.json,kamen_rider_denoh,L仮面ライダー電王,verified,True,True,True,True,True,3,1,4
+l_hokuto.json,l_hokuto,L北斗の拳,verified,True,True,True,True,True,8,4,2
+hokuto.json,hokuto,L北斗の拳,verified,True,True,True,True,True,8,4,2
+list_slot_012.json,list_slot_012,L南国育ち,verified,True,True,True,True,False,3,2,0
+saki_top.json,saki_top,L咲-Saki- 頂上決戦,verified,True,True,True,True,True,3,1,3
+revue_starlight.json,revue_starlight,L少女☆歌劇 レヴュースタァライト -The SLOT-,verified,True,True,True,True,True,3,1,0
+sengoku_otome4.json,sengoku_otome4,L戦国乙女4 戦乱に閃く炯眼の軍師,verified,True,True,True,True,True,3,2,2
+tokyo_ghoul.json,tokyo_ghoul,L東京喰種,verified,True,True,True,True,True,3,1,3
+dmm_slot_026.json,dmm_slot_026,L花の慶次～佐渡攻めの章〜,verified,True,True,True,True,True,3,2,1
+dmm_slot_012.json,dmm_slot_012,L虚構推理,verified,True,True,True,True,False,5,2,0
+tensei_slime.json,tensei_slime,L転生したらスライムだった件,verified,True,True,True,True,True,3,2,1
+valvrave.json,valvrave,L革命機ヴァルヴレイヴ,verified,True,True,True,True,True,5,2,4
+list_slot_009.json,list_slot_009,L麻雀格闘倶楽部 覚醒,verified,True,True,True,True,True,3,2,4
+list_slot_038.json,list_slot_038,Re:ゼロから始める異世界生活 season2,verified,True,True,True,True,True,5,1,3
+list_slot_035.json,list_slot_035,S BOØWY,verified,True,True,True,True,True,3,1,1
+karakuri.json,karakuri,からくりサーカス,verified,True,True,True,True,True,5,2,3
+list_slot_039.json,list_slot_039,この素晴らしい世界に祝福を！,verified,True,True,True,True,True,5,1,1
+im_juggler_ex.json,im_juggler_ex,アイムジャグラーEX,verified,True,True,True,True,True,5,3,0
+dmm_slot_008.json,dmm_slot_008,アニマルスロット ドッチ,verified,True,True,True,True,False,4,3,0
+list_slot_047.json,list_slot_047,アレックス ブライト,verified,True,True,True,True,True,7,6,0
+king_hanahana_30.json,king_hanahana_30,キングハナハナ-30,verified,True,True,True,True,True,5,3,0
+list_slot_059.json,list_slot_059,キングハナハナ-30,verified,True,True,True,True,True,5,3,0
+code_geass_cc_kallen.json,code_geass_cc_kallen,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,verified,True,True,True,True,True,3,2,0
+code_geass_fukkatsu.json,code_geass_fukkatsu,コードギアス 復活のルルーシュ,verified,True,True,True,True,True,3,2,1
+gogo_juggler_3.json,gogo_juggler_3,ゴーゴージャグラー3,verified,True,True,True,True,True,5,3,0
+list_slot_046.json,list_slot_046,サンダーVライトニング,verified,True,True,True,True,True,3,1,0
+dmm_slot_001.json,dmm_slot_001,スマスロ BIRDIE WING -Golf Girls' Story-,verified,True,True,True,True,True,5,2,0
+list_slot_003.json,list_slot_003,スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ,verified,True,True,True,True,True,4,3,1
+dmm_slot_015.json,dmm_slot_015,スマスロ サンダーV,verified,True,True,True,True,True,6,5,0
+list_slot_030.json,list_slot_030,スマスロ シャーマンキング,verified,True,True,True,True,True,3,2,2
+dmm_slot_017.json,dmm_slot_017,スマスロ ハナビ,verified,True,True,True,True,True,5,4,0
+bio_re2.json,bio_re2,スマスロ バイオハザード RE:2,verified,True,True,True,True,True,5,4,2
+dmm_slot_002.json,dmm_slot_002,スマスロ バイオハザードRE:3,verified,True,True,True,True,True,5,1,0
+dmm_slot_004.json,dmm_slot_004,スマスロ ビッグドリーム THE GOLDEN PUSHER,verified,True,True,True,True,True,5,2,0
+dmm_slot_007.json,dmm_slot_007,スマスロ ミリオンゴッド-神々の軌跡-,verified,True,True,True,True,False,5,1,0
+monkey_turn_v.json,monkey_turn_v,スマスロ モンキーターンV,verified,True,True,True,True,True,5,1,2
+monster_hunter_rise.json,monster_hunter_rise,スマスロ モンスターハンターライズ,verified,True,True,True,True,True,6,5,2
+hokuto_tensei_2.json,hokuto_tensei_2,スマスロ 北斗の拳 転生の章2,verified,True,True,True,True,True,5,1,1
+dmm_slot_005.json,dmm_slot_005,スマスロスーパーリオエース2,verified,True,True,True,True,True,5,1,0
+dmm_slot_027.json,dmm_slot_027,スマスロモンキーターンV,verified,True,True,True,True,True,2,1,2
+dmm_slot_011.json,dmm_slot_011,スマスロヨルムンガンド,verified,True,True,True,True,False,5,2,0
+list_slot_013.json,list_slot_013,スマスロ痛いのは嫌なので防御力に極振りしたいと思います。,verified,True,True,True,True,True,5,4,0
+list_slot_055.json,list_slot_055,スマート沖スロ スターハナハナ,verified,True,True,True,True,True,5,3,0
+list_slot_056.json,list_slot_056,スマート沖スロ ニューキングハナハナ-30,verified,True,True,True,True,False,5,3,0
+list_slot_053.json,list_slot_053,スマート沖スロ 沖ドキ！DUO-30 アンコール,verified,True,True,True,True,True,5,1,0
+chibariyo2_plus.json,chibariyo2_plus,チバリヨ2プラス,verified,True,True,True,True,True,5,1,0
+list_slot_054.json,list_slot_054,チバリヨ2プラス,verified,True,True,True,True,True,5,1,0
+list_slot_048.json,list_slot_048,ディスクアップ2,verified,True,True,True,True,True,4,3,0
+dragon_hanahana_30.json,dragon_hanahana_30,ドラゴンハナハナ～閃光～ 30,verified,True,True,True,True,True,5,3,0
+list_slot_058.json,list_slot_058,ドラゴンハナハナ～閃光～ 30,verified,True,True,True,True,True,5,3,0
+list_slot_057.json,list_slot_057,ニューキングハナハナ-30,verified,True,True,True,True,True,5,3,0
+list_slot_043.json,list_slot_043,ニューパルサーDX3,verified,True,True,True,True,True,4,3,0
+list_slot_042.json,list_slot_042,ニューパルサーSP4,verified,True,True,True,True,True,4,3,0
+happy_juggler_v3.json,happy_juggler_v3,ハッピージャグラーV III,verified,True,True,True,True,True,5,3,0
+list_slot_060.json,list_slot_060,ハナハナホウオウ～天翔～-30,verified,True,True,True,True,True,5,3,0
+list_slot_044.json,list_slot_044,ハナビ,verified,True,True,True,True,True,5,4,0
+list_slot_036.json,list_slot_036,バイオハザード ヴィレッジ,verified,True,True,True,True,True,4,3,2
+list_slot_045.json,list_slot_045,バーサスリヴァイズ,verified,True,True,True,True,True,6,5,0
+list_slot_027.json,list_slot_027,パチスロ アクエリオン ALL STARS,verified,True,True,True,True,True,3,2,2
+list_slot_037.json,list_slot_037,パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2,verified,True,True,True,True,True,6,4,1
+list_slot_031.json,list_slot_031,パチスロ 新鬼武者2,verified,True,True,True,True,True,3,2,2
+kabaneri.json,kabaneri,パチスロ 甲鉄城のカバネリ,verified,True,True,True,True,True,6,3,3
+list_slot_004.json,list_slot_004,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,verified,True,True,True,True,True,4,3,0
+list_slot_029.json,list_slot_029,パチスロ幼女戦記,verified,True,True,True,True,True,4,3,1
+list_slot_034.json,list_slot_034,パチスロ盾の勇者の成り上がり,verified,True,True,True,True,True,5,1,2
+list_slot_028.json,list_slot_028,パチスロ鉄拳5,verified,True,True,True,True,True,3,2,1
+list_slot_050.json,list_slot_050,ファミスタ回胴版!!,verified,True,True,True,True,True,4,3,0
+funky_juggler_2.json,funky_juggler_2,ファンキージャグラー2,verified,True,True,True,True,True,5,3,0
+list_slot_033.json,list_slot_033,ペルソナ5,verified,True,True,True,True,True,3,2,2
+my_juggler_v.json,my_juggler_v,マイジャグラーV,verified,True,True,True,True,True,5,3,0
+lupin.json,lupin,ルパン三世 大航海者,verified,True,True,True,True,True,5,3,3
+list_slot_062.json,list_slot_062,戦姫絶唱シンフォギア 正義の歌,verified,True,True,True,True,True,3,2,0
+bancho4.json,bancho4,押忍！番長4,verified,True,True,True,True,True,5,3,1
+tokyoghoul.json,tokyoghoul,東京喰種,verified,True,True,True,True,True,5,4,3
+oki_doki_duo.json,oki_doki_duo,沖ドキ！DUO,verified,True,True,True,True,True,5,1,0
+list_slot_052.json,list_slot_052,沖ドキ！DUO,verified,True,True,True,True,True,5,1,0
+oki_doki_gold.json,oki_doki_gold,沖ドキ！GOLD,verified,True,True,True,True,True,6,3,0
+list_slot_051.json,list_slot_051,沖ドキ！GOLD,verified,True,True,True,True,True,6,3,0
+dmm_slot_009.json,dmm_slot_009,真打 吉宗,verified,True,True,True,True,False,5,2,0
+vvv.json,vvv,革命機ヴァルヴレイヴ,verified,True,True,True,True,True,5,2,4
+list_slot_061.json,list_slot_061,麻雀物語,verified,True,True,True,True,True,5,4,0
+list_slot_041.json,list_slot_041,黄門ちゃま天,verified,True,True,True,True,True,5,1,3
+dmm_slot_003.json,dmm_slot_003,Ｌタクトオーパス デスティニー,verified,True,True,True,True,True,5,1,0

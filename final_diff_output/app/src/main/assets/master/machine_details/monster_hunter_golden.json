@@ -1,0 +1,14 @@
+{
+  "id": "monster_hunter_golden",
+  "name": "モンスターハンター黄金狩猟",
+  "manufacturer": null,
+  "type": "AT",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+  "status": "partial",
+  "dmmUrl": null,
+  "ichigekiUrl": null,
+  "externalLinks": [],
+  "fileName": "monster_hunter_golden.json"
+}

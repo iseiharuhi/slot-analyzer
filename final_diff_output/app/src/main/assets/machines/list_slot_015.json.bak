@@ -1,0 +1,325 @@
+{
+  "machine": {
+    "id": "list_slot_015",
+    "name": "Lアズールレーン THE ANIMATION",
+    "manufacturer": "京楽",
+    "type": "AT",
+    "releaseDate": "2025-08-04",
+    "isActive": true,
+    "notes": "partial: DMM/一撃公開のボーナス初当り・AT初当り・弱チェリー・弱スイカ・青7海戦ボーナスを反映。初当りボーナス自体は差が小さいため補助、AT初当りと小役を主軸に置く。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4847",
+    "ichigekiUrl": "https://1geki.jp/slot/l_azurlane/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のボーナス初当り。設定差は小さいため補助。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。主判別項目。"
+    },
+    {
+      "key": "weak_cherry_count",
+      "displayName": "弱チェリー",
+      "category": "SMALL_ROLE",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時/AT中を通した弱チェリー出現回数。"
+    },
+    {
+      "key": "weak_suika_count",
+      "displayName": "弱スイカ",
+      "category": "SMALL_ROLE",
+      "sortOrder": 21,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時/AT中を通した弱スイカ出現回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "青7海戦ボーナス",
+      "category": "SPECIAL",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "通常時の青7海戦ボーナス当選回数。サンプルは重いが強い補助要素。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 167.4,
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "一撃のボーナス初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 166.5,
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "一撃のボーナス初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 164.3,
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "一撃のボーナス初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 161.3,
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "一撃のボーナス初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 158.9,
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "一撃のボーナス初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 156.0,
+          "weight": 0.55,
+          "minSampleSize": 8,
+          "note": "一撃のボーナス初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 598.9,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 589.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 564.2,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 527.1,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 469.4,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 467.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "一撃のAT初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "weak_cherry_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 79.0,
+          "weight": 0.85,
+          "minSampleSize": 80,
+          "note": "DMMの弱チェリー確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 78.0,
+          "weight": 0.85,
+          "minSampleSize": 80,
+          "note": "DMMの弱チェリー確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 77.1,
+          "weight": 0.85,
+          "minSampleSize": 80,
+          "note": "DMMの弱チェリー確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 75.3,
+          "weight": 0.85,
+          "minSampleSize": 80,
+          "note": "DMMの弱チェリー確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 74.5,
+          "weight": 0.85,
+          "minSampleSize": 80,
+          "note": "DMMの弱チェリー確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 72.0,
+          "weight": 0.85,
+          "minSampleSize": 80,
+          "note": "DMMの弱チェリー確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "weak_suika_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 104.0,
+          "weight": 0.8,
+          "minSampleSize": 70,
+          "note": "DMMの弱スイカ確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 102.4,
+          "weight": 0.8,
+          "minSampleSize": 70,
+          "note": "DMMの弱スイカ確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 100.8,
+          "weight": 0.8,
+          "minSampleSize": 70,
+          "note": "DMMの弱スイカ確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 99.3,
+          "weight": 0.8,
+          "minSampleSize": 70,
+          "note": "DMMの弱スイカ確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 97.8,
+          "weight": 0.8,
+          "minSampleSize": 70,
+          "note": "DMMの弱スイカ確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 96.4,
+          "weight": 0.8,
+          "minSampleSize": 70,
+          "note": "DMMの弱スイカ確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 3665.8,
+          "weight": 1.15,
+          "minSampleSize": 2,
+          "note": "DMMの青7海戦ボーナス確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 3544.0,
+          "weight": 1.15,
+          "minSampleSize": 2,
+          "note": "DMMの青7海戦ボーナス確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 3056.6,
+          "weight": 1.15,
+          "minSampleSize": 2,
+          "note": "DMMの青7海戦ボーナス確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 2581.4,
+          "weight": 1.15,
+          "minSampleSize": 2,
+          "note": "DMMの青7海戦ボーナス確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 2331.5,
+          "weight": 1.15,
+          "minSampleSize": 2,
+          "note": "DMMの青7海戦ボーナス確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 2075.6,
+          "weight": 1.15,
+          "minSampleSize": 2,
+          "note": "DMMの青7海戦ボーナス確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

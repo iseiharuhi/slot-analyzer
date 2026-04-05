@@ -1,0 +1,266 @@
+{
+  "machine": {
+    "id": "dmm_slot_029",
+    "name": "マジカルハロウィン８",
+    "manufacturer": null,
+    "type": "HYBRID",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたどこまじ・ART初当り・REG・BIGを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4423",
+    "ichigekiUrl": "https://1geki.jp/slot/l_magicalhalloween8/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 10,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 11,
+      "notes": null
+    },
+    {
+      "key": "cz_count",
+      "displayName": "どこまじ",
+      "category": "SPECIAL",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 20,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "ART初当り",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 21,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 334.4,
+          "weight": 0.25,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 332.7,
+          "weight": 0.25,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 331.0,
+          "weight": 0.25,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 327.7,
+          "weight": 0.25,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 326.1,
+          "weight": 0.25,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 322.8,
+          "weight": 0.25,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 376.5,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 372.3,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 368.2,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 360.2,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 356.0,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 348.6,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開解析値"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 11336.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 4498.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 2479.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 1098.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 983.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 715.0,
+          "weight": 1.15,
+          "minSampleSize": 1,
+          "note": "公開解析値"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 352.2,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 335.5,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 297.1,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 269.3,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 254.4,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 226.8,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

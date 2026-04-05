@@ -1,0 +1,45 @@
+# json phase10 all machines summary (2026-04-05)
+
+- total manifest machines: 136
+- verified: 104
+- partial: 32
+- manufacturer present: 106
+- releaseDate present: 106
+- DMM URL present: 136
+- 一撃 URL present: 124
+- settingReferenceValues present: 134
+- ceilingRules present: 54
+
+## Remaining partial files
+- L ひぐらしのなく頃に 業 (dmm_slot_033.json): missing manufacturer, releaseDate, ceilingRules
+- L エヴァンゲリオン ～未来への創造～ (dmm_slot_039.json): missing manufacturer, releaseDate, ceilingRules
+- L リングにかけろ1 V (dmm_slot_024.json): missing manufacturer, releaseDate
+- Lケンガンアシュラ (kengan.json): missing manufacturer, releaseDate, ceilingRules
+- Lパチスロ 炎炎ノ消防隊2 (dmm_slot_020.json): missing manufacturer, releaseDate, ceilingRules
+- Lパチスロ 革命機ヴァルヴレイヴ2 (valvrave_2.json): missing none
+- Lラブ嬢3〜Wご指名はいかがですか？〜 (dmm_slot_025.json): missing manufacturer, releaseDate, ceilingRules
+- Lリングにかけろ1 V (ring_v.json): missing manufacturer, releaseDate
+- L大工の源さん超夢源 (dmm_slot_036.json): missing manufacturer, releaseDate, ceilingRules
+- L範馬刃牙 (hanma_baki.json): missing manufacturer, releaseDate, ceilingRules
+- Sちゅらちゅら (dmm_slot_032.json): missing manufacturer, releaseDate, ichigekiUrl, ceilingRules
+- エウレカセブン HI-EVOLUTION ZERO TYPE-ART (eureka_zero.json): missing manufacturer, releaseDate, ceilingRules
+- クランキークレスト (dmm_slot_028.json): missing manufacturer, releaseDate, ceilingRules
+- スマスロ とある魔術の禁書目録 (toaru.json): missing manufacturer, releaseDate, ceilingRules
+- スマスロ 攻殻機動隊 (dmm_slot_018.json): missing manufacturer, releaseDate, ceilingRules
+- スマスロ 甲鉄城のカバネリ 海門決戦 (kabaneri_kaimon.json): missing manufacturer, releaseDate, ceilingRules
+- スマスロ 甲鉄城のカバネリ 海門（うなと）決戦 (dmm_slot_016.json): missing manufacturer, releaseDate, ceilingRules
+- スマスロとある魔術の禁書目録 (dmm_slot_034.json): missing manufacturer, releaseDate, ceilingRules
+- スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ- (dmm_slot_037.json): missing manufacturer, releaseDate, ceilingRules
+- スマスロ攻殻機動隊 (ghost_shell.json): missing manufacturer, releaseDate, ceilingRules
+- スーハナライジング-30 (dmm_slot_040.json): missing manufacturer, releaseDate, ceilingRules
+- デジスロ JAC INバージョン (dmm_slot_035.json): missing manufacturer, releaseDate, ceilingRules
+- ニューシオサイ (dmm_slot_022.json): missing manufacturer, releaseDate, ceilingRules
+- パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART (dmm_slot_038.json): missing manufacturer, releaseDate, ceilingRules
+- パチスロ ケンガンアシュラ (dmm_slot_031.json): missing manufacturer, releaseDate, ceilingRules
+- パチスロ 炎炎ノ消防隊 (fire_force.json): missing manufacturer, releaseDate, ceilingRules
+- パチスロ琉神−30 スイカバージョン (dmm_slot_023.json): missing manufacturer, releaseDate, ceilingRules
+- マジカルハロウィン８ (dmm_slot_029.json): missing manufacturer, releaseDate, ceilingRules
+- ミクちゃんとイドムンのミラクルチャレンジ2 (dmm_slot_021.json): missing manufacturer, releaseDate, ceilingRules
+- ラブ嬢3～Wご指名はいかがですか？～ (lovejo3.json): missing manufacturer, releaseDate, ceilingRules
+- 劇場版魔法少女まどか☆マギカ f-フォルテ- (madoka_forte.json): missing manufacturer, releaseDate, ceilingRules
+- 推しスロ アイドルVer. (dmm_slot_030.json): missing none

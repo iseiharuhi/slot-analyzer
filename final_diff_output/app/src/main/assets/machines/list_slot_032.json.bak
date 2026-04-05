@@ -1,0 +1,160 @@
+{
+  "machine": {
+    "id": "list_slot_032",
+    "name": "FAIRY TAIL2",
+    "manufacturer": "藤商事",
+    "type": "AT",
+    "releaseDate": "2022-08-01",
+    "isActive": true,
+    "notes": "partial: DMM・一撃の公開解析をベースにCZ「FAIRY BATTLE CHALLENGE」とAT「FAIRY BATTLE」初当りを反映。モード示唆・終了画面・ラッキーパト色は重要だが入力定量化しづらいため未採用。ゲーム数天井のみ ceilingRules に追加。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4191",
+    "ichigekiUrl": "https://1geki.jp/slot/s_fairytail2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ「FAIRY BATTLE CHALLENGE」",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時のCZ当選回数。主判別補助。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT「FAIRY BATTLE」初当り",
+      "category": "AT_CZ",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当り回数。主判別項目。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 242.1,
+          "weight": 0.85,
+          "minSampleSize": 6,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 234.5,
+          "weight": 0.85,
+          "minSampleSize": 6,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 223.5,
+          "weight": 0.85,
+          "minSampleSize": 6,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 206.7,
+          "weight": 0.85,
+          "minSampleSize": 6,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 201.8,
+          "weight": 0.85,
+          "minSampleSize": 6,
+          "note": "CZ初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 187.1,
+          "weight": 0.85,
+          "minSampleSize": 6,
+          "note": "CZ初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 459.3,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 432.1,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 393.9,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 337.4,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 321.7,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 273.6,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1536,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1536G+α到達後のCZ成功でAT「FAIRY BATTLE」に当選。CZ失敗時は特殊モード移行で100pt到達時AT当選。",
+      "isEnabled": true
+    }
+  ]
+}

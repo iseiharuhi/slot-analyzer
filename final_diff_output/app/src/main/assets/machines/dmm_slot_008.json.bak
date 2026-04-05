@@ -1,0 +1,207 @@
+{
+  "machine": {
+    "id": "dmm_slot_008",
+    "name": "アニマルスロット ドッチ",
+    "manufacturer": "北電子",
+    "type": "BONUS",
+    "releaseDate": "2026-04-20",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4964",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "任意入力。BIG+REGの合算管理用"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 329.7,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "公開済みBIG確率。主判別補助。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 314.7,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "公開済みBIG確率。主判別補助。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 295.6,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "公開済みBIG確率。主判別補助。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 274.3,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "公開済みBIG確率。主判別補助。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 249.1,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "公開済みBIG確率。主判別補助。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 227.4,
+          "weight": 0.85,
+          "minSampleSize": 5,
+          "note": "公開済みBIG確率。主判別補助。"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 349.5,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "公開済みREG確率。BIGと並ぶ主判別。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 342.8,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "公開済みREG確率。BIGと並ぶ主判別。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 339.4,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "公開済みREG確率。BIGと並ぶ主判別。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 328.1,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "公開済みREG確率。BIGと並ぶ主判別。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 321.5,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "公開済みREG確率。BIGと並ぶ主判別。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 314.3,
+          "weight": 0.95,
+          "minSampleSize": 5,
+          "note": "公開済みREG確率。BIGと並ぶ主判別。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 169.4,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開済み合算確率。重複評価回避のため補助扱い。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 163.8,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開済み合算確率。重複評価回避のため補助扱い。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 157.8,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開済み合算確率。重複評価回避のため補助扱い。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 149.3,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開済み合算確率。重複評価回避のため補助扱い。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 140.2,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開済み合算確率。重複評価回避のため補助扱い。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 131.9,
+          "weight": 0.35,
+          "minSampleSize": 8,
+          "note": "公開済み合算確率。重複評価回避のため補助扱い。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

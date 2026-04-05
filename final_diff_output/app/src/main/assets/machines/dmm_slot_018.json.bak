@@ -1,0 +1,148 @@
+{
+  "machine": {
+    "id": "dmm_slot_018",
+    "name": "スマスロ 攻殻機動隊",
+    "manufacturer": null,
+    "type": "AT",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたAT初当り・CZを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4931",
+    "ichigekiUrl": "https://1geki.jp/slot/l_kokaku/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 10,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 11,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 238.0,
+          "weight": 0.8,
+          "minSampleSize": 6,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 236.3,
+          "weight": 0.8,
+          "minSampleSize": 6,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 231.7,
+          "weight": 0.8,
+          "minSampleSize": 6,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 220.9,
+          "weight": 0.8,
+          "minSampleSize": 6,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 214.0,
+          "weight": 0.8,
+          "minSampleSize": 6,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 210.1,
+          "weight": 0.8,
+          "minSampleSize": 6,
+          "note": "公開解析値"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 336.3,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 332.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 319.6,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 298.7,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 285.8,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 278.0,
+          "weight": 1.0,
+          "minSampleSize": 4,
+          "note": "公開解析値"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

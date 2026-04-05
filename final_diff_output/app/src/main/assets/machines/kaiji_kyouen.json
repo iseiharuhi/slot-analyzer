@@ -1,0 +1,83 @@
+{
+  "machine": {
+    "id": "kaiji_kyouen",
+    "name": "回胴黙示録カイジ 狂宴",
+    "manufacturer": "サミー",
+    "type": "BONUS_PLUS_AT",
+    "releaseDate": "2025-03-03",
+    "isActive": true,
+    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4734",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ初当りのメモ用。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "BIG/BB",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス初当りのメモ用。"
+    },
+    {
+      "key": "at_like_rush_count",
+      "displayName": "利根川RUSH",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "利根川RUSH到達メモ。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "G数天井",
+      "ceilingType": "GAME",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "1000G到達で利根川RUSH＋BB。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "利根川RUSH＋BB",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

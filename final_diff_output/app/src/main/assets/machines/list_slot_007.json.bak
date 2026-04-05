@@ -1,0 +1,195 @@
+{
+  "machine": {
+    "id": "list_slot_007",
+    "name": "L主役は銭形4",
+    "manufacturer": "OLYMPIA",
+    "type": "AT",
+    "releaseDate": "2023-05-08",
+    "isActive": true,
+    "notes": "partial: 一撃公開のAT初当りとゼニガダッシュ突入率を採用。AT初当りを主軸に、微差ながら全設定比較値があるゼニガダッシュも低ウェイトで実装。DMM/一撃の機種URLと999G/1399ガッツ到達天井を反映。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4335",
+    "ichigekiUrl": "https://1geki.jp/slot/s_zenigata4/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ゼニガダッシュ",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ガッツ獲得特化ゾーン突入率。差は小さいため低ウェイトの補助判別。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "デカチャンス",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "AT中CZ回数入力用。全設定比較値が未整理のため今回は推測未使用。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「逮捕RUSH」初当り。主判別項目。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "今回の公開比較値では未採用。終了画面/ボイスと合わせて補助メモ用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 367.9,
+          "weight": 1.05,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 365.3,
+          "weight": 1.05,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 348.3,
+          "weight": 1.05,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 329.0,
+          "weight": 1.05,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 314.5,
+          "weight": 1.05,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 305.8,
+          "weight": 1.05,
+          "minSampleSize": 4,
+          "note": "AT初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 98.3,
+          "weight": 0.35,
+          "minSampleSize": 25,
+          "note": "ゼニガダッシュ突入率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 98.2,
+          "weight": 0.35,
+          "minSampleSize": 25,
+          "note": "ゼニガダッシュ突入率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 97.9,
+          "weight": 0.35,
+          "minSampleSize": 25,
+          "note": "ゼニガダッシュ突入率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 97.6,
+          "weight": 0.35,
+          "minSampleSize": 25,
+          "note": "ゼニガダッシュ突入率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 97.3,
+          "weight": 0.35,
+          "minSampleSize": 25,
+          "note": "ゼニガダッシュ突入率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 97.0,
+          "weight": 0.35,
+          "minSampleSize": 25,
+          "note": "ゼニガダッシュ突入率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大999G到達でAT当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "guts_ceiling",
+      "displayName": "ガッツ到達天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1399,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "1399ガッツ到達でAT当選。規定ガッツはAT終了後も一部持ち越し。",
+      "isEnabled": true
+    }
+  ]
+}

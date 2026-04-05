@@ -1,0 +1,165 @@
+{
+  "machine": {
+    "id": "dmm_slot_035",
+    "name": "デジスロ JAC INバージョン",
+    "manufacturer": null,
+    "type": "BONUS",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4433",
+    "ichigekiUrl": "https://1geki.jp/slot/s_digislo_jacin/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 10,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 11,
+      "notes": null
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 12,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 276.5,
+          "weight": 0.4,
+          "minSampleSize": 8,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 276.5,
+          "weight": 0.4,
+          "minSampleSize": 8,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 274.2,
+          "weight": 0.4,
+          "minSampleSize": 8,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 267.5,
+          "weight": 0.4,
+          "minSampleSize": 8,
+          "note": "設定1〜4のみ公開"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 420.1,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 346.8,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 312.1,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 267.5,
+          "weight": 1.05,
+          "minSampleSize": 5,
+          "note": "設定1〜4のみ公開"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 166.8,
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 153.8,
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 146.0,
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "設定1〜4のみ公開"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 133.7,
+          "weight": 0.75,
+          "minSampleSize": 10,
+          "note": "設定1〜4のみ公開"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

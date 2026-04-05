@@ -1,0 +1,207 @@
+{
+  "machine": {
+    "id": "list_slot_016",
+    "name": "Lダーリン・イン・ザ・フランキス",
+    "manufacturer": "スパイキー",
+    "type": "AT",
+    "releaseDate": "2025-08-04",
+    "isActive": true,
+    "notes": "partial: DMM/一撃公開のボーナス初当り・コネクトチャンス出現率・フランクス高確移行率を反映。終了画面やエンディング中カードも強いが、まずは総ゲーム数分母で扱いやすい3項目を採用。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4855",
+    "ichigekiUrl": "https://1geki.jp/slot/l_darlifra/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス初当り回数。主判別項目。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "コネクトチャンス",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "コネクトチャンス出現回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "フランクス高確移行",
+      "category": "SPECIAL",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "通常時からのフランクス高確移行回数。高設定ほど優遇。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 319.7,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "一撃/DMMのボーナス初当り確率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 315.9,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "一撃/DMMのボーナス初当り確率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 294.8,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "一撃/DMMのボーナス初当り確率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 286.9,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "一撃/DMMのボーナス初当り確率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 257.8,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "一撃/DMMのボーナス初当り確率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 229.5,
+          "weight": 1.0,
+          "minSampleSize": 5,
+          "note": "一撃/DMMのボーナス初当り確率"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 126.6,
+          "weight": 0.75,
+          "minSampleSize": 8,
+          "note": "一撃のコネクトチャンス出現率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 127.3,
+          "weight": 0.75,
+          "minSampleSize": 8,
+          "note": "一撃のコネクトチャンス出現率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 125.5,
+          "weight": 0.75,
+          "minSampleSize": 8,
+          "note": "一撃のコネクトチャンス出現率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 126.6,
+          "weight": 0.75,
+          "minSampleSize": 8,
+          "note": "一撃のコネクトチャンス出現率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 121.2,
+          "weight": 0.75,
+          "minSampleSize": 8,
+          "note": "一撃のコネクトチャンス出現率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 119.1,
+          "weight": 0.75,
+          "minSampleSize": 8,
+          "note": "一撃のコネクトチャンス出現率"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 219.6,
+          "weight": 0.9,
+          "minSampleSize": 8,
+          "note": "通常時からのフランクス高確移行率"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 219.3,
+          "weight": 0.9,
+          "minSampleSize": 8,
+          "note": "通常時からのフランクス高確移行率"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 207.5,
+          "weight": 0.9,
+          "minSampleSize": 8,
+          "note": "通常時からのフランクス高確移行率"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 207.0,
+          "weight": 0.9,
+          "minSampleSize": 8,
+          "note": "通常時からのフランクス高確移行率"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 181.3,
+          "weight": 0.9,
+          "minSampleSize": 8,
+          "note": "通常時からのフランクス高確移行率"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 170.8,
+          "weight": 0.9,
+          "minSampleSize": 8,
+          "note": "通常時からのフランクス高確移行率"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

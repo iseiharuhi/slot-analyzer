@@ -1,0 +1,13 @@
+﻿file_name,machine_id,machine_name,status,manufacturer,release_date,ceiling_rule_count,reference_group_count,dmm_url,ichigeki_url
+dmm_slot_016.json,dmm_slot_016,スマスロ 甲鉄城のカバネリ 海門（うなと）決戦,verified,Sammy,2026-03-02,2,2,https://p-town.dmm.com/machines/4930,https://1geki.jp/slot/l_kabaneri2/
+dmm_slot_018.json,dmm_slot_018,スマスロ 攻殻機動隊,verified,Sammy,2026-02-02,2,2,https://p-town.dmm.com/machines/4931,https://1geki.jp/slot/l_kokaku/
+dmm_slot_031.json,dmm_slot_031,パチスロ ケンガンアシュラ,verified,NET,2023-11-20,2,2,https://p-town.dmm.com/machines/4434,https://1geki.jp/slot/l_kengan_ashura/
+dmm_slot_034.json,dmm_slot_034,スマスロとある魔術の禁書目録,verified,藤商事,2023-11-06,1,3,https://p-town.dmm.com/machines/4445,https://1geki.jp/slot/l_toaru_index/
+code_geass_fukkatsu.json,code_geass_fukkatsu,コードギアス 復活のルルーシュ,verified,サミー,2024-02-05,1,3,https://p-town.dmm.com/machines/4477,https://1geki.jp/slot/l_codegeass/
+code_geass_cc_kallen.json,code_geass_cc_kallen,コードギアス 反逆のルルーシュ C.C.&Kallen ver.,verified,サミー,2023-06-05,0,3,https://p-town.dmm.com/machines/4342,https://1geki.jp/slot/s_codegeass3cc/
+rezero_season2.json,rezero_season2,スロット Re:ゼロから始める異世界生活 season2,verified,パオン・ディーピー,2024-10-21,3,1,https://p-town.dmm.com/machines/4658,https://1geki.jp/slot/l_rezero_season2/
+list_slot_004.json,list_slot_004,パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.,verified,Sammy,2023-06-05,0,3,https://p-town.dmm.com/machines/4342,https://1geki.jp/slot/s_codegeass3cc/
+list_slot_012.json,list_slot_012,L南国育ち,verified,オリンピアエステート,2024-03-04,3,2,https://p-town.dmm.com/machines/4512,https://1geki.jp/slot/l_nangoku_smart/
+dmm_slot_036.json,dmm_slot_036,L大工の源さん超夢源,verified,三洋,2023-12-04,1,2,https://p-town.dmm.com/machines/4428,https://1geki.jp/slot/l_d_gensantyomugen/
+dmm_slot_025.json,dmm_slot_025,Lラブ嬢3〜Wご指名はいかがですか？〜,verified,アムテックス,2023-12-04,1,2,https://p-town.dmm.com/machines/4458,https://1geki.jp/slot/l_lovejou3/
+revue_starlight.json,revue_starlight,L少女☆歌劇 レヴュースタァライト -The SLOT-,verified,オーイズミ,2025-03-03,1,1,https://p-town.dmm.com/machines/4706,https://1geki.jp/slot/l_revuestarlight/

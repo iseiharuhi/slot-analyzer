@@ -1,0 +1,172 @@
+{
+  "machine": {
+    "id": "dmm_slot_004",
+    "name": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
+    "manufacturer": "Sammy",
+    "type": "AT",
+    "releaseDate": "2026-05-11",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたAT初当たり・CZ(ジャッジメント)を主軸に反映。 DREAM JP BONUS・直撃/特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4981",
+    "ichigekiUrl": "https://1geki.jp/slot/syllabary/6/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ(ジャッジメント)",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "公開値あり。ATより差は小さいため補助指標。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当たり",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「ゴールデンボーナス」初当たり回数。主判別要素。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "DREAM JP BONUS",
+      "category": "BONUS",
+      "sortOrder": 20,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "プレミアム契機は出現率が重く、全設定比較値も不足しているため推測に未使用。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 30,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "公開比較値未確認のため推測には未使用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 337.7,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 333.3,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 326.6,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 316.4,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 311.4,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 303.4,
+          "weight": 0.95,
+          "minSampleSize": 3,
+          "note": "CZ確率。差はあるがATより弱いため補助指標。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 629.3,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 615.3,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 599.1,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 562.6,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 551.1,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 536.2,
+          "weight": 1.25,
+          "minSampleSize": 2,
+          "note": "AT確率。高設定ほど明確に軽く、この機種の主判別要素。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

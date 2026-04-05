@@ -1,0 +1,137 @@
+{
+  "id": "mahjong_monogatari",
+  "name": "L麻雀物語",
+  "manufacturer": null,
+  "type": "BONUS_PLUS_AT",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4777",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMM",
+      "url": "https://p-town.dmm.com/machines/4777",
+      "status": "present",
+      "site": "dmm"
+    }
+  ],
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "麻雀乱舞",
+      "category": "AT_CZ",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZ初当りのメモ用。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス初当りのメモ用。"
+    },
+    {
+      "key": "bonus_through_count",
+      "displayName": "ボーナススルー",
+      "category": "SPECIAL",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス経由AT非当選回数メモ。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 13,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT初当りのメモ用。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_game_ceiling",
+      "displayName": "CZ天井",
+      "ceilingType": "GAME",
+      "limitValue": 400,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "400G到達でCZ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "bonus_game_ceiling",
+      "displayName": "ボーナス天井",
+      "ceilingType": "GAME",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "999G到達でAT。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "bonus_through_ceiling",
+      "displayName": "ボーナススルー天井",
+      "ceilingType": "COUNT",
+      "limitValue": 6,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス6スルーで7回目のボーナスがAT契機。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "stepValue": 1,
+      "benefitText": "7回目のボーナスでAT",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

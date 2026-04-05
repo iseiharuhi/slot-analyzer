@@ -1,0 +1,165 @@
+{
+  "machine": {
+    "id": "list_slot_050",
+    "name": "ファミスタ回胴版!!",
+    "manufacturer": "UNIVERSAL BROS.",
+    "type": "BONUS",
+    "releaseDate": "2023-09-04",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたRB・合算ボーナス・BBを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": null,
+    "ichigekiUrl": "https://1geki.jp/slot/s_famista_kaido/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BB",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BBは補助指標。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "RB",
+      "category": "BONUS",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "RBを主判別に使用。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BB+RBの合算管理用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 303.4,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "公開ボーナス確率ベース。BBは補助指標。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 302.0,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "公開ボーナス確率ベース。BBは補助指標。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 300.6,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "公開ボーナス確率ベース。BBは補助指標。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 299.3,
+          "weight": 0.65,
+          "minSampleSize": 6,
+          "note": "公開ボーナス確率ベース。BBは補助指標。"
+        }
+      ]
+    },
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 455.1,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "公開ボーナス確率ベース。RBを主判別に使用。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 414.8,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "公開ボーナス確率ベース。RBを主判別に使用。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 381.0,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "公開ボーナス確率ベース。RBを主判別に使用。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 356.2,
+          "weight": 1.2,
+          "minSampleSize": 4,
+          "note": "公開ボーナス確率ベース。RBを主判別に使用。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 182.0,
+          "weight": 0.95,
+          "minSampleSize": 10,
+          "note": "公開ボーナス合算。序盤の補助指標。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 174.8,
+          "weight": 0.95,
+          "minSampleSize": 10,
+          "note": "公開ボーナス合算。序盤の補助指標。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 168.0,
+          "weight": 0.95,
+          "minSampleSize": 10,
+          "note": "公開ボーナス合算。序盤の補助指標。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 162.6,
+          "weight": 0.95,
+          "minSampleSize": 10,
+          "note": "公開ボーナス合算。序盤の補助指標。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}
