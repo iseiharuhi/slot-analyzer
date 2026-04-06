@@ -1,0 +1,136 @@
+﻿=== MACHINE AUDIT V4 ===
+files: 212
+
+[VALID COUNT] 212
+[BROKEN COUNT] 0
+
+[BROKEN FILES]
+none
+
+[EXACT DUPLICATE NAME GROUPS]
+none
+
+[NORMALIZED DUPLICATE NAME GROUPS]
+none
+
+[SIMILAR NAME CANDIDATES]
+----------------------------------------
+similarity: 0.9
+- A: dmm_slot_020.json
+  name: Lパチスロ 炎炎ノ消防隊2
+- B: fire_force.json
+  name: パチスロ 炎炎ノ消防隊
+----------------------------------------
+similarity: 0.875
+- A: ring_ni_kakero_1.json
+  name: リングにかけろ1
+- B: ring_v.json
+  name: Lリングにかけろ1 V
+----------------------------------------
+similarity: 0.867
+- A: bio_re2.json
+  name: スマスロ バイオハザード RE:2
+- B: dmm_slot_002.json
+  name: スマスロ バイオハザードRE:3
+----------------------------------------
+similarity: 0.857
+- A: akame_ga_kill.json
+  name: アカメが斬る！
+- B: akame_ga_kill_2.json
+  name: Lアカメが斬る！ 2
+----------------------------------------
+similarity: 0.857
+- A: l_ring_ni_kakero.json
+  name: Lリングにかけろ
+- B: ring_ni_kakero_1.json
+  name: リングにかけろ1
+----------------------------------------
+similarity: 0.84
+- A: list_slot_038.json
+  name: Re:ゼロから始める異世界生活 season2
+- B: rezero_season2.json
+  name: スロット Re:ゼロから始める異世界生活 season2
+----------------------------------------
+similarity: 0.774
+- A: code_geass_cc_kallen.json
+  name: コードギアス 反逆のルルーシュ C.C.&Kallen ver.
+- B: list_slot_004.json
+  name: パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver.
+----------------------------------------
+similarity: 0.75
+- A: l_ring_ni_kakero.json
+  name: Lリングにかけろ
+- B: ring_v.json
+  name: Lリングにかけろ1 V
+----------------------------------------
+similarity: 0.727
+- A: list_slot_040.json
+  name: Lルパン三世 大航海者の秘宝
+- B: lupin.json
+  name: ルパン三世 大航海者
+----------------------------------------
+similarity: 0.7
+- A: dmm_slot_025.json
+  name: Lラブ嬢3〜Wご指名はいかがですか？〜
+- B: lovejo3.json
+  name: ラブ嬢3～Wご指名はいかがですか？～
+----------------------------------------
+similarity: 0.7
+- A: list_slot_057.json
+  name: ニューキングハナハナ-30
+- B: list_slot_059.json
+  name: キングハナハナ-30
+----------------------------------------
+similarity: 0.7
+- A: warau_salesman_4.json
+  name: 笑ゥせぇるすまん4
+- B: warau_salesman_zesshou.json
+  name: 笑ゥせぇるすまん 絶笑
+----------------------------------------
+similarity: 0.667
+- A: motto_chibariyo_25.json
+  name: もっと！チバリヨ！25
+- B: motto_chibariyo_30.json
+  name: もっと！チバリヨ！30
+----------------------------------------
+similarity: 0.667
+- A: zenigata_5.json
+  name: L主役は銭形5
+- B: zenigata4.json
+  name: L主役は銭形4
+----------------------------------------
+similarity: 0.65
+- A: dmm_slot_038.json
+  name: パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART
+- B: eureka_zero.json
+  name: エウレカセブン HI-EVOLUTION ZERO TYPE-ART
+----------------------------------------
+similarity: 0.643
+- A: valvrave.json
+  name: L革命機ヴァルヴレイヴ
+- B: valvrave_2.json
+  name: Lパチスロ 革命機ヴァルヴレイヴ2
+----------------------------------------
+similarity: 0.636
+- A: dmm_slot_016.json
+  name: スマスロ 甲鉄城のカバネリ 海門（うなと）決戦
+- B: kabaneri_kaimon.json
+  name: スマスロ 甲鉄城のカバネリ うなと決戦
+----------------------------------------
+similarity: 0.636
+- A: dmm_slot_031.json
+  name: パチスロ ケンガンアシュラ
+- B: kengan.json
+  name: Lケンガンアシュラ
+----------------------------------------
+similarity: 0.588
+- A: list_slot_056.json
+  name: スマート沖スロ ニューキングハナハナ-30
+- B: list_slot_057.json
+  name: ニューキングハナハナ-30
+----------------------------------------
+similarity: 0.586
+- A: idolmaster.json
+  name: パチスロ アイドルマスター ミリオンライブ！
+- B: idolmaster_million_live.json
+  name: スマスロ アイドルマスター ミリオンライブ！ ネクストプロローグ

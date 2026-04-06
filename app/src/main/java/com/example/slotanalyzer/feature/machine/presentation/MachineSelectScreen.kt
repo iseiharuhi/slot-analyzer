@@ -43,7 +43,12 @@ fun MachineSelectScreen(
     val filteredMachines = state.machines.filter { machine ->
         normalizedQuery.isBlank() ||
             machine.name.contains(normalizedQuery, ignoreCase = true) ||
+            machine.rawName.contains(normalizedQuery, ignoreCase = true) ||
             machine.name.replace(" ", "").contains(
+                normalizedQuery.replace(" ", ""),
+                ignoreCase = true
+            ) ||
+            machine.rawName.replace(" ", "").contains(
                 normalizedQuery.replace(" ", ""),
                 ignoreCase = true
             )
@@ -122,6 +127,26 @@ fun MachineSelectScreen(
                             MaterialTheme.colorScheme.onSurfaceVariant
                         }
                     )
+                }
+            }
+
+            if (filteredMachines.isEmpty()) {
+                item(key = "empty_state") {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(
+                                color = MaterialTheme.colorScheme.surfaceVariant,
+                                shape = RoundedCornerShape(12.dp)
+                            )
+                            .padding(horizontal = 16.dp, vertical = 20.dp)
+                    ) {
+                        Text(
+                            text = "該当する機種がありません",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
                 }
             }
         }

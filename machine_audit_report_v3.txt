@@ -1,0 +1,55 @@
+﻿=== MACHINE AUDIT V3 ===
+files: 219
+
+[VALID COUNT] 219
+[BROKEN COUNT] 0
+
+[BROKEN FILES]
+none
+
+[EMPTY NAME FILES]
+none
+
+[EXACT DUPLICATE NAME GROUPS]
+none
+
+[NORMALIZED DUPLICATE NAME GROUPS]
+----------------------------------------
+normalized: lリングにかけろ1v
+count: 2
+- file: dmm_slot_024.json
+  name: L リングにかけろ1 V
+  id: dmm_slot_024
+  structure: nested
+  score: 100
+- file: ring_v.json
+  name: Lリングにかけろ1 V
+  id: ring_v
+  structure: nested
+  score: 100
+----------------------------------------
+normalized: スマスロとある魔術の禁書目録
+count: 2
+- file: dmm_slot_034.json
+  name: スマスロとある魔術の禁書目録
+  id: dmm_slot_034
+  structure: nested
+  score: 100
+- file: toaru.json
+  name: スマスロ とある魔術の禁書目録
+  id: toaru
+  structure: nested
+  score: 100
+----------------------------------------
+normalized: スマスロモンキーターンv
+count: 2
+- file: dmm_slot_027.json
+  name: スマスロモンキーターンV
+  id: dmm_slot_027
+  structure: nested
+  score: 100
+- file: monkey_turn_v.json
+  name: スマスロ モンキーターンV
+  id: monkey_turn_v
+  structure: nested
+  score: 100

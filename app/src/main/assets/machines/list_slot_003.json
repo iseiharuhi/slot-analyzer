@@ -1,219 +1,219 @@
-{
-  "machine": {
-    "id": "list_slot_003",
-    "name": "スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ",
-    "manufacturer": "Sammy",
-    "type": "AT",
-    "releaseDate": "2024-02-05",
-    "isActive": true,
-    "notes": "DMM機種ページを再監査。高設定ほど強い要素はCZ確率、BIG初当り確率、AT直撃確率、通常C選択率。現行UIでは通常時ボーナス初当り・AT初当り・AT直撃の3軸で実戦入力しやすさを優先し、CZと通常Cはメモ運用前提とした。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4477",
-    "ichigekiUrl": "https://1geki.jp/slot/l_codegeass/"
-  },
-  "counterDefinitions": [
-    {
-      "key": "total_games",
-      "displayName": "総ゲーム数",
-      "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
-      "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": false,
-      "notes": "全計算の分母"
-    },
-    {
-      "key": "bonus_count",
-      "displayName": "通常時ボーナス初当り",
-      "category": "BONUS",
-      "sortOrder": 2,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "通常時のボーナス初当り回数。主判別項目。"
-    },
-    {
-      "key": "at_count",
-      "displayName": "AT初当り",
-      "category": "AT_CZ",
-      "sortOrder": 3,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "AT初当り回数。ボーナス経由を含むトータル。"
-    },
-    {
-      "key": "direct_hit_count",
-      "displayName": "AT直撃",
-      "category": "SPECIAL",
-      "sortOrder": 4,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
-      "notes": "ハズレ/レア役契機を均したAT直撃当選回数。強い補助要素。"
-    }
-  ],
-  "settingReferenceValues": [
-    {
-      "counterKey": "bonus_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 282.9,
-          "weight": 1,
-          "minSampleSize": 6,
-          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 278.1,
-          "weight": 1,
-          "minSampleSize": 6,
-          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 260.6,
-          "weight": 1,
-          "minSampleSize": 6,
-          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 244.1,
-          "weight": 1,
-          "minSampleSize": 6,
-          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 229.2,
-          "weight": 1,
-          "minSampleSize": 6,
-          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 217.5,
-          "weight": 1,
-          "minSampleSize": 6,
-          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
-        }
-      ]
-    },
-    {
-      "counterKey": "at_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 439.5,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 432.1,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 403.3,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 355.9,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 320.3,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 296.1,
-          "weight": 1.0,
-          "minSampleSize": 6,
-          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
-        }
-      ]
-    },
-    {
-      "counterKey": "direct_hit_count",
-      "values": [
-        {
-          "settingNo": 1,
-          "denominatorValue": 6573.7,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
-        },
-        {
-          "settingNo": 2,
-          "denominatorValue": 5904.7,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
-        },
-        {
-          "settingNo": 3,
-          "denominatorValue": 4228.5,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
-        },
-        {
-          "settingNo": 4,
-          "denominatorValue": 3124.5,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
-        },
-        {
-          "settingNo": 5,
-          "denominatorValue": 2386.6,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
-        },
-        {
-          "settingNo": 6,
-          "denominatorValue": 1991.5,
-          "weight": 0.95,
-          "minSampleSize": 2,
-          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
-        }
-      ]
-    }
-  ],
-  "ceilingRules": [
-    {
-      "ruleKey": "normal_game_ceiling",
-      "displayName": "通常時天井",
-      "ceilingType": "GAME_COUNT",
-      "limitValue": 1000,
-      "unit": "G",
-      "resetOnHit": true,
-      "requiresResetFlag": false,
-      "description": "通常時1000G+αでボーナス当選。通常時ゲーム数はAT当選までリセットされない。",
-      "isEnabled": true
-    }
-  ]
+﻿{
+    "machine":  {
+                    "id":  "list_slot_003",
+                    "name":  "スマスロ コードギアス 反逆のルルーシュ／復活のルルーシュ",
+                    "manufacturer":  "Sammy",
+                    "type":  "AT",
+                    "releaseDate":  "2024-02-05",
+                    "isActive":  true,
+                    "notes":  "DMM機種ページを再監査。高設定ほど強い要素はCZ確率、BIG初当り確率、AT直撃確率、通常C選択率。現行UIでは通常時ボーナス初当り・AT初当り・AT直撃の3軸で実戦入力しやすさを優先し、CZと通常Cはメモ運用前提とした。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4477",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_codegeass/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "通常時ボーナス初当り",
+                                   "category":  "BONUS",
+                                   "sortOrder":  2,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "通常時のボーナス初当り回数。主判別項目。"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "AT初当り",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  3,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "AT初当り回数。ボーナス経由を含むトータル。"
+                               },
+                               {
+                                   "key":  "direct_hit_count",
+                                   "displayName":  "AT直撃",
+                                   "category":  "SPECIAL",
+                                   "sortOrder":  4,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "ハズレ/レア役契機を均したAT直撃当選回数。強い補助要素。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "bonus_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  282.9,
+                                                          "weight":  1,
+                                                          "minSampleSize":  6,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  278.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  6,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  260.6,
+                                                          "weight":  1,
+                                                          "minSampleSize":  6,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  244.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  6,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  229.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  6,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  217.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  6,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  439.5,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  6,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  432.1,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  6,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  403.3,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  6,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  355.9,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  6,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  320.3,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  6,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  296.1,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  6,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "direct_hit_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  6573.7,
+                                                          "weight":  0.95,
+                                                          "minSampleSize":  2,
+                                                          "note":  "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  5904.7,
+                                                          "weight":  0.95,
+                                                          "minSampleSize":  2,
+                                                          "note":  "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  4228.5,
+                                                          "weight":  0.95,
+                                                          "minSampleSize":  2,
+                                                          "note":  "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  3124.5,
+                                                          "weight":  0.95,
+                                                          "minSampleSize":  2,
+                                                          "note":  "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  2386.6,
+                                                          "weight":  0.95,
+                                                          "minSampleSize":  2,
+                                                          "note":  "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  1991.5,
+                                                          "weight":  0.95,
+                                                          "minSampleSize":  2,
+                                                          "note":  "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "normal_game_ceiling",
+                             "displayName":  "通常時天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  1000,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時1000G+αでボーナス当選。通常時ゲーム数はAT当選までリセットされない。",
+                             "isEnabled":  true
+                         }
+                     ]
 }

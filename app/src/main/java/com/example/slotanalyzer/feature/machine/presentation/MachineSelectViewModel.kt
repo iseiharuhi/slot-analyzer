@@ -18,7 +18,8 @@ import kotlinx.coroutines.launch
 
 data class MachineItemUiModel(
     val id: String,
-    val name: String
+    val name: String,
+    val rawName: String
 )
 
 data class MachineSelectUiState(
@@ -44,14 +45,25 @@ class MachineSelectViewModel @Inject constructor(
                 appSettingRepository.observeUserPreferences()
             ) { machines, preferences ->
                 val filtered = machines
-                    .filter { machine -> matchesFilter(machine, preferences.selectedMachineFilters) }
+                    .filter { machine ->
+                        matchesFilter(machine, preferences.selectedMachineFilters)
+                    }
+                    .sortedWith(machineComparator(preferences.machineSortOrder))
+
+                val deduplicated = filtered
+                    .groupBy { machine -> normalizeMachineKey(machine.name) }
+                    .values
+                    .map { candidates ->
+                        candidates.minWithOrNull(machineDisplayComparator()) ?: candidates.first()
+                    }
                     .sortedWith(machineComparator(preferences.machineSortOrder))
 
                 MachineSelectUiState(
-                    machines = filtered.map {
+                    machines = deduplicated.map { machine ->
                         MachineItemUiModel(
-                            id = it.id,
-                            name = it.name
+                            id = machine.id,
+                            name = buildDisplayName(machine.name),
+                            rawName = machine.name
                         )
                     },
                     sortOrderLabel = when (preferences.machineSortOrder) {
@@ -90,9 +102,48 @@ class MachineSelectViewModel @Inject constructor(
 
     private fun machineComparator(sortOrder: String): Comparator<Machine> {
         return when (sortOrder) {
-            MachineSortOrder.NAME -> compareBy(String.CASE_INSENSITIVE_ORDER) { it.name }
-            else -> compareByDescending<Machine> { it.releaseDate.orEmpty() }
-                .thenBy(String.CASE_INSENSITIVE_ORDER) { it.name }
+            MachineSortOrder.NAME -> {
+                compareBy<Machine, String>(String.CASE_INSENSITIVE_ORDER) { machine ->
+                    buildDisplayName(machine.name)
+                }.thenBy(String.CASE_INSENSITIVE_ORDER) { machine ->
+                    machine.name
+                }
+            }
+            else -> {
+                compareByDescending<Machine> { machine ->
+                    machine.releaseDate.orEmpty()
+                }.thenBy(String.CASE_INSENSITIVE_ORDER) { machine ->
+                    buildDisplayName(machine.name)
+                }.thenBy(String.CASE_INSENSITIVE_ORDER) { machine ->
+                    machine.name
+                }
+            }
+        }
+    }
+
+    private fun machineDisplayComparator(): Comparator<Machine> {
+        return compareByDescending<Machine> { machine ->
+            when {
+                machine.name.contains("うなと") -> 100
+                machine.name.contains("海門") -> 90
+                else -> displayPriority(machine.name)
+            }
+        }.thenByDescending { machine ->
+            machine.releaseDate.orEmpty()
+        }.thenBy(String.CASE_INSENSITIVE_ORDER) { machine ->
+            machine.name
+        }
+    }
+
+    private fun displayPriority(name: String): Int {
+        val trimmed = name.trim()
+        return when {
+            trimmed.startsWith("dmm_", ignoreCase = true) -> 0
+            trimmed.startsWith("list_", ignoreCase = true) -> 0
+            trimmed.startsWith("スマスロ") -> 3
+            trimmed.startsWith("L") -> 2
+            trimmed.startsWith("パチスロ") || trimmed.startsWith("スロット") -> 1
+            else -> 4
         }
     }
 
@@ -115,17 +166,28 @@ class MachineSelectViewModel @Inject constructor(
         val type = machine.type.orEmpty().uppercase()
         val name = machine.name
         return type in setOf("AT", "ART", "BT", "A+AT", "A+ART", "ST", "BONUS+AT") ||
-            name.startsWith("L") ||
-            name.contains("スマスロ") ||
-            name.contains("BT")
+                name.startsWith("L") ||
+                name.contains("スマスロ") ||
+                name.contains("BT")
     }
 
     private fun isNormalMachine(machine: Machine): Boolean {
         val type = machine.type.orEmpty().uppercase()
         val name = machine.name
         return type in setOf("A", "A+RT", "A+AT", "BONUS") ||
-            listOf("ジャグラー", "ハナビ", "バーサス", "サンダーV", "クランキー", "アレックス", "ディスクアップ", "ひぐらし", "ファミスタ")
-                .any { keyword -> name.contains(keyword) }
+                listOf(
+                    "ジャグラー",
+                    "ハナビ",
+                    "バーサス",
+                    "サンダーV",
+                    "クランキー",
+                    "アレックス",
+                    "ディスクアップ",
+                    "ひぐらし",
+                    "ファミスタ"
+                ).any { keyword ->
+                    name.contains(keyword)
+                }
     }
 
     private fun isOkinawaMachine(machine: Machine): Boolean {
@@ -138,7 +200,9 @@ class MachineSelectViewModel @Inject constructor(
             "シオサイ",
             "ちゅら",
             "スイカバージョン"
-        ).any { keyword -> name.contains(keyword) }
+        ).any { keyword ->
+            name.contains(keyword)
+        }
     }
 
     private fun buildFilterLabel(filters: Set<String>): String {
@@ -153,5 +217,39 @@ class MachineSelectViewModel @Inject constructor(
         }
 
         return labels.joinToString("・").ifBlank { "すべて表示" }
+    }
+
+    private fun buildDisplayName(name: String): String {
+        return name
+            .trim()
+            .removePrefix("スマスロ ")
+            .removePrefix("スマスロ")
+            .removePrefix("Lパチスロ ")
+            .removePrefix("Lパチスロ")
+            .removePrefix("Lスロット ")
+            .removePrefix("Lスロット")
+            .removePrefix("パチスロ ")
+            .removePrefix("パチスロ")
+            .removePrefix("スロット ")
+            .removePrefix("スロット")
+            .removePrefix("L ")
+            .removePrefix("L")
+            .replace("海門（うなと）決戦", "うなと決戦")
+            .replace("海門(うなと)決戦", "うなと決戦")
+            .replace("  ", " ")
+            .trim()
+    }
+
+    private fun normalizeMachineKey(name: String): String {
+        val displayName = buildDisplayName(name)
+            .lowercase()
+            .replace(" ", "")
+            .replace("　", "")
+            .replace("〜", "～")
+
+        return when {
+            displayName.contains("甲鉄城のカバネリ") -> "甲鉄城のカバネリ"
+            else -> displayName
+        }
     }
 }
