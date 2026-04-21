@@ -14,13 +14,13 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-
 data class SettingsUiState(
     val themeMode: String = ThemeMode.SYSTEM,
     val showCeiling: Boolean = true,
     val showExternalLinks: Boolean = true,
     val machineSortOrder: String = MachineSortOrder.RELEASE_DATE,
-    val selectedMachineFilters: Set<String> = MachineFilterKeys.defaultSelected
+    val selectedMachineFilters: Set<String> = MachineFilterKeys.defaultSelected,
+    val hideUpcomingMachines: Boolean = false
 ) {
     val isAllTypesSelected: Boolean
         get() = selectedMachineFilters.containsAll(MachineFilterKeys.defaultSelected)
@@ -42,7 +42,8 @@ class SettingsViewModel @Inject constructor(
                     showCeiling = preferences.showCeiling,
                     showExternalLinks = preferences.showExternalLinks,
                     machineSortOrder = preferences.machineSortOrder,
-                    selectedMachineFilters = preferences.selectedMachineFilters
+                    selectedMachineFilters = preferences.selectedMachineFilters,
+                    hideUpcomingMachines = preferences.hideUpcomingMachines
                 )
             }
         }
@@ -69,6 +70,12 @@ class SettingsViewModel @Inject constructor(
     fun setMachineSortOrder(sortOrder: String) {
         viewModelScope.launch {
             appSettingRepository.setMachineSortOrder(sortOrder)
+        }
+    }
+
+    fun setHideUpcomingMachines(hide: Boolean) {
+        viewModelScope.launch {
+            appSettingRepository.setHideUpcomingMachines(hide)
         }
     }
 

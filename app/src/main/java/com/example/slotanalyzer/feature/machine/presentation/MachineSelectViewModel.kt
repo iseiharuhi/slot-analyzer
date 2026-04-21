@@ -9,6 +9,8 @@ import com.example.slotanalyzer.feature.machine.domain.model.Machine
 import com.example.slotanalyzer.feature.machine.domain.usecase.ObserveMachinesUseCase
 import com.example.slotanalyzer.feature.session.domain.usecase.StartPlaySessionUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -46,7 +48,8 @@ class MachineSelectViewModel @Inject constructor(
             ) { machines, preferences ->
                 val filtered = machines
                     .filter { machine ->
-                        matchesFilter(machine, preferences.selectedMachineFilters)
+                        matchesFilter(machine, preferences.selectedMachineFilters) &&
+                            matchesReleaseVisibility(machine, preferences.hideUpcomingMachines)
                     }
                     .sortedWith(machineComparator(preferences.machineSortOrder))
 
@@ -70,7 +73,10 @@ class MachineSelectViewModel @Inject constructor(
                         MachineSortOrder.NAME -> "名前順"
                         else -> "リリース日順"
                     },
-                    filterLabel = buildFilterLabel(preferences.selectedMachineFilters)
+                    filterLabel = buildFilterLabel(
+                        filters = preferences.selectedMachineFilters,
+                        hideUpcomingMachines = preferences.hideUpcomingMachines
+                    )
                 )
             }.collect { state ->
                 _uiState.value = state
@@ -162,6 +168,27 @@ class MachineSelectViewModel @Inject constructor(
         }
     }
 
+    private fun matchesReleaseVisibility(machine: Machine, hideUpcomingMachines: Boolean): Boolean {
+        if (!hideUpcomingMachines) {
+            return true
+        }
+
+        val releaseDate = machine.releaseDate?.trim().orEmpty()
+        if (releaseDate.isBlank()) {
+            return true
+        }
+
+        val parsedDate = parseReleaseDate(releaseDate) ?: return true
+        return !parsedDate.isAfter(LocalDate.now())
+    }
+
+    private fun parseReleaseDate(value: String): LocalDate? {
+        val normalized = value.trim().replace('/', '-')
+        return runCatching {
+            LocalDate.parse(normalized, DateTimeFormatter.ISO_LOCAL_DATE)
+        }.getOrNull()
+    }
+
     private fun isAtSmartMachine(machine: Machine): Boolean {
         val type = machine.type.orEmpty().uppercase()
         val name = machine.name
@@ -205,15 +232,19 @@ class MachineSelectViewModel @Inject constructor(
         }
     }
 
-    private fun buildFilterLabel(filters: Set<String>): String {
-        if (filters.isEmpty() || filters.containsAll(MachineFilterKeys.defaultSelected)) {
-            return "すべて表示"
-        }
-
+    private fun buildFilterLabel(filters: Set<String>, hideUpcomingMachines: Boolean): String {
         val labels = buildList {
-            if (filters.contains(MachineFilterKeys.AT_SMART)) add("AT / スマスロ")
-            if (filters.contains(MachineFilterKeys.NORMAL)) add("ノーマル")
-            if (filters.contains(MachineFilterKeys.OKINAWA)) add("沖スロ / ハナハナ")
+            if (filters.isEmpty() || filters.containsAll(MachineFilterKeys.defaultSelected)) {
+                add("すべて表示")
+            } else {
+                if (filters.contains(MachineFilterKeys.AT_SMART)) add("AT / スマスロ")
+                if (filters.contains(MachineFilterKeys.NORMAL)) add("ノーマル")
+                if (filters.contains(MachineFilterKeys.OKINAWA)) add("沖スロ / ハナハナ")
+            }
+
+            if (hideUpcomingMachines) {
+                add("導入前非表示")
+            }
         }
 
         return labels.joinToString("・").ifBlank { "すべて表示" }

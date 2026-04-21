@@ -27,6 +27,7 @@ class AppSettingRepositoryImpl @Inject constructor(
                     csvValue = map[KEY_SELECTED_MACHINE_FILTERS],
                     legacyValue = map[KEY_LEGACY_MACHINE_FILTER]
                 ),
+                hideUpcomingMachines = (map[KEY_HIDE_UPCOMING_MACHINES] ?: "false").toBoolean(),
                 adsRemoved = (map[KEY_ADS_REMOVED] ?: "false").toBoolean(),
                 defaultMachineId = map[KEY_DEFAULT_MACHINE_ID],
                 historySortOrder = map[KEY_HISTORY_SORT_ORDER] ?: "date_desc"
@@ -56,6 +57,10 @@ class AppSettingRepositoryImpl @Inject constructor(
             .toSet()
             .ifEmpty { MachineFilterKeys.defaultSelected }
         upsert(KEY_SELECTED_MACHINE_FILTERS, normalized.joinToString(","))
+    }
+
+    override suspend fun setHideUpcomingMachines(hide: Boolean) {
+        upsert(KEY_HIDE_UPCOMING_MACHINES, hide.toString())
     }
 
     private suspend fun upsert(key: String, value: String) {
@@ -99,6 +104,7 @@ class AppSettingRepositoryImpl @Inject constructor(
         const val KEY_MACHINE_SORT_ORDER = "machine_sort_order"
         const val KEY_SELECTED_MACHINE_FILTERS = "selected_machine_filters"
         const val KEY_LEGACY_MACHINE_FILTER = "machine_filter"
+        const val KEY_HIDE_UPCOMING_MACHINES = "hide_upcoming_machines"
         const val KEY_ADS_REMOVED = "ads_removed"
         const val KEY_DEFAULT_MACHINE_ID = "default_machine_id"
         const val KEY_HISTORY_SORT_ORDER = "history_sort_order"

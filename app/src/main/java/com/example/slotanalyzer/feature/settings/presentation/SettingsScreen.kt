@@ -1,38 +1,48 @@
 package com.example.slotanalyzer.feature.settings.presentation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Switch
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.slotanalyzer.domain.model.MachineFilterKeys
 import com.example.slotanalyzer.domain.model.MachineSortOrder
 import com.example.slotanalyzer.domain.model.ThemeMode
+import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,70 +71,63 @@ fun SettingsScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(16.dp)
+                .padding(horizontal = 16.dp, vertical = 12.dp)
                 .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             SettingsSectionCard(title = "表示設定") {
-                Text(
-                    text = "テーマ",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
-                SettingsRadioRow(
-                    label = "端末設定に従う",
-                    selected = state.themeMode == ThemeMode.SYSTEM,
-                    onClick = { viewModel.setThemeMode(ThemeMode.SYSTEM) }
-                )
-                SettingsRadioRow(
-                    label = "ライト",
-                    selected = state.themeMode == ThemeMode.LIGHT,
-                    onClick = { viewModel.setThemeMode(ThemeMode.LIGHT) }
-                )
-                SettingsRadioRow(
-                    label = "ダーク",
-                    selected = state.themeMode == ThemeMode.DARK,
-                    onClick = { viewModel.setThemeMode(ThemeMode.DARK) }
+                SettingsSelectorField(
+                    label = "テーマ",
+                    value = when (state.themeMode) {
+                        ThemeMode.LIGHT -> "ライト"
+                        ThemeMode.DARK -> "ダーク"
+                        else -> "端末設定に従う"
+                    },
+                    options = listOf(
+                        SelectorOption("端末設定に従う") { viewModel.setThemeMode(ThemeMode.SYSTEM) },
+                        SelectorOption("ライト") { viewModel.setThemeMode(ThemeMode.LIGHT) },
+                        SelectorOption("ダーク") { viewModel.setThemeMode(ThemeMode.DARK) }
+                    )
                 )
 
-                SettingsSwitchRow(
-                    label = "天井情報を表示",
-                    checked = state.showCeiling,
-                    onCheckedChange = viewModel::setShowCeiling
+                SettingsSelectorField(
+                    label = "天井情報",
+                    value = if (state.showCeiling) "表示" else "非表示",
+                    options = listOf(
+                        SelectorOption("表示") { viewModel.setShowCeiling(true) },
+                        SelectorOption("非表示") { viewModel.setShowCeiling(false) }
+                    )
                 )
-                SettingsSwitchRow(
-                    label = "外部リンクを表示",
-                    checked = state.showExternalLinks,
-                    onCheckedChange = viewModel::setShowExternalLinks
+
+                SettingsSelectorField(
+                    label = "外部リンク",
+                    value = if (state.showExternalLinks) "表示" else "非表示",
+                    options = listOf(
+                        SelectorOption("表示") { viewModel.setShowExternalLinks(true) },
+                        SelectorOption("非表示") { viewModel.setShowExternalLinks(false) }
+                    )
                 )
             }
 
             SettingsSectionCard(title = "機種一覧") {
-                Text(
-                    text = "並び順",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    modifier = Modifier.padding(bottom = 8.dp)
-                )
-                SettingsRadioRow(
-                    label = "リリース日順",
-                    selected = state.machineSortOrder == MachineSortOrder.RELEASE_DATE,
-                    onClick = { viewModel.setMachineSortOrder(MachineSortOrder.RELEASE_DATE) }
-                )
-                SettingsRadioRow(
-                    label = "名前順",
-                    selected = state.machineSortOrder == MachineSortOrder.NAME,
-                    onClick = { viewModel.setMachineSortOrder(MachineSortOrder.NAME) }
+                SettingsSelectorField(
+                    label = "並び順",
+                    value = if (state.machineSortOrder == MachineSortOrder.NAME) "名前順" else "リリース日順",
+                    options = listOf(
+                        SelectorOption("リリース日順") {
+                            viewModel.setMachineSortOrder(MachineSortOrder.RELEASE_DATE)
+                        },
+                        SelectorOption("名前順") { viewModel.setMachineSortOrder(MachineSortOrder.NAME) }
+                    )
                 )
 
                 Text(
                     text = "表示対象",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
-                    modifier = Modifier.padding(top = 12.dp, bottom = 8.dp)
+                    modifier = Modifier.padding(top = 6.dp, bottom = 2.dp)
                 )
-                SettingsSwitchRow(
+                SettingsCheckboxRow(
                     label = "すべて表示",
                     checked = state.isAllTypesSelected,
                     onCheckedChange = viewModel::setShowAllTypes
@@ -149,21 +152,28 @@ fun SettingsScreen(
     }
 }
 
+private data class SelectorOption(
+    val label: String,
+    val onSelect: () -> Unit
+)
+
 @Composable
 private fun SettingsSectionCard(
     title: String,
     content: @Composable () -> Unit
 ) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+    ) {
         Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
                 text = title,
                 style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 8.dp)
+                fontWeight = FontWeight.Bold
             )
             content()
         }
@@ -171,7 +181,109 @@ private fun SettingsSectionCard(
 }
 
 @Composable
-private fun SettingsRadioRow(
+private fun SettingsSelectorField(
+    label: String,
+    value: String,
+    options: List<SelectorOption>
+) {
+    var expanded by remember { mutableStateOf(false) }
+
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold
+        )
+        CompactSelectorBox(
+            value = value,
+            onClick = { expanded = true }
+        )
+    }
+
+    if (expanded) {
+        CompactSelectionDialog(
+            title = label,
+            selectedValue = value,
+            options = options,
+            onDismiss = { expanded = false }
+        )
+    }
+}
+
+@Composable
+private fun CompactSelectorBox(
+    value: String,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .clickable(onClick = onClick)
+            .padding(horizontal = 12.dp, vertical = 9.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(
+            text = value,
+            modifier = Modifier.weight(1f),
+            style = MaterialTheme.typography.bodyLarge
+        )
+        Icon(
+            imageVector = Icons.Filled.ArrowDropDown,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+@Composable
+private fun CompactSelectionDialog(
+    title: String,
+    selectedValue: String,
+    options: List<SelectorOption>,
+    onDismiss: () -> Unit
+) {
+    Dialog(onDismissRequest = onDismiss) {
+        Surface(
+            shape = RoundedCornerShape(16.dp),
+            color = MaterialTheme.colorScheme.surface,
+            tonalElevation = 2.dp,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(
+                modifier = Modifier.padding(vertical = 8.dp)
+            ) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp)
+                )
+                options.forEachIndexed { index, option ->
+                    CompactDialogOptionRow(
+                        label = option.label,
+                        selected = option.label == selectedValue,
+                        onClick = {
+                            option.onSelect()
+                            onDismiss()
+                        }
+                    )
+                    if (index != options.lastIndex) {
+                        HorizontalDivider(
+                            modifier = Modifier.padding(horizontal = 12.dp),
+                            color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun CompactDialogOptionRow(
     label: String,
     selected: Boolean,
     onClick: () -> Unit
@@ -180,36 +292,30 @@ private fun SettingsRadioRow(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(vertical = 4.dp),
+            .padding(horizontal = 16.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        RadioButton(
-            selected = selected,
-            onClick = onClick
+        Text(
+            text = label,
+            modifier = Modifier.weight(1f),
+            style = MaterialTheme.typography.bodyLarge
         )
-        Text(text = label, style = MaterialTheme.typography.bodyLarge)
-    }
-}
-
-@Composable
-private fun SettingsSwitchRow(
-    label: String,
-    checked: Boolean,
-    onCheckedChange: (Boolean) -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        Text(text = label, style = MaterialTheme.typography.bodyLarge)
-        Switch(
-            checked = checked,
-            onCheckedChange = onCheckedChange
-        )
+        if (selected) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(999.dp))
+                    .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.14f))
+                    .padding(horizontal = 8.dp, vertical = 3.dp)
+            ) {
+                Text(
+                    text = "選択中",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.SemiBold
+                )
+            }
+        }
     }
 }
 
@@ -222,8 +328,9 @@ private fun SettingsCheckboxRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
             .clickable { onCheckedChange(!checked) }
-            .padding(vertical = 4.dp),
+            .padding(horizontal = 2.dp, vertical = 2.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {

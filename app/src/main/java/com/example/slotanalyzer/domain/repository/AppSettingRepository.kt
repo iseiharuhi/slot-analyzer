@@ -10,4 +10,5 @@ interface AppSettingRepository {
     suspend fun setShowExternalLinks(show: Boolean)
     suspend fun setMachineSortOrder(sortOrder: String)
     suspend fun setSelectedMachineFilters(filters: Set<String>)
+    suspend fun setHideUpcomingMachines(hide: Boolean)
 }
