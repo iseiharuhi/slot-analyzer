@@ -2,9 +2,9 @@ package com.example.slotanalyzer.domain.model
 
 data class UserPreferences(
     val themeMode: String = ThemeMode.SYSTEM,
-    val keepScreenOn: Boolean = false,
     val showCeiling: Boolean = true,
     val showExternalLinks: Boolean = true,
+    val keepScreenOn: Boolean = false,
     val machineSortOrder: String = MachineSortOrder.RELEASE_DATE,
     val selectedMachineFilters: Set<String> = MachineFilterKeys.defaultSelected,
     val hideUpcomingMachines: Boolean = false,

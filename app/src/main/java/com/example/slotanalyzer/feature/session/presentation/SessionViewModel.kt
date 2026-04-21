@@ -62,6 +62,7 @@ data class SessionUiState(
     val machineId: String = "",
     val machineName: String = "",
     val machineTypeText: String = "",
+    val coinUnitText: String = "",
     val settingStageText: String = "",
     val dmmUrl: String? = null,
     val ichigekiUrl: String? = null,
@@ -163,6 +164,7 @@ class SessionViewModel @Inject constructor(
             machineId = session.machineId,
             machineName = machine?.name.orEmpty(),
             machineTypeText = machine?.type.orEmpty(),
+            coinUnitText = machine?.coinUnit?.let { formatCoinUnit(it) }.orEmpty(),
             settingStageText = SettingSpecFormatter.formatStageLabel(machine?.settingReferenceValues.orEmpty().map { it.settingNo }),
             dmmUrl = machine?.dmmUrl,
             ichigekiUrl = machine?.ichigekiUrl,
@@ -437,4 +439,13 @@ class SessionViewModel @Inject constructor(
     companion object {
         private const val TOTAL_GAMES_KEY = "total_games"
     }
+
+    private fun formatCoinUnit(value: Double): String {
+        return if (value % 1.0 == 0.0) {
+            value.toInt().toString()
+        } else {
+            value.toString()
+        }
+    }
+
 }

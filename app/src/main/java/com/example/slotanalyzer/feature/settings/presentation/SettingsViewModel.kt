@@ -16,9 +16,9 @@ import kotlinx.coroutines.launch
 
 data class SettingsUiState(
     val themeMode: String = ThemeMode.SYSTEM,
-    val keepScreenOn: Boolean = false,
     val showCeiling: Boolean = true,
     val showExternalLinks: Boolean = true,
+    val keepScreenOn: Boolean = false,
     val machineSortOrder: String = MachineSortOrder.RELEASE_DATE,
     val selectedMachineFilters: Set<String> = MachineFilterKeys.defaultSelected,
     val hideUpcomingMachines: Boolean = false
@@ -40,9 +40,9 @@ class SettingsViewModel @Inject constructor(
             appSettingRepository.observeUserPreferences().collect { preferences ->
                 _uiState.value = SettingsUiState(
                     themeMode = preferences.themeMode,
-                    keepScreenOn = preferences.keepScreenOn,
                     showCeiling = preferences.showCeiling,
                     showExternalLinks = preferences.showExternalLinks,
+                    keepScreenOn = preferences.keepScreenOn,
                     machineSortOrder = preferences.machineSortOrder,
                     selectedMachineFilters = preferences.selectedMachineFilters,
                     hideUpcomingMachines = preferences.hideUpcomingMachines
@@ -57,12 +57,6 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
-    fun setKeepScreenOn(enabled: Boolean) {
-        viewModelScope.launch {
-            appSettingRepository.setKeepScreenOn(enabled)
-        }
-    }
-
     fun setShowCeiling(show: Boolean) {
         viewModelScope.launch {
             appSettingRepository.setShowCeiling(show)
@@ -72,6 +66,12 @@ class SettingsViewModel @Inject constructor(
     fun setShowExternalLinks(show: Boolean) {
         viewModelScope.launch {
             appSettingRepository.setShowExternalLinks(show)
+        }
+    }
+
+    fun setKeepScreenOn(enabled: Boolean) {
+        viewModelScope.launch {
+            appSettingRepository.setKeepScreenOn(enabled)
         }
     }
 

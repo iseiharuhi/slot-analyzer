@@ -15,6 +15,7 @@ class MasterRemoteMapper @Inject constructor() {
             name = detail.name,
             manufacturer = detail.manufacturer,
             type = detail.type,
+            coinUnit = detail.coinUnit,
             releaseDate = detail.releaseDate,
             isActive = detail.isActive,
             notes = buildNotes(detail),

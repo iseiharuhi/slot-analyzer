@@ -18,6 +18,7 @@ class MachineEntityMapper @Inject constructor() {
             name = source.machine.name,
             manufacturer = source.machine.manufacturer,
             type = source.machine.type,
+            coinUnit = source.machine.coinUnit,
             releaseDate = source.machine.releaseDate,
             isActive = source.machine.isActive,
             notes = source.machine.notes,

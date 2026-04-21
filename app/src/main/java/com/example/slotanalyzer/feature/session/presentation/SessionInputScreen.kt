@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -39,6 +40,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
@@ -138,8 +140,8 @@ fun SessionInputScreen(
                 )
             ) {
                 Column(
-                    modifier = Modifier.padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     if (state.machineName.isNotBlank()) {
                         Text(
@@ -159,30 +161,47 @@ fun SessionInputScreen(
                         )
                     }
 
-                    if (state.machineTypeText.isNotBlank()) {
-                        AssistChip(
-                            onClick = {},
-                            enabled = false,
-                            label = { Text("タイプ: ${state.machineTypeText}") }
-                        )
+                    if (state.machineTypeText.isNotBlank() || state.coinUnitText.isNotBlank()) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            if (state.machineTypeText.isNotBlank()) {
+                                AssistChip(
+                                    onClick = {},
+                                    enabled = false,
+                                    modifier = Modifier.heightIn(min = 32.dp),
+                                    label = { Text("タイプ: ${state.machineTypeText}") }
+                                )
+                            }
+
+                            if (state.coinUnitText.isNotBlank()) {
+                                AssistChip(
+                                    onClick = {},
+                                    enabled = false,
+                                    modifier = Modifier.heightIn(min = 32.dp),
+                                    label = { Text("コイン単価: ${state.coinUnitText}円") }
+                                )
+                            }
+                        }
                     }
 
                     if (state.settingStageText.isNotBlank()) {
-                        AssistChip(
-                            onClick = {},
-                            enabled = false,
-                            label = { Text(state.settingStageText) }
-                        )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 2.dp),
+                            horizontalArrangement = Arrangement.Start
+                        ) {
+                            AssistChip(
+                                onClick = {},
+                                enabled = false,
+                                modifier = Modifier.heightIn(min = 32.dp),
+                                label = { Text(state.settingStageText) }
+                            )
+                        }
                     }
-
-                    Text(
-                        text = if (state.guidanceText.isBlank()) {
-                            "タブを切り替えて、実戦データ入力と天井確認を行えます。"
-                        } else {
-                            state.guidanceText
-                        },
-                        style = MaterialTheme.typography.bodyMedium
-                    )
                 }
             }
 

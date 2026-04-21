@@ -18,6 +18,7 @@ class MachineMasterJsonMapper @Inject constructor() {
             name = json.name,
             manufacturer = json.manufacturer,
             type = json.type,
+            coinUnit = json.coinUnit,
             releaseDate = json.releaseDate,
             isActive = json.isActive,
             notes = json.notes,

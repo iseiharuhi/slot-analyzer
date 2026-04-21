@@ -94,8 +94,7 @@ fun SettingsScreen(
                 SettingsToggleRow(
                     label = "画面を常にオンにする",
                     checked = state.keepScreenOn,
-                    onCheckedChange = viewModel::setKeepScreenOn,
-                    description = "実践中に画面が消えないようにします"
+                    onCheckedChange = viewModel::setKeepScreenOn
                 )
 
                 SettingsToggleRow(
@@ -150,12 +149,10 @@ fun SettingsScreen(
                     onCheckedChange = { viewModel.toggleMachineFilter(MachineFilterKeys.OKINAWA) }
                 )
 
-
                 SettingsToggleRow(
                     label = "導入前機種を非表示",
                     checked = state.hideUpcomingMachines,
-                    onCheckedChange = viewModel::setHideUpcomingMachines,
-                    description = "未導入の機種を一覧から隠します"
+                    onCheckedChange = viewModel::setHideUpcomingMachines
                 )
             }
         }
@@ -333,35 +330,22 @@ private fun CompactDialogOptionRow(
 private fun SettingsToggleRow(
     label: String,
     checked: Boolean,
-    onCheckedChange: (Boolean) -> Unit,
-    description: String? = null
+    onCheckedChange: (Boolean) -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
             .clickable { onCheckedChange(!checked) }
-            .padding(horizontal = 2.dp, vertical = 6.dp),
+            .padding(horizontal = 2.dp, vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Column(
+        Text(
+            text = label,
             modifier = Modifier.weight(1f),
-            verticalArrangement = Arrangement.spacedBy(2.dp)
-        ) {
-            Text(
-                text = label,
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.SemiBold
-            )
-            if (description != null) {
-                Text(
-                    text = description,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        }
+            style = MaterialTheme.typography.bodyLarge
+        )
         Switch(
             checked = checked,
             onCheckedChange = onCheckedChange

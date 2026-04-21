@@ -30,6 +30,7 @@ data class MachineJson(
     val name: String,
     val manufacturer: String? = null,
     val type: String? = null,
+    val coinUnit: Double? = null,
     val releaseDate: String? = null,
     val isActive: Boolean = true,
     val notes: String? = null,

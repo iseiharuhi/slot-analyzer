@@ -5,6 +5,7 @@ data class Machine(
     val name: String,
     val manufacturer: String?,
     val type: String?,
+    val coinUnit: Double? = null,
     val releaseDate: String?,
     val isActive: Boolean,
     val notes: String?,
