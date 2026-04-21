@@ -2,6 +2,7 @@ package com.example.slotanalyzer.domain.model
 
 data class UserPreferences(
     val themeMode: String = ThemeMode.SYSTEM,
+    val keepScreenOn: Boolean = false,
     val showCeiling: Boolean = true,
     val showExternalLinks: Boolean = true,
     val machineSortOrder: String = MachineSortOrder.RELEASE_DATE,

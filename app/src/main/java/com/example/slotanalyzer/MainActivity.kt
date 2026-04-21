@@ -1,6 +1,7 @@
 package com.example.slotanalyzer
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.getValue
@@ -33,6 +34,12 @@ class MainActivity : ComponentActivity() {
                     ThemeMode.DARK -> true
                     else -> null
                 }
+            }
+
+            if (preferences.keepScreenOn) {
+                window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            } else {
+                window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             }
 
             SlotSettingAnalyzerTheme(

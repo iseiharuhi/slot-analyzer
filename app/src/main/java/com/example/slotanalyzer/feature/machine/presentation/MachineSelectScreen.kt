@@ -27,6 +27,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -43,6 +44,7 @@ fun MachineSelectScreen(
 
     var searchQuery by rememberSaveable { mutableStateOf("") }
     var selectedMachineId by rememberSaveable { mutableStateOf<String?>(null) }
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     val normalizedQuery = searchQuery.trim()
     val filteredMachines = state.machines.filter { machine ->
@@ -106,7 +108,14 @@ fun MachineSelectScreen(
                 onValueChange = { searchQuery = it },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
-                label = { Text("機種名で検索") }
+                label = { Text("機種名で検索") },
+                placeholder = {
+                    Text(
+                        text = "機種名を入力してください",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f)
+                    )
+                }
             )
 
             LazyColumn(
@@ -131,6 +140,7 @@ fun MachineSelectScreen(
                                 shape = RoundedCornerShape(16.dp)
                             )
                             .clickable {
+                                keyboardController?.hide()
                                 selectedMachineId = machine.id
                                 viewModel.onMachineSelected(machine)
                             }

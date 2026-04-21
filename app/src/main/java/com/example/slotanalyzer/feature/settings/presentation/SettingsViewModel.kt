@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 
 data class SettingsUiState(
     val themeMode: String = ThemeMode.SYSTEM,
+    val keepScreenOn: Boolean = false,
     val showCeiling: Boolean = true,
     val showExternalLinks: Boolean = true,
     val machineSortOrder: String = MachineSortOrder.RELEASE_DATE,
@@ -39,6 +40,7 @@ class SettingsViewModel @Inject constructor(
             appSettingRepository.observeUserPreferences().collect { preferences ->
                 _uiState.value = SettingsUiState(
                     themeMode = preferences.themeMode,
+                    keepScreenOn = preferences.keepScreenOn,
                     showCeiling = preferences.showCeiling,
                     showExternalLinks = preferences.showExternalLinks,
                     machineSortOrder = preferences.machineSortOrder,
@@ -52,6 +54,12 @@ class SettingsViewModel @Inject constructor(
     fun setThemeMode(themeMode: String) {
         viewModelScope.launch {
             appSettingRepository.setThemeMode(themeMode)
+        }
+    }
+
+    fun setKeepScreenOn(enabled: Boolean) {
+        viewModelScope.launch {
+            appSettingRepository.setKeepScreenOn(enabled)
         }
     }
 

@@ -25,6 +25,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -90,22 +91,23 @@ fun SettingsScreen(
                     )
                 )
 
-                SettingsSelectorField(
-                    label = "天井情報",
-                    value = if (state.showCeiling) "表示" else "非表示",
-                    options = listOf(
-                        SelectorOption("表示") { viewModel.setShowCeiling(true) },
-                        SelectorOption("非表示") { viewModel.setShowCeiling(false) }
-                    )
+                SettingsToggleRow(
+                    label = "画面を常にオンにする",
+                    checked = state.keepScreenOn,
+                    onCheckedChange = viewModel::setKeepScreenOn,
+                    description = "実践中に画面が消えないようにします"
                 )
 
-                SettingsSelectorField(
-                    label = "外部リンク",
-                    value = if (state.showExternalLinks) "表示" else "非表示",
-                    options = listOf(
-                        SelectorOption("表示") { viewModel.setShowExternalLinks(true) },
-                        SelectorOption("非表示") { viewModel.setShowExternalLinks(false) }
-                    )
+                SettingsToggleRow(
+                    label = "天井情報を表示",
+                    checked = state.showCeiling,
+                    onCheckedChange = viewModel::setShowCeiling
+                )
+
+                SettingsToggleRow(
+                    label = "外部リンクを表示",
+                    checked = state.showExternalLinks,
+                    onCheckedChange = viewModel::setShowExternalLinks
                 )
             }
 
@@ -146,6 +148,14 @@ fun SettingsScreen(
                     label = "沖スロ / ハナハナ",
                     checked = state.selectedMachineFilters.contains(MachineFilterKeys.OKINAWA),
                     onCheckedChange = { viewModel.toggleMachineFilter(MachineFilterKeys.OKINAWA) }
+                )
+
+
+                SettingsToggleRow(
+                    label = "導入前機種を非表示",
+                    checked = state.hideUpcomingMachines,
+                    onCheckedChange = viewModel::setHideUpcomingMachines,
+                    description = "未導入の機種を一覧から隠します"
                 )
             }
         }
@@ -316,6 +326,46 @@ private fun CompactDialogOptionRow(
                 )
             }
         }
+    }
+}
+
+@Composable
+private fun SettingsToggleRow(
+    label: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
+    description: String? = null
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .clickable { onCheckedChange(!checked) }
+            .padding(horizontal = 2.dp, vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.spacedBy(2.dp)
+        ) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.SemiBold
+            )
+            if (description != null) {
+                Text(
+                    text = description,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+        Switch(
+            checked = checked,
+            onCheckedChange = onCheckedChange
+        )
     }
 }
 

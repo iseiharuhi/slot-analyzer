@@ -20,6 +20,7 @@ class AppSettingRepositoryImpl @Inject constructor(
             val map = settings.associate { it.key to it.value }
             UserPreferences(
                 themeMode = map[KEY_THEME_MODE] ?: ThemeMode.SYSTEM,
+                keepScreenOn = (map[KEY_KEEP_SCREEN_ON] ?: "false").toBoolean(),
                 showCeiling = (map[KEY_SHOW_CEILING] ?: "true").toBoolean(),
                 showExternalLinks = (map[KEY_SHOW_EXTERNAL_LINKS] ?: "true").toBoolean(),
                 machineSortOrder = map[KEY_MACHINE_SORT_ORDER] ?: MachineSortOrder.RELEASE_DATE,
@@ -37,6 +38,10 @@ class AppSettingRepositoryImpl @Inject constructor(
 
     override suspend fun setThemeMode(themeMode: String) {
         upsert(KEY_THEME_MODE, themeMode)
+    }
+
+    override suspend fun setKeepScreenOn(enabled: Boolean) {
+        upsert(KEY_KEEP_SCREEN_ON, enabled.toString())
     }
 
     override suspend fun setShowCeiling(show: Boolean) {
@@ -99,6 +104,7 @@ class AppSettingRepositoryImpl @Inject constructor(
 
     private companion object {
         const val KEY_THEME_MODE = "theme_mode"
+        const val KEY_KEEP_SCREEN_ON = "keep_screen_on"
         const val KEY_SHOW_CEILING = "show_ceiling"
         const val KEY_SHOW_EXTERNAL_LINKS = "show_external_links"
         const val KEY_MACHINE_SORT_ORDER = "machine_sort_order"
