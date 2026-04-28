@@ -8,7 +8,7 @@
     "isActive": true,
     "notes": "partial: 公開解析ベースで初当り合算・AT初当り・ミュウボーナスを維持。DMM特集で高確移行率・天国移行率・CZ当選率なども判別要素として整理されているが、現行UIで安定入力しやすい3軸を優先。ミュウボーナス開始時のAT当選率は強い補助だが判別が難しいため notes 管理。AT間最大1000G+α天井を保持。",
     "dmmUrl": "https://p-town.dmm.com/machines/4715",
-    "ichigekiUrl": "https://1geki.jp"
+    "ichigekiUrl": "https://1geki.jp/slot/l_arifureta/"
   },
   "counterDefinitions": [
     {

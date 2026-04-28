@@ -7,8 +7,8 @@
     "releaseDate": "2025-08-04",
     "isActive": true,
     "notes": "partial: 一撃掲載のCZ初当り確率とAT初当り確率を反映。CZを主軸、AT初当りを補助に置く。天井は最大1000G+αとCZ6スルー後の7回目CZ、周期抽選は最大8周期でCZ当選。設定変更時は600G+α、AT駆け抜け後は800G+α短縮がある。",
-    "dmmUrl": "https://p-town.dmm.com",
-    "ichigekiUrl": "https://1geki.jp"
+    "dmmUrl": "https://p-town.dmm.com/machines/4834",
+    "ichigekiUrl": "https://1geki.jp/slot/l_saki/"
   },
   "counterDefinitions": [
     {

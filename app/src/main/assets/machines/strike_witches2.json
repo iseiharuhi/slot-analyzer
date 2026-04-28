@@ -8,7 +8,7 @@
     "isActive": true,
     "notes": "partial: 一撃掲載のストライクボーナス初当りと通常時からの直撃ストライクボーナス確率を採用。直撃は分母が非常に重いが設定差が大きいため削除せず残し、weightを落として「刺さると強い補助」に調整。通常時ゲーム数天井950G+αとネウロイバトル初戦敗北5スルー天井を保持。",
     "dmmUrl": "https://p-town.dmm.com/machines/4490",
-    "ichigekiUrl": "https://1geki.jp"
+    "ichigekiUrl": "https://1geki.jp/slot/l_strikewitches2/"
   },
   "counterDefinitions": [
     {
