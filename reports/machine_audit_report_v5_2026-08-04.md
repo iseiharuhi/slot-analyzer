@@ -1,6 +1,6 @@
 # Machine Audit Report v5 (2026-08-04)
 
-対象: app/src/main/assets/machines/*.json (manifest除く)
+対象: pp/src/main/assets/machines/*.json (manifest除く)
 
 - files scanned: 195
 - valid: 195
@@ -23,12 +23,8 @@ none
 
 ## Normalized duplicate names
 - normalized="ハナビ":
-  - dmm_slot_017.json : スマスロ ハナビ (2026-02-02, dmmUrl machines/4928, ichigeki l_hanabi)
-  - list_slot_044.json : ハナビ (2021-07-05, dmmUrl machines/2042, ichigeki s_shinhanabi)
-  - 確認結果: リリース日・DMM機種ID・一撃スラッグが全て異なる別機種(スマスロ版と旧ノーマル版)。正規化アルゴリズムの誤検知で、実際の重複ではない。要対応なし。
-
-## Notes欄が空の機種(精度作業が未着手)
-- goblin_slayer.json (Lゴブリンスレイヤー) — notes未記入。partial/draftにも分類されておらず、ステータス把握から漏れていた。
+  - dmm_slot_017.json : スマスロ ハナビ
+  - list_slot_044.json : ハナビ
 
 ## Missing / bare URLs
 - missing dmmUrl: 59

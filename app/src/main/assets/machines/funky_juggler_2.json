@@ -4,10 +4,10 @@
     "name": "ファンキージャグラー2",
     "manufacturer": "Kita Denshi",
     "type": "BONUS",
-    "releaseDate": "2025-01-01",
+    "releaseDate": "2021-10-04",
     "isActive": true,
     "notes": "ノーマル精度仕上げ対応。主判別はREG、補助はぶどう、BIGは最終補助に固定。ファンキー系もREG先行の確認を優先し、ぶどうで補強する。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4388",
+    "dmmUrl": "https://p-town.dmm.com/machines/3961",
     "ichigekiUrl": "https://1geki.jp/slot/s_funkyjuggler2/"
   },
   "counterDefinitions": [

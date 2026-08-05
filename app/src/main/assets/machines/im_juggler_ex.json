@@ -4,10 +4,10 @@
     "name": "アイムジャグラーEX",
     "manufacturer": "Kita Denshi",
     "type": "BONUS",
-    "releaseDate": "2025-01-01",
+    "releaseDate": "2020-12-14",
     "isActive": true,
     "notes": "ノーマル精度仕上げ対応。主判別はREG、補助はぶどう、BIGは最終補助に固定。アイム系は短期のBIG偏りが出やすいため、3000G以上のREGを主軸にする。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4316",
+    "dmmUrl": "https://p-town.dmm.com/machines/3626",
     "ichigekiUrl": "https://1geki.jp/slot/s_ij_ex_6/"
   },
   "counterDefinitions": [

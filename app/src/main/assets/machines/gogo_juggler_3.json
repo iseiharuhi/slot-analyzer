@@ -4,10 +4,10 @@
     "name": "ゴーゴージャグラー3",
     "manufacturer": "Kita Denshi",
     "type": "BONUS",
-    "releaseDate": "2025-01-01",
+    "releaseDate": "2023-07-03",
     "isActive": true,
     "notes": "ノーマル精度仕上げ対応。主判別はREG、補助はぶどう、BIGは最終補助に固定。ゴージャグ系もREG基準で見て、ぶどうは5000G以上で補強する。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4782",
+    "dmmUrl": "https://p-town.dmm.com/machines/4375",
     "ichigekiUrl": "https://1geki.jp/slot/s_gogojuggler3/"
   },
   "counterDefinitions": [

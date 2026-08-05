@@ -8,7 +8,7 @@
     "isActive": true,
     "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当り。直撃ATは重い分母のため低weightの補助メモ扱いに固定し、終了画面や示唆演出は現行UI外のため別メモ推奨。ATは2000G超、CZは2500〜3000G級で比較するとブレが減る。",
     "dmmUrl": "https://p-town.dmm.com/machines/4360",
-    "ichigekiUrl": "https://1geki.jp/slot/l_karakuricircus/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_karakuri/"
   },
   "counterDefinitions": [
     {
