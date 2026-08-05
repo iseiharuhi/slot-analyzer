@@ -27,13 +27,12 @@ none
   - list_slot_044.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 34
+- missing dmmUrl: 33
   - akame_ga_kill.json
   - anata_no_otto_hades.json
   - anemone.json
   - ao_no_exorcist.json
   - big_shimauta_30.json
-  - black_lagoon_4.json
   - drifters.json
   - etotama.json
   - g1_yushun_club_gold.json
@@ -62,11 +61,10 @@ none
   - yoshimune_3.json
   - zenigata_5.json
   - zettai_shougeki_4.json
-- missing ichigekiUrl: 78
+- missing ichigekiUrl: 58
   - akame_ga_kill_2.json
   - aladdin_classic.json
   - aldnoah_zero.json
-  - anemone.json
   - babel.json
   - bakemonogatari.json
   - bancho4.json
@@ -79,7 +77,6 @@ none
   - dmm_slot_006.json
   - dmm_slot_007.json
   - dmm_slot_008.json
-  - dmm_slot_009.json
   - dmm_slot_010.json
   - dmm_slot_011.json
   - dmm_slot_012.json
@@ -89,11 +86,9 @@ none
   - eva_tamashii_no_kyoumei.json
   - frame_arms_girls.json
   - garo_ougon_kishi.json
-  - goblin_slayer.json
   - godzilla_vs_eva.json
   - gundam_seed.json
   - hanabi_zekkei.json
-  - hanagasa.json
   - higurashi_matsuri2.json
   - hihouden.json
   - idolmaster_million_live.json
@@ -104,8 +99,6 @@ none
   - jabami_yumeko.json
   - kaiji_kyouen.json
   - kinnikuman_7devils.json
-  - l_rino_heaven.json
-  - l_yoshimune.json
   - list_slot_012.json
   - macross_frontier_4.json
   - magia_record.json
@@ -116,31 +109,17 @@ none
   - motto_chibariyo_30.json
   - mushoku_tensei.json
   - my_flower_2.json
-  - neo_planet.json
-  - no_game_no_life.json
   - nogizaka_46.json
   - one_punch_man.json
   - prism_nana.json
-  - railgun.json
-  - rakuen_tsuihou.json
   - ring_ni_kakero_1.json
   - saint_seiya_kaiou_custom_edition.json
-  - salaryman_bancho_2.json
-  - senran_kagura_2.json
   - shin_onimusha_3.json
   - super_bingo_neo_classic.json
   - super_black_jack.json
-  - tekken4_ultimate_devil.json
-  - tiger_bunny_sp.json
   - ultra_chabudai_gaeshi.json
-  - warau_salesman_4.json
-  - warau_salesman_zesshou.json
   - watakon.json
-  - yatterman_zettai_seigi.json
-  - yoshimune_3.json
   - youzitsu.json
-  - zenigata_5.json
-  - zettai_shougeki_4.json
 - bare (top page) dmmUrl: 0
 - bare (top page) ichigekiUrl: 0
 
