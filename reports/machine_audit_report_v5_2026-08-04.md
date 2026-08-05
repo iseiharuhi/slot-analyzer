@@ -2,14 +2,14 @@
 
 対象: pp/src/main/assets/machines/*.json (manifest除く)
 
-- files scanned: 194
-- valid: 194
+- files scanned: 190
+- valid: 190
 - broken: 0
 
 ## Status breakdown
 - draft: 1
 - empty: 1
-- other: 135
+- other: 131
 - partial: 57
 
 ## Broken files
@@ -27,7 +27,7 @@ none
   - list_slot_044.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 57
+- missing dmmUrl: 55
   - akame_ga_kill.json
   - aladdin_classic.json
   - aldnoah_zero.json
@@ -53,12 +53,10 @@ none
   - higurashi_matsuri2.json
   - hihouden_megami.json
   - jabami_yumeko.json
-  - l_code_geass.json
   - l_rino_heaven.json
   - l_yoshimune_rising.json
   - l_yoshimune.json
   - love_cute_2.json
-  - madoka_magica_f.json
   - momokyun_sword.json
   - monster_hunter_golden.json
   - monster_hunter_iceborne.json
@@ -85,7 +83,7 @@ none
   - yoshimune_3.json
   - zenigata_5.json
   - zettai_shougeki_4.json
-- missing ichigekiUrl: 93
+- missing ichigekiUrl: 91
   - akame_ga_kill_2.json
   - akame_ga_kill.json
   - aladdin_classic.json
@@ -136,14 +134,12 @@ none
   - jabami_yumeko.json
   - kaiji_kyouen.json
   - kinnikuman_7devils.json
-  - l_code_geass.json
   - l_rino_heaven.json
   - l_yoshimune_rising.json
   - l_yoshimune.json
   - list_slot_012.json
   - love_cute_2.json
   - macross_frontier_4.json
-  - madoka_magica_f.json
   - magia_record.json
   - mahjong_monogatari.json
   - momokyun_sword.json
