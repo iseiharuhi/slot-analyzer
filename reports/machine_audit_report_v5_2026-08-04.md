@@ -2,14 +2,14 @@
 
 対象: pp/src/main/assets/machines/*.json (manifest除く)
 
-- files scanned: 195
-- valid: 195
+- files scanned: 194
+- valid: 194
 - broken: 0
 
 ## Status breakdown
 - draft: 1
 - empty: 1
-- other: 136
+- other: 135
 - partial: 57
 
 ## Broken files
@@ -27,7 +27,7 @@ none
   - list_slot_044.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 59
+- missing dmmUrl: 57
   - akame_ga_kill.json
   - aladdin_classic.json
   - aldnoah_zero.json
@@ -42,7 +42,6 @@ none
   - char_counterattack.json
   - drifters.json
   - etotama.json
-  - eva_tamashii_no_kyoumei.json
   - frame_arms_girls.json
   - g1_yushun_club_gold.json
   - garo_ougon_kishi.json
@@ -55,7 +54,6 @@ none
   - hihouden_megami.json
   - jabami_yumeko.json
   - l_code_geass.json
-  - l_ring_ni_kakero.json
   - l_rino_heaven.json
   - l_yoshimune_rising.json
   - l_yoshimune.json
@@ -87,7 +85,7 @@ none
   - yoshimune_3.json
   - zenigata_5.json
   - zettai_shougeki_4.json
-- missing ichigekiUrl: 95
+- missing ichigekiUrl: 93
   - akame_ga_kill_2.json
   - akame_ga_kill.json
   - aladdin_classic.json
@@ -102,7 +100,6 @@ none
   - big_shimauta_30.json
   - bio_re2.json
   - biohazard_5.json
-  - black_lagoon_4.json
   - cats_eye.json
   - char_counterattack.json
   - d4dj_pachi_slot_mix.json
@@ -140,7 +137,6 @@ none
   - kaiji_kyouen.json
   - kinnikuman_7devils.json
   - l_code_geass.json
-  - l_ring_ni_kakero.json
   - l_rino_heaven.json
   - l_yoshimune_rising.json
   - l_yoshimune.json

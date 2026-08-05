@@ -48,10 +48,27 @@ Wave1/Wave2の実在検証([wave1](machine_existence_verification_wave1_2026-08-
 | prism_nana.json | name: 「Lプリズムナナ」→「プリズムナナ」(誤ったL接頭辞を削除) |
 | frame_arms_girls.json | name: 「フレイムアームガールズ」→「フレームアームズ・ガール」(表記ゆれ修正) |
 
-## 意図的に見送った項目
-- **black_lagoon_4.json**: 発売日がスロット版かパチンコ版か判別しきれず、誤修正のリスクがあるため保留
-- **ring_ni_kakero_1.json**: 同名シリーズが3バージョン(2007/2020/2023)存在し、どれを指すか特定できないため保留
-- **eva_tamashii_no_kyoumei.json**: 正式タイトルに「新世紀...」が付く可能性が指摘されたが、正確な全文を確認できていないため保留
+## Group D: 保留していた3件を追加調査のうえ修正(2026-08-05 追記)
+| file | 変更内容 |
+|---|---|
+| black_lagoon_4.json | releaseDate: 2023-02-06(パチンコ版等の誤値)→2020-07-06(スロット版の実際の導入日)、ichigekiUrl: null→`https://1geki.jp/slot/s_blacklagoon4/` |
+| eva_tamashii_no_kyoumei.json | name: 「エヴァンゲリオン魂の共鳴」→「新世紀エヴァンゲリオン 魂の共鳴」(正式名称)、manufacturer: null→ビスティ、releaseDate: null→2022-01-24、dmmUrl: null→`https://p-town.dmm.com/machines/4060` |
+| ring_ni_kakero_1.json | manufacturer: null→銀座、releaseDate: null→2007-03-05(2007年オリジナル版と判明) |
+
+### 重複ファイルの発見と解消
+調査の過程で `l_ring_ni_kakero.json` と `ring_v.json` が**同一機種(Lリングにかけろ1V、2023-12-04、DMM機種ID 4460)を指す重複ファイル**であることが判明した。
+`ring_v.json` の方がdmmUrl・ichigekiUrl・参照値まで揃っていたため、ユーザー確認のうえ `l_ring_ni_kakero.json` を削除して一本化した。
+削除時、以下3箇所全てから該当エントリを除去し整合性を取った:
+- `app/src/main/assets/machines/l_ring_ni_kakero.json`(削除)
+- `app/src/main/assets/master/machine_details/l_ring_ni_kakero.json`(削除)
+- `app/src/main/assets/master/machines.json` の該当エントリ(削除)
+
+この結果、機種ファイル総数は **195 → 194** になった。
+
+## 副次的に判明した事項(今回は対応せず、別タスク候補)
+`app/src/main/assets/master/machine_details/` 配下に `assets/machines/` と同じ196件分の機種詳細JSONが並行して存在している。
+コード上は `LocalAssetMachineMasterSource`(`assets/machines/`を直接読む)が実際に使われており、`master/machine_details/`は`MasterApi`(リモート同期用、現状ネットワーク経由でしか呼ばれない構成)向けのデータで、アプリの実データとしては使われていない可能性が高い。
+ただし今回の重複のように、この並行ストアが `assets/machines/` と食い違っている(またはズレていく)リスクがあるため、後日この2ストアの整合性チェックか、不要なら削除を検討した方がよい。
 
 ## 検証
 修正後、`app/src/main/assets/machines/*.json` 195件を再監査。JSON破損0件、有効195件を確認済み。
