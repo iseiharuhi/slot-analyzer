@@ -1,0 +1,23 @@
+{
+  "id": "birdie_wing",
+  "name": "スマスロ BIRDIE WING -Golf Girls' Story-",
+  "manufacturer": "UNIVERSAL BROS.",
+  "type": "AT",
+  "releaseDate": "2026-06-08",
+  "isActive": true,
+  "notes": "公開解析ベースの精度優先版。主判別はST初当たり・通常時初当たりを採用。 CZ・直撃/特殊契機など比較値未整理の項目は入力補助に留め、推測比重を上げすぎない構成に調整。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4996",
+  "ichigekiUrl": "https://1geki.jp/slot/l_birdie/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4996"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_birdie/"
+    }
+  ],
+  "fileName": "dmm_slot_001.json"
+}

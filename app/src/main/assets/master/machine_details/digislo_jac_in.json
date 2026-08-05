@@ -1,0 +1,23 @@
+{
+  "id": "digislo_jac_in",
+  "name": "デジスロ JAC INバージョン",
+  "manufacturer": null,
+  "type": "BONUS",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とBIGに整理。JAC INバージョンもREG主軸で均一化する。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4433",
+  "ichigekiUrl": "https://1geki.jp/slot/s_digislo_jacin/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4433"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_digislo_jacin/"
+    }
+  ],
+  "fileName": "dmm_slot_035.json"
+}

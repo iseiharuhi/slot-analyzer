@@ -1,0 +1,23 @@
+{
+  "id": "versus_rexse",
+  "name": "バーサスリヴァイズ",
+  "manufacturer": "ELECO",
+  "type": "BONUS",
+  "releaseDate": "2022-01-11",
+  "isActive": true,
+  "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算とベル、VSゲームハズレは長時間実戦時のみ参照。重い補助要素はさらに低weightで残し、REG主軸を崩さない。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4033",
+  "ichigekiUrl": "https://1geki.jp/slot/s_versus_rexse/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4033"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_versus_rexse/"
+    }
+  ],
+  "fileName": "list_slot_045.json"
+}

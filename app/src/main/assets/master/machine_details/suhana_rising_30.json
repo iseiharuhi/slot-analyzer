@@ -1,0 +1,23 @@
+{
+  "id": "suhana_rising_30",
+  "name": "スーハナライジング-30",
+  "manufacturer": null,
+  "type": "BONUS",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・共通ベルAを主軸に反映。 精度優先で暫定値は採用していない。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4409",
+  "ichigekiUrl": "https://1geki.jp/slot/s_suhana_rising30/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4409"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_suhana_rising30/"
+    }
+  ],
+  "fileName": "dmm_slot_040.json"
+}

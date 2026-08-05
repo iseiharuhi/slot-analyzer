@@ -1,0 +1,160 @@
+{
+  "machine": {
+    "id": "keiji_sado",
+    "name": "L花の慶次～佐渡攻めの章〜",
+    "manufacturer": "EXCITE",
+    "type": "AT",
+    "releaseDate": "2023-12-04",
+    "isActive": true,
+    "notes": "partial: DMM/一撃掲載の初当り確率とAT「修羅の刻」初当りを主軸2軸で維持。ボーナス終了画面のモード示唆やAT終了画面は強いが現行UIで定量化しにくいため notes 管理とし、数値比較は公開比較値が揃う初当り系を優先。天井は最大1000G+αを明記し、重い示唆要素は削除せず補助情報として扱う。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4456",
+    "ichigekiUrl": "https://1geki.jp/slot/l_keiji_sado/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "初当り",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 2,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "修羅の刻初当り",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 3,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 260.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 253.7,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 247.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 231.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 222.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 211.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 474.7,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 460.1,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 438.0,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 398.7,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 364.0,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 335.8,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "isEnabled": true,
+      "requiresResetFlag": false,
+      "resetOnHit": true,
+      "description": "通常時最大1000G+αで初当りに当選。"
+    }
+  ]
+}

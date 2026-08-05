@@ -1,0 +1,87 @@
+{
+  "machine": {
+    "id": "thunder_v_lightning",
+    "name": "サンダーVライトニング",
+    "manufacturer": "ACROSS",
+    "type": "BONUS",
+    "releaseDate": "2020-04-20",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたBIG合成を主軸に反映。 BIG合成など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3647",
+    "ichigekiUrl": "https://1geki.jp/slot/s_thunderv_lg/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG合成",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "VBIG+赤7BIGの合成。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "BIG合成",
+      "category": "BONUS",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "big_countと同義の補助欄。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 277.7,
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 277.7,
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 264.3,
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 256.0,
+          "weight": 1.0,
+          "minSampleSize": 3500,
+          "note": "主判別。1軸構成のため3500G以上で評価したい。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

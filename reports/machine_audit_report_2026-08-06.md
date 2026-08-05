@@ -1,18 +1,18 @@
-# Machine Audit Report v5 (2026-08-04)
+﻿# Machine Audit Report (2026-08-06)
 
-対象: pp/src/main/assets/machines/*.json (manifest除く)
+対象: app/src/main/assets/machines/*.json (manifest除く)
 
 - files scanned: 190
 - valid: 190
 - broken: 0
 
 ## Status breakdown
-- draft: 1
-- empty: 1
 - other: 131
 - partial: 57
+- empty: 1
+- draft: 1
 
-## Broken files
+## Broken files / filename-id mismatches
 none
 
 ## Duplicate machine id
@@ -21,7 +21,7 @@ none
 ## Exact duplicate names
 none
 
-## Normalized duplicate names
+## Normalized duplicate names (verify manually — this heuristic has false positives)
 - normalized="ハナビ":
   - l_hanabi.json : スマスロ ハナビ
   - shin_hanabi.json : ハナビ
@@ -41,8 +41,8 @@ none
   - hidan_no_aria_2.json
   - hihouden_megami.json
   - l_rino_heaven.json
-  - l_yoshimune_rising.json
   - l_yoshimune.json
+  - l_yoshimune_rising.json
   - love_cute_2.json
   - monster_hunter_iceborne.json
   - neo_planet.json
@@ -88,8 +88,8 @@ none
   - hihouden.json
   - idolmaster_million_live.json
   - initial_d_2.json
-  - inuyasha_2.json
   - inuyasha.json
+  - inuyasha_2.json
   - isekai_quartet_bt.json
   - iza_bancho.json
   - jabami_yumeko.json
@@ -123,6 +123,9 @@ none
 - bare (top page) dmmUrl: 0
 - bare (top page) ichigekiUrl: 0
 
+## Generic/placeholder-style filenames (should be renamed to descriptive slugs)
+none
+
 ## Partial / draft machines (need precision follow-up)
 - akudama_drive.json [partial] Lアクダマドライブ (ceiling=False, refValues=True)
 - aquarion_all_stars.json [partial] パチスロ アクエリオン ALL STARS (ceiling=True, refValues=True)
@@ -155,8 +158,8 @@ none
 - mahjong_fight_club_kakusei.json [partial] L麻雀格闘倶楽部 覚醒 (ceiling=True, refValues=True)
 - million_god_kamigami.json [partial] スマスロ ミリオンゴッド-神々の軌跡- (ceiling=False, refValues=True)
 - nangoku_sodachi.json [partial] L南国育ち (ceiling=True, refValues=True)
-- oki_doki_duo_encore.json [partial] スマート沖スロ 沖ドキ！DUO-30 アンコール (ceiling=False, refValues=True)
 - oki_doki_duo.json [partial] 沖ドキ！DUO (ceiling=False, refValues=True)
+- oki_doki_duo_encore.json [partial] スマート沖スロ 沖ドキ！DUO-30 アンコール (ceiling=False, refValues=True)
 - oki_doki_gold.json [partial] 沖ドキ！GOLD (ceiling=False, refValues=True)
 - oshi_slo_idol.json [draft] 推しスロ アイドルVer. (ceiling=True, refValues=False)
 - persona_5.json [partial] ペルソナ5 (ceiling=True, refValues=True)

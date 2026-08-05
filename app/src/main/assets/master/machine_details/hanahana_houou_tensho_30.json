@@ -1,0 +1,23 @@
+{
+  "id": "hanahana_houou_tensho_30",
+  "name": "ハナハナホウオウ～天翔～-30",
+  "manufacturer": "PIONEER",
+  "type": "BONUS",
+  "releaseDate": "2022-01-24",
+  "isActive": true,
+  "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 小役/示唆補助など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4013",
+  "ichigekiUrl": "https://1geki.jp/slot/s_hanahana_houoh_tensho30/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4013"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_hanahana_houoh_tensho30/"
+    }
+  ],
+  "fileName": "list_slot_060.json"
+}

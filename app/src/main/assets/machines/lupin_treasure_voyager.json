@@ -1,0 +1,253 @@
+{
+    "machine":  {
+                    "id":  "lupin_treasure_voyager",
+                    "name":  "Lルパン三世 大航海者の秘宝",
+                    "manufacturer":  "平和",
+                    "type":  "AT",
+                    "releaseDate":  "2024-12-02",
+                    "isActive":  true,
+                    "notes":  "partial: DMM・一撃の公開解析を再整理。主判別はダブル7揃い/AT初当り、補助にシングル7揃いとCZ「ICPOチャレンジ」を採用。強チェリー契機のAT直行は設定差があるがゲーム分母へ正規化しづらいため direct_hit_count はメモ用途へ後退。シングル7は荒れやすいので2000G未満では過信せず、AT初当りを軸に判断する。",
+                    "dmmUrl":  "https://p-town.dmm.com/machines/4689",
+                    "ichigekiUrl":  "https://1geki.jp/slot/l_lupin_totgn/"
+                },
+    "counterDefinitions":  [
+                               {
+                                   "key":  "total_games",
+                                   "displayName":  "総ゲーム数",
+                                   "category":  "BASIC",
+                                   "sortOrder":  1,
+                                   "unit":  "G",
+                                   "inputType":  "NUMBER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  false,
+                                   "notes":  "全計算の分母"
+                               },
+                               {
+                                   "key":  "bonus_count",
+                                   "displayName":  "シングル7揃い",
+                                   "category":  "BONUS",
+                                   "sortOrder":  2,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "ボーナス初当り回数。"
+                               },
+                               {
+                                   "key":  "cz_count",
+                                   "displayName":  "CZ「ICPOチャレンジ」",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  3,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "CZ突入回数。成功率は別途補助判断。"
+                               },
+                               {
+                                   "key":  "at_count",
+                                   "displayName":  "ダブル7揃い/AT",
+                                   "category":  "AT_CZ",
+                                   "sortOrder":  4,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  true,
+                                   "supportsMinus":  true,
+                                   "notes":  "スーパーヒーロー初当り回数。"
+                               },
+                               {
+                                   "key":  "direct_hit_count",
+                                   "displayName":  "AT直行/直撃メモ",
+                                   "category":  "SPECIAL",
+                                   "sortOrder":  5,
+                                   "unit":  "回",
+                                   "inputType":  "COUNTER",
+                                   "isEnabled":  true,
+                                   "isDefaultVisible":  false,
+                                   "supportsMinus":  true,
+                                   "notes":  "強チェリー契機AT直行などの実戦メモ。公開値は割合ベース中心のため現段階では推測計算に未採用。"
+                               }
+                           ],
+    "settingReferenceValues":  [
+                                   {
+                                       "counterKey":  "bonus_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  920.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  879.1,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  831.3,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  685.2,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  633.5,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  636.9,
+                                                          "weight":  1,
+                                                          "minSampleSize":  2500,
+                                                          "note":  "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "at_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  421.5,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  401.4,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  383.9,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  355.1,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  345.6,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  327.5,
+                                                          "weight":  1.0,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "AT初当りは主判別。概ね2000G超から比較推奨。"
+                                                      }
+                                                  ]
+                                   },
+                                   {
+                                       "counterKey":  "cz_count",
+                                       "values":  [
+                                                      {
+                                                          "settingNo":  1,
+                                                          "denominatorValue":  211.5,
+                                                          "weight":  0.78,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  2,
+                                                          "denominatorValue":  210.0,
+                                                          "weight":  0.78,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  3,
+                                                          "denominatorValue":  204.9,
+                                                          "weight":  0.78,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  4,
+                                                          "denominatorValue":  199.7,
+                                                          "weight":  0.78,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  5,
+                                                          "denominatorValue":  199.0,
+                                                          "weight":  0.78,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+                                                      },
+                                                      {
+                                                          "settingNo":  6,
+                                                          "denominatorValue":  198.0,
+                                                          "weight":  0.78,
+                                                          "minSampleSize":  3000,
+                                                          "note":  "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+                                                      }
+                                                  ]
+                                   }
+                               ],
+    "ceilingRules":  [
+                         {
+                             "ruleKey":  "normal_game_ceiling",
+                             "displayName":  "通常時ゲーム数天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  1000,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "通常時最大1000Gで天井到達しAT「スーパーヒーロー」に当選。シングル7揃い後のAT非突入では天井G数を引き継ぐ。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "reset_game_ceiling",
+                             "displayName":  "設定変更時ゲーム数天井",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  700,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  true,
+                             "description":  "設定変更時は天井が最大700Gに短縮。",
+                             "isEnabled":  true
+                         },
+                         {
+                             "ruleKey":  "rescue_trigger",
+                             "displayName":  "救済発動候補",
+                             "ceilingType":  "GAME_COUNT",
+                             "limitValue":  400,
+                             "unit":  "G",
+                             "resetOnHit":  true,
+                             "requiresResetFlag":  false,
+                             "description":  "100G/200G/300G/400Gで救済発動の可能性あり（高設定ほど優遇とされる）。",
+                             "isEnabled":  true
+                         }
+                     ]
+}

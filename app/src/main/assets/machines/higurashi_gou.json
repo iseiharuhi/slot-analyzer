@@ -1,0 +1,325 @@
+{
+  "machine": {
+    "id": "higurashi_gou",
+    "name": "L ひぐらしのなく頃に 業",
+    "manufacturer": null,
+    "type": "HYBRID",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたRB・ボーナス合算・BB合算・共通ベル・スイカを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4447",
+    "ichigekiUrl": "https://1geki.jp/slot/l_higurashi_gou/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BB合算",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 2,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "RB",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 3,
+      "notes": null
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 4,
+      "notes": null
+    },
+    {
+      "key": "common_bell_count",
+      "displayName": "共通ベル",
+      "category": "SMALL_ROLE",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 5,
+      "notes": null
+    },
+    {
+      "key": "suika_count",
+      "displayName": "スイカ",
+      "category": "SMALL_ROLE",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 6,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 407.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 397.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 378.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 387.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 370.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 362.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 196.8,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 192.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 188.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 184.1,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 180.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 176.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "common_bell_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 23.54,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 23.03,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 22.34,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 21.88,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 21.44,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 21.01,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "suika_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 107.26,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 105.19,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 103.53,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 101.76,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 100.05,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 98.25,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 381.0,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 372.4,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 366.1,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 358.1,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 350.5,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 343.1,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

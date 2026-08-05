@@ -1,0 +1,23 @@
+{
+  "id": "new_shiosai",
+  "name": "ニューシオサイ",
+  "manufacturer": null,
+  "type": "BONUS",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とBIGに整理。ニューシオサイもREG主軸で全体の見やすさを優先する。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4476",
+  "ichigekiUrl": "https://1geki.jp/slot/s_newsiosai_sa/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4476"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_newsiosai_sa/"
+    }
+  ],
+  "fileName": "dmm_slot_022.json"
+}

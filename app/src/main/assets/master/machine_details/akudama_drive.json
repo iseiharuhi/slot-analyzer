@@ -1,0 +1,19 @@
+{
+  "id": "akudama_drive",
+  "name": "Lアクダマドライブ",
+  "manufacturer": "SanThree",
+  "type": "AT",
+  "releaseDate": "2026-04-06",
+  "isActive": true,
+  "notes": "partial: 公開比較値を確認できたAT・ボーナス・CZを主軸に反映。 直撃ATなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4956",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4956"
+    }
+  ],
+  "fileName": "dmm_slot_014.json"
+}

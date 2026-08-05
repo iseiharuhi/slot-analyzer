@@ -1,0 +1,219 @@
+{
+  "machine": {
+    "id": "hanahana_houou_tensho_30",
+    "name": "ハナハナホウオウ～天翔～-30",
+    "manufacturer": "PIONEER",
+    "type": "BONUS",
+    "releaseDate": "2022-01-24",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 小役/示唆補助など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4013",
+    "ichigekiUrl": "https://1geki.jp/slot/s_hanahana_houoh_tensho30/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BB確率は補助指標。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "REG確率を主軸に評価。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG+REGの合算管理用。"
+    },
+    {
+      "key": "small_role_count",
+      "displayName": "小役/示唆補助",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "ランプ示唆や小役メモ用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 496.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 458.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 425.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 397.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 366.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 337.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 186.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 175.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 166.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 157.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 148.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 139.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 297.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 284.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 273.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 262.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 249.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 236.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は過信せずREG主軸で判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

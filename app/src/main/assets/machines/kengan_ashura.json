@@ -1,0 +1,171 @@
+{
+  "machine": {
+    "id": "kengan_ashura",
+    "name": "パチスロ ケンガンアシュラ",
+    "manufacturer": "ネット",
+    "type": "AT",
+    "releaseDate": "2023-11-20",
+    "isActive": true,
+    "notes": "precision batch next / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。 天井情報を正式反映。400G+αのCZ天井と最大7スルー後の8回目CZでAT当選するCZスルー天井を追加。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4434",
+    "ichigekiUrl": "https://1geki.jp/slot/l_kengan_ashura/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZトータル",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 2,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 3,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 399.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 389.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 354.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 315.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 285.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 256.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 177.6,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 177.1,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 170.3,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 161.2,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 154.0,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 145.9,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_count_cz_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 400,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "液晶ゲーム数400G+α消化でCZ「ケンガンチャンス」に当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "CZ_THROUGH",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZを最大7回スルーすると、8回目のCZ当選でATに当選。",
+      "isEnabled": true
+    }
+  ]
+}

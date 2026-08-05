@@ -1,0 +1,210 @@
+{
+  "machine": {
+    "id": "cranky_crest",
+    "name": "クランキークレスト",
+    "manufacturer": null,
+    "type": "BONUS",
+    "releaseDate": null,
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・ベルAを主軸に反映。 精度優先で暫定値は採用していない。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4449",
+    "ichigekiUrl": "https://1geki.jp/slot/s_crankycrest/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 2,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 3,
+      "notes": null
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 4,
+      "notes": null
+    },
+    {
+      "key": "bell_a_count",
+      "displayName": "ベルA",
+      "category": "SMALL_ROLE",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 5,
+      "notes": null
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 407.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 370.3,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 336.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 304.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REGを軸に2500G以上で評価したい。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 164.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 157.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 147.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 138.6,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bell_a_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 12.7,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 12.4,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 12.1,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 11.8,
+          "weight": 0.6,
+          "minSampleSize": 4000,
+          "note": "補助判別②。小役は高ゲーム数時の補強材料として使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 275.4,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 275.4,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 262.1,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 254.0,
+          "weight": 0.5,
+          "minSampleSize": 3000,
+          "note": "補助判別。BIG単体は主軸にしない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

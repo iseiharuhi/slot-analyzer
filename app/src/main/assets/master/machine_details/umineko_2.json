@@ -1,0 +1,23 @@
+{
+  "id": "umineko_2",
+  "name": "Lパチスロうみねこのなく頃に2",
+  "manufacturer": "オーイズミ",
+  "type": "AT",
+  "releaseDate": "2026-02-02",
+  "isActive": true,
+  "notes": "partial: 公開比較値として、ボーナス合算確率とREG中斜め青7揃い確率を反映。ボーナスは全体挙動の主軸、REG中斜め青7は分母が重いが設定差が大きく1回でも重要な補助根拠として扱う。ART中共通ベルやスイカも有力だが、現段階では全設定の安定比較値を確認し切れた項目を優先採用。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4925",
+  "ichigekiUrl": "https://1geki.jp/slot/l_umineko2/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4925"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_umineko2/"
+    }
+  ],
+  "fileName": "list_slot_063.json"
+}

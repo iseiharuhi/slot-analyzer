@@ -1,0 +1,23 @@
+{
+  "id": "evangelion_festival",
+  "name": "EVANGELION FESTIVAL",
+  "manufacturer": "ビスティ",
+  "type": "AT",
+  "releaseDate": "2020-03-02",
+  "isActive": true,
+  "notes": "partial: 公開解析ベースへ更新。CZ初当り・AT初当り・CZ+AT初当り合算を採用。弱チェリーにも設定差があるが、現行テンプレでは小役カウンタ未追加のため今回は導入を見送り、次回のカウンタ拡張候補として notes に残す。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/3642",
+  "ichigekiUrl": "https://1geki.jp/slot/s_eva_fes/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/3642"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_eva_fes/"
+    }
+  ],
+  "fileName": "list_slot_026.json"
+}

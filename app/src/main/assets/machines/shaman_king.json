@@ -1,0 +1,171 @@
+{
+  "machine": {
+    "id": "shaman_king",
+    "name": "スマスロ シャーマンキング",
+    "manufacturer": "Eleco",
+    "type": "AT",
+    "releaseDate": "2025-02-03",
+    "isActive": true,
+    "notes": "partial: 一撃公開の通常時初当り・AT「シャーマンファイト」初当りを採用。DMM掲載の800G+α天井とAT10スルー後の次回ボーナス天井を反映。示唆画面やCZ継続ゲーム数は今回は未実装。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4719",
+    "ichigekiUrl": "https://1geki.jp/slot/l_shamanking/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "通常時初当り",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "シャーマンボーナス/エピソードボーナス/ボーナス非経由AT直撃を含む通常時初当り合算。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「シャーマンファイト」初当り回数。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 288.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 280.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 268.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 248.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 227.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 207.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 573.6,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 553.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 523.0,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 461.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 412.8,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 367.3,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時800G+α到達でボーナス当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "bonus_through_ceiling",
+      "displayName": "ボーナススルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 10,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT10スルー後の11回目ボーナスでAT当選。",
+      "isEnabled": true
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "machine": {
+    "id": "tekken_5",
+    "name": "パチスロ鉄拳5",
+    "manufacturer": "YAMASA",
+    "type": "AT",
+    "releaseDate": "2022-07-19",
+    "isActive": true,
+    "notes": "partial: DMM特集のボーナス合算・AT初当りを採用。通常時AT当選率や直撃示唆も強いが、現行UIでは契機別入力が必要なため今回は主軸2項目で実装。750G+α天井を反映。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4162",
+    "ichigekiUrl": "https://1geki.jp/slot/s_tekken5/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス合算",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "BIG+REGの合算初当り。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「鉄拳ラッシュ」初当り回数。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 273.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 266.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 260.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 249.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 239.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 229.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 475.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 468.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 454.3,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 427.0,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 401.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 369.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 750,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間移行後750G+α消化でAT「鉄拳ラッシュ」に当選。",
+      "isEnabled": true
+    }
+  ]
+}

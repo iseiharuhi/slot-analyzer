@@ -1,0 +1,23 @@
+{
+  "id": "shin_onimusha_2",
+  "name": "パチスロ 新鬼武者2",
+  "manufacturer": "Enterrise",
+  "type": "AT",
+  "releaseDate": "2022-08-08",
+  "isActive": true,
+  "notes": "partial: 一撃/DMM公開のAT初当りに加え、重い分母でも設定差が非常に大きい通常時リーチ目からの直撃ATを実装。BZ間333GとAT間1000Gの天井を追加。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4178",
+  "ichigekiUrl": "https://1geki.jp/slot/s_sinnoni2/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4178"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_sinnoni2/"
+    }
+  ],
+  "fileName": "list_slot_031.json"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "disc_up_2",
+  "name": "ディスクアップ2",
+  "manufacturer": "Sammy",
+  "type": "BONUS",
+  "releaseDate": "2022-01-24",
+  "isActive": true,
+  "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算、BIGは最終補助に整理。ディスクアップ2は波でBIGが先行しやすいため、REG主軸をさらに強める。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4043",
+  "ichigekiUrl": "https://1geki.jp/slot/s_discup2/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4043"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_discup2/"
+    }
+  ],
+  "fileName": "list_slot_048.json"
+}

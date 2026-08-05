@@ -1,0 +1,23 @@
+{
+  "id": "magical_halloween_8",
+  "name": "マジカルハロウィン８",
+  "manufacturer": null,
+  "type": "HYBRID",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はREG、補助はCZとAT初当りに整理。マジカルハロウィン8はREGを軸にし、AT初当りは補助評価に留める。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4423",
+  "ichigekiUrl": "https://1geki.jp/slot/l_magicalhalloween8/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4423"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_magicalhalloween8/"
+    }
+  ],
+  "fileName": "dmm_slot_029.json"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "animal_slot_docchi",
+  "name": "アニマルスロット ドッチ",
+  "manufacturer": "北電子",
+  "type": "BONUS",
+  "releaseDate": "2026-04-20",
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とBIGに整理。アニマルスロット ドッチはノーマルタイプとしてREG主軸で揃える。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4964",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4964"
+    }
+  ],
+  "fileName": "dmm_slot_008.json"
+}
