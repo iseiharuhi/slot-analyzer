@@ -7,8 +7,8 @@
     "releaseDate": "2020-09-23",
     "isActive": true,
     "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "dmmUrl": "https://p-town.dmm.com/machines/3731",
+    "ichigekiUrl": "https://1geki.jp/slot/s_35s/"
   },
   "counterDefinitions": [
     {
