@@ -1,0 +1,65 @@
+{
+  "machine": {
+    "id": "black_lagoon_zero_bullet_max",
+    "name": "BLACK LAGOON ZERO bullet MAX",
+    "manufacturer": "エフ",
+    "type": "AT",
+    "releaseDate": "2022-02-07",
+    "isActive": true,
+    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "dmmUrl": null,
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": []
+}
