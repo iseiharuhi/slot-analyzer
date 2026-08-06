@@ -27,7 +27,7 @@ none
   - shin_hanabi.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 265
+- missing dmmUrl: 245
   - abasa_25.json
   - abasa_30.json
   - accelerator_index.json
@@ -79,7 +79,6 @@ none
   - gantz_kiwami.json
   - gegege_no_kitaro_kakusei.json
   - gekka_miyabi.json
-  - gi_yushun_club_3.json
   - ginga_eiyuu_densetsu.json
   - girls_keirin_gi_fairy_grand_prix.json
   - girls_und_panzer_movie.json
@@ -93,10 +92,8 @@ none
   - goya_champloo_30.json
   - granbelm.json
   - guilty_crown_2.json
-  - gundam_unicorn_kakusei_drive.json
   - gundam_unicorn.json
   - gyagder.json
-  - haihai_shiosai_2.json
   - haiyore_nyaruko_san.json
   - hanahana_houou_tensho.json
   - hanamatsuri.json
@@ -115,13 +112,10 @@ none
   - hyper_a_30_blue_falcon.json
   - hyper_black_jack.json
   - hyper_rush.json
-  - idolmaster_million_live_original.json
   - iiwake_wa_sasenai_wa.json
-  - initial_d.json
   - javelin.json
   - juujika_5.json
   - kachou_kumada_kousaku.json
-  - kaiji_numa.json
   - kamaitachi_no_yoru.json
   - kamen_rider_7riders.json
   - kemono_friends.json
@@ -142,16 +136,10 @@ none
   - lb_triple_crown.json
   - loli_kura_hold.json
   - love_cute_2.json
-  - lovejo_2_plus.json
   - lucky_umi_monogatari.json
   - lupin_sansei_s.json
-  - macross_delta.json
   - made_in_abyss.json
-  - madoka_magica_movie_original.json
   - magical_halloween_bt.json
-  - magical_halloween_trick_or_treat.json
-  - mahjong_fight_club_shin.json
-  - mahjong_monogatari_4.json
   - mahou_shoujo_ikusei_keikaku.json
   - mappy.json
   - marchen_quest.json
@@ -159,7 +147,6 @@ none
   - masamune_sengoku.json
   - matador_3.json
   - midori_don_viva_revival.json
-  - miku_idomu_challenge.json
   - moe_chiba_30.json
   - momokyun_sword_dx.json
   - momotaro_densetsu.json
@@ -175,7 +162,6 @@ none
   - neo_planet.json
   - new_getter_mouse.json
   - new_hanahana_gold_30.json
-  - new_king_hanahana_v_30.json
   - new_pulsar_bt.json
   - new_pulsar_sp4_taiko.json
   - ninja_jajamaru_kun.json
@@ -215,7 +201,6 @@ none
   - salaryman_bancho_2.json
   - salaryman_kintarou.json
   - sao_1.json
-  - sao_2.json
   - seisenshi_dunbine.json
   - sen_chan_a.json
   - sen_chan_gokuraku.json
@@ -225,8 +210,6 @@ none
   - sengoku_koihime.json
   - sengoku_musou_3.json
   - sengoku_otome_akatsuki_no_sekigahara.json
-  - sengoku_otome3.json
-  - sengoku_otome5.json
   - senran_kagura_2.json
   - senran_kagura_burst_up.json
   - shake_bonus_trigger.json
@@ -269,7 +252,6 @@ none
   - tower_of_druaga_slot.json
   - tower_of_druaga_smart.json
   - triple_crown_for_you.json
-  - triple_crown_v_30.json
   - triple_crown_vintage.json
   - tropicana.json
   - twin_angel_party.json
@@ -288,12 +270,10 @@ none
   - yoshimune_3.json
   - zegapain_2.json
   - zenigata_5.json
-  - zenigata3.json
-  - zettai_shougeki_3.json
   - zettai_shougeki_4.json
   - zettai_shougeki_platonic_heart.json
   - zombieland_saga.json
-- missing ichigekiUrl: 291
+- missing ichigekiUrl: 272
   - abasa_25.json
   - abasa_30.json
   - accelerator_index.json
@@ -356,7 +336,6 @@ none
   - garo_ougon_kishi.json
   - gegege_no_kitaro_kakusei.json
   - gekka_miyabi.json
-  - gi_yushun_club_3.json
   - ginga_eiyuu_densetsu.json
   - girls_keirin_gi_fairy_grand_prix.json
   - girls_und_panzer_movie.json
@@ -371,10 +350,8 @@ none
   - granbelm.json
   - guilty_crown_2.json
   - gundam_seed.json
-  - gundam_unicorn_kakusei_drive.json
   - gundam_unicorn.json
   - gyagder.json
-  - haihai_shiosai_2.json
   - haiyore_nyaruko_san.json
   - hanabi_zekkei.json
   - hanahana_houou_tensho.json
@@ -394,11 +371,9 @@ none
   - hyper_a_30_blue_falcon.json
   - hyper_black_jack.json
   - hyper_rush.json
-  - idolmaster_million_live_original.json
   - idolmaster_million_live.json
   - iiwake_wa_sasenai_wa.json
   - initial_d_2.json
-  - initial_d.json
   - inuyasha_2.json
   - inuyasha.json
   - isekai_quartet_bt.json
@@ -409,7 +384,6 @@ none
   - juujika_5.json
   - kachou_kumada_kousaku.json
   - kaiji_kyouen.json
-  - kaiji_numa.json
   - kamaitachi_no_yoru.json
   - kamen_rider_7riders.json
   - kemono_friends.json
@@ -428,18 +402,12 @@ none
   - lb_jackpot.json
   - lb_triple_crown.json
   - loli_kura_hold.json
-  - lovejo_2_plus.json
   - lucky_umi_monogatari.json
   - lupin_sansei_s.json
-  - macross_delta.json
   - macross_frontier_4.json
   - made_in_abyss.json
-  - madoka_magica_movie_original.json
   - magia_record.json
   - magical_halloween_bt.json
-  - magical_halloween_trick_or_treat.json
-  - mahjong_fight_club_shin.json
-  - mahjong_monogatari_4.json
   - mahjong_monogatari.json
   - mahou_shoujo_ikusei_keikaku.json
   - mappy.json
@@ -448,7 +416,6 @@ none
   - masamune_sengoku.json
   - matador_3.json
   - midori_don_viva_revival.json
-  - miku_idomu_challenge.json
   - million_god_kamigami.json
   - moe_chiba_30.json
   - momokyun_sword_dx.json
@@ -470,7 +437,6 @@ none
   - nangoku_sodachi.json
   - new_getter_mouse.json
   - new_hanahana_gold_30.json
-  - new_king_hanahana_v_30.json
   - new_pulsar_bt.json
   - new_pulsar_sp4_taiko.json
   - ninja_jajamaru_kun.json
@@ -509,7 +475,6 @@ none
   - saint_seiya_meiou_fukkatsu.json
   - salaryman_kintarou.json
   - sao_1.json
-  - sao_2.json
   - seisenshi_dunbine.json
   - sen_chan_a.json
   - sen_chan_gokuraku.json
@@ -519,8 +484,6 @@ none
   - sengoku_koihime.json
   - sengoku_musou_3.json
   - sengoku_otome_akatsuki_no_sekigahara.json
-  - sengoku_otome3.json
-  - sengoku_otome5.json
   - senran_kagura_burst_up.json
   - shake_bonus_trigger.json
   - shima_musume.json
@@ -581,8 +544,6 @@ none
   - word_of_lights_2.json
   - youzitsu.json
   - zegapain_2.json
-  - zenigata3.json
-  - zettai_shougeki_3.json
   - zettai_shougeki_platonic_heart.json
   - zombieland_saga.json
 - bare (top page) dmmUrl: 0
