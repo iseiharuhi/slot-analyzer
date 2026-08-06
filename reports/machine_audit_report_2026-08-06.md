@@ -27,7 +27,7 @@ none
   - shin_hanabi.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 285
+- missing dmmUrl: 265
   - abasa_25.json
   - abasa_30.json
   - accelerator_index.json
@@ -43,7 +43,6 @@ none
   - awamori.json
   - bahama_30.json
   - baki_tsuyokunaritakuba.json
-  - bancho_zero.json
   - basilisk_kizuna_2_tenzen_black.json
   - big_shimauta_30.json
   - biohazard_7.json
@@ -60,13 +59,9 @@ none
   - chou_giragira_jii_summer.json
   - chou_hanamatsuri.json
   - cinderella_blade_4.json
-  - crea_hihouden_hajimari_bt.json
-  - crea_new_hihouden.json
   - cyborg_009_re.json
   - danmachi_gaiden_sword_oratoria.json
   - dark_high_bi.json
-  - devil_may_cry_5_stylish_tribe.json
-  - devil_may_cry_5.json
   - digislo_yama.json
   - dondake.json
   - double_attack_2.json
@@ -91,7 +86,6 @@ none
   - girls_und_panzer_saishou.json
   - goblin_slayer_2.json
   - goblin_slayer.json
-  - god_eater_resurrection.json
   - god_eater_the_animation.json
   - golden_kamuy.json
   - gouen_koukou_ouendan_geki.json
@@ -125,10 +119,8 @@ none
   - iiwake_wa_sasenai_wa.json
   - initial_d.json
   - javelin.json
-  - juggler_girls_ss.json
   - juujika_5.json
   - kachou_kumada_kousaku.json
-  - kaguya_sama.json
   - kaiji_numa.json
   - kamaitachi_no_yoru.json
   - kamen_rider_7riders.json
@@ -136,7 +128,6 @@ none
   - kin_no_kabocha.json
   - king_creator_30.json
   - king_komonchama.json
-  - king_pulsar_smart.json
   - kizumonogatari.json
   - knights_slot.json
   - komonchama_katsu_2.json
@@ -174,8 +165,6 @@ none
   - momotaro_densetsu.json
   - monster_hunter_iceborne.json
   - monster_hunter_world.json
-  - motto_crea_hihouden_megami_uta.json
-  - mr_juggler.json
   - mr_triple_crown.json
   - name_neko.json
   - nanairo_sango.json
@@ -183,21 +172,17 @@ none
   - nanatsu_no_taizai.json
   - nangoku_monogatari_30.json
   - nangoku_sodachi_30.json
-  - neo_im_juggler_ex.json
   - neo_planet.json
   - new_getter_mouse.json
   - new_hanahana_gold_30.json
   - new_king_hanahana_v_30.json
-  - new_king_hanahana_v.json
   - new_pulsar_bt.json
-  - new_pulsar_sp3.json
   - new_pulsar_sp4_taiko.json
   - ninja_jajamaru_kun.json
   - ninkon_san.json
   - no_game_no_life.json
   - nyanko_bigbang.json
   - oda_nobuna_no_yabou.json
-  - oki_doki_black.json
   - oki_doki_duo_30.json
   - oki_doki_gold_30.json
   - oki_doki_gorgeous.json
@@ -216,7 +201,6 @@ none
   - overlord_2.json
   - pink_panther_sp.json
   - premium_umaibou.json
-  - railgun_2.json
   - railgun.json
   - rairai_eisa_ex_30.json
   - rakuen_tsuihou.json
@@ -248,7 +232,6 @@ none
   - shake_bonus_trigger.json
   - shima_musume.json
   - shin_hissatsu_shiokinin.json
-  - shin_hokuto_musou.json
   - shin_ikkitousen.json
   - shin_ore_no_sora.json
   - shin_tenka_fubu.json
@@ -260,7 +243,6 @@ none
   - souten_no_ken_4.json
   - soz_1_aa_30.json
   - star_hanahana_30.json
-  - star_pulsar.json
   - steins_gate.json
   - street_fighter_5.json
   - strike_the_blood.json
@@ -268,7 +250,6 @@ none
   - super_hanahana_2_30.json
   - super_hanahana_30.json
   - super_hanahana.json
-  - super_reno_sp.json
   - super_rio_ace.json
   - symphogear_yuuki_no_uta.json
   - taboo_tattoo.json
@@ -292,7 +273,6 @@ none
   - triple_crown_vintage.json
   - tropicana.json
   - twin_angel_party.json
-  - ultra_miracle_juggler.json
   - ultraman_l.json
   - ultraman_taro_boukun.json
   - ultraman_tiga.json
@@ -313,7 +293,7 @@ none
   - zettai_shougeki_4.json
   - zettai_shougeki_platonic_heart.json
   - zombieland_saga.json
-- missing ichigekiUrl: 311
+- missing ichigekiUrl: 291
   - abasa_25.json
   - abasa_30.json
   - accelerator_index.json
@@ -332,7 +312,6 @@ none
   - bahama_30.json
   - bakemonogatari.json
   - baki_tsuyokunaritakuba.json
-  - bancho_zero.json
   - bancho4.json
   - bandori.json
   - basilisk_kizuna_2_tenzen_black.json
@@ -355,14 +334,10 @@ none
   - chou_hanamatsuri.json
   - chura_chura.json
   - cinderella_blade_4.json
-  - crea_hihouden_hajimari_bt.json
-  - crea_new_hihouden.json
   - cyborg_009_re.json
   - d4dj_pachi_slot_mix.json
   - danmachi_gaiden_sword_oratoria.json
   - dark_high_bi.json
-  - devil_may_cry_5_stylish_tribe.json
-  - devil_may_cry_5.json
   - digislo_yama.json
   - dondake.json
   - double_attack_2.json
@@ -387,7 +362,6 @@ none
   - girls_und_panzer_movie.json
   - girls_und_panzer_saishou.json
   - goblin_slayer_2.json
-  - god_eater_resurrection.json
   - god_eater_the_animation.json
   - godzilla_vs_eva.json
   - golden_kamuy.json
@@ -432,10 +406,8 @@ none
   - jabami_yumeko.json
   - javelin.json
   - jormungand.json
-  - juggler_girls_ss.json
   - juujika_5.json
   - kachou_kumada_kousaku.json
-  - kaguya_sama.json
   - kaiji_kyouen.json
   - kaiji_numa.json
   - kamaitachi_no_yoru.json
@@ -444,7 +416,6 @@ none
   - kin_no_kabocha.json
   - king_creator_30.json
   - king_komonchama.json
-  - king_pulsar_smart.json
   - kinnikuman_7devils.json
   - kizumonogatari.json
   - knights_slot.json
@@ -487,8 +458,6 @@ none
   - monster_hunter_world.json
   - motto_chibariyo_25.json
   - motto_chibariyo_30.json
-  - motto_crea_hihouden_megami_uta.json
-  - mr_juggler.json
   - mr_triple_crown.json
   - mushoku_tensei.json
   - my_flower_2.json
@@ -499,20 +468,16 @@ none
   - nangoku_monogatari_30.json
   - nangoku_sodachi_30.json
   - nangoku_sodachi.json
-  - neo_im_juggler_ex.json
   - new_getter_mouse.json
   - new_hanahana_gold_30.json
   - new_king_hanahana_v_30.json
-  - new_king_hanahana_v.json
   - new_pulsar_bt.json
-  - new_pulsar_sp3.json
   - new_pulsar_sp4_taiko.json
   - ninja_jajamaru_kun.json
   - ninkon_san.json
   - nogizaka_46.json
   - nyanko_bigbang.json
   - oda_nobuna_no_yabou.json
-  - oki_doki_black.json
   - oki_doki_duo_30.json
   - oki_doki_gold_30.json
   - oki_doki_gorgeous.json
@@ -532,7 +497,6 @@ none
   - pink_panther_sp.json
   - premium_umaibou.json
   - prism_nana.json
-  - railgun_2.json
   - rairai_eisa_ex_30.json
   - rei_slot.json
   - rezero_apex_vacation.json
@@ -561,7 +525,6 @@ none
   - shake_bonus_trigger.json
   - shima_musume.json
   - shin_hissatsu_shiokinin.json
-  - shin_hokuto_musou.json
   - shin_ikkitousen.json
   - shin_onimusha_3.json
   - shin_ore_no_sora.json
@@ -574,7 +537,6 @@ none
   - souten_no_ken_4.json
   - soz_1_aa_30.json
   - star_hanahana_30.json
-  - star_pulsar.json
   - steins_gate.json
   - street_fighter_5.json
   - strike_the_blood.json
@@ -584,7 +546,6 @@ none
   - super_hanahana_2_30.json
   - super_hanahana_30.json
   - super_hanahana.json
-  - super_reno_sp.json
   - super_rio_ace.json
   - symphogear_yuuki_no_uta.json
   - taboo_tattoo.json
@@ -608,7 +569,6 @@ none
   - tropicana.json
   - twin_angel_party.json
   - ultra_chabudai_gaeshi.json
-  - ultra_miracle_juggler.json
   - ultraman_l.json
   - ultraman_taro_boukun.json
   - ultraman_tiga.json
