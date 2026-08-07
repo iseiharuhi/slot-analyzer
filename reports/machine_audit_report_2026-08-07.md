@@ -27,7 +27,7 @@ none
   - shin_hanabi.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 206
+- missing dmmUrl: 186
   - abasa_25.json
   - abasa_30.json
   - accelerator_index.json
@@ -39,7 +39,6 @@ none
   - another_god_hades_sekihou.json
   - ao_no_exorcist.json
   - aoharu_misao_a_live.json
-  - awamori.json
   - bahama_30.json
   - basilisk_kizuna_2_tenzen_black.json
   - big_shimauta_30.json
@@ -49,7 +48,6 @@ none
   - bomber_girl.json
   - burning_express.json
   - busou_shinki.json
-  - cc_angel.json
   - chibariyo_2.json
   - chibariyo_30.json
   - chou_giragira_jii_summer.json
@@ -71,7 +69,6 @@ none
   - gamera_2.json
   - gantz_kiwami.json
   - gegege_no_kitaro_kakusei.json
-  - gekka_miyabi.json
   - ginga_eiyuu_densetsu.json
   - girls_und_panzer_saishou.json
   - goblin_slayer.json
@@ -80,16 +77,13 @@ none
   - goya_champloo_30.json
   - granbelm.json
   - guilty_crown_2.json
-  - gyagder.json
   - haiyore_nyaruko_san.json
-  - hanahana_houou_tensho.json
   - hananokeiji_bui.json
   - hardboiled.json
   - haru_ichiban.json
   - hey_elite_salaryman_kagami.json
   - hidan_no_aria_2.json
   - high_bi_return_30.json
-  - highschool_dxd_2.json
   - hihouden_megami.json
   - hit128.json
   - hyper_a_30_blue_falcon.json
@@ -101,7 +95,6 @@ none
   - kachou_kumada_kousaku.json
   - kamaitachi_no_yoru.json
   - kamen_rider_7riders.json
-  - kemono_friends.json
   - kin_no_kabocha.json
   - king_creator_30.json
   - kizumonogatari.json
@@ -121,7 +114,6 @@ none
   - made_in_abyss.json
   - magical_halloween_bt.json
   - mahou_shoujo_ikusei_keikaku.json
-  - mappy.json
   - marchen_quest.json
   - masamune_sengoku.json
   - matador_3.json
@@ -145,11 +137,9 @@ none
   - oda_nobuna_no_yabou.json
   - oki_doki_gold_30.json
   - oki_doki_gorgeous.json
-  - oki_hana_30.json
   - oki_shisa_30.json
   - oki_wanimaru_25.json
   - oki_wanimaru_30.json
-  - okinawa_festival_30.json
   - one_bar_s30.json
   - one_chance_1000.json
   - onihama_bakusou_gurentai_gekitou.json
@@ -157,15 +147,12 @@ none
   - oohanaman.json
   - original_slot4_plus.json
   - overlord_2.json
-  - pink_panther_sp.json
   - premium_umaibou.json
   - railgun.json
   - rairai_eisa_ex_30.json
   - rakuen_tsuihou.json
-  - rei_slot.json
   - rezero_apex_vacation.json
   - ring_ni_kakero_1.json
-  - ring_unmei_no_byoutoku.json
   - ryukyu_beat_30.json
   - s2027db.json
   - saenai_heroine_no_sodatekata.json
@@ -178,7 +165,6 @@ none
   - sengoku_collection_5_loop.json
   - sengoku_koihime.json
   - sengoku_musou_3.json
-  - sengoku_otome_akatsuki_no_sekigahara.json
   - senran_kagura_2.json
   - senran_kagura_burst_up.json
   - shake_bonus_trigger.json
@@ -191,15 +177,11 @@ none
   - sister_quest.json
   - sky_love.json
   - slot_idol.json
-  - souten_no_ken_4.json
   - soz_1_aa_30.json
   - star_hanahana_30.json
-  - steins_gate.json
   - street_fighter_5.json
   - strike_the_blood.json
   - super_hanahana_2_30.json
-  - symphogear_yuuki_no_uta.json
-  - taboo_tattoo.json
   - tantei_opera_milky_holmes_r.json
   - tekken4_ultimate_devil.json
   - tensei_shitara_ken_deshita.json
@@ -216,7 +198,6 @@ none
   - triple_crown_for_you.json
   - triple_crown_vintage.json
   - tropicana.json
-  - twin_angel_party.json
   - ultraman_l.json
   - ultraman_taro_boukun.json
   - ultraman_tiga.json
@@ -230,11 +211,10 @@ none
   - word_of_lights_2.json
   - yatterman_zettai_seigi.json
   - yoshimune_3.json
-  - zegapain_2.json
   - zenigata_5.json
   - zettai_shougeki_4.json
   - zombieland_saga.json
-- missing ichigekiUrl: 233
+- missing ichigekiUrl: 213
   - abasa_25.json
   - abasa_30.json
   - accelerator_index.json
@@ -247,7 +227,6 @@ none
   - animal_slot_docchi.json
   - another_god_hades_sekihou.json
   - aoharu_misao_a_live.json
-  - awamori.json
   - babel.json
   - bahama_30.json
   - bakemonogatari.json
@@ -263,7 +242,6 @@ none
   - burning_express.json
   - busou_shinki.json
   - cats_eye.json
-  - cc_angel.json
   - char_counterattack.json
   - chibariyo_2.json
   - chibariyo_30.json
@@ -289,7 +267,6 @@ none
   - gantz_kiwami.json
   - garo_ougon_kishi.json
   - gegege_no_kitaro_kakusei.json
-  - gekka_miyabi.json
   - ginga_eiyuu_densetsu.json
   - girls_und_panzer_saishou.json
   - godzilla_vs_eva.json
@@ -299,16 +276,13 @@ none
   - granbelm.json
   - guilty_crown_2.json
   - gundam_seed.json
-  - gyagder.json
   - haiyore_nyaruko_san.json
   - hanabi_zekkei.json
-  - hanahana_houou_tensho.json
   - hananokeiji_bui.json
   - hardboiled.json
   - haru_ichiban.json
   - hey_elite_salaryman_kagami.json
   - high_bi_return_30.json
-  - highschool_dxd_2.json
   - higurashi_matsuri2.json
   - hihouden.json
   - hit128.json
@@ -330,7 +304,6 @@ none
   - kaiji_kyouen.json
   - kamaitachi_no_yoru.json
   - kamen_rider_7riders.json
-  - kemono_friends.json
   - kin_no_kabocha.json
   - king_creator_30.json
   - kinnikuman_7devils.json
@@ -351,7 +324,6 @@ none
   - magical_halloween_bt.json
   - mahjong_monogatari.json
   - mahou_shoujo_ikusei_keikaku.json
-  - mappy.json
   - marchen_quest.json
   - masamune_sengoku.json
   - matador_3.json
@@ -381,11 +353,9 @@ none
   - oda_nobuna_no_yabou.json
   - oki_doki_gold_30.json
   - oki_doki_gorgeous.json
-  - oki_hana_30.json
   - oki_shisa_30.json
   - oki_wanimaru_25.json
   - oki_wanimaru_30.json
-  - okinawa_festival_30.json
   - one_chance_1000.json
   - one_punch_man.json
   - onihama_bakusou_gurentai_gekitou.json
@@ -393,14 +363,11 @@ none
   - oohanaman.json
   - original_slot4_plus.json
   - overlord_2.json
-  - pink_panther_sp.json
   - premium_umaibou.json
   - prism_nana.json
   - rairai_eisa_ex_30.json
-  - rei_slot.json
   - rezero_apex_vacation.json
   - ring_ni_kakero_1.json
-  - ring_unmei_no_byoutoku.json
   - ryukyu_beat_30.json
   - s2027db.json
   - saenai_heroine_no_sodatekata.json
@@ -413,7 +380,6 @@ none
   - sengoku_collection_5_loop.json
   - sengoku_koihime.json
   - sengoku_musou_3.json
-  - sengoku_otome_akatsuki_no_sekigahara.json
   - senran_kagura_burst_up.json
   - shake_bonus_trigger.json
   - shin_hissatsu_shiokinin.json
@@ -426,17 +392,13 @@ none
   - sister_quest.json
   - sky_love.json
   - slot_idol.json
-  - souten_no_ken_4.json
   - soz_1_aa_30.json
   - star_hanahana_30.json
-  - steins_gate.json
   - street_fighter_5.json
   - strike_the_blood.json
   - super_bingo_neo_classic.json
   - super_black_jack.json
   - super_hanahana_2_30.json
-  - symphogear_yuuki_no_uta.json
-  - taboo_tattoo.json
   - tantei_opera_milky_holmes_r.json
   - tensei_shitara_ken_deshita.json
   - tetsuya_tenun_chiriki.json
@@ -453,7 +415,6 @@ none
   - triple_crown_v_30.json
   - triple_crown_vintage.json
   - tropicana.json
-  - twin_angel_party.json
   - ultra_chabudai_gaeshi.json
   - ultraman_l.json
   - ultraman_taro_boukun.json
@@ -466,7 +427,6 @@ none
   - watakon.json
   - word_of_lights_2.json
   - youzitsu.json
-  - zegapain_2.json
   - zombieland_saga.json
 - bare (top page) dmmUrl: 0
 - bare (top page) ichigekiUrl: 0
