@@ -27,17 +27,14 @@ none
   - shin_hanabi.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 47
-  - accelerator_index.json
+- missing dmmUrl: 33
   - akame_ga_kill.json
   - anata_no_otto_hades.json
   - anemone.json
   - ao_no_exorcist.json
   - big_shimauta_30.json
-  - double_attack_2.json
   - drifters.json
   - etotama.json
-  - fujiko_bt.json
   - g1_yushun_club_gold.json
   - goblin_slayer.json
   - hidan_no_aria_2.json
@@ -45,11 +42,8 @@ none
   - l_rino_heaven.json
   - l_yoshimune_rising.json
   - l_yoshimune.json
-  - lb_jackpot.json
-  - lb_triple_crown.json
   - love_cute_2.json
   - monster_hunter_iceborne.json
-  - name_neko.json
   - neo_planet.json
   - no_game_no_life.json
   - one_bar_s30.json
@@ -58,25 +52,16 @@ none
   - rakuen_tsuihou.json
   - ring_ni_kakero_1.json
   - salaryman_bancho_2.json
-  - salaryman_kintarou.json
-  - sen_chan_a.json
   - senran_kagura_2.json
-  - shin_ikkitousen.json
-  - sister_quest.json
   - tekken4_ultimate_devil.json
-  - tida_dondon.json
   - tiger_bunny_sp.json
-  - tobe_harem_ace.json
-  - triple_crown_for_you.json
-  - ultraman_l.json
   - warau_salesman_4.json
   - warau_salesman_zesshou.json
   - yatterman_zettai_seigi.json
   - yoshimune_3.json
   - zenigata_5.json
   - zettai_shougeki_4.json
-- missing ichigekiUrl: 78
-  - accelerator_index.json
+- missing ichigekiUrl: 65
   - akame_ga_kill_2.json
   - akudama_drive.json
   - aladdin_classic.json
@@ -93,10 +78,8 @@ none
   - chura_chura.json
   - d4dj_pachi_slot_mix.json
   - dondake.json
-  - double_attack_2.json
   - eva_tamashii_no_kyoumei.json
   - frame_arms_girls.json
-  - fujiko_bt.json
   - galfy.json
   - garo_ougon_kishi.json
   - godzilla_vs_eva.json
@@ -115,8 +98,6 @@ none
   - kaiji_kyouen.json
   - kinnikuman_7devils.json
   - kyokou_suiri.json
-  - lb_jackpot.json
-  - lb_triple_crown.json
   - macross_frontier_4.json
   - magia_record.json
   - mahjong_monogatari.json
@@ -129,7 +110,6 @@ none
   - mr_triple_crown.json
   - mushoku_tensei.json
   - my_flower_2.json
-  - name_neko.json
   - nangoku_sodachi.json
   - nogizaka_46.json
   - one_punch_man.json
@@ -137,21 +117,14 @@ none
   - prism_nana.json
   - ring_ni_kakero_1.json
   - saint_seiya_kaiou_custom_edition.json
-  - salaryman_kintarou.json
-  - sen_chan_a.json
-  - shin_ikkitousen.json
   - shin_onimusha_3.json
-  - sister_quest.json
   - super_bingo_neo_classic.json
   - super_black_jack.json
-  - tida_dondon.json
-  - tobe_harem_ace.json
   - triple_crown_for_you.json
   - triple_crown_seven.json
   - triple_crown_v_30.json
   - triple_crown_vintage.json
   - ultra_chabudai_gaeshi.json
-  - ultraman_l.json
   - watakon.json
   - youzitsu.json
 - bare (top page) dmmUrl: 0

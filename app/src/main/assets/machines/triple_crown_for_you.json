@@ -6,8 +6,8 @@
     "type": "AT",
     "releaseDate": "2024-10-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
+    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。1geki.jpに専用ページ・メーカーページなくichigekiUrlは空欄(岡崎産業の別機種LBトリプルクラウンとは別物)。dmm側メーカー表記は「清龍ジャパン」。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4668",
     "ichigekiUrl": null
   },
   "counterDefinitions": [
