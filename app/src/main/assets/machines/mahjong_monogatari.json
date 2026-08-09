@@ -2,13 +2,13 @@
   "machine": {
     "id": "mahjong_monogatari",
     "name": "L麻雀物語",
-    "manufacturer": null,
+    "manufacturer": "オリンピアエステート",
     "type": "BONUS_PLUS_AT",
-    "releaseDate": null,
+    "releaseDate": "2025-04-21",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(平和ネット系列)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4777",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_mjnmngtr/"
   },
   "counterDefinitions": [
     {

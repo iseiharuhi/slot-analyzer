@@ -2,13 +2,13 @@
 
 対象: app/src/main/assets/machines/*.json (manifest除く)
 
-- files scanned: 443
-- valid: 443
+- files scanned: 442
+- valid: 442
 - broken: 0
 
 ## Status breakdown
 - draft: 1
-- other: 385
+- other: 384
 - partial: 57
 
 ## Broken files / filename-id mismatches
@@ -28,28 +28,10 @@ none
 ## Missing / bare URLs
 - missing dmmUrl: 1
   - original_slot4_plus.json
-- missing ichigekiUrl: 44
+- missing ichigekiUrl: 26
   - chura_chura.json
   - dondake.json
-  - higurashi_matsuri2.json
-  - hihouden.json
-  - idolmaster_million_live.json
-  - initial_d_2.json
-  - inuyasha_2.json
-  - inuyasha.json
-  - isekai_quartet_bt.json
-  - iza_bancho.json
-  - jabami_yumeko.json
-  - jormungand.json
-  - kaiji_kyouen.json
-  - kinnikuman_7devils.json
-  - kyokou_suiri.json
-  - macross_frontier_4.json
-  - magia_record.json
-  - mahjong_monogatari.json
   - marchen_quest.json
-  - million_god_kamigami.json
-  - momokyun_sword.json
   - monster_hunter_golden.json
   - motto_chibariyo_25.json
   - motto_chibariyo_30.json
