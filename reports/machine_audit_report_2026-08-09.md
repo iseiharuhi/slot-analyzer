@@ -26,27 +26,9 @@ none
   - shin_hanabi.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 15
-  - one_bar_s30.json
+- missing dmmUrl: 1
   - original_slot4_plus.json
-  - railgun.json
-  - rakuen_tsuihou.json
-  - ring_ni_kakero_1.json
-  - salaryman_bancho_2.json
-  - senran_kagura_2.json
-  - tekken4_ultimate_devil.json
-  - tiger_bunny_sp.json
-  - warau_salesman_4.json
-  - warau_salesman_zesshou.json
-  - yatterman_zettai_seigi.json
-  - yoshimune_3.json
-  - zenigata_5.json
-  - zettai_shougeki_4.json
-- missing ichigekiUrl: 65
-  - akame_ga_kill_2.json
-  - akudama_drive.json
-  - aladdin_classic.json
-  - aldnoah_zero.json
+- missing ichigekiUrl: 61
   - animal_slot_docchi.json
   - babel.json
   - bakemonogatari.json
