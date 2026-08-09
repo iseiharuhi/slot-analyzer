@@ -6,7 +6,7 @@
     "type": "HYBRID",
     "releaseDate": null,
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたRB・ボーナス合算・BB合算・共通ベル・スイカを主軸に反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたRB・ボーナス合算・BB合算・共通ベル・スイカを主軸に反映。 精度優先で暫定値は採用していない。天井は1geki.jp/なな徹の2ソース一致でCZ間200G/400Gを確認・反映(2026-08-10)。天井選択率自体の設定差は両ソースとも明確な記載なし。",
     "dmmUrl": "https://p-town.dmm.com/machines/4447",
     "ichigekiUrl": "https://1geki.jp/slot/l_higurashi_gou/"
   },
@@ -321,5 +321,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling_short",
+      "displayName": "CZ間ゲーム数天井(短)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "前回CZ終了時の抽選で選択される短い方の天井。CZ間200G消化で天井到達。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ「運命分岐モード」当選確定",
+      "resetText": "CZ突入でリセット"
+    },
+    {
+      "ruleKey": "cz_interval_ceiling_long",
+      "displayName": "CZ間ゲーム数天井(長)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 400,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "前回CZ終了時の抽選で選択される長い方の天井。CZ間400G消化で天井到達。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ「運命分岐モード」当選確定",
+      "resetText": "CZ突入でリセット"
+    }
+  ]
 }

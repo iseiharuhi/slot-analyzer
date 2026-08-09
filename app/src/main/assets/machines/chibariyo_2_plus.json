@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-01-06",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 弱チェリー・強チェリー・連荘/AT当選など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 弱チェリー・強チェリー・連荘/AT当選など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/パチマガの2ソース一致で350G/600G/999Gの3段階+チェリー回数天井を確認・反映(2026-08-10)。天井選択率自体の設定差の具体値は情報源に記載なし。",
     "dmmUrl": "https://p-town.dmm.com/machines/4717",
     "ichigekiUrl": "https://1geki.jp/slot/l_cbry2_plus/"
   },
@@ -114,5 +114,74 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling_short",
+      "displayName": "ゲーム数天井(短)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 350,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "内部モード(通常A中心)で選択されやすい最短天井。高設定ほど350G選択率が高い傾向。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス当選",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "game_ceiling_mid",
+      "displayName": "ゲーム数天井(中)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "内部モードによって選択される中間天井。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス当選",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "game_ceiling_long",
+      "displayName": "ゲーム数天井(最長)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "内部モードで選択される最長天井。999G消化でどのモードでも必ずボーナス当選。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス当選",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "cherry_count_ceiling",
+      "displayName": "チェリー回数天井",
+      "ceilingType": "COUNT",
+      "limitValue": 45,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "モード別チェリー成立回数天井(通常A/B:40回、チャンスA:45回、チャンスB:25回、天国準備・アゲイン:10回)到達で前兆を経てボーナス当選。limitValueはモード内最大の45回を代表値として記録。",
+      "isEnabled": true,
+      "displayOrder": 4,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "前兆を経てボーナス当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

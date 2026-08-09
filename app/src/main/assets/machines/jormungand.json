@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-04-06",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたAT・CZを主軸に反映。 ボーナス・直撃ATなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたAT・CZを主軸に反映。 ボーナス・直撃ATなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/slobaseの2ソース一致で仮天井450G(設定差あり)/本天井999Gを確認・反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4970",
     "ichigekiUrl": "https://1geki.jp/slot/l_jormungand/"
   },
@@ -168,5 +168,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "temporary_game_ceiling",
+      "displayName": "仮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 450,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更後、または上位CZ「恥の世紀」終了後に選択される仮天井。選択率に設定差あり(設定1:約33.59%〜設定6:約50.00%、1geki.jpにテーブルあり)。450G前兆最終ゲームで「ねじれココランプ」点灯時AT濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚(ランプ点灯時)",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "本天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "999G+αでAT当選確定。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

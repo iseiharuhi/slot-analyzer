@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": "2023-11-06",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。manufacturer/releaseDate未記載だったためdmmで判明・補完。1geki.jpに専用ページなく(小規模メーカー・希少機種)ichigekiUrlは空欄。",
+    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。manufacturer/releaseDate未記載だったためdmmで判明・補完。1geki.jpに専用ページなく(小規模メーカー・希少機種)ichigekiUrlは空欄。天井はdmm公式スペック表「天井突入条件」欄が「調査中」のままで、他の複数サイトにも記載なし(2026-08-10調査、6号機ノーマルAタイプ完全告知機のため非搭載の可能性が高いが断定できる情報源見つからず)。ceilingRulesは不明のため空のまま。",
     "dmmUrl": "https://p-town.dmm.com/machines/4486",
     "ichigekiUrl": null
   },

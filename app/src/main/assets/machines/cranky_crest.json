@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・ベルAを主軸に反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・ベルAを主軸に反映。 精度優先で暫定値は採用していない。天井は1geki.jpに「天井：非搭載」と明記(2026-08-10確認)。ceilingRulesは意図的に空のまま。",
     "dmmUrl": "https://p-town.dmm.com/machines/4449",
     "ichigekiUrl": "https://1geki.jp/slot/s_crankycrest/"
   },
