@@ -2,11 +2,11 @@
   "machine": {
     "id": "chura_chura",
     "name": "Sちゅらちゅら",
-    "manufacturer": null,
+    "manufacturer": "LUX",
     "type": "BONUS",
-    "releaseDate": null,
+    "releaseDate": "2023-11-06",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。manufacturer/releaseDate未記載だったためdmmで判明・補完。1geki.jpに専用ページなく(小規模メーカー・希少機種)ichigekiUrlは空欄。",
     "dmmUrl": "https://p-town.dmm.com/machines/4486",
     "ichigekiUrl": null
   },
