@@ -28,33 +28,16 @@ none
 ## Missing / bare URLs
 - missing dmmUrl: 1
   - original_slot4_plus.json
-- missing ichigekiUrl: 26
+- missing ichigekiUrl: 9
   - chura_chura.json
   - dondake.json
   - marchen_quest.json
-  - monster_hunter_golden.json
-  - motto_chibariyo_25.json
-  - motto_chibariyo_30.json
   - mr_triple_crown.json
-  - mushoku_tensei.json
-  - my_flower_2.json
-  - nangoku_sodachi.json
-  - nogizaka_46.json
-  - one_punch_man.json
   - original_slot4_plus.json
-  - prism_nana.json
   - ring_ni_kakero_1.json
-  - saint_seiya_kaiou_custom_edition.json
-  - shin_onimusha_3.json
-  - super_bingo_neo_classic.json
-  - super_black_jack.json
   - triple_crown_for_you.json
-  - triple_crown_seven.json
   - triple_crown_v_30.json
   - triple_crown_vintage.json
-  - ultra_chabudai_gaeshi.json
-  - watakon.json
-  - youzitsu.json
 - bare (top page) dmmUrl: 0
 - bare (top page) ichigekiUrl: 0
 
