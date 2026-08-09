@@ -2,12 +2,12 @@
   "machine": {
     "id": "goblin_slayer",
     "name": "Lゴブリンスレイヤー",
-    "manufacturer": null,
-    "type": null,
-    "releaseDate": null,
+    "manufacturer": "オレンジ",
+    "type": "AT",
+    "releaseDate": "2023-04-17",
     "isActive": true,
-    "notes": "",
-    "dmmUrl": null,
+    "notes": "manufacturer/type/releaseDate未記載だったためdmm/1geki一致で判明・補完(藤商事グループのスマスロ第1弾)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4340",
     "ichigekiUrl": "https://1geki.jp/slot/s_l_goblinslayer/"
   },
   "counterDefinitions": [

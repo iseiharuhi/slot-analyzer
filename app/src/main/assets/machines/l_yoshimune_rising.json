@@ -2,12 +2,12 @@
   "machine": {
     "id": "l_yoshimune_rising",
     "name": "L吉宗ライジング",
-    "manufacturer": null,
+    "manufacturer": "サボハニ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2024-01-09",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
+    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(正式名称L吉宗ライジングSA2、l_yoshimune/l_yoshimune_risingは別ページで取り違えなし)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4478",
     "ichigekiUrl": "https://1geki.jp/slot/l_ysmn_rising/"
   },
   "counterDefinitions": [

@@ -8,8 +8,7 @@
 
 ## Status breakdown
 - draft: 1
-- empty: 1
-- other: 384
+- other: 385
 - partial: 57
 
 ## Broken files / filename-id mismatches
@@ -27,25 +26,7 @@ none
   - shin_hanabi.json : ハナビ
 
 ## Missing / bare URLs
-- missing dmmUrl: 33
-  - akame_ga_kill.json
-  - anata_no_otto_hades.json
-  - anemone.json
-  - ao_no_exorcist.json
-  - big_shimauta_30.json
-  - drifters.json
-  - etotama.json
-  - g1_yushun_club_gold.json
-  - goblin_slayer.json
-  - hidan_no_aria_2.json
-  - hihouden_megami.json
-  - l_rino_heaven.json
-  - l_yoshimune_rising.json
-  - l_yoshimune.json
-  - love_cute_2.json
-  - monster_hunter_iceborne.json
-  - neo_planet.json
-  - no_game_no_life.json
+- missing dmmUrl: 15
   - one_bar_s30.json
   - original_slot4_plus.json
   - railgun.json
