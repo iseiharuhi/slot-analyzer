@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2020-03-02",
     "isActive": true,
-    "notes": "partial: 公開解析ベースへ更新。CZ初当り・AT初当り・CZ+AT初当り合算を採用。弱チェリーにも設定差があるが、現行テンプレでは小役カウンタ未追加のため今回は導入を見送り、次回のカウンタ拡張候補として notes に残す。",
+    "notes": "partial: 公開解析ベースへ更新。CZ初当り・AT初当り・CZ+AT初当り合算を採用。弱チェリーにも設定差があるが、現行テンプレでは小役カウンタ未追加のため今回は導入を見送り、次回のカウンタ拡張候補として notes に残す。2026-08-10: 既存ceilingRulesが実際のアプリJSONスキーマ(ruleKey/ceilingType/limitValue等)と不一致で実行時パース失敗を起こす不正形式だったため、同じ周期天井データを正しいスキーマで修正。",
     "dmmUrl": "https://p-town.dmm.com/machines/3642",
     "ichigekiUrl": "https://1geki.jp/slot/s_eva_fes/"
   },
@@ -217,16 +217,38 @@
   ],
   "ceilingRules": [
     {
-      "type": "CYCLE",
-      "value": 7,
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 7,
       "unit": "周期",
-      "detail": "最大7周期消化でCZ or ATに当選。平均約859G。"
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大7周期消化でCZ or ATに当選。平均約859G。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ or AT当選",
+      "resetText": "当選でリセット"
     },
     {
-      "type": "CYCLE",
-      "value": 3,
+      "ruleKey": "shortened_cycle_ceiling",
+      "displayName": "短縮周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 3,
       "unit": "周期",
-      "detail": "フルコンプリート後とAT直撃後は最大3周期に短縮。"
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "フルコンプリート後とAT直撃後は最大3周期に短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ or AT当選",
+      "resetText": "当選でリセット"
     }
   ]
 }
