@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-12-19",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたボーナス初当り・REG初当り・BIG初当りを主軸に反映。 共通ベル・チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたボーナス初当り・REG初当り・BIG初当りを主軸に反映。 共通ベル・チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jpでモード別天井(通常999G/チャンス200G/天国系32G)を確認・反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4258",
     "ichigekiUrl": "https://1geki.jp/slot/s_okidoki_gold/"
   },
@@ -206,5 +206,57 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常A/B天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A/B滞在時999G。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "chance_mode_ceiling",
+      "displayName": "チャンス/引き戻し天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "チャンス/引き戻しモード滞在時200G。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "heaven_mode_ceiling",
+      "displayName": "天国系モード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 32,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "天国系(ドキドキ/スーパードキドキ/確定モード等)滞在時32G。設定変更時、非有利区間から通常A/Bへ移行の際399Gへ短縮される抽選あり(25.0%、単一ソースのため参考値)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

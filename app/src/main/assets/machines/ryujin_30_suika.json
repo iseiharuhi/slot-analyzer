@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 精度優先で暫定値は採用していない。天井は1geki.jp/dmmの2ソース一致で通常999G/天国32Gを確認・反映(2026-08-10)。注記: type=BONUSだが実際には天井システムを搭載する擬似ボーナスAT機の可能性があり、type分類の見直しを推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4468",
     "ichigekiUrl": "https://1geki.jp/slot/s_ryujin30/"
   },
@@ -182,5 +182,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大999G+αでボーナス突入。恩恵の具体的なボーナス種別は情報源に明記なし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス突入",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "heaven_mode_ceiling",
+      "displayName": "天国・超天国モード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 32,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "天国・超天国モード滞在時32G。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス突入",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

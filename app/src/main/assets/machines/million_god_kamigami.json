@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-04-20",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたATを主軸に反映。 CZ・ボーナス・直撃ATなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたATを主軸に反映。 CZ・ボーナス・直撃ATなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/WebSearch(slobase.jp等)の複数ソースで通常1480G+短縮3段階(510/1000/1480G)を確認・反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4961",
     "ichigekiUrl": "https://1geki.jp/slot/l_milliongod_kiseki/"
   },
@@ -121,5 +121,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1480,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大1480G+αでGG(ゴッドゲーム)当選確定。恩恵はループストック(継続率1%/25%/50%/80%が各16.7%、残り33.2%は1%ループ+Z-ZONE)。天井ゲーム数・恩恵振り分けは全設定共通。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "GG(ゴッドゲーム)当選確定",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "shortened_game_ceiling",
+      "displayName": "設定変更後の短縮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 510,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時は510G(15.2%)/1000G(20.3%)/1480G(64.5%)から再抽選。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "GG(ゴッドゲーム)当選確定",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

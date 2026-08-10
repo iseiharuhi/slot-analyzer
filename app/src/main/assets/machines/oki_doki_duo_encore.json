@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-12-22",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 BIG初当り・REG初当り・角チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 BIG初当り・REG初当り・角チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jpで通常800G/引き戻し・チャンス200Gを確認・反映(2026-08-10)。仮天井(301〜400G)は中信頼度のため未反映。",
     "dmmUrl": "https://p-town.dmm.com/machines/4906",
     "ichigekiUrl": "https://1geki.jp/slot/l_okidoki_duo_encore/0/"
   },
@@ -114,5 +114,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A/B滞在時最大800G消化でボーナス濃厚(のるカナチャンス濃厚)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚(のるカナチャンス濃厚)",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "chance_mode_ceiling",
+      "displayName": "引き戻し/チャンスモード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "引き戻し/チャンスモード滞在時は200G。設定変更時は約39.8%でこのモード(200G系)へ移行。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

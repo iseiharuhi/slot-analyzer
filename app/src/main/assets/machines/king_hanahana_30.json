@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": "2023-03-20",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 小役/示唆補助など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIGを主軸に反映。 小役/示唆補助など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/複数ソースで「天井非搭載(ノーマルAタイプ)」を確認(2026-08-10)。ceilingRulesは意図的に空のまま。",
     "dmmUrl": "https://p-town.dmm.com/machines/4311",
     "ichigekiUrl": "https://1geki.jp/slot/s_kinghanahana2023/"
   },

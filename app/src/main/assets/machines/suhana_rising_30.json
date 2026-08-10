@@ -6,7 +6,7 @@
     "type": "BONUS",
     "releaseDate": null,
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・共通ベルAを主軸に反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたREG・合算ボーナス・BIG・共通ベルAを主軸に反映。 精度優先で暫定値は採用していない。天井は1geki.jp/dmmの2ソース一致でチャンス200G/通常A・B・天国準備400Gを確認・反映(2026-08-10)。注記: type=BONUSだが実際には天井システムを搭載する擬似ボーナスAT機の可能性があり、type分類の見直しを推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4409",
     "ichigekiUrl": "https://1geki.jp/slot/s_suhana_rising30/"
   },
@@ -234,5 +234,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "chance_mode_ceiling",
+      "displayName": "チャンスモード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "チャンスモード滞在時約200G。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "REG BONUS(約1/128でBIG BONUS、スーパーライジングモード濃厚)",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "normal_mode_ceiling",
+      "displayName": "通常A/B・天国準備天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 400,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A/B・天国準備滞在時約400G。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "REG BONUS(約1/128でBIG BONUS、スーパーライジングモード濃厚)",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

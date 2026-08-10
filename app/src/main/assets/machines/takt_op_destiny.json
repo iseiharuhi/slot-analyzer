@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-05-11",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたAT初当たりを主軸に反映。 DESTINY/EPISODE BONUS・CZ/SPCZ・特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたAT初当たりを主軸に反映。 DESTINY/EPISODE BONUS・CZ/SPCZ・特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/slobaseの複数ソースでCZ間天井(500G、設定変更300G)+AT間天井(999G、設定変更699G)を確認・反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/5000",
     "ichigekiUrl": "https://1geki.jp/slot/l_takt_op_destiny/"
   },
@@ -121,5 +121,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "最大500G+αで「ムジカートチャンス」(CZ)当選。設定変更時300G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ムジカートチャンス(CZ)当選",
+      "resetText": "設定変更でリセット(300Gに短縮)。電源ON/OFFのみでは引き継ぎ"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "最大999G+αで「バトルオーケストラ」(AT)当選。設定変更時699G+αに短縮。電源ON/OFFのみでは天井ゲーム数を引き継ぐ(短縮なし)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "バトルオーケストラ(AT)当選",
+      "resetText": "設定変更でリセット(699Gに短縮)。電源ON/OFFのみでは引き継ぎ"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-05-11",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたAT初当たり・CZ(ジャッジメント)を主軸に反映。 DREAM JP BONUS・直撃/特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたAT初当たり・CZ(ジャッジメント)を主軸に反映。 DREAM JP BONUS・直撃/特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/slottersの2ソース一致で通常1499G+3段階短縮天井(999/555/333G、設定差あり)を確認・反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4981",
     "ichigekiUrl": "https://1geki.jp/slot/l_bigdream/"
   },
@@ -168,5 +168,74 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1499,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大1499G消化でAT「GOLDEN BONUS」濃厚(確定ジャッジメント経由)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「GOLDEN BONUS」濃厚",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "shortened_ceiling_999",
+      "displayName": "短縮天井(999G)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時・上位AT終了後に999G/555G/333Gから抽選で選択される短縮天井の一つ。設定1で999G以下選択率21.09%、設定6で34.38%(高設定ほど浅い天井が選ばれやすい)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT「GOLDEN BONUS」濃厚",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "shortened_ceiling_555",
+      "displayName": "短縮天井(555G)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時・上位AT終了後に999G/555G/333Gから抽選で選択される短縮天井の一つ。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT「GOLDEN BONUS」濃厚",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "shortened_ceiling_333",
+      "displayName": "短縮天井(333G)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 333,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時・上位AT終了後に999G/555G/333Gから抽選で選択される最短の短縮天井。",
+      "isEnabled": true,
+      "displayOrder": 4,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT「GOLDEN BONUS」濃厚",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

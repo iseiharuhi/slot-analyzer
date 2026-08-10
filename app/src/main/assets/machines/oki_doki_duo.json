@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-12-20",
     "isActive": true,
-    "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 BIG初当り・REG初当り・チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+    "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 BIG初当り・REG初当り・チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jpで通常800G(設定変更時768G)/チャンス200G(設定変更時168G)を確認・反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4031",
     "ichigekiUrl": "https://1geki.jp/slot/s_okidoki_duo_25/"
   },
@@ -121,5 +121,40 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常モード最大800G消化でボーナス濃厚。設定変更時は一律32G短縮され768G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット(768Gに短縮)"
+    },
+    {
+      "ruleKey": "chance_mode_ceiling",
+      "displayName": "チャンスモード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "チャンスモード滞在時200G。設定変更時は一律32G短縮され168G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット(168Gに短縮)"
+    }
+  ]
 }

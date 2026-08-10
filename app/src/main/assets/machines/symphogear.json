@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-07-08",
     "isActive": true,
-    "notes": "partial: 一撃掲載のAT初当りに加え、DMM掲載の最終決戦確率も反映。最終決戦は分母が重いが設定差が非常に大きく、1回でも高設定期待度を押し上げる補助根拠として扱う。AT終了画面やチェリー契機当選率は補助メモ扱い。",
+    "notes": "partial: 一撃掲載のAT初当りに加え、DMM掲載の最終決戦確率も反映。最終決戦は分母が重いが設定差が非常に大きく、1回でも高設定期待度を押し上げる補助根拠として扱う。AT終了画面やチェリー契機当選率は補助メモ扱い。天井は1geki.jp(777G)+WebSearch(498G短縮、中信頼度)で確認・反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4579",
     "ichigekiUrl": "https://1geki.jp/slot/l_sympho/"
   },
@@ -130,5 +130,23 @@
       ]
     }
   ],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大777G+αでAT「AXZラッシュ」濃厚。設定変更時498G+αに短縮(498Gの値は検索結果由来で1geki本体ページでは直接未確認のため中信頼度)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「AXZラッシュ」濃厚",
+      "resetText": "設定変更でリセット(498Gに短縮)"
+    }
+  ]
 }
