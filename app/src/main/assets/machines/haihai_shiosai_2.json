@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-11-08",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からボーナス合算(BIG+REG)を反映(設定5はBIG偏向の特殊スペックで非単調、複数ソースでクロスチェック済み)。天井は非搭載と1geki.jpに明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
     "dmmUrl": "https://p-town.dmm.com/machines/3974",
     "ichigekiUrl": "https://1geki.jp/slot/s_haihaisiosai2/"
   },
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 99.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp+複数サイトでクロスチェック済み。"},
+        {"settingNo": 2, "denominatorValue": 97.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp+複数サイトでクロスチェック済み。"},
+        {"settingNo": 3, "denominatorValue": 94.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp+複数サイトでクロスチェック済み。"},
+        {"settingNo": 4, "denominatorValue": 91.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp+複数サイトでクロスチェック済み。"},
+        {"settingNo": 5, "denominatorValue": 99.0, "weight": 1, "minSampleSize": 2500, "note": "設定5はBIG偏向の特殊スペック(BIG:REG≈2:1)のため合算が設定1と同水準になる非単調な仕様。複数ソースで確認済み。"},
+        {"settingNo": 6, "denominatorValue": 83.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp+複数サイトでクロスチェック済み。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

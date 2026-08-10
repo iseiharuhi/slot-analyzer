@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-11-21",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT「オーガバトルボーナス」初当り・CZ「解放のカタルシス」初当りを反映(設定6値はDMM特集でクロスチェック)。天井はモード別CZ天井(600/400/200/100G)+CZ3スルー天井を反映(2026-08-10)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4242",
     "ichigekiUrl": "https://1geki.jp/slot/s_baki_tk/"
   },
@@ -60,6 +60,64 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 355.6, "weight": 1, "minSampleSize": 2500, "note": "AT「オーガバトルボーナス」初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 342.2, "weight": 1, "minSampleSize": 2500, "note": "AT「オーガバトルボーナス」初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 331.4, "weight": 1, "minSampleSize": 2500, "note": "AT「オーガバトルボーナス」初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 318.3, "weight": 1, "minSampleSize": 2500, "note": "AT「オーガバトルボーナス」初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 306.4, "weight": 1, "minSampleSize": 2500, "note": "AT「オーガバトルボーナス」初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 299.2, "weight": 1, "minSampleSize": 2500, "note": "AT「オーガバトルボーナス」初当りは主判別。DMM特集でクロスチェック済み。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 218.2, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「解放のカタルシス」初当りは補助判別。"},
+        {"settingNo": 2, "denominatorValue": 208.8, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「解放のカタルシス」初当りは補助判別。"},
+        {"settingNo": 3, "denominatorValue": 206.5, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「解放のカタルシス」初当りは補助判別。"},
+        {"settingNo": 4, "denominatorValue": 198.4, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「解放のカタルシス」初当りは補助判別。"},
+        {"settingNo": 5, "denominatorValue": 196.1, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「解放のカタルシス」初当りは補助判別。"},
+        {"settingNo": 6, "denominatorValue": 191.0, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「解放のカタルシス」初当りは補助判別。DMM特集でクロスチェック済み。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_cz_ceiling",
+      "displayName": "CZ天井(通常A)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "モード別のCZ天井: 通常A=600G、通常B=400G、通常C=200G、天国A/B=100G、強喰準備・設定変更時=600G。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ突入でリセット"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 3,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ3連続スルーで次回勝利確定。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回CZ勝利確定",
+      "resetText": "勝利でリセット"
+    }
+  ]
 }

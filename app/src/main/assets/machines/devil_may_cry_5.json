@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-03-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier S)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当りを反映(小役確率は設定差ナシと明記)。天井は8周期(実質800G+α)またはCZ「デビルバトル」最大7体撃破を反映(2026-08-10、1geki.jp+複数サイトでクロスチェック)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4089",
     "ichigekiUrl": "https://1geki.jp/slot/s_devilmaycry5/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 358.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 349.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 332.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 301.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 266.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 243.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 8,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "8周期(1周期100G+α)消化、実質800G+α相当で天井到達。またはCZ「デビルバトル」で最大7体のボス撃破。到達時AT当選。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

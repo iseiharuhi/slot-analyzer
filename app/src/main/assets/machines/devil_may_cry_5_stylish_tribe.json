@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-06-02",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier S)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からST「STYLISH TIME」初当り・ボーナス初当りを反映。天井はモード別(通常A=1000G/B=900G/C=800G/天国=100G、設定変更800Gに短縮)+CZ周期10回天井を反映(2026-08-10、単一ソース)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4814",
     "ichigekiUrl": "https://1geki.jp/slot/l_dmc5_st/"
   },
@@ -60,6 +60,64 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 445.4, "weight": 1, "minSampleSize": 2500, "note": "ST「STYLISH TIME」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 436.5, "weight": 1, "minSampleSize": 2500, "note": "ST「STYLISH TIME」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 411.2, "weight": 1, "minSampleSize": 2500, "note": "ST「STYLISH TIME」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 359.6, "weight": 1, "minSampleSize": 2500, "note": "ST「STYLISH TIME」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 329.5, "weight": 1, "minSampleSize": 2500, "note": "ST「STYLISH TIME」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 303.9, "weight": 1, "minSampleSize": 2500, "note": "ST「STYLISH TIME」初当りは主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 257.0, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当りは補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 254.1, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当りは補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 251.5, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当りは補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 222.6, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当りは補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 217.3, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当りは補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 204.1, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当りは補助判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井(通常A)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "モード別: 通常A=1000G、通常B=900G、通常C=800G、天国=100G。設定変更時は800Gに短縮。到達時「エピソードボーナス」濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "エピソードボーナス濃厚",
+      "resetText": "設定変更でリセット(800Gに短縮)"
+    },
+    {
+      "ruleKey": "cz_cycle_ceiling",
+      "displayName": "CZ周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 10,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ周期10回到達でCZ濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ当選でリセット"
+    }
+  ]
 }
