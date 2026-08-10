@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-04-19",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT「戦術LIVE」初当り・CZ「バルキリーゾーン」当選率を反映。天井はデルタカウンター777pt/888pt到達制(ゲーム数換算は二次ソースのみで信頼度低いためpt単位のまま反映、2026-08-10、単一ソース)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3862",
     "ichigekiUrl": "https://1geki.jp/slot/s_macross_delta/"
   },
@@ -60,6 +60,60 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 875.0, "weight": 1, "minSampleSize": 2500, "note": "AT「戦術LIVE」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 779.0, "weight": 1, "minSampleSize": 2500, "note": "AT「戦術LIVE」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 656.0, "weight": 1, "minSampleSize": 2500, "note": "AT「戦術LIVE」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 525.0, "weight": 1, "minSampleSize": 2500, "note": "AT「戦術LIVE」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 467.0, "weight": 1, "minSampleSize": 2500, "note": "AT「戦術LIVE」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 374.0, "weight": 1, "minSampleSize": 2500, "note": "AT「戦術LIVE」初当りは主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 424.0, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「バルキリーゾーン」当選率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 387.0, "weight": 0.78, "minSampleSize": 3000, "note": "CZ「バルキリーゾーン」当選率は補助判別。1geki.jp公開値(単一ソース、設定2〜5は情報源に個別値記載なし)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "delta_counter_ceiling_1",
+      "displayName": "デルタカウンター第1天井",
+      "ceilingType": "POINT",
+      "limitValue": 777,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "デルタカウンター777pt到達でCZ抽選。ゲーム数換算(二次ソースで約492Gとの情報あり)は信頼度が低いため未反映、pt単位で管理。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ抽選",
+      "resetText": "CZ当選でリセット"
+    },
+    {
+      "ruleKey": "delta_counter_ceiling_2",
+      "displayName": "デルタカウンター第2天井",
+      "ceilingType": "POINT",
+      "limitValue": 888,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "デルタカウンター888pt到達で狂暴化CZ確定。ゲーム数換算(二次ソースで約558Gとの情報あり)は信頼度が低いため未反映、pt単位で管理。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "狂暴化CZ確定",
+      "resetText": "CZ当選でリセット"
+    }
+  ]
 }

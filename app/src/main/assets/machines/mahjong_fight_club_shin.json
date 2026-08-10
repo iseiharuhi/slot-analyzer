@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-01-12",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析から初当り確率を反映(レア役合算は補助情報)。天井は777G超過の対局で「格闘倶楽部BONUS」当選を反映(設定変更・電源サイクル時の挙動は調査中、2026-08-10、単一ソース)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3792",
     "ichigekiUrl": "https://1geki.jp/slot/s_mfc_shin/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 329.3, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 319.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 310.3, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 290.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 268.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 245.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "777G超過の対局で「格闘倶楽部BONUS」当選。設定変更時・電源サイクル時の挙動は情報源でも調査中。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "格闘倶楽部BONUS当選",
+      "resetText": "当選でリセット"
+    }
+  ]
 }

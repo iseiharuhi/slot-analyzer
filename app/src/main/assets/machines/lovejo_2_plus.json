@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-03-08",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映。天井は周期天井(10周期到達でAT当選、1周期最大約80G+α)を反映(2026-08-10、単一ソース)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3830",
     "ichigekiUrl": "https://1geki.jp/slot/s_lovejyo2plus/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 303.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 285.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 262.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 240.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 218.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 203.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 10,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "10周期到達でAT当選(1周期最大約80G+α)。平均到達ゲーム数は設定1=631.9G〜設定6=606.6G。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選",
+      "resetText": "AT当選でリセット"
+    }
+  ]
 }

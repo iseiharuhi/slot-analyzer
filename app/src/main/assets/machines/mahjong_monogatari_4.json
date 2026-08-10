@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-09-06",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からトータル初当り確率・AT「麻雀GP」初当り確率を反映。天井はモード別(通常A999G/通常B700G/通常C500G/天国128G)を反映(2026-08-10、単一ソース)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3949",
     "ichigekiUrl": "https://1geki.jp/slot/s_mj4/"
   },
@@ -60,6 +60,44 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 184.1, "weight": 1, "minSampleSize": 2500, "note": "トータル初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 180.6, "weight": 1, "minSampleSize": 2500, "note": "トータル初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 168.9, "weight": 1, "minSampleSize": 2500, "note": "トータル初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 157.1, "weight": 1, "minSampleSize": 2500, "note": "トータル初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 148.2, "weight": 1, "minSampleSize": 2500, "note": "トータル初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 142.2, "weight": 1, "minSampleSize": 2500, "note": "トータル初当り確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 211.0, "weight": 0.78, "minSampleSize": 3000, "note": "AT「麻雀GP」初当り確率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 202.0, "weight": 0.78, "minSampleSize": 3000, "note": "AT「麻雀GP」初当り確率は補助判別。1geki.jp公開値(単一ソース、正確な中間値は情報源記載通り)。"},
+        {"settingNo": 6, "denominatorValue": 167.8, "weight": 0.78, "minSampleSize": 3000, "note": "AT「麻雀GP」初当り確率は補助判別。1geki.jp公開値(単一ソース、設定3〜5は情報源に個別値記載なし)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_a_ceiling",
+      "displayName": "通常A天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A滞在時999G+αでAT「麻雀GP」当選。通常B=700G+α、通常C=500G+α、天国=128G+α。設定変更時は天国選択率上昇+通常B以上確定。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「麻雀GP」当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

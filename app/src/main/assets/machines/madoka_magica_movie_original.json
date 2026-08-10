@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-08-02",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT「マギカラッシュ」初当りを反映。天井は700G消化でAT当選を反映(特殊モード時は700G超あり、2026-08-10、単一ソース)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3931",
     "ichigekiUrl": "https://1geki.jp/slot/s_mdkmgk_gekijoban/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 269.4, "weight": 1, "minSampleSize": 2500, "note": "AT「マギカラッシュ」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 251.3, "weight": 1, "minSampleSize": 2500, "note": "AT「マギカラッシュ」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 241.9, "weight": 1, "minSampleSize": 2500, "note": "AT「マギカラッシュ」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 222.2, "weight": 1, "minSampleSize": 2500, "note": "AT「マギカラッシュ」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 205.2, "weight": 1, "minSampleSize": 2500, "note": "AT「マギカラッシュ」初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 188.8, "weight": 1, "minSampleSize": 2500, "note": "AT「マギカラッシュ」初当りは主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 700,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "700G消化でAT「マギカラッシュ」当選。特殊モード滞在時は700G超えることがある。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「マギカラッシュ」当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

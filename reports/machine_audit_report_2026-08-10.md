@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 369
-- partial: 72
+- other: 354
+- partial: 87
 
 ## Broken files / filename-id mismatches
 none
@@ -79,16 +79,31 @@ none
 - haihai_shiosai_2.json [partial] ハイハイシオサイ2 (ceiling=False, refValues=True)
 - hanahana_houou_tensho_30.json [partial] ハナハナホウオウ～天翔～-30 (ceiling=False, refValues=True)
 - higurashi_gou.json [partial] L ひぐらしのなく頃に 業 (ceiling=True, refValues=True)
+- idolmaster_million_live_original.json [partial] パチスロ アイドルマスター ミリオンライブ! (ceiling=True, refValues=True)
+- initial_d.json [partial] パチスロ頭文字D (ceiling=True, refValues=True)
 - isekai_quartet_bt.json [partial] A-SLOT+ 異世界かるてっと BT (ceiling=False, refValues=True)
 - jormungand.json [partial] スマスロヨルムンガンド (ceiling=True, refValues=True)
+- juggler_girls_ss.json [partial] ジャグラーガールズSS (ceiling=False, refValues=True)
+- kaguya_sama.json [partial] パチスロ かぐや様は告らせたい (ceiling=True, refValues=True)
+- kaiji_numa.json [partial] 回胴黙示録カイジ〜沼〜 (ceiling=True, refValues=True)
 - kamen_rider_denoh.json [partial] L仮面ライダー電王 (ceiling=True, refValues=True)
 - keiji_sado.json [partial] L花の慶次～佐渡攻めの章〜 (ceiling=True, refValues=True)
 - king_hanahana_30.json [partial] キングハナハナ-30 (ceiling=False, refValues=True)
+- king_pulsar_smart.json [partial] スマスロキングパルサー (ceiling=True, refValues=True)
 - komonchama_ten.json [partial] 黄門ちゃま天 (ceiling=True, refValues=True)
+- konosuba_a_slot_plus.json [partial] A-SLOT+ この素晴らしい世界に祝福を! (ceiling=False, refValues=True)
 - konosuba.json [partial] この素晴らしい世界に祝福を！ (ceiling=True, refValues=True)
 - kyokou_suiri.json [partial] L虚構推理 (ceiling=True, refValues=True)
+- lovejo_2_plus.json [partial] パチスロラブ嬢2プラス (ceiling=True, refValues=True)
+- lupin_sansei_s.json [partial] Sルパン三世 (ceiling=True, refValues=True)
 - lupin_treasure_voyager.json [partial] Lルパン三世 大航海者の秘宝 (ceiling=True, refValues=True)
+- macross_delta.json [partial] パチスロ マクロスデルタ (ceiling=True, refValues=True)
+- madoka_magica_movie_original.json [partial] SLOT劇場版 魔法少女まどか☆マギカ[前編]始まりの物語/[後編]永遠の物語 (ceiling=True, refValues=True)
+- magical_halloween_trick_or_treat.json [partial] マジカルハロウィン~Trick or Treat!~ (ceiling=True, refValues=True)
 - mahjong_fight_club_kakusei.json [partial] L麻雀格闘倶楽部 覚醒 (ceiling=True, refValues=True)
+- mahjong_fight_club_shin.json [partial] 麻雀格闘倶楽部 真 (ceiling=True, refValues=True)
+- mahjong_monogatari_4.json [partial] パチスロ麻雀物語4 (ceiling=True, refValues=True)
+- miku_idomu_challenge.json [partial] パチスロミクちゃんとイドムンのミラクルチャレンジ (ceiling=False, refValues=True)
 - million_god_kamigami.json [partial] スマスロ ミリオンゴッド-神々の軌跡- (ceiling=True, refValues=True)
 - nangoku_sodachi.json [partial] L南国育ち (ceiling=True, refValues=True)
 - oki_doki_duo_encore.json [partial] スマート沖スロ 沖ドキ！DUO-30 アンコール (ceiling=True, refValues=True)
