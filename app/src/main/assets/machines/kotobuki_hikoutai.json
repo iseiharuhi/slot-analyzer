@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-10-20",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/p-gabu.jp/pachiseven.jpの3ソース一致でAT初当り確率(主判別)・CZ確率(補助判別)を反映(設定1は3ソースとも欠落=真に未公開)。CZ確率は設定が上がるほど悪化(1/212.0→1/225.1)する一方AT初当りは設定が上がるほど改善する逆相関仕様(複数ソースが「CZ確率は低設定ほど優遇、AT確率は高設定ほど優遇」と明記する意図的設計、データ誤りではない)。天井はST間最大1500G(設定変更でも上限据え置き、中間到達分布のみ500/800/1100/1400Gへ有利化)+CZ6回連続失敗後7回目濃厚のスルー天井を反映(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4891",
     "ichigekiUrl": "https://1geki.jp/slot/l_kotobuki/"
   },
@@ -60,6 +60,62 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 414.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定1は3ソース(1geki.jp/p-gabu.jp/pachiseven.jp)とも欠落のため未収録。3ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 391.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。3ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 356.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。3ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 339.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。3ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 318.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。3ソース一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 212.0, "weight": 0.5, "minSampleSize": 3000, "note": "CZ確率は補助判別だが設定が上がるほど悪化する逆相関仕様(複数ソースが意図的設計と明記、AT確率側で高設定が優遇される代わりCZ確率は低設定側が優遇)。設定1は欠落のため未収録。3ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 213.8, "weight": 0.5, "minSampleSize": 3000, "note": "CZ確率は補助判別(逆相関仕様)。3ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 218.0, "weight": 0.5, "minSampleSize": 3000, "note": "CZ確率は補助判別(逆相関仕様)。3ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 219.8, "weight": 0.5, "minSampleSize": 3000, "note": "CZ確率は補助判別(逆相関仕様)。3ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 225.1, "weight": 0.5, "minSampleSize": 3000, "note": "CZ確率は補助判別(逆相関仕様、最も設定6で悪化)。3ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "st_interval_ceiling",
+      "displayName": "ST間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ST間最大1500G+αでST/AT濃厚。中間到達ポイントは600/900/1200G、設定変更時は500/800/1100/1400Gへ分布が有利化(上限1500Gそのものは変化しない)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ST/AT濃厚",
+      "resetText": "ST/AT当選でリセット(設定変更で中間分布のみ有利化)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZ連続失敗天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ6回連続失敗後、7回目のCZは成功濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ成功濃厚",
+      "resetText": "CZ成功でリセット"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からボーナス合算確率を反映。Hyper BB比率は設定1(58.02%)・設定6(65.30%)のみ判明、設定2〜5は情報なしのため未収録。天井は非搭載(1geki「天井:非搭載」、WebSearch集約「遊タイムは存在せず天井機能はないものと思われます」で2ソース一致)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4383",
     "ichigekiUrl": "https://1geki.jp/slot/s_pachisuro_nights/"
   },
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 172.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(Hyper BB比率58.02%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 167.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 161.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 153.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 146.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 140.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(Hyper BB比率65.30%)。設定2〜5のHyper BB比率は情報なしのため未収録。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

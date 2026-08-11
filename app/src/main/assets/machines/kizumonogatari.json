@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-09-04",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映。天井は1geki本体ページが「調査中」のためslopachi-quest.com(二次ソース)から補完、中程度の信頼度: 最大999G+α(通常A/B/C・天国・鬼天国モード)でAT濃厚+CZ11回連続スルーでもAT濃厚。設定変更時は400G+αに短縮、約25%で「降臨ノ儀」ボーナス機能付与(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4390",
     "ichigekiUrl": "https://1geki.jp/slot/s_kizumonogatari/"
   },
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 265.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 258.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 241.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 219.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 202.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 190.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "最大999G+α(通常A/B/C・天国・鬼天国モード)でAT濃厚。1geki本体ページが「調査中」のためslopachi-quest.com(二次ソース)から補完、中程度の信頼度。設定変更時は400G+αに短縮、さらに約25%で「降臨ノ儀」ボーナス機能が付与される。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更で400Gに短縮(約25%で降臨ノ儀付与)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZ連続スルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 11,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ11回連続スルーでもAT濃厚(ゲーム数天井と並行)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    }
+  ]
 }

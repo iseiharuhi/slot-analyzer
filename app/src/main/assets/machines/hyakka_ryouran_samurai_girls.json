@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-06-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析から超ハーレムボーナス初当り確率を反映。共通ベル確率は設定4〜6が1/59.6で完全に横ばい(WebSearch経由・p-gabu由来の要約情報のため中程度の信頼度、低比重サブ役の上限クリップは機種によくある仕様)。天井は1000忠ポイント制の周期抽選(通常Aモード最大10周期、通常B最大5周期、天国A/B最大2周期)を反映。設定変更時のリセット挙動はどのソースにも記載なし、情報未確認(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3893",
     "ichigekiUrl": "https://1geki.jp/slot/s_hyakkaryouran_s/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 233.0, "weight": 1, "minSampleSize": 2500, "note": "超ハーレムボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 225.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 219.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 198.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 172.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 132.1, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。共通ベル確率は設定4〜6が1/59.6で完全に横ばい(中程度の信頼度)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "loyalty_point_cycle_ceiling",
+      "displayName": "忠ポイント周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 10,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "1000忠ポイントごとに周期抽選、通常Aモード滞在時は最大10周期でボーナス濃厚。通常Bモード=最大5周期、天国A/B=最大2周期。ポイント・進捗は電源off/onで引き継ぐ。設定変更時のリセット挙動はどのソースにも記載なし、情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }
