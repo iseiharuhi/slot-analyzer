@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-03-08",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/WebSearch集約一致でAT初当り確率を反映。バトルボーナス拳王初当り確率(DMMのみ、全設定で非単調・大きくばらつく)は単一ソース・低信頼度のため未収録(高分散/低サンプルの内部分岐の可能性)。天井は800G+α(有利区間移行起点)+4G予告シーケンス後AT濃厚を反映、設定変更で0リセット(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3809",
     "ichigekiUrl": "https://1geki.jp/slot/s_hokutosyukumei/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 340.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.0%)。1geki.jp/WebSearch集約一致。"},
+        {"settingNo": 2, "denominatorValue": 335.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率99.1%)。1geki.jp/WebSearch集約一致。"},
+        {"settingNo": 3, "denominatorValue": 315.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率100.7%)。1geki.jp/WebSearch集約一致。"},
+        {"settingNo": 4, "denominatorValue": 283.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率104.3%)。1geki.jp/WebSearch集約一致。"},
+        {"settingNo": 5, "denominatorValue": 243.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率109.0%)。1geki.jp/WebSearch集約一致。"},
+        {"settingNo": 6, "denominatorValue": 194.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率111.1%)。バトルボーナス拳王初当り確率(DMMのみ)は全設定で非単調・大きくばらつくため単一ソース・低信頼度扱いで未収録。1geki.jp/WebSearch集約一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "有利区間移行後最大800G消化+4G予告シーケンス後AT濃厚。設定変更時は0リセット。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更で0リセット)"
+    }
+  ]
 }

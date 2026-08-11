@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 297
-- partial: 144
+- other: 283
+- partial: 158
 
 ## Broken files / filename-id mismatches
 none
@@ -103,11 +103,25 @@ none
 - goblin_slayer_2.json [partial] スマスロ ゴブリンスレイヤーII (ceiling=True, refValues=True)
 - god_eater_resurrection.json [partial] スマスロ ゴッドイーター リザレクション (ceiling=True, refValues=True)
 - god_eater_the_animation.json [partial] パチスロ ゴッドイーター ジ・アニメーション (ceiling=True, refValues=True)
+- golden_kamuy.json [partial] スマスロ ゴールデンカムイ (ceiling=True, refValues=True)
+- gouen_koukou_ouendan_geki.json [partial] 豪炎高校應援團 檄 (ceiling=True, refValues=True)
+- goya_champloo_25.json [partial] S ご~やちゃんぷる~ 25φ (ceiling=True, refValues=True)
+- goya_champloo_30.json [partial] S ご~やちゃんぷる~ 30φ (ceiling=True, refValues=True)
+- granbelm.json [partial] 回胴式遊技機 グランベルム (ceiling=True, refValues=True)
+- guilty_crown_2.json [partial] スマスロ ギルティクラウン2 (ceiling=True, refValues=True)
 - gundam_unicorn_kakusei_drive.json [partial] Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE (ceiling=True, refValues=True)
 - gundam_unicorn.json [partial] パチスロ機動戦士ガンダムユニコーン (ceiling=True, refValues=True)
+- gyagder.json [partial] ぱちスロ ギャグダー (ceiling=True, refValues=True)
 - haihai_shiosai_2.json [partial] ハイハイシオサイ2 (ceiling=False, refValues=True)
 - hanahana_houou_tensho_30.json [partial] ハナハナホウオウ～天翔～-30 (ceiling=False, refValues=True)
+- hanahana_houou_tensho.json [partial] ハナハナホウオウ~天翔~(非-30) (ceiling=False, refValues=True)
+- hanamatsuri.json [partial] 華祭 (ceiling=False, refValues=True)
+- hardboiled.json [partial] パチスロハードボイルド (ceiling=True, refValues=True)
+- high_bi_return_30.json [partial] ハイビリターン-30 (ceiling=True, refValues=True)
+- highschool_dxd_2.json [partial] ハイスクールD×D2 ハーレム王に俺はなる (ceiling=True, refValues=True)
+- highschool_of_the_dead_gold.json [partial] パチスロ学園黙示録ハイスクール・オブ・ザ・デッド ゴールド (ceiling=True, refValues=True)
 - higurashi_gou.json [partial] L ひぐらしのなく頃に 業 (ceiling=True, refValues=True)
+- hokuto_shukumei.json [partial] パチスロ北斗の拳 宿命 (ceiling=True, refValues=True)
 - idolmaster_million_live_original.json [partial] パチスロ アイドルマスター ミリオンライブ! (ceiling=True, refValues=True)
 - initial_d.json [partial] パチスロ頭文字D (ceiling=True, refValues=True)
 - isekai_quartet_bt.json [partial] A-SLOT+ 異世界かるてっと BT (ceiling=False, refValues=True)
