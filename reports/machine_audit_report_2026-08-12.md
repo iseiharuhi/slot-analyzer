@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 212
-- partial: 229
+- other: 198
+- partial: 243
 
 ## Broken files / filename-id mismatches
 none
@@ -46,6 +46,10 @@ none
 none
 
 ## Partial / draft machines (need precision follow-up)
+- abasa_25.json [partial] Sアバサー (ceiling=False, refValues=True)
+- abasa_30.json [partial] Sアバサー30 (ceiling=False, refValues=True)
+- accelerator_index.json [partial] スマスロ 一方通行 とある魔術の禁書目録 (ceiling=True, refValues=True)
+- akajin_30.json [partial] アカジン‐30 (ceiling=False, refValues=True)
 - akudama_drive.json [partial] Lアクダマドライブ (ceiling=True, refValues=True)
 - amazing_live.json [partial] スマート沖スロ アメイジングライブ (ceiling=True, refValues=True)
 - angel_beats.json [partial] パチスロAngel Beats! (ceiling=True, refValues=True)
@@ -55,6 +59,7 @@ none
 - arifureta.json [partial] Lありふれた職業で世界最強 (ceiling=True, refValues=True)
 - awamori.json [partial] 泡盛 (ceiling=False, refValues=False)
 - azure_lane.json [partial] Lアズールレーン THE ANIMATION (ceiling=True, refValues=True)
+- bahama_30.json [partial] Sバハマ30 (ceiling=False, refValues=True)
 - baki_tsuyokunaritakuba.json [partial] Lバキ 強くなりたくば喰らえ!!! (ceiling=True, refValues=True)
 - bancho_zero.json [partial] 押忍!番長ZERO (ceiling=True, refValues=True)
 - basilisk_kizuna_2_tenzen_black.json [partial] スマスロバジリスク~甲賀忍法帖~絆2 天膳 BLACK EDITION (ceiling=True, refValues=True)
@@ -63,15 +68,21 @@ none
 - biohazard_re3.json [partial] スマスロ バイオハザードRE:3 (ceiling=True, refValues=True)
 - biohazard_vendetta.json [partial] スマスロ バイオハザード:ヴェンデッタ (ceiling=True, refValues=True)
 - biohazard_village.json [partial] バイオハザード ヴィレッジ (ceiling=True, refValues=True)
+- black_lagoon_zero_bullet_max.json [partial] BLACK LAGOON ZERO bullet MAX (ceiling=True, refValues=True)
+- black_miku_chan.json [partial] パチスロ ブラックミクちゃん (ceiling=False, refValues=True)
 - bomber_girl.json [partial] ボンバーガール (ceiling=True, refValues=True)
 - boowy.json [partial] S BOØWY (ceiling=True, refValues=True)
 - burning_express.json [partial] バーニングエクスプレス (ceiling=True, refValues=True)
 - busou_shinki.json [partial] パチスロ武装神姫 (ceiling=True, refValues=True)
 - cc_angel.json [partial] CCエンジェル (ceiling=False, refValues=True)
 - chibariyo_2_plus.json [partial] チバリヨ2プラス (ceiling=True, refValues=True)
+- chibariyo_2.json [partial] チバリヨ2 (ceiling=True, refValues=True)
 - chibariyo_25.json [partial] チバリヨ‐25 (ceiling=True, refValues=True)
+- chibariyo_30.json [partial] チバリヨ−30 (ceiling=True, refValues=True)
+- chou_giragira_jii_summer.json [partial] 超ギラギラ爺サマー (ceiling=True, refValues=True)
 - chou_hanamatsuri.json [partial] スマート沖スロ 超華祭 (ceiling=True, refValues=True)
 - chura_chura.json [partial] Sちゅらちゅら (ceiling=False, refValues=True)
+- cinderella_blade_4.json [partial] シンデレラブレイド4 (ceiling=True, refValues=True)
 - cranky_crest.json [partial] クランキークレスト (ceiling=False, refValues=True)
 - crea_hihouden_hajimari_bt.json [partial] クレアの秘宝伝 ～はじまりの扉と太陽の石～ ボーナストリガーver. (ceiling=False, refValues=True)
 - crea_new_hihouden.json [partial] CREA Newクレアの秘宝伝 (ceiling=False, refValues=True)
@@ -82,7 +93,10 @@ none
 - darling_franxx.json [partial] Lダーリン・イン・ザ・フランキス (ceiling=True, refValues=True)
 - devil_may_cry_5_stylish_tribe.json [partial] スマスロ デビル メイ クライ5 スタイリッシュトライブ (ceiling=True, refValues=True)
 - devil_may_cry_5.json [partial] パチスロ デビル メイ クライ 5 (ceiling=True, refValues=True)
+- digislo_yama.json [partial] デジスロ (ceiling=False, refValues=True)
 - disc_up_ultraremix.json [partial] A-SLOT+ ディスクアップ ULTRAREMIX (ceiling=False, refValues=True)
+- dondake.json [partial] どんだけ (ceiling=False, refValues=True)
+- double_attack_2.json [partial] Lダブルアタック2 with OZS-1000&RAPHAEL (ceiling=True, refValues=True)
 - dragon_hanahana_senko_30.json [partial] ドラゴンハナハナ～閃光～ 30 (ceiling=False, refValues=True)
 - dragon_hanahana_senko.json [partial] スマート沖スロ ドラゴンハナハナ~閃光~ (ceiling=False, refValues=True)
 - dumbbell_nan_kilo.json [partial] Lパチスロ ダンベル何キロ持てる? (ceiling=True, refValues=True)

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-04-18",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析から初当り合算確率(AT入口、主判別)を反映(BIG/REG個別表は非公開)。共通ベル確率(1/496.5〜1/172.5、DMM明記の鋭い補助指標)はcounterKey競合のためnotesのみ記録。天井は200G+前兆でCZ「ギラチャンス」濃厚(ATへの直行天井は非搭載と1geki明記、CZ内約33%でAT変換)を反映(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4117",
     "ichigekiUrl": "https://1geki.jp/slot/s_sgsummer/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 762.6, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率(AT入口)は主判別。共通ベル確率は1/496.5(補助指標、notesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 723.4, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 683.4, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 642.7, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 609.6, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 579.0, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。共通ベル確率は1/172.5(補助指標、notesのみ)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_game_ceiling",
+      "displayName": "CZ天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "200G+前兆でCZ「ギラチャンス」濃厚(ATへの直行天井は非搭載と1geki明記、CZ内の2段階チャレンジクリアで約33%がAT変換)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ「ギラチャンス」濃厚(AT非確定)",
+      "resetText": "CZ突入でリセット"
+    }
+  ]
 }

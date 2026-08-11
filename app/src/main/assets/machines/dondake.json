@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2020-12-14",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。UNOグループ独自機のため1geki.jpに専用ページなし、ichigekiUrlは空欄のまま。",
+    "notes": "partial: p-world.co.jp(唯一の数値ソース)からBIG+REG合算確率を反映(設定1・4・6は同ソースでも欠落=真に未公開、算術検算済み)。1geki.jpに専用ページなく(UNOグループ独自機、ichigekiUrlは空欄)、DMMも数値表なしのため低信頼度。天井は非搭載(DMM「天井:なし」明記、告知ランプ式でAT/ART非搭載のシンプルなボーナスのみタイプのため妥当)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3837",
     "ichigekiUrl": null
   },
@@ -60,6 +60,15 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 161, "weight": 0.6, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/269、REG1/399)。1geki.jpに専用ページなく、p-world.co.jp(唯一の数値ソース)のみに基づく低信頼度。設定1・4・6は同ソースでも欠落のため未収録。"},
+        {"settingNo": 3, "denominatorValue": 148, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/269、REG1/331)。p-world.co.jp(唯一の数値ソース)。"},
+        {"settingNo": 5, "denominatorValue": 128, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/259、REG1/255)。DMM要約「ボーナス合算確率は1/128.5〜161.0」と設定2/5の値がおおむね整合。p-world.co.jp(唯一の数値ソース)。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

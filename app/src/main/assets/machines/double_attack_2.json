@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-11-18",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率(主判別)・CZ確率(補助判別、設定1・6でDMMと完全一致するクロスチェック済み)を反映。天井はモード別シンボル一致数カウント式(通常A63/通常B47/チャンスA31/チャンスB15/天国7/超天国7)でAT確定を反映。設定変更/電源off/on時のリセット詳細は非公開(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4643",
     "ichigekiUrl": "https://1geki.jp/slot/l_da2/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 259.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 250.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 237.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 217.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 200.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 189.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 433.4, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 414.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 402.4, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 349.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 317.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 296.5, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "symbol_match_ceiling",
+      "displayName": "シンボル一致数天井",
+      "ceilingType": "COUNT",
+      "limitValue": 63,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "モード別シンボル一致数カウント到達でAT確定: 通常A=63回、通常B=47回、チャンスA=31回、チャンスB=15回、天国=7回、超天国=7回。設定変更/電源off/on時のリセット詳細は非公開。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }
