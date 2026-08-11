@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-03-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率(主判別)・CZ「双龍門」確率(補助判別)を反映(BIG/REG個別値は非公開)。天井は1200GでAT「双龍の刻」または上位「天授の儀」の抽選濃厚(契機役により98.4%/1.6%〜75%/25%または上位確定まで幅がある)、この分布は1geki本文で「全設定共通」と明記。設定変更/電源off/on時のリセット詳細は非公開(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4085",
     "ichigekiUrl": "https://1geki.jp/slot/s_sohten4/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 379.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率97.6%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 363.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.8%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 345.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率100.4%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 313.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率104.4%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 290.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率107.6%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 271.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率111.4%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 139.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZ「双龍門」確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 133.5, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 128.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 120.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 111.0, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 109.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間1200GでAT「双龍の刻」または上位「天授の儀」の抽選が濃厚(契機役により98.4%/1.6%〜75%/25%または上位確定まで幅がある)。この分布は1geki本文で「全設定共通」と明記。設定変更/電源off/on時のリセット詳細は非公開。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「双龍の刻」/上位「天授の儀」濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

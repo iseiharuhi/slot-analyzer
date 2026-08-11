@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 241
-- partial: 200
+- other: 227
+- partial: 214
 
 ## Broken files / filename-id mismatches
 none
@@ -215,18 +215,32 @@ none
 - sengoku_collection_5.json [partial] 戦国コレクション5 (ceiling=True, refValues=True)
 - sengoku_koihime.json [partial] パチスロ 戦国†恋姫 (ceiling=True, refValues=True)
 - sengoku_musou_3.json [partial] パチスロ戦国無双3 (ceiling=True, refValues=True)
+- sengoku_otome_akatsuki_no_sekigahara.json [partial] パチスロ戦国乙女 暁の関ヶ原‐DARKNESS‐ (ceiling=True, refValues=True)
 - sengoku_otome3.json [partial] 戦国乙女3〜天剣を継ぐもの〜 (ceiling=True, refValues=True)
 - sengoku_otome5.json [partial] L戦国乙女5 業火を穿つ宿焔の双刃 (ceiling=True, refValues=True)
+- shake_bonus_trigger.json [partial] SHAKE BONUS TRIGGER (ceiling=False, refValues=True)
 - shaman_king.json [partial] スマスロ シャーマンキング (ceiling=True, refValues=True)
 - shima_musume.json [partial] L島娘 (ceiling=True, refValues=True)
+- shin_hissatsu_shiokinin.json [partial] L 新・必殺仕置人 回胴 CRASH SPEC (ceiling=True, refValues=True)
 - shin_hokuto_musou.json [partial] スマスロ真・北斗無双 (ceiling=True, refValues=True)
 - shin_onimusha_2.json [partial] パチスロ 新鬼武者2 (ceiling=True, refValues=True)
+- shin_ore_no_sora.json [partial] パチスロ 真俺の空 (ceiling=True, refValues=True)
+- shin_tenka_fubu.json [partial] 真天下布武 (ceiling=True, refValues=True)
 - shinuchi_yoshimune.json [partial] 真打 吉宗 (ceiling=True, refValues=True)
+- slot_idol.json [partial] スロドル (ceiling=True, refValues=True)
+- souten_no_ken_4.json [partial] パチスロ蒼天の拳4 (ceiling=True, refValues=True)
+- star_hanahana_30.json [partial] スターハナハナ-30 (ceiling=False, refValues=True)
 - star_hanahana.json [partial] スマート沖スロ スターハナハナ (ceiling=False, refValues=True)
 - star_pulsar.json [partial] スターパルサー (ceiling=False, refValues=True)
+- steins_gate.json [partial] SLOT STEINS;GATE (ceiling=True, refValues=True)
+- street_fighter_5.json [partial] スマスロ ストリートファイターV 挑戦者の道 (ceiling=False, refValues=True)
+- strike_the_blood.json [partial] スマスロ ストライク・ザ・ブラッド (ceiling=True, refValues=True)
 - strike_witches2.json [partial] Lストライクウィッチーズ2 (ceiling=True, refValues=True)
 - suhana_rising_30.json [partial] スーハナライジング-30 (ceiling=True, refValues=True)
 - super_bingo_neo.json [partial] Lスーパービンゴネオ (ceiling=True, refValues=True)
+- super_hanahana_2_30.json [partial] スーパーハナハナ2‐30 (ceiling=True, refValues=True)
+- super_hanahana_30.json [partial] スーパーハナハナ−30 (ceiling=True, refValues=True)
+- super_hanahana.json [partial] スーパーハナハナ (ceiling=True, refValues=True)
 - super_reno_sp.json [partial] スーパーリノSP (ceiling=True, refValues=True)
 - super_rio_ace_2.json [partial] スマスロスーパーリオエース2 (ceiling=True, refValues=True)
 - super_rio_ace.json [partial] スーパーリオエース (ceiling=True, refValues=True)

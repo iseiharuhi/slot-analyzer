@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-11-05",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からボーナス合算確率(主判別)・AT確率(補助判別)を反映。天井は999G+αでボーナス濃厚を反映、設定変更時は設定1のデータで約40.8%が408Gに短縮・59.2%が999Gのまま(他設定の個別内訳は非公開)。電源off/on(設定変更なし)ではカウントは内部的に維持(表示のみ0リセット)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4647",
     "ichigekiUrl": "https://1geki.jp/slot/l_hissatsu_shiokinin_crash/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 230.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率97.6%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 224.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率98.5%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 212.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率101.1%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 198.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率105.4%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 184.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率108.8%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 169.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率112.9%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 456.0, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 438.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 411.2, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 380.7, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 350.7, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 319.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "999G+αでボーナス濃厚。設定変更時は設定1のデータで約40.8%が408Gに短縮・59.2%が999Gのまま(他設定の個別内訳は非公開)。電源off/on(設定変更なし)ではカウントは内部的に維持(表示のみ0リセット)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で約40.8%が408Gに短縮)"
+    }
+  ]
 }
