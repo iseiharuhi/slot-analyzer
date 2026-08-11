@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-08-05",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMM一致でAT初当り確率(主判別)・CZ出現率(補助判別)を反映。天井は通常時1200G+αで「ゲゲゲRUSH」(AT)濃厚+ねこ娘CHANCE付与を反映。設定変更時は内部で0〜150Gが事前加算され実質1050G+αまで短縮される場合あり、リセット後の天井到達はAT Lv2「激闘」濃厚(二次ソースのみ、中程度の信頼度、主天井の1200G自体は1geki/DMM一致で高信頼度)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4606",
     "ichigekiUrl": "https://1geki.jp/slot/l_kitaro_kakusei/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 421.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率97.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 413.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 403.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率100.3%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 378.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率105.6%)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 361.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率110.8%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 349.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率114.9%)。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 222.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 219.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 217.0, "weight": 0.7, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 206.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 197.2, "weight": 0.7, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 191.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時1200G+αで「ゲゲゲRUSH」(AT)濃厚、ねこ娘CHANCEも付与。設定変更時は内部で0〜150Gが事前加算され実質1050G+αまで短縮される場合あり(二次ソース、中程度の信頼度)。リセット後の天井到達はAT Lv2「激闘」濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ゲゲゲRUSH(AT)濃厚",
+      "resetText": "AT当選でリセット(設定変更で実質短縮の場合あり)"
+    }
+  ]
 }

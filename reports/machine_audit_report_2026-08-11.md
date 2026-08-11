@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 311
-- partial: 130
+- other: 297
+- partial: 144
 
 ## Broken files / filename-id mismatches
 none
@@ -77,18 +77,32 @@ none
 - crea_new_hihouden.json [partial] CREA Newクレアの秘宝伝 (ceiling=False, refValues=True)
 - cyborg_009_re.json [partial] PACHISLOT 009 RE:CYBORG (ceiling=True, refValues=True)
 - danmachi_2.json [partial] パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2 (ceiling=True, refValues=True)
+- danmachi_gaiden_sword_oratoria.json [partial] パチスロ ダンまち外伝 ソード・オラトリア (ceiling=True, refValues=True)
+- dark_high_bi.json [partial] スマート沖スロ ダークハイビ (ceiling=True, refValues=True)
 - darling_franxx.json [partial] Lダーリン・イン・ザ・フランキス (ceiling=True, refValues=True)
 - devil_may_cry_5_stylish_tribe.json [partial] スマスロ デビル メイ クライ5 スタイリッシュトライブ (ceiling=True, refValues=True)
 - devil_may_cry_5.json [partial] パチスロ デビル メイ クライ 5 (ceiling=True, refValues=True)
 - disc_up_ultraremix.json [partial] A-SLOT+ ディスクアップ ULTRAREMIX (ceiling=False, refValues=True)
 - dragon_hanahana_senko_30.json [partial] ドラゴンハナハナ～閃光～ 30 (ceiling=False, refValues=True)
+- dragon_hanahana_senko.json [partial] スマート沖スロ ドラゴンハナハナ~閃光~ (ceiling=False, refValues=True)
+- dumbbell_nan_kilo.json [partial] Lパチスロ ダンベル何キロ持てる? (ceiling=True, refValues=True)
 - eureka_seven_4.json [partial] スマスロ交響詩篇エウレカセブン4 HI‐EVOLUTION (ceiling=True, refValues=True)
 - eva_yakusoku_no_tobira.json [partial] LBパチスロ ヱヴァンゲリヲン ~約束の扉~ (ceiling=False, refValues=True)
 - evangelion_festival.json [partial] EVANGELION FESTIVAL (ceiling=True, refValues=True)
 - fairy_tail_2.json [partial] FAIRY TAIL2 (ceiling=True, refValues=True)
+- fire_drift.json [partial] パチスロ ファイヤードリフト (ceiling=True, refValues=True)
+- gamera_2.json [partial] パチスロ ガメラ2 (ceiling=False, refValues=True)
+- gamera.json [partial] パチスロガメラ (ceiling=True, refValues=True)
+- gegege_no_kitaro_kakusei.json [partial] スマスロ ゲゲゲの鬼太郎 覚醒 (ceiling=True, refValues=True)
+- gekka_miyabi.json [partial] パチスロ 月華 雅 (ceiling=True, refValues=True)
 - gi_yushun_club_3.json [partial] GI優駿倶楽部3 (ceiling=True, refValues=True)
+- ginga_eiyuu_densetsu.json [partial] 銀河英雄伝説 Die Neue These (ceiling=True, refValues=True)
+- girls_keirin_gi_fairy_grand_prix.json [partial] 〜ガールズケイリン〜GIフェアリーグランプリ (ceiling=True, refValues=True)
+- girls_und_panzer_movie.json [partial] パチスロガールズ&パンツァー 劇場版 (ceiling=True, refValues=True)
+- girls_und_panzer_saishou.json [partial] Lパチスロガールズ&パンツァー 最終章 (ceiling=True, refValues=True)
 - goblin_slayer_2.json [partial] スマスロ ゴブリンスレイヤーII (ceiling=True, refValues=True)
 - god_eater_resurrection.json [partial] スマスロ ゴッドイーター リザレクション (ceiling=True, refValues=True)
+- god_eater_the_animation.json [partial] パチスロ ゴッドイーター ジ・アニメーション (ceiling=True, refValues=True)
 - gundam_unicorn_kakusei_drive.json [partial] Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE (ceiling=True, refValues=True)
 - gundam_unicorn.json [partial] パチスロ機動戦士ガンダムユニコーン (ceiling=True, refValues=True)
 - haihai_shiosai_2.json [partial] ハイハイシオサイ2 (ceiling=False, refValues=True)

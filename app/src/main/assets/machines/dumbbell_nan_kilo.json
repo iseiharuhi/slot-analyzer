@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-12-16",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMM一致でボーナス(AT)初当り確率を反映。天井はCZ間750G(補助)+カロリー蓄積10万kcal(補助)+AT間1500G(主判別、設定変更で1000Gに短縮)の3系統を反映(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4669",
     "ichigekiUrl": "https://1geki.jp/slot/l_dumbbell/"
   },
@@ -60,6 +60,70 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 591, "weight": 1, "minSampleSize": 2500, "note": "ボーナス(AT)初当り確率は主判別(出玉率97.7%)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 576, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率98.7%)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 546, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率101.3%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 532, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率105.8%)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 512, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率108.5%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 504, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率114.9%)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT間1500G+αでAT濃厚。設定変更時は1000G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更で1000Gに短縮"
+    },
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 750,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ間750G+αでCZ濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ当選でリセット"
+    },
+    {
+      "ruleKey": "calorie_point_ceiling",
+      "displayName": "カロリー蓄積天井",
+      "ceilingType": "POINT",
+      "limitValue": 100000,
+      "unit": "kcal",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "カロリー蓄積10万kcalでCZ濃厚(ゲーム数天井と並行)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ当選でリセット"
+    }
+  ]
 }
