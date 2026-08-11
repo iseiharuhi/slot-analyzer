@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-09-19",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析からAT「異世界制覇ラッシュ」初当り確率(主判別)・CZ「鬼ヶ島バカンス」確率(補助判別)を反映(前作sengoku_collection_5とは超極楽LOOP追加の別機種扱い、取り違えなし確認済み)。天井はモード別コレ数天井(モードA1280/B768/C384/天国系128)を反映。設定変更時はモードC以上が優遇選択され、約54%以上が384コレ以内で到達(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4410",
     "ichigekiUrl": "https://1geki.jp/slot/s_sencolle5_gkrk/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 346.8, "weight": 1, "minSampleSize": 2500, "note": "AT「異世界制覇ラッシュ」初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 336.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 325.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 307.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 297.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 287.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 170.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZ「鬼ヶ島バカンス」確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 167.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 165.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 162.2, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 160.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 159.2, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別(設定6は1/160を切る唯一の設定と1geki明記)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "mode_a_koresuu_ceiling",
+      "displayName": "モードA「コレ数」天井",
+      "ceilingType": "COUNT",
+      "limitValue": 1280,
+      "unit": "コレ",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "モードA滞在時1280コレでAT「異世界制覇ラッシュ」濃厚。モードB=768コレ、モードC=384コレ、天国/裏天国/超極楽モード=128コレ。設定変更時はモードC以上が優遇選択され、約54%以上が384コレ以内で到達。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更でモードC以上優遇)"
+    }
+  ]
 }

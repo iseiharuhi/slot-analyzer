@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-07-18",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からBB+RB合算確率を反映(全6設定判明、算術検算済み)。天井は通常時900G+αでBB濃厚+50%の確率で「ハーレムモード」ボーナス機能も追加で突入を反映。設定変更時のリセット挙動は情報未確認(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4366",
     "ichigekiUrl": "https://1geki.jp/slot/s_sengokukoihime/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 161.3, "weight": 1, "minSampleSize": 2500, "note": "BB+RB合算確率は主判別(BB1/268.4、RB1/404.4、出玉率98.5%)。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 158.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/263.7、RB1/398.7、出玉率99.2%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 154.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/254.4、RB1/392.2、出玉率100.5%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 144.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/237.6、RB1/370.6、出玉率103.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 138.9, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/227.4、RB1/357.2、出玉率104.9%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 133.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/216.5、RB1/349.2、出玉率106.8%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時900G+αでBB濃厚、さらに50%の確率で「ハーレムモード」ボーナス機能にも突入。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BB濃厚(50%でハーレムモードも追加突入)",
+      "resetText": "BB成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

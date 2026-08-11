@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 255
-- partial: 186
+- other: 241
+- partial: 200
 
 ## Broken files / filename-id mismatches
 none
@@ -189,18 +189,32 @@ none
 - oki_doki_duo_30.json [partial] 沖ドキ!DUO‐30 (ceiling=True, refValues=True)
 - oki_doki_duo_encore.json [partial] スマート沖スロ 沖ドキ！DUO-30 アンコール (ceiling=True, refValues=True)
 - oki_doki_duo.json [partial] 沖ドキ！DUO (ceiling=True, refValues=True)
+- oki_doki_gold_30.json [partial] 沖ドキ！GOLD‐30 (ceiling=True, refValues=True)
 - oki_doki_gold.json [partial] 沖ドキ！GOLD (ceiling=True, refValues=True)
+- oki_doki_gorgeous.json [partial] 沖ドキ!ゴージャス(25Φ/30Φ) (ceiling=True, refValues=True)
+- oki_hana_30.json [partial] ぱちスロ 沖ハナ−30 (ceiling=True, refValues=True)
+- okinawa_festival_30.json [partial] 沖縄フェスティバル‐30 (ceiling=False, refValues=True)
 - onimusha_3.json [partial] スマスロ 鬼武者3 (ceiling=True, refValues=True)
 - oshi_slo_idol.json [draft] 推しスロ アイドルVer. (ceiling=True, refValues=False)
 - persona_5.json [partial] ペルソナ5 (ceiling=True, refValues=True)
+- pink_panther_sp.json [partial] パチスロ ピンクパンサーSP (ceiling=False, refValues=True)
+- premium_umaibou.json [partial] LBプレミアムうまい棒 (ceiling=False, refValues=True)
 - railgun_2.json [partial] スマスロ とある科学の超電磁砲2 (ceiling=True, refValues=True)
+- rei_slot.json [partial] パチスロ零 (ceiling=True, refValues=True)
 - revue_starlight.json [partial] L少女☆歌劇 レヴュースタァライト -The SLOT- (ceiling=True, refValues=True)
+- ring_unmei_no_byoutoku.json [partial] パチスロ リング 運命の秒刻 (ceiling=True, refValues=True)
 - ring_v.json [partial] Lリングにかけろ1 V (ceiling=True, refValues=True)
 - ryujin_30_suika.json [partial] パチスロ琉神−30 スイカバージョン (ceiling=True, refValues=True)
+- ryukyu_beat_30.json [partial] パチスロRYUKYU BEAT‐30 (ceiling=False, refValues=True)
 - saki_top.json [partial] L咲-Saki- 頂上決戦 (ceiling=True, refValues=True)
 - sao_1.json [partial] スロット ソードアート・オンライン (ceiling=True, refValues=True)
 - sao_2.json [partial] スロット ソードアート・オンラインII (ceiling=True, refValues=True)
+- seisenshi_dunbine.json [partial] スマスロ 聖戦士ダンバイン (ceiling=True, refValues=True)
+- sengoku_collection_4.json [partial] 戦国コレクション4 (ceiling=True, refValues=True)
+- sengoku_collection_5_loop.json [partial] 戦国コレクション5超極楽LOOP (ceiling=True, refValues=True)
 - sengoku_collection_5.json [partial] 戦国コレクション5 (ceiling=True, refValues=True)
+- sengoku_koihime.json [partial] パチスロ 戦国†恋姫 (ceiling=True, refValues=True)
+- sengoku_musou_3.json [partial] パチスロ戦国無双3 (ceiling=True, refValues=True)
 - sengoku_otome3.json [partial] 戦国乙女3〜天剣を継ぐもの〜 (ceiling=True, refValues=True)
 - sengoku_otome5.json [partial] L戦国乙女5 業火を穿つ宿焔の双刃 (ceiling=True, refValues=True)
 - shaman_king.json [partial] スマスロ シャーマンキング (ceiling=True, refValues=True)
