@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 227
-- partial: 214
+- other: 212
+- partial: 229
 
 ## Broken files / filename-id mismatches
 none
@@ -244,21 +244,36 @@ none
 - super_reno_sp.json [partial] スーパーリノSP (ceiling=True, refValues=True)
 - super_rio_ace_2.json [partial] スマスロスーパーリオエース2 (ceiling=True, refValues=True)
 - super_rio_ace.json [partial] スーパーリオエース (ceiling=True, refValues=True)
+- symphogear_yuuki_no_uta.json [partial] パチスロ戦姫絶唱シンフォギア 勇気の歌 (ceiling=True, refValues=True)
 - symphogear.json [partial] 戦姫絶唱シンフォギア 正義の歌 (ceiling=True, refValues=True)
+- taboo_tattoo.json [partial] SLOTタブー・タトゥー (ceiling=True, refValues=True)
+- taimadou_gakuen_35.json [partial] 対魔導学園35試験小隊 (ceiling=True, refValues=True)
 - takt_op_destiny.json [partial] Ｌタクトオーパス デスティニー (ceiling=True, refValues=True)
 - tate_no_yuusha.json [partial] パチスロ盾の勇者の成り上がり (ceiling=True, refValues=True)
 - tekken_5.json [partial] パチスロ鉄拳5 (ceiling=True, refValues=True)
 - tekken_6.json [partial] スマスロ鉄拳6 (ceiling=True, refValues=True)
+- tensei_shitara_ken_deshita.json [partial] パチスロ 転生したら剣でした (ceiling=True, refValues=True)
 - tensei_slime.json [partial] L転生したらスライムだった件 (ceiling=True, refValues=True)
 - thunder_v_lightning.json [partial] サンダーVライトニング (ceiling=False, refValues=True)
+- to_love_ru_darkness_trance.json [partial] L ToLOVEるダークネス TRANCE ver.8.7 (ceiling=True, refValues=True)
+- to_love_ru_darkness.json [partial] L ToLOVEるダークネス (ceiling=True, refValues=True)
 - tokyo_ghoul.json [partial] L東京喰種 (ceiling=True, refValues=True)
+- tokyo_revengers.json [partial] スマスロ 東京リベンジャーズ (ceiling=True, refValues=True)
+- tower_of_druaga_slot.json [partial] SLOTドルアーガの塔 (ceiling=False, refValues=True)
+- tower_of_druaga_smart.json [partial] スマスロ ドルアーガの塔 (ceiling=False, refValues=True)
 - triple_crown_v_30.json [partial] トリプルクラウンV‐30 (ceiling=False, refValues=True)
+- tropicana.json [partial] スマスロ トロピカーナ (ceiling=True, refValues=False)
+- twin_angel_party.json [partial] パチスロツインエンジェル PARTY (ceiling=True, refValues=True)
 - ultra_miracle_juggler.json [partial] ウルトラミラクルジャグラー (ceiling=False, refValues=True)
 - umineko_2.json [partial] Lパチスロうみねこのなく頃に2 (ceiling=True, refValues=True)
 - ushio_tora.json [partial] Lうしおととら 白面決戦 (ceiling=True, refValues=True)
+- venus_zone.json [partial] ヴィーナスゾーン (ceiling=False, refValues=True)
+- word_of_lights_2.json [partial] ワードオブライツII (ceiling=True, refValues=True)
 - youjo_senki.json [partial] パチスロ幼女戦記 (ceiling=True, refValues=True)
+- zegapain_2.json [partial] パチスロ ゼーガペイン2 (ceiling=True, refValues=True)
 - zenigata3.json [partial] 主役は銭形3 (ceiling=True, refValues=True)
 - zenigata4.json [partial] L主役は銭形4 (ceiling=True, refValues=True)
 - zettai_shougeki_3.json [partial] 絶対衝激III (ceiling=True, refValues=True)
 - zettai_shougeki_platonic_heart.json [partial] L 絶対衝激~PLATONIC HEART~ (ceiling=True, refValues=True)
+- zombieland_saga.json [partial] スロット ゾンビランドサガ (ceiling=True, refValues=True)
 

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-12-20",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT「V-SONG」確率(主判別)・CZ「GXバトル」当選率(補助判別)を反映。天井は3系統(通常時800Gハマリ/同一有利区間1500G以降のCZ当選/CZ4連続スルー後5回目当選)いずれかで濃厚を反映(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4011",
     "ichigekiUrl": "https://1geki.jp/slot/s_sympho_soc/"
   },
@@ -60,6 +60,81 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 425, "weight": 1, "minSampleSize": 2500, "note": "AT「V-SONG」確率は主判別(出玉率97.5%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 408, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率98.8%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 390, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率100.3%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 348, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率104.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 308, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率108.5%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 291, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率110.5%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 285, "weight": 0.7, "minSampleSize": 3000, "note": "CZ「GXバトル」当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 260, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 250, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 226, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 204, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 195, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時800GハマリでCZ当選濃厚(AT期待度約80%)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ当選濃厚(AT期待度約80%)",
+      "resetText": "CZ当選でリセット"
+    },
+    {
+      "ruleKey": "extended_game_ceiling",
+      "displayName": "有利区間延長天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "同一有利区間で1500G以降のCZ当選でAT確定(1499G以下で当選し前兆で1500G越えは対象外)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZ連続スルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ4回連続スルー後、5回目のCZ当選で絶唱またはAT確定(絶唱期待度約75%)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "絶唱またはAT確定",
+      "resetText": "CZ当選でリセット"
+    }
+  ]
 }
