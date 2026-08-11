@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-12-06",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 設定差の数値データは1geki.jp本ページ・詳細ページ・DMM・chonborista.com・WebSearch集約すべてで「調査中」表記のため未公開、settingReferenceValuesは意図的に空欄(捏造回避)。定性的な設定差(チェリー出現率・とうろりモード中の1枚役Bなど)は言及あるが数値化不可。天井は非搭載(chonborista.com「天井や有利区間は非搭載!?」、他ソースも矛盾なし)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4026",
     "ichigekiUrl": "https://1geki.jp/slot/s_awamori/"
   },

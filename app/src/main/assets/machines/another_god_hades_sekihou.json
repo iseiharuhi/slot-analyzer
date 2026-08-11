@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-04-17",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からGG(GOD GAME)初当り確率を反映(本機唯一の公開判別軸、別途CZ/BIG/REG表は未公開)。天井は1400G(最大1490Gまでのブレ幅あり)で全回転フリーズ濃厚(紫7/冥王/GODの3択、GOD内約10.2%で金7揃い)を反映。設定変更時のリセット挙動は情報未確認(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4327",
     "ichigekiUrl": "https://1geki.jp/slot/s_hades_sougeki/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 510.9, "weight": 1, "minSampleSize": 2500, "note": "GG(GOD GAME)初当り確率は主判別(出玉率97.6%)。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 418.4, "weight": 1, "minSampleSize": 2500, "note": "GG初当り確率は主判別(出玉率98.9%)。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 338.6, "weight": 1, "minSampleSize": 2500, "note": "GG初当り確率は主判別(出玉率102.0%)。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 275.8, "weight": 1, "minSampleSize": 2500, "note": "GG初当り確率は主判別(出玉率106.0%)。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 244.7, "weight": 1, "minSampleSize": 2500, "note": "GG初当り確率は主判別(出玉率109.4%)。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 224.2, "weight": 1, "minSampleSize": 2500, "note": "GG初当り確率は主判別(出玉率112.1%)。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1400,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1400G消化(最大1490Gまでのブレ幅あり)で全回転フリーズが発生しGG濃厚。フリーズ結果は紫7/冥王/GODの3択がほぼ均等割合、GOD当選内では約10.2%で金7揃いのプレミア演出。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "GG濃厚",
+      "resetText": "GG当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

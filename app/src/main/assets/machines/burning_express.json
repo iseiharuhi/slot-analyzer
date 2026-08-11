@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-12-01",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からBurning Bonus+Express Bonus合算確率を反映。本機は5段階設定機で設定3非搭載(WebSearch経由で1geki.jp設定差解説記事から確認、機種スペック表にも設定3行なし)。天井は999G+α(通常時)、設定変更時666G+αに短縮(過半数が111G刻みの短縮ポイントに分布)を反映(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4896",
     "ichigekiUrl": "https://1geki.jp/slot/l_burning_express/"
   },
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 198.6, "weight": 1, "minSampleSize": 2500, "note": "Burning Bonus+Express Bonus合算確率は主判別(Burning1/385.3、Express1/409.8、出玉率98.5%)。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 195.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(Burning1/380.1、Express1/403.9、出玉率99.9%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 186.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(Burning1/362.2、Express1/382.2、出玉率103.7%)。本機は5段階設定機で設定3非搭載(2→4)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 179.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(Burning1/350.3、Express1/367.8、出玉率107.7%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 175.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(Burning1/342.7、Express1/359.2、出玉率110.2%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時999G+αでボーナス濃厚(約98.4%がこの深めの天井帯に到達)。設定変更時は666G+αに短縮、短縮後の到達ポイントは過半数が111G刻み(111/222/333/444/555G)に分布。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更で666Gに短縮(111G刻みの短縮ポイントに再分布)"
+    }
+  ]
 }
