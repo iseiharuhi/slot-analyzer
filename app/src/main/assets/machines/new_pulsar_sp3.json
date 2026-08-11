@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-04-05",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier S)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 本機は設定5が存在しない5段階(1,2,3,4,6)。1geki.jp/slotkaiseki.comの2ソース一致でボーナス合算(BB+RB)を反映。天井は非搭載と1geki.jpに明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
     "dmmUrl": "https://p-town.dmm.com/machines/3841",
     "ichigekiUrl": "https://1geki.jp/slot/s_newpulsar_sp3/"
   },
@@ -60,6 +60,17 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 174.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。本機は設定5が存在しない5段階(1,2,3,4,6)。2ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 172.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。2ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 166.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。2ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 146.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。2ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 133.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。設定5が存在しない機種のため設定6が実質最上位。2ソース一致。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

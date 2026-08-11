@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-06-05",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/nana-press.comの2ソース一致でAT初当り確率を反映(設定3は両ソースとも公式非公表で欠番)。天井は1500G(AT終了後222G/1500Gの2択、高設定ほど222G優遇)+設定変更時1122Gを反映(2026-08-10、単一ソース)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4369",
     "ichigekiUrl": "https://1geki.jp/slot/l_nyanko/"
   },
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 587.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定3は1geki.jp/nana-press.comとも公式非公表のため欠番。2ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 573.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 504.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 447.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 417.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大1500G+αでAT当選確定。AT終了後は222Gまたは1500G+αの2択(高設定ほど222G選択率アップ)。設定変更(リセット)後は1122G+α。到達時の恩恵はガチャ性能アップ(ギガントゼウス確定67%/ALL超ポセイドン9%/ALLアフロディーテ22%/超ネコ祭2%)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選確定(ガチャ性能アップ)",
+      "resetText": "設定変更でリセット(1122Gに短縮)"
+    }
+  ]
 }

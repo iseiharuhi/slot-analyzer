@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 354
-- partial: 87
+- other: 339
+- partial: 102
 
 ## Broken files / filename-id mismatches
 none
@@ -105,16 +105,31 @@ none
 - mahjong_monogatari_4.json [partial] パチスロ麻雀物語4 (ceiling=True, refValues=True)
 - miku_idomu_challenge.json [partial] パチスロミクちゃんとイドムンのミラクルチャレンジ (ceiling=False, refValues=True)
 - million_god_kamigami.json [partial] スマスロ ミリオンゴッド-神々の軌跡- (ceiling=True, refValues=True)
+- motto_crea_hihouden_megami_uta.json [partial] もっと!クレアの秘宝伝 女神の歌声と太陽の子供達 (ceiling=False, refValues=True)
+- mr_juggler.json [partial] ミスタージャグラー (ceiling=False, refValues=True)
+- nangoku_monogatari_30.json [partial] パチスロ南国物語30 (ceiling=False, refValues=True)
 - nangoku_sodachi.json [partial] L南国育ち (ceiling=True, refValues=True)
+- neo_im_juggler_ex.json [partial] ネオアイムジャグラーEX (ceiling=False, refValues=True)
+- new_king_hanahana_v_30.json [partial] ニューキングハナハナV-30 (ceiling=False, refValues=True)
+- new_king_hanahana_v.json [partial] スマート沖スロ ニューキングハナハナV (ceiling=False, refValues=True)
+- new_pulsar_sp3.json [partial] ニューパルサーSPIII (ceiling=False, refValues=True)
+- nyanko_bigbang.json [partial] ぱちスロ にゃんこ大戦争 BIGBANG (ceiling=True, refValues=True)
+- oki_doki_black.json [partial] 沖ドキ!BLACK (ceiling=True, refValues=True)
+- oki_doki_duo_30.json [partial] 沖ドキ!DUO‐30 (ceiling=True, refValues=True)
 - oki_doki_duo_encore.json [partial] スマート沖スロ 沖ドキ！DUO-30 アンコール (ceiling=True, refValues=True)
 - oki_doki_duo.json [partial] 沖ドキ！DUO (ceiling=True, refValues=True)
 - oki_doki_gold.json [partial] 沖ドキ！GOLD (ceiling=True, refValues=True)
+- onimusha_3.json [partial] スマスロ 鬼武者3 (ceiling=True, refValues=True)
 - oshi_slo_idol.json [draft] 推しスロ アイドルVer. (ceiling=True, refValues=False)
 - persona_5.json [partial] ペルソナ5 (ceiling=True, refValues=True)
+- railgun_2.json [partial] スマスロ とある科学の超電磁砲2 (ceiling=True, refValues=True)
 - revue_starlight.json [partial] L少女☆歌劇 レヴュースタァライト -The SLOT- (ceiling=True, refValues=True)
 - ring_v.json [partial] Lリングにかけろ1 V (ceiling=True, refValues=True)
 - ryujin_30_suika.json [partial] パチスロ琉神−30 スイカバージョン (ceiling=True, refValues=True)
 - saki_top.json [partial] L咲-Saki- 頂上決戦 (ceiling=True, refValues=True)
+- sao_1.json [partial] スロット ソードアート・オンライン (ceiling=True, refValues=True)
+- sao_2.json [partial] スロット ソードアート・オンラインII (ceiling=True, refValues=True)
+- sengoku_collection_5.json [partial] 戦国コレクション5 (ceiling=True, refValues=True)
 - shaman_king.json [partial] スマスロ シャーマンキング (ceiling=True, refValues=True)
 - shin_onimusha_2.json [partial] パチスロ 新鬼武者2 (ceiling=True, refValues=True)
 - shinuchi_yoshimune.json [partial] 真打 吉宗 (ceiling=True, refValues=True)

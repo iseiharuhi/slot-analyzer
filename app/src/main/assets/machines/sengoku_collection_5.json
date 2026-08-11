@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-03-06",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT「異世界制覇ラッシュ」初当り確率を反映。天井は「コレ数」制のモード別天井(A1280/B768/C384/天国系128コレ)を反映(2026-08-10、DMMでコレ数をクロスチェック済み)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4294",
     "ichigekiUrl": "https://1geki.jp/slot/s_sengokucollection5/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 350.1, "weight": 1, "minSampleSize": 2500, "note": "AT「異世界制覇ラッシュ」初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 334.6, "weight": 1, "minSampleSize": 2500, "note": "AT「異世界制覇ラッシュ」初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 318.9, "weight": 1, "minSampleSize": 2500, "note": "AT「異世界制覇ラッシュ」初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 275.2, "weight": 1, "minSampleSize": 2500, "note": "AT「異世界制覇ラッシュ」初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 251.8, "weight": 1, "minSampleSize": 2500, "note": "AT「異世界制覇ラッシュ」初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 233.2, "weight": 1, "minSampleSize": 2500, "note": "AT「異世界制覇ラッシュ」初当り確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "mode_a_koresuu_ceiling",
+      "displayName": "モードA「コレ数」天井",
+      "ceilingType": "COUNT",
+      "limitValue": 1280,
+      "unit": "コレ",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "モードA滞在時1280コレ到達でAT確定。モードB=768コレ、モードC=384コレ、天国/裏天国/極楽モード=128コレ。設定変更時はATシナリオ(継続数)抽選が優遇(シナリオ7・8合算選択率33.3%)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "設定変更でリセット"
+    }
+  ]
 }

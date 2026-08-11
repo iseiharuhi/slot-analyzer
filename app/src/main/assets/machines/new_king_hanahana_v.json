@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-01-05",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier S)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 本機は設定1〜4+設定Vの5段階(標準の設定5・6は存在しない)。1geki.jp/nana-press.comでv-30版と同一数値体系を確認(パイオニアの同一抽選プログラム移植と推定、機種名を個別に照合し取り違えでないことを確認済み)、最上位の設定Vは慣例上settingNo=6として記録。天井は非搭載と1geki.jpに明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
     "dmmUrl": "https://p-town.dmm.com/machines/4911",
     "ichigekiUrl": "https://1geki.jp/slot/l_new_king_hanahana_v/"
   },
@@ -60,6 +60,17 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 186.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。本機は設定1-4+設定Vの5段階、標準6段階ではない。v-30版と同一体系(パイオニアの同一プログラム移植と推定)。"},
+        {"settingNo": 2, "denominatorValue": 180.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。"},
+        {"settingNo": 3, "denominatorValue": 172.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。"},
+        {"settingNo": 4, "denominatorValue": 162.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。"},
+        {"settingNo": 6, "denominatorValue": 150.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。最上位の「設定V」を慣例上settingNo=6として記録(標準の設定5・6は存在しない、機種固有仕様)。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }
