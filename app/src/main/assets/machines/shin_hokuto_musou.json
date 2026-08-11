@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-07-08",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier S)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映(主判別)。Yulia直撃・宿命ブレーキストック率・スイカ確率などの補助データもDMM記載あり(counterKey未反映、参考情報)。天井は宿命ポイント制1536pt+α(平均768G相当)、内部モード別サブ天井(A1536/B1408/C1024/D640/天国系256pt)を反映。設定変更時はポイントリセットのうえモードC以上濃厚(実質上限1024pt相当)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4577",
     "ichigekiUrl": "https://1geki.jp/slot/l_sin_hokutomuso/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 381.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 379.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 361.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 349.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 338.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 320.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "meifuku_point_ceiling",
+      "displayName": "宿命ポイント天井",
+      "ceilingType": "POINT",
+      "limitValue": 1536,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "宿命ポイント1536pt+αでAT濃厚(1G+1pt、平均768G相当)。内部モード別サブ天井: モードA=1536pt、モードB=1408pt、モードC=1024pt、モードD=640pt、天国/超天国=256pt。設定変更時はポイントリセットのうえモードC以上濃厚(実質上限1024pt相当)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更でポイントリセット(モードC以上濃厚)"
+    }
+  ]
 }

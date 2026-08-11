@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-12-06",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMM一致でボーナス合算確率(主判別)・CZ「デカ魂」確率(補助判別)を反映(設定4は1geki/DMM/pachiseven.jpの3ソースとも欠落=真に未公開、3→5に飛ぶ)。不二子サブ役確率は非単調(設定1→2でわずかに悪化、3→5で悪化)だが列ごと再確認済みで転記誤りではない、低比重サブ役のため判別には不採用(BIG/REG/合算は単調)。天井はセグメント999G+α(デカ魂濃厚)+中間閾値181/300/680Gを反映。設定変更時は480G+αに固定短縮(抽選なしの決定的短縮)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4017",
     "ichigekiUrl": "https://1geki.jp/slot/s_zenigata3/"
   },
@@ -60,6 +60,62 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 263.5, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/383.7、REG1/918.8)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 255.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/371.1、REG1/890.7)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 239.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/348.5、REG1/833.7)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 207.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/299.4、REG1/716.1)。設定4は3ソースとも欠落のため未収録(3→5)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 187.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/269.8、REG1/644.1)。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 250.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ「デカ魂」確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 248.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 237.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 229.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。設定4は欠落のため未収録。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 227.4, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_segment_ceiling",
+      "displayName": "デカ魂セグメント天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "999G+αでCZ「デカ魂」濃厚。設定変更時は480G+αに短縮(100%固定、抽選なしの決定的短縮)。設定別平均到達G数は設定1=498.8G、設定6=374.9G(内部高確状態の重み付けを反映)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ「デカ魂」濃厚",
+      "resetText": "設定変更で480Gに短縮(固定)"
+    },
+    {
+      "ruleKey": "intermediate_zone_ceiling",
+      "displayName": "実ゲーム数天井(中間閾値)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 680,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "実ゲーム数181G+α/300G+α/680G+αの3段階の中間閾値が存在(各閾値の詳細抽選内容は情報不足、680Gが最も外側の閾値。DMM要約では一部閾値で50%の高確移行とも)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "高確移行の可能性",
+      "resetText": "詳細不明"
+    }
+  ]
 }

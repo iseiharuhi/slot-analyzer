@@ -6,8 +6,8 @@
     "type": "AT",
     "releaseDate": "2021-12-06",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。1geki.jpに専用ページなく(清龍ゲームジャパン機種、岡崎産業の同名シリーズと混同せず除外)ichigekiUrlは空欄。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4083",
+    "notes": "partial: dmmUrl(machines/4083)を検証したところ実際は別機種「トリプルクラウンZERO V」のページであることが判明(同じ清龍ゲームジャパン、同一2021-12-06発売日のため取り違えが起きたと推定、型式名表記に「SトリプルクラウンV-30」とあり紛らわしいが商品名は別機種)。DMM p-townには本機(V-30)自体のページが存在しないためdmmUrlは空欄に修正。1geki.jpにも専用ページなし(岡崎産業の同名シリーズと混同せず除外)。設定差・天井データはp-world.co.jp/kenslo65536.com/p-gabu.jpの3独立ソースが小数点まで一致する二次情報から反映(1geki/DMMいずれの一次情報も本機自体には存在しないため中程度の信頼度)。天井は非搭載(完全告知システムのため、3ソースとも一致)(2026-08-11)。",
+    "dmmUrl": null,
     "ichigekiUrl": null
   },
   "counterDefinitions": [
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 184.6, "weight": 0.85, "minSampleSize": 3000, "note": "BIG+REG合算確率(BIG1/296.5、REG1/489.1)。p-world.co.jp/kenslo65536.com/p-gabu.jpの3独立ソースが小数点まで一致(中程度の信頼度、1geki/DMM一次情報なし)。"},
+        {"settingNo": 2, "denominatorValue": 175.2, "weight": 0.85, "minSampleSize": 3000, "note": "合算確率(BIG1/287.4、REG1/448.9)。3二次ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 168.0, "weight": 0.85, "minSampleSize": 3000, "note": "合算確率(BIG1/278.9、REG1/422.8)。3二次ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 155.7, "weight": 0.85, "minSampleSize": 3000, "note": "合算確率(BIG1/267.5、REG1/372.4)。3二次ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 149.0, "weight": 0.85, "minSampleSize": 3000, "note": "合算確率(BIG1/262.1、REG1/344.9)。3二次ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 142.5, "weight": 0.85, "minSampleSize": 3000, "note": "合算確率(BIG1/252.1、REG1/327.7)。3二次ソース一致。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

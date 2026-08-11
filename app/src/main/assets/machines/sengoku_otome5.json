@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2026-06-08",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier S)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映(主判別)。天井はゲーム数天井999G+αと周期天井最大6周期の並行方式(いずれか到達でAT当選)を反映。設定変更時はゲーム数天井650G+αに短縮、周期上限4周期に短縮、巫女ポイント再抽選(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/5009",
     "ichigekiUrl": "https://1geki.jp/slot/l_otome5/"
   },
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 359.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。戦国乙女ボーナス(1/21206.7〜1/5502.7、DMM)や巫女ポイント0pt到達時CZ当選率(20.3%〜25.7%、DMM)など補助データもあるが分母形式が揃わずcounterKeyに未反映、参考情報として記録。"},
+        {"settingNo": 2, "denominatorValue": 350.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 332.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 302.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 281.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 262.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "999G+αでAT濃厚(周期天井と並行、いずれか早い方)。設定変更時は650G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更で650Gに短縮"
+    },
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 6,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "最大6周期到達でAT濃厚(ゲーム数天井と並行)。設定変更時は上限4周期に短縮、巫女ポイントも再抽選。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更で上限4周期に短縮"
+    }
+  ]
 }

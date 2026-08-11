@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-06-16",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier A)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT確率(主判別)・ボーナス確率(補助判別)を反映(DMMは図解グラフのみで数値非公開だが設定差自体の存在は定性的に確認)。天井は900G+α(AT「PLATONIC TIME」濃厚)を反映、設定変更後も900G+αのまま短縮なしと1geki本ページ・天井専用ページ双方で確認済み(シリーズ他機種と異なる仕様、意図的な機種固有仕様)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4821",
     "ichigekiUrl": "https://1geki.jp/slot/l_zetai/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 336.3, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率97.4%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 328.2, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率98.3%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 318.6, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率100.2%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 299.4, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率104.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 278.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率107.4%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 264.7, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率110.2%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 163.0, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 162.2, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 161.4, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 156.0, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 146.3, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 139.7, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT/ボーナス間900G+αでAT「PLATONIC TIME」濃厚、次回ボーナス成立まで継続。設定変更後も同じ900G+αが再適用され短縮されない(1geki本ページ・天井専用ページ双方で確認済みの機種固有仕様、シリーズ内の他機種とは異なる)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「PLATONIC TIME」濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更でも900Gのまま、短縮なし)"
+    }
+  ]
 }
