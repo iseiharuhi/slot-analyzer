@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-03-18",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からボーナス初当り確率(コールドスタート、主判別)を反映(設定4のみ全5項目で一貫して欠落=真に未公開、3→5に飛ぶ)。別途BB確率/RB確率(天国モード等を含む全ゲーム状態でのブレンド値、初当り確率とは意図的に異なる測定対象のため算術的に一致しない、データ誤りではない)もソースにあるがcounterKey形式が競合するためnotesのみ記録: 設定1 BB1/172.0・RB1/362.0、設定6 BB1/130.6・RB1/256.2。天井は1000Gでボーナス濃厚、設定変更時は全設定共通37.5%で400Gに短縮+25%均等のモード遷移再分配(天国モードへの到達優遇)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4525",
     "ichigekiUrl": "https://1geki.jp/slot/s_jajamarukun_ha/"
   },
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 336.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率(コールドスタート)は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 321.2, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 313.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。設定4は全5項目で一貫して欠落のため未収録(3→5)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 274.2, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 268.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "1000Gでボーナス濃厚。設定変更時は全設定共通37.5%で400Gに短縮される可能性あり、さらに25%均等の4分岐モード遷移再分配で天国モードへの到達が優遇される。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で37.5%の確率で400Gに短縮)"
+    }
+  ]
 }

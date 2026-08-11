@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-08-04",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からBB+RB合算確率を反映(個別値と算術整合済み、AT非搭載のA タイプ)。天井は非搭載(1geki「本機は天井非搭載」明記)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4824",
     "ichigekiUrl": "https://1geki.jp/slot/l_mtd3/"
   },
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 169.8, "weight": 1, "minSampleSize": 2500, "note": "BB+RB合算確率は主判別(BB1/278.9、RB1/434.0)。1geki.jp公開値、算術整合済み。"},
+        {"settingNo": 2, "denominatorValue": 163.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/268.6、RB1/417.4)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 157.9, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/260.1、RB1/402.1)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 146.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/244.5、RB1/362.1)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 136.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/231.6、RB1/334.4)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 126.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/219.9、RB1/299.3)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-01-20",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からボーナス初当り確率(主判別)・ST確率(補助判別)を反映。天井は1000G+αでプロローグBONUS濃厚、設定変更時は650G+αに短縮のうえ初期CZポイント・初期ボーナスレベルが優遇される(未使用ポイント優遇)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4709",
     "ichigekiUrl": "https://1geki.jp/slot/l_nanatsuma/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 228.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 222.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 209.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 185.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 173.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 164.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 408.3, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 394.9, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 366.4, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 314.0, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 289.2, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 272.3, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "1000G+αでプロローグBONUS濃厚。設定変更時は650G+αに短縮のうえ、初期CZポイント・初期ボーナスレベルが優遇される(未使用ポイント優遇)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "プロローグBONUS濃厚",
+      "resetText": "設定変更で650Gに短縮(初期CZポイント/ボーナスレベル優遇)"
+    }
+  ]
 }

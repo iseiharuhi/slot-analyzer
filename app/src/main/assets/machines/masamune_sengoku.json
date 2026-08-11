@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-08-08",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMMとも設定差テーブルは「調査中」で未公開のため、slopachi-quest.com/altema.jpの二次ソース(ほぼ一致、設定5のみ1/102.3 vs 1/102.0の僅少な差異あり)からCZ「一騎駆けチャレンジ」初当り確率を反映(設定3は両ソースとも欠落、真に未公開、中程度の信頼度)。天井はAT間2000G(主天井、500G/1000Gでの早期解決分布あり、設定変更で500G/1000G分岐が50/50に)+CZ間500G(補助)+CZ6回連続失敗天井(補助)+戦極3回連続失敗天井(補助、体感的には1〜2回失敗での発動報告もあり)の4系統を反映(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4192",
     "ichigekiUrl": "https://1geki.jp/slot/s_masamune_sngk/"
   },
@@ -60,6 +60,86 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 156.7, "weight": 0.85, "minSampleSize": 3000, "note": "CZ「一騎駆けチャレンジ」初当り確率は主判別(本機唯一の公開判別軸、1geki/DMM双方「調査中」のため二次ソースのみ、中程度の信頼度)。slopachi-quest.com/altema.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 146.1, "weight": 0.85, "minSampleSize": 3000, "note": "CZ初当り確率は主判別。設定3は両二次ソースとも欠落のため未収録(2→4)。slopachi-quest.com/altema.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 120.0, "weight": 0.85, "minSampleSize": 3000, "note": "CZ初当り確率は主判別。slopachi-quest.com/altema.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 102.3, "weight": 0.85, "minSampleSize": 3000, "note": "CZ初当り確率は主判別(altema.jpは1/102.0とわずかな差異あり、同一原典由来の丸め誤差の可能性)。slopachi-quest.com値を採用。"},
+        {"settingNo": 6, "denominatorValue": 91.3, "weight": 0.85, "minSampleSize": 3000, "note": "CZ初当り確率は主判別。slopachi-quest.com/altema.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 2000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT間最大2000Gで「超一騎駆けチャレンジ」(AT確定)濃厚。500G/1000Gでの早期解決分布もあり(CZ・戦極の消化ゲーム数はこのカウントから除外)。設定変更時は500G/1000Gの分岐比率が50/50になる。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "超一騎駆けチャレンジ(AT確定)濃厚",
+      "resetText": "AT当選でリセット(設定変更で500/1000G分岐が50/50に)"
+    },
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ間500GでCZ濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ当選でリセット"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZ連続失敗天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ6回連続失敗後、7回目のCZは「戦極」以上濃厚。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "戦極以上濃厚",
+      "resetText": "戦極以上成立でリセット"
+    },
+    {
+      "ruleKey": "sengoku_through_ceiling",
+      "displayName": "戦極連続失敗天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "戦極最大3回連続失敗後、4回目は成功濃厚(体感的には1〜2回失敗での発動報告もあり、分布上の早期解決とみられる)。",
+      "isEnabled": true,
+      "displayOrder": 4,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "戦極成功濃厚",
+      "resetText": "戦極成功でリセット"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-02-21",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からRB確率(主判別、BB確率は全設定で1/248.2固定=設定差なしのためRB側が実質唯一の判別軸)を反映(設定3・4は全項目で欠落=真に未公開、2→5に飛ぶ)。合算値は設定1のみ公開(1/149.6、算術検算済み)、他設定の合算は非公開のため未算出。天井は非搭載(1geki「天井非搭載」明記)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4058",
     "ichigekiUrl": "https://1geki.jp/slot/s_mappy/"
   },
@@ -60,6 +60,16 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 376.6, "weight": 1, "minSampleSize": 2500, "note": "RB確率は主判別(BB確率は全設定1/248.2で固定、設定差なし)。合算1/149.6は設定1のみ公開・算術検算済み。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 145.0, "weight": 1, "minSampleSize": 2500, "note": "RB確率は主判別(BB確率は1/248.2固定)。設定3・4は全項目欠落のため未収録(2→5)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 141.5, "weight": 1, "minSampleSize": 2500, "note": "RB確率は主判別(BB確率は1/248.2固定)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 138.0, "weight": 1, "minSampleSize": 2500, "note": "RB確率は主判別(BB確率は1/248.2固定)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

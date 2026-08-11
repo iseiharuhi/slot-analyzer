@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2020-11-16",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier B)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映。天井は有利区間750G消化(またはクエスト3回連続失敗、アステラの背景が夕方に変化する示唆あり)でボーナス濃厚を反映。有利区間の引き継ぎは毎回50%の確率(単純なリセットではない)。設定変更時はゲーム数・有利区間・ステージ(アステラ)がすべてリセット、電源off/onでは維持(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3766",
     "ichigekiUrl": "https://1geki.jp/slot/s_mhw/"
   },
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 375.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 356.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 336.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 306.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 284.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 262.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "有利区間ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 750,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "有利区間750G消化でボーナス濃厚(クエスト3回連続失敗のサブ天井と並行、アステラの背景が夕方に変化する示唆あり)。有利区間の引き継ぎは毎回50%の確率(単純なリセットではない)。設定変更時はゲーム数・有利区間・ステージ(アステラ)がすべてリセット、電源off/onでは維持。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット(電源off/onでは維持)"
+    },
+    {
+      "ruleKey": "quest_through_ceiling",
+      "displayName": "クエスト連続失敗天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 3,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "750G到達前にクエスト3回連続失敗でもボーナス濃厚(ゲーム数天井と並行)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    }
+  ]
 }
