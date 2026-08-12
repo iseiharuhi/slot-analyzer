@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2020-08-17",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からボーナス初当り確率合算(主判別、BIG+REG+ハイパーBIGの算術検算済み表)を反映。同ページに別表(BIG合算/REG合算/ボーナス合算、設定1=1/145.3・設定6=1/107.9)もあるが主判別表の約2〜2.5倍の頻度でソース側に説明文なし、ボーナス中ストックタイム抽選による内部/実戦差の可能性はあるが未確定のため不採用・参考情報としてnotesのみ記録。ST当選確率(補助)は1/834.3〜1/308.4で単調。天井はモード別ゲーム数天井(通常A/C777G、通常B577G、レジェンド77G)を反映。設定変更で天井G数・ポイント・ポイント周期がリセット、電源off/onでは維持(ステージのみリセット)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3720",
     "ichigekiUrl": "https://1geki.jp/slot/s_hbj/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 360.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率合算は主判別(BIG1/721.6、REG1/746.6、ハイパーBIG1/21632.0)。同ページ別表(1/145.3)は未説明の相違があり不採用、notesのみ参考記録。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 339.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率合算は主判別(BIG1/679.4、REG1/702.2、ハイパーBIG1/19847.3)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 261.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率合算は主判別(BIG1/524.0、REG1/540.0、ハイパーBIG1/17279.8)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 243.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率合算は主判別(BIG1/486.9、REG1/502.3、ハイパーBIG1/15679.7)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 201.1, "weight": 1, "minSampleSize": 2500, "note": "初当り確率合算は主判別(BIG1/448.9、REG1/373.4、ハイパーBIG1/15096.3)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 174.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率合算は主判別(BIG1/440.4、REG1/295.9、ハイパーBIG1/14715.3)。同ページ別表(1/107.9)は未説明の相違があり不採用。ST当選確率(補助)は1/308.4。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "モード別ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常A/C滞在時777G+αでボーナス濃厚。通常B=577G、レジェンド=77G。設定変更時は天井G数・ポイント・ポイント周期がすべてリセット、ステージもカジノステージへ戻る。電源off/onでは天井G数・ポイント・ポイント周期は維持(表示形式のみ変化)、ステージのみリセット。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で天井G数/ポイント/周期リセット)"
+    }
+  ]
 }

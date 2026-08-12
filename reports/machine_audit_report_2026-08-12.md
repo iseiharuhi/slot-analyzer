@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 198
-- partial: 243
+- other: 184
+- partial: 257
 
 ## Broken files / filename-id mismatches
 none
@@ -105,8 +105,10 @@ none
 - evangelion_festival.json [partial] EVANGELION FESTIVAL (ceiling=True, refValues=True)
 - fairy_tail_2.json [partial] FAIRY TAIL2 (ceiling=True, refValues=True)
 - fire_drift.json [partial] パチスロ ファイヤードリフト (ceiling=True, refValues=True)
+- fujiko_bt.json [partial] L不二子BT (ceiling=False, refValues=True)
 - gamera_2.json [partial] パチスロ ガメラ2 (ceiling=False, refValues=True)
 - gamera.json [partial] パチスロガメラ (ceiling=True, refValues=True)
+- gantz_kiwami.json [partial] パチスロGANTZ極 THE SURVIVAL GAME (ceiling=True, refValues=True)
 - gegege_no_kitaro_kakusei.json [partial] スマスロ ゲゲゲの鬼太郎 覚醒 (ceiling=True, refValues=True)
 - gekka_miyabi.json [partial] パチスロ 月華 雅 (ceiling=True, refValues=True)
 - gi_yushun_club_3.json [partial] GI優駿倶楽部3 (ceiling=True, refValues=True)
@@ -127,24 +129,36 @@ none
 - gundam_unicorn.json [partial] パチスロ機動戦士ガンダムユニコーン (ceiling=True, refValues=True)
 - gyagder.json [partial] ぱちスロ ギャグダー (ceiling=True, refValues=True)
 - haihai_shiosai_2.json [partial] ハイハイシオサイ2 (ceiling=False, refValues=True)
+- haiyore_nyaruko_san.json [partial] パチスロ 這いよれ!ニャル子さん (ceiling=True, refValues=True)
 - hanahana_houou_tensho_30.json [partial] ハナハナホウオウ～天翔～-30 (ceiling=False, refValues=True)
 - hanahana_houou_tensho.json [partial] ハナハナホウオウ~天翔~(非-30) (ceiling=False, refValues=True)
 - hanamatsuri.json [partial] 華祭 (ceiling=False, refValues=True)
+- hananokeiji_bui.json [partial] パチスロ花の慶次〜武威 (ceiling=True, refValues=True)
 - hardboiled.json [partial] パチスロハードボイルド (ceiling=True, refValues=True)
+- haru_ichiban.json [partial] パチスロ春一番 (ceiling=True, refValues=True)
+- hey_elite_salaryman_kagami.json [partial] HEY!エリートサラリーマン鏡 (ceiling=True, refValues=True)
 - high_bi_return_30.json [partial] ハイビリターン-30 (ceiling=True, refValues=True)
 - highschool_dxd_2.json [partial] ハイスクールD×D2 ハーレム王に俺はなる (ceiling=True, refValues=True)
 - highschool_of_the_dead_gold.json [partial] パチスロ学園黙示録ハイスクール・オブ・ザ・デッド ゴールド (ceiling=True, refValues=True)
 - higurashi_gou.json [partial] L ひぐらしのなく頃に 業 (ceiling=True, refValues=True)
+- hit128.json [partial] HIT128 (ceiling=True, refValues=True)
 - hokuto_shukumei.json [partial] パチスロ北斗の拳 宿命 (ceiling=True, refValues=True)
 - hyakka_ryouran_samurai_girls.json [partial] パチスロ 百花繚乱 サムライガールズ (ceiling=True, refValues=True)
+- hyper_a_30_blue_falcon.json [partial] HYPER A‐30 BLUE FALCON (ceiling=False, refValues=True)
+- hyper_black_jack.json [partial] ハイパーブラックジャック (ceiling=True, refValues=True)
 - hyper_rush.json [partial] パチスロハイパーラッシュ (ceiling=False, refValues=True)
 - idolmaster_million_live_original.json [partial] パチスロ アイドルマスター ミリオンライブ! (ceiling=True, refValues=True)
+- iiwake_wa_sasenai_wa.json [partial] パチスロ言い訳はさせないわよ by 激壇蜜 (ceiling=False, refValues=True)
 - initial_d.json [partial] パチスロ頭文字D (ceiling=True, refValues=True)
 - isekai_quartet_bt.json [partial] A-SLOT+ 異世界かるてっと BT (ceiling=False, refValues=True)
+- javelin.json [partial] ジャベリン (ceiling=True, refValues=True)
 - jormungand.json [partial] スマスロヨルムンガンド (ceiling=True, refValues=True)
 - juggler_girls_ss.json [partial] ジャグラーガールズSS (ceiling=False, refValues=True)
+- juujika_5.json [partial] 十字架5 (ceiling=True, refValues=True)
+- kachou_kumada_kousaku.json [partial] 課長 熊田工作 (ceiling=True, refValues=True)
 - kaguya_sama.json [partial] パチスロ かぐや様は告らせたい (ceiling=True, refValues=True)
 - kaiji_numa.json [partial] 回胴黙示録カイジ〜沼〜 (ceiling=True, refValues=True)
+- kamaitachi_no_yoru.json [partial] パチスロかまいたちの夜 (ceiling=True, refValues=True)
 - kamen_rider_7riders.json [partial] L 仮面ライダー 7RIDERS (ceiling=True, refValues=True)
 - kamen_rider_denoh.json [partial] L仮面ライダー電王 (ceiling=True, refValues=True)
 - keiji_sado.json [partial] L花の慶次～佐渡攻めの章〜 (ceiling=True, refValues=True)

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-09-21",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映(設定3・4は欠落のため未収録、2→5に飛ぶ、機種名の由来である固定128G周期構造のため設定間の差はごく僅か)。赤7揃い確率は設定1→2でわずかに悪化する非単調値だが生HTML確認済みの実データ(主判別のAT初当りは実質横ばいのため判別価値は低い)。天井は固定128G周期そのものが本機の中核仕様(DMM「通常時128G消化でAT確定」明記、天井というよりゲーム構造そのもの)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3962",
     "ichigekiUrl": "https://1geki.jp/slot/s_hit128/"
   },
@@ -60,6 +60,34 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 127.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(固定128G周期構造のためほぼ横ばい、赤7揃いは1/2609.1)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 127.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(赤7揃いは1/2738.0、設定1よりわずかに悪化する非単調値だが生HTML確認済み)。設定3・4は欠落のため未収録(2→5)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 127.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(赤7揃いは1/1917.4)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 127.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(赤7揃いは1/1434.3)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "fixed_cycle_ceiling",
+      "displayName": "固定128G周期天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 128,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時128G消化でAT確定。天井というより本機の中核ゲーム構造そのもの(機種名の由来、DMM明記)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選またはボーナス成立でリセット"
+    }
+  ]
 }
