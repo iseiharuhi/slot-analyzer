@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 156
-- partial: 285
+- other: 142
+- partial: 299
 
 ## Broken files / filename-id mismatches
 none
@@ -262,10 +262,14 @@ none
 - ryukyu_beat_30.json [partial] パチスロRYUKYU BEAT‐30 (ceiling=False, refValues=True)
 - s2027db.json [partial] S2027DB (ceiling=True, refValues=True)
 - saenai_heroine_no_sodatekata.json [partial] スロット 冴えない彼女の育てかた (ceiling=True, refValues=True)
+- saint_seiya_meiou_fukkatsu.json [partial] S聖闘士星矢 冥王復活 (ceiling=True, refValues=True)
 - saki_top.json [partial] L咲-Saki- 頂上決戦 (ceiling=True, refValues=True)
+- salaryman_kintarou.json [partial] L サラリーマン金太郎 (ceiling=True, refValues=True)
 - sao_1.json [partial] スロット ソードアート・オンライン (ceiling=True, refValues=True)
 - sao_2.json [partial] スロット ソードアート・オンラインII (ceiling=True, refValues=True)
 - seisenshi_dunbine.json [partial] スマスロ 聖戦士ダンバイン (ceiling=True, refValues=True)
+- sen_chan_a.json [partial] LBパチスロ1000ちゃんA (ceiling=False, refValues=True)
+- sen_chan_gokuraku.json [partial] パチスロ1000ちゃんごらくバージョン「PB機」 (ceiling=True, refValues=True)
 - sengoku_collection_4.json [partial] 戦国コレクション4 (ceiling=True, refValues=True)
 - sengoku_collection_5_loop.json [partial] 戦国コレクション5超極楽LOOP (ceiling=True, refValues=True)
 - sengoku_collection_5.json [partial] 戦国コレクション5 (ceiling=True, refValues=True)
@@ -274,17 +278,24 @@ none
 - sengoku_otome_akatsuki_no_sekigahara.json [partial] パチスロ戦国乙女 暁の関ヶ原‐DARKNESS‐ (ceiling=True, refValues=True)
 - sengoku_otome3.json [partial] 戦国乙女3〜天剣を継ぐもの〜 (ceiling=True, refValues=True)
 - sengoku_otome5.json [partial] L戦国乙女5 業火を穿つ宿焔の双刃 (ceiling=True, refValues=True)
+- senran_kagura_burst_up.json [partial] パチスロ閃乱カグラ BURST UP (ceiling=True, refValues=True)
 - shake_bonus_trigger.json [partial] SHAKE BONUS TRIGGER (ceiling=False, refValues=True)
 - shaman_king.json [partial] スマスロ シャーマンキング (ceiling=True, refValues=True)
 - shima_musume.json [partial] L島娘 (ceiling=True, refValues=True)
 - shin_hissatsu_shiokinin.json [partial] L 新・必殺仕置人 回胴 CRASH SPEC (ceiling=True, refValues=True)
 - shin_hokuto_musou.json [partial] スマスロ真・北斗無双 (ceiling=True, refValues=True)
+- shin_ikkitousen.json [partial] L 真・一騎当千 (ceiling=True, refValues=True)
 - shin_onimusha_2.json [partial] パチスロ 新鬼武者2 (ceiling=True, refValues=True)
 - shin_ore_no_sora.json [partial] パチスロ 真俺の空 (ceiling=True, refValues=True)
 - shin_tenka_fubu.json [partial] 真天下布武 (ceiling=True, refValues=True)
 - shinuchi_yoshimune.json [partial] 真打 吉宗 (ceiling=True, refValues=True)
+- shoukinkubi_angel.json [partial] 賞金首Angel (ceiling=True, refValues=True)
+- sirius_slot.json [partial] シリウス (ceiling=True, refValues=True)
+- sister_quest.json [partial] Sister Quest (ceiling=True, refValues=True)
+- sky_love.json [partial] Sky Love (ceiling=True, refValues=True)
 - slot_idol.json [partial] スロドル (ceiling=True, refValues=True)
 - souten_no_ken_4.json [partial] パチスロ蒼天の拳4 (ceiling=True, refValues=True)
+- soz_1_aa_30.json [partial] SOZ‐1‐AA‐30 (ceiling=False, refValues=True)
 - star_hanahana_30.json [partial] スターハナハナ-30 (ceiling=False, refValues=True)
 - star_hanahana.json [partial] スマート沖スロ スターハナハナ (ceiling=False, refValues=True)
 - star_pulsar.json [partial] スターパルサー (ceiling=False, refValues=True)
@@ -305,12 +316,15 @@ none
 - taboo_tattoo.json [partial] SLOTタブー・タトゥー (ceiling=True, refValues=True)
 - taimadou_gakuen_35.json [partial] 対魔導学園35試験小隊 (ceiling=True, refValues=True)
 - takt_op_destiny.json [partial] Ｌタクトオーパス デスティニー (ceiling=True, refValues=True)
+- tantei_opera_milky_holmes_r.json [partial] パチスロ 探偵オペラ ミルキィホームズR 大収穫祭!!!! (ceiling=True, refValues=True)
 - tate_no_yuusha.json [partial] パチスロ盾の勇者の成り上がり (ceiling=True, refValues=True)
 - tekken_5.json [partial] パチスロ鉄拳5 (ceiling=True, refValues=True)
 - tekken_6.json [partial] スマスロ鉄拳6 (ceiling=True, refValues=True)
 - tensei_shitara_ken_deshita.json [partial] パチスロ 転生したら剣でした (ceiling=True, refValues=True)
 - tensei_slime.json [partial] L転生したらスライムだった件 (ceiling=True, refValues=True)
+- tetsuya_tenun_chiriki.json [partial] パチスロ 哲也 −天運地力− (ceiling=True, refValues=True)
 - thunder_v_lightning.json [partial] サンダーVライトニング (ceiling=False, refValues=True)
+- tida_dondon.json [partial] てぃだどんどん (ceiling=True, refValues=True)
 - to_love_ru_darkness_trance.json [partial] L ToLOVEるダークネス TRANCE ver.8.7 (ceiling=True, refValues=True)
 - to_love_ru_darkness.json [partial] L ToLOVEるダークネス (ceiling=True, refValues=True)
 - tokyo_ghoul.json [partial] L東京喰種 (ceiling=True, refValues=True)

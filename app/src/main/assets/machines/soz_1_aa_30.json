@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-06-19",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMMとも設定判別テーブルは「調査中」/「準備中」で数値未公開のため、二次ソースnana-press.comのBIG+REG合算確率を反映(低信頼度、weight低減)。DMM公式機械割レンジ96.49%〜107.03%はnana-press.comの設定1(96.49%)・設定6(107.03%)の値と完全一致し、算術検算も両端で成立(間接的な裏付けあり、ただし1geki/DMM直接の確認は取れていない)。天井は非搭載(DMM「天井突入条件:なし」明記、完全告知型A-type)(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4382",
     "ichigekiUrl": "https://1geki.jp/slot/s_oz1_aa/"
   },
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 176, "weight": 0.5, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/274、REG1/492)。1geki/DMMとも数値未公開のためnana-press.com単独ソース、低信頼度。DMM公式機械割96.49%と一致。"},
+        {"settingNo": 2, "denominatorValue": 165, "weight": 0.5, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/265、REG1/438)。nana-press.com単独ソース、低信頼度。"},
+        {"settingNo": 3, "denominatorValue": 156, "weight": 0.5, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/258、REG1/395)。nana-press.com単独ソース、低信頼度。"},
+        {"settingNo": 4, "denominatorValue": 145, "weight": 0.5, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/248、REG1/350)。nana-press.com単独ソース、低信頼度。"},
+        {"settingNo": 5, "denominatorValue": 137, "weight": 0.5, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/242、REG1/318)。nana-press.com単独ソース、低信頼度。"},
+        {"settingNo": 6, "denominatorValue": 130, "weight": 0.5, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/236、REG1/288)。nana-press.com単独ソース、低信頼度。DMM公式機械割107.03%と一致。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-10-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMM完全一致でAT初当り確率(主判別)・闘士決戦(CZ)初当り確率(補助判別)を反映(全6設定判明)。天井は内部モード依存の多段階(通常A1000G+α/通常B900G+α/通常C700G+α/通常D400G+α/天国100G+α)で通常Aを主天井として記録、設定変更で400G+αに短縮(通常Dまたは天国モードへ、両ソース一致)。AT完走後は通常C以上(700G+α以下)が保証される(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4650",
     "ichigekiUrl": "https://1geki.jp/slot/l_shin_ikkitosen/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 321, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 311, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 292, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 246, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 232, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 222, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 154, "weight": 0.7, "minSampleSize": 3000, "note": "闘士決戦(CZ)初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 148, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 138, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 115, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 110, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 105, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "通常Aゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "内部モード依存の多段階天井: 通常A1000G+α/通常B900G+α/通常C700G+α/通常D400G+α/天国100G+α。CZの定期抽選はAT当選までこの天井カウントをリセットしない。設定変更で400G+αに短縮(通常Dまたは天国モードへ移行、両ソース一致)。AT完走後は通常C以上(700G+α以下)が保証される。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット(設定変更で400G+αに短縮)"
+    }
+  ]
 }

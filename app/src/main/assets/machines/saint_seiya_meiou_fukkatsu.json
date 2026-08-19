@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-01-24",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(3ページ独立確認)/DMM一致でCZ「冥闘士激闘」初当り確率(主判別)・聖闘士RUSH(AT合算、補助判別)を反映。設定3は3つの独立1gekiページ+DMMすべてで欠落、真に未公開(2→4に飛ぶ)。天井は有利区間開始から2100Gで聖闘士RUSH確定(主天井)+CZ間最大798G(設定変更で598Gに短縮)+CZ不屈ポイント9pt到達で10回目CZ勝利濃厚の多層構造を反映。設定変更で有利区間リセット(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4035",
     "ichigekiUrl": "https://1geki.jp/slot/s_seiya_meioh/"
   },
@@ -60,6 +60,79 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 330.7, "weight": 1, "minSampleSize": 2500, "note": "CZ「冥闘士激闘」初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 286.5, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。設定3は欠落のため未収録(2→4)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 240.8, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 228.1, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 222.2, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 562.8, "weight": 0.7, "minSampleSize": 3000, "note": "聖闘士RUSH(AT合算)は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 485.1, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算は補助判別。設定3は欠落。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 401.6, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 376.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 366.3, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算は補助判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "有利区間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 2100,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "有利区間開始から2100Gで聖闘士RUSH(AT)確定(36G以内の予兆から必勝CZへ案内)。設定変更で有利区間がリセットされる。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "聖闘士RUSH確定",
+      "resetText": "AT当選でリセット(設定変更で有利区間リセット)"
+    },
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 798,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "CZ間最大798Gで「冥闘士激闘」濃厚(748G以降はRUSH準備モードでほぼ確定)。設定変更で598Gに短縮(DMM明記)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ「冥闘士激闘」濃厚",
+      "resetText": "CZ突入でリセット(設定変更で598Gに短縮)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZ不屈ポイント天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 9,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "不屈ポイント9pt到達(CZ9連敗)で次回(10回目)のCZが勝利濃厚。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回CZ勝利濃厚",
+      "resetText": "CZ勝利でリセット"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-02-05",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMM完全一致でボーナス合成確率(主判別)・ST「スカイゲーム」確率(補助判別)を反映(全6設定判明)。天井はST間最大1000G(100/300/600/800/1000Gの分布抽選、DMM明記)で「LOVE BONUS」+ST濃厚。ST消化後ボーナス無しの場合は次周期最大600Gに短縮。設定変更で状態リセット+最大800Gに短縮+内部Gオフセットが再抽選される(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4479",
     "ichigekiUrl": "https://1geki.jp/slot/l_skylove/"
   },
@@ -60,6 +60,64 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 198.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合成確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 190.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合成確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 179.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合成確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 149.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合成確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 136.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合成確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 131.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合成確率は主判別。1geki.jp/DMM完全一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 503.8, "weight": 0.7, "minSampleSize": 3000, "note": "ST「スカイゲーム」確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 492.2, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 462.0, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 395.5, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 369.7, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 350.4, "weight": 0.7, "minSampleSize": 3000, "note": "ST確率は補助判別。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ST間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ST間最大1000Gで「LOVE BONUS」+ST濃厚(予兆を経由)。天井長は100/300/600/800/1000Gの分布抽選(DMM明記)。設定変更で状態リセット+最大800Gに短縮+内部Gオフセット(0〜99G)が再抽選されデータカウンタのタイミングがずれる場合がある。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "LOVE BONUS+ST濃厚",
+      "resetText": "ST突入でリセット(設定変更で最大800Gに短縮)"
+    },
+    {
+      "ruleKey": "st_no_win_ceiling",
+      "displayName": "ST無獲得時短縮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ST消化サイクルがボーナス獲得無しで終了した場合、次周期は最大600Gに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "LOVE BONUS+ST濃厚",
+      "resetText": "ST突入でリセット"
+    }
+  ]
 }

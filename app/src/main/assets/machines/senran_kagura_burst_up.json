@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-08-22",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp/DMM完全一致でAT初当り確率(主判別)・爆乳ハイパーバトル(CZ)初当り確率(補助判別)を反映(全6設定判明)。CZ列はほぼ横並び/非単調(344.6→352.4→346.1→350.1→345.7→347.8)で両ソース一致の実データ(転記誤りではない)、本機は設定差がAT初当りに強く出てCZ入賞率にはほぼ出ない仕様と判断、weightを下げて記録。天井はモード依存(モードA581G+α/モードB381G+α/天国81G+α/超天国は両ソースとも未公開)を反映、設定変更またはAT終了後はモードAが281G+αに短縮(DMM明記、モードB/天国は不変)(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4202",
     "ichigekiUrl": "https://1geki.jp/slot/s_kaguraburstup/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 558.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 533.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 501.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 458.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 435.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 406.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 344.6, "weight": 0.4, "minSampleSize": 3000, "note": "爆乳ハイパーバトル(CZ)初当り確率は補助判別だが、ほぼ横並び/非単調な実データ(両ソース一致)で設定差判別力が低いため低weight。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 352.4, "weight": 0.4, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別、判別力が低いため低weight。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 346.1, "weight": 0.4, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別、判別力が低いため低weight。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 350.1, "weight": 0.4, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別、判別力が低いため低weight。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 345.7, "weight": 0.4, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別、判別力が低いため低weight。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 347.8, "weight": 0.4, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別、判別力が低いため低weight。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "モードA天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 581,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "モードA滞在時581G+αでAT濃厚。モードB=381G+α、天国=81G+α(超天国の値は両ソースとも未公開)。設定変更またはAT終了後はモードAが281G+αに短縮(モードB/天国は不変)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更/AT終了後はモードAが281G+αに短縮)"
+    }
+  ]
 }

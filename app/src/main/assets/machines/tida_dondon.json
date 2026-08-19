@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-03-03",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からボーナス合算確率を反映。設定1は1geki/DMMとも数値未公開(placeholder行すら無し)、DMM公式機械割レンジ97.7%〜110.3%の下限が設定2の値(97.7%)と一致することから設定1が実際には選択不可の可能性を示唆するが(sen_chan_gokurakuと同様のパターン)、明示的な確認は取れておらず低信頼度の仮説として留める(未収録)。天井は通常時最大999G(設定変更で555Gに短縮、DMM明記)+単発ボーナス5連続時は次回78G以内保証+1995G連続ノーチェイン時も次回78G以内保証の3系統。設定変更で約40%の確率でリプ連チャンスモードへ移行(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4757",
     "ichigekiUrl": "https://1geki.jp/slot/l_thidadndn/"
   },
@@ -60,6 +60,69 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 295.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。設定1は両ソースとも未公開のため未収録(実際には選択不可の可能性あり、低信頼度の仮説)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 282.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 248.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 222.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 204.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大999Gでボーナス濃厚。設定変更で555Gに短縮(DMM明記)、約40%の確率でリプ連チャンスモードへ移行。ヘブン高確率の最上位「ガトリング」到達時、またはリプ連チャンスモード中も555Gに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で555Gに短縮)"
+    },
+    {
+      "ruleKey": "single_bonus_streak_ceiling",
+      "displayName": "単発ボーナス連続天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "単発(非連チャン)ボーナスが5回連続すると、次回のボーナス当選が78G以内に保証される。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "78G以内にボーナス保証",
+      "resetText": "ボーナス成立でリセット"
+    },
+    {
+      "ruleKey": "no_chain_ceiling",
+      "displayName": "連チャン無し天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1995,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "1995G連続でボーナス連チャンが発生しない場合、次回のボーナス当選が78G以内に保証される。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "78G以内にボーナス保証",
+      "resetText": "ボーナス成立でリセット"
+    }
+  ]
 }
