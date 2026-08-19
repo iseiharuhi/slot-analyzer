@@ -7,9 +7,8 @@
 - broken: 0
 
 ## Status breakdown
-- draft: 1
-- other: 56
-- partial: 385
+- other: 53
+- partial: 389
 
 ## Broken files / filename-id mismatches
 none
@@ -139,6 +138,7 @@ none
 - girls_und_panzer_movie.json [partial] パチスロガールズ&パンツァー 劇場版 (ceiling=True, refValues=True)
 - girls_und_panzer_saishou.json [partial] Lパチスロガールズ&パンツァー 最終章 (ceiling=True, refValues=True)
 - goblin_slayer_2.json [partial] スマスロ ゴブリンスレイヤーII (ceiling=True, refValues=True)
+- goblin_slayer.json [partial] Lゴブリンスレイヤー (ceiling=True, refValues=True)
 - god_eater_resurrection.json [partial] スマスロ ゴッドイーター リザレクション (ceiling=True, refValues=True)
 - god_eater_the_animation.json [partial] パチスロ ゴッドイーター ジ・アニメーション (ceiling=True, refValues=True)
 - godzilla_vs_eva.json [partial] Lゴジラ対エヴァンゲリオン (ceiling=True, refValues=True)
@@ -190,6 +190,7 @@ none
 - jormungand.json [partial] スマスロヨルムンガンド (ceiling=True, refValues=True)
 - juggler_girls_ss.json [partial] ジャグラーガールズSS (ceiling=False, refValues=True)
 - juujika_5.json [partial] 十字架5 (ceiling=True, refValues=True)
+- kabaneri.json [partial] パチスロ 甲鉄城のカバネリ (ceiling=True, refValues=True)
 - kachou_kumada_kousaku.json [partial] 課長 熊田工作 (ceiling=True, refValues=True)
 - kaguya_sama.json [partial] パチスロ かぐや様は告らせたい (ceiling=True, refValues=True)
 - kaiji_kyouen.json [partial] 回胴黙示録カイジ 狂宴 (ceiling=True, refValues=True)
@@ -197,6 +198,7 @@ none
 - kamaitachi_no_yoru.json [partial] パチスロかまいたちの夜 (ceiling=True, refValues=True)
 - kamen_rider_7riders.json [partial] L 仮面ライダー 7RIDERS (ceiling=True, refValues=True)
 - kamen_rider_denoh.json [partial] L仮面ライダー電王 (ceiling=True, refValues=True)
+- karakuri_circus.json [partial] Lからくりサーカス (ceiling=True, refValues=True)
 - keiji_sado.json [partial] L花の慶次～佐渡攻めの章〜 (ceiling=True, refValues=True)
 - kemono_friends.json [partial] ぱちすろ けものフレンズ (ceiling=True, refValues=True)
 - kin_no_kabocha.json [partial] パチスロ金のかぼちゃ (ceiling=True, refValues=True)
@@ -301,7 +303,7 @@ none
 - onimusha_3.json [partial] スマスロ 鬼武者3 (ceiling=True, refValues=True)
 - oohanaman.json [partial] 大花満 (ceiling=True, refValues=True)
 - original_slot4_plus.json [partial] ORIGINAL SLOT4 PLUS (ceiling=False, refValues=True)
-- oshi_slo_idol.json [draft] 推しスロ アイドルVer. (ceiling=True, refValues=False)
+- oshi_slo_idol.json [partial] 推しスロ アイドルVer. (ceiling=True, refValues=False)
 - overlord_2.json [partial] パチスロOVERLORD絶対支配者光臨II (ceiling=True, refValues=True)
 - persona_5.json [partial] ペルソナ5 (ceiling=True, refValues=True)
 - pink_panther_sp.json [partial] パチスロ ピンクパンサーSP (ceiling=False, refValues=True)

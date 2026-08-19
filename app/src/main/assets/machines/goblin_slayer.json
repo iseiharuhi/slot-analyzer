@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-04-17",
     "isActive": true,
-    "notes": "manufacturer/type/releaseDate未記載だったためdmm/1geki一致で判明・補完(藤商事グループのスマスロ第1弾)。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT「ゴブリンスレイヤーRUSH」初当り合算(initial_hit_countに反映)・CZ合算出現率(MISSION/CHANCE/BATTLE内訳あり、cz_countに反映)・共通ベル出現率(small_role_countに反映)を反映(全6設定判明、CZ合算は算術検算済み)。AT初当り合算はDMM側で数値表として確認できず(1geki単独ソース、他の重複項目はDMM完全一致のため間接的な信頼性あり)。天井は通常時最大1500G(600G/1000Gの中間チェックポイントあり、高設定ほど早期選択率が優遇される旨の示唆表現のみで数値化なし)でAT濃厚、天井到達時1/2で上位「80%ループモード」当選。設定変更時の天井短縮メカニズムは1geki/DMMとも記載なし(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4340",
     "ichigekiUrl": "https://1geki.jp/slot/s_l_goblinslayer/"
   },
@@ -72,6 +72,58 @@
       "notes": null
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "initial_hit_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 547.9, "weight": 0.9, "minSampleSize": 2500, "note": "AT「ゴブリンスレイヤーRUSH」初当り合算は主判別。1geki単独ソース(DMMは数値表なし)、weight僅かに低減。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 538.4, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当り合算は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 517.7, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当り合算は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 492.3, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当り合算は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 470.5, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当り合算は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 435.7, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当り合算は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 226, "weight": 1, "minSampleSize": 3000, "note": "CZ合算出現率(MISSION1/327+CHANCE1/833+BATTLE1/6000)は補助判別。1geki.jp/DMM完全一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 223, "weight": 1, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 215, "weight": 1, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 204, "weight": 1, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 196, "weight": 1, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 184, "weight": 1, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp/DMM完全一致。"}
+      ]
+    },
+    {
+      "counterKey": "small_role_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 102.4, "weight": 0.6, "minSampleSize": 3000, "note": "共通ベル出現率は参考判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 97.5, "weight": 0.6, "minSampleSize": 3000, "note": "共通ベル出現率は参考判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 93.1, "weight": 0.6, "minSampleSize": 3000, "note": "共通ベル出現率は参考判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 86.2, "weight": 0.6, "minSampleSize": 3000, "note": "共通ベル出現率は参考判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 81.9, "weight": 0.6, "minSampleSize": 3000, "note": "共通ベル出現率は参考判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 71.9, "weight": 0.6, "minSampleSize": 3000, "note": "共通ベル出現率は参考判別。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大1500GでAT「ゴブリンスレイヤーRUSH」当選確定(DMM「当選盤石」)。600G/1000Gにも中間チェックポイントがあり、高設定ほど早期選択率が優遇される旨の示唆表現あり(数値化された表は無し)。天井到達時は1/2で上位「80%ループモード」(残り1/2は基本の「52%ループモード」)。設定変更時の天井短縮メカニズムは1geki/DMMとも記載なし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「ゴブリンスレイヤーRUSH」確定",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }
