@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-04-04",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT初当り確率(主判別)・ボーナス合算確率(BB「えとたまぼ〜にゃす」+RB「みにぼ〜にゃす」、補助判別)を反映。設定1〜5は算術検算成立、設定6のみBB1/313.4+RB1/327.7の調和平均計算値1/160.2が公開合算値1/157.5と約1.7%乖離(丸め誤差の範囲外、原因特定不可のためweight低減して記録)。天井は有利区間移行後ボーナス&AT間800G消化でAT「萌力祭」濃厚、補助天井なし。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4105",
     "ichigekiUrl": "https://1geki.jp/slot/s_etotama/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 464.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 443.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 421.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 368.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 339.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 314.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 178.1, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス合算確率(BB「えとたまぼ〜にゃす」+RB「みにぼ〜にゃす」)は補助判別。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 175.2, "weight": 0.7, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 3, "denominatorValue": 172.5, "weight": 0.7, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 4, "denominatorValue": 165.5, "weight": 0.7, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 5, "denominatorValue": 161.4, "weight": 0.7, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 6, "denominatorValue": 157.5, "weight": 0.4, "minSampleSize": 3000, "note": "合算確率は補助判別。BB1/313.4+RB1/327.7の調和平均計算値1/160.2と公開合算値1/157.5が約1.7%乖離(丸め誤差の範囲外、原因特定不可)、weight低減。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間移行後、ボーナス&AT間800G消化でAT「萌力祭」濃厚。補助天井なし。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「萌力祭」濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

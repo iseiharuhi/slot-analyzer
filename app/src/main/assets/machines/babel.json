@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-10-06",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(型式名L/バベル/BA)。",
+    "notes": "partial: 1geki.jp(raw HTML)/DMM一致でボーナス合算確率(BB+RB)を反映(全6設定判明、算術検算済み)。天井は1280G(通常A/B、主天井)で本機唯一の判別軸兼AT/ボーナストリガー。天国/超天国/神天国モードは内部天井144G(補助)。設定変更で最大1280Gが900Gに短縮(1geki/DMM明記)、リセット時1/3で天国準備モード・2/3でリセットモードへ抽選(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4853",
     "ichigekiUrl": "https://1geki.jp/slot/l_babel/"
   },
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 218.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は本機唯一の判別軸(BB1/328.2、RB1/655.6)。1geki.jp/DMM一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 208.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は本機唯一の判別軸(BB1/316.4、RB1/613.7)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 196.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は本機唯一の判別軸(BB1/301.6、RB1/564.3)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 180.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は本機唯一の判別軸(BB1/283.0、RB1/499.5)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 168.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は本機唯一の判別軸(BB1/267.1、RB1/456.5)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 158.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は本機唯一の判別軸(BB1/254.0、RB1/421.3)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1280,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常A/通常Bモード時最大1280Gでボーナス濃厚。天国準備モードでのリセット後の初期天井は900G。設定変更で最大天井が900Gに短縮(1geki/DMM明記)、1/3で天国準備モード・2/3でリセットモードへ抽選。サソリ(スコーピオン)最大10回成立も天井突入条件の一部。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で900Gに短縮)"
+    },
+    {
+      "ruleKey": "heaven_mode_ceiling",
+      "displayName": "天国系モード内部天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 144,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "天国/超天国/神天国モード滞在時の内部天井は144G。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    }
+  ]
 }
