@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-01-17",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析から1G連除くBIG+REG合算確率を反映(全6設定判明、単調、算術検算済み、姉妹機oki_wanimaru_25とは別データで取り違えなし確認済み)。1G連含む値: 設定1合算1/173〜設定6合算1/131(参考、notesのみ)。天井は約999Gの単純なゲーム数天井(BB当選+裏モード突入、DMM明記。25Φ版は裏モード言及なし=30Φ固有の恩恵)を反映。設定変更時のリセット挙動は非公開(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4015",
     "ichigekiUrl": "https://1geki.jp/slot/s_okiwanimaru30/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 182, "weight": 1, "minSampleSize": 2500, "note": "1G連除くBIG+REG合算確率は主判別(BIG1/305、REG1/449)。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 174, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/298、REG1/418)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 164, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/289、REG1/380)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 154, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/280、REG1/340)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 144, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/275、REG1/302)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 136, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/266、REG1/279)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "約999GでBB当選+裏モード突入(DMM明記、25Φ版はこの裏モード言及がなく30Φ固有の恩恵)。設定変更時のリセット挙動は非公開。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BB当選+裏モード突入",
+      "resetText": "BB成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-03-20",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率「アルティメットバトル」を反映(全6設定判明、1geki本文「設定4から1/300を切る初当りに」の記載と整合)。PKチャンス確率(CZ的位置づけ、設定1=1/247〜設定6=1/190)はAT表と直接合算できない別統計のためcounterKey未反映、notesのみ記録。天井は786G+αでアルティメットカード濃厚(主判別)、天国モード滞在時は最速86Gで当選ありを反映。設定変更時のリセット挙動は非公開(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4304",
     "ichigekiUrl": "https://1geki.jp/slot/s_overlord2/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 334, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率「アルティメットバトル」は主判別。PKチャンス確率(CZ的位置づけ)は1/247(別統計、notesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 331, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 309, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 289, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(設定4から1/300を切る初当りにと1geki明記)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 264, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 246, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。PKチャンス確率は1/190(notesのみ)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 786,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "786G+αでアルティメットカード濃厚からAT確定。天国モード滞在時は最速86Gで当選あり。強レア役・紫時計取得・全色パネル完成などの天井前ショートカット契機も存在(天井そのものとは別枠)。設定変更時のリセット挙動は非公開。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }
