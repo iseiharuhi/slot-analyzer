@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-07-19",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)から陰陽チャンス確率(主判別)・闇鴉レイヴンズタイム(AT初当り、補助判別)を反映(全6設定判明)。疑似ボーナス合算(陰陽ボーナス祓+陰陽ボーナスで算術検算済み、設定1=1/280.5〜設定6=1/216.8)は別軸のためnotesのみ参考記録。DMM側のエピソード確率＆突破率(設定1=1/152.0・59.2%〜設定6=1/122.9・63.2%)も陰陽チャンスとは別の独立メカニクスとして参考記録。天井は508G(通常時)、501〜508Gはフリーズ超高確(1/12毎G)、509GでAT濃厚を反映。設定変更時のリセット挙動はDMM側に明示的記載なく、内部CZが非表示で持ち越される可能性を示唆する記述のみ(中程度の信頼度)(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3925",
     "ichigekiUrl": "https://1geki.jp/slot/s_tokyoravens/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 149, "weight": 1, "minSampleSize": 2500, "note": "陰陽チャンス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 146, "weight": 1, "minSampleSize": 2500, "note": "陰陽チャンス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 142, "weight": 1, "minSampleSize": 2500, "note": "陰陽チャンス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 135, "weight": 1, "minSampleSize": 2500, "note": "陰陽チャンス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 127, "weight": 1, "minSampleSize": 2500, "note": "陰陽チャンス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 120, "weight": 1, "minSampleSize": 2500, "note": "陰陽チャンス確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 649.4, "weight": 0.7, "minSampleSize": 3000, "note": "闇鴉レイヴンズタイム(AT初当り)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 628.7, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 595.0, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 542.0, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 492.7, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 455.7, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 508,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時508Gが天井。501G〜508Gはフリーズ超高確状態(毎G1/12でフリーズ)、フリーズが起きなければ509GでAT濃厚。設定変更時のリセット挙動はDMM側に明示的記載なく、内部CZが画面表示上通常のまま持ち越される可能性を示唆する記述のみ、中程度の信頼度。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

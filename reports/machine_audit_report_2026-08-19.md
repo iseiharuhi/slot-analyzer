@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 142
-- partial: 299
+- other: 131
+- partial: 310
 
 ## Broken files / filename-id mismatches
 none
@@ -327,17 +327,28 @@ none
 - tida_dondon.json [partial] てぃだどんどん (ceiling=True, refValues=True)
 - to_love_ru_darkness_trance.json [partial] L ToLOVEるダークネス TRANCE ver.8.7 (ceiling=True, refValues=True)
 - to_love_ru_darkness.json [partial] L ToLOVEるダークネス (ceiling=True, refValues=True)
+- tobe_harem_ace.json [partial] 翔べ!ハーレムエース (ceiling=False, refValues=True)
 - tokyo_ghoul.json [partial] L東京喰種 (ceiling=True, refValues=True)
+- tokyo_ravens.json [partial] パチスロ東京レイヴンズ (ceiling=True, refValues=True)
 - tokyo_revengers.json [partial] スマスロ 東京リベンジャーズ (ceiling=True, refValues=True)
 - tower_of_druaga_slot.json [partial] SLOTドルアーガの塔 (ceiling=False, refValues=True)
 - tower_of_druaga_smart.json [partial] スマスロ ドルアーガの塔 (ceiling=False, refValues=True)
+- triple_crown_for_you.json [partial] トリプルクラウンフォーユー (ceiling=False, refValues=True)
 - triple_crown_v_30.json [partial] トリプルクラウンV‐30 (ceiling=False, refValues=True)
+- triple_crown_vintage.json [partial] トリプルクラウンビンテージ (ceiling=False, refValues=True)
 - tropicana.json [partial] スマスロ トロピカーナ (ceiling=True, refValues=False)
 - twin_angel_party.json [partial] パチスロツインエンジェル PARTY (ceiling=True, refValues=True)
 - ultra_miracle_juggler.json [partial] ウルトラミラクルジャグラー (ceiling=False, refValues=True)
+- ultraman_l.json [partial] L ULTRAMAN (ceiling=True, refValues=True)
+- ultraman_taro_boukun.json [partial] ぱちスロ ウルトラマンタロウ 暴君SPEC (ceiling=True, refValues=True)
+- ultraman_tiga.json [partial] L ウルトラマンティガ (ceiling=True, refValues=True)
+- umaibou.json [partial] パチスロうまい棒 (ceiling=False, refValues=True)
 - umineko_2.json [partial] Lパチスロうみねこのなく頃に2 (ceiling=True, refValues=True)
+- urusei_yatsura.json [partial] Lパチスロうる星やつら (ceiling=True, refValues=True)
 - ushio_tora.json [partial] Lうしおととら 白面決戦 (ceiling=True, refValues=True)
+- ushiotora_raisou_issen.json [partial] Sうしおととら 雷槍一閃 (ceiling=True, refValues=True)
 - venus_zone.json [partial] ヴィーナスゾーン (ceiling=False, refValues=True)
+- wake_up_girls_seven_memories.json [partial] パチスロ Wake Up, Girls!Seven Memories (ceiling=True, refValues=True)
 - word_of_lights_2.json [partial] ワードオブライツII (ceiling=True, refValues=True)
 - youjo_senki.json [partial] パチスロ幼女戦記 (ceiling=True, refValues=True)
 - zegapain_2.json [partial] パチスロ ゼーガペイン2 (ceiling=True, refValues=True)

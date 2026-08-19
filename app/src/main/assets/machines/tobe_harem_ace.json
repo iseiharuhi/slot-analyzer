@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-06-02",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)/DMM一致でボーナス合算確率を反映。本機は「4段階設定」と1geki明記の機種で設定1/2/5/6のみ(3/4非搭載、欠落ではない)。天井は非搭載(1geki「天井非搭載」、DMM「天井突入条件:なし」で確認済み)(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4789",
     "ichigekiUrl": "https://1geki.jp/slot/lb_harema/"
   },
@@ -60,6 +60,16 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 234.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。本機は実質4段階設定(1/2/5/6のみ、3/4非搭載)。1geki.jp/DMM一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 220.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 186.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 158.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM一致、算術検算済み。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

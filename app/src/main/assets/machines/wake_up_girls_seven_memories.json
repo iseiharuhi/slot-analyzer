@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-05-10",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からARENA ROULETTE(CZゲート、主判別)・WUG！LIVE(AT、補助判別)を反映(全6設定判明)。DMM側の補足指標(アリーナルーレット直撃、設定1=1/23562.7〜設定6=1/4017.6、およびWUG！チャレンジSPランプ点灯率0.78%〜5.47%)はcurl未検証のためnotesのみ参考記録。天井は777G+α(通常時)でARENA ROULETTE当選を反映。設定変更で天井G数・神様ポイント・ごめんね！ランクがすべてリセットされる(1geki専用比較表+DMMリセット仕様で確認)、電源ON/OFFのみの場合は天井G数を引き継ぐ(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3869",
     "ichigekiUrl": "https://1geki.jp/slot/s_wakeupgirls/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 318, "weight": 1, "minSampleSize": 2500, "note": "ARENA ROULETTE(CZゲート)確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 308, "weight": 1, "minSampleSize": 2500, "note": "ARENA ROULETTE確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 298, "weight": 1, "minSampleSize": 2500, "note": "ARENA ROULETTE確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 284, "weight": 1, "minSampleSize": 2500, "note": "ARENA ROULETTE確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 271, "weight": 1, "minSampleSize": 2500, "note": "ARENA ROULETTE確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 253, "weight": 1, "minSampleSize": 2500, "note": "ARENA ROULETTE確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 541, "weight": 0.7, "minSampleSize": 3000, "note": "WUG！LIVE(AT)確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 521, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 501, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 476, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 454, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 424, "weight": 0.7, "minSampleSize": 3000, "note": "AT確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時777G+αでARENA ROULETTE当選濃厚。設定変更で天井G数・神様ポイント・ごめんね！ランクがすべてリセットされる(1geki専用比較表+DMMリセット仕様で確認)。電源ON/OFFのみの場合は天井G数を引き継ぐ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ARENA ROULETTE当選濃厚",
+      "resetText": "ARENA ROULETTE当選でリセット(設定変更ですべてリセット)"
+    }
+  ]
 }

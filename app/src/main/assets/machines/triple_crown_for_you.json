@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-10-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。1geki.jpに専用ページ・メーカーページなくichigekiUrlは空欄(岡崎産業の別機種LBトリプルクラウンとは別物)。dmm側メーカー表記は「清龍ジャパン」。",
+    "notes": "partial: DMMの設定判別欄は「準備中」のため二次ソースpachiseven.jp(raw HTML)のBIG+REG合算確率を反映(低信頼度、weight低減)。DMM公式機械割レンジ96.84%〜108.02%とpachiseven側の値が完全一致(間接的な裏付けあり)。完全告知のボーナスタイプ(A-type、AT/CZ無し)。天井はpachiseven「天井機能ナシ」の記載のみ(DMM側は「調査中」で未確認、secondary-source-onlyのため低信頼度、ceilingRulesは記録せず)。1geki.jpに専用ページ・メーカーページなくichigekiUrlは空欄(岡崎産業の別機種LBトリプルクラウンとは別物)。dmm側メーカー表記は「清龍ジャパン」。注意: kenslo65536.comの本機ページは実際にはトリプルクラウンビンテージのデータが誤掲載されている(データ品質バグ、使用せず)(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4668",
     "ichigekiUrl": null
   },
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 182.0, "weight": 0.6, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/287.4、REG1/496.5)。DMM未公開のためpachiseven.jp単独ソース、低信頼度。算術検算済み、DMM公式機械割96.8%と一致。"},
+        {"settingNo": 2, "denominatorValue": 173.4, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/273.1、REG1/474.9)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 3, "denominatorValue": 166.8, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/262.1、REG1/458.3)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 4, "denominatorValue": 153.5, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/252.1、REG1/392.4)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 5, "denominatorValue": 144.7, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/242.7、REG1/358.1)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 6, "denominatorValue": 134.6, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/238.3、REG1/309.1)。pachiseven.jp単独ソース、低信頼度。DMM公式機械割108.0%と一致。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

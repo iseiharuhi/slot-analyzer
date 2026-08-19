@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-12-13",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)/DMM一致でボーナス合算確率(BB+RB)を反映(全6設定判明、算術検算済み)。DMM側の単独BIG/チェリー+BIG等の細分内訳もBB確率と算術的に整合(補完的な内訳であり矛盾ではない)。天井は非搭載(1geki「天井非搭載。」、DMM「天井突入条件:なし。」の両ソース一致、高信頼度)(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4038",
     "ichigekiUrl": "https://1geki.jp/slot/s_umaibou/"
   },
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 166.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率(BB+RB)は主判別(BB1/273.1、RB1/425.6)。1geki.jp/DMM一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 160.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/270.8、RB1/394.8)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 153.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/268.6、RB1/360.1)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 142.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/262.1、RB1/312.1)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 136.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/259.0、RB1/290.0)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 128.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB=RB=1/256.0)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

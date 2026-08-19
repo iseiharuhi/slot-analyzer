@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-05-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML、タイトル・発売日照合済み、他ウルトラマン系機種との混同なし)からティガチャンス確率を反映。本機は5段階設定(1/2/4/5/6、3非搭載)。数値は1geki自身が「約」と明記する概算値、出玉率は「現在調査中」で未公開のためweight低減。天井は3系統: ティガチャンス間600G+α(主天井)、ウルトラバトルモード間1280G+α(補助、設定変更で896G+αに短縮)、ティガチャンス7回連続外れで8回目濃厚(補助)。1geki/DMM一致(2026-08-19)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4565",
     "ichigekiUrl": "https://1geki.jp/slot/l_tiga/"
   },
@@ -60,6 +60,69 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 159, "weight": 0.8, "minSampleSize": 2500, "note": "ティガチャンス確率は本機唯一の判別軸(1geki明記の概算値「約1/159」、出玉率は調査中のためweight低減)。5段階設定(1/2/4/5/6、3非搭載)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 155, "weight": 0.8, "minSampleSize": 2500, "note": "ティガチャンス確率は主判別(概算値「約1/155」)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 142, "weight": 0.8, "minSampleSize": 2500, "note": "ティガチャンス確率は主判別(概算値「約1/142」)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 133, "weight": 0.8, "minSampleSize": 2500, "note": "ティガチャンス確率は主判別(概算値「約1/133」)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 124, "weight": 0.8, "minSampleSize": 2500, "note": "ティガチャンス確率は主判別(概算値「約1/124」)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "ティガチャンス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ティガチャンス間600G+αでティガチャンス濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ティガチャンス濃厚",
+      "resetText": "ティガチャンス突入でリセット"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "ウルトラバトルモード間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1280,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ウルトラバトルモード間1280G+αでAT濃厚。設定変更で896G+αに短縮(1geki/DMM一致)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更で896G+αに短縮)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "ティガチャンス連続天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ティガチャンス7回連続外れで8回目が濃厚。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回ティガチャンス濃厚",
+      "resetText": "ティガチャンス当選でリセット"
+    }
+  ]
 }
