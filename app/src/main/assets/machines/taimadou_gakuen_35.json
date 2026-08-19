@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "taimadou_gakuen_35",
+    "name": "対魔導学園35試験小隊",
+    "manufacturer": "平和",
+    "type": "AT",
+    "releaseDate": "2020-09-23",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映。天井は有利区間状態555G(523G+前兆32G、最大589G)でCZまたはAT確定を反映、天井到達時は内部状態が4モード(通常/優遇/引き戻し/フリーズ)のいずれかに再抽選(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3731",
+    "ichigekiUrl": "https://1geki.jp/slot/s_35s/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 588.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率97.3%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 494.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率99.0%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 450.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率101.1%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 360.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率105.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 324.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率107.9%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 292.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率110.2%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間状態555G(523G+前兆32G、最大589G)消化でCZまたはAT確定。到達時は内部状態が4モード(通常/優遇/引き戻し/フリーズ)のいずれかに再抽選。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZまたはAT確定",
+      "resetText": "CZ/AT当選でリセット(4モードいずれかに再抽選)"
+    }
+  ]
+}

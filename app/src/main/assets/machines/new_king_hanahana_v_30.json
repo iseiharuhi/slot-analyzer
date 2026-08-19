@@ -1,0 +1,76 @@
+{
+  "machine": {
+    "id": "new_king_hanahana_v_30",
+    "name": "ニューキングハナハナV-30",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2026-01-05",
+    "isActive": true,
+    "notes": "partial: 本機は設定1〜4+設定Vの5段階(標準の設定5・6は存在しない)。1geki.jp/slobase.jp/nana-press.comの3ソース一致でボーナス合算を反映、最上位の設定Vは慣例上settingNo=6として記録(=6でなく実際は「設定V」という独自名称)。天井は非搭載と1geki.jpに明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4912",
+    "ichigekiUrl": "https://1geki.jp/slot/s_new_king_hanahana_v30/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 186.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。本機は設定1-4+設定Vの5段階、標準6段階ではない。3ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 180.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。3ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 172.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。3ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 162.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。3ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 150.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。最上位の「設定V」を慣例上settingNo=6として記録(標準の設定5・6は存在しない、機種固有仕様)。3ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

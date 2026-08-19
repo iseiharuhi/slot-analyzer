@@ -1,0 +1,207 @@
+{
+  "machine": {
+    "id": "chura_chura",
+    "name": "Sちゅらちゅら",
+    "manufacturer": "LUX",
+    "type": "BONUS",
+    "releaseDate": "2023-11-06",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。manufacturer/releaseDate未記載だったためdmmで判明・補完。1geki.jpに専用ページなく(小規模メーカー・希少機種)ichigekiUrlは空欄。天井はdmm公式スペック表「天井突入条件」欄が「調査中」のままで、他の複数サイトにも記載なし(2026-08-10調査、6号機ノーマルAタイプ完全告知機のため非搭載の可能性が高いが断定できる情報源見つからず)。ceilingRulesは不明のため空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4486",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG",
+      "category": "BONUS",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": null
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "合算ボーナス",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "任意入力。BIG+REGの合算管理用"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "reg_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 431.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 399.6,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 356.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 321.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 287.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。REG先行を軸に2500G以上で評価したい。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 174.3,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 169.8,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 160.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 148.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 139.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 129.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。合算は全体傾向の確認に使う。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 297.9,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 292.6,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 285.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 273.1,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 265.3,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は主軸にしない。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 255.0,
+          "weight": 0.6,
+          "minSampleSize": 3000,
+          "note": "補助判別②。BIG単体は主軸にしない。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

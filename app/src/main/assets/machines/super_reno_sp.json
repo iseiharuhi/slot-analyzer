@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "super_reno_sp",
+    "name": "スーパーリノSP",
+    "manufacturer": "山佐ネクスト",
+    "type": "AT",
+    "releaseDate": "2022-01-11",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス初当り確率・トマトチャンス確率を反映(DMMもトマトチャンス値が完全一致)。天井は当初「非搭載」との誤情報あり(有利区間非対応の旧型式であることの誤読)だが、1geki天井専用ページ・DMM双方で1831G+α(中段トマト超高確率状態、成立まで継続)の存在を確認、設定変更時のリセット挙動は情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4007",
+    "ichigekiUrl": "https://1geki.jp/slot/s_spreno_sp/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 565.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 439.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 382.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 317.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 265.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 221.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 192.5, "weight": 0.7, "minSampleSize": 3000, "note": "トマトチャンス確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 156.6, "weight": 0.7, "minSampleSize": 3000, "note": "トマトチャンス確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 130.0, "weight": 0.7, "minSampleSize": 3000, "note": "トマトチャンス確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 100.8, "weight": 0.7, "minSampleSize": 3000, "note": "トマトチャンス確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 80.1, "weight": 0.7, "minSampleSize": 3000, "note": "トマトチャンス確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 62.2, "weight": 0.7, "minSampleSize": 3000, "note": "トマトチャンス確率は補助判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_interval_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1831,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス間1831G+αで中段トマト超高確率状態(ほぼ100%)に突入し、ボーナス成立まで継続(実質的な単発なし)。設定変更時のリセット挙動は情報未確認。本機は有利区間規制導入前の型式のため一部サイトに「天井非搭載」の記載があるが、1geki天井専用ページ・DMM双方で本天井の存在を確認済み。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "中段トマト超高確率状態→ボーナス確定",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

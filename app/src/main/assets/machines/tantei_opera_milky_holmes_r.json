@@ -1,0 +1,129 @@
+{
+  "machine": {
+    "id": "tantei_opera_milky_holmes_r",
+    "name": "パチスロ 探偵オペラ ミルキィホームズR 大収穫祭!!!!",
+    "manufacturer": "カルミナ",
+    "type": "AT",
+    "releaseDate": "2023-02-20",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM完全一致でボーナス合算確率を反映(全6設定判明、算術検算済み、MMB1/349〜1/201・MB1/964〜1/560の内訳あり)。天井は3系統: ボーナス間777G+α(主天井)、MMB間1000Gでノーボーナスなら次回MMB濃厚(補助)、MB2連続で次回MMB濃厚(補助)。【特記事項】DMMの有利区間リセット契機は「MMB終了時の一部／エンディング終了後」のみで、この機種は設定変更が明示的にリセット契機として挙げられていない(このバッチの他13機種とは異なる非典型パターン、1geki側のリセット表でも設定変更時は内部状態再抽選・ステージリセットのみで天井G数リセットの記載なし)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4296",
+    "ichigekiUrl": "https://1geki.jp/slot/s_milkyholmes_rd/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 255, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(MMB1/349、MB1/964)。1geki.jp/DMM完全一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 245, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(MMB1/337、MB1/908)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 227, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(MMB1/319、MB1/802)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 209, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(MMB1/300、MB1/700)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 198, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(MMB1/288、MB1/642)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 148, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(MMB1/201、MB1/560)。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス間777G+αでボーナス濃厚。DMMの有利区間リセット契機は「MMB終了時の一部／エンディング終了後」のみで、設定変更はリセット契機として明示されていない(このバッチの他機種とは異なる非典型パターン)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更はリセット契機として明示されず)"
+    },
+    {
+      "ruleKey": "mmb_interval_ceiling",
+      "displayName": "MMB間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "1000GボーナスがMMBでなければ次回ボーナスはMMB濃厚(当選そのものの保証ではなく質保証)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回MMB濃厚",
+      "resetText": "MMB成立でリセット"
+    },
+    {
+      "ruleKey": "mb_streak_ceiling",
+      "displayName": "MB連続天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 2,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "MBが2連続すると次回ボーナスはMMB濃厚。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回MMB濃厚",
+      "resetText": "MMB成立でリセット"
+    }
+  ]
+}

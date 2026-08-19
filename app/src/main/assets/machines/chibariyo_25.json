@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "id": "chibariyo_25",
+    "name": "チバリヨ‐25",
+    "manufacturer": "ネット",
+    "type": "AT",
+    "releaseDate": "2022-08-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算(BIG/REG)を反映。天井は総チェリー出現回数40回到達または900G消化でボーナス当選を反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4201",
+    "ichigekiUrl": "https://1geki.jp/slot/s_chibariyo25/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 120.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 117.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 110.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 105.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 99.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 94.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BIG+REG)は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cherry_count_ceiling",
+      "displayName": "総チェリー回数天井",
+      "ceilingType": "COUNT",
+      "limitValue": 40,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "総チェリー出現回数最大40回到達でボーナス当選。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス当選",
+      "resetText": "ボーナス当選でリセット"
+    },
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "900G消化でボーナス当選。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス当選",
+      "resetText": "ボーナス当選でリセット"
+    }
+  ]
+}

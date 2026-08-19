@@ -1,0 +1,23 @@
+{
+  "id": "danmachi_2",
+  "name": "パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2",
+  "manufacturer": "北電子",
+  "type": "AT",
+  "releaseDate": "2024-04-22",
+  "isActive": true,
+  "notes": "partial: DMM・一撃の公開解析を再整理。主判別はART初当り、補助にボーナス合算とファミリアボーナスを採用。ファミリアチャンスは設定差が大きいが単体では荒れやすいため第3補助へ下げた。CZや小役は有効だが状態依存やカウント負荷が高く、現行UIではメモ運用を優先。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4556",
+  "ichigekiUrl": "https://1geki.jp/slot/s_danmachi2/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4556"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_danmachi2/"
+    }
+  ],
+  "fileName": "list_slot_037.json"
+}

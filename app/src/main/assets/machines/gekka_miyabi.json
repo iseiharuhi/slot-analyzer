@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "id": "gekka_miyabi",
+    "name": "パチスロ 月華 雅",
+    "manufacturer": "エンターライズ",
+    "type": "AT",
+    "releaseDate": "2022-04-18",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致で初当り確率(約1/200クラス)を反映。スイカ役当選率は全設定共通1.56%と明記あり(設定差なしの役、データ欠落ではない)。天井はヘブン準備モード最大333Gを主天井として反映、通常A/Bモード321G・カムバックモード128G等のモード別天井は二次ソースのみで中程度の信頼度(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4132",
+    "ichigekiUrl": "https://1geki.jp/slot/s_gekkamiyabi/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 203.3, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率97.3%)。スイカ役は全設定共通1.56%(設定差なし、データ欠落ではない)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 201.8, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率98.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 199.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率100.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 194.8, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率104.5%)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 192.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率107.4%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 190.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率110.3%)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "heaven_prep_ceiling",
+      "displayName": "ヘブン準備モード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 333,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ヘブン準備モード滞在時最大333Gでボーナス濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    },
+    {
+      "ruleKey": "normal_mode_ceiling",
+      "displayName": "通常A/Bモード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 321,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常A/Bモード滞在時321Gでボーナス濃厚(二次ソースのみ、中程度の信頼度)。カムバック(復帰)モードは128G、ヘブン系派生モードは32Gとの情報あり。設定変更時は約40%でカムバックモード(128G天井)に移行。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で約40%カムバックモードへ)"
+    }
+  ]
+}

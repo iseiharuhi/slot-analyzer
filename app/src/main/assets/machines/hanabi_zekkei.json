@@ -2,13 +2,13 @@
   "machine": {
     "id": "hanabi_zekkei",
     "name": "花火絶景",
-    "manufacturer": null,
+    "manufacturer": "ミズホ",
     "type": "A+AT",
-    "releaseDate": null,
+    "releaseDate": "2022-11-07",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp/DMM一致でボーナス合算確率(BB+RB)を反映(全6設定判明、算術検算済み)。本機はAT/CZ機能を持たない完全なボーナスのみ機種(次作は「A+RTタイプ」と明記されており本機との違いを裏付け)。花火百景ステージ移行率(設定5・6が別格、notesのみ参考)。天井はA-typeながら実在(ゲーム数天井、モード依存で200G[天国]〜950G[通常A/C・特殊A/C]、主天井)+周期天井(花火ポイント10周期でBB濃厚、補助)。設定変更時のリセット挙動は両ソースとも「サブ液晶のカウンターが950Gを超える場合がある」という表示上の注記のみで、明確な「リセット/非リセット」の断定はできない(機構的に曖昧、低信頼度フラグ)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4236",
+    "ichigekiUrl": "https://1geki.jp/slot/s_hanabi_zekkei/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 247.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(BB1/439.5、RB1/565.1)。本機はAT/CZ無しの完全ボーナスのみ機種。1geki.jp/DMM一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 244.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/434.9、RB1/556.6)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 233.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/419.1、RB1/526.3)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 224.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/399.4、RB1/510.1)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 215.9, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/386.7、RB1/488.5)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 208.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/372.0、RB1/475.0)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 950,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "モード依存の天井(天国200G〜通常A/C・特殊A/Cの950Gまで)で「打ち上げチャンス」またはBB直接濃厚。設定変更時のリセット挙動は両ソースとも「サブ液晶のカウンターが950Gを超える場合がある」という表示上の注記のみで、明確な「リセット/非リセット」の断定はできない(機構的に曖昧、低信頼度)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "打ち上げチャンス/BB濃厚",
+      "resetText": "BB成立でリセット(設定変更時の挙動は機構的に曖昧、低信頼度)"
+    },
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "花火ポイント周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 10,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "花火ポイントの10周期目到達でBB濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "BB濃厚",
+      "resetText": "BB成立でリセット"
+    }
+  ]
 }

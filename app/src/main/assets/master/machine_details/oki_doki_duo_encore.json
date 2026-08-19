@@ -1,0 +1,23 @@
+{
+  "id": "oki_doki_duo_encore",
+  "name": "スマート沖スロ 沖ドキ！DUO-30 アンコール",
+  "manufacturer": "MACY",
+  "type": "AT",
+  "releaseDate": "2025-12-22",
+  "isActive": true,
+  "notes": "partial: 公開比較値を確認できたボーナス初当りを主軸に反映。 BIG初当り・REG初当り・角チェリーなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4906",
+  "ichigekiUrl": "https://1geki.jp/slot/l_okidoki_duo_encore/0/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4906"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_okidoki_duo_encore/0/"
+    }
+  ],
+  "fileName": "list_slot_053.json"
+}

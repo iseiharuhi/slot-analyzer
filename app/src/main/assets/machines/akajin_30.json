@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "akajin_30",
+    "name": "アカジン‐30",
+    "manufacturer": "バルテック",
+    "type": "AT",
+    "releaseDate": "2022-04-06",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBIG+REG合算確率を反映(1G連込み、DMM側は数値表未公開のため1geki単独ソース・中程度の信頼度)。天井は非搭載(1geki「天井非搭載」、DMM「なし」で確認済み、毎ゲームボーナスを抽選する沖スロ系仕様のため妥当)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4119",
+    "ichigekiUrl": "https://1geki.jp/slot/s_akajin30/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 172, "weight": 0.9, "minSampleSize": 2500, "note": "BIG+REG合算確率(1G連込み)は主判別(BIG1/269、REG1/481)。DMM未公開のため1geki単独ソース、中程度の信頼度。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 166, "weight": 0.9, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/262、REG1/451)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 155, "weight": 0.9, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/252、REG1/406)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 148, "weight": 0.9, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/243、REG1/378)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 139, "weight": 0.9, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/239、REG1/334)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 134, "weight": 0.9, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/237、REG1/305)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "dark_high_bi",
+    "name": "スマート沖スロ ダークハイビ",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2026-06-22",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/slobase.jp一致でBIG+REG合算確率を反映。本機は5段階設定機で設定3非搭載(両ソース独立確認)。AT初当り確率は設定1(約1/275.9)・設定6(約1/228.3)のみ判明、中間設定は情報なしのため未収録。天井は約999G+α(BIG濃厚)、変則打ちで+1G加算、リカバリーモード短縮天井約250G(二次ソースのみ)を反映。本機は2026年6月発売の新台のため情報整備が発展途上、天井詳細は中程度の信頼度(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/5016",
+    "ichigekiUrl": "https://1geki.jp/slot/l_dark_haibi/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 138.2, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/243.0、REG1/320.4、出玉率97.5%)。1geki.jp/slobase.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 132.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/233.1、REG1/307.9、出玉率99.4%)。1geki.jp/slobase.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 124.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/218.1、REG1/289.7、出玉率102.5%)。本機は5段階設定機で設定3非搭載(2→4)。1geki.jp/slobase.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 114.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/199.5、REG1/270.0、出玉率106.8%)。1geki.jp/slobase.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 108.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/187.1、REG1/259.1、出玉率110.0%)。AT初当り確率は設定1(約1/275.9)・設定6(約1/228.3)のみ判明、中間設定は情報なしのため未収録。1geki.jp/slobase.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "約999G+αでボーナス濃厚。順押し必須で変則打ちはペナルティとして天井に+1G加算(slobase.jp)。DMM記載の準備モード天井は約1005G。設定変更時は約30%でノーマルB以上、約40%でチャンスモードへ移行(DMM、中程度の信頼度)。リカバリー(短縮)モード天井は約250G(二次ソースのみ)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で約30%ノーマルB以上/約40%チャンスモード)"
+    }
+  ]
+}

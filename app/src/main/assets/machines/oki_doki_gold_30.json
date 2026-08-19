@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "oki_doki_gold_30",
+    "name": "沖ドキ！GOLD‐30",
+    "manufacturer": "ミズホ",
+    "type": "AT",
+    "releaseDate": "2022-12-19",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(生HTML取得)/p-world.co.jp/DMM理論値表の3ソース一致でBIG+REG合算確率を反映(設定4は3ソースとも欠落=真に未公開、3→5に飛ぶ)。DMM実戦検証値(サンプル値)は理論値と乖離あるが正常な実戦誤差でありデータ誤りではない。天井はモード別(通常A/B999G、引き戻し200G)+設定変更時25.0%で399Gへの短縮抽選(それ以外のタイミングでの短縮率は「調査中」)を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4264",
+    "ichigekiUrl": "https://1geki.jp/slot/s_okidoki_gold_30/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 299.6, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/175.3、REG1/368.7)。1geki.jp/p-world.co.jp/DMM理論値表の3ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 287.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/168.3、REG1/346.2)。3ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 266.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/157.7、REG1/324.0)。設定4は3ソースとも欠落のため未収録(3→5)。3ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 247.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/143.0、REG1/297.9)。3ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 237.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/134.0、REG1/276.5)。3ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常A/Bモード滞在時999Gでボーナス濃厚。引き戻しモード滞在時は200Gに短縮。非有利区間から通常A/Bへの移行時に399Gへの短縮抽選もあり、設定変更時はこの抽選が25.0%の確率で発動(それ以外のタイミングでの発動率は情報未確認)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で25.0%の確率で399Gに短縮)"
+    }
+  ]
+}

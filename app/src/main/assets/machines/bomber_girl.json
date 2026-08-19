@@ -1,0 +1,131 @@
+{
+  "machine": {
+    "id": "bomber_girl",
+    "name": "ボンバーガール",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2022-09-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致でAT初当り確率(主判別)・CZ確率(補助判別)・BIG通常時(補足判別)を反映。全テーブルで設定3が一貫して欠落しており5段階設定機の可能性が高いが「設定3非搭載」の明記文は未確認(推定、高確度)。天井はCZ間460G+αとボーナス&AT間960G+αの2系統(必ず高確状態からBomba Time開始)を反映。設定変更時のリセット挙動は情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4183",
+    "ichigekiUrl": "https://1geki.jp/slot/s_bomber_girl/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 350.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 336.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 312.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。全テーブルで設定3が一貫して欠落(5段階設定機の可能性が高いが明記文は未確認、推定・高確度)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 297.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 286.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 83.7, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 81.2, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 77.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。設定3は欠落のため未収録。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 74.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 72.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 399.6, "weight": 0.6, "minSampleSize": 3000, "note": "BIG通常時確率は補足判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 394.8, "weight": 0.6, "minSampleSize": 3000, "note": "BIG通常時確率は補足判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 381.0, "weight": 0.6, "minSampleSize": 3000, "note": "BIG通常時確率は補足判別。設定3は欠落のため未収録。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 360.1, "weight": 0.6, "minSampleSize": 3000, "note": "BIG通常時確率は補足判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 341.3, "weight": 0.6, "minSampleSize": 3000, "note": "BIG通常時確率は補足判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 460,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ間460G+α(BB/AT当選も含む)でCZ濃厚。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ当選でリセット"
+    },
+    {
+      "ruleKey": "bonus_at_interval_ceiling",
+      "displayName": "ボーナス&AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 960,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス&AT間960G+αで「Bomba Time」(AT)濃厚、必ず高確状態から開始。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "Bomba Time濃厚(高確状態スタート)",
+      "resetText": "AT当選でリセット"
+    }
+  ]
+}

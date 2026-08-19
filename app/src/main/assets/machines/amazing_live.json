@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "amazing_live",
+    "name": "スマート沖スロ アメイジングライブ",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2025-04-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/pachiseven.jp一致でボーナス初当り確率を反映。本機は5段階設定機で設定3非搭載(DMM「本機は5段階設定で」と明記、全ソースで設定3欠落と一致)。天井は約999G+αでBIG濃厚(888〜998Gでレア柄成立時はAC(ボーナスストック)の可能性)、リセット時は約75%でヘブンモード移行を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4751",
+    "ichigekiUrl": "https://1geki.jp/slot/l_amazinglive/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 274.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別(出玉率98.1%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 259.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別(出玉率99.7%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 229.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別(出玉率103.6%)。本機は5段階設定機で設定3非搭載(2→4)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 206.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別(出玉率106.9%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 189.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別(出玉率110.0%)。1geki.jp/pachiseven.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時約999G消化でBIG濃厚。888〜998Gでレア柄成立時はボーナスストック(AC)の可能性あり。有利区間リセット時は約75%でヘブンモード(高確以上の優遇された天国系状態)へ移行。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BIG濃厚",
+      "resetText": "BIG成立でリセット(約75%でヘブンモード移行)"
+    }
+  ]
+}

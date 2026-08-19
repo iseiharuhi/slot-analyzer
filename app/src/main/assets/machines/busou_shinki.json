@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "busou_shinki",
+    "name": "パチスロ武装神姫",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2024-01-09",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT確率(主判別)・CZ突入確率(補助判別、設定間でほぼ横ばい=CZ突入自体は設定差が小さくAT変換率側に差が出る設計と判断、転記誤りではない)を反映。天井は「神姫バトル」の連敗数依存(1geki「9回当選」、DMM「8連続敗北後の次戦」表記=実質同じ意味、明確なG数天井は非公開のため未収録)を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4440",
+    "ichigekiUrl": "https://1geki.jp/slot/s_busou_shinki/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 282.1, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率97.3%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 270.0, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率98.5%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 258.0, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率99.8%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 238.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率102.3%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 204.4, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率104.2%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 173.9, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率108.1%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 91.2, "weight": 0.3, "minSampleSize": 3000, "note": "CZ突入確率は補助判別だが設定間でほぼ横ばい(1/91.2〜1/90.3)=CZ突入自体の設定差は小さく、AT変換率側に差が出る設計と判断。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 91.1, "weight": 0.3, "minSampleSize": 3000, "note": "CZ突入確率は補助判別(ほぼ横ばい)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 91.1, "weight": 0.3, "minSampleSize": 3000, "note": "CZ突入確率は補助判別(ほぼ横ばい)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 91.0, "weight": 0.3, "minSampleSize": 3000, "note": "CZ突入確率は補助判別(ほぼ横ばい)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 90.7, "weight": 0.3, "minSampleSize": 3000, "note": "CZ突入確率は補助判別(ほぼ横ばい)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 90.3, "weight": 0.3, "minSampleSize": 3000, "note": "CZ突入確率は補助判別(ほぼ横ばい)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "battle_through_ceiling",
+      "displayName": "神姫バトル連敗天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 9,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "「神姫バトル」9回目で当選濃厚(1geki表記)。DMMは「8連続敗北後、次の神姫バトルで勝利確定」と表記するが実質同じ意味(8敗後9戦目)。1バトル約20G×4〜5セット構成のため実ゲーム数換算で概ね80G以上/サイクル相当だが、明確なG数天井は非公開のため未収録。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT勝利確定",
+      "resetText": "神姫バトル勝利でリセット"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "shin_hanabi",
+  "name": "ハナビ",
+  "manufacturer": "ACROSS",
+  "type": "BONUS",
+  "releaseDate": "2021-07-05",
+  "isActive": true,
+  "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算とベル、BIGは最終補助に整理。ハナビ系はREG基準を崩さず、ベルは5000G以上で補強に使う。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/2042",
+  "ichigekiUrl": "https://1geki.jp/slot/s_shinhanabi/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/2042"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_shinhanabi/"
+    }
+  ],
+  "fileName": "list_slot_044.json"
+}

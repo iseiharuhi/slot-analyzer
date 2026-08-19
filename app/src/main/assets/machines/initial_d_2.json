@@ -6,9 +6,9 @@
     "type": "AT",
     "releaseDate": "2024-10-07",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML、メイン+2つの独立サブページで確認)からレジェンドバトル突入率(補助判別)・AT「レジェンドラッシュ」初当り確率(主判別)を反映(全6設定判明、DMM機械割97.9%〜114.3%と一致)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4635",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/ini_d2nd/"
   },
   "counterDefinitions": [
     {
@@ -60,7 +60,30 @@
       "notes": "レジェンドラッシュ初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 405.5, "weight": 1, "minSampleSize": 2500, "note": "AT「レジェンドラッシュ」初当り確率は主判別。1geki.jp公開値、DMM機械割97.9%と一致。"},
+        {"settingNo": 2, "denominatorValue": 396.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 379.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 338.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 314.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 296.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値、DMM機械割114.3%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "legend_battle_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 216.6, "weight": 0.7, "minSampleSize": 3000, "note": "レジェンドバトル突入率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 212.3, "weight": 0.7, "minSampleSize": 3000, "note": "レジェンドバトル突入率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 205.0, "weight": 0.7, "minSampleSize": 3000, "note": "レジェンドバトル突入率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 188.9, "weight": 0.7, "minSampleSize": 3000, "note": "レジェンドバトル突入率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 178.4, "weight": 0.7, "minSampleSize": 3000, "note": "レジェンドバトル突入率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 169.7, "weight": 0.7, "minSampleSize": 3000, "note": "レジェンドバトル突入率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

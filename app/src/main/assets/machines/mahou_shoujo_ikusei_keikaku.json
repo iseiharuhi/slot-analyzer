@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "mahou_shoujo_ikusei_keikaku",
+    "name": "パチスロ 魔法少女育成計画",
+    "manufacturer": "カルミナ",
+    "type": "AT",
+    "releaseDate": "2022-10-17",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析からART合算確率(主判別、全設定で単調)・ボーナス合算確率(補助判別)を反映。ボーナス合算は設定5(1/183)→設定6(1/252)で悪化する非単調値だが生HTML確認済み+WebSearch裏付けの機種固有の意図的仕様(設定6は他の高設定優遇要素で補うためATが実質判別軸、転記誤りではない)。天井はCZ「まほいくとらいある」周期制(300G/周期、最大3周期、周期2非当選12.5%・周期3非当選87.5%でレイジングゾーン、主天井)+有利区間法定上限4000Gまたは2400枚(補助、規制上限)を反映。設定変更で周期数表示リセット・フリーズ高確状態リセット・キャンディー数リセット(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4225",
+    "ichigekiUrl": "https://1geki.jp/slot/s_mahoiku/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 243.3, "weight": 1, "minSampleSize": 2500, "note": "ART合算確率は主判別(出玉率97.7%、完全攻略時102.5%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 237.3, "weight": 1, "minSampleSize": 2500, "note": "ART合算確率は主判別(出玉率97.8%、完全攻略時103.8%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 230.6, "weight": 1, "minSampleSize": 2500, "note": "ART合算確率は主判別(出玉率100.3%、完全攻略時104.6%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 224.0, "weight": 1, "minSampleSize": 2500, "note": "ART合算確率は主判別(出玉率102.2%、完全攻略時106.0%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 216.9, "weight": 1, "minSampleSize": 2500, "note": "ART合算確率は主判別(出玉率104.3%、完全攻略時107.0%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 211.8, "weight": 1, "minSampleSize": 2500, "note": "ART合算確率は主判別(出玉率106.1%、完全攻略時107.2%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 189, "weight": 0.6, "minSampleSize": 3000, "note": "ボーナス合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 188, "weight": 0.6, "minSampleSize": 3000, "note": "ボーナス合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 187, "weight": 0.6, "minSampleSize": 3000, "note": "ボーナス合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 185, "weight": 0.6, "minSampleSize": 3000, "note": "ボーナス合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 183, "weight": 0.6, "minSampleSize": 3000, "note": "ボーナス合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 252, "weight": 0.6, "minSampleSize": 3000, "note": "ボーナス合算確率は補助判別。設定5(1/183)より悪化する非単調値だが生HTML確認済み+WebSearch裏付けの機種固有仕様(転記誤りではない、主判別のART合算は単調)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_cycle_ceiling",
+      "displayName": "CZ周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 3,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "CZ「まほいくとらいある」で300G/周期のノーヒットが続くと段階的に確率上昇。周期2非当選で12.5%、周期3非当選で87.5%の確率で「レイジングゾーン」濃厚。設定変更時は周期数表示リセット・フリーズ高確状態リセット・キャンディー数リセット。電源off/onでは周期数・フリーズ状態・キャンディー数は維持(表示のみリセット)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "レイジングゾーン濃厚",
+      "resetText": "ボーナス/ART成立でリセット(設定変更で周期数等リセット)"
+    },
+    {
+      "ruleKey": "yuri_kukan_ceiling",
+      "displayName": "有利区間法定上限",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 4000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間の法定上限4000Gまたは差枚2400枚のいずれか早い方(標準的な6.5号機規制上限、機種固有の調整値ではない)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "有利区間終了",
+      "resetText": "有利区間終了でリセット"
+    }
+  ]
+}

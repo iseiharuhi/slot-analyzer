@@ -2,13 +2,13 @@
   "machine": {
     "id": "macross_frontier_4",
     "name": "Lパチスロマクロスフロンティア4",
-    "manufacturer": null,
+    "manufacturer": "SANKYO",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2024-01-09",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML、タイトル確認済み・フロンティア4であり1〜3の前作とは別ページで取り違えなし)から歌姫ボーナス(主判別)・AT「バルキリータイム」初当り(補助判別)を反映(全6設定判明、DMM機械割97.7%〜114.9%と一致)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4464",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_macross_f4/"
   },
   "counterDefinitions": [
     {
@@ -60,7 +60,30 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 276, "weight": 1, "minSampleSize": 2500, "note": "歌姫ボーナスは主判別。1geki.jp公開値、DMM機械割97.7%と一致。"},
+        {"settingNo": 2, "denominatorValue": 271, "weight": 1, "minSampleSize": 2500, "note": "歌姫ボーナスは主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 258, "weight": 1, "minSampleSize": 2500, "note": "歌姫ボーナスは主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 237, "weight": 1, "minSampleSize": 2500, "note": "歌姫ボーナスは主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 216, "weight": 1, "minSampleSize": 2500, "note": "歌姫ボーナスは主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 204, "weight": 1, "minSampleSize": 2500, "note": "歌姫ボーナスは主判別。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 507, "weight": 0.7, "minSampleSize": 3000, "note": "AT「バルキリータイム」初当りは補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 495, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当りは補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 461, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当りは補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 407, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当りは補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 359, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当りは補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 331, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当りは補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "lcd_game_ceiling",

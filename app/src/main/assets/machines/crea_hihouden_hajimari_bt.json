@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "crea_hihouden_hajimari_bt",
+    "name": "クレアの秘宝伝 ～はじまりの扉と太陽の石～ ボーナストリガーver.",
+    "manufacturer": "大都技研",
+    "type": "AT",
+    "releaseDate": "2025-09-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算(BB+RB)を反映。天井は非搭載と1geki.jpに明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4860",
+    "ichigekiUrl": "https://1geki.jp/slot/l_crea/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 168.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 165.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 158.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 150.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 139.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 121.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

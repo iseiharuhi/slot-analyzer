@@ -2,13 +2,13 @@
   "machine": {
     "id": "motto_chibariyo_30",
     "name": "もっと！チバリヨ！30",
-    "manufacturer": null,
+    "manufacturer": "ネット",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2022-12-19",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス初当り確率(チャンス役型、本機唯一の判別軸)を反映(全6設定判明)。姉妹機motto_chibariyo_25と数値が完全一致(1/255〜1/202)しているが、独立したcanonical URL(s_mtchibariyo vs s_mtchibariyo25、本機の天井ページはsubpage/4/、他ページとは異なる点にも注意)で個別に取得確認済みの実データ(30ライン機と25ライン機で内部抽選プログラムが共通という同シリーズでよくある仕様と判断、混線ではない)。天井は900G+α(有利区間移行後、主天井)+チェリー規定40回(補助)+ボーナス規定3回(有利区間内3回目で天国モードへ、補助)の多層構造。本機は有利区間ランプが無く設定変更時のリセット挙動はプレイヤー側から判別不可、明示的記載もなし(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4252",
+    "ichigekiUrl": "https://1geki.jp/slot/s_mtchibariyo/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 255, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の判別軸。姉妹機motto_chibariyo_25と数値一致(共通プログラムの実データ、混線ではない)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 252, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 237, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 224, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 211, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 202, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間移行後900G+αでボーナス濃厚。補助でチェリー規定40回到達でもボーナス濃厚。本機は有利区間ランプが無く設定変更時のリセット挙動はプレイヤー側から判別不可、明示的記載もなし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は判別不可)"
+    },
+    {
+      "ruleKey": "bonus_streak_ceiling",
+      "displayName": "ボーナス規定回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 3,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "同一有利区間内で3回目のボーナス成立で天国モードへ移行。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "天国モード移行",
+      "resetText": "有利区間終了でリセット"
+    }
+  ]
 }

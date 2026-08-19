@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "id": "kemono_friends",
+    "name": "ぱちすろ けものフレンズ",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2022-05-23",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映。Lv.0継続率(0.4%〜2.3%)などパーセント系補助指標はDMM記載あるがcounterKey形式に合わずnotesのみ記録。天井は8周期またはゲーム数999G(いずれか早い方)、設定変更でリセット(DMM明記)を反映。モード別サイクル上限: A/B=8周期、C=4周期、D/E=2周期(Eは2/4を1:1で交互)。999G到達時の恩恵表現がソースにより「CZ経由でAT濃厚」(imakati.jp)と「AT直接付与」(DMM)で若干の言い回し差あるが実質同じ結果と判断(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4134",
+    "ichigekiUrl": "https://1geki.jp/slot/s_kemono_friends/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 293.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 280.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 271.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 256.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 243.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 235.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。Lv.0継続率(0.4%〜2.3%)などパーセント系補助指標はDMM記載あるがnotesのみ記録。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 8,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "8周期またはゲーム数999G(いずれか早い方)でAT濃厚。モード別上限: A/B=8周期、C=4周期、D/E=2周期(Eは2/4を1:1で交互)。到達時の恩恵表現はソースにより「CZ経由でAT濃厚」/「AT直接付与」と若干の言い回し差あるが実質同じ結果。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更でリセット(DMM明記)"
+    },
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "999G+αでAT濃厚(周期天井と並行、いずれか早い方)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

@@ -2,13 +2,13 @@
   "machine": {
     "id": "aldnoah_zero",
     "name": "アルドノア・ゼロ",
-    "manufacturer": "ユニバーサルブロス",
+    "manufacturer": "ELECO",
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2021-05-10",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からCZ「アセイラムチャンス」当選率(補助判別、bonus_countに反映するがBIGとの真の合算値ではなくCZ単体の値、注意)・AT「アルドノア・ゼロ」初当り確率(主判別)を反映(全6設定判明)。CZ列は設定3が設定2より・設定5が設定4より悪化する非単調値だが1geki本体・専用サブページの両方で確認済みの実データ(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3870",
+    "ichigekiUrl": "https://1geki.jp/slot/s_aldnoahzero/"
   },
   "counterDefinitions": [
     {
@@ -48,7 +48,30 @@
       "notes": "AT初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 499.4, "weight": 1, "minSampleSize": 2500, "note": "AT「アルドノア・ゼロ」初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 419.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 416.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 342.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 319.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 227.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 299.2, "weight": 0.6, "minSampleSize": 2500, "note": "CZ「アセイラムチャンス」当選率は補助判別。counterDefinitionsは「アセイラムチャンス/BIGの合算」とあるがBIG合算値は未公開のためCZ単体の値、weight低減。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 269.2, "weight": 0.6, "minSampleSize": 2500, "note": "CZ当選率は補助判別(CZ単体、weight低減)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 281.2, "weight": 0.6, "minSampleSize": 2500, "note": "CZ当選率は補助判別。設定2より悪化する非単調値だが実データ確認済み。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 249.6, "weight": 0.6, "minSampleSize": 2500, "note": "CZ当選率は補助判別(CZ単体、weight低減)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 269.9, "weight": 0.6, "minSampleSize": 2500, "note": "CZ当選率は補助判別。設定4より悪化する非単調値だが実データ確認済み。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 223.9, "weight": 0.6, "minSampleSize": 2500, "note": "CZ当選率は補助判別(CZ単体、weight低減)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

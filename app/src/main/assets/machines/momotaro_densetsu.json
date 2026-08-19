@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "momotaro_densetsu",
+    "name": "桃太郎電鉄 ~パチスロも定番!~",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2024-12-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から電鉄ボーナス確率(メインAT、主判別)・定番チャンス確率(CZ、補助判別)を反映。天井は「年」制(最大3年、総計約720G相当)で定番チャンス濃厚(設定変更で最大2年に短縮)+定番チャンス6回連続失敗天井(補助、設定変更で最大2回に短縮)を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4666",
+    "ichigekiUrl": "https://1geki.jp/slot/l_momotetsu/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 425.5, "weight": 1, "minSampleSize": 2500, "note": "電鉄ボーナス(メインAT)確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 416.3, "weight": 1, "minSampleSize": 2500, "note": "電鉄ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 406.0, "weight": 1, "minSampleSize": 2500, "note": "電鉄ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 379.6, "weight": 1, "minSampleSize": 2500, "note": "電鉄ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 371.1, "weight": 1, "minSampleSize": 2500, "note": "電鉄ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 357.8, "weight": 1, "minSampleSize": 2500, "note": "電鉄ボーナス確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 183.3, "weight": 0.7, "minSampleSize": 3000, "note": "定番チャンス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 179.6, "weight": 0.7, "minSampleSize": 3000, "note": "定番チャンス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 175.6, "weight": 0.7, "minSampleSize": 3000, "note": "定番チャンス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 163.2, "weight": 0.7, "minSampleSize": 3000, "note": "定番チャンス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 159.5, "weight": 0.7, "minSampleSize": 3000, "note": "定番チャンス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 153.2, "weight": 0.7, "minSampleSize": 3000, "note": "定番チャンス確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "year_cycle_ceiling",
+      "displayName": "年数天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 3,
+      "unit": "年",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大3年(総計約720G相当)消化で定番チャンス濃厚。設定変更時は最大2年に短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "定番チャンス濃厚",
+      "resetText": "定番チャンス突入でリセット(設定変更で最大2年に短縮)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "定番チャンス連続失敗天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 6,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "定番チャンス6回連続失敗で電鉄ボーナス濃厚。設定変更時は最大2回に短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "電鉄ボーナス濃厚",
+      "resetText": "電鉄ボーナス成立でリセット(設定変更で最大2回に短縮)"
+    }
+  ]
+}

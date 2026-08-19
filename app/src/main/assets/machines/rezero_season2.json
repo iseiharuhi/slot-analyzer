@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-10-21",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: AT初当り確率(全6設定判明)、規定pt天井(最大1400pt、設定変更で400/600/800/1000ptのいずれかに短縮)、AT間ゲーム数天井(1300G、ロングフリーズ濃厚)を反映済み。旧プレースホルダーのnotes文言(「settingReferenceValuesは未投入」)が実データ投入後も残存していたため訂正(2026-08-20、データ自体は既存のまま変更なし)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4658",
     "ichigekiUrl": "https://1geki.jp/slot/l_rezero_season2/",
     "status": "verified"

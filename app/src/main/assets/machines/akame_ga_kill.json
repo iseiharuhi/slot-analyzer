@@ -2,13 +2,13 @@
   "machine": {
     "id": "akame_ga_kill",
     "name": "アカメが斬る！",
-    "manufacturer": "サミー",
+    "manufacturer": "NANASHOW",
     "type": "BONUS_PLUS_AT",
-    "releaseDate": "2020-03-02",
+    "releaseDate": "2020-11-09",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス合算確率(BIG+REG)を反映(全6設定判明、算術検算済み)。AT/CZ個別の判別表は今回のリサーチでは未発見のためat_count空欄のまま(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3767",
+    "ichigekiUrl": "https://1geki.jp/slot/s_akame/"
   },
   "counterDefinitions": [
     {
@@ -48,7 +48,19 @@
       "notes": "AT初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 303, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率(BIG1/542、REG1/687)は主判別。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 296, "weight": 1, "minSampleSize": 2500, "note": "合算確率(BIG1/523、REG1/681)は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 284, "weight": 1, "minSampleSize": 2500, "note": "合算確率(BIG1/489、REG1/676)は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 273, "weight": 1, "minSampleSize": 2500, "note": "合算確率(BIG1/454、REG1/687)は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 260, "weight": 1, "minSampleSize": 2500, "note": "合算確率(BIG1/421、REG1/684)は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 256, "weight": 1, "minSampleSize": 2500, "note": "合算確率(BIG1/410、REG1/682)は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

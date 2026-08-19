@@ -2,12 +2,12 @@
   "machine": {
     "id": "ring_ni_kakero_1",
     "name": "リングにかけろ1",
-    "manufacturer": null,
+    "manufacturer": "銀座",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2007-03-05",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
+    "notes": "partial: 1geki.jp専用ページ非存在のため二次ソースp-world.co.jp(承認済み)のBIG+REG合算確率を反映(低信頼度、weight低減)。DMM機械割データとは間接照合のみ、算術検算は成立(調和平均が公開合算値と一致)。完全確率抽選(独立試行、天井蓄積なし)のA+RT型5号機。天井は非搭載: 二次ソースeightbeat.com(非承認リスト、参考扱い)が「天井機能：なし」と明記、DMM側の天井情報欠如(調査中扱い)とも矛盾しない。2007年の5号機のため1geki.jpに現役ページなくichigekiUrlは空欄(2020年版6号機や後継スマスロ版とは別機種、混同せず除外)(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/1134",
     "ichigekiUrl": null
   },
   "counterDefinitions": [
@@ -60,6 +60,18 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 316.6, "weight": 0.6, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/461.52、REG1/1008.25)。1geki専用ページ非存在のためp-world.co.jp単独ソース、低信頼度。算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 296.5, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/431.16、REG1/949.8)。p-world.co.jp単独ソース、低信頼度。"},
+        {"settingNo": 3, "denominatorValue": 281.3, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/409.6、REG1/897.75)。p-world.co.jp単独ソース、低信頼度。"},
+        {"settingNo": 4, "denominatorValue": 251.1, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/372.36、REG1/771.01)。p-world.co.jp単独ソース、低信頼度。"},
+        {"settingNo": 5, "denominatorValue": 225.2, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/337.81、REG1/675.63)。p-world.co.jp単独ソース、低信頼度。"},
+        {"settingNo": 6, "denominatorValue": 202.9, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/300.62、REG1/624.15)。p-world.co.jp単独ソース、低信頼度、算術検算済み。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

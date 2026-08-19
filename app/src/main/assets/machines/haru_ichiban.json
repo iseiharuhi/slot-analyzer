@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "id": "haru_ichiban",
+    "name": "パチスロ春一番",
+    "manufacturer": "西陣",
+    "type": "AT",
+    "releaseDate": "2022-01-24",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBIG+REG合算確率を反映(全6設定判明、算術検算済み、丸め誤差1%未満)。極頂BONUS(約1/67000〜69000)は全設定でほぼ横ばい=設定差なしの稀少ボーナスのためcounterKey未反映。天井は第1天井555G(50%でボーナス、555G以降のボーナスはBIG確定)+第2天井777G(BIG100%確定)の2段階を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4061",
+    "ichigekiUrl": "https://1geki.jp/slot/s_haruichiban/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 189.0, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/322.8、REG1/459.2)。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 177.9, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/308.3、REG1/423.1)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 170.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/303.7、REG1/392.3)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 157.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/292.1、REG1/341.0)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 149.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/286.5、REG1/313.8)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 143.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/281.7、REG1/293.3)。極頂BONUS(約1/67000〜69000)は全設定横ばいのため未収録。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "first_ceiling",
+      "displayName": "第1天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時555G+αで50%の確率でボーナス濃厚。555G以降に成立するボーナスはBIG確定。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚(50%、555G以降はBIG確定)",
+      "resetText": "ボーナス成立でリセット"
+    },
+    {
+      "ruleKey": "second_ceiling",
+      "displayName": "第2天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時777G+αでBIG BONUS100%確定。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "BIG BONUS確定",
+      "resetText": "BIG成立でリセット"
+    }
+  ]
+}

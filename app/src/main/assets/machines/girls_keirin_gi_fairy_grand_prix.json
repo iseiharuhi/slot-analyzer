@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "girls_keirin_gi_fairy_grand_prix",
+    "name": "〜ガールズケイリン〜GIフェアリーグランプリ",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2020-11-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致でAT確率(主判別、CZ確率より振れ幅大きく信頼度高い)・CZ確率(補助判別、振れ幅が浅い)を反映。天井は8サイクル目到達またはゲーム数499G(いずれか早い方)で「ウイニングチャンス」突入、8サイクル目のレース到達でAT確定を反映。設定変更で全状態リセット、初回サイクルのCZ当選率は約30%(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3753",
+    "ichigekiUrl": "https://1geki.jp/slot/s_gk_g1fg/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 924, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率97.4%、CZ確率より振れ幅が大きく信頼度が高い)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 875, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率98.8%)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 789, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率100.7%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 682, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率104.3%)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 631, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率106.1%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 573, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率108.0%)。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 199, "weight": 0.4, "minSampleSize": 3000, "note": "CZ確率は補助判別だが設定間の振れ幅が浅い(1/199〜1/194)ため低ウェイト。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 198, "weight": 0.4, "minSampleSize": 3000, "note": "CZ確率は補助判別(振れ幅浅い)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 197, "weight": 0.4, "minSampleSize": 3000, "note": "CZ確率は補助判別(振れ幅浅い)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 196, "weight": 0.4, "minSampleSize": 3000, "note": "CZ確率は補助判別(振れ幅浅い)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 195, "weight": 0.4, "minSampleSize": 3000, "note": "CZ確率は補助判別(振れ幅浅い)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 194, "weight": 0.4, "minSampleSize": 3000, "note": "CZ確率は補助判別(振れ幅浅い)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "サイクル天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 8,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "8サイクル目到達で「ウイニングチャンス」突入(8サイクル目の該当レースに到達でAT確定)、ゲーム数天井と並行(いずれか早い方)。設定変更時は全状態リセット、初回サイクルのCZ当選率は約30%。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ウイニングチャンス突入(AT確定の可能性)",
+      "resetText": "設定変更で全状態リセット"
+    },
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 499,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "499G+αで「ウイニングチャンス」突入(サイクル天井と並行、いずれか早い方)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ウイニングチャンス突入",
+      "resetText": "設定変更で全状態リセット"
+    }
+  ]
+}

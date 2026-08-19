@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "sao_2",
+    "name": "スロット ソードアート・オンラインII",
+    "manufacturer": "パオン・ディーピー",
+    "type": "AT",
+    "releaseDate": "2026-06-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率・CZ初当り確率を反映(設定3<設定2、設定5<設定4という非単調な並びは1geki.jpで2回再取得しても同一の機種固有仕様と確認、複合抽選経路によるものと推定)。天井はAT間1200G+CZ間499G(上位CZ失敗後256Gに短縮)を反映(2026-08-10、天井部分はDMMでクロスチェック済み)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/5025",
+    "ichigekiUrl": "https://1geki.jp/slot/l_sao2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 386.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定3<設定2、設定5<設定4の非単調な並びは1geki.jpで2回再取得後も同一値、機種固有仕様と判断。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 364.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 368.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定2よりわずかに悪い非単調な値だが機種固有仕様と確認済み。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 326.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 340.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定4よりわずかに悪い非単調な値だが機種固有仕様と確認済み。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 269.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 238.4, "weight": 0.78, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。DMM(machines/5025)でもこの値をクロスチェック済み。"},
+        {"settingNo": 2, "denominatorValue": 232.3, "weight": 0.78, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 232.7, "weight": 0.78, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。設定2よりわずかに悪い非単調な値だが機種固有仕様と確認済み。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 218.9, "weight": 0.78, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 225.2, "weight": 0.78, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。設定4よりわずかに悪い非単調な値だが機種固有仕様と確認済み。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 191.7, "weight": 0.78, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間天井1200G+αで「バレットオブバレッツ」濃厚。液晶ゲーム数天井は800G+α。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "バレットオブバレッツ濃厚",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 499,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "CZ間天井499G+αで「スコードロンバトル」濃厚。上位CZ「デス・ガンバトル」失敗後は256G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "スコードロンバトル濃厚",
+      "resetText": "デス・ガンバトル失敗でリセット(256Gに短縮)"
+    }
+  ]
+}

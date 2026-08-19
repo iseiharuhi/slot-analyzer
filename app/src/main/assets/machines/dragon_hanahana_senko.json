@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "dragon_hanahana_senko",
+    "name": "スマート沖スロ ドラゴンハナハナ~閃光~",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2024-03-18",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/pachiseven.jp一致でBIG+REG合算確率を反映(REGの方がBIGよりも設定間の振れ幅が大きく、より信頼できる判別要素とpachiseven.jpが指摘)。天井は非搭載(1geki「非搭載」、DMM「なし」、pachiseven.jp「天井機能ナシ」の3ソース一致、AT/CZ非搭載の通常機のため妥当)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4536",
+    "ichigekiUrl": "https://1geki.jp/slot/l_drahana_senko/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 183, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/256、REG1/642、出玉率97%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 173, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/246、REG1/585、出玉率99%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 3, "denominatorValue": 163, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/235、REG1/537、出玉率101%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 153, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/224、REG1/489、出玉率104%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 143, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/212、REG1/442、出玉率107%)。1geki.jp/pachiseven.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 133, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/199、REG1/399、出玉率110%)。REGの方がBIGより設定間の振れ幅が大きく信頼度が高いとpachiseven.jpが指摘。1geki.jp/pachiseven.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

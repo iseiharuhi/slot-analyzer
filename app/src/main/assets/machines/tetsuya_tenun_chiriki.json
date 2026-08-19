@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "tetsuya_tenun_chiriki",
+    "name": "パチスロ 哲也 −天運地力−",
+    "manufacturer": "Daiichi",
+    "type": "AT",
+    "releaseDate": "2020-12-21",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM完全一致で初当り確率(CZ/AT分割なしの単一合算値、本機唯一の判別軸)を反映(全6設定判明)。天井は通常時最大約900G(有利区間発生後867G)で雀聖ボーナス濃厚(67G〜867Gまで100G間隔で抽選)。設定変更で天井G数・卓廻しptとも完全リセット、ステージが神保ステージに変化、リセット後初回のAT内容は玄人タイム(AT)約38%・雀聖ボーナス約62%。電源off/onでは維持(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3787",
+    "ichigekiUrl": "https://1geki.jp/slot/s_tetsuya_tenun/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 463, "weight": 1, "minSampleSize": 2500, "note": "初当り確率(CZ/AT分割なしの単一合算値)は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 433, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 407, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 341, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 306, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 293, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大約900G(有利区間発生後867G)で雀聖ボーナス濃厚。67G〜867Gまで100G間隔で天井抽選。設定変更で天井G数・卓廻しptが完全リセット、ステージが神保ステージに変化。リセット後初回のAT内容は玄人タイム(AT)約38%・雀聖ボーナス約62%。電源off/onでは維持。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "雀聖ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更ですべてリセット)"
+    }
+  ]
+}

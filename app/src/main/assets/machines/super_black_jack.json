@@ -6,9 +6,9 @@
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2025-02-03",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "調査済み・未反映: 1geki.jp(raw HTML)からボーナス初当り確率(全6設定判明、DMM機械割97.8%〜112.7%と一致)+リオチャンス高確率(設定1=1/417.6〜設定6=1/312.1)を発見したが、既存カウンタ定義がBIG(bb_count)/RB(rb_count)を個別に持つ一方で公開データはBB/RB分割のない単一合算値のため、誤った按分を避けるためsettingReferenceValuesには反映せず。参考値(ボーナス初当り): 設定1=1/241.7、設定2=1/238.8、設定3=1/235.9、設定4=1/201.8、設定5=1/194.9、設定6=1/181.3。2025年2月発売の比較的新しい機種だが公開データは既に揃っている。BB/RB個別の設定差データが将来公開された時点で改めて反映予定(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4712",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_sbj/"
   },
   "counterDefinitions": [
     {

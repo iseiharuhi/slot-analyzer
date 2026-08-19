@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "masamune_3",
+    "name": "政宗3",
+    "manufacturer": "大都技研",
+    "type": "AT",
+    "releaseDate": "2021-02-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から初当り確率(幸村決戦直撃含む)を反映。天井は累計出陣ポイント制(最大50pt)でボーナス濃厚、内部エスケープ分布(5pt/15pt時点での早期解決率)は設定別に判明も、設定変更時のリセット挙動は1geki側「現在調査中」で情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3828",
+    "ichigekiUrl": "https://1geki.jp/slot/s_msmn3/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 358.8, "weight": 1, "minSampleSize": 2500, "note": "初当り確率(幸村決戦直撃含む)は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 346.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 333.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 313.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 293.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 274.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "shutsujin_point_ceiling",
+      "displayName": "出陣ポイント天井",
+      "ceilingType": "POINT",
+      "limitValue": 50,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "累計出陣ポイント最大50ptでボーナス濃厚。内部エスケープ分布(早期解決率)は設定別: 設定1は5pt時点2.0%/15pt時点5.1%/50pt到達93.0%、設定6は5pt時点5.1%/15pt時点10.2%/50pt到達84.8%。設定変更時のリセット挙動は1geki側「現在調査中」で情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

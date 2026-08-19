@@ -1,0 +1,140 @@
+{
+  "machine": {
+    "id": "sister_quest",
+    "name": "Sister Quest",
+    "manufacturer": "カルミナ",
+    "type": "AT",
+    "releaseDate": "2025-03-03",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM完全一致でQuest Battle(CZ)初当り確率(主判別)・冒険RUSH(AT)初当り確率(補助判別)を反映(全6設定判明)。天井は3系統: CZ間最大1400EXP+α(主天井)、CZスルー5回で6回目CZ勝利濃厚、AT間最大2000G+α(設定変更で100%999G+αに短縮、両ソース一致)。AT間天井到達時の999G/2000G選択率は自然発生時の設定差指標として設定1=0.8%〜設定6=12.5%(999G側)、notesのみ参考記録(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4741",
+    "ichigekiUrl": "https://1geki.jp/slot/l_sisterquest/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 317.3, "weight": 1, "minSampleSize": 2500, "note": "Quest Battle(CZ)初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 308.0, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 299.2, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 284.2, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 278.0, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 267.0, "weight": 1, "minSampleSize": 2500, "note": "CZ初当り確率は主判別。1geki.jp/DMM完全一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 470.0, "weight": 0.7, "minSampleSize": 3000, "note": "冒険RUSH(AT)初当り確率は補助判別(999G側選択率0.8%)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 456.3, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(999G側選択率5.5%)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 436.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(999G側選択率10.2%)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 403.2, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(999G側選択率10.9%)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 389.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(999G側選択率11.7%)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 367.0, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(999G側選択率12.5%)。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "POINT",
+      "limitValue": 1400,
+      "unit": "EXP",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "CZ間最大1400EXP+αでCZ濃厚。設定変更で500EXP+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ突入でリセット(設定変更で500EXP+αに短縮)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間でCZ5回連続敗北すると6回目のCZが勝利濃厚でAT当選。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回CZ勝利濃厚",
+      "resetText": "CZ勝利でリセット"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 2000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT間最大2000G+αでAT濃厚(自然発生時は999G+αが選ばれる場合もあり、設定差あり設定1=0.8%〜設定6=12.5%)。設定変更時は100%999G+αに短縮される(DMM明記)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット(設定変更で999G+αに短縮)"
+    }
+  ]
+}

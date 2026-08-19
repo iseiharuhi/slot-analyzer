@@ -1,0 +1,138 @@
+{
+  "machine": {
+    "id": "urusei_yatsura",
+    "name": "Lパチスロうる星やつら",
+    "manufacturer": "エキサイト",
+    "type": "AT",
+    "releaseDate": "2024-04-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス初当り確率(主判別)・AT初当り確率(補助判別)を反映。本機は5段階設定(1/2/4/5/6、3非搭載)、非数値の「L」行(常時下パネル点滅の状態表記)はsettingNo対応せず除外。天井は3系統: 通常時555G+α(液晶画面ゲーム数、主天井)、ボーナス5連続でAT非当選後の次回ボーナス(補助)、爆速コンプ1ラインビンゴ9回スルーで10回目保証(この回数自体はCZ成立までリセットされない、補助)。設定変更で約46.9%の確率で天国モード(111G+αの短縮天井)へ移行。【機種情報の注記、確率データとは別枠】1gekiはメーカーを「EXCITE(エキサイト)」と記載しカタログの値と一致するが、DMM側はメーカー欄・メーカー一覧ページとも「ニューギン」と記載しており、実在する情報源間の不一致(現時点でどちらが正か確定できず、CLAUDE.mdの方針に従いmanufacturerフィールドは変更せず併記のみ)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4538",
+    "ichigekiUrl": "https://1geki.jp/slot/l_urusei_ev/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 266.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。5段階設定(1/2/4/5/6、3非搭載)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 256.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 232.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 216.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 196.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 535.4, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 509.0, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 429.3, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 383.2, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 329.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時555G+α(液晶画面ゲーム数)でボーナス濃厚。設定変更で約46.9%の確率で天国モード(111G+αの短縮天井)へ移行。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で約46.9%の確率で天国モードへ)"
+    },
+    {
+      "ruleKey": "bonus_streak_ceiling",
+      "displayName": "ボーナス連続天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナスが5連続でAT非当選の場合、次回ボーナスで何らかの優遇あり。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回ボーナス優遇",
+      "resetText": "AT当選でリセット"
+    },
+    {
+      "ruleKey": "bingo_through_ceiling",
+      "displayName": "爆速コンプ1ラインビンゴ天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 9,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "爆速コンプの1ラインビンゴが9回スルーすると10回目が保証される。この回数はCZ成立までリセットされない(ボーナス/AT獲得でも維持)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回1ラインビンゴ保証",
+      "resetText": "CZ成立でリセット"
+    }
+  ]
+}

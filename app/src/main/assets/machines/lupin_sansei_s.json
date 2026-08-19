@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "lupin_sansei_s",
+    "name": "Sルパン三世",
+    "manufacturer": "オリンピア",
+    "type": "AT",
+    "releaseDate": "2022-03-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から初当り確率を反映(AT直撃抽選率0.8%→2.7%は補助情報)。天井は555G標準+設定変更時短縮抽選(111/333/555G)を反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4074",
+    "ichigekiUrl": "https://1geki.jp/slot/s_lipin3/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 196.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 193.2, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 186.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 177.2, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 171.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 165.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "標準555G+α。設定変更時は短縮抽選(111G:10.2%、333G:46.9%、555G:43.0%)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "当選",
+      "resetText": "設定変更でリセット(短縮抽選)"
+    }
+  ]
+}

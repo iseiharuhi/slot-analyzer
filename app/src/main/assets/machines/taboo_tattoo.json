@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "taboo_tattoo",
+    "name": "SLOTタブー・タトゥー",
+    "manufacturer": "ミズホ",
+    "type": "AT",
+    "releaseDate": "2021-10-04",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映。天井は有利区間移行後最大800G消化でボーナス確定を反映(DMM「700G以降」、1geki本文「701G以降」の1ゲーム差は表記揺れとして同一ルール扱い)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3976",
+    "ichigekiUrl": "https://1geki.jp/slot/s_tabootattoo/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 332.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率97.2%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 315.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.1%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 287.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率100.2%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 257.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率103.5%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 232.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率105.5%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 201.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率108.2%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間移行後最大800G消化でボーナス確定。700G(DMM)/701G(1geki)以降は呪紋ストック契機のボーナスもトリガーボーナス以上確定(表記揺れ、同一ルール扱い)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス確定",
+      "resetText": "ボーナス成立でリセット"
+    }
+  ]
+}

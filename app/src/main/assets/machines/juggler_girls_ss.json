@@ -1,0 +1,88 @@
+{
+  "machine": {
+    "id": "juggler_girls_ss",
+    "name": "ジャグラーガールズSS",
+    "manufacturer": "北電子",
+    "type": "AT",
+    "releaseDate": "2024-04-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBIG/REG/合算(ジャグラー系)を反映(WebSearchでクロスチェック済み)。天井は非搭載と複数ソースで確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4540",
+    "ichigekiUrl": "https://1geki.jp/slot/s_jag_girls/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 159.1, "weight": 1, "minSampleSize": 2500, "note": "合算(BIG+REG)は主判別。1geki.jp公開値、WebSearchでクロスチェック済み。"},
+        {"settingNo": 2, "denominatorValue": 152.8, "weight": 1, "minSampleSize": 2500, "note": "合算(BIG+REG)は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 142.8, "weight": 1, "minSampleSize": 2500, "note": "合算(BIG+REG)は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 132.4, "weight": 1, "minSampleSize": 2500, "note": "合算(BIG+REG)は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 128.3, "weight": 1, "minSampleSize": 2500, "note": "合算(BIG+REG)は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 119.2, "weight": 1, "minSampleSize": 2500, "note": "合算(BIG+REG)は主判別。1geki.jp公開値、WebSearchでクロスチェック済み。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 273.1, "weight": 0.6, "minSampleSize": 3000, "note": "BIG確率は補助判別(ジャグラー系はBIG重視で判別)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 270.8, "weight": 0.6, "minSampleSize": 3000, "note": "BIG確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 260.1, "weight": 0.6, "minSampleSize": 3000, "note": "BIG確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 250.1, "weight": 0.6, "minSampleSize": 3000, "note": "BIG確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 243.6, "weight": 0.6, "minSampleSize": 3000, "note": "BIG確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 226.0, "weight": 0.6, "minSampleSize": 3000, "note": "BIG確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

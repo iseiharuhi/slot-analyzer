@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "shin_ikkitousen",
+    "name": "L 真・一騎当千",
+    "manufacturer": "Daiichi",
+    "type": "AT",
+    "releaseDate": "2024-10-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM完全一致でAT初当り確率(主判別)・闘士決戦(CZ)初当り確率(補助判別)を反映(全6設定判明)。天井は内部モード依存の多段階(通常A1000G+α/通常B900G+α/通常C700G+α/通常D400G+α/天国100G+α)で通常Aを主天井として記録、設定変更で400G+αに短縮(通常Dまたは天国モードへ、両ソース一致)。AT完走後は通常C以上(700G+α以下)が保証される(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4650",
+    "ichigekiUrl": "https://1geki.jp/slot/l_shin_ikkitosen/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 321, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 311, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 292, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 246, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 232, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 222, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM完全一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 154, "weight": 0.7, "minSampleSize": 3000, "note": "闘士決戦(CZ)初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 148, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 138, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 115, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 110, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 105, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "通常Aゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "内部モード依存の多段階天井: 通常A1000G+α/通常B900G+α/通常C700G+α/通常D400G+α/天国100G+α。CZの定期抽選はAT当選までこの天井カウントをリセットしない。設定変更で400G+αに短縮(通常Dまたは天国モードへ移行、両ソース一致)。AT完走後は通常C以上(700G+α以下)が保証される。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット(設定変更で400G+αに短縮)"
+    }
+  ]
+}

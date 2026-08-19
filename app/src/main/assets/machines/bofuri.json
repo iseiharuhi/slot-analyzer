@@ -1,0 +1,266 @@
+{
+  "machine": {
+    "id": "bofuri",
+    "name": "スマスロ痛いのは嫌なので防御力に極振りしたいと思います。",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2024-06-03",
+    "isActive": true,
+    "notes": "AT精度一括調整済み。主判別は直撃、初当り/ボーナス、補助はCZ、小役/ベル。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4566",
+    "ichigekiUrl": "https://1geki.jp/slot/l_bofuri/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス初当り合算",
+      "category": "BONUS",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "ボーナス初当り合算。主判別項目。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "高確率ZONE当選",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "高確滞在時のチェリー/スイカ契機を含むCZ当選回数。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "EPBB直撃",
+      "category": "SPECIAL",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "ヒドラ目契機のエピソードボーナス直撃回数。強い補助要素。"
+    },
+    {
+      "key": "bell_count",
+      "displayName": "上段ベル(5枚)",
+      "category": "SMALL_ROLE",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "上段5枚ベルの出現回数。サンプルが取れれば安定要素。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 319.0,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 309.8,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 307.1,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 266.8,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 257.1,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 229.7,
+          "weight": 1.0,
+          "minSampleSize": 6,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 2356.0,
+          "weight": 0.85,
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 1587.3,
+          "weight": 0.85,
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 1587.3,
+          "weight": 0.85,
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 1204.8,
+          "weight": 0.85,
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 1136.4,
+          "weight": 0.85,
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 1087.0,
+          "weight": 0.85,
+          "minSampleSize": 8,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "direct_hit_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 23560.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 17029.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 14743.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 6902.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 5663.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 4889.0,
+          "weight": 1.2,
+          "minSampleSize": 2,
+          "note": "直撃は強い補強要素。確認時は上側に寄せやすいが単独過信は避ける。"
+        }
+      ]
+    },
+    {
+      "counterKey": "bell_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 18.3,
+          "weight": 0.8,
+          "minSampleSize": 120,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 18.3,
+          "weight": 0.8,
+          "minSampleSize": 120,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 18.3,
+          "weight": 0.8,
+          "minSampleSize": 120,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 17.9,
+          "weight": 0.8,
+          "minSampleSize": 120,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 17.3,
+          "weight": 0.8,
+          "minSampleSize": 120,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 16.6,
+          "weight": 0.8,
+          "minSampleSize": 120,
+          "note": "小役・ベル系は長時間実戦の補強要素。概ね3000G級から有効。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

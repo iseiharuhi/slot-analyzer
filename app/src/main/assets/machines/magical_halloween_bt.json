@@ -1,0 +1,75 @@
+{
+  "machine": {
+    "id": "magical_halloween_bt",
+    "name": "マジカルハロウィン ボーナストリガー",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2025-09-22",
+    "isActive": true,
+    "notes": "partial: slobase.jp/p-gabu.jp/DMMの3ソース一致でBB+RB合算確率を反映(設定3・4は3ソースとも欠落=真に未公開、2→5に飛ぶ)。設定3・4のみ欠落しているため4段階設定機の可能性を示唆する二次情報もあるが、いずれの一次ソースでも明確な確認は取れず未確定として扱う(2026年8月時点で発売から約11か月経過してもなお全ソースで空欄という状況証拠のみ)。天井は非搭載(1geki「非搭載」、WebSearch集約「天井機能を搭載していない」で2ソース一致、DMM側は「調査中」で矛盾なし)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4854",
+    "ichigekiUrl": "https://1geki.jp/slot/lb_magihallo/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 169.3, "weight": 1, "minSampleSize": 2500, "note": "BB+RB合算確率は主判別(BB1/299.3、RB1/390.1)。slobase.jp/p-gabu.jp/DMMの3ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 159.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/295.2、RB1/346.8)。3ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 143.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/273.1、RB1/300.6)。設定3・4は3ソースとも欠落のため未収録(2→5、4段階設定機の可能性を示唆する情報もあるが未確定)。3ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 131.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB=RB=1/262.1完全一致)。3ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

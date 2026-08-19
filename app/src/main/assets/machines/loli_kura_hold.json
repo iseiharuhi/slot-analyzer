@@ -1,0 +1,84 @@
+{
+  "machine": {
+    "id": "loli_kura_hold",
+    "name": "パチスロ ロリクラ☆ほーるど!",
+    "manufacturer": "ネット",
+    "type": "AT",
+    "releaseDate": "2021-09-06",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(生HTML取得)/slopachi-quest.com一致でCZ当選率「ロリクラ☆ちゃんす」(主判別)・AT当選率「ロリクラ☆1000ぼーなす」(補助判別、CZ内はガチ3択のため判別価値は限定的とslopachi-quest.com指摘)を反映(設定3・4は両ソースとも欠落=真に未公開、2016年運用開始から2025-12-09更新の成熟したページでも欠落=分析未了ではなく真に非公開、2→5に飛ぶ)。天井は1geki天井専用ページが「現在調査中」(非搭載の明言ではなく未確定)のため情報未確認、二次ソースにも数値なし(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3958",
+    "ichigekiUrl": "https://1geki.jp/slot/s_roliclu/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 333, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率「ロリクラ☆ちゃんす」は主判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 2, "denominatorValue": 317, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。設定3・4は両ソースとも欠落のため未収録(2→5)。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 5, "denominatorValue": 297, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 6, "denominatorValue": 259, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。1geki.jp/slopachi-quest.com一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 999, "weight": 0.5, "minSampleSize": 3000, "note": "AT当選率「ロリクラ☆1000ぼーなす」は補助判別(CZ内はガチ3択のため判別価値は限定的)。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 2, "denominatorValue": 951, "weight": 0.5, "minSampleSize": 3000, "note": "AT当選率は補助判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 5, "denominatorValue": 889, "weight": 0.5, "minSampleSize": 3000, "note": "AT当選率は補助判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 6, "denominatorValue": 777, "weight": 0.5, "minSampleSize": 3000, "note": "AT当選率は補助判別。1geki.jp/slopachi-quest.com一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

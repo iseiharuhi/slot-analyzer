@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "ultraman_l",
+    "name": "L ULTRAMAN",
+    "manufacturer": "オッケー.",
+    "type": "AT",
+    "releaseDate": "2025-06-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(raw HTML、タイトル・発売日照合済み、他ウルトラマン系機種との混同なし)からAT初当り確率を反映。本機は5段階設定(1/2/4/5/6のみ、3非搭載、欠落ではない)。天井は998G+α(通常時)でAT濃厚、設定変更で665G+αに短縮を反映(1geki/DMM一致、高信頼度)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4813",
+    "ichigekiUrl": "https://1geki.jp/slot/l_ultraman/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 320.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。5段階設定(1/2/4/5/6、3非搭載)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 308.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 271.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 247.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 222.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 998,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時998G+αでAT濃厚。設定変更で665G+αに短縮(1geki/DMM一致、高信頼度)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更で665G+αに短縮)"
+    }
+  ]
+}

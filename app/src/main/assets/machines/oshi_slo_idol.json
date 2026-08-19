@@ -1,0 +1,47 @@
+{
+  "machine": {
+    "id": "oshi_slo_idol",
+    "name": "推しスロ アイドルVer.",
+    "manufacturer": "タツミコーポレーション",
+    "type": "BONUS",
+    "releaseDate": "2023-12-01",
+    "isActive": true,
+    "notes": "partial: 2026-08-20に改めて1geki.jp/DMM/psmaga.com(secondary)/p-kn.com(secondary)の4ソースを再調査、settingReferenceValuesが数値化できない理由を再確認・確定。DMMの設定判別/解析情報セクションはすべて「準備中」、1gekiには専用の設定判別サブページ自体が存在せず、二次ソース2つも「ボーナス確率」を謳うページの実体は機械割表のみで真の確率データではない。本機は天井150G到達で必ずボーナス当選する決定論的トリガー(全設定共通、確率ではない)であり、設定差は「どのボーナス種別(チャリティ/等倍/レギュラー/ビッグ/スーパービッグ、各固定枚数)が選択可能か」という組み合わせ表現(設定1のみチャリティ、設定2のみ等倍、設定3/4/5がレギュラー、設定3/4がビッグ、設定3/5がスーパービッグ)+台枠ランプ色示唆で表現され、本アプリのdenominatorValue形式(総ゲーム数分母)に落とし込める公開データが存在しない。よってsettingReferenceValuesは意図的に空欄のまま確定(捏造回避、確認済みの構造的制約であり要調査事項ではない)。天井は150Gのみ、確定的で設定間の差はない(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4455",
+    "ichigekiUrl": "https://1geki.jp/slot/s_oshisloaid/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "inputType": "NUMBER",
+      "unit": "G",
+      "supportsMinus": false,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
+    }
+  ],
+  "settingReferenceValues": [],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 150,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時150G消化でボーナスに当選。基本的に150Gの天井のみ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナスに当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

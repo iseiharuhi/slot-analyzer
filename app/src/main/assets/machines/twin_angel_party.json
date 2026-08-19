@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "twin_angel_party",
+    "name": "パチスロツインエンジェル PARTY",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2021-10-04",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算確率(主判別)・「エンジェルチャンス」TOTAL当選率(補助判別)を反映(設定2のみボーナス合算がTOTALよりわずかに良い逆転値だが生HTML確認済みで実データ、他設定は正常な包含関係)。天井は通常時555G+α(設定変更で333G+αに短縮)でAT「デートタイム」突入を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3960",
+    "ichigekiUrl": "https://1geki.jp/slot/s_twinangel_party/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 199.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率97.9%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 192.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率99.8%)。TOTAL当選率(1/193.4)よりわずかに良い逆転値だが生HTML確認済みの実データ(誤差0.3%程度、転記誤りではない)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 186.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率101.4%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 180.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率106.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 174.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率108.1%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 168.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率111.2%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 192.6, "weight": 0.6, "minSampleSize": 3000, "note": "「エンジェルチャンス」TOTAL当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 193.4, "weight": 0.6, "minSampleSize": 3000, "note": "TOTAL当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 179.0, "weight": 0.6, "minSampleSize": 3000, "note": "TOTAL当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 179.8, "weight": 0.6, "minSampleSize": 3000, "note": "TOTAL当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 162.8, "weight": 0.6, "minSampleSize": 3000, "note": "TOTAL当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 167.1, "weight": 0.6, "minSampleSize": 3000, "note": "TOTAL当選率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時555G+αでAT「デートタイム」突入濃厚。設定変更時は333G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「デートタイム」突入濃厚",
+      "resetText": "AT当選でリセット(設定変更で333Gに短縮)"
+    }
+  ]
+}

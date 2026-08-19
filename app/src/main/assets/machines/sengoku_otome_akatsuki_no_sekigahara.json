@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "id": "sengoku_otome_akatsuki_no_sekigahara",
+    "name": "パチスロ戦国乙女 暁の関ヶ原‐DARKNESS‐",
+    "manufacturer": "オリンピア",
+    "type": "AT",
+    "releaseDate": "2021-11-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT「乙女RUSH」初当り確率を反映(1geki自身が「自社調査」値と明記、公式スペックではない点に留意)。天井はCZ「戦国モード」634G+αとAT「乙女ラッシュ」969G+αの2段階を反映。設定変更時は全設定共通の短縮抽選(58.2%短縮なし/40.2%で300G・635Gに短縮/1.6%で100G・435Gに短縮)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3995",
+    "ichigekiUrl": "https://1geki.jp/slot/s_otome_darkness/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 385.5, "weight": 1, "minSampleSize": 2500, "note": "AT「乙女RUSH」初当り確率は主判別(出玉率97.5%、1geki「自社調査」値)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 371.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.5%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 352.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率99.9%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 298.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率105.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 272.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率108.0%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 248.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率111.1%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_game_ceiling",
+      "displayName": "AT「乙女ラッシュ」天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 969,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT「乙女ラッシュ」最大969G+α(前兆ゲーム込み)で濃厚。設定変更時は全設定共通の短縮抽選: 58.2%で短縮なし(969G)、40.2%で635Gに短縮、1.6%で435Gに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「乙女ラッシュ」濃厚",
+      "resetText": "AT当選でリセット(設定変更で短縮抽選)"
+    },
+    {
+      "ruleKey": "cz_game_ceiling",
+      "displayName": "CZ「戦国モード」天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 634,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "CZ「戦国モード」最大634G+αで濃厚。設定変更時は全設定共通の短縮抽選: 58.2%で短縮なし(634G)、40.2%で300Gに短縮、1.6%で100Gに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ「戦国モード」濃厚",
+      "resetText": "CZ突入でリセット(設定変更で短縮抽選)"
+    }
+  ]
+}

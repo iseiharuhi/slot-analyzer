@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "bancho_zero",
+    "name": "押忍!番長ZERO",
+    "manufacturer": "パオン・ディーピー",
+    "type": "AT",
+    "releaseDate": "2022-01-31",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から初当り合算・AT直撃出現率を反映。天井は600G+前兆消化でボーナス(BB以上)当選、REG成立時AT濃厚を反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4052",
+    "ichigekiUrl": "https://1geki.jp/slot/s_osubancho_zero/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 246.0, "weight": 1, "minSampleSize": 2500, "note": "初当り合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 239.4, "weight": 1, "minSampleSize": 2500, "note": "初当り合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 224.0, "weight": 1, "minSampleSize": 2500, "note": "初当り合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 207.8, "weight": 1, "minSampleSize": 2500, "note": "初当り合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 193.7, "weight": 1, "minSampleSize": 2500, "note": "初当り合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 179.5, "weight": 1, "minSampleSize": 2500, "note": "初当り合算は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 4808.52, "weight": 0.3, "minSampleSize": 15000, "note": "AT直撃出現率は分母が非常に重い補強要素。単独過信は避ける。"},
+        {"settingNo": 2, "denominatorValue": 4157.34, "weight": 0.3, "minSampleSize": 15000, "note": "AT直撃出現率は分母が非常に重い補強要素。単独過信は避ける。"},
+        {"settingNo": 3, "denominatorValue": 2671.45, "weight": 0.3, "minSampleSize": 15000, "note": "AT直撃出現率は分母が非常に重い補強要素。単独過信は避ける。"},
+        {"settingNo": 4, "denominatorValue": 1754.35, "weight": 0.3, "minSampleSize": 15000, "note": "AT直撃出現率は分母が非常に重い補強要素。単独過信は避ける。"},
+        {"settingNo": 5, "denominatorValue": 1528.47, "weight": 0.3, "minSampleSize": 15000, "note": "AT直撃出現率は分母が非常に重い補強要素。単独過信は避ける。"},
+        {"settingNo": 6, "denominatorValue": 1108.17, "weight": 0.3, "minSampleSize": 15000, "note": "AT直撃出現率は分母が非常に重い補強要素。単独過信は避ける。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "600G+前兆消化でボーナス(BB以上)当選。REG成立時はAT当選濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス(BB以上)当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

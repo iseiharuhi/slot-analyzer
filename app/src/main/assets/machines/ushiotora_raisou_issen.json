@@ -1,0 +1,104 @@
+{
+  "machine": {
+    "id": "ushiotora_raisou_issen",
+    "name": "Sうしおととら 雷槍一閃",
+    "manufacturer": "Daiichi",
+    "type": "AT",
+    "releaseDate": "2021-09-06",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(raw HTML)から初当り確率(主判別)・AT初当り確率(補助判別)を反映。本機は5段階設定(1/2/4/5/6、3非搭載)、非数値の「L」行(出玉率80.0%のみ、確率非公開の規定値扱い)はsettingNo対応せず除外。天井は7周期目(約700G+α)で「うしとらチャンス」以上濃厚(内訳: うしとらチャンス約60%・真うしとらチャンス約25%・AT「うしとRUSH」約15%、設定差なし)。設定変更で天井G数・うしおポイントとも明確にクリア(1geki専用リセット表で確認)、電源off/onのみの場合はすべて引き継ぐ(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3967",
+    "ichigekiUrl": "https://1geki.jp/slot/s_ushiototora/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 286.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。5段階設定(1/2/4/5/6、3非搭載)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 281.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 256.8, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 246.8, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 216.1, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 685.2, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 644.8, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 546.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 454.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 313.1, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 700,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "7周期目(約700G+α)で「うしとらチャンス」以上濃厚(内訳: うしとらチャンス約60%・真うしとらチャンス約25%・AT「うしとRUSH」約15%、設定差なし)。設定変更で天井G数・うしおポイントとも明確にクリアされる(1geki専用リセット表で確認)。電源off/onのみの場合はすべて引き継ぐ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "うしとらチャンス以上濃厚",
+      "resetText": "CZ/AT成立でリセット(設定変更ですべてクリア)"
+    }
+  ]
+}

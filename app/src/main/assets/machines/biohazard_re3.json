@@ -1,0 +1,177 @@
+{
+  "machine": {
+    "id": "biohazard_re3",
+    "name": "スマスロ バイオハザードRE:3",
+    "manufacturer": "Enterrise",
+    "type": "AT",
+    "releaseDate": "2026-05-11",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できたAT初当たりを主軸に反映。 CZ・ボーナス・直撃/特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/slobaseの2ソース一致で通常1000G/短縮650G+CZスルー天井を確認・反映(2026-08-10)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4974",
+    "ichigekiUrl": "https://1geki.jp/slot/l_bhr2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当たり",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「ハザードラッシュ」初当たり回数。公開値ありの主判別要素。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "CZ「ネメシスバトル」回数。全設定比較値が未公開のため補助記録のみ。"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "全設定比較値が未公開のため推測には未使用。"
+    },
+    {
+      "key": "direct_hit_count",
+      "displayName": "直撃/特殊契機",
+      "category": "SPECIAL",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "公開比較値未確認のため推測には未使用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 399.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 391.4,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 372.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 349.8,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 323.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 311.2,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "主判別。2500G以上で信頼度上昇。CZ・ボーナスと複合で判断。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1000G+αで「パンデミックチャンス」(ボーナス昇格ゾーン)経由の恩恵。天井ゲーム数自体に設定差なし(AT初当り確率には設定差あり)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "パンデミックチャンス経由の恩恵",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "shortened_game_ceiling",
+      "displayName": "短縮ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 650,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更時は650G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "パンデミックチャンス経由の恩恵",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "nemesis_battle_through",
+      "displayName": "ネメシスバトル・スルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 6,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ「ネメシスバトル」6回連続失敗で7回目成功濃厚。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ネメシスバトル成功濃厚",
+      "resetText": "成功でリセット"
+    }
+  ]
+}

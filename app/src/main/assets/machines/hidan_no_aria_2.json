@@ -2,13 +2,13 @@
   "machine": {
     "id": "hidan_no_aria_2",
     "name": "緋弾のアリア2",
-    "manufacturer": null,
+    "manufacturer": "JFJ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2023-02-06",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML、タイトル・著作権表記で前作「緋弾のアリア」2016年版との取り違えなし複数回確認済み)からAT出現率(本機唯一の判別軸、ボーナス概念なし)を反映。設定3は1geki/DMM両ドメインとも一貫して欠落(2→4、系統的な未公開)。共通ベル確率(設定1=1/106.0〜設定6=1/84.2、設定3欠落は同様)は補助的な役確率のためnotesのみ参考記録。天井は周期(サイクル)単位で最大10周期消化(通常時)でCZ「クライマックスフェーズ」勝利濃厚(1周期≒約100G+αだが公式のゲーム数換算は未公開のため周期のまま記録)。設定変更でセグ表示・周期回数・バレットがすべてリセット、ステージはヘリ待機ステージに変化、電源off/onでは全て引き継ぐ(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4298",
+    "ichigekiUrl": "https://1geki.jp/slot/s_aria2/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 445.2, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は本機唯一の判別軸(ボーナス概念なし)。共通ベル確率は1/106.0(補助、notesのみ)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 392.1, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は本機唯一の判別軸。設定3は両ドメインとも欠落のため未収録(2→4)。共通ベル確率は1/100.8(DMM)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 320.3, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は本機唯一の判別軸。共通ベル確率は1/96.1(DMM)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 272.9, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は本機唯一の判別軸。共通ベル確率は1/89.8(DMM)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 243.4, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は本機唯一の判別軸。共通ベル確率は1/84.2(DMM)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 10,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大10周期消化でCZ「クライマックスフェーズ」勝利濃厚からAT確定(1周期≒約100G+αだが公式のゲーム数換算は未公開のため周期単位のまま記録)。設定変更でセグ表示・周期回数・バレット(アイテム数)がすべてリセット、ステージはヘリ待機ステージに変化。電源off/onでは全て引き継ぐ(セグ色のみ白にリセット)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ「クライマックスフェーズ」勝利濃厚",
+      "resetText": "AT当選でリセット(設定変更ですべてリセット)"
+    }
+  ]
 }

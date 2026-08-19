@@ -2,13 +2,13 @@
   "machine": {
     "id": "g1_yushun_club_gold",
     "name": "LGI優駿倶楽部 黄金",
-    "manufacturer": null,
+    "manufacturer": "コナミアミューズメント",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2024-02-05",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp「本機はGIボーナスやAT初当り確率にはほぼ設定差がない」との明記どおり、GIボーナス初当り(主判別)・GIロード(AT確定、補助判別)ともに設定間の振れ幅が1%未満のほぼフラットな実データ(判別力が低いためweight大幅低減して記録、DMMレビューも同様の指摘)。実際の設定差は終了画面のキャラ組合せ等の示唆要素に集約される(notesのみ)。天井は1111G(唯一AT直撃を保証、主天井)で、333/555/777/999/1111Gの5分布から抽選され、設定変更で555G選択率が1.17%→96.48%に激変(1geki/DMM「リセット仕様」明記、明確な再抽選)。補助でGIボーナス5回連続AT非当選→次回AT確定(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4493",
+    "ichigekiUrl": "https://1geki.jp/slot/l_g1yshn_gold/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,64 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 312.1, "weight": 0.3, "minSampleSize": 2500, "note": "GIボーナス初当りは主判別だが「ほぼ設定差がない」と1geki明記(1%未満の振れ幅)、weight大幅低減。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 312.0, "weight": 0.3, "minSampleSize": 2500, "note": "GIボーナス初当り、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 311.9, "weight": 0.3, "minSampleSize": 2500, "note": "GIボーナス初当り、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 311.8, "weight": 0.3, "minSampleSize": 2500, "note": "GIボーナス初当り、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 311.7, "weight": 0.3, "minSampleSize": 2500, "note": "GIボーナス初当り、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 311.6, "weight": 0.3, "minSampleSize": 2500, "note": "GIボーナス初当り、判別力が低いためweight低減。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 599.6, "weight": 0.3, "minSampleSize": 3000, "note": "GIロード(AT確定)は補助判別だが同様にほぼフラット、weight低減。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 599.1, "weight": 0.3, "minSampleSize": 3000, "note": "GIロード、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 596.8, "weight": 0.3, "minSampleSize": 3000, "note": "GIロード、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 595.2, "weight": 0.3, "minSampleSize": 3000, "note": "GIロード、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 590.3, "weight": 0.3, "minSampleSize": 3000, "note": "GIロード、判別力が低いためweight低減。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 586.9, "weight": 0.3, "minSampleSize": 3000, "note": "GIロード、判別力が低いためweight低減。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1111,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "最大1111Gで天井目標が333/555/777/999/1111Gの5分布から抽選され、1111G到達時のみAT(GIロード)直撃確定(他4目標はGIボーナスのみ濃厚)。設定変更で555G選択率が1.17%→96.48%に激変(1geki/DMM「リセット仕様」明記、明確な再抽選)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT(GIロード)直撃確定",
+      "resetText": "AT当選でリセット(設定変更で天井分布が再抽選)"
+    },
+    {
+      "ruleKey": "through_ceiling",
+      "displayName": "GIボーナス連続天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "GIボーナスが5回連続でAT非当選の場合、次回のGIボーナスでGIロード(AT)確定。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回AT確定",
+      "resetText": "AT当選でリセット"
+    }
+  ]
 }

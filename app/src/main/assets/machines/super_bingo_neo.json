@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "super_bingo_neo",
+    "name": "Lスーパービンゴネオ",
+    "manufacturer": "ベルコ",
+    "type": "AT",
+    "releaseDate": "2024-12-16",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映(設定3は1geki本ページ・詳細ページとも2回確認して欠落=真に未公開、2→4に飛ぶ)。天井は999G+α(BC濃厚)、設定変更時777G+αに短縮を反映。天井G数・ゲーム状態・ビンゴポイントは電源off/onで引き継ぎ(前作ビンゴネオにあった444G中間天井は本作になし)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4675",
+    "ichigekiUrl": "https://1geki.jp/slot/l_superbingo_neo/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 449.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 440.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 405.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定3は1geki本ページ・詳細ページとも2回確認して欠落のため未収録(2→4)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 387.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 365.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "999G+αでBC(ビンゴチャンス)濃厚。設定変更時は777G+αに短縮。天井G数・ゲーム状態・ビンゴポイントは電源off/onで引き継ぎ。前作ビンゴネオにあった444G中間天井は本作にはない。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BC濃厚",
+      "resetText": "設定変更で777Gに短縮"
+    }
+  ]
+}

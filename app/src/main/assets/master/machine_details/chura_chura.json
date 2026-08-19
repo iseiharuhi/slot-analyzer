@@ -1,0 +1,19 @@
+{
+  "id": "chura_chura",
+  "name": "Sちゅらちゅら",
+  "manufacturer": null,
+  "type": "BONUS",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "partial: 公開比較値を確認できたREG・BIG・合算ボーナスを主軸に反映。 精度優先で暫定値は採用していない。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4486",
+  "ichigekiUrl": null,
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4486"
+    }
+  ],
+  "fileName": "dmm_slot_032.json"
+}

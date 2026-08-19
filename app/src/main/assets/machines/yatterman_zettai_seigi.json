@@ -2,13 +2,13 @@
   "machine": {
     "id": "yatterman_zettai_seigi",
     "name": "ヤッターマン絶対正義",
-    "manufacturer": null,
+    "manufacturer": "サンスリー",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2020-05-11",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からヤッターチャンス(初当り、CZ、主判別)・ヤッターバトルRUSH(初当り、AT、補助判別)を反映(全6設定判明)。天井は799G(有利区間移行後)でヤッターチャンス濃厚。設定変更で天井G数・ポイント・モードすべてリセット、ドロンタウンステージが強制される。電源off/onでは全て引き継ぐ(表示上の「0」は演出のみで内部カウントはレバーオンで復元、1geki明記)(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3674",
+    "ichigekiUrl": "https://1geki.jp/slot/s_yatterman_z/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 335.7, "weight": 1, "minSampleSize": 2500, "note": "ヤッターチャンス(初当り)は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 322.3, "weight": 1, "minSampleSize": 2500, "note": "ヤッターチャンス(初当り)は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 308.3, "weight": 1, "minSampleSize": 2500, "note": "ヤッターチャンス(初当り)は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 286.2, "weight": 1, "minSampleSize": 2500, "note": "ヤッターチャンス(初当り)は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 239.0, "weight": 1, "minSampleSize": 2500, "note": "ヤッターチャンス(初当り)は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 164.2, "weight": 1, "minSampleSize": 2500, "note": "ヤッターチャンス(初当り)は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 960.6, "weight": 0.7, "minSampleSize": 3000, "note": "ヤッターバトルRUSH(初当り)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 909.5, "weight": 0.7, "minSampleSize": 3000, "note": "ヤッターバトルRUSH(初当り)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 874.5, "weight": 0.7, "minSampleSize": 3000, "note": "ヤッターバトルRUSH(初当り)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 790.1, "weight": 0.7, "minSampleSize": 3000, "note": "ヤッターバトルRUSH(初当り)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 621.1, "weight": 0.7, "minSampleSize": 3000, "note": "ヤッターバトルRUSH(初当り)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 436.0, "weight": 0.7, "minSampleSize": 3000, "note": "ヤッターバトルRUSH(初当り)は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 799,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "有利区間移行後799Gでヤッターチャンス濃厚。設定変更で天井G数・ポイント・モードすべてリセット、ドロンタウンステージが強制される。電源off/onでは全て引き継ぐ(表示上の「0」は演出のみで内部カウントはレバーオンで復元)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ヤッターチャンス濃厚",
+      "resetText": "ヤッターチャンス突入でリセット(設定変更ですべてリセット)"
+    }
+  ]
 }

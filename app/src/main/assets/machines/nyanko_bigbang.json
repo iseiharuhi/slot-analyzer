@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "nyanko_bigbang",
+    "name": "ぱちスロ にゃんこ大戦争 BIGBANG",
+    "manufacturer": "京楽",
+    "type": "AT",
+    "releaseDate": "2023-06-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/nana-press.comの2ソース一致でAT初当り確率を反映(設定3は両ソースとも公式非公表で欠番)。天井は1500G(AT終了後222G/1500Gの2択、高設定ほど222G優遇)+設定変更時1122Gを反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4369",
+    "ichigekiUrl": "https://1geki.jp/slot/l_nyanko/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 587.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定3は1geki.jp/nana-press.comとも公式非公表のため欠番。2ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 573.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 504.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 447.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 417.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。2ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大1500G+αでAT当選確定。AT終了後は222Gまたは1500G+αの2択(高設定ほど222G選択率アップ)。設定変更(リセット)後は1122G+α。到達時の恩恵はガチャ性能アップ(ギガントゼウス確定67%/ALL超ポセイドン9%/ALLアフロディーテ22%/超ネコ祭2%)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選確定(ガチャ性能アップ)",
+      "resetText": "設定変更でリセット(1122Gに短縮)"
+    }
+  ]
+}

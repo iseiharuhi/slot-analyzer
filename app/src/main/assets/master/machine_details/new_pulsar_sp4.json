@@ -1,0 +1,23 @@
+{
+  "id": "new_pulsar_sp4",
+  "name": "ニューパルサーSP4",
+  "manufacturer": "SEVEN LEAGUE",
+  "type": "BONUS",
+  "releaseDate": "2024-05-07",
+  "isActive": true,
+  "notes": "ノーマル精度仕上げ対応。主判別はREG、補助は合算、BIGは最終補助に整理。ニューパル系はREGを軸にしつつ、合算で全体傾向を確認する。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4550",
+  "ichigekiUrl": "https://1geki.jp/slot/s_newpulsar_with_tt/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4550"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_newpulsar_with_tt/"
+    }
+  ],
+  "fileName": "list_slot_042.json"
+}

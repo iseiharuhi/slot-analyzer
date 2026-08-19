@@ -1,0 +1,157 @@
+{
+  "machine": {
+    "id": "tokyo_revengers",
+    "name": "スマスロ 東京リベンジャーズ",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2025-09-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から東卍RUSH(AT)確率(主判別)・初当たり確率(全体入口、約60%が東卍RUSHへ変換、補助判別)を反映。天井は4系統(500pt到達/最大6周期/通常時最大1190G消化(設定変更で900Gに短縮)/東卍チャンス4連続スルー後5回目)を反映、設定変更でモード移行率・初当り時AT期待度も優遇(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4849",
+    "ichigekiUrl": "https://1geki.jp/slot/l_tokyo_revengers/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 482.2, "weight": 1, "minSampleSize": 2500, "note": "東卍RUSH(AT)確率は主判別(出玉率97.8%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 474.7, "weight": 1, "minSampleSize": 2500, "note": "東卍RUSH確率は主判別(出玉率98.8%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 456.9, "weight": 1, "minSampleSize": 2500, "note": "東卍RUSH確率は主判別(出玉率101.4%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 414.0, "weight": 1, "minSampleSize": 2500, "note": "東卍RUSH確率は主判別(出玉率106.3%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 393.8, "weight": 1, "minSampleSize": 2500, "note": "東卍RUSH確率は主判別(出玉率111.2%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 373.1, "weight": 1, "minSampleSize": 2500, "note": "東卍RUSH確率は主判別(出玉率114.9%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 282.4, "weight": 0.6, "minSampleSize": 3000, "note": "初当たり確率(全体入口、約60%が東卍RUSHへ変換)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 279.5, "weight": 0.6, "minSampleSize": 3000, "note": "初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 272.2, "weight": 0.6, "minSampleSize": 3000, "note": "初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 255.8, "weight": 0.6, "minSampleSize": 3000, "note": "初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 249.1, "weight": 0.6, "minSampleSize": 3000, "note": "初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 240.1, "weight": 0.6, "minSampleSize": 3000, "note": "初当たり確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1190,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大1190G消化でAT確定。設定変更時は最大900Gに短縮、モード移行率・初当り時AT期待度も優遇。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット(設定変更で900Gに短縮)"
+    },
+    {
+      "ruleKey": "point_ceiling",
+      "displayName": "ポイント天井",
+      "ceilingType": "POINT",
+      "limitValue": 500,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "500pt到達(1周期目は200pt)で決戦前夜/一触即発濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "決戦前夜/一触即発濃厚",
+      "resetText": "到達でリセット"
+    },
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 6,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大6周期目で決戦前夜/一触即発濃厚(ポイント天井と並行)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "決戦前夜/一触即発濃厚",
+      "resetText": "到達でリセット"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "東卍チャンス連続スルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "東卍チャンス4回連続スルー後、5回目でAT確定。",
+      "isEnabled": true,
+      "displayOrder": 4,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット"
+    }
+  ]
+}

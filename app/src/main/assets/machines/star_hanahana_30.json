@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "star_hanahana_30",
+    "name": "スターハナハナ-30",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2025-01-06",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBIG+REG合算確率を反映(全6設定判明、算術検算済み、ハナハナ系Aタイプ)。天井は非搭載(1geki天井欄も「調査中」表記=天井そのものが存在しないための記載、概要文でも非搭載と明記)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4680",
+    "ichigekiUrl": "https://1geki.jp/slot/s_starhnhn30/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 159, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/270、REG1/387、出玉率97%)。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 150, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/262、REG1/354、出玉率99%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 141, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/252、REG1/322、出玉率101%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 132, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/240、REG1/293、出玉率104%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 123, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/229、REG1/267、出玉率107%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 114, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/218、REG1/242、出玉率110%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

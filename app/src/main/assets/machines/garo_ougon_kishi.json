@@ -2,13 +2,13 @@
   "machine": {
     "id": "garo_ougon_kishi",
     "name": "牙狼 黄金騎士",
-    "manufacturer": null,
+    "manufacturer": "サボハニ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2021-12-06",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp/DMM一致で初当り確率(黄金騎士CHANCE[CZ]+呀バトル[chance-AT]+魔戒RUSH[main AT]の合算値)を反映。設定3はスペック表・初当り表・魔戒RUSH直撃表・状態移行表・DMMのCZ役別トリガー表まで全ての表で両サイト一貫して欠落(2→4、系統的な未公開)。非公開の隠し「設定L」(下パネル常時消灯の演出で判別)も存在するがsettingNo対応不可のためnotesのみ記録。天井は2系統: CZ間600G(主天井、設定変更で400Gに短縮、1geki/DMM明記)、呀バトル/AT間1500G(補助)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4020",
+    "ichigekiUrl": "https://1geki.jp/slot/s_garo_golden_knight/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,52 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 227.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率(CZ+chance-AT+main AT合算)は主判別(魔戒RUSH直撃1/13404.3、状態移行:高確へ24.2%)。設定3は全表で一貫して欠落(2→4)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 223.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(魔戒RUSH直撃1/5628.3、高確へ25.0%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 208.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(魔戒RUSH直撃1/2784.5、高確へ31.6%)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 201.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(魔戒RUSH直撃1/1631.4、高確へ36.3%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 185.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(魔戒RUSH直撃1/1130.0、高確へ46.5%)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "CZ間600G消化で「黄金騎士CHANCE」濃厚。設定変更で400Gに短縮(1geki/DMM明記)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ「黄金騎士CHANCE」濃厚",
+      "resetText": "CZ突入でリセット(設定変更で400Gに短縮)"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "呀バトル/AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "呀バトルまたは魔戒RUSH間1500G消化で呀バトル(chance-AT)濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "呀バトル濃厚",
+      "resetText": "呀バトル/AT成立でリセット"
+    }
+  ]
 }

@@ -1,0 +1,73 @@
+{
+  "machine": {
+    "id": "original_slot4_plus",
+    "name": "ORIGINAL SLOT4 PLUS",
+    "manufacturer": "JPS",
+    "type": "AT",
+    "releaseDate": "2021-05-10",
+    "isActive": true,
+    "notes": "partial: p-world.co.jp/pachiseven.jpの2独立ソースがバイト単位で一致するBIG+REG合算確率を反映(設定1〜4は両ソースとも欠落=真に未公開、dmmUrl/ichigekiUrlとも存在しない超マイナー機のため全体的に低信頼度)。設定P(「PLUS」機能、設定6と確率完全一致だが出玉率のみ向上する仕様と2ソースで裏付け)はsettingNo対応不可のためnotesのみ記録。天井は非搭載(p-world.co.jp「ボーナスのみでコインを増やすノーマルタイプ、AT/ART/天井システムなし」明記)。p-town/1geki.jpともJPSメーカーページに掲載なし(2026-08-08時点で再調査済み、依然発見できず)(2026-08-11)。",
+    "dmmUrl": null,
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 5, "denominatorValue": 123, "weight": 0.5, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/172、REG1/437)。設定1〜4は両ソースとも欠落のため未収録。p-world.co.jp/pachiseven.jpの2独立ソース一致だがdmmUrl/ichigekiUrlとも存在しない超マイナー機のため低信頼度。"},
+        {"settingNo": 6, "denominatorValue": 109, "weight": 0.5, "minSampleSize": 2500, "note": "合算確率は主判別(BIG=REG=1/218)。設定P(同一確率、出玉率のみ向上)はsettingNo対応不可のためnotesのみ記録。2独立ソース一致だが低信頼度。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

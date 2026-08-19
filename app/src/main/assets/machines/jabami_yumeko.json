@@ -2,13 +2,13 @@
   "machine": {
     "id": "jabami_yumeko",
     "name": "蛇喰夢子という女",
-    "manufacturer": null,
+    "manufacturer": "ネット",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からAT初当り確率(主判別)・CZ確率(滾るゾーン+超新星ゾーンの合算値、補助判別)を反映(全6設定判明)。本機はAT機でクラシックなBIG/REGボーナス制度自体が存在しない(マス進行+技術介入型、設定/天井ページとも一切ボーナス言及なし、これは仕様であり欠落ではない)。DMM側は実戦データ(1回のプレイログ、理論値ではない)のみで比較不可。天井は規定ゲーム数961G(主天井)とマス回数127マス到達での宝箱ルート(補助)の並行2系統。設定変更時のリセット挙動はページタイトルに「設定変更」表記があるが本文に該当セクションなし(テンプレート由来、実質未記載)、DMMも明示的記載なし(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4374",
+    "ichigekiUrl": "https://1geki.jp/slot/s_kakegurui/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,64 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 323, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 294, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 290, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 284, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 274, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 271, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 259, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率(滾るゾーン+超新星ゾーンの合算値)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 231, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 229, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 217, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 217, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 216, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "規定ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 961,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時961G+αでAT濃厚。設定変更時のリセット挙動はページタイトルに表記があるが本文に該当セクションなし(実質未記載)、DMMも明示的記載なし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    },
+    {
+      "ruleKey": "masu_through_ceiling",
+      "displayName": "マス回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 127,
+      "unit": "マス",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "127マス目到達で宝箱が出現、前兆を経由してAT濃厚(規定ゲーム数天井と並行するルート)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    }
+  ]
 }

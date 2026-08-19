@@ -1,0 +1,111 @@
+{
+  "machine": {
+    "id": "kamen_rider_7riders",
+    "name": "L 仮面ライダー 7RIDERS",
+    "manufacturer": "京楽",
+    "type": "AT",
+    "releaseDate": "2024-01-09",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/p-gabu.jp一致でAT初当り確率を反映(設定3は両ソースとも欠落=真に未公開、2→4に飛ぶ)。天井はゲーム数999G(設定変更で499Gに短縮)+7周期天井(設定変更で3周期に短縮)の2系統を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4487",
+    "ichigekiUrl": "https://1geki.jp/slot/l_kr7riders/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 297.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/p-gabu.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 291.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/p-gabu.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 253.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定3は両ソースとも欠落のため未収録(2→4)。1geki.jp/p-gabu.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 233.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/p-gabu.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 225.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/p-gabu.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常999G+αでAT濃厚。設定変更時は499G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更で499Gに短縮"
+    },
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 7,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "7周期目完了でAT濃厚(ゲーム数天井と並行)。設定変更時は3周期に短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "設定変更で3周期に短縮"
+    }
+  ]
+}

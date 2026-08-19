@@ -4,11 +4,11 @@
     "name": "ハッピージャグラーV III",
     "manufacturer": "Kita Denshi",
     "type": "BONUS",
-    "releaseDate": "2025-01-01",
+    "releaseDate": "2022-10-24",
     "isActive": true,
     "notes": "ノーマル精度仕上げ対応。主判別はREG、補助はぶどう、BIGは最終補助に固定。ハッピー系はREGの安定感を優先し、ぶどうは高ゲーム数でのみ補強する。",
-    "dmmUrl": "https://p-town.dmm.com/machines/4656",
-    "ichigekiUrl": "https://1geki.jp/slot/s_happyjuggler8/"
+    "dmmUrl": "https://p-town.dmm.com/machines/4230",
+    "ichigekiUrl": "https://1geki.jp/slot/s_happyjuggler_v3/"
   },
   "counterDefinitions": [
     {

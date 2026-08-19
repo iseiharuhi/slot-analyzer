@@ -4,11 +4,11 @@
     "name": "Lバンドリ！",
     "manufacturer": "平和",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2024-11-05",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT「ガールズバンドパーティ！」初当り確率を反映(本機唯一の判別軸)。設定1は1geki(3表)/DMMとも一貫して欠落、真の未公開。DMM側の値(設定2=1/328.6〜設定6=1/271.9)は1geki値(1/328.0〜1/271.5)とわずかに異なるため1geki値を採用、DMM値差分はnotesのみ参考(小数第1位で0.2〜0.6程度の差)。非数値の「設定L」(下パネル常時消灯)は確率非公開のためsettingNo対応せず除外(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4641",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_bang_dream/"
   },
   "counterDefinitions": [
     {
@@ -60,7 +60,18 @@
       "notes": "単発回数メモ。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 328.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。設定1は1geki/DMMとも欠落のため未収録、真の未公開。1geki.jp公開値(DMM側は1/328.6で近似)。"},
+        {"settingNo": 3, "denominatorValue": 326.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値(DMM側は1/326.9で近似)。"},
+        {"settingNo": 4, "denominatorValue": 303.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値(DMM側は1/304.4で近似)。"},
+        {"settingNo": 5, "denominatorValue": 291.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値(DMM側は1/291.5で近似)。"},
+        {"settingNo": 6, "denominatorValue": 271.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値(DMM側は1/271.9で近似)。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "cycle_ceiling",

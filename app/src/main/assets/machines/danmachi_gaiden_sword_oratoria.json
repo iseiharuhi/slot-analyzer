@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "danmachi_gaiden_sword_oratoria",
+    "name": "パチスロ ダンまち外伝 ソード・オラトリア",
+    "manufacturer": "北電子",
+    "type": "AT",
+    "releaseDate": "2022-10-17",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/altema.jp一致でAT初当り確率(主判別)・CZ「モンスターバトル市街戦」突入率(補助判別)を反映。天井は通常777G+α消化後サイクルクリアでAT濃厚(実効最大約850G)+絶対天井11サイクル目濃厚の2系統を反映。CZ当選で天井カウンターがリセットされる仕様のため天井狙いは実質困難(機種固有仕様、データ誤りではない)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4229",
+    "ichigekiUrl": "https://1geki.jp/slot/s_danmachi_so/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 378.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 365.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 3, "denominatorValue": 349.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 304.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 275.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 252.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/altema.jp一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 198.7, "weight": 0.7, "minSampleSize": 3000, "note": "CZ「モンスターバトル市街戦」突入率は補助判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 195.7, "weight": 0.7, "minSampleSize": 3000, "note": "CZ突入率は補助判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 3, "denominatorValue": 192.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ突入率は補助判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 187.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZ突入率は補助判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 179.4, "weight": 0.7, "minSampleSize": 3000, "note": "CZ突入率は補助判別。1geki.jp/altema.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 171.7, "weight": 0.7, "minSampleSize": 3000, "note": "CZ突入率は補助判別。1geki.jp/altema.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "standard_game_ceiling",
+      "displayName": "通常ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "777G+α消化後サイクルクリア(1サイクル30〜90G)でAT濃厚(実効到達は最大約850G)。CZ当選で天井カウンターがリセットされるため直接の天井狙いは実質困難な機種固有仕様。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "CZ当選または設定変更でリセット"
+    },
+    {
+      "ruleKey": "cycle_absolute_ceiling",
+      "displayName": "絶対天井(サイクル)",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 11,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "11サイクル目到達でCZ/AT濃厚(通常天井と並行)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ/AT濃厚",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

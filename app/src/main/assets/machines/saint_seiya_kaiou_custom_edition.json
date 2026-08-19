@@ -6,9 +6,9 @@
     "type": "AT",
     "releaseDate": "2024-06-03",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)から海将軍激闘(GB)初当り確率を反映(本機唯一の判別軸、単一CZ/GB型ゲートで別建てのAT率は未公開)。全6設定判明、DMM機械割97.5%〜114.9%と一致。at_count(聖闘士RUSH)に対応する固有データは未発見(GBスルー天井経由でAT確定する構造)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4572",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_seiya_kaiou/"
   },
   "counterDefinitions": [
     {
@@ -60,7 +60,19 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "gb_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 360.4, "weight": 1, "minSampleSize": 2500, "note": "海将軍激闘(GB)初当り確率は本機唯一の判別軸。1geki.jp公開値、DMM機械割97.5%と一致。"},
+        {"settingNo": 2, "denominatorValue": 357.0, "weight": 1, "minSampleSize": 2500, "note": "GB初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 353.1, "weight": 1, "minSampleSize": 2500, "note": "GB初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 340.4, "weight": 1, "minSampleSize": 2500, "note": "GB初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 332.8, "weight": 1, "minSampleSize": 2500, "note": "GB初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 317.8, "weight": 1, "minSampleSize": 2500, "note": "GB初当り確率は本機唯一の判別軸。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "gb_game_ceiling",

@@ -1,0 +1,160 @@
+{
+  "machine": {
+    "id": "super_rio_ace_2",
+    "name": "スマスロスーパーリオエース2",
+    "manufacturer": "YAMASA NEXT",
+    "type": "HYBRID",
+    "releaseDate": "2026-05-11",
+    "isActive": true,
+    "notes": "partial: 公開比較値を確認できた初当たりを主軸に反映。 BIG・REG/その他ボーナス・CZなど数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。天井は1geki.jp/なな徹の2ソース一致でボーナス間天井(750G、設定変更500G)+ボーナススルー天井(7回)を確認・反映(2026-08-10)。天井到達=直AT濃厚ではなくまずボーナス当選、その後AT抽選という仕様。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4984",
+    "ichigekiUrl": "https://1geki.jp/slot/l_sp_rioace2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "at_count",
+      "displayName": "初当たり",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "公開値のある初当たり合算。現状の主判別要素。"
+    },
+    {
+      "key": "big_count",
+      "displayName": "BIG",
+      "category": "BONUS",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "個別設定差未確認のため記録専用。"
+    },
+    {
+      "key": "reg_count",
+      "displayName": "REG/その他ボーナス",
+      "category": "BONUS",
+      "sortOrder": 4,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "個別設定差未確認のため記録専用。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 5,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": false,
+      "supportsMinus": true,
+      "notes": "全設定比較値未公開のため記録専用。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 289.8,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいためREG主軸で見る。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 281.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいためREG主軸で見る。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 268.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいためREG主軸で見る。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 238.9,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいためREG主軸で見る。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 230.0,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいためREG主軸で見る。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 219.2,
+          "weight": 0.7,
+          "minSampleSize": 3000,
+          "note": "補助判別①。序盤は荒れやすいためREG主軸で見る。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_interval_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 750,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大750G+αでBIG BONUS当選(直AT濃厚ではなくまずボーナス、その後AT抽選)。設定変更時500G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BIG BONUS当選",
+      "resetText": "設定変更でリセット(500Gに短縮)"
+    },
+    {
+      "ruleKey": "bonus_through_ceiling",
+      "displayName": "ボーナススルー回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "最大7回スルーで8回目のボーナスがAT「RIO RUSH」濃厚。設定変更時4スルーに短縮(5回目で濃厚)。高設定ほど浅いスルー回数が選ばれやすい。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT「RIO RUSH」濃厚",
+      "resetText": "設定変更でリセット(4スルーに短縮)"
+    }
+  ]
+}

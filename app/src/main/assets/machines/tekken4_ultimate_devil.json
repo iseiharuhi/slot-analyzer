@@ -2,13 +2,13 @@
   "machine": {
     "id": "tekken4_ultimate_devil",
     "name": "鉄拳4アルティメットデビルVer.",
-    "manufacturer": null,
+    "manufacturer": "山佐",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2022-11-07",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からジャッジメントバトル確率(CZ、主判別)・ATデビルラッシュ確率(補助判別)を反映。設定3は両メトリクスとも生HTML上で欠落確認済み(2→4、真の未公開)、非数値の「L」行(常時下パネル消灯の演出デモ表示)はsettingNo対応せず除外。姉妹機tekken_6とは別データで取り違えなし。天井はジャッジメントバトル天井500G+α(通常時、主天井)。朝イチ(設定変更時)・AT終了時は300G+αに短縮(1geki明記)。有利区間はジャッジメントバトル敗北時に限り引き継がれる(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4223",
+    "ichigekiUrl": "https://1geki.jp/slot/s_tekken4_ultimate/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,45 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 372.4, "weight": 1, "minSampleSize": 2500, "note": "ジャッジメントバトル(CZ)確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 368.0, "weight": 1, "minSampleSize": 2500, "note": "ジャッジメントバトル確率は主判別。設定3は欠落のため未収録(2→4)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 340.9, "weight": 1, "minSampleSize": 2500, "note": "ジャッジメントバトル確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 317.7, "weight": 1, "minSampleSize": 2500, "note": "ジャッジメントバトル確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 284.5, "weight": 1, "minSampleSize": 2500, "note": "ジャッジメントバトル確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 636.4, "weight": 0.7, "minSampleSize": 3000, "note": "ATデビルラッシュ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 604.6, "weight": 0.7, "minSampleSize": 3000, "note": "ATデビルラッシュ確率は補助判別。設定3は欠落。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 504.9, "weight": 0.7, "minSampleSize": 3000, "note": "ATデビルラッシュ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 433.1, "weight": 0.7, "minSampleSize": 3000, "note": "ATデビルラッシュ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 362.3, "weight": 0.7, "minSampleSize": 3000, "note": "ATデビルラッシュ確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ジャッジメントバトル天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時500G+αでジャッジメントバトル濃厚。朝イチ(設定変更時)・AT終了時は300G+αに短縮(1geki明記)。有利区間はジャッジメントバトル敗北時に限り引き継がれる。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ジャッジメントバトル濃厚",
+      "resetText": "ジャッジメントバトル突入でリセット(設定変更/AT終了で300G+αに短縮)"
+    }
+  ]
 }

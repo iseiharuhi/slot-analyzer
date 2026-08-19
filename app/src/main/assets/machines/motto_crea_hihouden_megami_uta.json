@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "motto_crea_hihouden_megami_uta",
+    "name": "もっと!クレアの秘宝伝 女神の歌声と太陽の子供達",
+    "manufacturer": "パオン・ディーピー",
+    "type": "AT",
+    "releaseDate": "2021-08-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMMの2ソース一致でボーナス合算を反映。天井は非搭載とDMM側も明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3940",
+    "ichigekiUrl": "https://1geki.jp/slot/s_crea_taiyo/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 168.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 161.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 152.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 138.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 131.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 120.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp/DMMの2ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

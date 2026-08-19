@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "nanatsu_no_taizai",
+    "name": "パチスロ七つの大罪",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2020-11-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス+AT合算確率を反映。天井は500G+αでエリザベス覚醒(87.5%、全設定共通)または大罪ボーナス/エピソードボーナス(12.5%、全設定共通)のいずれかが濃厚。設定変更時のリセット挙動は1geki側「現在調査中」で情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3751",
+    "ichigekiUrl": "https://1geki.jp/slot/s_taizai_index/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 279.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス+AT合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 269.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 260.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 237.2, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 218.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 188.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "500G+αでエリザベス覚醒(87.5%、全設定共通)または大罪ボーナス/エピソードボーナス(12.5%、全設定共通)のいずれかが濃厚。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "エリザベス覚醒(87.5%)または大罪/エピソードボーナス(12.5%)濃厚",
+      "resetText": "成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

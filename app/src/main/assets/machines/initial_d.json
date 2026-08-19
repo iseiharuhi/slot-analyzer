@@ -1,0 +1,102 @@
+{
+  "machine": {
+    "id": "initial_d",
+    "name": "パチスロ頭文字D",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2021-01-12",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBIG BONUS合算(ドリフト目除く)を反映(LEGEND BONUSは全設定共通1/4096.0のため設定差なし)。天井は555G+αでレジェンドバトル当選を反映(2026-08-10、1geki.jp+Yahoo!知恵袋実践報告等でクロスチェック済み)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3779",
+    "ichigekiUrl": "https://1geki.jp/slot/s_intiald/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 165.5, "weight": 1, "minSampleSize": 2500, "note": "BIG BONUS合算(ドリフト目除く)は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 163.8, "weight": 1, "minSampleSize": 2500, "note": "BIG BONUS合算(ドリフト目除く)は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 162.2, "weight": 1, "minSampleSize": 2500, "note": "BIG BONUS合算(ドリフト目除く)は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 160.6, "weight": 1, "minSampleSize": 2500, "note": "BIG BONUS合算(ドリフト目除く)は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 159.1, "weight": 1, "minSampleSize": 2500, "note": "BIG BONUS合算(ドリフト目除く)は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 157.5, "weight": 1, "minSampleSize": 2500, "note": "BIG BONUS合算(ドリフト目除く)は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 261.0, "weight": 0.7, "minSampleSize": 3000, "note": "ドリフト目込み実質ボーナス合算は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 226.8, "weight": 0.7, "minSampleSize": 3000, "note": "ドリフト目込み実質ボーナス合算は補助判別。1geki.jp公開値(設定2〜5は情報源に個別値記載なし)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 555,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "555G+αでレジェンドバトル(高橋啓介)当選、専用ATレベルで開始。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "レジェンドバトル(高橋啓介)当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

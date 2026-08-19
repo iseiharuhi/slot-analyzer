@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "mr_juggler",
+    "name": "ミスタージャグラー",
+    "manufacturer": "北電子",
+    "type": "AT",
+    "releaseDate": "2024-07-22",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算(BB+RB)を反映(設定6はBB=RB1:1の特殊仕様)。天井は非搭載とDMM側も明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4588",
+    "ichigekiUrl": "https://1geki.jp/slot/s_mrjuggler/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 156.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 152.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 145.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 134.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 124.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 118.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。設定6はBB=RB(1/237.4:1/237.4)の1:1になる特殊仕様、1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

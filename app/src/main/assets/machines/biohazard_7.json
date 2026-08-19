@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "biohazard_7",
+    "name": "パチスロ バイオハザード7 レジデント イービル",
+    "manufacturer": "アデリオン",
+    "type": "AT",
+    "releaseDate": "2021-02-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からクライマックスバトル(CB)確率を反映(設定6=1/375.5が設定5=1/373.6よりわずかに低い非単調値だが1geki本ページ・詳細ページの2回取得で同一値、機種固有仕様と判断・ただし他サイトでの裏取りは未達のため中程度の信頼度)。天井はモード制(通常A753G/B603G/C503G/天国153G)を反映。設定変更時のリセット挙動は情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3815",
+    "ichigekiUrl": "https://1geki.jp/slot/s_bh7/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 408.6, "weight": 1, "minSampleSize": 2500, "note": "クライマックスバトル(CB)確率は主判別(出玉率97.9%、弱チェリー1/109.2)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 393.8, "weight": 1, "minSampleSize": 2500, "note": "CB確率は主判別(出玉率99.0%、弱チェリー1/106.6)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 385.7, "weight": 1, "minSampleSize": 2500, "note": "CB確率は主判別(出玉率100.8%、弱チェリー1/103.2)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 379.8, "weight": 1, "minSampleSize": 2500, "note": "CB確率は主判別(出玉率105.5%、弱チェリー1/99.8)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 373.6, "weight": 1, "minSampleSize": 2500, "note": "CB確率は主判別(出玉率108.7%、弱チェリー1/97.1)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 375.5, "weight": 1, "minSampleSize": 2500, "note": "CB確率は主判別(出玉率111.0%、弱チェリー1/94.3)。設定5(1/373.6)よりわずかに低い非単調値だが1geki本ページ・詳細ページを2回取得しても同一値で機種固有仕様と判断(他サイトでの裏取りは未達、中程度の信頼度)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "mode_a_ceiling",
+      "displayName": "通常Aモード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 753,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常Aモード滞在時753GでCB濃厚。通常B=603G、通常C=503G、天国=153G。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CB濃厚",
+      "resetText": "CB成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

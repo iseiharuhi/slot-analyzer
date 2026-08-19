@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "chou_hanamatsuri",
+    "name": "スマート沖スロ 超華祭",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2024-11-18",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致でBB+RB合算確率を反映。本機は5段階設定機で設定3非搭載(1geki.jp設定差解説記事「設定3は非搭載のため示唆演出は存在しない」と明記)。天井は約700G消化でボーナス濃厚、直前のボーナスがBBかRBかでゲーム数は変わらないことを1geki明記。設定変更時のリセット挙動は情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4639",
+    "ichigekiUrl": "https://1geki.jp/slot/l_chohanamatsuri/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 160, "weight": 1, "minSampleSize": 2500, "note": "BB+RB合算確率は主判別(BB1/274、RB1/384、出玉率97.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 153, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/266、RB1/364、出玉率99.8%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 142, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/248、RB1/331、出玉率103.3%)。本機は5段階設定機で設定3非搭載(2→4)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 132, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/234、RB1/304、出玉率106.3%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 123, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/221、RB1/279、出玉率110.0%)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 700,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時約700G消化でボーナス濃厚。直前のボーナスがBBかRBかでこのゲーム数は変化しない(1geki.jp明記)。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

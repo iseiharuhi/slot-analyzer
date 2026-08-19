@@ -1,0 +1,23 @@
+{
+  "id": "miku_idomu_challenge_2",
+  "name": "ミクちゃんとイドムンのミラクルチャレンジ2",
+  "manufacturer": null,
+  "type": "BONUS",
+  "releaseDate": null,
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とチェリーに整理。ノーマル系としてREG主軸で揃え、チェリーは高ゲーム数時の補強に使う。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4471",
+  "ichigekiUrl": "https://1geki.jp/slot/s_mikuido2chal/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4471"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_mikuido2chal/"
+    }
+  ],
+  "fileName": "dmm_slot_021.json"
+}

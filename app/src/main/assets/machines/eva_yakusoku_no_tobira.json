@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "eva_yakusoku_no_tobira",
+    "name": "LBパチスロ ヱヴァンゲリヲン ~約束の扉~",
+    "manufacturer": "ビスティ",
+    "type": "AT",
+    "releaseDate": "2025-07-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算を反映(黄BB/RB/暴走モード個別値・赤SBB/青SBBは非単調な特殊テーブルのため今回は未反映)。天井は非搭載と1geki.jpに明記されており確認済み(2026-08-10)。ceilingRulesは意図的に空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4830",
+    "ichigekiUrl": "https://1geki.jp/slot/lb_eva/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 196.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 189.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 181.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 170.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 161.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 151.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

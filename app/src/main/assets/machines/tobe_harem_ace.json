@@ -1,0 +1,75 @@
+{
+  "machine": {
+    "id": "tobe_harem_ace",
+    "name": "翔べ!ハーレムエース",
+    "manufacturer": "ネット",
+    "type": "AT",
+    "releaseDate": "2025-06-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(raw HTML)/DMM一致でボーナス合算確率を反映。本機は「4段階設定」と1geki明記の機種で設定1/2/5/6のみ(3/4非搭載、欠落ではない)。天井は非搭載(1geki「天井非搭載」、DMM「天井突入条件:なし」で確認済み)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4789",
+    "ichigekiUrl": "https://1geki.jp/slot/lb_harema/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 234.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。本機は実質4段階設定(1/2/5/6のみ、3/4非搭載)。1geki.jp/DMM一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 220.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 186.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 158.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM一致、算術検算済み。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

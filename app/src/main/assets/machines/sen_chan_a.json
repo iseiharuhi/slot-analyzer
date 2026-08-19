@@ -1,0 +1,75 @@
+{
+  "machine": {
+    "id": "sen_chan_a",
+    "name": "LBパチスロ1000ちゃんA",
+    "manufacturer": "オーイズミ",
+    "type": "AT",
+    "releaseDate": "2025-06-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBB合算確率を反映。本機は非標準の公開状況で設定1/2/5/6と特殊な「H」ティアのみ数値公開、設定3/4は1geki全ページで一貫して欠落(未公開)。「H」は通常の1〜6レンジを超える特別ティアでDMMの機械割公式レンジ(98.0%〜108.0%)からも除外されている(=正規の6段階外の扱い)ため、settingNo対応せずnotesのみ記録: H=BB1/662.0、1000☆ボーナス1/13107.2、突JAC1/65536.0、1000☆PARTY(BT)初当り1/10922.7、出玉率108.7%。天井は非搭載(1geki「天井:非搭載」明記、ボーナストリガー型のため整合)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4783",
+    "ichigekiUrl": "https://1geki.jp/slot/lb_1000chan_a/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 190.0, "weight": 1, "minSampleSize": 2500, "note": "BB合算確率は主判別。設定3/4は1geki全ページで欠落、真に未公開。特殊ティア「H」は正規レンジ外のためnotesのみ記録。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 182.0, "weight": 1, "minSampleSize": 2500, "note": "BB合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 164.3, "weight": 1, "minSampleSize": 2500, "note": "BB合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 152.8, "weight": 1, "minSampleSize": 2500, "note": "BB合算確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

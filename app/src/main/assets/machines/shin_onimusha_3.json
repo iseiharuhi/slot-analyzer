@@ -2,13 +2,13 @@
   "machine": {
     "id": "shin_onimusha_3",
     "name": "L新鬼武者3",
-    "manufacturer": null,
+    "manufacturer": "レオスター",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2025-10-06",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からAT「蒼剣RUSH」初当り確率を反映(全6設定判明)。天井は2系統: 周期天井(AT後最大6周期、主天井、リセット[設定変更]後は最大4周期に短縮され鬼モードへの移行が最初の222BP以内に保証される)+ゲーム数天井(最大1000G+前兆、設定/リセットに依存しない固定値、補助)。秀吉最終決戦後/上位AT後は1周期+222BPに短縮(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4880",
+    "ichigekiUrl": "https://1geki.jp/slot/l_shinnoni3/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 379.7, "weight": 1, "minSampleSize": 2500, "note": "AT「蒼剣RUSH」初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 372.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 352.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 306.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 297.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 293.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 6,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT後最大6周期でAT濃厚。リセット(設定変更)後は最大4周期に短縮され、鬼モードへの移行が最初の222BP以内に保証される。秀吉最終決戦後/上位AT後は1周期+222BPに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更で4周期に短縮)"
+    },
+    {
+      "ruleKey": "sub_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大1000G+前兆でAT濃厚。設定・リセットに依存しない固定値。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    }
+  ]
 }

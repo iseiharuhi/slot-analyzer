@@ -1,0 +1,23 @@
+{
+  "id": "lovejo_3",
+  "name": "Lラブ嬢3〜Wご指名はいかがですか？〜",
+  "manufacturer": "アムテックス",
+  "type": "AT",
+  "releaseDate": "2023-12-04",
+  "isActive": true,
+  "notes": "precision batch next / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。 天井情報を正式反映。通常A/B 750G+α、通常C 500G+α、天国A/B 100G+αを追加。設定変更時は通常C以上濃厚。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4458",
+  "ichigekiUrl": "https://1geki.jp/slot/l_lovejou3/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4458"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_lovejou3/"
+    }
+  ],
+  "fileName": "dmm_slot_025.json"
+}

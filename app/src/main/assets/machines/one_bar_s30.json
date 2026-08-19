@@ -2,13 +2,13 @@
   "machine": {
     "id": "one_bar_s30",
     "name": "ワンバーS30",
-    "manufacturer": null,
+    "manufacturer": "ベルコ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2020-07-06",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からAT(ボーナス)初当り確率を反映(全6設定判明)。200Gでの仮天井選択率(設定1=約3.14%〜設定6=約12.55%)はceilingの補助情報としてnotesのみ参考記録。天井は本天井777G(通常時、主天井)+仮天井200G(補助、設定変更後またはAT終了後のみ有効、選択率は設定差あり)の2階層。設定変更で天井G数・状態とも明示的にリセット、電源off/onのみでは両方引き継ぐ(1geki明記)(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3700",
+    "ichigekiUrl": "https://1geki.jp/slot/s_onebar30/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 325.8, "weight": 1, "minSampleSize": 2500, "note": "AT(ボーナス)初当り確率は本機唯一の判別軸(仮天井選択率約3.14%はnotesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 317.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 304.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 289.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 275.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 245.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸(仮天井選択率約12.55%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "本天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時777GでAT濃厚。設定変更で天井G数・状態とも明示的にリセット。電源off/onのみでは両方引き継ぐ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更ですべてリセット)"
+    },
+    {
+      "ruleKey": "temp_ceiling",
+      "displayName": "仮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "設定変更後またはAT終了後のみ有効な仮天井、200GでAT濃厚。選択率は設定差あり(設定1=約3.14%〜設定6=約12.55%)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    }
+  ]
 }

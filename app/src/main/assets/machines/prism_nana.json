@@ -1,14 +1,14 @@
 {
   "machine": {
     "id": "prism_nana",
-    "name": "Lプリズムナナ",
-    "manufacturer": null,
+    "name": "プリズムナナ",
+    "manufacturer": "カルミナ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2025-12-08",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からST初当り確率(本機唯一の判別軸、実質AT相当のST状態への突入率)を反映(全6設定判明)。キャラクターボイス/登場率など副次的な示唆表は判別力が低いためnotesのみ扱い(省略)。天井はゲーム数天井(ST後最大899G+α)またはサイクル天井(最大7周期)のいずれか早い方でST濃厚。設定変更(リセット)時/ST駆け抜け時は最大555G+αまたは最大5周期に短縮され、通常B以上滞在が保証される(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4904",
+    "ichigekiUrl": "https://1geki.jp/slot/l_prismnana/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,53 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 351.8, "weight": 1, "minSampleSize": 2500, "note": "ST初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 346.9, "weight": 1, "minSampleSize": 2500, "note": "ST初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 337.2, "weight": 1, "minSampleSize": 2500, "note": "ST初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 306.6, "weight": 1, "minSampleSize": 2500, "note": "ST初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 290.1, "weight": 1, "minSampleSize": 2500, "note": "ST初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 278.6, "weight": 1, "minSampleSize": 2500, "note": "ST初当り確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 899,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ST後最大899G+αでST濃厚。設定変更(リセット)時/ST駆け抜け時は最大555G+αに短縮され、通常B以上滞在が保証される。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ST濃厚",
+      "resetText": "ST突入でリセット(設定変更で555G+αに短縮)"
+    },
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 7,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ゲーム数天井と並行する条件、最大7周期でST濃厚(いずれか早い方)。設定変更(リセット)時/ST駆け抜け時は最大5周期に短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ST濃厚",
+      "resetText": "ST突入でリセット(設定変更で5周期に短縮)"
+    }
+  ]
 }

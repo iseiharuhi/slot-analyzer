@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "oki_doki_black",
+    "name": "沖ドキ!BLACK",
+    "manufacturer": "ミズホ",
+    "type": "AT",
+    "releaseDate": "2024-07-01",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス初当り確率を反映(設定4は1geki/DMMとも欠落。DMM側はモード限定の別数値体系のため1geki側を採用)。天井は通常A999G/チャンス200G(設定変更時約40%でチャンス移行)を反映(2026-08-10、DMM側でも999Gをクロスチェック)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4582",
+    "ichigekiUrl": "https://1geki.jp/slot/s_oki_doki_black/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 288.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。設定4は複数ソースとも欠落。"},
+        {"settingNo": 2, "denominatorValue": 277.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 265.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 254.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 243.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_a_ceiling",
+      "displayName": "通常A天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A滞在時999G。チャンスモード滞在時は200G。設定変更時は約40%でチャンスモードへ移行(200Gに短縮)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

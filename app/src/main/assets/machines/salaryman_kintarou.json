@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "salaryman_kintarou",
+    "name": "L サラリーマン金太郎",
+    "manufacturer": "エキサイト",
+    "type": "AT",
+    "releaseDate": "2025-01-06",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM完全一致でBONUS+AT合算確率(主判別)・金太郎チャンス(AT)初当り確率(補助判別)を反映(全6設定判明、算術検算済み)。天井は999G+α(BB/AT後、主天井)、REG後は800G+αに短縮(補助天井)、設定変更後は600G+αに短縮+約50%で高確率状態開始を反映(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4718",
+    "ichigekiUrl": "https://1geki.jp/slot/l_kintaro/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 279, "weight": 1, "minSampleSize": 2500, "note": "BONUS+AT合算確率は主判別(BONUS1/417、AT1/844)。1geki.jp/DMM完全一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 272, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BONUS1/408、AT1/813)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 265, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BONUS1/400、AT1/781)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 251, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BONUS1/387、AT1/712)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 236, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BONUS1/373、AT1/641)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 220, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BONUS1/356、AT1/574)。1geki.jp/DMM完全一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 844, "weight": 0.7, "minSampleSize": 3000, "note": "金太郎チャンス(AT)初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 813, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 781, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 712, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 641, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 574, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "BB/AT後は999G+αでAT濃厚。設定変更後は600G+αに短縮、さらに約50%の確率で高確率状態(内部)から開始。1geki.jp/DMM完全一致。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット(設定変更で600G+αに短縮)"
+    },
+    {
+      "ruleKey": "reg_shortened_ceiling",
+      "displayName": "REG後短縮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "REG後は800G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT確定",
+      "resetText": "AT当選でリセット"
+    }
+  ]
+}

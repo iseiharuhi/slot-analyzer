@@ -1,0 +1,140 @@
+{
+  "machine": {
+    "id": "goblin_slayer_2",
+    "name": "スマスロ ゴブリンスレイヤーII",
+    "manufacturer": "JFJ",
+    "type": "AT",
+    "releaseDate": "2026-02-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り・CZ出現率を反映(設定6値はDMM特集でクロスチェック)。天井は3段階(600/1000/1500G、設定変更時1000Gに短縮)を反映(2026-08-10)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4950",
+    "ichigekiUrl": "https://1geki.jp/slot/l_goblinslayer2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 541.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 526.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 506.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 453.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 417.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 402.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。DMM特集でクロスチェック済み。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 239.3, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 232.3, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 222.9, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 200.4, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 187.3, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 181.9, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "ceiling_short",
+      "displayName": "天井(600G)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "3種類の天井(600G/1000G/1500G)から抽選で選択される最短の天井。高設定ほど600G・1000G選択率が高い。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT当選+宿命バトルストック(平均2個)",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "ceiling_mid",
+      "displayName": "天井(1000G)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "3種類の天井から抽選で選択される中間の天井。設定変更時はこの1000Gが最大天井になる。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選+宿命バトルストック(平均2個)",
+      "resetText": "設定変更でリセット"
+    },
+    {
+      "ruleKey": "ceiling_long",
+      "displayName": "天井(1500G)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "3種類の天井から抽選で選択される最長の天井。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT当選+宿命バトルストック(平均2個)",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

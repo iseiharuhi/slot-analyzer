@@ -1,0 +1,23 @@
+{
+  "id": "thunder_v_lightning",
+  "name": "サンダーVライトニング",
+  "manufacturer": "ACROSS",
+  "type": "BONUS",
+  "releaseDate": "2020-02-03",
+  "isActive": true,
+  "notes": "partial: 公開比較値を確認できたBIG合成を主軸に反映。 BIG合成など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/3647",
+  "ichigekiUrl": "https://1geki.jp/slot/s_thunderv_lg/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/3647"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_thunderv_lg/"
+    }
+  ],
+  "fileName": "list_slot_046.json"
+}

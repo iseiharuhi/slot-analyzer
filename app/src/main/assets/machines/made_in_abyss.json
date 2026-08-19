@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "made_in_abyss",
+    "name": "SLOTメイドインアビス",
+    "manufacturer": "ミズホ",
+    "type": "AT",
+    "releaseDate": "2023-06-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率(主判別)・CZ初当り確率(補助判別)を反映。天井は700G(AT濃厚、実質メイン天井)と500G(CZ濃厚、ソフト天井としてATへの前段階)の2段階を反映(p-gabu.jp確認済み)。設定によるG数自体の変動は確認されず、設定変更時のリセット挙動も情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4355",
+    "ichigekiUrl": "https://1geki.jp/slot/s_miabyss/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 287.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 276.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 262.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 233.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 220.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 212.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 138.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 134.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 129.2, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 119.5, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 114.4, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 110.7, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_at_ceiling",
+      "displayName": "AT天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 700,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT非当選のまま700G消化で予告シーケンス経由のAT濃厚(実質メイン天井)。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    },
+    {
+      "ruleKey": "cz_soft_ceiling",
+      "displayName": "CZソフト天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT非当選のまま500G消化で予告シーケンス経由のCZ濃厚(700GのAT天井への前段階、ソフト天井)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ突入でリセット"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "machine": {
+    "id": "shin_ore_no_sora",
+    "name": "パチスロ 真俺の空",
+    "manufacturer": "スパイキー",
+    "type": "AT",
+    "releaseDate": "2022-12-19",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/slopachi-quest.com一致でAT初当り確率(主判別)・CZ「俺タイム」確率(補助判別、設定6が設定5よりわずかに悪い非単調値だがCZ確率の設定差自体が小さくAT確率側に設定差が集中する仕様とWebSearch集約で確認、転記誤りではない)を反映(設定2は両ソースとも欠落=真に未公開、1→3に飛ぶ)。天井は最大999GでAT濃厚、AT終了後は{32G/99G/256G/999G}の短縮天井テーブルから抽選(設定別の変動・設定変更/電源off/on時のリセット詳細は非公開)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4268",
+    "ichigekiUrl": "https://1geki.jp/slot/s_shin_orenosora/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 293.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 3, "denominatorValue": 280.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定2は両ソースとも欠落のため未収録(1→3、slopachi-quest.comが「表記上では設定2が無くなり」と明記)。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 4, "denominatorValue": 253.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 5, "denominatorValue": 230.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 6, "denominatorValue": 162.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/slopachi-quest.com一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 196.8, "weight": 0.6, "minSampleSize": 3000, "note": "CZ「俺タイム」確率は補助判別(設定差が小さくAT側に設定差が集中する仕様)。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 3, "denominatorValue": 190.0, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 4, "denominatorValue": 179.4, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 5, "denominatorValue": 172.2, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/slopachi-quest.com一致。"},
+        {"settingNo": 6, "denominatorValue": 177.5, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補助判別。設定5(1/172.2)より悪い非単調値だがCZ確率自体の設定差が小さいためAT側で見る設計とWebSearch集約で確認済み、転記誤りではない。1geki.jp/slopachi-quest.com一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大999GでAT濃厚。AT終了後は{32G/99G/256G/999G}の短縮天井テーブルから抽選。設定別の変動・設定変更/電源off/on時のリセット詳細は非公開。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

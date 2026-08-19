@@ -1,145 +1,263 @@
 {
   "machine": {
     "id": "eureka_zero",
-    "name": "エウレカセブン HI-EVOLUTION ZERO TYPE-ART",
-    "manufacturer": null,
+    "name": "パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART",
+    "manufacturer": "TAIYO ELEC",
     "type": "ART",
-    "releaseDate": null,
+    "releaseDate": "2023-11-06",
     "isActive": true,
-    "notes": "precision batch next / AT精度一括調整済み。低サンプルの過信を抑えるため、初当り系は2000G超、小役・補助要素は3000G級から比較推奨。",
+    "notes": "AT精度一括調整済み。主判別はAT初当り、初当り/ボーナス、補助はCZ。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
     "dmmUrl": "https://p-town.dmm.com/machines/4419",
     "ichigekiUrl": "https://1geki.jp/slot/s_eurekahievo_art/"
   },
   "counterDefinitions": [
     {
       "key": "total_games",
-      "displayName": "ゲーム数",
+      "displayName": "総ゲーム数",
       "category": "BASIC",
-      "sortOrder": 1,
-      "unit": "G",
       "inputType": "NUMBER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
+      "unit": "G",
       "supportsMinus": false,
-      "notes": null
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 1,
+      "notes": "全計算の分母"
     },
     {
-      "key": "cz",
-      "displayName": "CZ",
-      "category": "AT_CZ",
+      "key": "big_count",
+      "displayName": "BB合算",
+      "category": "BONUS",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
       "sortOrder": 2,
-      "unit": "回",
-      "inputType": "COUNTER",
-      "isEnabled": true,
-      "isDefaultVisible": true,
-      "supportsMinus": true,
       "notes": null
     },
     {
-      "key": "at",
-      "displayName": "AT",
-      "category": "AT_CZ",
-      "sortOrder": 3,
-      "unit": "回",
+      "key": "reg_count",
+      "displayName": "RB合算",
+      "category": "BONUS",
       "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
       "isEnabled": true,
       "isDefaultVisible": true,
+      "sortOrder": 3,
+      "notes": null
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CM初当り",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
       "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 4,
+      "notes": null
+    },
+    {
+      "key": "at_count",
+      "displayName": "初当り合算",
+      "category": "AT_CZ",
+      "inputType": "COUNTER",
+      "unit": "回",
+      "supportsMinus": true,
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "sortOrder": 5,
       "notes": null
     }
   ],
   "settingReferenceValues": [
     {
-      "counterKey": "cz",
+      "counterKey": "reg_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 220.0,
-          "weight": 1.0,
-          "minSampleSize": 2200,
-          "note": null
+          "denominatorValue": 565.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 200.0,
-          "weight": 1.0,
-          "minSampleSize": 2200,
-          "note": null
+          "denominatorValue": 546.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 180.0,
-          "weight": 1.0,
-          "minSampleSize": 2200,
-          "note": null
+          "denominatorValue": 528.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 160.0,
-          "weight": 1.0,
-          "minSampleSize": 2200,
-          "note": null
+          "denominatorValue": 504.1,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 140.0,
-          "weight": 1.0,
-          "minSampleSize": 2200,
-          "note": null
+          "denominatorValue": 496.5,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 120.0,
-          "weight": 1.0,
-          "minSampleSize": 2200,
-          "note": null
+          "denominatorValue": 481.9,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     },
     {
-      "counterKey": "at",
+      "counterKey": "cz_count",
       "values": [
         {
           "settingNo": 1,
-          "denominatorValue": 420.0,
-          "weight": 1.2,
-          "minSampleSize": 2000,
-          "note": null
+          "denominatorValue": 270.4,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 2,
-          "denominatorValue": 380.0,
-          "weight": 1.2,
-          "minSampleSize": 2000,
-          "note": null
+          "denominatorValue": 255.7,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 3,
-          "denominatorValue": 340.0,
-          "weight": 1.2,
-          "minSampleSize": 2000,
-          "note": null
+          "denominatorValue": 239.3,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 4,
-          "denominatorValue": 300.0,
-          "weight": 1.2,
-          "minSampleSize": 2000,
-          "note": null
+          "denominatorValue": 210.7,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 5,
-          "denominatorValue": 260.0,
-          "weight": 1.2,
-          "minSampleSize": 2000,
-          "note": null
+          "denominatorValue": 201.2,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
         },
         {
           "settingNo": 6,
-          "denominatorValue": 220.0,
-          "weight": 1.2,
-          "minSampleSize": 2000,
-          "note": null
+          "denominatorValue": 188.7,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 159.7,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 154.8,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 151.0,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 141.4,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 138.1,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 133.2,
+          "weight": 1.0,
+          "minSampleSize": 3000,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "big_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 299.3,
+          "weight": 0.72,
+          "minSampleSize": 3000,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 297.9,
+          "weight": 0.72,
+          "minSampleSize": 3000,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 3,
+          "denominatorValue": 297.9,
+          "weight": 0.72,
+          "minSampleSize": 3000,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 296.5,
+          "weight": 0.72,
+          "minSampleSize": 3000,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 296.5,
+          "weight": 0.72,
+          "minSampleSize": 3000,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 295.2,
+          "weight": 0.72,
+          "minSampleSize": 3000,
+          "note": "初当り/ボーナスは補助判別。概ね2500G級から傾向確認。"
         }
       ]
     }

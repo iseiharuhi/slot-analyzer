@@ -1,0 +1,157 @@
+{
+  "machine": {
+    "id": "aquarion_all_stars",
+    "name": "パチスロ アクエリオン ALL STARS",
+    "manufacturer": "SANKYO",
+    "type": "AT",
+    "releaseDate": "2022-07-04",
+    "isActive": true,
+    "notes": "partial: 一撃公開のCZトータル当選率とAT「アクエリオンRUSH」初当り確率を採用。DMM掲載の1000G天井とCZ4スルー天井も反映。終了画面やテーブル選択率は現行UIにそのまま乗せづらいため今回は未実装。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4156",
+    "ichigekiUrl": "https://1geki.jp/slot/s_aguarion_allstars/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ初当り",
+      "category": "AT_CZ",
+      "sortOrder": 2,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "CZトータル当選回数。AT当選前の主判別。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT初当り",
+      "category": "AT_CZ",
+      "sortOrder": 3,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "AT「アクエリオンRUSH」初当り回数。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 393.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 374.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 331.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 309.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 289.0,
+          "weight": 1,
+          "minSampleSize": 2500,
+          "note": "AT初当りは主判別。概ね2000G超から比較推奨。"
+        }
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {
+          "settingNo": 1,
+          "denominatorValue": 220.0,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 2,
+          "denominatorValue": 206.0,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 4,
+          "denominatorValue": 176.0,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 5,
+          "denominatorValue": 167.0,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        },
+        {
+          "settingNo": 6,
+          "denominatorValue": 159.0,
+          "weight": 0.78,
+          "minSampleSize": 3000,
+          "note": "CZは補助判別。概ね2000〜3000G級から比較推奨。"
+        }
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "通常時天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時1000G到達でAT当選。",
+      "isEnabled": true
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ4スルー後の5回目CZでAT当選。",
+      "isEnabled": true
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "to_love_ru_darkness",
+    "name": "L ToLOVEるダークネス",
+    "manufacturer": "オリンピアエステート",
+    "type": "AT",
+    "releaseDate": "2024-06-03",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り確率を反映。設定1は1geki/DMMとも欠落(続編TRANCEでは明記される5段階設定と同型パターンから推定、本体機ではその旨の明記文は見当たらず中程度の信頼度)。設定5→6で分母がほぼ横ばい(1/311.3→1/311.1)だが出玉率は105.8%→110.1%と上昇、TRANCE版の比較表(1/352.0〜1/311.1)と整合する実データ(転記誤りではない)。天井はTRANCE版と同一構造: 999G+α(設定変更で650G+αに短縮)でST「楽園計画」突入(TRANCEはこのベース版のパワーアップ版のため天井値が同一という可能性、要追加確認)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4571",
+    "ichigekiUrl": "https://1geki.jp/slot/l_toloveru_darkness/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 352.0, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.0%)。設定1は1geki/DMMとも欠落、続編TRANCE版と同型パターンから推定だが本体機での明記文は見当たらず中程度の信頼度。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 345.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率99.0%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 328.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率102.5%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 311.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率105.8%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 311.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率110.1%)。設定5比でほぼ横ばいの分母だが出玉率は明確に上昇、TRANCE版の比較表とも整合する実データ(転記誤りではない)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時999G+αでST「楽園計画」突入濃厚。設定変更時は650G+αに短縮、トランスポイント・どきどきポイントが再抽選され通常ゲーム数もランダム加算される(続編TRANCE版と同一の天井構造)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ST「楽園計画」突入濃厚",
+      "resetText": "ST突入でリセット(設定変更で650Gに短縮)"
+    }
+  ]
+}

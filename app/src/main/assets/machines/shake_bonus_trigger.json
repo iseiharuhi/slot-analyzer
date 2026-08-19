@@ -1,0 +1,75 @@
+{
+  "machine": {
+    "id": "shake_bonus_trigger",
+    "name": "SHAKE BONUS TRIGGER",
+    "manufacturer": "大都技研",
+    "type": "AT",
+    "releaseDate": "2025-10-20",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM/jugglersnet.com/note.comの4ソース一致でBIG+REG合算確率を反映。本機は真の4段階設定機で設定3・4は非搭載(jugglersnet.com/note.com独立確認「設定3・4は存在しない」)、欠落ではない。天井は非搭載(1geki「天井:非搭載」明記)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4893",
+    "ichigekiUrl": "https://1geki.jp/slot/lb_shake/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 192.2, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/350.5、REG1/425.6)。本機は真の4段階設定機(設定3・4非搭載)。1geki.jp/DMM/jugglersnet.com/note.com一致。"},
+        {"settingNo": 2, "denominatorValue": 165.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/327.7、REG1/332.7)。4ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 186.2, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/341.3、REG1/409.6)。4ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 148.9, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG=REG=1/297.9)。4ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

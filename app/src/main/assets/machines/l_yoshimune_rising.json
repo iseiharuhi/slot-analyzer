@@ -2,13 +2,13 @@
   "machine": {
     "id": "l_yoshimune_rising",
     "name": "L吉宗ライジング",
-    "manufacturer": null,
+    "manufacturer": "サボハニ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2024-01-09",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML、タイトル・発売日・メーカーをDMMと照合しl_yoshimuneとの取り違えなし確認済み)からAT初当り確率(主判別)・ボーナス(初当り)確率(「爆走大盤振舞」AT+「将軍ボーナス」の合算値、補助判別)を反映(全6設定判明)。合算値は将軍ボーナス単独の設定別数値が非公開のため調和平均での算術検算不可(値自体は直接ソースだが内部整合性未確認、weight低減)。天井は3系統: ボーナス間800G+α(主天井)、AT間最大1200G(補助、単発AT後または設定変更で800Gに短縮)、将軍ボーナス4連続AT非当選で5回目終了後高確率経由AT濃厚(補助)。設定変更時のリセット挙動は本バッチ4機種中で唯一1geki/DMM両方に明示的記載あり: 「設定変更時は天井ゲーム数が短縮され、AT間800G消化でAT当選濃厚となる」(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4478",
+    "ichigekiUrl": "https://1geki.jp/slot/l_ysmn_rising/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,81 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 537.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 521.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 492.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 437.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 405.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 377.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 268.6, "weight": 0.6, "minSampleSize": 3000, "note": "ボーナス(初当り)確率は補助判別(「爆走大盤振舞」AT+「将軍ボーナス」の合算値)。将軍ボーナス単独の設定別数値が非公開のため算術検算不可、weight低減。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 261.9, "weight": 0.6, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 252.2, "weight": 0.6, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 234.3, "weight": 0.6, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 227.2, "weight": 0.6, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 216.8, "weight": 0.6, "minSampleSize": 3000, "note": "合算確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_interval_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ボーナス間800G+αで初当り濃厚。設定変更時は天井ゲーム数が短縮され、AT間800G消化でAT当選濃厚となる(1geki/DMM両方に明記の高信頼度情報)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "初当り濃厚",
+      "resetText": "初当りでリセット(設定変更で800Gに短縮)"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT間最大1200GでAT当選確定。単発AT後または設定変更で800Gに短縮(1geki/DMM明記)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT当選確定",
+      "resetText": "AT当選でリセット(単発AT後/設定変更で800Gに短縮)"
+    },
+    {
+      "ruleKey": "shogun_bonus_streak_ceiling",
+      "displayName": "将軍ボーナス連続天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "将軍ボーナスが4連続でAT非当選の場合、5回目の将軍ボーナス終了後は高確率状態を経由してAT濃厚。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚(高確率経由)",
+      "resetText": "AT当選でリセット"
+    }
+  ]
 }

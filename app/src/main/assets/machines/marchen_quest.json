@@ -1,0 +1,73 @@
+{
+  "machine": {
+    "id": "marchen_quest",
+    "name": "メルヘンクエスト",
+    "manufacturer": "JPS",
+    "type": "AT",
+    "releaseDate": "2022-02-21",
+    "isActive": true,
+    "notes": "partial: slopachi-quest.com(唯一の数値ソース、1geki.jpに専用ページなし)からBIG+REG合算確率を反映。本機は特定ホール向けプライベート機で設定は5・6・Pの3段階のみ(JPSオリスロシリーズ第4弾と明記)、標準の設定1〜4は存在しない。数値ラベルと直接対応する設定5・6のみをsettingReferenceValuesに収録、設定P(BIG=REG=1/218.5で設定6と確率完全一致、出玉率のみ上位)はsettingNo対応不可のためnotesのみ記録: BIG1/218.5、REG1/218.5、合算1/109.2、出玉率102.3%(完全攻略105.1%)。DMM側は数値表未公開のため二次ソース単独、中程度の信頼度。天井は非搭載(DMM「天井突入条件:なし」明記)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4107",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 5, "denominatorValue": 123.7, "weight": 0.85, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/172.5、REG1/436.9、出玉率99.4%)。本機は設定5・6・Pの3段階設定機、標準の設定1〜4は非搭載。1geki.jp専用ページなくslopachi-quest.com単独ソース、中程度の信頼度。"},
+        {"settingNo": 6, "denominatorValue": 109.2, "weight": 0.85, "minSampleSize": 2500, "note": "合算確率は主判別(BIG=REG=1/218.5、出玉率100.6%)。設定P(同一確率、出玉率102.3%)はsettingNo対応不可のためnotesのみ記録。slopachi-quest.com単独ソース。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

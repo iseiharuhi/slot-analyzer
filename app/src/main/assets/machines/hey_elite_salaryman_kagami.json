@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "hey_elite_salaryman_kagami",
+    "name": "HEY!エリートサラリーマン鏡",
+    "manufacturer": "パオン・ディーピー",
+    "type": "AT",
+    "releaseDate": "2022-12-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から初当り合算確率を反映(設定3は欠落のため未収録、2→4に飛ぶ)。隠し設定「設定L」も存在するが確率は非公開(デモ画面でタイトルパネル消灯という視覚的示唆のみ、counterKey未反映)。天井はモード別ゲーム数天井(通常A/B969G、通常C999G、チャンス269G、天国99G)を反映。設定変更時は約66%の確率で天国またはチャンスモードへ移行、天国非当選なら70%超で通常Bまたはチャンスへ。有利区間は設定変更/エンディング到達/一部ドリームカムズアゲイン条件でリセット(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4254",
+    "ichigekiUrl": "https://1geki.jp/slot/s_hey_eskagami/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 273.1, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 263.5, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。設定3は欠落のため未収録(2→4)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 229.8, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 200.6, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 189.6, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。隠し設定「設定L」も存在するが確率は非公開(視覚的示唆のみ)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "モード別ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常A/B滞在時969G、通常C滞在時999G、チャンス滞在時269G、天国滞在時99Gでボーナス濃厚。設定変更時は約66%の確率で天国またはチャンスモードへ移行、天国非当選なら70%超で通常Bまたはチャンスへ。有利区間は設定変更/エンディング到達/一部ドリームカムズアゲイン条件でリセット。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で約66%天国/チャンスへ)"
+    }
+  ]
+}

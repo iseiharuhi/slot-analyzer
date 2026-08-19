@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "mahjong_fight_club_shin",
+    "name": "麻雀格闘倶楽部 真",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2021-01-12",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から初当り確率を反映(レア役合算は補助情報)。天井は777G超過の対局で「格闘倶楽部BONUS」当選を反映(設定変更・電源サイクル時の挙動は調査中、2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3792",
+    "ichigekiUrl": "https://1geki.jp/slot/s_mfc_shin/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 329.3, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 319.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 310.3, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 290.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 268.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 245.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "777G超過の対局で「格闘倶楽部BONUS」当選。設定変更時・電源サイクル時の挙動は情報源でも調査中。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "格闘倶楽部BONUS当選",
+      "resetText": "当選でリセット"
+    }
+  ]
+}

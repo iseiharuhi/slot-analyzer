@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "black_lagoon_zero_bullet_max",
+    "name": "BLACK LAGOON ZERO bullet MAX",
+    "manufacturer": "エフ",
+    "type": "AT",
+    "releaseDate": "2022-02-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT確率を反映(本機はボーナス=AT同一イベントの仕様のためBIG/REG個別表なし、本機唯一の判別軸)。天井は有利区間移行から777G消化でAT「ヘブンズRUSH」濃厚を反映。設定変更/電源off/on時のリセット詳細はソースに明記なし、情報未確認(有利区間の性質上リセットされると推定されるが本機固有の明記なし)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4072",
+    "ichigekiUrl": "https://1geki.jp/slot/s_blacklagoon_zero/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 379, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(本機唯一の判別軸、ボーナス=AT同一イベント)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 365, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 345, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 296, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 260, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 236, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間移行から777G消化でAT「ヘブンズRUSH」濃厚。設定変更/電源off/on時のリセット詳細はソースに明記なし、情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「ヘブンズRUSH」濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

@@ -2,13 +2,13 @@
   "machine": {
     "id": "gundam_seed",
     "name": "Lパチスロ 機動戦士ガンダムSEED",
-    "manufacturer": null,
+    "manufacturer": "ビスティ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2025-05-07",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML、メイン+専用サブページの2箇所で確認)からCZ確率(補助判別)・AT初当り確率(主判別)を反映(全6設定判明、DMM機械割97.7%〜114.9%と一致)。設定2のCZ確率(1/377.3)は設定1(1/362.2)より悪化する非単調値だが2回の独立取得で確認済みの実データ(AT初当り・出玉率は正常に単調増加)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4788",
-    "ichigekiUrl": null
+    "ichigekiUrl": "https://1geki.jp/slot/l_gundamseed/"
   },
   "counterDefinitions": [
     {
@@ -48,7 +48,30 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 460.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値、DMM機械割97.7%と一致。"},
+        {"settingNo": 2, "denominatorValue": 446.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 411.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 364.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 355.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 318.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 362.2, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 377.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。設定1より悪化する非単調値だが2回の独立取得で確認済みの実データ。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 349.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 309.7, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 301.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 266.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "cz_game_ceiling",

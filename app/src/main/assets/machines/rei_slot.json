@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "rei_slot",
+    "name": "パチスロ零",
+    "manufacturer": "山佐ネクスト",
+    "type": "AT",
+    "releaseDate": "2021-07-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析から初当り確率(主判別、零ボーナス+逢魔刻の合算)・逢魔刻確率(補助判別、CZ的位置づけ)を反映(内訳合算は約2%以内の誤差で主判別値と整合)。天井は1geki天井専用ページが「現在調査中」のためslopachi-quest.com(二次ソース)から補完、中程度の信頼度: 有利区間移行後800G(通常モード)、モード別(チャンスA〜D400G、引き戻し300G)でCZ「逢魔刻」濃厚(CZ自体がAT濃厚)。設定変更で全リセット、電源off/onのみでは維持(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3921",
+    "ichigekiUrl": "https://1geki.jp/slot/s_zero/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 265.1, "weight": 1, "minSampleSize": 2500, "note": "初当り確率(零ボーナス1/478.9+逢魔刻1/618.1の合算)は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 247.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 231.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 212.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 197.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 181.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(零ボーナス1/378.7+逢魔刻1/354.0)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 618.1, "weight": 0.6, "minSampleSize": 3000, "note": "逢魔刻確率(CZ的位置づけ)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 596.1, "weight": 0.6, "minSampleSize": 3000, "note": "逢魔刻確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 554.0, "weight": 0.6, "minSampleSize": 3000, "note": "逢魔刻確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 468.3, "weight": 0.6, "minSampleSize": 3000, "note": "逢魔刻確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 413.7, "weight": 0.6, "minSampleSize": 3000, "note": "逢魔刻確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 354.0, "weight": 0.6, "minSampleSize": 3000, "note": "逢魔刻確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "有利区間移行後800G消化(通常モード)でCZ「逢魔刻」濃厚(CZ自体がAT濃厚)。モード別: チャンスA〜D400G、引き戻し300G。1geki天井専用ページが「現在調査中」のためslopachi-quest.com(二次ソース)から補完、中程度の信頼度。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ「逢魔刻」濃厚(AT濃厚)",
+      "resetText": "設定変更で全リセット(電源off/onのみでは維持)"
+    }
+  ]
+}

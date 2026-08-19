@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "gundam_unicorn",
+    "name": "パチスロ機動戦士ガンダムユニコーン",
+    "manufacturer": "ビスティ",
+    "type": "AT",
+    "releaseDate": "2023-03-06",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT「ユニコーンRUSH」初当りを反映(本機は設定3が欠番の5段階設定スペックで、norisan-probability.netと2ソース一致確認)。天井は999GでAT当選(到達時ミネバモードでストック抽選あり、設定変更時約30%で天国・約20%で引き戻しモード)を反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4321",
+    "ichigekiUrl": "https://1geki.jp/slot/s_gundam_uc/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 344.0, "weight": 1, "minSampleSize": 2500, "note": "AT「ユニコーンRUSH」初当りは主判別。本機は設定3が欠番の5段階設定スペック(2ソース一致)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 326.0, "weight": 1, "minSampleSize": 2500, "note": "AT「ユニコーンRUSH」初当りは主判別。本機は設定3が欠番の5段階設定スペック(2ソース一致)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 273.0, "weight": 1, "minSampleSize": 2500, "note": "AT「ユニコーンRUSH」初当りは主判別。本機は設定3が欠番の5段階設定スペック(2ソース一致)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 248.0, "weight": 1, "minSampleSize": 2500, "note": "AT「ユニコーンRUSH」初当りは主判別。本機は設定3が欠番の5段階設定スペック(2ソース一致)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 240.0, "weight": 1, "minSampleSize": 2500, "note": "AT「ユニコーンRUSH」初当りは主判別。本機は設定3が欠番の5段階設定スペック(2ソース一致)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大999G消化でAT当選。到達時ミネバモードへ移行し100〜300Gの間ミネバチャンスストック抽選のケースあり。設定変更時は約30%で天国モード、約20%で引き戻しモードへ移行(全設定共通)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

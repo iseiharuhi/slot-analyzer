@@ -2,13 +2,13 @@
   "machine": {
     "id": "big_shimauta_30",
     "name": "BIG島唄30",
-    "manufacturer": null,
+    "manufacturer": "オリンピア",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2022-09-20",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML、メイン+専用サブページの2箇所で確認)から初当りAT確率を反映(本機はBIGのみ/REG無しのA+AT型で本機唯一の判別軸)。設定4は両ページとも欠落(生HTML上でtd要素が3→5に飛ぶ、真の未公開でありスクレイピング誤りではない)。天井は800G(通常A/B/天国準備A、主天井)、超過後は801〜809Gで毎ゲーム超高確率のSPストックモード保証(外縁810G)、補助でスイカ10回成立でボーナス確定(3回・5回でも段階的に抽選)。設定変更時の天井リセット挙動は1geki/DMMとも明示的記載なし、設定変更後のモード移行率(チャンス30.0%/通常A9.8%/通常B9.8%/天国準備A50.0%/天国準備B0.4%)から間接的にリセットが推測されるのみ(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4209",
+    "ichigekiUrl": "https://1geki.jp/slot/s_big_shimauta30/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 318.5, "weight": 1, "minSampleSize": 2500, "note": "初当りAT確率は本機唯一の判別軸(BIGのみ/REG無し)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 306.9, "weight": 1, "minSampleSize": 2500, "note": "初当りAT確率は本機唯一の判別軸。設定4は両ページとも欠落のため未収録(3→5)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 286.5, "weight": 1, "minSampleSize": 2500, "note": "初当りAT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 250.8, "weight": 1, "minSampleSize": 2500, "note": "初当りAT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 222.7, "weight": 1, "minSampleSize": 2500, "note": "初当りAT確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A/通常B/天国準備Aモード時800Gが天井。800G超過後は801〜809Gの各ゲームで超高確率のSPストックモードが保証される(外縁810G)。補助でスイカ10回成立でボーナス確定(3回・5回成立でも段階的な抽選)。天国準備Bモードの天井は32G、引き戻し/チャンスモードは200G。設定変更時のリセット挙動は明示的記載なし、設定変更後のモード移行率(チャンス30.0%/通常A9.8%/通常B9.8%/天国準備A50.0%/天国準備B0.4%)から間接的な再抽選が推測されるのみ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚(シーサーBIG抽選あり)",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "one_chance_1000",
+    "name": "ワンチャンス 1000",
+    "manufacturer": "ベルコ",
+    "type": "AT",
+    "releaseDate": "2021-03-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT「ワンチャンスボーナス」初当り確率を反映(全6設定判明、小役確率は全設定共通と1geki明記)。伝統的な意味での天井(ハマリ救済)は非搭載(1geki「天井非搭載」「天井ナシ・無抽選区間ナシ」明記)だが、DMM記載の最大111G+αのCZ/ボーナス間隔保証(平均約68G周期)という別種の仕組みがあり、この保証を実質的な天井として記録(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3831",
+    "ichigekiUrl": "https://1geki.jp/slot/s_onechance/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 410.1, "weight": 1, "minSampleSize": 2500, "note": "AT「ワンチャンスボーナス」初当り確率は本機唯一の判別軸(小役確率は全設定共通)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 394.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 379.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 359.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 341.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 319.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_guarantee",
+      "displayName": "CZ/ボーナス間隔保証",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 111,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大111G+αでCZ/ボーナスが最低1回保証される(平均周期約68G)。伝統的な意味での天井(ハマリ救済)は非搭載(1geki「天井非搭載」「天井ナシ・無抽選区間ナシ」明記)だが、この間隔保証が実質的に類似機能を果たす。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ/ボーナス保証",
+      "resetText": "CZ/ボーナス成立でリセット"
+    }
+  ]
+}

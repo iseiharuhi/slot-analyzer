@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-07-04",
     "isActive": true,
-    "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当りとボーナス初当り。直撃ATや高確示唆は重い分母・UI外要素のため補助メモ運用とし、現行推測は見える数値に寄せて安定度を優先。ATは2000G超、CZとボーナスは2500〜3000G級で比較推奨。",
+    "notes": "partial: 1geki.jp(raw HTML、メイン+専用サブページで確認)からボーナス合算確率(initial_hit_countに反映、主判別)・ST合算確率(st_countに反映、補助判別)・CZトータル当選率(無名CZ+生駒CZ+美馬CZ、cz_countに反映、補助判別)を反映(全6設定判明)。ボーナス/ST合算は1geki単独ソース(DMMは数値表を持たず物語的記述のみ)、CZトータルと規定ゲーム数分布表(100G/250G/450G/650G/1000Gの各到達率、notesのみ参考)はDMM完全一致。ボーナス/ST合算に対応するBIG/REG等の内訳は未公開のため算術検算は非適用。small_role_countに対応する固有データは未発見(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4160",
     "ichigekiUrl": "https://1geki.jp/slot/s_kabaneri/"
   },
@@ -72,7 +72,41 @@
       "notes": null
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "initial_hit_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 237.0, "weight": 0.9, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki単独ソース(DMM数値表なし)、weight僅かに低減。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 230.7, "weight": 0.9, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 214.0, "weight": 0.9, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 186.5, "weight": 0.9, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 171.3, "weight": 0.9, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 151.3, "weight": 0.9, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "st_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 407.9, "weight": 0.9, "minSampleSize": 3000, "note": "ST合算確率は補助判別。1geki単独ソース、weight僅かに低減。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 393.2, "weight": 0.9, "minSampleSize": 3000, "note": "ST合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 372.4, "weight": 0.9, "minSampleSize": 3000, "note": "ST合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 327.2, "weight": 0.9, "minSampleSize": 3000, "note": "ST合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 307.3, "weight": 0.9, "minSampleSize": 3000, "note": "ST合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 290.6, "weight": 0.9, "minSampleSize": 3000, "note": "ST合算確率は補助判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 179.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZトータル当選率(無名CZ+生駒CZ+美馬CZ)は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 177.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZトータル当選率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 169.3, "weight": 0.7, "minSampleSize": 3000, "note": "CZトータル当選率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 158.4, "weight": 0.7, "minSampleSize": 3000, "note": "CZトータル当選率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 145.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZトータル当選率は補助判別。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 136.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZトータル当選率は補助判別。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "normal_game_ceiling",

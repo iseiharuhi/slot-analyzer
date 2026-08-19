@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "cyborg_009_re",
+    "name": "PACHISLOT 009 RE:CYBORG",
+    "manufacturer": "ニューギン",
+    "type": "AT",
+    "releaseDate": "2023-09-04",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT確率(主判別、AT専用機種のためBIG/REG表なしと1geki明記)・CZ確率(補助判別、設定4・5が1/218で完全一致=横ばいプラトー、2回取得+WebSearch集約で確認済み・主判別のAT確率は単調)を反映。天井はAT間1280G+α、または「加速目」通算39回成立(正解手順順守が条件)の2系統を反映。設定変更時のリセット挙動は情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4402",
+    "ichigekiUrl": "https://1geki.jp/slot/l_009recyborg/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 614, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率97.6%)。AT専用機種のためBIG/REG表は存在しないと1geki.jp明記。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 597, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率98.8%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 581, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率100.4%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 550, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率104.8%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 539, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率108.3%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 535, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率114.9%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 246, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 237, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 230, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 218, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。設定5と完全一致のプラトー、2回取得+WebSearch集約で確認済み(主判別のAT確率は単調)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 218, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。設定4と完全一致のプラトー、転記誤りではない。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 214, "weight": 0.7, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1280,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間1280G+αでAT濃厚(加速目通算成立数天井と並行)。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    },
+    {
+      "ruleKey": "accel_symbol_count_ceiling",
+      "displayName": "加速目通算成立数天井",
+      "ceilingType": "COUNT",
+      "limitValue": 39,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "「加速目」が通算39回成立(正解手順を守った場合が条件)でAT直撃濃厚。ゲーム数天井と並行。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT直撃濃厚",
+      "resetText": "AT当選でリセット"
+    }
+  ]
+}

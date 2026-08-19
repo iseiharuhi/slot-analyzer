@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "id": "highschool_dxd_2",
+    "name": "ハイスクールD×D2 ハーレム王に俺はなる",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2022-01-24",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算確率を反映。天井はサイクル制(最大10周期)またはゲーム数666G(いずれか早い方)を反映、モード別サイクル上限(天国最大3周期・約70%で2周期時点で天井/チャンス最大7周期/通常最大10周期)あり。設定変更時およびAT終了毎に約50%で天国モード(2〜3周期天井)が再選択される優遇仕様(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4034",
+    "ichigekiUrl": "https://1geki.jp/slot/hsdd_hk2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 256.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率97.6%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 251.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率98.7%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 245.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率100.1%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 228.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率104.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 215.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率107.1%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 206.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(出玉率107.4%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "サイクル天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 10,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "最大10周期到達で成功寄りCZ濃厚(ゲーム数天井と並行、いずれか早い方)。モード別上限: 天国最大3周期(うち約70%は2周期時点で天井)、チャンス最大7周期、通常最大10周期。設定変更時およびAT終了毎に約50%で天国モードが再選択される。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "成功寄りCZ濃厚",
+      "resetText": "CZ突入でリセット(約50%で天国モード再選択)"
+    },
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 666,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "666G+αで成功寄りCZ濃厚(サイクル天井と並行、いずれか早い方)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "成功寄りCZ濃厚",
+      "resetText": "CZ突入でリセット"
+    }
+  ]
+}

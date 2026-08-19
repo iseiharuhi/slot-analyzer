@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "kaiji_numa",
+    "name": "回胴黙示録カイジ〜沼〜",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2020-10-19",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から沼BONUS(AT初当り)確率を反映。天井はモード別(通常A700G/通常B550G/天国250G/特殊750G/続行200G、全モード共通で沼BONUS当選)を反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3662",
+    "ichigekiUrl": "https://1geki.jp/slot/s_kaiji_numa/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 1189.7, "weight": 1, "minSampleSize": 2500, "note": "沼BONUS(AT初当り)確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 1138.2, "weight": 1, "minSampleSize": 2500, "note": "沼BONUS(AT初当り)確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 1077.5, "weight": 1, "minSampleSize": 2500, "note": "沼BONUS(AT初当り)確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 979.3, "weight": 1, "minSampleSize": 2500, "note": "沼BONUS(AT初当り)確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 908.6, "weight": 1, "minSampleSize": 2500, "note": "沼BONUS(AT初当り)確率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 893.3, "weight": 1, "minSampleSize": 2500, "note": "沼BONUS(AT初当り)確率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_a_ceiling",
+      "displayName": "通常A天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 700,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常A滞在時700G+αで沼BONUS当選。通常B=550G+α、天国=250G+α、特殊(直撃)=750G+α、続行=200G+α。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "沼BONUS当選",
+      "resetText": "設定変更でリセット"
+    }
+  ]
+}

@@ -2,13 +2,13 @@
   "machine": {
     "id": "railgun",
     "name": "とある科学の超電磁砲",
-    "manufacturer": "JFJ",
+    "manufacturer": "藤商事",
     "type": "AT",
     "releaseDate": "2022-11-07",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)からチャンスAT「超電磁砲CHANCE」当選率(補助判別)・メインAT「Eternal Party RUSH」初当り確率(主判別)を反映(全6設定判明)。ATトータル初当たり確率(1/258.2〜1/197.1)はCZ→チャンスAT→メインATの入れ子構造(DMM側の説明でも裏付け)のため単純な調和平均では合算不成立、notesのみ参考記録。AT直撃当選実質出現率(1/17099.5〜1/3202.7)も稀なサブ経路のためnotesのみ(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4247",
+    "ichigekiUrl": "https://1geki.jp/slot/s_railgun/"
   },
   "counterDefinitions": [
     {
@@ -60,7 +60,30 @@
       "notes": "メインAT初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 556.6, "weight": 1, "minSampleSize": 2500, "note": "メインAT「Eternal Party RUSH」初当り確率は主判別(ATトータル初当り1/258.2はnotesのみ、入れ子構造のため単純合算不成立)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 537.2, "weight": 1, "minSampleSize": 2500, "note": "メインAT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 506.0, "weight": 1, "minSampleSize": 2500, "note": "メインAT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 416.7, "weight": 1, "minSampleSize": 2500, "note": "メインAT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 348.0, "weight": 1, "minSampleSize": 2500, "note": "メインAT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 325.6, "weight": 1, "minSampleSize": 2500, "note": "メインAT初当り確率は主判別(ATトータル初当り1/197.1)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "railgun_chance_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 295.2, "weight": 0.7, "minSampleSize": 3000, "note": "チャンスAT「超電磁砲CHANCE」当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 280.0, "weight": 0.7, "minSampleSize": 3000, "note": "チャンスAT当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 264.2, "weight": 0.7, "minSampleSize": 3000, "note": "チャンスAT当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 238.1, "weight": 0.7, "minSampleSize": 3000, "note": "チャンスAT当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 221.9, "weight": 0.7, "minSampleSize": 3000, "note": "チャンスAT当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 213.7, "weight": 0.7, "minSampleSize": 3000, "note": "チャンスAT当選率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "railgun_chance_ceiling",

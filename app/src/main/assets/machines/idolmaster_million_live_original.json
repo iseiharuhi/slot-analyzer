@@ -1,0 +1,95 @@
+{
+  "machine": {
+    "id": "idolmaster_million_live_original",
+    "name": "パチスロ アイドルマスター ミリオンライブ!",
+    "manufacturer": "ビスティ",
+    "type": "AT",
+    "releaseDate": "2021-03-08",
+    "isActive": true,
+    "notes": "partial: AT初当り確率(合算)を反映(設定2>設定3の非単調な並びだが1geki.jp/pachiseven.jpの2ソース一致で機種固有仕様と確認済み)。天井は最大9周期でCZ「マスターチャレンジ」当選(突入時AT濃厚)を反映するが、具体的ゲーム数・短縮挙動は1geki.jp自体が「調査中」のため未反映(2026-08-10)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3838",
+    "ichigekiUrl": "https://1geki.jp/slot/s_idolmaster_ml/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 310.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率(合算)は主判別。設定2>設定3の非単調な並びだが2ソース一致で確認済みの機種固有仕様。"},
+        {"settingNo": 2, "denominatorValue": 211.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率(合算)は主判別。設定2>設定3の非単調な並びだが2ソース一致で確認済みの機種固有仕様。"},
+        {"settingNo": 3, "denominatorValue": 281.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率(合算)は主判別。設定2>設定3の非単調な並びだが2ソース一致で確認済みの機種固有仕様。"},
+        {"settingNo": 4, "denominatorValue": 244.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率(合算)は主判別。設定2>設定3の非単調な並びだが2ソース一致で確認済みの機種固有仕様。"},
+        {"settingNo": 5, "denominatorValue": 221.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率(合算)は主判別。設定2>設定3の非単調な並びだが2ソース一致で確認済みの機種固有仕様。"},
+        {"settingNo": 6, "denominatorValue": 196.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率(合算)は主判別。設定2>設定3の非単調な並びだが2ソース一致で確認済みの機種固有仕様。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_cycle_ceiling",
+      "displayName": "CZ周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 9,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大9周期到達でCZ「マスターチャレンジ」当選(突入時点でAT濃厚)。1周期あたりのゲーム数、設定変更時・電源オンオフ時の挙動は情報源(1geki.jp)でも「現在調査中」表記で未確定。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ「マスターチャレンジ」当選(AT濃厚)",
+      "resetText": "CZ当選でリセット"
+    }
+  ]
+}

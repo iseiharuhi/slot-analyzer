@@ -1,10 +1,10 @@
 [
   {
-    "id": "list_slot_049",
+    "id": "disc_up_ultraremix",
     "name": "A-SLOT+ ディスクアップ ULTRAREMIX"
   },
   {
-    "id": "dmm_slot_013",
+    "id": "isekai_quartet_bt",
     "name": "A-SLOT+ 異世界かるてっと BT"
   },
   {
@@ -12,11 +12,11 @@
     "name": "BIG島唄30"
   },
   {
-    "id": "list_slot_026",
+    "id": "evangelion_festival",
     "name": "EVANGELION FESTIVAL"
   },
   {
-    "id": "list_slot_032",
+    "id": "fairy_tail_2",
     "name": "FAIRY TAIL2"
   },
   {
@@ -24,11 +24,11 @@
     "name": "L D4DJ Pachi-Slot Mix"
   },
   {
-    "id": "dmm_slot_033",
+    "id": "higurashi_gou",
     "name": "L ひぐらしのなく頃に 業"
   },
   {
-    "id": "dmm_slot_039",
+    "id": "eva_mirai_souzou",
     "name": "L エヴァンゲリオン ～未来への創造～"
   },
   {
@@ -40,11 +40,11 @@
     "name": "L 犬夜叉2"
   },
   {
-    "id": "dmm_slot_006",
+    "id": "galfy",
     "name": "LB スロット GALFY"
   },
   {
-    "id": "dmm_slot_010",
+    "id": "triple_crown_seven",
     "name": "LBトリプルクラウンセブン"
   },
   {
@@ -68,15 +68,11 @@
     "name": "Lにゃんこ大戦争 超神速"
   },
   {
-    "id": "madoka_magica_f",
-    "name": "Lまどか☆マギカf"
-  },
-  {
     "id": "akame_ga_kill_2",
     "name": "Lアカメが斬る！ 2"
   },
   {
-    "id": "dmm_slot_014",
+    "id": "akudama_drive",
     "name": "Lアクダマドライブ"
   },
   {
@@ -86,10 +82,6 @@
   {
     "id": "kengan",
     "name": "Lケンガンアシュラ"
-  },
-  {
-    "id": "l_code_geass",
-    "name": "Lコードギアス"
   },
   {
     "id": "godzilla",
@@ -136,7 +128,7 @@
     "name": "Lパチスロ 機動戦士ガンダムSEED"
   },
   {
-    "id": "dmm_slot_020",
+    "id": "fire_force_2",
     "name": "Lパチスロ 炎炎ノ消防隊2"
   },
   {
@@ -144,7 +136,7 @@
     "name": "Lパチスロ 革命機ヴァルヴレイヴ2"
   },
   {
-    "id": "list_slot_063",
+    "id": "umineko_2",
     "name": "Lパチスロうみねこのなく頃に2"
   },
   {
@@ -156,7 +148,7 @@
     "name": "Lプリズムナナ"
   },
   {
-    "id": "list_slot_010",
+    "id": "berserk_musou",
     "name": "Lベルセルク無双"
   },
   {
@@ -164,7 +156,7 @@
     "name": "Lラブキューレ2"
   },
   {
-    "id": "dmm_slot_025",
+    "id": "lovejo_3",
     "name": "Lラブ嬢3〜Wご指名はいかがですか？〜"
   },
   {
@@ -172,15 +164,11 @@
     "name": "Lリノ ヘブン"
   },
   {
-    "id": "l_ring_ni_kakero",
-    "name": "Lリングにかけろ"
-  },
-  {
     "id": "ring_v",
     "name": "Lリングにかけろ1 V"
   },
   {
-    "id": "list_slot_040",
+    "id": "lupin_treasure_voyager",
     "name": "Lルパン三世 大航海者の秘宝"
   },
   {
@@ -204,7 +192,7 @@
     "name": "L北斗の拳"
   },
   {
-    "id": "list_slot_012",
+    "id": "nangoku_sodachi",
     "name": "L南国育ち"
   },
   {
@@ -220,7 +208,7 @@
     "name": "L咲-Saki- 頂上決戦"
   },
   {
-    "id": "dmm_slot_036",
+    "id": "daiku_gensan_mugen",
     "name": "L大工の源さん超夢源"
   },
   {
@@ -256,7 +244,7 @@
     "name": "L聖闘士星矢 海皇覚醒 CUSTOM EDITION"
   },
   {
-    "id": "dmm_slot_026",
+    "id": "keiji_sado",
     "name": "L花の慶次～佐渡攻めの章〜"
   },
   {
@@ -264,7 +252,7 @@
     "name": "L花笠"
   },
   {
-    "id": "dmm_slot_012",
+    "id": "kyokou_suiri",
     "name": "L虚構推理"
   },
   {
@@ -280,7 +268,7 @@
     "name": "L革命機ヴァルヴレイヴ"
   },
   {
-    "id": "list_slot_009",
+    "id": "mahjong_fight_club_kakusei",
     "name": "L麻雀格闘倶楽部 覚醒"
   },
   {
@@ -292,11 +280,11 @@
     "name": "Re:ゼロから始める異世界生活 season2"
   },
   {
-    "id": "list_slot_035",
+    "id": "boowy",
     "name": "S BOØWY"
   },
   {
-    "id": "dmm_slot_032",
+    "id": "chura_chura",
     "name": "Sちゅらちゅら"
   },
   {
@@ -308,20 +296,8 @@
     "name": "dragon_hanahana_30"
   },
   {
-    "id": "king_hanahana_30",
-    "name": "king_hanahana_30"
-  },
-  {
     "id": "l_hokuto",
     "name": "l_hokuto"
-  },
-  {
-    "id": "oki_doki_duo",
-    "name": "oki_doki_duo"
-  },
-  {
-    "id": "oki_doki_gold",
-    "name": "oki_doki_gold"
   },
   {
     "id": "iza_bancho",
@@ -336,7 +312,7 @@
     "name": "からくりサーカス"
   },
   {
-    "id": "list_slot_039",
+    "id": "konosuba",
     "name": "この素晴らしい世界に祝福を！"
   },
   {
@@ -376,7 +352,7 @@
     "name": "アナターのオット！？はーです"
   },
   {
-    "id": "dmm_slot_008",
+    "id": "animal_slot_docchi",
     "name": "アニマルスロット ドッチ"
   },
   {
@@ -388,16 +364,12 @@
     "name": "アルドノア・ゼロ"
   },
   {
-    "id": "list_slot_047",
+    "id": "alex_bright",
     "name": "アレックス ブライト"
   },
   {
     "id": "ultra_chabudai_gaeshi",
     "name": "ウルトラちゃぶ台返し"
-  },
-  {
-    "id": "eureka_zero",
-    "name": "エウレカセブン HI-EVOLUTION ZERO TYPE-ART"
   },
   {
     "id": "eva_tamashii_no_kyoumei",
@@ -408,11 +380,11 @@
     "name": "キャッツアイ"
   },
   {
-    "id": "list_slot_059",
+    "id": "king_hanahana_30",
     "name": "キングハナハナ-30"
   },
   {
-    "id": "dmm_slot_028",
+    "id": "cranky_crest",
     "name": "クランキークレスト"
   },
   {
@@ -428,7 +400,7 @@
     "name": "ゴーゴージャグラー3"
   },
   {
-    "id": "list_slot_046",
+    "id": "thunder_v_lightning",
     "name": "サンダーVライトニング"
   },
   {
@@ -436,7 +408,7 @@
     "name": "シャア専用パチスロ 逆襲の赤い彗星"
   },
   {
-    "id": "dmm_slot_001",
+    "id": "birdie_wing",
     "name": "スマスロ BIRDIE WING -Golf Girls' Story-"
   },
   {
@@ -452,19 +424,19 @@
     "name": "スマスロ アイドルマスター ミリオンライブ！ ネクストプロローグ"
   },
   {
-    "id": "list_slot_003",
+    "id": "code_geass_revival",
     "name": "スマスロ コードギアス反逆のルルーシュ／復活のルルーシュ"
   },
   {
-    "id": "dmm_slot_015",
+    "id": "thunder_v",
     "name": "スマスロ サンダーV"
   },
   {
-    "id": "list_slot_030",
+    "id": "shaman_king",
     "name": "スマスロ シャーマンキング"
   },
   {
-    "id": "dmm_slot_017",
+    "id": "l_hanabi",
     "name": "スマスロ ハナビ"
   },
   {
@@ -472,11 +444,11 @@
     "name": "スマスロ バイオハザード RE:2"
   },
   {
-    "id": "dmm_slot_002",
+    "id": "biohazard_re3",
     "name": "スマスロ バイオハザードRE:3"
   },
   {
-    "id": "dmm_slot_004",
+    "id": "big_dream_golden_pusher",
     "name": "スマスロ ビッグドリーム THE GOLDEN PUSHER"
   },
   {
@@ -484,7 +456,7 @@
     "name": "スマスロ マギアレコード 魔法少女まどか☆マギカ外伝"
   },
   {
-    "id": "dmm_slot_007",
+    "id": "million_god_kamigami",
     "name": "スマスロ ミリオンゴッド-神々の軌跡-"
   },
   {
@@ -536,7 +508,7 @@
     "name": "スマスロスーパーブラックジャック"
   },
   {
-    "id": "dmm_slot_005",
+    "id": "super_rio_ace_2",
     "name": "スマスロスーパーリオエース2"
   },
   {
@@ -544,15 +516,15 @@
     "name": "スマスロモンキーターンV"
   },
   {
-    "id": "dmm_slot_011",
+    "id": "jormungand",
     "name": "スマスロヨルムンガンド"
   },
   {
-    "id": "dmm_slot_037",
+    "id": "madoka_forte",
     "name": "スマスロ劇場版 魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語f-フォルテ-"
   },
   {
-    "id": "list_slot_013",
+    "id": "bofuri",
     "name": "スマスロ痛いのは嫌なので防御力に極振りしたいと思います。"
   },
   {
@@ -560,7 +532,7 @@
     "name": "スマスロ頭文字D 2nd"
   },
   {
-    "id": "list_slot_055",
+    "id": "star_hanahana",
     "name": "スマート沖スロ スターハナハナ"
   },
   {
@@ -568,7 +540,7 @@
     "name": "スマート沖スロ ニューキングハナハナ-30"
   },
   {
-    "id": "list_slot_053",
+    "id": "oki_doki_duo_encore",
     "name": "スマート沖スロ 沖ドキ！DUO-30 アンコール"
   },
   {
@@ -576,7 +548,7 @@
     "name": "スロット Re:ゼロから始める異世界生活 season2"
   },
   {
-    "id": "dmm_slot_040",
+    "id": "suhana_rising_30",
     "name": "スーハナライジング-30"
   },
   {
@@ -588,19 +560,19 @@
     "name": "タイガー&バニーSP"
   },
   {
-    "id": "list_slot_054",
+    "id": "chibariyo_2_plus",
     "name": "チバリヨ2プラス"
   },
   {
-    "id": "list_slot_048",
+    "id": "disc_up_2",
     "name": "ディスクアップ2"
   },
   {
-    "id": "dmm_slot_035",
+    "id": "digislo_jac_in",
     "name": "デジスロ JAC INバージョン"
   },
   {
-    "id": "list_slot_058",
+    "id": "dragon_hanahana_senko_30",
     "name": "ドラゴンハナハナ～閃光～ 30"
   },
   {
@@ -612,15 +584,15 @@
     "name": "ニューキングハナハナ-30"
   },
   {
-    "id": "dmm_slot_022",
+    "id": "new_shiosai",
     "name": "ニューシオサイ"
   },
   {
-    "id": "list_slot_043",
+    "id": "new_pulsar_dx3",
     "name": "ニューパルサーDX3"
   },
   {
-    "id": "list_slot_042",
+    "id": "new_pulsar_sp4",
     "name": "ニューパルサーSP4"
   },
   {
@@ -628,7 +600,7 @@
     "name": "ノーゲーム・ノーライフ THE SLOT"
   },
   {
-    "id": "dmm_slot_038",
+    "id": "eureka_zero",
     "name": "パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART"
   },
   {
@@ -636,19 +608,19 @@
     "name": "ハッピージャグラーV III"
   },
   {
-    "id": "list_slot_060",
+    "id": "hanahana_houou_tensho_30",
     "name": "ハナハナホウオウ～天翔～-30"
   },
   {
-    "id": "list_slot_044",
+    "id": "shin_hanabi",
     "name": "ハナビ"
   },
   {
-    "id": "list_slot_036",
+    "id": "biohazard_village",
     "name": "バイオハザード ヴィレッジ"
   },
   {
-    "id": "list_slot_045",
+    "id": "versus_rexse",
     "name": "バーサスリヴァイズ"
   },
   {
@@ -656,15 +628,15 @@
     "name": "パチスロ アイドルマスター ミリオンライブ！"
   },
   {
-    "id": "list_slot_027",
+    "id": "aquarion_all_stars",
     "name": "パチスロ アクエリオン ALL STARS"
   },
   {
-    "id": "dmm_slot_031",
+    "id": "kengan_ashura",
     "name": "パチスロ ケンガンアシュラ"
   },
   {
-    "id": "list_slot_037",
+    "id": "danmachi_2",
     "name": "パチスロ ダンジョンに出会いを求めるのは間違っているだろうか2"
   },
   {
@@ -672,7 +644,7 @@
     "name": "パチスロ モンスターハンターアイスボーン™"
   },
   {
-    "id": "list_slot_031",
+    "id": "shin_onimusha_2",
     "name": "パチスロ 新鬼武者2"
   },
   {
@@ -688,11 +660,11 @@
     "name": "パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION"
   },
   {
-    "id": "list_slot_004",
+    "id": "code_geass_3_cc_kallen",
     "name": "パチスロコードギアス 反逆のルルーシュ3 C.C.&Kallen ver."
   },
   {
-    "id": "list_slot_029",
+    "id": "youjo_senki",
     "name": "パチスロ幼女戦記"
   },
   {
@@ -700,19 +672,19 @@
     "name": "パチスロ犬夜叉"
   },
   {
-    "id": "dmm_slot_023",
+    "id": "ryujin_30_suika",
     "name": "パチスロ琉神−30 スイカバージョン"
   },
   {
-    "id": "list_slot_034",
+    "id": "tate_no_yuusha",
     "name": "パチスロ盾の勇者の成り上がり"
   },
   {
-    "id": "list_slot_028",
+    "id": "tekken_5",
     "name": "パチスロ鉄拳5"
   },
   {
-    "id": "list_slot_050",
+    "id": "famista_kaidou",
     "name": "ファミスタ回胴版!!"
   },
   {
@@ -728,7 +700,7 @@
     "name": "ブラックラグーン4"
   },
   {
-    "id": "list_slot_033",
+    "id": "persona_5",
     "name": "ペルソナ5"
   },
   {
@@ -740,16 +712,12 @@
     "name": "マイフラワーⅡ"
   },
   {
-    "id": "dmm_slot_029",
+    "id": "magical_halloween_8",
     "name": "マジカルハロウィン８"
   },
   {
-    "id": "dmm_slot_021",
+    "id": "miku_idomu_challenge_2",
     "name": "ミクちゃんとイドムンのミラクルチャレンジ2"
-  },
-  {
-    "id": "momokyun_sword",
-    "name": "モモキュンソード"
   },
   {
     "id": "monster_hunter_golden",
@@ -776,10 +744,6 @@
     "name": "ワンバーS30"
   },
   {
-    "id": "madoka_forte",
-    "name": "劇場版魔法少女まどか☆マギカ f-フォルテ-"
-  },
-  {
     "id": "yoshimune_3",
     "name": "吉宗3"
   },
@@ -788,7 +752,7 @@
     "name": "回胴黙示録カイジ 狂宴"
   },
   {
-    "id": "list_slot_062",
+    "id": "symphogear",
     "name": "戦姫絶唱シンフォギア 正義の歌"
   },
   {
@@ -800,7 +764,7 @@
     "name": "押忍！番長4"
   },
   {
-    "id": "dmm_slot_030",
+    "id": "oshi_slo_idol",
     "name": "推しスロ アイドルVer."
   },
   {
@@ -812,11 +776,11 @@
     "name": "楽園追放"
   },
   {
-    "id": "list_slot_052",
+    "id": "oki_doki_duo",
     "name": "沖ドキ！DUO"
   },
   {
-    "id": "list_slot_051",
+    "id": "oki_doki_gold",
     "name": "沖ドキ！GOLD"
   },
   {
@@ -824,7 +788,7 @@
     "name": "牙狼 黄金騎士"
   },
   {
-    "id": "dmm_slot_009",
+    "id": "shinuchi_yoshimune",
     "name": "真打 吉宗"
   },
   {
@@ -868,11 +832,11 @@
     "name": "麻雀物語"
   },
   {
-    "id": "list_slot_041",
+    "id": "komonchama_ten",
     "name": "黄門ちゃま天"
   },
   {
-    "id": "dmm_slot_003",
+    "id": "takt_op_destiny",
     "name": "Ｌタクトオーパス デスティニー"
   }
 ]

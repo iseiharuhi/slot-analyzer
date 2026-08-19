@@ -2,13 +2,13 @@
   "machine": {
     "id": "hihouden_megami",
     "name": "秘宝伝 解き放たれた女神",
-    "manufacturer": null,
+    "manufacturer": "大都技研",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2021-12-20",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp公開解析から初当り合算確率を反映(全6設定判明、二次ソースchonborista.comと完全一致でクロスチェック、DMMには数値表なし)。「秘宝CHANCE」直撃抽選(チャンス目成立時の条件付き確率、設定1=0.78%〜設定6=6.25%)は分母形式ではないためnotesのみ参考記録。天井は通常時約663G+αで秘宝BONUS濃厚(1geki/DMM一致)。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし、二次ソースchonborista.comのみ「天井/有利区間リセット、ステージは墳墓ステージへ」と記載(低信頼度)(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4040",
+    "ichigekiUrl": "https://1geki.jp/slot/hihouden_kaihou/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 364.9, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別(秘宝CHANCE直撃抽選0.78%はnotesのみ)。1geki.jp/chonborista.com一致。"},
+        {"settingNo": 2, "denominatorValue": 346.7, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別(直撃抽選1.56%)。1geki.jp/chonborista.com一致。"},
+        {"settingNo": 3, "denominatorValue": 314.1, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別(直撃抽選2.34%)。1geki.jp/chonborista.com一致。"},
+        {"settingNo": 4, "denominatorValue": 290.4, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別(直撃抽選3.13%)。1geki.jp/chonborista.com一致。"},
+        {"settingNo": 5, "denominatorValue": 274.3, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別(直撃抽選4.69%)。1geki.jp/chonborista.com一致。"},
+        {"settingNo": 6, "denominatorValue": 240.9, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別(直撃抽選6.25%)。1geki.jp/chonborista.com一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 663,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時約663G+αで秘宝BONUS濃厚(伝説モードの優遇抽選あり)。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし。二次ソースchonborista.comのみ「天井・有利区間ともリセット、ステージは墳墓ステージへ」と記載(低信頼度)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "秘宝BONUS濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は低信頼度)"
+    }
+  ]
 }

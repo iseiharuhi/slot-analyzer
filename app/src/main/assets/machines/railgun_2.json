@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "railgun_2",
+    "name": "スマスロ とある科学の超電磁砲2",
+    "manufacturer": "藤商事",
+    "type": "AT",
+    "releaseDate": "2025-11-04",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMMの2ソース一致(小数点まで完全一致)でCZ確率・AT確率を反映。天井はモード別(A999G/B・C699G/D299G/E199G)+CZ天井(A・B499G/C〜E299G、設定変更時699Gに短縮)を反映(2026-08-10)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4892",
+    "ichigekiUrl": "https://1geki.jp/slot/l_railgun2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 317.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 311.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 304.4, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 272.4, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 248.1, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp/DMMの2ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 235.3, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp/DMMの2ソース一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 175.7, "weight": 0.78, "minSampleSize": 3000, "note": "CZ確率(GIRLS JUDGE等合算)は補助判別。1geki.jp/DMMの小数点まで完全一致。"},
+        {"settingNo": 2, "denominatorValue": 172.6, "weight": 0.78, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMMの小数点まで完全一致。"},
+        {"settingNo": 3, "denominatorValue": 168.5, "weight": 0.78, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMMの小数点まで完全一致。"},
+        {"settingNo": 4, "denominatorValue": 156.6, "weight": 0.78, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMMの小数点まで完全一致。"},
+        {"settingNo": 5, "denominatorValue": 145.7, "weight": 0.78, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMMの小数点まで完全一致。"},
+        {"settingNo": 6, "denominatorValue": 137.5, "weight": 0.78, "minSampleSize": 3000, "note": "CZ確率は補助判別。1geki.jp/DMMの小数点まで完全一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "mode_a_ceiling",
+      "displayName": "モードA天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "モードA滞在時999G+αで超電磁砲DRIVE(AT)濃厚。モードB・C=699G+α、モードD=299G+α、モードE=199G+α。設定変更後は699G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "超電磁砲DRIVE(AT)濃厚",
+      "resetText": "設定変更でリセット(699Gに短縮)"
+    },
+    {
+      "ruleKey": "cz_ceiling",
+      "displayName": "CZ天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 499,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "モードA・B滞在時499G+αでCZ濃厚。モードC〜E=299G+α。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ突入でリセット"
+    }
+  ]
+}

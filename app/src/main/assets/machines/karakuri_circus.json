@@ -6,9 +6,9 @@
     "type": "AT",
     "releaseDate": "2023-07-03",
     "isActive": true,
-    "notes": "均一化フェーズ用に再整理。主判別はAT初当り、補助はCZ初当り。直撃ATは重い分母のため低weightの補助メモ扱いに固定し、終了画面や示唆演出は現行UI外のため別メモ推奨。ATは2000G超、CZは2500〜3000G級で比較するとブレが減る。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT初当り確率(initial_hit_countに反映、主判別)・CZ初当り確率(cz_countに反映、補助判別)を反映。設定3はAT/CZ両方および他の設定別表(踊れ！オリンピア上乗せ示唆・AT中テーブル選択率・エンディングレア役ランプ色分布)すべてで一貫して欠落(2→4、1geki側の系統的な未公開パターン、真の未公開でスクレイピング誤りではない)。DMM側は数値表を持たず項目名の索引のみのため設定3の補完不可。direct_hit_count/small_role_countに対応する固有データは未発見(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4360",
-    "ichigekiUrl": "https://1geki.jp/slot/l_karakuricircus/"
+    "ichigekiUrl": "https://1geki.jp/slot/l_karakuri/"
   },
   "counterDefinitions": [
     {
@@ -72,7 +72,28 @@
       "notes": null
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "initial_hit_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 564, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。設定3は欠落のため未収録(2→4、系統的な未公開)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 543, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 469, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 451, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 447, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 333, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。設定3は欠落のため未収録。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 320, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 292, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 277, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 275, "weight": 0.7, "minSampleSize": 3000, "note": "CZ初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_cz_ceiling",

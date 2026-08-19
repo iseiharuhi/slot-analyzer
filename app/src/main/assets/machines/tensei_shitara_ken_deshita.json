@@ -1,0 +1,112 @@
+{
+  "machine": {
+    "id": "tensei_shitara_ken_deshita",
+    "name": "パチスロ 転生したら剣でした",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2025-08-04",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT確率を反映。天井はAT間970G(設定変更で600Gに短縮)+ボーナス間1280G(設定変更で980Gに短縮)の独立進行2系統を反映(AT当選してもボーナス間カウンターはクリアされない)。設定変更後は通常B以上濃厚、設定1でも約20%で天国移行(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4843",
+    "ichigekiUrl": "https://1geki.jp/slot/l_tenken/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 403.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率97.9%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 396.0, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率99.0%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 373.4, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率101.2%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 340.7, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率105.7%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 325.9, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率109.1%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 312.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率112.1%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 970,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT間最大970G+αでAT濃厚CZ突入。設定変更時は最大600G+αに短縮。設定変更後は通常B以上濃厚、設定1でも約20%で天国移行。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚CZ突入",
+      "resetText": "AT当選でリセット(設定変更で600Gに短縮)"
+    },
+    {
+      "ruleKey": "bonus_interval_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1280,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ボーナス間最大1280G+αでボーナス当選(フランボーナス/X転剣ボーナス)。AT当選してもこのカウンターはクリアされない独立進行。設定変更時は最大980G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス当選",
+      "resetText": "ボーナス成立でリセット(設定変更で980Gに短縮)"
+    }
+  ]
+}

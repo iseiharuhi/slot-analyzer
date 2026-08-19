@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "sen_chan_gokuraku",
+    "name": "パチスロ1000ちゃんごらくバージョン「PB機」",
+    "manufacturer": "オーイズミ",
+    "type": "AT",
+    "releaseDate": "2021-04-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算確率を反映。本機(Dynam専売PB機)は1gekiで最低段階が「L」表記(「1」ではない)。DMMユーザーレビュー「最低設定の2で機械割99.5%」+DMM公式レンジ99.5%〜107.5%が「L」(99.3%)ではなく「2」(99.5%)の値と一致するため、Lは実選択不可の理論値/参考値である可能性が高いと判断、settingNo対応せずnotesのみ記録: L=ボーナス合算1/163、完全攻略99.3%。天井は通常時最大777G+αでCZ濃厚(告知型AT機)、777G自体が333G/555G/777Gの3分布のいずれかで決まる設定差要素(設定が高いほど短い333G/555G寄りに、詳細はceiling説明欄参照)。設定変更時のリセット挙動は1geki/DMMとも非公開(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3880",
+    "ichigekiUrl": "https://1geki.jp/slot/s_1000chan_gokuraku/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 163, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(完全攻略99.5%)。1geki最低段階「L」(1/163、99.3%)はsettingNo対応不可のためnotesのみ記録。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 160, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(完全攻略100.5%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 157, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(完全攻略101.7%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 154, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(完全攻略103.0%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 137, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(完全攻略107.5%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時最大777G+αでAT突入CZ濃厚(BB/AT無しの場合)。天井長は333G/555G/777Gの3分布のいずれかに決まり、設定が高いほど短い333G/555G寄りになる設定差要素(L:333=2.0%/555=18.0%/777=80.1%、設定2:3.9%/21.1%/75.0%、設定3:7.0%/25.0%/68.0%、設定4:9.0%/27.0%/64.1%、設定5:12.1%/32.8%/55.1%、設定6:16.0%/44.1%/39.8%)。設定変更時のリセット挙動は1geki/DMMとも非公開。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT突入CZ濃厚",
+      "resetText": "CZ突入でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

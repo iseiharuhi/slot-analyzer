@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "god_eater_resurrection",
+    "name": "スマスロ ゴッドイーター リザレクション",
+    "manufacturer": "セブンリーグ",
+    "type": "AT",
+    "releaseDate": "2024-07-22",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT「アラガミバースト」出現率・CZ合算出現率を反映。天井は最大1000G(振り分け100/200/300/450/600/750/1000G、設定変更時600Gに短縮)を反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4602",
+    "ichigekiUrl": "https://1geki.jp/slot/l_godeater_r/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 351.9, "weight": 1, "minSampleSize": 2500, "note": "AT「アラガミバースト」出現率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 344.5, "weight": 1, "minSampleSize": 2500, "note": "AT「アラガミバースト」出現率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 330.1, "weight": 1, "minSampleSize": 2500, "note": "AT「アラガミバースト」出現率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 317.0, "weight": 1, "minSampleSize": 2500, "note": "AT「アラガミバースト」出現率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 302.2, "weight": 1, "minSampleSize": 2500, "note": "AT「アラガミバースト」出現率は主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 290.3, "weight": 1, "minSampleSize": 2500, "note": "AT「アラガミバースト」出現率は主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 392.0, "weight": 0.78, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 378.3, "weight": 0.78, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 359.1, "weight": 0.78, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 343.4, "weight": 0.78, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 324.3, "weight": 0.78, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 310.6, "weight": 0.78, "minSampleSize": 3000, "note": "CZ合算出現率は補助判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "normal_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時最大1000G+α(振り分け:100/200/300/450/600/750/1000G)でAT当選。設定変更時600Gに短縮。逆鱗ハンニバル敗北後は100Gゾーンで当選濃厚。上位AT後も600Gに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選",
+      "resetText": "設定変更・上位AT後でリセット(600Gに短縮)"
+    }
+  ]
+}

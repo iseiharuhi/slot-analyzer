@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "zettai_shougeki_platonic_heart",
+    "name": "L 絶対衝激~PLATONIC HEART~",
+    "manufacturer": "スパイキー",
+    "type": "AT",
+    "releaseDate": "2025-06-16",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT確率(主判別)・ボーナス確率(補助判別)を反映(DMMは図解グラフのみで数値非公開だが設定差自体の存在は定性的に確認)。天井は900G+α(AT「PLATONIC TIME」濃厚)を反映、設定変更後も900G+αのまま短縮なしと1geki本ページ・天井専用ページ双方で確認済み(シリーズ他機種と異なる仕様、意図的な機種固有仕様)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4821",
+    "ichigekiUrl": "https://1geki.jp/slot/l_zetai/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 336.3, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率97.4%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 328.2, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率98.3%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 318.6, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率100.2%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 299.4, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率104.1%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 278.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率107.4%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 264.7, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別(出玉率110.2%)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 163.0, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 162.2, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 161.4, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 156.0, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 146.3, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 139.7, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT/ボーナス間900G+αでAT「PLATONIC TIME」濃厚、次回ボーナス成立まで継続。設定変更後も同じ900G+αが再適用され短縮されない(1geki本ページ・天井専用ページ双方で確認済みの機種固有仕様、シリーズ内の他機種とは異なる)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「PLATONIC TIME」濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更でも900Gのまま、短縮なし)"
+    }
+  ]
+}

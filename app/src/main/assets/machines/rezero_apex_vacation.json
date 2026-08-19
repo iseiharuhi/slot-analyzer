@@ -1,0 +1,74 @@
+{
+  "machine": {
+    "id": "rezero_apex_vacation",
+    "name": "Re:ゼロから始める異世界生活Apex Vacation",
+    "manufacturer": "サボハニ",
+    "type": "AT",
+    "releaseDate": "2021-11-22",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBIG+REG合算確率を反映。本機は非標準の設定体系(数値設定1〜3+キャラクター選択設定エミリア/レム/ラムが「4〜6」相当の上位ティアとして機能)。キャラクター設定3種は合算確率が完全に同一(1/135.4)でどのキャラのBIGが優遇されるかのみ異なる仕様のため、順序関係が不明確でsettingNo4/5/6への強制対応は行わずnotesのみ記録(miku_idomu_challenge等の前例に準拠): エミリア設定=エミリアBIG1/528.5・レム/ラムBIG各1/993.0、レム設定=レムBIG1/528.5・エミリア/ラムBIG各1/993.0、ラム設定=ラムBIG1/528.5・エミリア/レムBIG各1/993.0(全設定共通REG1/287.4、合算1/135.4)。数値ラベルと直接対応する設定1〜3のみをsettingReferenceValuesに収録。天井は非搭載(DMM「天井突入条件:なし」明記)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4012",
+    "ichigekiUrl": "https://1geki.jp/slot/s_rezero_apex/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 171.6, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(エミリア/レム/ラムBIG各1/829.6、REG1/452.0)。本機は数値設定1〜3+キャラクター選択設定(4〜6相当)の非標準体系、キャラクター設定はsettingNo対応不可のためnotesのみ記録。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 156.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(各キャラBIG1/819.2、REG1/364.1)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 146.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(各キャラBIG1/809.1、REG1/319.7)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

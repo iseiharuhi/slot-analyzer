@@ -2,13 +2,13 @@
   "machine": {
     "id": "senran_kagura_2",
     "name": "L閃乱カグラ2",
-    "manufacturer": null,
+    "manufacturer": "オーイズミラボ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2024-09-02",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)から異色ボーナス+同色ボーナス合算確率(主判別)・AT初当り確率(補助判別)を反映(全6設定判明、算術検算済み)。同色ボーナスは1/1024で全設定共通(rowspanでの表記も確認済み、真の非差別化データ)。姉妹機senran_kagura_burst_upとは別データで取り違えなし。天井はゲーム数天井500G(主天井)+スルー回数天井10回(補助、11回目でAT濃厚)の2系統。設定変更/有利区間移行時はスルー回数上限が10→6に短縮(7回目でAT濃厚に)、両ソース一致(2026-08-20)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4610",
+    "ichigekiUrl": "https://1geki.jp/slot/l_kagura2/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,64 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 92, "weight": 1, "minSampleSize": 2500, "note": "異色ボーナス+同色ボーナス合算確率は主判別(異色1/101、同色1/1024[全設定共通])。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 92, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(異色1/101、同色1/1024)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 90, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(異色1/99、同色1/1024)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 90, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(異色1/99、同色1/1024)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 87, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(異色1/95、同色1/1024)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 87, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(異色1/95、同色1/1024)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 398.4, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 390.8, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 380.1, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 345.8, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 324.0, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 307.8, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス間500G+αでAT「閃乱艶舞」濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    },
+    {
+      "ruleKey": "through_ceiling",
+      "displayName": "スルー回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 10,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ボーナス10回スルー(AT非当選)で11回目にAT濃厚。設定変更/有利区間移行時は上限が6回に短縮(7回目でAT濃厚に)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更で上限6回に短縮)"
+    }
+  ]
 }

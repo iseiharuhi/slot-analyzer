@@ -1,0 +1,23 @@
+{
+  "id": "biohazard_re3",
+  "name": "スマスロ バイオハザードRE:3",
+  "manufacturer": "Enterrise",
+  "type": "AT",
+  "releaseDate": "2026-05-11",
+  "isActive": true,
+  "notes": "partial: 公開比較値を確認できたAT初当たりを主軸に反映。 CZ・ボーナス・直撃/特殊契機など数値未確認・入力化しにくい要素は今回は補助記録または未反映。 精度優先で暫定値は採用していない。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4974",
+  "ichigekiUrl": "https://1geki.jp/slot/s_bh7/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4974"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/s_bh7/"
+    }
+  ],
+  "fileName": "dmm_slot_002.json"
+}

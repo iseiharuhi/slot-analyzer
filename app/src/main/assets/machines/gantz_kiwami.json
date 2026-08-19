@@ -1,0 +1,140 @@
+{
+  "machine": {
+    "id": "gantz_kiwami",
+    "name": "パチスロGANTZ極 THE SURVIVAL GAME",
+    "manufacturer": "エフ",
+    "type": "AT",
+    "releaseDate": "2021-11-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析から初当り確率(主判別)・超ガンツボーナス(AT、補助判別、稀少経路)を反映(ガンツボーナス(ループ込み)は別途1/107〜1/83、ボーナス内ループ再当選も含む高頻度指標のためcounterKey未反映)。天井は周期天井(4周期でガンツボーナス濃厚、5周期超で超ガンツボーナス直行濃厚、主天井)+初当りスルー天井(ボーナス6回スルーで6回目AT濃厚、補助)+ゲーム数天井(1600G、補助)の3系統を反映。設定変更で天井G数リセット、短い周期が選ばれやすくなる(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4001",
+    "ichigekiUrl": "https://1geki.jp/slot/s_gantz_k/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 198, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。ガンツボーナス(ループ込み)1/107は別統計(notesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 196, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 194, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 189, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 182, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 162, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 613, "weight": 0.6, "minSampleSize": 3000, "note": "超ガンツボーナス(AT、稀少経路)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 599, "weight": 0.6, "minSampleSize": 3000, "note": "超ガンツボーナスは補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 564, "weight": 0.6, "minSampleSize": 3000, "note": "超ガンツボーナスは補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 469, "weight": 0.6, "minSampleSize": 3000, "note": "超ガンツボーナスは補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 420, "weight": 0.6, "minSampleSize": 3000, "note": "超ガンツボーナスは補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 387, "weight": 0.6, "minSampleSize": 3000, "note": "超ガンツボーナスは補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 4,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "4周期目到達でガンツボーナス濃厚、5周期を超えると超ガンツボーナス(AT)直行濃厚。設定変更時は天井G数リセット、短い周期(平均約2周期)が選ばれやすくなり、リセット後1〜3周期目はガンツボーナス当選濃厚。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ガンツボーナスまたは超ガンツボーナス(AT)濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で短い周期が選ばれやすい)"
+    },
+    {
+      "ruleKey": "at_through_ceiling",
+      "displayName": "初当りスルー天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 6,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス6回当選までATに当選しなかった場合、6回目でAT濃厚(転送高確モード中のボーナスはカウント対象外)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    },
+    {
+      "ruleKey": "backstop_game_ceiling",
+      "displayName": "ゲーム数天井(バックストップ)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時+転送高確モード合計1600G+αでAT濃厚(AT当選でのみリセット)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    }
+  ]
+}

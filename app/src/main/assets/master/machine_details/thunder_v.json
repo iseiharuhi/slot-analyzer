@@ -1,0 +1,23 @@
+{
+  "id": "thunder_v",
+  "name": "スマスロ サンダーV",
+  "manufacturer": "ELECO",
+  "type": "BONUS",
+  "releaseDate": "2026-03-02",
+  "isActive": true,
+  "notes": "均一化フェーズ対応。主判別はREG、補助はボーナス合算とベルに整理。スマスロ サンダーVはノーマル系としてREG主軸で揃え、ベルは高ゲーム数時の補強に使う。",
+  "status": "verified",
+  "dmmUrl": "https://p-town.dmm.com/machines/4943",
+  "ichigekiUrl": "https://1geki.jp/slot/l_thunder_v/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4943"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_thunder_v/"
+    }
+  ],
+  "fileName": "dmm_slot_015.json"
+}

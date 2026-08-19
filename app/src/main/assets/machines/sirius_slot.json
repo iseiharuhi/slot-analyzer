@@ -1,0 +1,111 @@
+{
+  "machine": {
+    "id": "sirius_slot",
+    "name": "シリウス",
+    "manufacturer": "ヤーマ",
+    "type": "AT",
+    "releaseDate": "2022-06-06",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(2ページ独立確認)/DMM一致でボーナス初当り確率を反映(A-type/ボーナスのみ機種)。設定5は両ソースとも欠落、真に未公開(4→6に飛ぶ)。表中の「L」行(出玉率77.3%、確率非公開)は正規設定1より明確に劣る別枠のベースライン表記でsettingNo対応せずnotesのみ記録。天井は通常A/B/引き戻しモード時最大777G+α(主天井)、シリウスA/Bモード時は最短200G+α(補助天井)を反映。設定変更で天井G数・有利区間・差枚数カウントがリセットされ、約10%で引き戻しモードへ移行。電源off/onでは維持(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4145",
+    "ichigekiUrl": "https://1geki.jp/slot/s_sirius/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 328.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の判別軸(A-type)。「L」行(1/未公開、77.3%)は別枠でnotesのみ記録。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 308.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 294.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 276.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。設定5は欠落のため未収録(4→6)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 252.2, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常A/B・引き戻しモード時最大777G+αでボーナス濃厚。設定変更で天井G数・有利区間・差枚数カウントがすべてリセットされ、約10%の確率で引き戻しモードへ移行。電源off/onでは維持される。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更ですべてリセット)"
+    },
+    {
+      "ruleKey": "sirius_mode_ceiling",
+      "displayName": "シリウスA/Bモード天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 200,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "シリウスA/Bモード滞在時は最短200G+αでボーナス濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    }
+  ]
+}

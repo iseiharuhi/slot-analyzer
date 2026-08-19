@@ -1,0 +1,129 @@
+{
+  "machine": {
+    "id": "ginga_eiyuu_densetsu",
+    "name": "銀河英雄伝説 Die Neue These",
+    "manufacturer": "コナミアミューズメント",
+    "type": "AT",
+    "releaseDate": "2025-12-08",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致でボーナス初当り確率を反映(設定3→4の跳ね幅が他より大きいが実データ、異常ではない)。100pt区切りのCZ抽選率(約20%〜26%)はcounterKey形式に合わずnotesのみ記録。天井はヒーローポイント500pt(CZ濃厚)+ST間1000G(設定変更で800Gに短縮)+GSC間2000Gの3系統を反映。2025年12月発売の新しい機種のため情報整備が発展途上、中程度の信頼度(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4895",
+    "ichigekiUrl": "https://1geki.jp/slot/l_gineidendnt/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 256.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別(出玉率97.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 253.6, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率98.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 249.0, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率100.2%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 217.8, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率105.6%)。設定3→4の跳ね幅が他区間より大きいが実データで異常ではない。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 200.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率108.4%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 191.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率111.0%)。100pt区切りのCZ抽選率(約20%〜26%)はcounterKey形式に合わずnotesのみ記録。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "hero_point_ceiling",
+      "displayName": "ヒーローポイント天井",
+      "ceilingType": "POINT",
+      "limitValue": 500,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ヒーローポイント500pt蓄積でCZ濃厚(100pt刻みで約20〜26%のサブ抽選あり)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ当選でリセット"
+    },
+    {
+      "ruleKey": "st_interval_ceiling",
+      "displayName": "ST間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ST間最大1000G+αでオープニングボーナス濃厚。設定変更時は800G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "オープニングボーナス濃厚",
+      "resetText": "設定変更で800Gに短縮"
+    },
+    {
+      "ruleKey": "gsc_interval_ceiling",
+      "displayName": "GSC間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 2000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "GSC(ギャラクティック・セブン・クラッシュ)間最大2000G+αでエピソードボーナス濃厚。設定により1000〜2000Gの範囲で分布(高設定ほど短い値が選ばれやすい傾向)、ST突入では持ち越すがGSC自体でのみリセット。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "エピソードボーナス濃厚",
+      "resetText": "GSC突入でリセット"
+    }
+  ]
+}

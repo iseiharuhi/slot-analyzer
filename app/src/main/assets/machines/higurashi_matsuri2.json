@@ -2,13 +2,13 @@
   "machine": {
     "id": "higurashi_matsuri2",
     "name": "ひぐらしのなく頃に祭2 カケラ遊び編",
-    "manufacturer": null,
+    "manufacturer": "オーイズミラボ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2022-04-04",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML)/DMM一致でボーナス初当り確率(主判別)・「運命分岐モード」当選率(CZクリア報酬ティア、補助判別)を反映(全6設定判明)。CZ「絶対意思ZONE」自体の内部抽選は「全設定共通」と明記され設定差は運命分岐モード入口側に集約。天井は3系統: 液晶カレンダー7/1到達(平均650G、主天井)、初当りボーナス7回スルーで運命分岐モードへ直撃(補助)、有利区間1500G消化で運命分岐モード突入(補助)。設定変更は古手神社ステージ(CZ状態)から開始し継続成功時は運命分岐モードへの朝イチ直撃が濃厚になる仕様、「リセット」の直接的表現はないが機能的に天井プロセスが再始動する(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4114",
+    "ichigekiUrl": "https://1geki.jp/slot/s_higurashi2_kakera/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,81 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 249.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 238.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 228.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 220.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 208.7, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 192.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は主判別。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 638.1, "weight": 0.7, "minSampleSize": 3000, "note": "「運命分岐モード」当選率(CZクリア報酬ティア)は補助判別。「カケラ回想」出現率は1/313.7(参考、notesのみ)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 611.0, "weight": 0.7, "minSampleSize": 3000, "note": "運命分岐モード当選率は補助判別。カケラ回想出現率は1/301.1。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 584.5, "weight": 0.7, "minSampleSize": 3000, "note": "運命分岐モード当選率は補助判別。カケラ回想出現率は1/296.1。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 563.9, "weight": 0.7, "minSampleSize": 3000, "note": "運命分岐モード当選率は補助判別。カケラ回想出現率は1/283.6(設定5より良い非単調値、実データ確認済み)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 533.8, "weight": 0.7, "minSampleSize": 3000, "note": "運命分岐モード当選率は補助判別。カケラ回想出現率は1/287.0(設定4より悪化する非単調値、実データ確認済み)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 492.4, "weight": 0.7, "minSampleSize": 3000, "note": "運命分岐モード当選率は補助判別。カケラ回想出現率は1/276.6。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_calendar_ceiling",
+      "displayName": "液晶カレンダー天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 650,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "液晶カレンダーが7/1に到達(平均650G)で初当りボーナス濃厚。設定変更は古手神社ステージ(CZ状態)から開始し継続成功時は運命分岐モードへの朝イチ直撃が濃厚になる仕様、直接的な「リセット」表現はないが機能的に天井プロセスが再始動する。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "初当りボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で新たなプロセスが開始)"
+    },
+    {
+      "ruleKey": "through_ceiling",
+      "displayName": "スルー回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 7,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "初当りボーナス7回スルー(CZ6連続失敗後の7回目)で「運命分岐モード」に直撃突入(ボーナス+CZ突破が確定)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "運命分岐モード直撃",
+      "resetText": "運命分岐モード突入でリセット"
+    },
+    {
+      "ruleKey": "yuuri_kukan_ceiling",
+      "displayName": "有利区間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "有利区間1500G消化で「運命分岐モード」に突入。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "運命分岐モード突入",
+      "resetText": "運命分岐モード突入でリセット"
+    }
+  ]
 }

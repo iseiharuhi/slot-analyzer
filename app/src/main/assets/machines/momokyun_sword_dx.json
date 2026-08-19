@@ -1,0 +1,94 @@
+{
+  "machine": {
+    "id": "momokyun_sword_dx",
+    "name": "SモモキュンソードDX",
+    "manufacturer": "西陣(DAXEL)",
+    "type": "AT",
+    "releaseDate": "2023-01-10",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析からボーナス/AT合算確率を反映(設定3は欠落のため未収録、2→4に飛ぶ、「設定L」注記行あり実体不明、同社の他機種kin_no_kabocha/moe_chiba_30にも同様のパターンあり)。天井は最大20周期(1周期=32G、算出上約640G相当、この換算は1geki非公開値を自前計算したもの)でAT「桃剣RUSH」濃厚を反映。設定変更/電源off/on時のリセット挙動は非公開(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4272",
+    "ichigekiUrl": "https://1geki.jp/slot/s_momokyun/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 198.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス/AT合算確率は主判別(出玉率97.9%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 194.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(出玉率99.3%)。設定3は欠落のため未収録(2→4)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 186.9, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(出玉率102.5%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 182.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(出玉率105.2%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 180.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(出玉率110.0%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 20,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大20周期(1周期=32G、算出上約640G相当)でAT「桃剣RUSH」濃厚。設定変更/電源off/on時のリセット挙動は非公開。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT「桃剣RUSH」濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

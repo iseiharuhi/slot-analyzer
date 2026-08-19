@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "triple_crown_vintage",
+    "name": "トリプルクラウンビンテージ",
+    "manufacturer": "清龍ゲームジャパン",
+    "type": "AT",
+    "releaseDate": "2022-11-21",
+    "isActive": true,
+    "notes": "partial: DMMの設定判別欄は「準備中」のため二次ソースpachiseven.jp(raw HTML)のBIG+REG合算確率を反映(低信頼度、weight低減)。DMM公式機械割レンジ96.6%〜107.0%とpachiseven側の値が完全一致(間接的な裏付けあり)。天井は非搭載、DMM「天井突入条件:なし。」+pachiseven「天井機能ナシ」の両ソースで確認済み(高信頼度)。1geki.jpに専用ページなし(後継の岡崎産業スマスロ「LBトリプルクラウン」等とは別機種、混同せず除外)。dmm側メーカー表記は「清龍ジャパン」(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4279",
+    "ichigekiUrl": null
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 184.6, "weight": 0.6, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/296.5、REG1/489.1)。DMM未公開のためpachiseven.jp単独ソース、低信頼度。算術検算済み、DMM公式機械割96.6%と一致。"},
+        {"settingNo": 2, "denominatorValue": 175.2, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/287.4、REG1/448.9)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 3, "denominatorValue": 168.0, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/278.9、REG1/422.8)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 4, "denominatorValue": 155.7, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/267.5、REG1/372.4)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 5, "denominatorValue": 148.9, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/262.1、REG1/344.9)。pachiseven.jp単独ソース、低信頼度。"},
+        {"settingNo": 6, "denominatorValue": 142.5, "weight": 0.6, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/252.1、REG1/327.7)。pachiseven.jp単独ソース、低信頼度。DMM公式機械割107.0%と一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

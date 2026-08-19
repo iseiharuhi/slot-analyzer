@@ -1,0 +1,129 @@
+{
+  "machine": {
+    "id": "gamera",
+    "name": "パチスロガメラ",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2021-06-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM/p-gabu.jp一致でBB+REG合算確率を反映(2021年の初代ガメラ、続編gamera_2とは別機種、取り違えなし確認済み)。二次ソース複数によればBIGはほぼ設定差なしでREG側に設定差が集中する仕様のため、個別BIG/REG値は非公開・合算値のみ収録。天井はBIG後1000G/REG後930G/設定変更後900G(短縮)を反映。全設定共通で毎ボーナス10.5%の確率で「隠れガメラモード」(次回ボーナスBIG濃厚)に入る仕様あり(天井ではなく確率的恩恵として付記)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3886",
+    "ichigekiUrl": "https://1geki.jp/slot/s_gamera/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 219.0, "weight": 1, "minSampleSize": 2500, "note": "BB+REG合算確率は主判別。BIGはほぼ設定差なし、REG側に設定差が集中するため個別値は非公開・合算値のみ収録。1geki.jp/DMM/p-gabu.jp一致。"},
+        {"settingNo": 2, "denominatorValue": 215.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM/p-gabu.jp一致。"},
+        {"settingNo": 3, "denominatorValue": 211.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM/p-gabu.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 202.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM/p-gabu.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 191.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM/p-gabu.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 170.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp/DMM/p-gabu.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "post_big_ceiling",
+      "displayName": "BIG後天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "BIG終了後1000G+αでボーナス濃厚。REG終了後は930G+α。全設定共通で毎ボーナス10.5%の確率で「隠れガメラモード」(次回ボーナスBIG濃厚)に移行する確率的恩恵もあり(天井とは別枠)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    },
+    {
+      "ruleKey": "post_reg_ceiling",
+      "displayName": "REG後天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 930,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "REG終了後930G+αでボーナス濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    },
+    {
+      "ruleKey": "setting_change_ceiling",
+      "displayName": "設定変更後天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "設定変更後は900G+α(通常時の1000G/930Gより短縮)でボーナス濃厚。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    }
+  ]
+}

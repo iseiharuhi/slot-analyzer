@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "knights_slot",
+    "name": "パチスロナイツ",
+    "manufacturer": "山佐ネクスト",
+    "type": "AT",
+    "releaseDate": "2023-07-03",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からボーナス合算確率を反映。Hyper BB比率は設定1(58.02%)・設定6(65.30%)のみ判明、設定2〜5は情報なしのため未収録。天井は非搭載(1geki「天井:非搭載」、WebSearch集約「遊タイムは存在せず天井機能はないものと思われます」で2ソース一致)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4383",
+    "ichigekiUrl": "https://1geki.jp/slot/s_pachisuro_nights/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 172.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算確率は主判別(Hyper BB比率58.02%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 167.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 161.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 153.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 146.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 140.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(Hyper BB比率65.30%)。設定2〜5のHyper BB比率は情報なしのため未収録。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "nangoku_monogatari_30",
+    "name": "パチスロ南国物語30",
+    "manufacturer": "アムテックス",
+    "type": "AT",
+    "releaseDate": "2022-01-24",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/pachiseven.jpの2ソース一致でボーナス合算(BB+RB)を反映(調査時、類似機種「南国育ち-30」の誤情報混入を機種名照合で排除済み)。天井はノーマルタイプのため非搭載を確認(2026-08-10)。ceilingRulesは意図的に空のまま。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4037",
+    "ichigekiUrl": "https://1geki.jp/slot/s_nangoku30/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 172.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp/pachiseven.jpの2ソース一致。"},
+        {"settingNo": 2, "denominatorValue": 168.0, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp/pachiseven.jpの2ソース一致。"},
+        {"settingNo": 3, "denominatorValue": 162.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp/pachiseven.jpの2ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 154.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp/pachiseven.jpの2ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 149.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp/pachiseven.jpの2ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 141.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス合算(BB+RB)は主判別。1geki.jp/pachiseven.jpの2ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

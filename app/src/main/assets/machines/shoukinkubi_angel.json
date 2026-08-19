@@ -1,0 +1,121 @@
+{
+  "machine": {
+    "id": "shoukinkubi_angel",
+    "name": "賞金首Angel",
+    "manufacturer": "ネット",
+    "type": "AT",
+    "releaseDate": "2024-07-22",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致でボーナス確率(主判別)・AT初当り確率(補助判別)を反映。設定3は両ソースとも欠落、真に未公開(2→4に飛ぶ)。表中の「L」行は「常時下パネルが消灯」というランプ状態の注記であり数値設定行ではないため除外。天井はボーナス間800G+α(主天井、設定変更で499G+αに短縮)+AT間1600G+α(補助天井)の2系統、条件付きの短縮抽選(アサルトチャレンジ非経由で次回100G+α、バウンティショット非経由で次回700G+α)もあり。設定変更後は「朝イチ状態」でAT直撃率が上昇(設定1=10.9%〜設定6=32.1%、設定3欠落)を反映(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4575",
+    "ichigekiUrl": "https://1geki.jp/slot/l_bountyhead_angel/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 258, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 252, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。設定3は欠落のため未収録(2→4)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 234, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 210, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 200, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 530, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(朝イチ直撃率10.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 493, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(朝イチ直撃率13.4%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 450, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(朝イチ直撃率15.0%)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 393, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(朝イチ直撃率24.6%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 357, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別(朝イチ直撃率32.1%)。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "bonus_interval_ceiling",
+      "displayName": "ボーナス間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ボーナス間(通常時G数+CZ消化G数)800G+αでボーナス濃厚。設定変更で499G+αに短縮。アサルトチャレンジ非経由の場合、次回100G+αに短縮する抽選あり。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で499G+αに短縮)"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT間1600G+αでAT濃厚。バウンティショット非経由の場合、次回700G+αに短縮する抽選あり。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "machine": {
     "id": "eva_tamashii_no_kyoumei",
-    "name": "エヴァンゲリオン魂の共鳴",
-    "manufacturer": null,
+    "name": "新世紀エヴァンゲリオン 魂の共鳴",
+    "manufacturer": "ビスティ",
     "type": "AT",
-    "releaseDate": null,
+    "releaseDate": "2022-01-24",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
-    "dmmUrl": null,
-    "ichigekiUrl": null
+    "notes": "partial: 1geki.jp(raw HTML、2つの独立サブページ)からAT確率(主判別)・CZ「ゼルエル決戦」当選率(補助判別)を反映。設定3は両メトリクスとも両サブページで一貫して欠落(生HTML上でtd要素が2→4に飛ぶ、系統的な未公開で機種固有仕様の可能性もあるが未確定)。天井は2系統: ゲーム数天井(222G/333G/666G/700Gの4段階、666Gが基本パターン、700Gは超覚醒ボーナス関連の上位帯、主天井として666Gを記録)+CZ「ゼルエル決戦」スルー回数天井(最大2〜5回のいずれかでスルー上限に到達し次回濃厚、補助)。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし(2026-08-19)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4060",
+    "ichigekiUrl": "https://1geki.jp/slot/s_evangelion_tama/"
   },
   "counterDefinitions": [
     {
@@ -60,6 +60,62 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 355.1, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。設定3は両サブページで一貫して欠落(2→4)、系統的な未公開。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 342.9, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 312.6, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 286.3, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 255.3, "weight": 1, "minSampleSize": 2500, "note": "AT確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 147.4, "weight": 0.7, "minSampleSize": 3000, "note": "CZ「ゼルエル決戦」当選率は補助判別。設定3は欠落。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 141.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 124.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 114.0, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 104.0, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井(A天井)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 666,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ゲーム数天井は4段階(222G+αのC天井、333G+αのB天井、666G+αのA天井が基本パターン、700G+αは超覚醒ボーナス関連の上位帯)でAT濃厚。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 5,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ「ゼルエル決戦」のスルーが最大2〜5回(変動)に達すると次回のCZが勝利濃厚でAT当選。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "次回CZ勝利濃厚",
+      "resetText": "CZ勝利でリセット"
+    }
+  ]
 }

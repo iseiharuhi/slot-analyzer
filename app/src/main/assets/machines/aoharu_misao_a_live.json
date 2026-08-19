@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "aoharu_misao_a_live",
+    "name": "アオハル♪操 A‐LIVE",
+    "manufacturer": "大都技研",
+    "type": "AT",
+    "releaseDate": "2024-06-03",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBB+RB合算確率を反映(CZ確率は設定1のみ公開・設定2〜6は情報なしのため未収録)。天井は非搭載(1geki「天井非搭載」、DMM「天井突入条件:なし」の両方で確認済み、純A型仕様)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4581",
+    "ichigekiUrl": "https://1geki.jp/slot/s_aoharu_misao/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 169.9, "weight": 1, "minSampleSize": 2500, "note": "BB+RB合算確率は主判別(BB1/286.1、RB1/419.6)。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 166.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/280.4、RB1/413.3)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 163.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/274.8、RB1/406.0)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 157.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/264.1、RB1/391.5)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 152.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/254.6、RB1/379.0)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 144.1, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/241.1、RB1/359.2)。CZ確率は設定1のみ公開(約1/79〜1/84)で設定2〜6は情報なし、未収録。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

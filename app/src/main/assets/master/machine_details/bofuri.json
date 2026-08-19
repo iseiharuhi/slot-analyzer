@@ -1,0 +1,23 @@
+{
+  "id": "bofuri",
+  "name": "スマスロ痛いのは嫌なので防御力に極振りしたいと思います。",
+  "manufacturer": "サミー",
+  "type": "AT",
+  "releaseDate": "2024-06-03",
+  "isActive": true,
+  "notes": "AT精度一括調整済み。主判別は直撃、初当り/ボーナス、補助はCZ、小役/ベル。低サンプル過信防止のため、主判別は2000G超、小役/ベル系は3000G級からの比較を推奨。",
+  "status": "partial",
+  "dmmUrl": "https://p-town.dmm.com/machines/4566",
+  "ichigekiUrl": "https://1geki.jp/slot/l_bofuri/",
+  "externalLinks": [
+    {
+      "label": "DMMぱちタウン",
+      "url": "https://p-town.dmm.com/machines/4566"
+    },
+    {
+      "label": "一撃",
+      "url": "https://1geki.jp/slot/l_bofuri/"
+    }
+  ],
+  "fileName": "list_slot_013.json"
+}

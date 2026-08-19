@@ -1,0 +1,140 @@
+{
+  "machine": {
+    "id": "girls_und_panzer_saishou",
+    "name": "Lパチスロガールズ&パンツァー 最終章",
+    "manufacturer": "平和",
+    "type": "AT",
+    "releaseDate": "2024-02-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致でAT初当り確率(主判別)・CZ当選率(合算、補助判別)を反映(girls_und_panzer_movieとは別機種の続編「最終章」、2024年平和製と確認済み)。天井はAT間1111G(設定変更で約65%の確率で短縮分岐500Gが選ばれやすくなる)+CZ7回スルー天井(8回目で確定)+CZ間300G(CZ高確移行、AT直接付与ではない)の3系統を反映(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4488",
+    "ichigekiUrl": "https://1geki.jp/slot/l_girlpan_finale/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 408.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.1%)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 401.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率98.8%)。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 382.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率100.7%)。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 341.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率105.8%)。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 322.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率107.9%)。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 303.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別(出玉率112.1%)。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 133.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率(ガルパンチャンス/レース/博物館/杏CHALLENGE合算)は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 133.0, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 130.8, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 123.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 121.1, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 118.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1111,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "AT間最大1111G+αで「戦車道」(AT)濃厚。短縮分岐500G+αも確率的に選ばれ、設定変更時(特に設定1)は約65%でこの短縮分岐が選ばれやすくなる。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更で短縮分岐が選ばれやすい)"
+    },
+    {
+      "ruleKey": "cz_through_ceiling",
+      "displayName": "CZスルー回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 8,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ7回スルー後、8回目のCZでAT濃厚。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット"
+    },
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 300,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZなしで300G消化するとCZ高確率状態に移行(AT直接付与ではなくCZ間の実質的な天井)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ高確率状態へ移行",
+      "resetText": "CZ当選でリセット"
+    }
+  ]
+}

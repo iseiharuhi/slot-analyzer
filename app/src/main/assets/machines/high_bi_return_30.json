@@ -1,0 +1,111 @@
+{
+  "machine": {
+    "id": "high_bi_return_30",
+    "name": "ハイビリターン-30",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2025-07-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM/chonborista.com一致でBIG+REG合算確率を反映(設定3は3ソースとも欠落、本機は2025年7月発売のためまだ全ソースで設定3の解析データが揃っていない可能性が高い、2→4に飛ぶ)。1geki側に算術不整合な別表(「ボーナス初当り」1/296.7〜1/240.8)があったが合算表と整合しないため不採用。天井は約999〜1005G(ソースにより表記幅あり、+α含めて実質同義)を反映、到達時「ハイビモード」経由で約1/3の確率で「スーパーハイビモード」(期待枚数約3140枚)へ格上げ。天国モード約32G/チャンスモード約250Gの短縮天井も存在(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4812",
+    "ichigekiUrl": "https://1geki.jp/slot/s_haibi_return30/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 138.6, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/231.2、REG1/346.1)。1geki.jp/DMM/chonborista.com一致。"},
+        {"settingNo": 2, "denominatorValue": 135.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/226.5、REG1/337.7)。3ソース一致。"},
+        {"settingNo": 4, "denominatorValue": 127.5, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/214.0、REG1/315.4)。設定3は3ソースとも欠落のため未収録(2→4、2025年7月発売の新台のため解析未整備の可能性)。3ソース一致。"},
+        {"settingNo": 5, "denominatorValue": 119.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/201.9、REG1/294.0)。3ソース一致。"},
+        {"settingNo": 6, "denominatorValue": 115.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/195.5、REG1/283.7)。3ソース一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1005,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "通常時約999〜1005G(ソースにより表記幅あり、+α含め実質同義)でボーナス濃厚。到達時「ハイビモード」経由で約1/3の確率で「スーパーハイビモード」(期待枚数約3140枚)へ格上げ。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚(約1/3でスーパーハイビモード格上げ)",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は未確認)"
+    },
+    {
+      "ruleKey": "mode_short_ceiling",
+      "displayName": "モード別短縮天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 32,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "天国モード滞在時は約32G、チャンスモード滞在時は約250Gの短縮天井が存在。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "machine": {
+    "id": "angel_beats",
+    "name": "パチスロAngel Beats!",
+    "manufacturer": "サミー",
+    "type": "AT",
+    "releaseDate": "2021-04-19",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT出現率(主判別)・ボーナス初当り確率(補助判別)を反映(DMMの周期別ボーナス期待度も単調増加で矛盾なし)。天井は周期制(10周期・約720G相当)で10周期目に戦線BONUS以上濃厚、最終周期のロングフリーズ率も優遇を反映。設定変更時のリセット挙動は情報未確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/3863",
+    "ichigekiUrl": "https://1geki.jp/slot/s_angelbeats/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 352.7, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 348.1, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 317.3, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 280.9, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 236.5, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 225.6, "weight": 1, "minSampleSize": 2500, "note": "AT出現率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 256.8, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 250.3, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 236.1, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 206.6, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 191.7, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 164.8, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cycle_ceiling",
+      "displayName": "周期天井",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 10,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "戦線BONUS+なしで10周期(約720G相当)消化すると戦線BONUS以上が濃厚。10周期目はロングフリーズ当選率も優遇。設定変更時のリセット挙動は情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "戦線BONUS以上濃厚",
+      "resetText": "戦線BONUS成立でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "machine": {
+    "id": "tekken_6",
+    "name": "スマスロ鉄拳6",
+    "manufacturer": "山佐",
+    "type": "AT",
+    "releaseDate": "2026-01-05",
+    "isActive": true,
+    "notes": "partial: 1geki.jp/DMM一致でAT初当り確率(主判別)・ボーナス初当り確率(補助判別)・CZ確率(補助判別)を反映。天井はゲーム数747G/ポイント900pt(並行、いずれか早い方)+ボーナス3スルー天井(4回目で特殊AT濃厚)を反映。設定変更時はポイント500ptに短縮、スルー天井2回に短縮。確定役の色(青7/赤7)はソース間で表記揺れあり要目視確認(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4913",
+    "ichigekiUrl": "https://1geki.jp/slot/l_tekken6/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 497.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 484.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 456.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 397.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 366.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 358.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 264.7, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 261.5, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 255.3, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 227.6, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 220.3, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 218.5, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率は補助判別。1geki.jp/DMM一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 488.6, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補足判別(小役計上要素あり)。1geki.jp/DMM一致。"},
+        {"settingNo": 2, "denominatorValue": 485.3, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補足判別。1geki.jp/DMM一致。"},
+        {"settingNo": 3, "denominatorValue": 470.5, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補足判別。1geki.jp/DMM一致。"},
+        {"settingNo": 4, "denominatorValue": 461.8, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補足判別。1geki.jp/DMM一致。"},
+        {"settingNo": 5, "denominatorValue": 458.0, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補足判別。1geki.jp/DMM一致。"},
+        {"settingNo": 6, "denominatorValue": 452.8, "weight": 0.6, "minSampleSize": 3000, "note": "CZ確率は補足判別。1geki.jp/DMM一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 747,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "747G+αでボーナス濃厚(900pt+αのポイント天井と並行、いずれか早い方)。設定変更時はポイント天井が500pt+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    },
+    {
+      "ruleKey": "point_ceiling",
+      "displayName": "ポイント天井",
+      "ceilingType": "POINT",
+      "limitValue": 900,
+      "unit": "pt",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "900pt+αでボーナス濃厚(747Gのゲーム数天井と並行)。設定変更時は500pt+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "設定変更で500ptに短縮"
+    },
+    {
+      "ruleKey": "bonus_through_ceiling",
+      "displayName": "ボーナススルー回数天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 4,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "ボーナス3スルー後、4回目のボーナスで特殊AT当選濃厚(確定役の色表記はソース間で青7/赤7の揺れあり、要目視確認)。設定変更後は2スルーに短縮(3回目で確定)。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "特殊AT濃厚",
+      "resetText": "設定変更で2スルーに短縮"
+    }
+  ]
+}

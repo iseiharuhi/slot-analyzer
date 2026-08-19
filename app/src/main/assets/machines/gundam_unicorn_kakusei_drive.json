@@ -1,0 +1,123 @@
+{
+  "machine": {
+    "id": "gundam_unicorn_kakusei_drive",
+    "name": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+    "manufacturer": "ビスティ",
+    "type": "AT",
+    "releaseDate": "2026-04-20",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からAT初当り・CZ出現率を反映。天井はCZ間800G(設定変更400G)+AT間1400G(設定変更1000G)を反映(2026-08-10、単一ソース)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/5002",
+    "ichigekiUrl": "https://1geki.jp/slot/l_gundam_uc2/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 471.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 456.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 427.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 403.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 398.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 392.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当りは主判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 298.5, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 2, "denominatorValue": 287.0, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 3, "denominatorValue": 265.1, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 4, "denominatorValue": 247.7, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 5, "denominatorValue": 243.9, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値(単一ソース)。"},
+        {"settingNo": 6, "denominatorValue": 239.8, "weight": 0.78, "minSampleSize": 3000, "note": "CZ出現率は補助判別。1geki.jp公開値(単一ソース)。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "cz_interval_ceiling",
+      "displayName": "CZ間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "CZ間の実ゲーム数800G+αでCZ当選。設定変更時400G+αに短縮。CZ6スルー後は次回CZがボーナス当選に格上げ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ当選",
+      "resetText": "設定変更でリセット(400Gに短縮)"
+    },
+    {
+      "ruleKey": "at_interval_ceiling",
+      "displayName": "AT間天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1400,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "液晶表示のAT間天井1400G+αでAT当選。設定変更時1000G+αに短縮。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT当選",
+      "resetText": "設定変更でリセット(1000Gに短縮)"
+    }
+  ]
+}

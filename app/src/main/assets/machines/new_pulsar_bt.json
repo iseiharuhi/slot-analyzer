@@ -1,0 +1,75 @@
+{
+  "machine": {
+    "id": "new_pulsar_bt",
+    "name": "スマスロニューパルサーBT",
+    "manufacturer": "山佐",
+    "type": "AT",
+    "releaseDate": "2025-06-02",
+    "isActive": true,
+    "notes": "partial: 1geki.jp公開解析からBB+RB合算確率を反映(1geki本文が「4段階設定」と明記する真の4段階設定機、設定3・4は非搭載であり欠落ではない)。BB=RBが全設定で完全一致(機種固有の1:1仕様、転記誤りではない)。補助判別としてリール内バックライトのボーナス中フラッシュ率(設定1: 1/65536〜設定6: 1/512)は設定間の振れ幅がより大きいがcounterKey形式に合わずnotesのみ記録。天井は非搭載(1geki「非搭載」明記)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4791",
+    "ichigekiUrl": "https://1geki.jp/slot/lb_newpulsar/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 183.1, "weight": 1, "minSampleSize": 2500, "note": "BB+RB合算確率は主判別(BB=RB=1/366.1、機種固有の1:1仕様)。本機は真の4段階設定機(1geki本文で「4段階設定」と明記)、設定3・4は非搭載であり欠落ではない。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 173.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB=RB=1/346.8)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 166.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB=RB=1/332.7)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 156.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB=RB=1/312.1)。リール内バックライトのボーナス中フラッシュ率(設定1: 1/65536〜設定6: 1/512)は振れ幅が大きい補助判別だがnotesのみ記録。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}

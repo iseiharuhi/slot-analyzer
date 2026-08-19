@@ -1,0 +1,77 @@
+{
+  "machine": {
+    "id": "last_utopia",
+    "name": "ラストユートピア",
+    "manufacturer": "パイオニア",
+    "type": "AT",
+    "releaseDate": "2022-11-07",
+    "isActive": true,
+    "notes": "partial: 1geki.jp(合算確率)/imakati.jp(BIG/REG個別値)一致でBIG+REG合算確率を反映(個別値と合算値の算術検算で整合確認済み)。本機はノーマルタイプ(非AT)のため合算確率が唯一の判別軸。天井は非搭載(1geki天井欄が空欄、imakati.jp「ノーマルタイプのため天井なし」「天井、連チャンゾーン、モードも一切ない」と明記、2ソースで高信頼度)(2026-08-11)。",
+    "dmmUrl": "https://p-town.dmm.com/machines/4237",
+    "ichigekiUrl": "https://1geki.jp/slot/s_last_utopia/"
+  },
+  "counterDefinitions": [
+    {
+      "key": "total_games",
+      "displayName": "総ゲーム数",
+      "category": "BASIC",
+      "sortOrder": 1,
+      "unit": "G",
+      "inputType": "NUMBER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": false,
+      "notes": "全計算の分母"
+    },
+    {
+      "key": "bonus_count",
+      "displayName": "ボーナス",
+      "category": "BONUS",
+      "sortOrder": 10,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "cz_count",
+      "displayName": "CZ",
+      "category": "AT_CZ",
+      "sortOrder": 11,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    },
+    {
+      "key": "at_count",
+      "displayName": "AT",
+      "category": "AT_CZ",
+      "sortOrder": 12,
+      "unit": "回",
+      "inputType": "COUNTER",
+      "isEnabled": true,
+      "isDefaultVisible": true,
+      "supportsMinus": true,
+      "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
+    }
+  ],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 173, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/228、REG1/712)、本機はノーマルタイプのため唯一の判別軸。1geki.jp/imakati.jp一致、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 172, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/227、REG1/704)。1geki.jp/imakati.jp一致。"},
+        {"settingNo": 3, "denominatorValue": 168, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/226、REG1/661)。1geki.jp/imakati.jp一致。"},
+        {"settingNo": 4, "denominatorValue": 156, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/220、REG1/537)。1geki.jp/imakati.jp一致。"},
+        {"settingNo": 5, "denominatorValue": 149, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/215、REG1/492)。1geki.jp/imakati.jp一致。"},
+        {"settingNo": 6, "denominatorValue": 138, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/208、REG1/414)。1geki.jp/imakati.jp一致。"}
+      ]
+    }
+  ],
+  "ceilingRules": []
+}
