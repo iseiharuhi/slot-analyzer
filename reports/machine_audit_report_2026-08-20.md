@@ -7,8 +7,8 @@
 - broken: 0
 
 ## Status breakdown
-- other: 53
-- partial: 389
+- other: 52
+- partial: 390
 
 ## Broken files / filename-id mismatches
 none
@@ -316,6 +316,7 @@ none
 - rei_slot.json [partial] パチスロ零 (ceiling=True, refValues=True)
 - revue_starlight.json [partial] L少女☆歌劇 レヴュースタァライト -The SLOT- (ceiling=True, refValues=True)
 - rezero_apex_vacation.json [partial] Re:ゼロから始める異世界生活Apex Vacation (ceiling=False, refValues=True)
+- rezero_season2.json [partial] スロット Re:ゼロから始める異世界生活 season2 (ceiling=True, refValues=True)
 - ring_ni_kakero_1.json [partial] リングにかけろ1 (ceiling=False, refValues=True)
 - ring_unmei_no_byoutoku.json [partial] パチスロ リング 運命の秒刻 (ceiling=True, refValues=True)
 - ring_v.json [partial] Lリングにかけろ1 V (ceiling=True, refValues=True)
