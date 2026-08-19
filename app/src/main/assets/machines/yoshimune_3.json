@@ -6,7 +6,7 @@
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2020-10-05",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス初当り確率を反映(本機唯一の公開判別軸)。「鷹狩り」出現率(上位モード、1/30166〜1/3429)は設定5が設定4より悪化する非単調値(1geki本文は「設定1と4で約5倍、1と6で約10倍」とのみ言及、厳密な単調性は主張せず)、対応するcounterKeyも無いためnotesのみ参考記録。姉妹機l_yoshimune/l_yoshimune_risingとは別データで取り違えなし(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3750",
     "ichigekiUrl": "https://1geki.jp/slot/s_yoshimune3/"
   },
@@ -36,7 +36,19 @@
       "notes": "ボーナス初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 527.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸(鷹狩り出現率1/30166はnotesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 518.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 459.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 381.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 330.9, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 294.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸(鷹狩り出現率1/3429)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

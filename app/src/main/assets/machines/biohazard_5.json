@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-03-03",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)、DMM(machines/4754)と完全一致でAT「ハザードラッシュ」初当り確率を反映(本機唯一の判別軸)。CZ「パニックゾーン」当選率(1/152.7〜1/126.5)・CZ合算(パニック+ウェスカー、1/147.3〜1/122.1)は既存カウンタ定義にCZ用フィールドが無いためnotesのみ参考記録。「シリーズ最新機種」欄に表示される後継機バイオハザードRE:3とは別機種、型式名Lバイオハザード5ZEで確認済み(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4754",
     "ichigekiUrl": "https://1geki.jp/slot/l_biohazard5/"
   },
@@ -36,7 +36,19 @@
       "notes": "AT初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 325.8, "weight": 1, "minSampleSize": 2500, "note": "AT「ハザードラッシュ」初当り確率は本機唯一の判別軸(CZ「パニックゾーン」1/152.7・CZ合算1/147.3はnotesのみ)。1geki.jp/DMM完全一致。"},
+        {"settingNo": 2, "denominatorValue": 314.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 3, "denominatorValue": 298.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 4, "denominatorValue": 271.4, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 5, "denominatorValue": 249.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp/DMM完全一致。"},
+        {"settingNo": 6, "denominatorValue": 236.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸(CZ合算1/122.1)。1geki.jp/DMM完全一致。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

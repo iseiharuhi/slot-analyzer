@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-06-14",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML、メイン+専用サブページで確認)から「ストラテジーゲーム」初当り確率を反映(本機唯一の判別軸)。設定3が設定1・2より明確に悪化する強い非単調値だが、メイン・専用サブページ両方で一貫確認済みの実データ(転記誤りではない)。弱チェリー確率(1/74.9〜1/65.0、1geki本文「設定3を除き高設定ほど出現しやすい」と明記)はnotesのみ参考記録(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3891",
     "ichigekiUrl": "https://1geki.jp/slot/s_nogamenolife/"
   },
@@ -60,7 +60,19 @@
       "notes": "AT初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "strategy_game_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 350.1, "weight": 1, "minSampleSize": 2500, "note": "「ストラテジーゲーム」初当り確率は本機唯一の判別軸(弱チェリー1/74.9はnotesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 296.3, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 390.1, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。設定1・2より明確に悪化する強い非単調値だが、メイン・専用サブページ両方で一貫確認済みの実データ。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 271.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 265.3, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 243.7, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸(弱チェリー1/65.0)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

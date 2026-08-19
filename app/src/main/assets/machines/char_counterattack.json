@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2020-08-03",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT「ネオジオンラッシュ」初当り確率を反映(本機唯一の公開判別軸)。弱チェリー出現率(1/109.23〜1/81.92)はnotesのみ参考記録。cz_countに対応するCZ固有の設定差データは今回のリサーチでは未発見(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/3704",
     "ichigekiUrl": "https://1geki.jp/slot/s_char/"
   },
@@ -48,7 +48,19 @@
       "notes": "AT初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 1066.61, "weight": 1, "minSampleSize": 2500, "note": "AT「ネオジオンラッシュ」初当り確率は本機唯一の公開判別軸(弱チェリー1/109.23はnotesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 926.43, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 849.56, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 746.17, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 659.91, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 583.33, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸(弱チェリー1/81.92)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

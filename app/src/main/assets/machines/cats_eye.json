@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-06-06",
     "isActive": true,
-    "notes": "B優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT「キャッツ・タイム」初当り確率を反映(本機唯一の公開判別軸)。通常時のボーナス出現率(1/288.8〜1/246.4)は対応するcounterKeyが無いためnotesのみ参考記録。AT中のボーナス出現率(1/99.9)はrowspan確認済みの全設定共通値のため除外(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4140",
     "ichigekiUrl": "https://1geki.jp/slot/s_cats_eye/"
   },
@@ -36,7 +36,19 @@
       "notes": "AT初当り回数のメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 234.1, "weight": 1, "minSampleSize": 2500, "note": "AT「キャッツ・タイム」初当り確率は本機唯一の公開判別軸(通常時ボーナス出現率1/288.8はnotesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 225.3, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 205.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 198.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 182.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 163.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の公開判別軸(通常時ボーナス出現率1/246.4)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",
