@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2022-03-28",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析からBIG+REG合算確率を反映(設定4は欠落のため未収録、3→5に飛ぶ、「設定L」注記行はなく同社他機種とは異なる未説明の欠落パターン、算術検算済み)。天井は非搭載(1geki「天井非搭載」明記)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4129",
     "ichigekiUrl": "https://1geki.jp/slot/s_nanairosango/"
   },
@@ -60,6 +60,17 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 169.3, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/282.5、REG1/422.8)。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 159.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/282.5、REG1/368.2)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 149.3, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/278.9、REG1/321.3)。設定4は欠落のため未収録(3→5)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 139.4, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG=REG=1/278.9)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 133.2, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG=REG=1/266.4)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }

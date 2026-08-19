@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-08-04",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析によると初当り確率は全設定共通1/155(rowspan形式で明記、WebSearchでも「全設定共通で初当り確率が1/155」と裏付け)で判別価値がないためsettingReferenceValuesは意図的に空欄(捏造回避、strike_the_bloodと同様のパターン)。設定差は出玉率(98.0%〜108.1%)のみで表現され、実際の内部差別化メカニズム(BB/RB比率等)は公開されている情報源のいずれにも数値がない。設定3は行自体が完全欠落(出玉率も含めて非公開)。メーカー表記は1geki「Neos(ネオス)」、DMM/当カタログ/他2次ソース「ボーダー」で不一致(ネオスが開発元、ボーダーが販売ブランドの可能性、未確定)。天井は最大600G+αでボーナス濃厚(主判別)、設定変更時は明確なカウンターリセットではなくBB高確の内部モードから開始する可能性があるとの記載のみ、ボーナス後32Gは高確ゾーンのため早期ヤメ非推奨(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4833",
     "ichigekiUrl": "https://1geki.jp/slot/s_nameneko/"
   },
@@ -61,5 +61,23 @@
     }
   ],
   "settingReferenceValues": [],
-  "ceilingRules": []
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 600,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "最大600G+αでボーナス濃厚。設定変更時は明確なカウンターリセットの記載はなく、BB高確の内部モードから開始する可能性があるとの記載のみ。ボーナス後32Gは高確ゾーンのため早期ヤメ非推奨。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は詳細不明)"
+    }
+  ]
 }

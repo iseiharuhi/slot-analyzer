@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-10-02",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析から初当り確率を反映(設定3は欠落のため未収録、2→4に飛ぶ、「設定L」注記行あり実体不明)。天井は900G(主、設定1で25%・設定6で50%が400G短縮トラック選択という設定差のある天井選択率あり)+累計チェリー30回(補助)+連続ボーナス天国モード濃厚(4回目優遇、8回目確定、補助)の3系統を反映。設定変更時の有利区間リセットは1geki側「調査中」で情報未確認(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4403",
     "ichigekiUrl": "https://1geki.jp/slot/s_moechiba30/"
   },
@@ -60,6 +60,69 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 279, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率97.8%、天井選択で400G短縮トラックが選ばれる率は25%)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 269, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率99.0%)。設定3は欠落のため未収録(2→4)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 246, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率102.0%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 223, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率105.0%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 202, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は主判別(出玉率108.3%、天井選択で400G短縮トラックが選ばれる率は50%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 900,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス間最大900G+αで濃厚。400Gの短縮トラックが選ばれる率が設定差あり(設定1=25%、設定6=50%)。設定変更時の有利区間リセットは1geki側「調査中」で情報未確認。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更時の挙動は未確認)"
+    },
+    {
+      "ruleKey": "cherry_count_ceiling",
+      "displayName": "累計チェリー天井",
+      "ceilingType": "COUNT",
+      "limitValue": 30,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "累計チェリー30回でボーナス濃厚(5の倍数、特に10チェは追加のチャンス目とされる)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット"
+    },
+    {
+      "ruleKey": "bonus_streak_ceiling",
+      "displayName": "連続ボーナス天国濃厚天井",
+      "ceilingType": "THROUGH_COUNT",
+      "limitValue": 8,
+      "unit": "回",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "同一有利区間内で天国モード非突入のままボーナスが4回連続すると天国モード移行率優遇、8回連続で天国モード確定。",
+      "isEnabled": true,
+      "displayOrder": 3,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "天国モード濃厚",
+      "resetText": "天国モード突入でリセット"
+    }
+  ]
 }

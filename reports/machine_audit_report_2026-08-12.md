@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 184
-- partial: 257
+- other: 170
+- partial: 271
 
 ## Broken files / filename-id mismatches
 none
@@ -163,6 +163,7 @@ none
 - kamen_rider_denoh.json [partial] L仮面ライダー電王 (ceiling=True, refValues=True)
 - keiji_sado.json [partial] L花の慶次～佐渡攻めの章〜 (ceiling=True, refValues=True)
 - kemono_friends.json [partial] ぱちすろ けものフレンズ (ceiling=True, refValues=True)
+- kin_no_kabocha.json [partial] パチスロ金のかぼちゃ (ceiling=True, refValues=True)
 - king_creator_30.json [partial] キングクリエーター30 (ceiling=False, refValues=True)
 - king_hanahana_30.json [partial] キングハナハナ-30 (ceiling=False, refValues=True)
 - king_komonchama.json [partial] パチスロKING黄門ちゃま (ceiling=True, refValues=True)
@@ -177,7 +178,11 @@ none
 - kyokou_suiri.json [partial] L虚構推理 (ceiling=True, refValues=True)
 - kyou_kara_ore_wa.json [partial] 今日から俺は!! パチスロ編 (ceiling=True, refValues=True)
 - last_utopia.json [partial] ラストユートピア (ceiling=False, refValues=True)
+- lb_jackpot.json [partial] LBジャックポット (ceiling=False, refValues=True)
+- lb_triple_crown.json [partial] LBトリプルクラウン (ceiling=False, refValues=True)
+- loli_kura_hold.json [partial] パチスロ ロリクラ☆ほーるど! (ceiling=False, refValues=True)
 - lovejo_2_plus.json [partial] パチスロラブ嬢2プラス (ceiling=True, refValues=True)
+- lucky_umi_monogatari.json [partial] S Lucky海物語 (ceiling=False, refValues=True)
 - lupin_sansei_s.json [partial] Sルパン三世 (ceiling=True, refValues=True)
 - lupin_treasure_voyager.json [partial] Lルパン三世 大航海者の秘宝 (ceiling=True, refValues=True)
 - macross_delta.json [partial] パチスロ マクロスデルタ (ceiling=True, refValues=True)
@@ -188,20 +193,28 @@ none
 - mahjong_fight_club_kakusei.json [partial] L麻雀格闘倶楽部 覚醒 (ceiling=True, refValues=True)
 - mahjong_fight_club_shin.json [partial] 麻雀格闘倶楽部 真 (ceiling=True, refValues=True)
 - mahjong_monogatari_4.json [partial] パチスロ麻雀物語4 (ceiling=True, refValues=True)
+- mahou_shoujo_ikusei_keikaku.json [partial] パチスロ 魔法少女育成計画 (ceiling=True, refValues=True)
 - mappy.json [partial] SLOTマッピー (ceiling=False, refValues=True)
+- marchen_quest.json [partial] メルヘンクエスト (ceiling=False, refValues=True)
 - masamune_3.json [partial] 政宗3 (ceiling=True, refValues=True)
 - masamune_sengoku.json [partial] 政宗 戦極 (ceiling=True, refValues=True)
 - matador_3.json [partial] LBマタドールIII (ceiling=False, refValues=True)
 - midori_don_viva_revival.json [partial] スマスロ 緑ドン VIVA!情熱南米編 REVIVAL (ceiling=True, refValues=True)
 - miku_idomu_challenge.json [partial] パチスロミクちゃんとイドムンのミラクルチャレンジ (ceiling=False, refValues=True)
 - million_god_kamigami.json [partial] スマスロ ミリオンゴッド-神々の軌跡- (ceiling=True, refValues=True)
+- moe_chiba_30.json [partial] 燃えチバ‐30 (ceiling=True, refValues=True)
+- momokyun_sword_dx.json [partial] SモモキュンソードDX (ceiling=True, refValues=True)
 - momotaro_densetsu.json [partial] 桃太郎電鉄 ~パチスロも定番!~ (ceiling=True, refValues=True)
 - monster_hunter_world.json [partial] パチスロ モンスターハンター:ワールド (ceiling=True, refValues=True)
 - motto_crea_hihouden_megami_uta.json [partial] もっと!クレアの秘宝伝 女神の歌声と太陽の子供達 (ceiling=False, refValues=True)
 - mr_juggler.json [partial] ミスタージャグラー (ceiling=False, refValues=True)
+- mr_triple_crown.json [partial] ミスタートリプルクラウン (ceiling=False, refValues=True)
+- name_neko.json [partial] パチスロなめ猫～液晶ないけどなめんじゃねぇ～ (ceiling=True, refValues=False)
+- nanairo_sango.json [partial] Sナナイロサンゴ (ceiling=False, refValues=True)
 - nanatsu_no_maken.json [partial] 七つの魔剣が支配する (ceiling=True, refValues=True)
 - nanatsu_no_taizai.json [partial] パチスロ七つの大罪 (ceiling=True, refValues=True)
 - nangoku_monogatari_30.json [partial] パチスロ南国物語30 (ceiling=False, refValues=True)
+- nangoku_sodachi_30.json [partial] 南国育ち30 (ceiling=True, refValues=True)
 - nangoku_sodachi.json [partial] L南国育ち (ceiling=True, refValues=True)
 - neo_im_juggler_ex.json [partial] ネオアイムジャグラーEX (ceiling=False, refValues=True)
 - new_getter_mouse.json [partial] ニューゲッターマウス (ceiling=False, refValues=True)
@@ -210,6 +223,7 @@ none
 - new_king_hanahana_v.json [partial] スマート沖スロ ニューキングハナハナV (ceiling=False, refValues=True)
 - new_pulsar_bt.json [partial] スマスロニューパルサーBT (ceiling=False, refValues=True)
 - new_pulsar_sp3.json [partial] ニューパルサーSPIII (ceiling=False, refValues=True)
+- new_pulsar_sp4_taiko.json [partial] ニューパルサーSP4 with 太鼓の達人 (ceiling=False, refValues=True)
 - ninja_jajamaru_kun.json [partial] SLOT忍者じゃじゃ丸くん (ceiling=True, refValues=True)
 - ninkon_san.json [partial] 忍魂参 ~奥義皆伝ノ章~ (ceiling=True, refValues=True)
 - nyanko_bigbang.json [partial] ぱちスロ にゃんこ大戦争 BIGBANG (ceiling=True, refValues=True)

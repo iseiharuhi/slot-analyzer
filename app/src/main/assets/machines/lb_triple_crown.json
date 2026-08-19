@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-07-07",
     "isActive": true,
-    "notes": "C優先機種追加(カレンダー全数調査 2026-08-06 発見分、Tier C)。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。",
+    "notes": "partial: 1geki.jp(生HTML取得)公開解析からBIG+REG合算確率を反映(設定3・4は欠落のため未収録、2→5に飛ぶ、算術検算済み。シリーズ後継機LBトリプルクラウンセブンとは別ページで取り違えなし確認済み)。天井は非搭載(1geki「天井 非搭載」明記)(2026-08-11)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4831",
     "ichigekiUrl": "https://1geki.jp/slot/lb_triplecrown/"
   },
@@ -60,6 +60,16 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 165.9, "weight": 1, "minSampleSize": 2500, "note": "BIG+REG合算確率は主判別(BIG1/276.5、REG1/414.8)。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 161.0, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/273.1、REG1/392.4)。設定3・4は欠落のため未収録(2→5)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 145.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/251.1、REG1/346.8)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 129.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BIG1/227.6、REG1/302.0)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": []
 }
