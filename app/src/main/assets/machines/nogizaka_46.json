@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-08-07",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML、メイン+専用サブページの複数表・WebSearch裏付けで確認)からAT初当り確率を反映(本機唯一の判別軸として発見)。本機は{0,1,2,4,5,6}の非標準設定体系(設定3非搭載、「設定0」という特殊中間モードが存在、出玉率102.5%は設定2〜4の間に位置)。cz_countに対応する固有データは今回のリサーチでは未発見(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4404",
     "ichigekiUrl": "https://1geki.jp/slot/l_nogizaka46/"
   },
@@ -60,7 +60,19 @@
       "notes": "特化ゾーン到達メモ。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 0, "denominatorValue": 147.1, "weight": 0.8, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。「設定0」は非標準の特殊中間モード(出玉率102.5%、設定2〜4の間に位置)、通常の6段階とは別枠のためweightをやや低減。1geki.jp公開値。"},
+        {"settingNo": 1, "denominatorValue": 361.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値、DMM機械割97.4%と一致。"},
+        {"settingNo": 2, "denominatorValue": 348.0, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。設定3は非搭載(欠落ではない)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 297.2, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 273.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 254.9, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値、DMM機械割110.0%と一致。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

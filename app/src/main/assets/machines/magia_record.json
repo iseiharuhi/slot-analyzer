@@ -6,7 +6,7 @@
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2025-04-07",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。releaseDate未記載だったためdmm/1geki一致で判明・補完。",
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス初当り合算確率(主判別)・マギアラッシュ(AT)初当り確率(補助判別)を反映(全6設定判明、DMM機械割97.6%〜114.9%と一致)。マギアチャレンジ(CZ)当選率(19.9%〜32.8%)は既存カウンタ定義にCZ用フィールドが無いためnotesのみ参考記録。黒江チャレンジ(上位CZ)は設定1(0.4%)・4(0.8%)のみ公開で他は真の未公開(notesのみ)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4745",
     "ichigekiUrl": "https://1geki.jp/slot/l_magireco/"
   },
@@ -60,7 +60,30 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 240.6, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り合算確率は主判別(マギアチャレンジCZ当選率19.9%はnotesのみ)。1geki.jp公開値、DMM機械割97.6%と一致。"},
+        {"settingNo": 2, "denominatorValue": 236.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り合算確率は主判別(CZ当選率22.3%)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 222.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り合算確率は主判別(CZ当選率24.6%)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 208.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り合算確率は主判別(CZ当選率27.3%)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 195.1, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り合算確率は主判別(CZ当選率30.1%)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 184.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り合算確率は主判別(CZ当選率32.8%)。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 654.6, "weight": 0.7, "minSampleSize": 3000, "note": "マギアラッシュ(AT)初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 633.4, "weight": 0.7, "minSampleSize": 3000, "note": "マギアラッシュ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 571.8, "weight": 0.7, "minSampleSize": 3000, "note": "マギアラッシュ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 516.6, "weight": 0.7, "minSampleSize": 3000, "note": "マギアラッシュ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 456.5, "weight": 0.7, "minSampleSize": 3000, "note": "マギアラッシュ初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 416.7, "weight": 0.7, "minSampleSize": 3000, "note": "マギアラッシュ初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "point_ceiling",

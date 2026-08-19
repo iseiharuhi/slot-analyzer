@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-08-05",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。releaseDate未記載だったためdmm/1geki一致で判明・補完。",
+    "notes": "partial: 1geki.jp(raw HTML)からCZ(主判別)・ボーナス「マジBB」(補助判別)を反映(全6設定判明、DMM機械割97.6%〜114.9%と一致)。at_countに対応する固有データは未発見(CZ経由でマジBB[AT契機]に至る構造のため)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4623",
     "ichigekiUrl": "https://1geki.jp/slot/l_onepunchman/"
   },
@@ -72,7 +72,30 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 158.8, "weight": 1, "minSampleSize": 2500, "note": "CZ確率は主判別。1geki.jp公開値、DMM機械割97.6%と一致。"},
+        {"settingNo": 2, "denominatorValue": 157.2, "weight": 1, "minSampleSize": 2500, "note": "CZ確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 154.5, "weight": 1, "minSampleSize": 2500, "note": "CZ確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 151.7, "weight": 1, "minSampleSize": 2500, "note": "CZ確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 148.1, "weight": 1, "minSampleSize": 2500, "note": "CZ確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 145.7, "weight": 1, "minSampleSize": 2500, "note": "CZ確率は主判別。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 315.8, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス「マジBB」は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 308.2, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス「マジBB」は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 299.9, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス「マジBB」は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 286.9, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス「マジBB」は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 274.5, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス「マジBB」は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 263.5, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス「マジBB」は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "cz_game_ceiling",

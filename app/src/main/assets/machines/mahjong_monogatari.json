@@ -6,7 +6,7 @@
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2025-04-21",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(平和ネット系列)。",
+    "notes": "partial: 1geki.jp(raw HTML)から初当り合算確率(通常時のボーナスorAT合算、麻雀乱舞[CZ]突入相当としてcz_countに反映)・ボーナス初当り確率(通常時)・AT合算確率を反映(全6設定判明、DMM機械割98.0%〜114.6%と一致)。煌帝出現率(1/891.5〜1/747.9)はnotesのみ参考記録(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4777",
     "ichigekiUrl": "https://1geki.jp/slot/l_mjnmngtr/"
   },
@@ -72,7 +72,41 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 354.1, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率(麻雀乱舞CZ突入相当)は主判別(煌帝出現率1/891.5はnotesのみ)。1geki.jp公開値、DMM機械割98.0%と一致。"},
+        {"settingNo": 2, "denominatorValue": 349.2, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 342.1, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 328.8, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 326.0, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 323.8, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別(煌帝出現率1/747.9)。1geki.jp公開値、DMM機械割114.6%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 433.3, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率(通常時)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 431.8, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率(通常時)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 426.6, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率(通常時)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 420.2, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率(通常時)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 417.9, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率(通常時)は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 416.5, "weight": 0.7, "minSampleSize": 3000, "note": "ボーナス初当り確率(通常時)は補助判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 615.2, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 600.3, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 580.5, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 545.5, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 537.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 531.4, "weight": 0.7, "minSampleSize": 3000, "note": "AT合算確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "cz_game_ceiling",

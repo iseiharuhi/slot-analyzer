@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-06-02",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)から初当り合算確率(CZ突入相当、主判別)・番長ボーナス種別合算(赤7BB+青7BB、rare特殊ボーナス、補助判別)を反映(全6設定判明、算術検算済み)。設定3が設定2より・設定5が設定4より悪化する非単調値だが実データ確認済み(出玉率は正常に単調増加)。DMM機械割97.6%〜114.9%と一致。青・黄オーラ時のAT当選率は設定2〜5が1geki自身「???」表記(未確認情報)のためnotesのみ(設定1・6は既知)。at_countに対応する固有データは未発見(初当り合算がCZ経由でATに直結する構造)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4805",
     "ichigekiUrl": "https://1geki.jp/slot/l_bancho_iza/"
   },
@@ -60,7 +60,25 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 386.9, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率(CZ突入相当)は主判別。1geki.jp公開値、DMM機械割97.6%と一致。"},
+        {"settingNo": 2, "denominatorValue": 368.5, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 375.8, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。設定2より悪化する非単調値だが実データ確認済み。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 332.4, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 351.6, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。設定4より悪化する非単調値だが実データ確認済み。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 312.1, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は主判別。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 6, "denominatorValue": 2247, "weight": 0.5, "minSampleSize": 5000, "note": "番長ボーナス種別合算(赤7BB+青7BB)は補助判別、rare特殊ボーナスで希少データのため設定6のみ算術検算済みの信頼できる値を記録。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

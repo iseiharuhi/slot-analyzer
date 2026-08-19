@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-08-05",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT「D4 FES.」初当り(主判別、1geki自身が「約」と付す概算値)・CZ「DDC」当選率(補助判別、同様に概算値)を反映(全6設定判明、DMM機械割97.69%〜114.99%と一致)。bonus_countに対応する固有データは未発見のため空欄のまま(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4604",
     "ichigekiUrl": "https://1geki.jp/slot/l_d4dj/"
   },
@@ -60,7 +60,30 @@
       "notes": "D4フェス初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 270.5, "weight": 0.9, "minSampleSize": 2500, "note": "AT「D4 FES.」初当りは主判別(1geki自身が「約」と付す概算値のためweight僅かに低減)。1geki.jp公開値、DMM機械割97.69%と一致。"},
+        {"settingNo": 2, "denominatorValue": 264.0, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当りは主判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 242.5, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当りは主判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 227.1, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当りは主判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 209.9, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当りは主判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 191.3, "weight": 0.9, "minSampleSize": 2500, "note": "AT初当りは主判別(概算値)。1geki.jp公開値、DMM機械割114.99%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 112.2, "weight": 0.6, "minSampleSize": 3000, "note": "CZ「DDC」当選率は補助判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 110.9, "weight": 0.6, "minSampleSize": 3000, "note": "CZ当選率は補助判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 109.6, "weight": 0.6, "minSampleSize": 3000, "note": "CZ当選率は補助判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 104.4, "weight": 0.6, "minSampleSize": 3000, "note": "CZ当選率は補助判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 103.6, "weight": 0.6, "minSampleSize": 3000, "note": "CZ当選率は補助判別(概算値)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 99.9, "weight": 0.6, "minSampleSize": 3000, "note": "CZ当選率は補助判別(概算値)。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",

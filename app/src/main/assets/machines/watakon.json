@@ -6,7 +6,7 @@
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2025-07-07",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス初当り確率を反映(本機唯一の公開判別軸、直球のボーナスゲート型AT機のためCZ/AT個別の判別表は今回のリサーチでは未発見)。全6設定判明、DMM機械割97.9%〜112.0%と一致(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4803",
     "ichigekiUrl": "https://1geki.jp/slot/l_watakon/"
   },
@@ -84,7 +84,19 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 290.8, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値、DMM機械割97.9%と一致。"},
+        {"settingNo": 2, "denominatorValue": 286.5, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 277.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 255.3, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 251.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 249.4, "weight": 1, "minSampleSize": 2500, "note": "ボーナス初当り確率は本機唯一の公開判別軸。1geki.jp公開値、DMM機械割112.0%と一致。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "bonus_interval_ceiling",

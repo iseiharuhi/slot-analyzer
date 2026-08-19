@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2024-12-02",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML、タイトル確認済み・2022年発売の前作s_inuyashaとは別ページで取り違えなし)からCZ「妖勝負」当選率(主判別)・AT「ブッた斬りスラッシュ」初当り確率(補助判別)を反映(全6設定判明、DMM機械割97.60%〜114.99%と一致)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4690",
     "ichigekiUrl": "https://1geki.jp/slot/l_inuyasya2/"
   },
@@ -60,7 +60,30 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 248.8, "weight": 1, "minSampleSize": 2500, "note": "CZ「妖勝負」当選率は主判別。1geki.jp公開値、DMM機械割97.60%と一致。"},
+        {"settingNo": 2, "denominatorValue": 243.5, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 239.6, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 233.5, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 216.8, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 209.6, "weight": 1, "minSampleSize": 2500, "note": "CZ当選率は主判別。1geki.jp公開値、DMM機械割114.99%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 435.4, "weight": 0.7, "minSampleSize": 3000, "note": "AT「ブッた斬りスラッシュ」初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 419.9, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 402.3, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 366.4, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 336.1, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 312.7, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "cz_game_ceiling",

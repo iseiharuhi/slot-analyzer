@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-08-07",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT初当り確率を反映(本機唯一の判別軸)。本機は「1・2・4・5・6」の実質5段階設定(設定3非搭載)+特殊「設定L」ありと1geki明記(欠落ではない)。正義超人チャレンジ確率(設定1=1/99.8〜設定6=1/91.7)はnotesのみ参考記録。DMM機械割97.9%〜114.9%と一致。正義超人アタック出現率は設定2〜5が1geki自身「???」表記(未確認)のため設定1・6のみ既知(notesのみ)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4378",
     "ichigekiUrl": "https://1geki.jp/slot/l_niku7devil/"
   },
@@ -48,7 +48,18 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 404.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。本機は実質5段階設定(1/2/4/5/6、3非搭載)+特殊「設定L」あり。正義超人チャレンジ確率1/99.8はnotesのみ参考。1geki.jp公開値、DMM機械割97.9%と一致。"},
+        {"settingNo": 2, "denominatorValue": 400.6, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 362.1, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 350.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 336.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は本機唯一の判別軸。正義超人チャレンジ確率1/91.7はnotesのみ参考。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "power_ceiling",

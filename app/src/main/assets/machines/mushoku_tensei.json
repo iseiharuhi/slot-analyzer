@@ -6,7 +6,7 @@
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2025-12-22",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完。",
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス確率(主判別)・AT初当たり確率(補助判別)を反映(全6設定判明、DMM機械割97.7%〜113.7%と一致)。CZ確率(設定1=1/130〜設定6=1/125、設定4・5が同値1/127)は既存カウンタ定義にCZ用フィールドが無いためnotesのみ参考記録。2025年12月発売の新台だが公開データは既に揃っている(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4924",
     "ichigekiUrl": "https://1geki.jp/slot/l_musyokutensei/"
   },
@@ -60,7 +60,30 @@
       "notes": "AT初当りのメモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 170, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別(CZ確率1/130はnotesのみ)。1geki.jp公開値、DMM機械割97.7%と一致。"},
+        {"settingNo": 2, "denominatorValue": 168, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 166, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 161, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 156, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 147, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別(CZ確率1/125)。1geki.jp公開値、DMM機械割113.7%と一致。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 416, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 406, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 394, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 361, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 327, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当たり確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 292, "weight": 0.7, "minSampleSize": 3000, "note": "AT初当たり確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "bonus_stage_change_ceiling",

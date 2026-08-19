@@ -6,7 +6,7 @@
     "type": "BONUS_PLUS_AT",
     "releaseDate": "2024-07-08",
     "isActive": true,
-    "notes": "A優先機種追加。天井情報を先行実装し、現段階では実戦メモ入力と天井確認を優先。設定差の公開整理前のため settingReferenceValues は未投入で、後続の精度フェーズで補完予定。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT確率を反映(全6設定判明、DMM機械割97.6%〜114.9%と一致)。CZ確率(設定1=1/296.3〜設定6=1/231.9)は既存カウンタ定義にCZ用フィールドが無いためnotesのみ参考記録。「リアルボーナス」(bonus_count)に対応する固有データは未発見のため空欄のまま(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4597",
     "ichigekiUrl": "https://1geki.jp/slot/l_akame2/"
   },
@@ -60,7 +60,19 @@
       "notes": "斬ポイント由来のATや強め挙動メモ用。"
     }
   ],
-  "settingReferenceValues": [],
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 390.0, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸(CZ確率1/296.3はnotesのみ)。1geki.jp公開値、DMM機械割97.6%と一致。"},
+        {"settingNo": 2, "denominatorValue": 378.3, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 359.0, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 326.5, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 312.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 296.8, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値、DMM機械割114.9%と一致。"}
+      ]
+    }
+  ],
   "ceilingRules": [
     {
       "ruleKey": "game_ceiling",
