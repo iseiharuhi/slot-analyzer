@@ -8,8 +8,8 @@
 
 ## Status breakdown
 - draft: 1
-- other: 114
-- partial: 327
+- other: 97
+- partial: 344
 
 ## Broken files / filename-id mismatches
 none
@@ -198,6 +198,7 @@ none
 - lb_jackpot.json [partial] LBジャックポット (ceiling=False, refValues=True)
 - lb_triple_crown.json [partial] LBトリプルクラウン (ceiling=False, refValues=True)
 - loli_kura_hold.json [partial] パチスロ ロリクラ☆ほーるど! (ceiling=False, refValues=True)
+- love_cute_2.json [partial] Lラブキューレ2 (ceiling=True, refValues=True)
 - lovejo_2_plus.json [partial] パチスロラブ嬢2プラス (ceiling=True, refValues=True)
 - lucky_umi_monogatari.json [partial] S Lucky海物語 (ceiling=False, refValues=True)
 - lupin_sansei_s.json [partial] Sルパン三世 (ceiling=True, refValues=True)
@@ -222,10 +223,14 @@ none
 - moe_chiba_30.json [partial] 燃えチバ‐30 (ceiling=True, refValues=True)
 - momokyun_sword_dx.json [partial] SモモキュンソードDX (ceiling=True, refValues=True)
 - momotaro_densetsu.json [partial] 桃太郎電鉄 ~パチスロも定番!~ (ceiling=True, refValues=True)
+- monster_hunter_golden.json [partial] モンスターハンター黄金狩猟 (ceiling=True, refValues=True)
 - monster_hunter_world.json [partial] パチスロ モンスターハンター:ワールド (ceiling=True, refValues=True)
+- motto_chibariyo_25.json [partial] もっと！チバリヨ！25 (ceiling=True, refValues=True)
+- motto_chibariyo_30.json [partial] もっと！チバリヨ！30 (ceiling=True, refValues=True)
 - motto_crea_hihouden_megami_uta.json [partial] もっと!クレアの秘宝伝 女神の歌声と太陽の子供達 (ceiling=False, refValues=True)
 - mr_juggler.json [partial] ミスタージャグラー (ceiling=False, refValues=True)
 - mr_triple_crown.json [partial] ミスタートリプルクラウン (ceiling=False, refValues=True)
+- my_flower_2.json [partial] マイフラワーⅡ (ceiling=True, refValues=True)
 - name_neko.json [partial] パチスロなめ猫～液晶ないけどなめんじゃねぇ～ (ceiling=True, refValues=False)
 - nanairo_sango.json [partial] Sナナイロサンゴ (ceiling=False, refValues=True)
 - nanatsu_no_maken.json [partial] 七つの魔剣が支配する (ceiling=True, refValues=True)
@@ -234,6 +239,7 @@ none
 - nangoku_sodachi_30.json [partial] 南国育ち30 (ceiling=True, refValues=True)
 - nangoku_sodachi.json [partial] L南国育ち (ceiling=True, refValues=True)
 - neo_im_juggler_ex.json [partial] ネオアイムジャグラーEX (ceiling=False, refValues=True)
+- neo_planet.json [partial] Lネオプラネット (ceiling=True, refValues=True)
 - new_getter_mouse.json [partial] ニューゲッターマウス (ceiling=False, refValues=True)
 - new_hanahana_gold_30.json [partial] ニューハナハナゴールド−30 (ceiling=False, refValues=True)
 - new_king_hanahana_v_30.json [partial] ニューキングハナハナV-30 (ceiling=False, refValues=True)
@@ -257,6 +263,7 @@ none
 - oki_wanimaru_25.json [partial] 沖ワニマル‐25 (ceiling=True, refValues=True)
 - oki_wanimaru_30.json [partial] 沖ワニマル‐30 (ceiling=True, refValues=True)
 - okinawa_festival_30.json [partial] 沖縄フェスティバル‐30 (ceiling=False, refValues=True)
+- one_bar_s30.json [partial] ワンバーS30 (ceiling=True, refValues=True)
 - one_chance_1000.json [partial] ワンチャンス 1000 (ceiling=True, refValues=True)
 - onihama_bakusou_gurentai_gekitou.json [partial] 鬼浜爆走紅蓮隊 激闘謳歌編 (ceiling=True, refValues=True)
 - onihama_bakusou_gurentai_kyoutou.json [partial] 鬼浜爆走紅蓮隊 狂闘旅情編 (ceiling=True, refValues=True)
@@ -268,11 +275,13 @@ none
 - persona_5.json [partial] ペルソナ5 (ceiling=True, refValues=True)
 - pink_panther_sp.json [partial] パチスロ ピンクパンサーSP (ceiling=False, refValues=True)
 - premium_umaibou.json [partial] LBプレミアムうまい棒 (ceiling=False, refValues=True)
+- prism_nana.json [partial] プリズムナナ (ceiling=True, refValues=True)
 - railgun_2.json [partial] スマスロ とある科学の超電磁砲2 (ceiling=True, refValues=True)
 - rairai_eisa_ex_30.json [partial] 来雷エイサーEX‐30 (ceiling=False, refValues=True)
 - rei_slot.json [partial] パチスロ零 (ceiling=True, refValues=True)
 - revue_starlight.json [partial] L少女☆歌劇 レヴュースタァライト -The SLOT- (ceiling=True, refValues=True)
 - rezero_apex_vacation.json [partial] Re:ゼロから始める異世界生活Apex Vacation (ceiling=False, refValues=True)
+- ring_ni_kakero_1.json [partial] リングにかけろ1 (ceiling=False, refValues=True)
 - ring_unmei_no_byoutoku.json [partial] パチスロ リング 運命の秒刻 (ceiling=True, refValues=True)
 - ring_v.json [partial] Lリングにかけろ1 V (ceiling=True, refValues=True)
 - ryujin_30_suika.json [partial] パチスロ琉神−30 スイカバージョン (ceiling=True, refValues=True)
@@ -295,6 +304,7 @@ none
 - sengoku_otome_akatsuki_no_sekigahara.json [partial] パチスロ戦国乙女 暁の関ヶ原‐DARKNESS‐ (ceiling=True, refValues=True)
 - sengoku_otome3.json [partial] 戦国乙女3〜天剣を継ぐもの〜 (ceiling=True, refValues=True)
 - sengoku_otome5.json [partial] L戦国乙女5 業火を穿つ宿焔の双刃 (ceiling=True, refValues=True)
+- senran_kagura_2.json [partial] L閃乱カグラ2 (ceiling=True, refValues=True)
 - senran_kagura_burst_up.json [partial] パチスロ閃乱カグラ BURST UP (ceiling=True, refValues=True)
 - shake_bonus_trigger.json [partial] SHAKE BONUS TRIGGER (ceiling=False, refValues=True)
 - shaman_king.json [partial] スマスロ シャーマンキング (ceiling=True, refValues=True)
@@ -303,6 +313,7 @@ none
 - shin_hokuto_musou.json [partial] スマスロ真・北斗無双 (ceiling=True, refValues=True)
 - shin_ikkitousen.json [partial] L 真・一騎当千 (ceiling=True, refValues=True)
 - shin_onimusha_2.json [partial] パチスロ 新鬼武者2 (ceiling=True, refValues=True)
+- shin_onimusha_3.json [partial] L新鬼武者3 (ceiling=True, refValues=True)
 - shin_ore_no_sora.json [partial] パチスロ 真俺の空 (ceiling=True, refValues=True)
 - shin_tenka_fubu.json [partial] 真天下布武 (ceiling=True, refValues=True)
 - shinuchi_yoshimune.json [partial] 真打 吉宗 (ceiling=True, refValues=True)
@@ -321,6 +332,7 @@ none
 - strike_the_blood.json [partial] スマスロ ストライク・ザ・ブラッド (ceiling=True, refValues=True)
 - strike_witches2.json [partial] Lストライクウィッチーズ2 (ceiling=True, refValues=True)
 - suhana_rising_30.json [partial] スーハナライジング-30 (ceiling=True, refValues=True)
+- super_bingo_neo_classic.json [partial] スーパービンゴネオクラシック (ceiling=True, refValues=True)
 - super_bingo_neo.json [partial] Lスーパービンゴネオ (ceiling=True, refValues=True)
 - super_hanahana_2_30.json [partial] スーパーハナハナ2‐30 (ceiling=True, refValues=True)
 - super_hanahana_30.json [partial] スーパーハナハナ−30 (ceiling=True, refValues=True)
@@ -337,6 +349,7 @@ none
 - tate_no_yuusha.json [partial] パチスロ盾の勇者の成り上がり (ceiling=True, refValues=True)
 - tekken_5.json [partial] パチスロ鉄拳5 (ceiling=True, refValues=True)
 - tekken_6.json [partial] スマスロ鉄拳6 (ceiling=True, refValues=True)
+- tekken4_ultimate_devil.json [partial] 鉄拳4アルティメットデビルVer. (ceiling=True, refValues=True)
 - tensei_shitara_ken_deshita.json [partial] パチスロ 転生したら剣でした (ceiling=True, refValues=True)
 - tensei_slime.json [partial] L転生したらスライムだった件 (ceiling=True, refValues=True)
 - tetsuya_tenun_chiriki.json [partial] パチスロ 哲也 −天運地力− (ceiling=True, refValues=True)
@@ -355,6 +368,7 @@ none
 - triple_crown_vintage.json [partial] トリプルクラウンビンテージ (ceiling=False, refValues=True)
 - tropicana.json [partial] スマスロ トロピカーナ (ceiling=True, refValues=False)
 - twin_angel_party.json [partial] パチスロツインエンジェル PARTY (ceiling=True, refValues=True)
+- ultra_chabudai_gaeshi.json [partial] ウルトラちゃぶ台返し (ceiling=True, refValues=True)
 - ultra_miracle_juggler.json [partial] ウルトラミラクルジャグラー (ceiling=False, refValues=True)
 - ultraman_l.json [partial] L ULTRAMAN (ceiling=True, refValues=True)
 - ultraman_taro_boukun.json [partial] ぱちスロ ウルトラマンタロウ 暴君SPEC (ceiling=True, refValues=True)
@@ -367,11 +381,14 @@ none
 - venus_zone.json [partial] ヴィーナスゾーン (ceiling=False, refValues=True)
 - wake_up_girls_seven_memories.json [partial] パチスロ Wake Up, Girls!Seven Memories (ceiling=True, refValues=True)
 - word_of_lights_2.json [partial] ワードオブライツII (ceiling=True, refValues=True)
+- yatterman_zettai_seigi.json [partial] ヤッターマン絶対正義 (ceiling=True, refValues=True)
 - youjo_senki.json [partial] パチスロ幼女戦記 (ceiling=True, refValues=True)
 - zegapain_2.json [partial] パチスロ ゼーガペイン2 (ceiling=True, refValues=True)
+- zenigata_5.json [partial] L主役は銭形5 (ceiling=True, refValues=True)
 - zenigata3.json [partial] 主役は銭形3 (ceiling=True, refValues=True)
 - zenigata4.json [partial] L主役は銭形4 (ceiling=True, refValues=True)
 - zettai_shougeki_3.json [partial] 絶対衝激III (ceiling=True, refValues=True)
+- zettai_shougeki_4.json [partial] L絶対衝激4 (ceiling=True, refValues=True)
 - zettai_shougeki_platonic_heart.json [partial] L 絶対衝激~PLATONIC HEART~ (ceiling=True, refValues=True)
 - zombieland_saga.json [partial] スロット ゾンビランドサガ (ceiling=True, refValues=True)
 

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-08-07",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(正式名称「防空少女ラブキューレ2〜極限の共鳴〜」)。",
+    "notes": "partial: 1geki.jp(raw HTML)からBB+RB合算確率(主判別)・ART「絶対空域」初当り確率(補助判別)を反映(全6設定判明、算術検算済み)。天井はボーナス&ART間1000G+αでART濃厚を反映。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4365",
     "ichigekiUrl": "https://1geki.jp/slot/l_lovekyure2/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 179.6, "weight": 1, "minSampleSize": 2500, "note": "BB+RB合算確率は主判別(BB1/299.3、RB1/448.9)。1geki.jp公開値、算術検算済み。"},
+        {"settingNo": 2, "denominatorValue": 178.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/297.9、RB1/445.8)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 177.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/296.5、RB1/442.8)。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 176.6, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/295.2、RB1/439.8)。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 175.7, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/293.9、RB1/436.9)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 174.8, "weight": 1, "minSampleSize": 2500, "note": "合算確率は主判別(BB1/292.6、RB1/434.0)。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 549.4, "weight": 0.7, "minSampleSize": 3000, "note": "ART「絶対空域」初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 527.8, "weight": 0.7, "minSampleSize": 3000, "note": "ART初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 485.5, "weight": 0.7, "minSampleSize": 3000, "note": "ART初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 421.3, "weight": 0.7, "minSampleSize": 3000, "note": "ART初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 403.7, "weight": 0.7, "minSampleSize": 3000, "note": "ART初当り確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 384.9, "weight": 0.7, "minSampleSize": 3000, "note": "ART初当り確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1000,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "ボーナス&ART間1000G+αでART「絶対空域」濃厚。設定変更時のリセット挙動は1geki/DMMとも明示的記載なし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ART濃厚",
+      "resetText": "ART当選でリセット(設定変更時の挙動は未確認)"
+    }
+  ]
 }

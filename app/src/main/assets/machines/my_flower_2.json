@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-05-08",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(正式名称マイフラワー2-30)。",
+    "notes": "partial: 1geki.jp(raw HTML)から初当り合算確率を反映(全6設定判明)。ベル/チェリー/スイカ/リーチ目の役別確率、チェリー成立時のボーナス期待度(3.0%〜4.0%)、チェリー+BB/RB分配比(設定1=50/50〜設定6=37.0/63.0%)はnotesのみ参考記録。天井は「救済機能」と呼ばれる仕組み(1geki側の呼称、機能的には天井と同義)で通常時1280G+αでボーナス濃厚。設定変更(リセット)時は約70%の確率で300G+αに短縮、30%は1280G+αのまま(明記あり)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4329",
     "ichigekiUrl": "https://1geki.jp/slot/s_myflower2_30/"
   },
@@ -60,6 +60,36 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 210, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は本機唯一の判別軸(ベル1/9.0、チェリー1/64.0、スイカ1/102.4はnotesのみ)。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 200, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 190, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 180, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 170, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 160, "weight": 1, "minSampleSize": 2500, "note": "初当り合算確率は本機唯一の判別軸(チェリー+BB/RB分配比37.0/63.0%)。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "救済機能(実質ゲーム数天井)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1280,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "「救済機能」と呼ばれる仕組み(1geki側の呼称、機能的には天井と同義)で通常時1280G+αでボーナス濃厚。設定変更(リセット)時は約70%の確率で300G+αに短縮、30%は1280G+αのまま。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更で約70%の確率で300G+αに短縮)"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-11-04",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(型式名L絶対衝激フォースFH、2025年復刻版PLATONIC HEARTとは別機種)。",
+    "notes": "partial: 1geki.jp(raw HTML)からボーナス確率(主判別)・AT「プラトニックタイム」確率(補助判別)を反映(全6設定判明)。姉妹機zettai_shougeki_3/zettai_shougeki_platonic_heartとは別ページ(l_zetai4)で取り違えなし確認済み。天井は周期(サイクル)ベースでモード依存: モードA=9周期目の日曜日到達(主天井として記録)、モードB=7周期目、モードC=5周期目、モードD=2周期目でプラトニックボーナスブラック濃厚。朝一リセット(設定変更)時はモードC以上が強制され最大5周期以内に短縮(AT駆け抜け時も同様の条件下で発生)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4903",
     "ichigekiUrl": "https://1geki.jp/slot/l_zetai4/"
   },
@@ -60,6 +60,47 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 270, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 261, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 254, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 241, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 231, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 225, "weight": 1, "minSampleSize": 2500, "note": "ボーナス確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 543, "weight": 0.7, "minSampleSize": 3000, "note": "AT「プラトニックタイム」確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 501, "weight": 0.7, "minSampleSize": 3000, "note": "AT「プラトニックタイム」確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 450, "weight": 0.7, "minSampleSize": 3000, "note": "AT「プラトニックタイム」確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 357, "weight": 0.7, "minSampleSize": 3000, "note": "AT「プラトニックタイム」確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 304, "weight": 0.7, "minSampleSize": 3000, "note": "AT「プラトニックタイム」確率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 266, "weight": 0.7, "minSampleSize": 3000, "note": "AT「プラトニックタイム」確率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_cycle_ceiling",
+      "displayName": "周期天井(モードA)",
+      "ceilingType": "CYCLE_COUNT",
+      "limitValue": 9,
+      "unit": "周期",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "モード依存の周期天井: モードA=9周期目の日曜日到達、モードB=7周期目、モードC=5周期目、モードD=2周期目でプラトニックボーナスブラック濃厚。朝一リセット(設定変更)時はモードC以上が強制され最大5周期以内に短縮(AT駆け抜け時も同様の条件下で発生)。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "プラトニックボーナスブラック濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更でモードC以上・5周期以内に短縮)"
+    }
+  ]
 }

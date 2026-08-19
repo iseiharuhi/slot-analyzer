@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2021-12-06",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(型式名S MHW 黄金狩猟ZC)。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT「エルドラドボーナス」初当り確率(主判別)・CZ「歴戦王クエスト」当選率(補助判別)を反映(全6設定判明、単一合算値のためBIG/REG分割なし)。天井は2系統: CZ天井800G+α(補助、実質到達率約2.0%)、AT天井2500G+α(主天井、実質到達率約0.6%)。ページタイトルに「天井/設定変更」表記があるが本文に設定変更時のリセット挙動の明示的記載なし(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4030",
     "ichigekiUrl": "https://1geki.jp/slot/s_mhw_gold/"
   },
@@ -60,6 +60,64 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 609.0, "weight": 1, "minSampleSize": 2500, "note": "AT「エルドラドボーナス」初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 588.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 568.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 518.5, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 492.7, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 469.8, "weight": 1, "minSampleSize": 2500, "note": "AT初当り確率は主判別。1geki.jp公開値。"}
+      ]
+    },
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 277.7, "weight": 0.7, "minSampleSize": 3000, "note": "CZ「歴戦王クエスト」当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 275.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 273.2, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 262.5, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 258.6, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 256.9, "weight": 0.7, "minSampleSize": 3000, "note": "CZ当選率は補助判別。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "at_ceiling",
+      "displayName": "AT天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 2500,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "AT天井2500G+αでAT「エルドラドボーナス」濃厚(実質到達率約0.6%)。設定変更時のリセット挙動は明示的記載なし。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "AT濃厚",
+      "resetText": "AT当選でリセット(設定変更時の挙動は未確認)"
+    },
+    {
+      "ruleKey": "cz_ceiling",
+      "displayName": "CZ天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 800,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": false,
+      "description": "CZ天井800G+αでCZ「歴戦王クエスト」濃厚(実質到達率約2.0%)。",
+      "isEnabled": true,
+      "displayOrder": 2,
+      "isPrimary": false,
+      "isHighlighted": false,
+      "showInput": true,
+      "benefitText": "CZ濃厚",
+      "resetText": "CZ突入でリセット"
+    }
+  ]
 }

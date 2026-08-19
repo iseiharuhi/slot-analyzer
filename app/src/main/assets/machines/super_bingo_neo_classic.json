@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-08-07",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(-30版とは別機種、無印版で確認)。",
+    "notes": "partial: 1geki.jp(raw HTML)からBC確率を反映。設定5は生HTML上で欠落確認済み(4→6、真の未公開)、非数値の「L」行(常時下パネル消灯の演出デモ表示)はsettingNo対応せず除外。姉妹機super_bingo_neoとは別データで取り違えなし。天井は999G+α(通常時)でBC濃厚、天井到達時はHooah!優遇抽選(33G=50%/Hooah!=50%)あり。設定変更で天井G数・ゲーム数周期・デジタル周期・有利区間すべてリセット(初回デジタル周期の期待度も優遇)、電源off/onでは全て引き継ぐ(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4386",
     "ichigekiUrl": "https://1geki.jp/slot/s_sbingo_nc/"
   },
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "cz_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 354.6, "weight": 1, "minSampleSize": 2500, "note": "BC確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 330.1, "weight": 1, "minSampleSize": 2500, "note": "BC確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 315.8, "weight": 1, "minSampleSize": 2500, "note": "BC確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 299.7, "weight": 1, "minSampleSize": 2500, "note": "BC確率は本機唯一の判別軸。設定5は欠落のため未収録(4→6)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 283.8, "weight": 1, "minSampleSize": 2500, "note": "BC確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 999,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時999G+αでBC濃厚。天井到達時はHooah!優遇抽選あり(33G=50%/Hooah!=50%)。設定変更で天井G数・ゲーム数周期・デジタル周期・有利区間すべてリセット(初回デジタル周期の期待度も優遇)。電源off/onでは全て引き継ぐ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "BC濃厚",
+      "resetText": "BC成立でリセット(設定変更ですべてリセット)"
+    }
+  ]
 }

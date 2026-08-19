@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2023-06-05",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完。",
+    "notes": "partial: 1geki.jp(raw HTML)からAT確率を反映。設定5は生HTML上で欠落確認済み(4→6、真の未公開)、非数値の「L」行(演出デモ表示)はsettingNo対応せず除外。天井は777G(通常時)でボーナス当選濃厚。設定変更で有利区間・救済機能(天井)・内部モードすべてリセット、四畳半ステージ(昼)+初回サイクルは怒気っとロックチャレンジCZが強制される。電源off/onでは全て引き継ぐ(1geki明記)(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4341",
     "ichigekiUrl": "https://1geki.jp/slot/s_ultra_chabu/"
   },
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "at_count",
+      "values": [
+        {"settingNo": 1, "denominatorValue": 240.3, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 2, "denominatorValue": 236.1, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 231.2, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 225.7, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。設定5は欠落のため未収録(4→6)。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 221.4, "weight": 1, "minSampleSize": 2500, "note": "AT確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 777,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "通常時777Gでボーナス当選濃厚。設定変更で有利区間・救済機能(天井)・内部モードすべてリセット、四畳半ステージ(昼)+初回サイクルは怒気っとロックチャレンジCZが強制される。電源off/onでは全て引き継ぐ。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "ボーナス当選濃厚",
+      "resetText": "ボーナス成立でリセット(設定変更ですべてリセット)"
+    }
+  ]
 }

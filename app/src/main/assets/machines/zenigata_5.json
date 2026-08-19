@@ -6,7 +6,7 @@
     "type": "AT",
     "releaseDate": "2025-10-06",
     "isActive": true,
-    "notes": "C優先機種追加。今回は機種選択と実戦メモ入力の器を先行して揃えたシェル実装。天井数値・攻略URL・設定差は次フェーズで個別精査のうえ補完予定。manufacturer/releaseDate未記載だったためdmm/1geki一致で判明・補完(dmm/1geki公式表記の製造元はオリンピア)。",
+    "notes": "partial: 1geki.jp(raw HTML)から初当り確率を反映。設定1は生HTML上で表自体が設定2から始まっており欠落確認済み(6段階スマスロとしては珍しいパターン、DMM側にも代替表なく後日再確認推奨、真の未公開として扱う)。天井はモード依存(通常A=1250G/通常B=950G/通常C=550G/天国=150G、通常Aを主天井として記録)で銭形BONUS濃厚(最深部到達時は約50%で不二子デカタイムからスタート)。姉妹機zenigata3とは別データで取り違えなし。設定変更で最大850G+αに短縮、内部でゲーム数加算抽選あり(2026-08-20)。",
     "dmmUrl": "https://p-town.dmm.com/machines/4877",
     "ichigekiUrl": "https://1geki.jp/slot/l_zenigata5/"
   },
@@ -60,6 +60,35 @@
       "notes": "暫定メモ用。機種ごとの正式項目は後続で精査。"
     }
   ],
-  "settingReferenceValues": [],
-  "ceilingRules": []
+  "settingReferenceValues": [
+    {
+      "counterKey": "bonus_count",
+      "values": [
+        {"settingNo": 2, "denominatorValue": 424.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。設定1は生HTML上で表自体が設定2から始まっており未収録(6段階機として珍しいパターン、要再確認)。1geki.jp公開値。"},
+        {"settingNo": 3, "denominatorValue": 416.4, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 4, "denominatorValue": 388.1, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 5, "denominatorValue": 375.9, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp公開値。"},
+        {"settingNo": 6, "denominatorValue": 300.5, "weight": 1, "minSampleSize": 2500, "note": "初当り確率は本機唯一の判別軸。1geki.jp公開値。"}
+      ]
+    }
+  ],
+  "ceilingRules": [
+    {
+      "ruleKey": "main_game_ceiling",
+      "displayName": "ゲーム数天井(通常A)",
+      "ceilingType": "GAME_COUNT",
+      "limitValue": 1250,
+      "unit": "G",
+      "resetOnHit": true,
+      "requiresResetFlag": true,
+      "description": "モード依存の天井: 通常A=1250G+α、通常B=950G+α、通常C=550G+α、天国=150G+αで銭形BONUS濃厚(最深部到達時は約50%で不二子デカタイムからスタート)。設定変更で最大850G+αに短縮、内部でゲーム数加算抽選あり。",
+      "isEnabled": true,
+      "displayOrder": 1,
+      "isPrimary": true,
+      "isHighlighted": true,
+      "showInput": true,
+      "benefitText": "銭形BONUS濃厚",
+      "resetText": "BONUS成立でリセット(設定変更で850G+αに短縮)"
+    }
+  ]
 }
